@@ -15,13 +15,26 @@ Each PG covers **one** D365 task and its controls. PGs sit inside a learning arc
 | **Accounts Receivable (AR) Collections** | [`ar-collections-learning/`](ar-collections-learning/) | Active. First PG in draft. |
 | *Further D365 topics* | *To be added as sibling folders* | Planned |
 
+## PG template (governs every PG)
+
+All PGs are produced in the current master Word template and follow its companion authoring guide. Both are stored unchanged in [`templates/`](templates/):
+
+| File | Role |
+|---|---|
+| [`PG_Word_Template-MASTER TEMPLATE.docx`](templates/) | Master layout. Never edit it. Use **Save As** to start each PG. |
+| [`PG_Template_Authoring_Guide_v1.docx`](templates/) | Content and formatting rules, and the final checklist. |
+
 ## Repository structure
+
+```
+templates/                   PG master template and authoring guide (unchanged)
+```
 
 Each topic has its own folder with the same internal structure:
 
 ```
 <topic>-learning/
-  01-procedure-guides/       PG working drafts (one file per PG)
+  01-procedure-guides/       PG Word files (editable source) and Markdown previews
   02-screenshot-registers/   Figure-to-step mapping, timestamps, captions, callouts
   03-validation/             Validation-gap registers, baseline reviews, terminology
   04-quality-assurance/      QA checklists applied before review and publication
@@ -34,7 +47,7 @@ Backlog rank and release come from the AR development roadmap. Drafting order fo
 
 | Rank | PG | Release | Draft batch | Gate | Files |
 |---|---|---|---|---|---|
-| 4 | Configure AR Collections Favourites in D365 | 1 | 1st (#1) | **Drafted** (v0.2): 29 open validation gaps, 14 blocking | [PG](ar-collections-learning/01-procedure-guides/PG-AR-Configure-Collections-Favourites-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Configure-Collections-Favourites-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Configure-Collections-Favourites-Validation.md) |
+| 4 | Configure AR Collections Favorites | 1 | 1st (#1) | **Drafted; SME review draft** (v0.2): 30 open validation gaps, 16 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Favorites%20PG%20v0.2.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Configure-Collections-Favourites-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Configure-Collections-Favourites-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Configure-Collections-Favourites-Validation.md) |
 | 5 | Create and save a personalised D365 view | 1 | 1st (#2) | Not started | — |
 | 7 | Review customer aged balances | 1 | 1st (#3) | Not started | — |
 | 11 | View and download a customer invoice | 2 | 1st (#4) | Not started | — |
@@ -56,36 +69,42 @@ Higher-risk PGs (settlement, write-offs, customer maintenance, exclusions, payme
 
 ## Working conventions
 
+**Format**
+
+- Every PG is a Save As copy of the master template, completed according to the authoring guide.
+- The Word file is the editable source.
+- A Markdown preview sits beside it for review on GitHub. Update the preview after the Word file changes.
+
 **Evidence**
 
-- The supplied source documents are the source of truth.
-- No D365 step, label, business rule, approval requirement or system behaviour is invented.
-- Anything unconfirmed is recorded as a validation gap with a PG-scoped ID (`VG-01`, `VG-02` …) in the PG's validation register.
-- Unconfirmed items are never written as confirmed instructions.
+- The supplied source documents are the source of truth for process content.
+- No D365 step, label, business rule, approval, owner, role or system behavior is invented.
+- Every unconfirmed item gets a stable PG-scoped ID (`VG-01` …) in the PG's validation register, which serves as its question log.
+- Each one that affects the text is also a Word review comment on that text.
 
-**Procedure writing**
+**Procedure writing (from the template)**
 
-- Numbered steps in Step / Action / Description tables.
-- One user action per step.
-- **Bold** interface labels.
-- Warnings go immediately before the consequential action.
-- Business rules are kept separate from system instructions.
+- Action | Description rows, one action per row.
+- *Italic* verb; **bold** UI labels and business objects.
+- PROCESS START, STEP COMPLETE and PROCESS COMPLETE boundary rows.
+- The standard navigation pattern (*Check* the **Entity** → *Click* **Modules**).
 
 **Files**
 
-- PG files are named `PG-<Area>-<Task-Name>-DRAFT.md` until a PG ID scheme is decided.
-- Companion files share the same task name.
+- Word PGs are named `NNN-Guide Title PG vX.docx`. Until a guide code is assigned, `TBC` replaces `NNN`.
+- Companion Markdown files keep their `PG-<Area>-<Task-Name>` names.
 
 **Screenshots**
 
-- Figures are numbered per PG and mapped in the screenshot register.
-- Customer information is always masked.
-- Publication screenshots are captured in a clean D365 session.
+- Optional, and used only where they add context.
+- Never left as placeholders in the Word PG.
+- Mapped in the screenshot register, captured in a clean D365 session, with customer data masked.
 
 **Language**
 
-- Prose uses UK/AU English.
+- PG text uses English (United States), as the template requires.
 - UI labels match the D365 screen exactly.
+- Internal working notes may use UK/AU spelling.
 
 ## Source material
 

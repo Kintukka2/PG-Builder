@@ -12,7 +12,7 @@ This file records the project context drawn from the source documents, inconsist
 
 ## 1. Source documents
 
-The source documents are the source of truth for this topic. They are held outside this repository and must not be overwritten.
+Sources 0–3.2 are the source of truth for **process content**. They are held outside this repository and must not be overwritten. T1 and T2 are the source of truth for **PG format and authoring rules**. They are stored unchanged in `/templates`. Always Save As a copy; never edit the master.
 
 | Ref | File | Content | Primary use |
 |---|---|---|---|
@@ -21,6 +21,8 @@ The source documents are the source of truth for this topic. They are held outsi
 | 2 | `2. D365 AR learning development roadmap.txt` | Release 1–4 roadmap. 32-item prioritised master backlog. Cross-release workstreams (screenshots, business rules, references, assurance). Development gates. Definitions of ready. | Delivery roadmap and gates |
 | 3.1 | `3.1 Recommended first drafting batch.txt` | First drafting batch (6 PGs), second batch hold list, "do not draft as final" list. | Drafting order |
 | 3.2 | `3.2 Configure AR Collections Favour.txt` | Baseline draft v0.1 of the Favourites PG. Screenshot plan with timestamps, captions and callouts. | Baseline for the first PG |
+| T1 | `PG_Word_Template-MASTER TEMPLATE.docx` (in [`/templates`](../../templates/)) | The master Word template currently in use: cover, contents, version history, About this guide, Parts 1–3, Additional Resources, boundary rows and styles. | **Governs PG format and output** |
+| T2 | `PG_Template_Authoring_Guide_v1.docx` (in [`/templates`](../../templates/)) | Companion authoring handbook: section-by-section content rules, the action-row pattern, the standard navigation pattern, the question log, Word maintenance and the final checklist. | **Governs PG authoring rules** |
 
 The underlying evidence for all sources is the *AR Training D365* session recording and transcript.
 
@@ -145,15 +147,23 @@ Development gates (source 2): Identified → Source reviewed → Gap validated �
 | D-005 | 2026-10-08 | Source 3.1 governs drafting order. Source 2 governs release packaging. | I-03 | Adopted |
 | D-006 | 2026-10-08 | PG ID scheme to be decided. Option A: keep source 0 IDs (`PG-AR-010`). Option B: renumber to the source 2 backlog rank. Until decided, files use descriptive names (`PG-AR-<Task-Name>`). | I-04 | **Open** |
 | D-007 | 2026-10-08 | Validation gaps use IDs scoped to each PG (`VG-01`…). Each PG has its own validation register. | Traceability | Adopted |
-| D-008 | 2026-10-08 | Figures are numbered per PG and mapped to steps in a separate screenshot register. The PG holds placeholders until frames are approved. | Task brief | Adopted |
-| D-009 | 2026-10-08 | Working format is editable Markdown. Prose uses UK/AU English. UI labels match the D365 screen exactly. | Task brief; source spelling | Adopted (UI spelling under `VG-28`) |
-| D-010 | 2026-10-08 | Legal entity confirmation is a **prerequisite**, not a procedure step, in non-transactional PGs. It stays a procedure step in transactional PGs (source 2 control). | Source 2 control applies "before performing a transaction" | Proposed |
+| D-008 | 2026-10-08 | Figures are numbered per PG and mapped to steps in a separate screenshot register. The PG holds placeholders until frames are approved. | Task brief | **Amended by D-017**: no placeholders in the Word PG |
+| D-009 | 2026-10-08 | Working format is editable Markdown. Prose uses UK/AU English. UI labels match the D365 screen exactly. | Task brief; source spelling | **Superseded by D-013**. PG text is US English. Working notes may keep UK/AU spelling. |
+| D-010 | 2026-10-08 | Legal entity confirmation is a **prerequisite**, not a procedure step, in non-transactional PGs. It stays a procedure step in transactional PGs (source 2 control). | Source 2 control applies "before performing a transaction" | **Superseded by D-015** |
 | D-011 | 2026-10-08 | Do not create separate "Locate X" steps. Location information goes in the Description of the action step. | One-action-per-step rule; finding D1 | Proposed for template |
 | D-012 | 2026-10-08 | Recording frames confirm locations. Publication screenshots are recaptured in a clean session unless a frame fully supports the step. | Pre-existing favourites in recording | Adopted |
+| D-013 | 2026-10-08 | PGs are produced in the **PG master template** (T1) following the **authoring guide** (T2). This retires the provisional 16-section Markdown structure. The Word `.docx` is the editable source. The Markdown file in `01-procedure-guides` is a read-only preview, updated after the Word file. PG text uses English (United States). | User direction; T2 "Prepare the working file" | Adopted |
+| D-014 | 2026-10-08 | First PG: process name **AR Collections Favorites**, giving cover title *D365 F&O: AR Collections Favorites Procedure Guide*. Single standalone topic **1. Configure AR Collections Favorites**. File name `TBC-AR Collections Favorites PG v0.2.docx`. `TBC` stands in for the unassigned guide code. | T2 naming and topic rules; `VG-22` | Provisional |
+| D-015 | 2026-10-08 | Use the template's standard navigation pattern in every procedure: *Check* the **Entity**, then *Click* **Modules**. For Favorites, the effect of legal entity is unconfirmed, so Step 1 carries `VG-23`. | T2 "Use the standard navigation pattern" | Adopted |
+| D-016 | 2026-10-08 | The validation register is the guide's question log. `VG-xx` IDs stay stable and are used in place of `Qxx`. Open items affecting the text are added as Word comments (author "Validation register") anchored to that text. | T2 "Separate writing decisions from missing facts" | Adopted |
+| D-017 | 2026-10-08 | No screenshots or placeholders in the Word PG until menu locations are confirmed. Then insert only the figures that add context, using the screenshot register. | T2 "Screenshots are optional" | Adopted |
+| D-018 | 2026-10-08 | The template has no Troubleshooting section. Troubleshooting content is dropped, and the supported escalation route (D365 issue form, from Additional Resources) moves into the relevant procedure row. | T2 "Retain the standard support content" | Adopted |
 
 ---
 
-## 9. Proposed reusable PG template elements
+## 9. Proposed reusable PG template elements (superseded)
+
+> **Superseded by D-013.** The PG master template (T1) and authoring guide (T2) are now the standard. The list below is kept for traceability. Elements 1–2 and 15–16 continue as project-level working files: the status tracker, validation register and screenshot register. The rest are replaced by the template's own components.
 
 These elements came from the Favourites PG. They are candidates for the standard PG template, to confirm after the second PG (*Create and save a personalised D365 view*) tests them against a more complex task.
 
@@ -177,7 +187,8 @@ These elements came from the Favourites PG. They are candidates for the standard
 
 ## 10. Next steps
 
-1. Review the Favourites PG v0.2 and close or confirm the blocking VG items, starting with a clean-session D365 test (`VG-01` to `VG-07`, `VG-17`, `VG-24`, `VG-28`).
-2. Review the recording frames listed in the screenshot register and update each figure's status.
-3. Decide D-006 (PG ID scheme) and the screenshot masking policy (`VG-27`).
-4. Then start the second first-batch PG, *Create and save a personalised D365 view*, using the proposed template elements, and refine the template from it.
+1. Send the Word guide `TBC-AR Collections Favorites PG v0.2.docx` for SME factual review. Use the review request pattern in T2, and list only open questions by VG ID.
+2. Run a clean-session D365 test to close the blocking label, location and behavior items (`VG-01` to `VG-07`, `VG-17`, `VG-28`).
+3. Get SME answers for `VG-16`, `VG-30` to `VG-33`. Decide `VG-22` (guide code) and D-006 (ID scheme).
+4. Update the Word file first, then the Markdown preview. Resolve the comments, then refresh the contents and fields.
+5. Then start *Create and save a personalised D365 view* directly in a Save As copy of the master template.
