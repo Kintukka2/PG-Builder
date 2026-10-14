@@ -12,7 +12,7 @@ Each PG covers **one** D365 task and its controls. PGs sit inside a learning arc
 
 | Topic | Folder | Status |
 |---|---|---|
-| **Accounts Receivable (AR) Collections** | [`ar-collections-learning/`](ar-collections-learning/) | Active. First drafting batch complete; second batch in progress. Eight PGs in SME review draft. |
+| **Accounts Receivable (AR) Collections** | [`ar-collections-learning/`](ar-collections-learning/) | Active. First drafting batch complete; second batch in progress. Nine PGs in SME review draft. |
 | *Further D365 topics* | *To be added as sibling folders* | Planned |
 
 ## PG template (governs every PG)
@@ -56,6 +56,7 @@ Backlog rank and release come from the AR development roadmap. Drafting order fo
 | 9 | Review customer notes and activities (*AR Collections Notes and Activities*) | 1 | 1st (#6) | **Drafted; SME review draft** (v0.1): 22 open validation gaps, 15 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Notes%20and%20Activities%20PG%20v0.1.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Notes-and-Activities-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Notes-and-Activities-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Notes-and-Activities-Validation.md) |
 | 2 | Switch between legal entities (*AR Collections Legal Entities*) | 1 | 2nd (#1) | **Drafted; SME review draft** (v0.1): 22 open validation gaps, 13 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Legal%20Entities%20PG%20v0.1.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Legal-Entities-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Legal-Entities-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Legal-Entities-Validation.md) |
 | 3 | Navigate the Customer Credit and Collections workspace (*AR Collections Workspace*) | 1 | 2nd (#2) | **Drafted; SME review draft** (v0.1): 22 open validation gaps, 14 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Workspace%20PG%20v0.1.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Workspace-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Workspace-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Workspace-Validation.md) |
+| 6 | Review overdue customers (*AR Collections Overdue Customers*) | 1 | 2nd (#3) | **Drafted; SME review draft** (v0.1): 22 open validation gaps, 16 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Overdue%20Customers%20PG%20v0.1.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Overdue-Customers-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Overdue-Customers-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Overdue-Customers-Validation.md) |
 
 Project visibility: the [PG Command Centre](https://claude.ai/artifact/G3PMkvp68jSbqULxECehCi) tracks every deliverable, gate and validation gap; its source is in [`command-centre/`](command-centre/).
 
