@@ -28,6 +28,7 @@ All PGs are produced in the current master Word template and follow its companio
 
 ```
 templates/                   PG master template and authoring guide (unchanged)
+command-centre/              Source for the PG Command Centre and Delivery Flow pages (claude.ai artifacts)
 ```
 
 Each topic has its own folder with the same internal structure:
@@ -53,6 +54,8 @@ Backlog rank and release come from the AR development roadmap. Drafting order fo
 | 11 | View and download a customer invoice | 2 | 1st (#4) | Not started | — |
 | 17 | Export all rows from a D365 grid | 2 | 1st (#5) | Not started | — |
 | 9 | Review customer notes and activities | 1 | 1st (#6) | Not started | — |
+
+Project visibility: the [PG Command Centre](https://claude.ai/artifact/G3PMkvp68jSbqULxECehCi) tracks every deliverable, gate and validation gap; its source is in [`command-centre/`](command-centre/).
 
 Shared AR resources:
 

@@ -1,0 +1,1068 @@
+{
+ "items": {
+  "r01": {
+   "rank": 1,
+   "title": "AR Collections orientation",
+   "release": 1,
+   "priority": "P1",
+   "readiness": "Ready",
+   "type": "Learning module",
+   "batch": "",
+   "risk": "Low",
+   "module": "Introduction to AR Collections in D365",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r02": {
+   "rank": 2,
+   "title": "Switch between legal entities",
+   "release": 1,
+   "priority": "P1",
+   "readiness": "Ready",
+   "type": "PG",
+   "batch": "2nd batch",
+   "risk": "Medium",
+   "module": "Module 1 \u00b7 Navigate the AR Collections environment",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r03": {
+   "rank": 3,
+   "title": "Navigate the Customer Credit and Collections workspace",
+   "release": 1,
+   "priority": "P1",
+   "readiness": "Ready",
+   "type": "PG",
+   "batch": "2nd batch",
+   "risk": "Medium",
+   "module": "Module 1 \u00b7 Navigate the AR Collections environment",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r04": {
+   "rank": 4,
+   "title": "Configure AR Collections Favorites",
+   "release": 1,
+   "priority": "P1",
+   "readiness": "Ready",
+   "type": "PG",
+   "batch": "1st batch",
+   "risk": "Low",
+   "module": "Module 1 \u00b7 sequence 1.5",
+   "stage": "drafted",
+   "updated": "2026-10-08",
+   "short": "Favorites",
+   "version": "0.2",
+   "pr": {
+    "num": 1,
+    "state": "merged"
+   },
+   "next": "SME factual review and a clean-session D365 test",
+   "files": {
+    "docx": "main/ar-collections-learning/01-procedure-guides/TBC-AR Collections Favorites PG v0.2.docx",
+    "preview": "main/ar-collections-learning/01-procedure-guides/PG-AR-Configure-Collections-Favourites-DRAFT.md",
+    "validation": "main/ar-collections-learning/03-validation/PG-AR-Configure-Collections-Favourites-Validation.md",
+    "screenshots": "main/ar-collections-learning/02-screenshot-registers/PG-AR-Configure-Collections-Favourites-Screenshots.md"
+   }
+  },
+  "r05": {
+   "rank": 5,
+   "title": "Create and save a personalized view",
+   "release": 1,
+   "priority": "P1",
+   "readiness": "Ready",
+   "type": "PG",
+   "batch": "1st batch",
+   "risk": "Low",
+   "module": "Module 2 \u00b7 Configure D365 for efficient AR work",
+   "stage": "drafted",
+   "updated": "2026-10-14",
+   "short": "Personalized Views",
+   "version": "0.1",
+   "pr": {
+    "num": 2,
+    "state": "open"
+   },
+   "next": "Get the transcript excerpt and timestamps for the views demonstration",
+   "files": {
+    "docx": "claude/friendly-hypatia-1zj1e3/ar-collections-learning/01-procedure-guides/TBC-AR Collections Personalized Views PG v0.1.docx",
+    "preview": "claude/friendly-hypatia-1zj1e3/ar-collections-learning/01-procedure-guides/PG-AR-Personalized-Views-DRAFT.md",
+    "validation": "claude/friendly-hypatia-1zj1e3/ar-collections-learning/03-validation/PG-AR-Personalized-Views-Validation.md",
+    "screenshots": "claude/friendly-hypatia-1zj1e3/ar-collections-learning/02-screenshot-registers/PG-AR-Personalized-Views-Screenshots.md"
+   }
+  },
+  "r06": {
+   "rank": 6,
+   "title": "Review overdue customers",
+   "release": 1,
+   "priority": "P1",
+   "readiness": "Ready with minor gap",
+   "type": "PG",
+   "batch": "2nd batch",
+   "risk": "Medium",
+   "module": "Module 3 \u00b7 Review the AR collections workload",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r07": {
+   "rank": 7,
+   "title": "Review customer aged balances",
+   "release": 1,
+   "priority": "P1",
+   "readiness": "Ready",
+   "type": "PG",
+   "batch": "1st batch",
+   "risk": "Low",
+   "module": "Module 3 \u00b7 Review the AR collections workload",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08",
+   "next": "Next in the first drafting batch"
+  },
+  "r08": {
+   "rank": 8,
+   "title": "Investigate a customer account",
+   "release": 1,
+   "priority": "P1",
+   "readiness": "Ready",
+   "type": "PG",
+   "batch": "2nd batch",
+   "risk": "Medium",
+   "module": "Module 4 \u00b7 Investigate a customer account",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r09": {
+   "rank": 9,
+   "title": "Review customer notes and activities",
+   "release": 1,
+   "priority": "P1",
+   "readiness": "Ready",
+   "type": "PG",
+   "batch": "1st batch",
+   "risk": "Low",
+   "module": "Module 4 \u00b7 Investigate a customer account",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r10": {
+   "rank": 10,
+   "title": "Record a collection activity",
+   "release": 1,
+   "priority": "P1",
+   "readiness": "Minor validation required",
+   "type": "PG",
+   "batch": "2nd batch",
+   "risk": "Medium",
+   "module": "Module 5 \u00b7 Record and manage collection activity",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r11": {
+   "rank": 11,
+   "title": "View and download a customer invoice",
+   "release": 2,
+   "priority": "P2",
+   "readiness": "Ready",
+   "type": "PG",
+   "batch": "1st batch",
+   "risk": "Low",
+   "module": "Module 6 \u00b7 Generate customer documents",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r12": {
+   "rank": 12,
+   "title": "Generate and send a customer statement",
+   "release": 2,
+   "priority": "P2",
+   "readiness": "Ready with validation",
+   "type": "PG",
+   "batch": "2nd batch",
+   "risk": "Medium",
+   "module": "Module 6 \u00b7 Generate customer documents",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r13": {
+   "rank": 13,
+   "title": "Preview and download a customer statement",
+   "release": 2,
+   "priority": "P2",
+   "readiness": "Ready",
+   "type": "PG",
+   "batch": "2nd batch",
+   "risk": "Medium",
+   "module": "Module 6 \u00b7 Generate customer documents",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r14": {
+   "rank": 14,
+   "title": "Investigate unallocated payments",
+   "release": 2,
+   "priority": "P2",
+   "readiness": "Gaps to close",
+   "type": "PG",
+   "batch": "",
+   "risk": "Medium",
+   "module": "Module 7 \u00b7 Investigate unallocated customer payments",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r15": {
+   "rank": 15,
+   "title": "Settle customer transactions",
+   "release": 2,
+   "priority": "P2",
+   "readiness": "Business-rule validation",
+   "type": "PG",
+   "batch": "Hold: validate first",
+   "risk": "High",
+   "module": "Module 8 \u00b7 Settle customer transactions",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r16": {
+   "rank": 16,
+   "title": "Review and undo settlements",
+   "release": 2,
+   "priority": "P2",
+   "readiness": "Partial",
+   "type": "PG",
+   "batch": "Hold: validate first",
+   "risk": "High",
+   "module": "Module 8 \u00b7 Settle customer transactions",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r17": {
+   "rank": 17,
+   "title": "Export all rows from a D365 grid",
+   "release": 2,
+   "priority": "P2",
+   "readiness": "Ready",
+   "type": "PG",
+   "batch": "1st batch",
+   "risk": "Low",
+   "module": "Module 12 \u00b7 Reference, reporting and data extraction",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r18": {
+   "rank": 18,
+   "title": "Write off a customer transaction",
+   "release": 3,
+   "priority": "P3",
+   "readiness": "Control validation required",
+   "type": "PG",
+   "batch": "Hold: validate first",
+   "risk": "High",
+   "module": "Module 9 \u00b7 Process customer write-offs",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r19": {
+   "rank": 19,
+   "title": "Validate and submit a write-off journal",
+   "release": 3,
+   "priority": "P3",
+   "readiness": "Control validation required",
+   "type": "PG",
+   "batch": "Hold: validate first",
+   "risk": "High",
+   "module": "Module 9 \u00b7 Process customer write-offs",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r20": {
+   "rank": 20,
+   "title": "Cancel an unposted write-off",
+   "release": 3,
+   "priority": "P3",
+   "readiness": "Partial",
+   "type": "PG",
+   "batch": "Hold: validate first",
+   "risk": "High",
+   "module": "Module 9 \u00b7 Process customer write-offs",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r21": {
+   "rank": 21,
+   "title": "Maintain customer contacts",
+   "release": 3,
+   "priority": "P3",
+   "readiness": "Synchronisation validation",
+   "type": "PG",
+   "batch": "Hold: validate first",
+   "risk": "High",
+   "module": "Module 10 \u00b7 Maintain customer contact and address details",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r22": {
+   "rank": 22,
+   "title": "Maintain customer addresses",
+   "release": 3,
+   "priority": "P3",
+   "readiness": "Partial",
+   "type": "PG",
+   "batch": "Hold: validate first",
+   "risk": "High",
+   "module": "Module 10 \u00b7 Maintain customer contact and address details",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r23": {
+   "rank": 23,
+   "title": "Add an invoice-only address",
+   "release": 3,
+   "priority": "P3",
+   "readiness": "Ready with validation",
+   "type": "PG",
+   "batch": "Hold: validate first",
+   "risk": "High",
+   "module": "Module 10 \u00b7 Maintain customer contact and address details",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r24": {
+   "rank": 24,
+   "title": "Exclude a customer from credit management",
+   "release": 3,
+   "priority": "P3",
+   "readiness": "Governance required",
+   "type": "PG",
+   "batch": "Hold: validate first",
+   "risk": "High",
+   "module": "Module 11 \u00b7 Manage customer collection controls",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r25": {
+   "rank": 25,
+   "title": "Exclude a customer from statements",
+   "release": 3,
+   "priority": "P3",
+   "readiness": "System-label validation",
+   "type": "PG",
+   "batch": "Hold: validate first",
+   "risk": "High",
+   "module": "Module 11 \u00b7 Manage customer collection controls",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r26": {
+   "rank": 26,
+   "title": "Identify parent-child accounts",
+   "release": 4,
+   "priority": "P4",
+   "readiness": "Not ready",
+   "type": "Knowledge article",
+   "batch": "",
+   "risk": "Medium",
+   "module": "Release 4 \u00b7 Exceptions and specialist processes",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r27": {
+   "rank": 27,
+   "title": "Transfer funds between accounts",
+   "release": 4,
+   "priority": "P4",
+   "readiness": "Not ready",
+   "type": "PG",
+   "batch": "Hold: validate first",
+   "risk": "High",
+   "module": "Release 4 \u00b7 Exceptions and specialist processes",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r28": {
+   "rank": 28,
+   "title": "Search the custom transaction report",
+   "release": 4,
+   "priority": "P4",
+   "readiness": "Partial",
+   "type": "PG",
+   "batch": "",
+   "risk": "Medium",
+   "module": "Module 12 \u00b7 Reference, reporting and data extraction",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r29": {
+   "rank": 29,
+   "title": "Review daily bank statements",
+   "release": 4,
+   "priority": "P4",
+   "readiness": "Not ready",
+   "type": "PG or reference",
+   "batch": "",
+   "risk": "Medium",
+   "module": "Module 12 \u00b7 Reference, reporting and data extraction",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r30": {
+   "rank": 30,
+   "title": "Change customer payment terms",
+   "release": 4,
+   "priority": "P4",
+   "readiness": "Partial",
+   "type": "PG",
+   "batch": "Hold: validate first",
+   "risk": "High",
+   "module": "Release 4 \u00b7 Exceptions and specialist processes",
+   "stage": "source-reviewed",
+   "updated": "2026-10-08"
+  },
+  "r31": {
+   "rank": 31,
+   "title": "Maintain direct debit",
+   "release": 4,
+   "priority": "P4",
+   "readiness": "Scope decision required",
+   "type": "PG",
+   "batch": "Hold: validate first",
+   "risk": "High",
+   "module": "Release 4 \u00b7 scope decision first",
+   "stage": "identified",
+   "updated": "2026-10-08"
+  },
+  "r32": {
+   "rank": 32,
+   "title": "Maintain credit cards",
+   "release": 4,
+   "priority": "P4",
+   "readiness": "Scope decision required",
+   "type": "PG",
+   "batch": "Hold: validate first",
+   "risk": "High",
+   "module": "Release 4 \u00b7 scope decision first",
+   "stage": "identified",
+   "updated": "2026-10-08"
+  }
+ },
+ "gaps": {
+  "r04-vg01": {
+   "pg": "r04",
+   "vg": "VG-01",
+   "title": "Menu label: Aged balances or Age balances",
+   "pri": "B",
+   "method": "Test, Rec",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r04-vg02": {
+   "pg": "r04",
+   "vg": "VG-02",
+   "title": "Location of All customers in Credit and collections",
+   "pri": "B",
+   "method": "Test",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r04-vg03": {
+   "pg": "r04",
+   "vg": "VG-03",
+   "title": "Location of Aged balances in Credit and collections",
+   "pri": "B",
+   "method": "Test",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r04-vg04": {
+   "pg": "r04",
+   "vg": "VG-04",
+   "title": "Customer payment journal is available in Credit and collections",
+   "pri": "B",
+   "method": "Test, Rec",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r04-vg05": {
+   "pg": "r04",
+   "vg": "VG-05",
+   "title": "Location of Open customer invoices in Accounts receivable",
+   "pri": "B",
+   "method": "Test",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r04-vg06": {
+   "pg": "r04",
+   "vg": "VG-06",
+   "title": "Submenu expansion and favorite star visibility",
+   "pri": "B",
+   "method": "Test",
+   "area": "Behavior",
+   "status": "Open"
+  },
+  "r04-vg07": {
+   "pg": "r04",
+   "vg": "VG-07",
+   "title": "Star state before and after a click; does re-clicking remove a favorite",
+   "pri": "B",
+   "method": "Test",
+   "area": "Behavior",
+   "status": "Open"
+  },
+  "r04-vg08": {
+   "pg": "r04",
+   "vg": "VG-08",
+   "title": "Modules icon and its label",
+   "pri": "N",
+   "method": "Test, Rec",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r04-vg09": {
+   "pg": "r04",
+   "vg": "VG-09",
+   "title": "Favorites icon and its label",
+   "pri": "N",
+   "method": "Test, Rec",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r04-vg10": {
+   "pg": "r04",
+   "vg": "VG-10",
+   "title": "Favorites across legal entities",
+   "pri": "N",
+   "method": "Test",
+   "area": "Behavior",
+   "status": "Open"
+  },
+  "r04-vg11": {
+   "pg": "r04",
+   "vg": "VG-11",
+   "title": "Favorites across sessions, browsers and devices",
+   "pri": "N",
+   "method": "Test",
+   "area": "Behavior",
+   "status": "Open"
+  },
+  "r04-vg12": {
+   "pg": "r04",
+   "vg": "VG-12",
+   "title": "Showing a hidden Navigation Pane",
+   "pri": "N",
+   "method": "Test",
+   "area": "Behavior",
+   "status": "Open"
+  },
+  "r04-vg13": {
+   "pg": "r04",
+   "vg": "VG-13",
+   "title": "Order of the favorites list",
+   "pri": "N",
+   "method": "Test",
+   "area": "Behavior",
+   "status": "Open"
+  },
+  "r04-vg14": {
+   "pg": "r04",
+   "vg": "VG-14",
+   "title": "How to remove a favorite",
+   "pri": "N",
+   "method": "Test",
+   "area": "Behavior",
+   "status": "Deferred"
+  },
+  "r04-vg15": {
+   "pg": "r04",
+   "vg": "VG-15",
+   "title": "Search or filter in the module menu",
+   "pri": "N",
+   "method": "Test",
+   "area": "Behavior",
+   "status": "Withdrawn"
+  },
+  "r04-vg16": {
+   "pg": "r04",
+   "vg": "VG-16",
+   "title": "D365 issue form as the access-support route",
+   "pri": "B",
+   "method": "SME",
+   "area": "Governance",
+   "status": "Open"
+  },
+  "r04-vg17": {
+   "pg": "r04",
+   "vg": "VG-17",
+   "title": "Security role for these pages, and a test with it",
+   "pri": "B",
+   "method": "Test, SME",
+   "area": "Governance",
+   "status": "Open"
+  },
+  "r04-vg18": {
+   "pg": "r04",
+   "vg": "VG-18",
+   "title": "Purpose of Customer payment journal for AR Collections",
+   "pri": "N",
+   "method": "SME, Rec",
+   "area": "Content",
+   "status": "Open"
+  },
+  "r04-vg19": {
+   "pg": "r04",
+   "vg": "VG-19",
+   "title": "Wording for Open customer invoices",
+   "pri": "N",
+   "method": "Rec",
+   "area": "Content",
+   "status": "Open"
+  },
+  "r04-vg20": {
+   "pg": "r04",
+   "vg": "VG-20",
+   "title": "Removed claim: Aged balances opens collection activities",
+   "pri": "N",
+   "method": "Rec, SME",
+   "area": "Content",
+   "status": "Open"
+  },
+  "r04-vg21": {
+   "pg": "r04",
+   "vg": "VG-21",
+   "title": "Credit and collections module vs workspace labels",
+   "pri": "N",
+   "method": "Test",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r04-vg22": {
+   "pg": "r04",
+   "vg": "VG-22",
+   "title": "Guide code and final title",
+   "pri": "B",
+   "method": "Dec",
+   "area": "Governance",
+   "status": "Open"
+  },
+  "r04-vg23": {
+   "pg": "r04",
+   "vg": "VG-23",
+   "title": "Whether the legal entity affects this task",
+   "pri": "N",
+   "method": "Test",
+   "area": "Behavior",
+   "status": "Open"
+  },
+  "r04-vg24": {
+   "pg": "r04",
+   "vg": "VG-24",
+   "title": "Clean-session screenshots, if used",
+   "pri": "N",
+   "method": "Test",
+   "area": "Screenshots",
+   "status": "Open"
+  },
+  "r04-vg25": {
+   "pg": "r04",
+   "vg": "VG-25",
+   "title": "SME review, peer test and approval",
+   "pri": "B",
+   "method": "SME",
+   "area": "Governance",
+   "status": "Open"
+  },
+  "r04-vg26": {
+   "pg": "r04",
+   "vg": "VG-26",
+   "title": "Environment and sign-in method",
+   "pri": "N",
+   "method": "SME",
+   "area": "Governance",
+   "status": "Open"
+  },
+  "r04-vg27": {
+   "pg": "r04",
+   "vg": "VG-27",
+   "title": "Screenshot masking policy",
+   "pri": "N",
+   "method": "Dec, SME",
+   "area": "Screenshots",
+   "status": "Open"
+  },
+  "r04-vg28": {
+   "pg": "r04",
+   "vg": "VG-28",
+   "title": "UI spelling: Favorites or Favourites",
+   "pri": "B",
+   "method": "Test",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r04-vg29": {
+   "pg": "r04",
+   "vg": "VG-29",
+   "title": "Pages in other modules create the same favorite",
+   "pri": "N",
+   "method": "Test",
+   "area": "Labels & locations",
+   "status": "Withdrawn"
+  },
+  "r04-vg30": {
+   "pg": "r04",
+   "vg": "VG-30",
+   "title": "Initiation events",
+   "pri": "B",
+   "method": "SME",
+   "area": "Content",
+   "status": "Open"
+  },
+  "r04-vg31": {
+   "pg": "r04",
+   "vg": "VG-31",
+   "title": "Stream, process area and role names",
+   "pri": "B",
+   "method": "SME",
+   "area": "Governance",
+   "status": "Open"
+  },
+  "r04-vg32": {
+   "pg": "r04",
+   "vg": "VG-32",
+   "title": "Applicable reports",
+   "pri": "B",
+   "method": "SME",
+   "area": "Content",
+   "status": "Open"
+  },
+  "r04-vg33": {
+   "pg": "r04",
+   "vg": "VG-33",
+   "title": "Business process owner",
+   "pri": "B",
+   "method": "SME",
+   "area": "Governance",
+   "status": "Open"
+  },
+  "r05-vg01": {
+   "pg": "r05",
+   "vg": "VG-01",
+   "title": "Demonstrated page and columns available per page",
+   "pri": "B",
+   "method": "Rec, SME",
+   "area": "Content",
+   "status": "Open"
+  },
+  "r05-vg02": {
+   "pg": "r05",
+   "vg": "VG-02",
+   "title": "Views and default across legal entities",
+   "pri": "N",
+   "method": "Rec, Test",
+   "area": "Behavior",
+   "status": "Open"
+  },
+  "r05-vg03": {
+   "pg": "r05",
+   "vg": "VG-03",
+   "title": "Insert columns: label, location and response",
+   "pri": "B",
+   "method": "Test, Rec",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r05-vg04": {
+   "pg": "r05",
+   "vg": "VG-04",
+   "title": "Control that applies the column selection",
+   "pri": "B",
+   "method": "Test",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r05-vg05": {
+   "pg": "r05",
+   "vg": "VG-05",
+   "title": "How to remove a column",
+   "pri": "B",
+   "method": "Test, Rec",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r05-vg06": {
+   "pg": "r05",
+   "vg": "VG-06",
+   "title": "How to reorder columns",
+   "pri": "B",
+   "method": "Test, Rec",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r05-vg07": {
+   "pg": "r05",
+   "vg": "VG-07",
+   "title": "How to open a column filter",
+   "pri": "B",
+   "method": "Test, Rec",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r05-vg08": {
+   "pg": "r05",
+   "vg": "VG-08",
+   "title": "Operator labels and the apply control",
+   "pri": "B",
+   "method": "Test, Rec",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r05-vg09": {
+   "pg": "r05",
+   "vg": "VG-09",
+   "title": "How to show the grid footer",
+   "pri": "B",
+   "method": "Test, Rec",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r05-vg10": {
+   "pg": "r05",
+   "vg": "VG-10",
+   "title": "How to add a sum, and which columns support it",
+   "pri": "B",
+   "method": "Test, Rec",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r05-vg11": {
+   "pg": "r05",
+   "vg": "VG-11",
+   "title": "Save as: label and location",
+   "pri": "B",
+   "method": "Test, Rec",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r05-vg12": {
+   "pg": "r05",
+   "vg": "VG-12",
+   "title": "View naming convention",
+   "pri": "N",
+   "method": "SME, Dec",
+   "area": "Content",
+   "status": "Open"
+  },
+  "r05-vg13": {
+   "pg": "r05",
+   "vg": "VG-13",
+   "title": "Control that completes Save as",
+   "pri": "B",
+   "method": "Test",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r05-vg14": {
+   "pg": "r05",
+   "vg": "VG-14",
+   "title": "Pin as default: label, location and effect",
+   "pri": "B",
+   "method": "Test, Rec",
+   "area": "Behavior",
+   "status": "Open"
+  },
+  "r05-vg15": {
+   "pg": "r05",
+   "vg": "VG-15",
+   "title": "How a saved and pinned view is shown",
+   "pri": "B",
+   "method": "Test",
+   "area": "Behavior",
+   "status": "Open"
+  },
+  "r05-vg16": {
+   "pg": "r05",
+   "vg": "VG-16",
+   "title": "How to select a saved view",
+   "pri": "B",
+   "method": "Test",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r05-vg17": {
+   "pg": "r05",
+   "vg": "VG-17",
+   "title": "Control that saves changes to a view",
+   "pri": "B",
+   "method": "Test, Rec",
+   "area": "Labels & locations",
+   "status": "Open"
+  },
+  "r05-vg18": {
+   "pg": "r05",
+   "vg": "VG-18",
+   "title": "Filters and totals are saved with the view",
+   "pri": "B",
+   "method": "Test",
+   "area": "Behavior",
+   "status": "Open"
+  },
+  "r05-vg19": {
+   "pg": "r05",
+   "vg": "VG-19",
+   "title": "Personal or shared views",
+   "pri": "N",
+   "method": "Test, SME",
+   "area": "Behavior",
+   "status": "Open"
+  },
+  "r05-vg20": {
+   "pg": "r05",
+   "vg": "VG-20",
+   "title": "Applicable reports",
+   "pri": "B",
+   "method": "SME",
+   "area": "Content",
+   "status": "Open"
+  },
+  "r05-vg21": {
+   "pg": "r05",
+   "vg": "VG-21",
+   "title": "Initiation events",
+   "pri": "B",
+   "method": "SME",
+   "area": "Content",
+   "status": "Open"
+  },
+  "r05-vg22": {
+   "pg": "r05",
+   "vg": "VG-22",
+   "title": "Stream, process area and role names",
+   "pri": "B",
+   "method": "SME",
+   "area": "Governance",
+   "status": "Open"
+  },
+  "r05-vg23": {
+   "pg": "r05",
+   "vg": "VG-23",
+   "title": "Business process owner",
+   "pri": "B",
+   "method": "SME",
+   "area": "Governance",
+   "status": "Open"
+  },
+  "r05-vg24": {
+   "pg": "r05",
+   "vg": "VG-24",
+   "title": "Guide code and final title",
+   "pri": "B",
+   "method": "Dec",
+   "area": "Governance",
+   "status": "Open"
+  },
+  "r05-vg25": {
+   "pg": "r05",
+   "vg": "VG-25",
+   "title": "Security role and personalization limits",
+   "pri": "B",
+   "method": "Test, SME",
+   "area": "Governance",
+   "status": "Open"
+  },
+  "r05-vg26": {
+   "pg": "r05",
+   "vg": "VG-26",
+   "title": "SME review, peer test and approval",
+   "pri": "B",
+   "method": "SME",
+   "area": "Governance",
+   "status": "Open"
+  },
+  "r05-vg27": {
+   "pg": "r05",
+   "vg": "VG-27",
+   "title": "Timestamps for the views demonstration",
+   "pri": "N",
+   "method": "Rec",
+   "area": "Screenshots",
+   "status": "Open"
+  },
+  "r05-vg28": {
+   "pg": "r05",
+   "vg": "VG-28",
+   "title": "Keep Update a Saved View as its own topic",
+   "pri": "N",
+   "method": "SME",
+   "area": "Content",
+   "status": "Open"
+  },
+  "r05-vg29": {
+   "pg": "r05",
+   "vg": "VG-29",
+   "title": "Balance column for the zero-balance example",
+   "pri": "N",
+   "method": "Test",
+   "area": "Content",
+   "status": "Open"
+  }
+ },
+ "activity": {
+  "a01": {
+   "date": "2026-10-08",
+   "at": "2026-10-08T04:40:00Z",
+   "kind": "draft",
+   "text": "Project set up: README, Favorites v0.2 working draft, validation and screenshot registers",
+   "ref": "PR #1 opened"
+  },
+  "a02": {
+   "date": "2026-10-08",
+   "at": "2026-10-08T05:02:00Z",
+   "kind": "draft",
+   "text": "Favorites guide rebuilt in the PG master template with 20 review comments",
+   "ref": "Template and authoring guide stored in templates/"
+  },
+  "a03": {
+   "date": "2026-10-08",
+   "at": "2026-10-08T20:56:00Z",
+   "kind": "merge",
+   "text": "PR #1 merged: Favorites guide and project scaffolding",
+   "ref": "main"
+  },
+  "a04": {
+   "date": "2026-10-14",
+   "at": "2026-10-14T02:04:00Z",
+   "kind": "draft",
+   "text": "Personalized Views v0.1 drafted in the master template with 31 review comments",
+   "ref": "PR #2 opened"
+  },
+  "a05": {
+   "date": "2026-10-14",
+   "at": "2026-10-14T02:05:00Z",
+   "kind": "decision",
+   "text": "D-019 and D-020 recorded: Views guide structure and the rule for uncaptured control labels",
+   "ref": "Project decisions log"
+  },
+  "a06": {
+   "date": "2026-10-14",
+   "at": "2026-10-14T03:00:00Z",
+   "kind": "sync",
+   "text": "Command centre created and synced from the PG-Builder repo",
+   "ref": "32 deliverables \u00b7 62 validation items"
+  }
+ },
+ "decisions": {
+  "d006": {
+   "code": "D-006",
+   "title": "PG ID scheme: source 0 IDs or backlog rank",
+   "status": "Open"
+  },
+  "d014": {
+   "code": "D-014",
+   "title": "Favorites process name and file name",
+   "status": "Provisional"
+  },
+  "d019": {
+   "code": "D-019",
+   "title": "Personalized Views guide structure",
+   "status": "Provisional"
+  }
+ }
+}
