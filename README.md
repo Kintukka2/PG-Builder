@@ -12,7 +12,7 @@ Each PG covers **one** D365 task and its controls. PGs sit inside a learning arc
 
 | Topic | Folder | Status |
 |---|---|---|
-| **Accounts Receivable (AR) Collections** | [`ar-collections-learning/`](ar-collections-learning/) | Active. First drafting batch complete; second batch in progress. Twelve PGs in SME review draft. |
+| **Accounts Receivable (AR) Collections** | [`ar-collections-learning/`](ar-collections-learning/) | Active. First and second drafting batches complete: thirteen PGs in SME review draft. |
 | *Further D365 topics* | *To be added as sibling folders* | Planned |
 
 ## PG template (governs every PG)
@@ -44,7 +44,7 @@ Each topic has its own folder with the same internal structure:
 
 ## AR Collections: PG status tracker
 
-Backlog rank and release come from the AR development roadmap. Drafting order follows the recommended first and second drafting batches.
+Backlog rank and release come from the AR development roadmap. Drafting order follows the recommended first and second drafting batches. Both batches are drafted.
 
 | Rank | PG | Release | Draft batch | Gate | Files |
 |---|---|---|---|---|---|
@@ -59,6 +59,7 @@ Backlog rank and release come from the AR development roadmap. Drafting order fo
 | 6 | Review overdue customers (*AR Collections Overdue Customers*) | 1 | 2nd (#3) | **Drafted; SME review draft** (v0.1): 22 open validation gaps, 16 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Overdue%20Customers%20PG%20v0.1.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Overdue-Customers-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Overdue-Customers-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Overdue-Customers-Validation.md) |
 | 8 | Investigate a customer account (*AR Collections Customer Account*) | 1 | 2nd (#4) | **Drafted; SME review draft** (v0.1): 24 open validation gaps, 17 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Customer%20Account%20PG%20v0.1.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Customer-Account-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Customer-Account-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Customer-Account-Validation.md) |
 | 10 | Record a collection activity (*AR Collections Collection Activities*) | 1 | 2nd (#5) | **Drafted; SME review draft** (v0.1): 24 open validation gaps, 17 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Collection%20Activities%20PG%20v0.1.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Collection-Activities-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Collection-Activities-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Collection-Activities-Validation.md) |
+| 12 | Generate and send a customer statement (*AR Collections Statement Distribution*) | 2 | 2nd (#7) | **Drafted; SME review draft** (v0.1): 25 open validation gaps, 19 blocking. Customer-facing: not tested on real customers until its control items close | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Statement%20Distribution%20PG%20v0.1.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Statement-Distribution-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Statement-Distribution-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Statement-Distribution-Validation.md) |
 | 13 | Preview and download a customer statement (*AR Collections Statement Preview*) | 2 | 2nd (#6) | **Drafted; SME review draft** (v0.1): 24 open validation gaps, 16 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Statement%20Preview%20PG%20v0.1.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Statement-Preview-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Statement-Preview-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Statement-Preview-Validation.md) |
 
 Project visibility: the [PG Command Centre](https://claude.ai/artifact/G3PMkvp68jSbqULxECehCi) tracks every deliverable, gate and validation gap; its source is in [`command-centre/`](command-centre/).
