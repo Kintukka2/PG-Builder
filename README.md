@@ -12,7 +12,7 @@ Each PG covers **one** D365 task and its controls. PGs sit inside a learning arc
 
 | Topic | Folder | Status |
 |---|---|---|
-| **Accounts Receivable (AR) Collections** | [`ar-collections-learning/`](ar-collections-learning/) | Active. First drafting batch complete: six PGs in SME review draft. |
+| **Accounts Receivable (AR) Collections** | [`ar-collections-learning/`](ar-collections-learning/) | Active. First drafting batch complete; second batch started. Seven PGs in SME review draft. |
 | *Further D365 topics* | *To be added as sibling folders* | Planned |
 
 ## PG template (governs every PG)
@@ -44,7 +44,7 @@ Each topic has its own folder with the same internal structure:
 
 ## AR Collections: PG status tracker
 
-Backlog rank and release come from the AR development roadmap. Drafting order follows the recommended first drafting batch.
+Backlog rank and release come from the AR development roadmap. Drafting order follows the recommended first and second drafting batches.
 
 | Rank | PG | Release | Draft batch | Gate | Files |
 |---|---|---|---|---|---|
@@ -54,6 +54,7 @@ Backlog rank and release come from the AR development roadmap. Drafting order fo
 | 11 | View and download a customer invoice (*AR Collections Customer Invoices*) | 2 | 1st (#4) | **Drafted; SME review draft** (v0.1): 22 open validation gaps, 14 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Customer%20Invoices%20PG%20v0.1.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Customer-Invoices-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Customer-Invoices-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Customer-Invoices-Validation.md) |
 | 17 | Export all rows from a D365 grid (*AR Collections Export to Excel*) | 2 | 1st (#5) | **Drafted; SME review draft** (v0.1): 20 open validation gaps, 12 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Export%20to%20Excel%20PG%20v0.1.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Export-to-Excel-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Export-to-Excel-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Export-to-Excel-Validation.md) |
 | 9 | Review customer notes and activities (*AR Collections Notes and Activities*) | 1 | 1st (#6) | **Drafted; SME review draft** (v0.1): 22 open validation gaps, 15 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Notes%20and%20Activities%20PG%20v0.1.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Notes-and-Activities-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Notes-and-Activities-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Notes-and-Activities-Validation.md) |
+| 2 | Switch between legal entities (*AR Collections Legal Entities*) | 1 | 2nd (#1) | **Drafted; SME review draft** (v0.1): 22 open validation gaps, 13 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Legal%20Entities%20PG%20v0.1.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Legal-Entities-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Legal-Entities-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Legal-Entities-Validation.md) |
 
 Project visibility: the [PG Command Centre](https://claude.ai/artifact/G3PMkvp68jSbqULxECehCi) tracks every deliverable, gate and validation gap; its source is in [`command-centre/`](command-centre/).
 
