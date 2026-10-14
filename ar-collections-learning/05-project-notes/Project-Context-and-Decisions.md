@@ -163,6 +163,7 @@ Development gates (source 2): Identified → Source reviewed → Gap validated �
 | D-021 | 2026-10-14 | Third PG: process name **AR Collections Aged Balances**. Two standalone topics: *Review Customer Aged Balances* (Currency column, zero-balance filter, descending sort) and *Filter Aged Balances by Customer or Currency*. Aging indicators are excluded until validated. Opening a customer belongs to the *Investigate a customer account* guide. | Sources 1, 2, 3.1; T2 topic rules | Provisional (`VG-10`, `VG-17`, `VG-23` in its register) |
 | D-022 | 2026-10-14 | Start each new topic and Part on a new page with the heading's *page break before* setting, not a page-break paragraph. This avoids stray blank pages when a table ends at the foot of a page. | Render review of the Aged Balances guide | Adopted |
 | D-023 | 2026-10-14 | Fourth PG: process name **AR Collections Customer Invoices**. One parent topic, *View and Download a Customer Invoice*, with subprocedures *Open the Invoice Preview* and *Download the Invoice as PDF* (optional). The path to the customer's transactions is not invented; step 1.1.2 names the action only. Finding invoices with Show closed or Hide FX revaluations belongs to the *Review customer transactions* guide. Sending the invoice to the customer is out of scope. | Sources 0, 1, 2, 3.1; T2 parent-topic pattern | Provisional (`VG-01`, `VG-16`, `VG-21`, `VG-22` in its register) |
+| D-024 | 2026-10-14 | Fifth PG: process name **AR Collections Export to Excel**. One standalone topic, *Export All Rows from a Grid*. As a utility task performed on many pages, it opens "the page that holds the data" after the Entity check instead of one Modules/Navigate path. No export volume limit is stated until confirmed. The custom all-customer transaction report and bank statements are separate guides. | Sources 0, 1, 2, 3.1; T2 topic rules | Provisional (`VG-06`, `VG-10`, `VG-15`, `VG-20` in its register) |
 
 ---
 
@@ -192,8 +193,8 @@ These elements came from the Favourites PG. They are candidates for the standard
 
 ## 10. Next steps
 
-1. **One clean-session D365 test** covering Favorites, Personalized Views, Aged balances and the customer invoice. Many blocking items overlap across the four registers: page labels, menu locations, Insert columns, filter and sort controls, and the customer transactions path.
-2. **Recording evidence:** transcript excerpts and timestamps for the views, Aged balances and invoice demonstrations (Views `VG-27`, Aged Balances `VG-21`, Customer Invoices `VG-20`).
-3. **SME answers** for the shared governance items in each register: initiation, stream and role, BPO, reports, security role.
+1. **One clean-session D365 test** covering Favorites, Personalized Views, Aged balances, the customer invoice and a grid export. Many blocking items overlap across the five registers: page labels, menu locations, Insert columns, filter and sort controls, the customer transactions path and the export menu.
+2. **Recording evidence:** transcript excerpts and timestamps for the views, Aged balances and invoice demonstrations (Views `VG-27`, Aged Balances `VG-21`, Customer Invoices `VG-20`, Export to Excel `VG-19`).
+3. **SME answers** for the shared governance items in each register: initiation, stream and role, BPO, reports, security role. Also the export volume limit and the handling rule for exported customer data (Export to Excel `VG-06`, `VG-08`).
 4. Decide the guide codes (D-006) and approve or edit the [PG Delivery Flow](https://claude.ai/artifact/Qb7C1s8Vmnt8av3ams3jrJ).
-5. Next in the first drafting batch: *Export all rows from a D365 grid*.
+5. Next, and last, in the first drafting batch: *Review customer notes and activities*.
