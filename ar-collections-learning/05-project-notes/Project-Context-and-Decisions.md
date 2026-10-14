@@ -96,12 +96,14 @@ The Favourites PG sits in **Module 1, sequence 1.5** ("Add required AR pages to 
 
 **First batch:**
 
-1. Configure AR Collections favourites ← **in progress**
+1. Configure AR Collections favourites
 2. Create and save a personalised D365 view
 3. Review customer aged balances
 4. View and download a customer invoice
 5. Export all rows from a D365 grid
 6. Review customer notes and activities
+
+All six are drafted as SME review drafts (October 2026).
 
 **Second batch (limited validation needed):** switch legal entities, navigate the workspace, review overdue customers, investigate a customer account, record a collection activity, preview and download a statement, generate and send a statement.
 
@@ -164,6 +166,7 @@ Development gates (source 2): Identified → Source reviewed → Gap validated �
 | D-022 | 2026-10-14 | Start each new topic and Part on a new page with the heading's *page break before* setting, not a page-break paragraph. This avoids stray blank pages when a table ends at the foot of a page. | Render review of the Aged Balances guide | Adopted |
 | D-023 | 2026-10-14 | Fourth PG: process name **AR Collections Customer Invoices**. One parent topic, *View and Download a Customer Invoice*, with subprocedures *Open the Invoice Preview* and *Download the Invoice as PDF* (optional). The path to the customer's transactions is not invented; step 1.1.2 names the action only. Finding invoices with Show closed or Hide FX revaluations belongs to the *Review customer transactions* guide. Sending the invoice to the customer is out of scope. | Sources 0, 1, 2, 3.1; T2 parent-topic pattern | Provisional (`VG-01`, `VG-16`, `VG-21`, `VG-22` in its register) |
 | D-024 | 2026-10-14 | Fifth PG: process name **AR Collections Export to Excel**. One standalone topic, *Export All Rows from a Grid*. As a utility task performed on many pages, it opens "the page that holds the data" after the Entity check instead of one Modules/Navigate path. No export volume limit is stated until confirmed. The custom all-customer transaction report and bank statements are separate guides. | Sources 0, 1, 2, 3.1; T2 topic rules | Provisional (`VG-06`, `VG-10`, `VG-15`, `VG-20` in its register) |
+| D-025 | 2026-10-14 | Sixth PG: process name **AR Collections Notes and Activities**. Two standalone topics: *Review Customer Notes* (Notes in the Customer credit and collections workspace, filtered by customer, then optionally by creator, date or note type) and *Review All Customer Activities* (All customers, then View all activities). System-generated entries are described in general terms only. Recording a new activity belongs to the *Record a collection activity* guide. | Sources 0, 1, 2, 3.1; T2 topic rules | Provisional (`VG-05`, `VG-17`, `VG-22` in its register) |
 
 ---
 
@@ -193,8 +196,8 @@ These elements came from the Favourites PG. They are candidates for the standard
 
 ## 10. Next steps
 
-1. **One clean-session D365 test** covering Favorites, Personalized Views, Aged balances, the customer invoice and a grid export. Many blocking items overlap across the five registers: page labels, menu locations, Insert columns, filter and sort controls, the customer transactions path and the export menu.
-2. **Recording evidence:** transcript excerpts and timestamps for the views, Aged balances and invoice demonstrations (Views `VG-27`, Aged Balances `VG-21`, Customer Invoices `VG-20`, Export to Excel `VG-19`).
+1. **One clean-session D365 test** covering all six first-batch guides: Favorites, Personalized Views, Aged balances, the customer invoice, a grid export, and Notes and activities. Many blocking items overlap across the six registers: page labels, menu locations (including All customers), Insert columns, filter and sort controls, the customer transactions path, the export menu and the workspace route.
+2. **Recording evidence:** transcript excerpts and timestamps for the views, Aged balances, invoice, export and notes demonstrations (Views `VG-27`, Aged Balances `VG-21`, Customer Invoices `VG-20`, Export to Excel `VG-19`, Notes and Activities `VG-21`).
 3. **SME answers** for the shared governance items in each register: initiation, stream and role, BPO, reports, security role. Also the export volume limit and the handling rule for exported customer data (Export to Excel `VG-06`, `VG-08`).
 4. Decide the guide codes (D-006) and approve or edit the [PG Delivery Flow](https://claude.ai/artifact/Qb7C1s8Vmnt8av3ams3jrJ).
-5. Next, and last, in the first drafting batch: *Review customer notes and activities*.
+5. The first drafting batch is complete. The second batch (source 3.1) is next: switch legal entities, navigate the workspace, review overdue customers, investigate a customer account, record a collection activity, preview and download a statement, generate and send a statement. *Navigate the Customer Credit and Collections workspace* would also close Notes and Activities `VG-02`.
