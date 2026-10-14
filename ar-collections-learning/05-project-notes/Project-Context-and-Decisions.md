@@ -160,6 +160,8 @@ Development gates (source 2): Identified → Source reviewed → Gap validated �
 | D-018 | 2026-10-08 | The template has no Troubleshooting section. Troubleshooting content is dropped, and the supported escalation route (D365 issue form, from Additional Resources) moves into the relevant procedure row. | T2 "Retain the standard support content" | Adopted |
 | D-019 | 2026-10-14 | Second PG: process name **AR Collections Personalized Views**. Topic 1 *Create a Personalized View* is a parent topic with four subtopics (Arrange the Columns; Filter the List, optional; Add a Footer Total, optional; Save and Pin the View). Topic 2 *Update a Saved View* is standalone. File name `TBC-AR Collections Personalized Views PG v0.1.docx`. | T2 topic-structure rules; sources 1, 2, 3.1 | Provisional (`VG-24`, `VG-28` in its register) |
 | D-020 | 2026-10-14 | Where a control label or location was not captured, the step names the user action without inventing a label. Each such step carries a Word comment and a VG item. | T2 "Separate writing decisions from missing facts" | Adopted |
+| D-021 | 2026-10-14 | Third PG: process name **AR Collections Aged Balances**. Two standalone topics: *Review Customer Aged Balances* (Currency column, zero-balance filter, descending sort) and *Filter Aged Balances by Customer or Currency*. Aging indicators are excluded until validated. Opening a customer belongs to the *Investigate a customer account* guide. | Sources 1, 2, 3.1; T2 topic rules | Provisional (`VG-10`, `VG-17`, `VG-23` in its register) |
+| D-022 | 2026-10-14 | Start each new topic and Part on a new page with the heading's *page break before* setting, not a page-break paragraph. This avoids stray blank pages when a table ends at the foot of a page. | Render review of the Aged Balances guide | Adopted |
 
 ---
 
@@ -189,8 +191,8 @@ These elements came from the Favourites PG. They are candidates for the standard
 
 ## 10. Next steps
 
-1. **Favorites guide (v0.2):** SME factual review; clean-session D365 test for its blocking label, location and behavior items; SME answers for its `VG-16` and `VG-30` to `VG-33`.
-2. **Personalized Views guide (v0.1):** get the transcript excerpt and timestamps for the views demonstration (its `VG-27`). That review answers most of its blocking items (`VG-01` to `VG-17`). Then run one clean-session D365 test and send for SME review.
-3. Decide the guide codes (D-006; `VG-22` in Favorites, `VG-24` in Views) and the shared stream and role labels.
-4. Update each Word file first, then its Markdown preview. Resolve the comments, then refresh the contents and fields.
-5. Next in the first drafting batch: *Review customer aged balances*. Keep the ageing-icon legend out of it until validated (source 3.1).
+1. **One clean-session D365 test** covering Favorites, Personalized Views and Aged balances. Many blocking items overlap across the three registers: page labels, menu locations, Insert columns, filter and sort controls.
+2. **Recording evidence:** transcript excerpts and timestamps for the views and Aged balances demonstrations (Views `VG-27`, Aged Balances `VG-21`).
+3. **SME answers** for the shared governance items in each register: initiation, stream and role, BPO, reports, security role.
+4. Decide the guide codes (D-006) and approve or edit the [PG Delivery Flow](https://claude.ai/artifact/Qb7C1s8Vmnt8av3ams3jrJ).
+5. Next in the first drafting batch: *View and download a customer invoice*.
