@@ -12,7 +12,7 @@ Each PG covers **one** D365 task and its controls. PGs sit inside a learning arc
 
 | Topic | Folder | Status |
 |---|---|---|
-| **Accounts Receivable (AR) Collections** | [`ar-collections-learning/`](ar-collections-learning/) | Active. First PG in draft. |
+| **Accounts Receivable (AR) Collections** | [`ar-collections-learning/`](ar-collections-learning/) | Active. Four PGs in SME review draft. |
 | *Further D365 topics* | *To be added as sibling folders* | Planned |
 
 ## PG template (governs every PG)
@@ -51,7 +51,7 @@ Backlog rank and release come from the AR development roadmap. Drafting order fo
 | 4 | Configure AR Collections Favorites | 1 | 1st (#1) | **Drafted; SME review draft** (v0.2): 30 open validation gaps, 16 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Favorites%20PG%20v0.2.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Configure-Collections-Favourites-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Configure-Collections-Favourites-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Configure-Collections-Favourites-Validation.md) |
 | 5 | Create and save a personalised D365 view (*AR Collections Personalized Views*) | 1 | 1st (#2) | **Drafted; SME review draft** (v0.1): 29 open validation gaps, 23 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Personalized%20Views%20PG%20v0.1.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Personalized-Views-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Personalized-Views-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Personalized-Views-Validation.md) |
 | 7 | Review customer aged balances (*AR Collections Aged Balances*) | 1 | 1st (#3) | **Drafted; SME review draft** (v0.1): 22 open validation gaps, 15 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Aged%20Balances%20PG%20v0.1.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Aged-Balances-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Aged-Balances-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Aged-Balances-Validation.md) |
-| 11 | View and download a customer invoice | 2 | 1st (#4) | Not started | — |
+| 11 | View and download a customer invoice (*AR Collections Customer Invoices*) | 2 | 1st (#4) | **Drafted; SME review draft** (v0.1): 22 open validation gaps, 14 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Customer%20Invoices%20PG%20v0.1.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Customer-Invoices-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Customer-Invoices-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Customer-Invoices-Validation.md) |
 | 17 | Export all rows from a D365 grid | 2 | 1st (#5) | Not started | — |
 | 9 | Review customer notes and activities | 1 | 1st (#6) | Not started | — |
 

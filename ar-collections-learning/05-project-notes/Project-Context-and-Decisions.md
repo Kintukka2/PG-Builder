@@ -162,6 +162,7 @@ Development gates (source 2): Identified → Source reviewed → Gap validated �
 | D-020 | 2026-10-14 | Where a control label or location was not captured, the step names the user action without inventing a label. Each such step carries a Word comment and a VG item. | T2 "Separate writing decisions from missing facts" | Adopted |
 | D-021 | 2026-10-14 | Third PG: process name **AR Collections Aged Balances**. Two standalone topics: *Review Customer Aged Balances* (Currency column, zero-balance filter, descending sort) and *Filter Aged Balances by Customer or Currency*. Aging indicators are excluded until validated. Opening a customer belongs to the *Investigate a customer account* guide. | Sources 1, 2, 3.1; T2 topic rules | Provisional (`VG-10`, `VG-17`, `VG-23` in its register) |
 | D-022 | 2026-10-14 | Start each new topic and Part on a new page with the heading's *page break before* setting, not a page-break paragraph. This avoids stray blank pages when a table ends at the foot of a page. | Render review of the Aged Balances guide | Adopted |
+| D-023 | 2026-10-14 | Fourth PG: process name **AR Collections Customer Invoices**. One parent topic, *View and Download a Customer Invoice*, with subprocedures *Open the Invoice Preview* and *Download the Invoice as PDF* (optional). The path to the customer's transactions is not invented; step 1.1.2 names the action only. Finding invoices with Show closed or Hide FX revaluations belongs to the *Review customer transactions* guide. Sending the invoice to the customer is out of scope. | Sources 0, 1, 2, 3.1; T2 parent-topic pattern | Provisional (`VG-01`, `VG-16`, `VG-21`, `VG-22` in its register) |
 
 ---
 
@@ -191,8 +192,8 @@ These elements came from the Favourites PG. They are candidates for the standard
 
 ## 10. Next steps
 
-1. **One clean-session D365 test** covering Favorites, Personalized Views and Aged balances. Many blocking items overlap across the three registers: page labels, menu locations, Insert columns, filter and sort controls.
-2. **Recording evidence:** transcript excerpts and timestamps for the views and Aged balances demonstrations (Views `VG-27`, Aged Balances `VG-21`).
+1. **One clean-session D365 test** covering Favorites, Personalized Views, Aged balances and the customer invoice. Many blocking items overlap across the four registers: page labels, menu locations, Insert columns, filter and sort controls, and the customer transactions path.
+2. **Recording evidence:** transcript excerpts and timestamps for the views, Aged balances and invoice demonstrations (Views `VG-27`, Aged Balances `VG-21`, Customer Invoices `VG-20`).
 3. **SME answers** for the shared governance items in each register: initiation, stream and role, BPO, reports, security role.
 4. Decide the guide codes (D-006) and approve or edit the [PG Delivery Flow](https://claude.ai/artifact/Qb7C1s8Vmnt8av3ams3jrJ).
-5. Next in the first drafting batch: *View and download a customer invoice*.
+5. Next in the first drafting batch: *Export all rows from a D365 grid*.
