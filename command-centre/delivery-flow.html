@@ -1,0 +1,352 @@
+<title>PG Delivery Flow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: vertical swimlanes — role lanes as columns, steps as stations top to bottom, animated beams between stations; detail and edit panel to the right; vertical timeline on phones. */
+:root{
+  color-scheme: dark;
+  --bg:#06061c; --bg-2:#0b0a2a; --ink:#e8ebff; --ink-2:#a9afe0; --ink-3:#6f75a9;
+  --panel:rgba(22,20,74,.46); --panel-strong:rgba(28,25,92,.78); --line:rgba(150,160,255,.14); --line-2:rgba(150,170,255,.28);
+  --accent:#7cc8ff; --accent-rgb:124,200,255; --mint:#8fe8b6; --mint-rgb:143,232,182; --navy:#1d1765;
+  --good:#6ee7a8; --warn:#ffc764; --crit:#ff7a85;
+  --l0:#9aa3e6; --l1:#7cc8ff; --l2:#ffc764; --l3:#8fe8b6; --l4:#f39cc4;
+  --g0:#6a76b4; --g1:#7cc8ff; --g2:#6fd6ef; --g3:#76e0d0; --g4:#84e8b8; --g5:#a7f29e; --g6:#c9b6ff;
+  --glow:0 0 0 1px rgba(124,200,255,.18), 0 18px 60px -20px rgba(70,90,255,.55);
+  --f-display:"Chakra Petch", "Bahnschrift", "Segoe UI", system-ui, sans-serif;
+  --f-body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
+  color-scheme: light;
+  --bg:#eef0fb; --bg-2:#e3e6f8; --ink:#141240; --ink-2:#434a85; --ink-3:#6b71a3;
+  --panel:rgba(255,255,255,.66); --panel-strong:rgba(255,255,255,.92); --line:rgba(29,23,101,.12); --line-2:rgba(29,23,101,.24);
+  --accent:#1f62d0; --accent-rgb:31,98,208; --mint:#14855a; --mint-rgb:20,133,90;
+  --good:#11845a; --warn:#a86400; --crit:#c8323f;
+  --l0:#5a63b8; --l1:#1f62d0; --l2:#a86400; --l3:#14855a; --l4:#b8457c;
+  --g0:#7f8bc4; --g1:#1f62d0; --g2:#11809e; --g3:#11877a; --g4:#14855a; --g5:#2f8a1e; --g6:#6a4bc4;
+  --glow:0 0 0 1px rgba(29,23,101,.08), 0 18px 50px -24px rgba(29,23,101,.35);
+}}
+:root[data-theme="light"]{
+  color-scheme: light;
+  --bg:#eef0fb; --bg-2:#e3e6f8; --ink:#141240; --ink-2:#434a85; --ink-3:#6b71a3;
+  --panel:rgba(255,255,255,.66); --panel-strong:rgba(255,255,255,.92); --line:rgba(29,23,101,.12); --line-2:rgba(29,23,101,.24);
+  --accent:#1f62d0; --accent-rgb:31,98,208; --mint:#14855a; --mint-rgb:20,133,90;
+  --good:#11845a; --warn:#a86400; --crit:#c8323f;
+  --l0:#5a63b8; --l1:#1f62d0; --l2:#a86400; --l3:#14855a; --l4:#b8457c;
+  --g0:#7f8bc4; --g1:#1f62d0; --g2:#11809e; --g3:#11877a; --g4:#14855a; --g5:#2f8a1e; --g6:#6a4bc4;
+  --glow:0 0 0 1px rgba(29,23,101,.08), 0 18px 50px -24px rgba(29,23,101,.35);
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:14px;line-height:1.5;overflow-x:hidden}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+.aurora{position:fixed;inset:-20%;z-index:0;pointer-events:none;filter:blur(60px);opacity:.5}
+.aurora i{position:absolute;border-radius:50%;animation:drift 30s ease-in-out infinite alternate}
+.aurora i:nth-child(1){width:46vw;height:46vw;left:-8vw;top:-6vw;background:radial-gradient(circle,rgba(29,23,101,.9),transparent 65%)}
+.aurora i:nth-child(2){width:36vw;height:36vw;right:0;top:12vw;background:radial-gradient(circle,rgba(var(--accent-rgb),.28),transparent 65%)}
+.aurora i:nth-child(3){width:30vw;height:30vw;left:36vw;bottom:-8vw;background:radial-gradient(circle,rgba(var(--mint-rgb),.2),transparent 65%)}
+@keyframes drift{to{transform:translate3d(5vw,3vw,0) scale(1.12)}}
+.gridlines{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse 80% 60% at 50% 10%,#000 30%,transparent 80%);-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 10%,#000 30%,transparent 80%);opacity:.55}
+.shell{position:relative;z-index:1;max-width:1480px;margin:0 auto;padding-inline:clamp(16px,3vw,36px);padding-block:22px 48px;display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+header.top{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.title h1{margin:0;font-family:var(--f-display);font-size:clamp(24px,3vw,34px);letter-spacing:.04em;text-transform:uppercase;line-height:1.1}
+.title p{margin:6px 0 0;color:var(--ink-2);max-width:70ch}
+.eyebrow{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.status{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;border:1px solid var(--line-2);font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--warn)}
+.status[data-s="approved"] i{background:var(--good);box-shadow:0 0 10px var(--good)}
+.status[data-s="edited"] i{background:var(--accent)}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:12px;border:1px solid var(--line-2);background:var(--panel);cursor:pointer;font-size:13px;transition:border-color .2s,transform .2s,background .2s}
+.btn:hover{border-color:rgba(var(--accent-rgb),.65);transform:translateY(-1px)}
+.btn.primary{background:linear-gradient(135deg,rgba(var(--accent-rgb),.28),rgba(var(--mint-rgb),.22));border-color:rgba(var(--accent-rgb),.6)}
+.btn[disabled]{opacity:.5;cursor:not-allowed;transform:none}
+.seg{display:inline-flex;padding:3px;gap:2px;border-radius:12px;border:1px solid var(--line);background:var(--panel)}
+.seg button{border:0;background:transparent;padding:6px 11px;border-radius:9px;font-size:12px;color:var(--ink-2);cursor:pointer}
+.seg button[aria-pressed="true"]{background:rgba(var(--accent-rgb),.18);color:var(--ink);box-shadow:inset 0 0 0 1px rgba(var(--accent-rgb),.4)}
+.panel{position:relative;border:1px solid var(--line);border-radius:20px;background:var(--panel);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:16px;min-width:0}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:16px;align-items:start}
+.canvas-wrap{overflow:hidden;border-radius:16px;position:relative}
+.canvas{position:relative;transform-origin:0 0;margin-inline:auto}
+.lane-col{position:absolute;top:0;bottom:0;border-left:1px dashed var(--line)}
+.lane-col:nth-child(odd){background:rgba(var(--accent-rgb),.025)}
+.lane-label{position:sticky;top:0;height:46px;display:flex;align-items:center;justify-content:center;gap:8px;font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);border-bottom:1px solid var(--line);text-align:center;padding-inline:6px}
+.lane-label i{width:10px;height:10px;border-radius:3px;flex:none}
+svg.beams{position:absolute;inset:0;overflow:visible;pointer-events:none}
+.beam-base{fill:none;stroke-width:2}
+.beam-pulse{fill:none;stroke-width:2.5;stroke-linecap:round;stroke-dasharray:18 260;animation:pulse 2.6s linear infinite}
+@keyframes pulse{from{stroke-dashoffset:278}to{stroke-dashoffset:0}}
+.beam-loop{fill:none;stroke-width:1.6;stroke-dasharray:4 6}
+.node{position:absolute;width:172px;transform:translate(-50%,-50%);border-radius:14px;border:1px solid var(--line-2);background:var(--panel-strong);backdrop-filter:blur(10px);padding:8px 9px 9px;cursor:pointer;text-align:left;transition:transform .25s,border-color .2s,box-shadow .25s,opacity .25s;display:grid;gap:3px}
+.node:hover{transform:translate(-50%,-50%) translateY(-3px) scale(1.03);box-shadow:var(--glow)}
+.node .n{display:flex;align-items:center;justify-content:space-between;font-family:var(--f-mono);font-size:10px;color:var(--ink-3)}
+.node .n b{width:18px;height:18px;border-radius:50%;display:grid;place-items:center;color:var(--bg);font-size:10px;font-weight:600}
+.node strong{font-size:12.5px;line-height:1.25;font-weight:600}
+.node.sel{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 0 28px -4px rgba(var(--accent-rgb),.7)}
+.node.dim{opacity:.35}
+.node.edited::after{content:"";position:absolute;top:6px;right:6px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.token{position:absolute;width:14px;height:14px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(var(--accent-rgb),.25),0 0 24px 6px rgba(var(--accent-rgb),.7);transform:translate(-50%,-50%);pointer-events:none;opacity:0;transition:opacity .2s;z-index:3}
+.token.on{opacity:1}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:12px;color:var(--ink-2);margin-top:12px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.side{position:sticky;top:calc(16px + env(safe-area-inset-top,0px));display:grid;gap:14px;max-height:calc(100vh - 32px);overflow:auto}
+.side h2{margin:0;font-family:var(--f-display);font-size:20px;line-height:1.2;text-wrap:balance}
+.side p{margin:0;color:var(--ink-2)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:999px;border:1px solid var(--line-2);color:var(--ink-2)}
+.kv{display:grid;gap:10px}
+.kv h3{margin:0 0 4px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:500}
+.kv ul{margin:0;padding-left:18px;color:var(--ink);font-size:13px}
+.kv li+li{margin-top:2px}
+.field{display:grid;gap:5px}
+.field label{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.field input,.field select,.field textarea{width:100%;border-radius:10px;border:1px solid var(--line-2);background:rgba(var(--accent-rgb),.05);padding:8px 10px;font-size:13px;color:var(--ink);outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent)}
+.field textarea{min-height:70px;resize:vertical}
+.row{display:flex;flex-wrap:wrap;gap:8px}
+.notice{font-size:12.5px;color:var(--ink-2);padding:10px 12px;border-radius:12px;border:1px dashed var(--line-2)}
+.confirm{display:grid;gap:10px;padding:12px;border-radius:14px;border:1px solid rgba(var(--mint-rgb),.5);background:rgba(var(--mint-rgb),.08)}
+.toasts{position:fixed;z-index:60;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));display:grid;gap:8px;width:min(360px,calc(100% - 32px))}
+.toast{padding:11px 13px;border-radius:12px;border:1px solid var(--line-2);background:var(--panel-strong);backdrop-filter:blur(14px);box-shadow:var(--glow);font-size:13px;animation:tin .3s ease-out both}
+@keyframes tin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+/* phone: vertical timeline */
+.vlist{display:none;gap:0}
+.vstep{display:grid;grid-template-columns:28px 1fr;gap:12px;padding:0 0 14px;position:relative}
+.vstep::before{content:"";position:absolute;left:13px;top:26px;bottom:0;width:2px;background:linear-gradient(var(--line-2),transparent)}
+.vstep:last-child::before{display:none}
+.vstep .dot{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-family:var(--f-mono);font-size:11px;color:var(--bg);font-weight:600}
+.vstep button{all:unset;cursor:pointer;display:grid;gap:3px;padding:8px 10px;border-radius:12px;border:1px solid var(--line);background:var(--panel-strong)}
+.vstep button:focus-visible{outline:2px solid var(--accent)}
+.vstep strong{font-size:13.5px}
+.vstep span{font-size:12px;color:var(--ink-3)}
+@media (max-width:1100px){.layout{grid-template-columns:1fr}.side{position:static;max-height:none}}
+@media (max-width:720px){.canvas-wrap{display:none}.vlist{display:grid}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="gridlines" aria-hidden="true"></div>
+
+<div class="shell">
+  <header class="top">
+    <div class="title">
+      <div class="eyebrow">Proof of concept · D365 Procedure Guides</div>
+      <h1>PG Delivery Flow</h1>
+      <p>How a guide moves from the training recording to a published PG on the Atlas Hub: who does each step, what goes in and what comes out. Edit any step, save your draft, then approve the flow to make it the working process.</p>
+    </div>
+    <span class="status" id="status" data-s="draft"><i></i><span id="statusText">Proposal · not approved</span></span>
+  </header>
+
+  <div class="bar">
+    <button class="btn primary" type="button" id="play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg><span>Play the flow</span></button>
+    <div class="seg" role="group" aria-label="Colour by"><button type="button" data-view="lane" aria-pressed="true">By role</button><button type="button" data-view="gate" aria-pressed="false">By gate</button></div>
+    <div class="seg" role="group" aria-label="Mode"><button type="button" data-mode="view" aria-pressed="true">View</button><button type="button" data-mode="edit" aria-pressed="false">Edit</button></div>
+    <span style="flex:1"></span>
+    <button class="btn" type="button" id="save" disabled>Save draft</button>
+    <button class="btn" type="button" id="discard" disabled>Discard changes</button>
+    <button class="btn" type="button" id="approve">Approve flow</button>
+  </div>
+
+  <div class="layout">
+    <section class="panel">
+      <div class="canvas-wrap" id="wrap"><div class="canvas" id="canvas"></div></div>
+      <div class="vlist" id="vlist"></div>
+      <div class="legend" id="legend"></div>
+    </section>
+    <aside class="panel side" id="side" aria-live="polite"></aside>
+  </div>
+</div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script>
+(() => {
+"use strict";
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const LANES = [
+  {id:"source", label:"Source material", c:"--l0"},
+  {id:"claude", label:"Claude", c:"--l1"},
+  {id:"you", label:"You (project lead)", c:"--l2"},
+  {id:"sme", label:"SME and testers", c:"--l3"},
+  {id:"owner", label:"Reviewer and owner", c:"--l4"}
+];
+const GATES = [
+  {id:"source-reviewed", label:"Source reviewed", c:"--g0"},
+  {id:"drafted", label:"Drafted", c:"--g1"},
+  {id:"sme-validated", label:"SME validated", c:"--g2"},
+  {id:"system-tested", label:"System tested", c:"--g3"},
+  {id:"approved", label:"Owner approved", c:"--g4"},
+  {id:"published", label:"Published", c:"--g5"},
+  {id:"maintain", label:"Maintain", c:"--g6"}
+];
+/* The proposal. Edits are saved as a draft in the page's tracker, never over this baseline. */
+const PROPOSAL = [
+  {id:"s1", lane:"source", gate:"source-reviewed", title:"Capture the training", summary:"The AR Training D365 session is recorded and transcribed. This is the evidence every guide is drafted from.", inputs:["Training recording","Transcript with time markers"], outputs:["Recording and transcript the project can cite"], done:"The transcript covers the task and its timestamps are known.", files:[]},
+  {id:"s2", lane:"claude", gate:"source-reviewed", title:"Analyse the sources", summary:"The source documents are turned into a learning architecture, a prioritized roadmap and a readiness rating for every topic.", inputs:["Recording and transcript","Source files 0 to 3.2"], outputs:["Project context and decisions log","Backlog of 32 deliverables"], done:"Each deliverable has a release, priority and readiness rating.", files:["ar-collections-learning/05-project-notes/Project-Context-and-Decisions.md"]},
+  {id:"s3", lane:"you", gate:"source-reviewed", title:"Choose the next guide", summary:"Pick the next guide from the drafting batch and confirm it meets the definition of ready for drafting.", inputs:["Drafting batch (source 3.1)","Command centre gate board"], outputs:["One guide approved to draft"], done:"The task boundary, starting path and labels are known, and gaps are recorded.", files:[]},
+  {id:"s4", lane:"claude", gate:"drafted", title:"Draft in the master template", summary:"A Save As copy of the PG master template is filled in following the authoring guide: Parts 1 to 3, topics, procedure tables and boundary rows.", inputs:["PG master template","Authoring guide","Source evidence"], outputs:["Word guide (SME review draft)","Markdown preview"], done:"Every section is filled in or deliberately marked as pending.", files:["templates/PG_Word_Template-MASTER TEMPLATE.docx"]},
+  {id:"s5", lane:"claude", gate:"drafted", title:"Log validation gaps", summary:"Anything the sources don't confirm becomes a VG item in the guide's validation register and a Word comment on the affected text.", inputs:["Word guide","Source evidence"], outputs:["Validation register (question log)","Screenshot register","Word review comments"], done:"No unconfirmed fact appears in the guide as a confirmed instruction.", files:[]},
+  {id:"s6", lane:"claude", gate:"drafted", title:"Self-check and render", summary:"Run the QA checklist, validate the Word structure against the template and check every page of the rendered PDF.", inputs:["Word guide","QA checklist"], outputs:["Validated Word file","Review PDF"], done:"Structure validation passes and the contents, numbering and links are correct.", files:["ar-collections-learning/04-quality-assurance/PG-Content-QA-Checklist.md"]},
+  {id:"s7", lane:"claude", gate:"drafted", title:"Open a draft PR", summary:"Commit the guide and its registers, open a draft pull request, and update the command centre.", inputs:["Validated Word file","Registers"], outputs:["Draft PR on PG-Builder","Command centre updated"], done:"The PR is open and the tracker shows the guide as Drafted.", files:[]},
+  {id:"s8", lane:"you", gate:"drafted", title:"Review and merge the draft", summary:"Read the draft and its open questions, ask for changes, then merge the PR.", inputs:["Draft PR","Review PDF"], outputs:["Draft merged to main"], done:"The PR is merged with your changes applied.", files:[]},
+  {id:"s9", lane:"sme", gate:"sme-validated", title:"SME factual review", summary:"The subject matter expert answers each open VG question against the Word comments.", inputs:["Word guide with comments","Open VG questions"], outputs:["Answers recorded against each VG ID"], done:"Every blocking question has an answer, or is removed from scope.", files:[]},
+  {id:"s10", lane:"sme", gate:"system-tested", title:"Clean-session system test", summary:"Someone other than the author runs every step in a clean D365 session, confirms labels and locations, and captures any screenshots.", inputs:["Word guide","Screenshot register"], outputs:["Tested steps","Masked screenshots, if used"], done:"Each step has been performed in D365 with the stated result.", files:[]},
+  {id:"s11", lane:"claude", gate:"sme-validated", title:"Close gaps and revise", summary:"Answers update the Word file first, then the preview and the registers. If blocking questions remain, the guide goes back for review.", inputs:["SME answers","Test results"], outputs:["Revised Word guide","Closed VG items"], done:"No blocking VG item is open and the comments are resolved.", files:[]},
+  {id:"s12", lane:"owner", gate:"approved", title:"Review and owner approval", summary:"The designated reviewer checks the clean draft, and the business process owner approves it for release.", inputs:["Clean Word guide","Closed question log"], outputs:["Recorded approval"], done:"Approval evidence is recorded in the version history.", files:[]},
+  {id:"s13", lane:"you", gate:"published", title:"Publish to the Atlas Hub", summary:"Export the PDF, publish it to Procedure Guides on the Atlas Hub, and move the guide to Published in the command centre.", inputs:["Approved Word guide"], outputs:["Published PDF","Hub link"], done:"The Hub link opens the published guide.", files:[]},
+  {id:"s14", lane:"owner", gate:"maintain", title:"Maintain the guide", summary:"Review the guide when D365 or the process changes, keeping the version history. Then start the next guide.", inputs:["Published guide","Change requests"], outputs:["Revised versions"], done:"The guide matches the current D365 interface and process.", files:[]}
+];
+const LOOPS = [{from:"s11", to:"s9", label:"Blocking gaps remain"}, {from:"s14", to:"s3", label:"Next guide"}];
+
+let steps = clone(PROPOSAL), saved = clone(PROPOSAL), view = "lane", mode = "view", sel = "s1", db = null, approved = null, playing = false;
+function clone(x){ return JSON.parse(JSON.stringify(x)); }
+const dirty = () => JSON.stringify(steps) !== JSON.stringify(saved);
+const isProposal = () => JSON.stringify(saved) === JSON.stringify(PROPOSAL);
+
+/* ---------- canvas ---------- */
+const COLW = 196, ROWH = 76, HEAD = 58, LOOPW = 74;
+function pos(i, lane){ return {x: LANES.findIndex(l => l.id === lane) * COLW + COLW / 2, y: HEAD + i * ROWH + ROWH / 2}; }
+function colorOf(s){ const set = view === "lane" ? LANES.find(l => l.id === s.lane) : GATES.find(g => g.id === s.gate); return `var(${set ? set.c : "--ink-3"})`; }
+function render(){
+  const W = LANES.length * COLW + LOOPW, H = HEAD + steps.length * ROWH + 16;
+  const c = $("#canvas"); c.style.width = W + "px"; c.style.height = H + "px";
+  let html = LANES.map((l, k) => `<div class="lane-col" style="left:${k * COLW}px;width:${COLW}px"><div class="lane-label"><i style="background:var(${l.c})"></i>${esc(l.label)}</div></div>`).join("");
+  // beams
+  const P = steps.map((s, i) => pos(i, s.lane));
+  let svg = `<svg class="beams" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" aria-hidden="true"><defs><filter id="bl"><feGaussianBlur stdDeviation="2.5"/></filter></defs>`;
+  for(let i = 0; i < steps.length - 1; i++){
+    const a = P[i], b = P[i + 1], d = edge(a, b);
+    svg += `<path class="beam-base" d="${d}" style="stroke:var(--line-2)"/><path class="beam-pulse" d="${d}" style="stroke:${colorOf(steps[i + 1])};animation-delay:${(i * .23).toFixed(2)}s;filter:url(#bl)"/><path class="beam-pulse" d="${d}" style="stroke:${colorOf(steps[i + 1])};animation-delay:${(i * .23).toFixed(2)}s"/>`;
+  }
+  LOOPS.forEach(L => {
+    const ia = steps.findIndex(s => s.id === L.from), ib = steps.findIndex(s => s.id === L.to); if(ia < 0 || ib < 0) return;
+    const a = P[ia], b = P[ib], X = LANES.length * COLW + 26 + (L.from === "s14" ? 24 : 0), my = (a.y + b.y) / 2;
+    const d = `M${a.x + 86} ${a.y} C${X} ${a.y}, ${X} ${a.y}, ${X} ${a.y - 20} L${X} ${b.y + 20} C${X} ${b.y}, ${X} ${b.y}, ${b.x + 86} ${b.y}`;
+    svg += `<path class="beam-loop" d="${d}" style="stroke:var(--warn)"/><text transform="translate(${X + 12} ${my}) rotate(-90)" text-anchor="middle" style="fill:var(--warn)" font-family="IBM Plex Mono, monospace" font-size="10.5">↺ ${esc(L.label)}</text>`;
+  });
+  svg += `</svg>`;
+  html += svg;
+  html += steps.map((s, i) => { const p = P[i], ch = JSON.stringify(s) !== JSON.stringify(PROPOSAL.find(x => x.id === s.id) || {});
+    return `<button type="button" class="node${s.id === sel ? " sel" : ""}${ch ? " edited" : ""}" data-id="${s.id}" style="left:${p.x}px;top:${p.y}px;border-color:${s.id === sel ? "" : "color-mix(in srgb," + colorOf(s) + " 45%, transparent)"}"><span class="n"><b style="background:${colorOf(s)}">${i + 1}</b><span>${esc((view === "lane" ? GATES.find(g => g.id === s.gate) : LANES.find(l => l.id === s.lane))?.label || "")}</span></span><strong>${esc(s.title)}</strong></button>`; }).join("");
+  html += `<div class="token" id="token"></div>`;
+  c.innerHTML = html;
+  $$(".node", c).forEach(n => n.addEventListener("click", () => select(n.dataset.id)));
+  fit();
+  // phone list
+  $("#vlist").innerHTML = steps.map((s, i) => `<div class="vstep"><span class="dot" style="background:${colorOf(s)}">${i + 1}</span><button type="button" data-id="${s.id}"><strong>${esc(s.title)}</strong><span>${esc(LANES.find(l => l.id === s.lane)?.label)} · ${esc(GATES.find(g => g.id === s.gate)?.label)}</span></button></div>`).join("");
+  $$("#vlist button").forEach(b => b.addEventListener("click", () => select(b.dataset.id)));
+  const set = view === "lane" ? LANES : GATES;
+  $("#legend").innerHTML = set.map(x => `<span><i style="background:var(${x.c})"></i>${esc(x.label)}</span>`).join("") + `<span><i style="background:var(--warn)"></i>Loop back</span>`;
+  renderSide(); renderStatus();
+}
+function edge(a, b){ const my = (a.y + b.y) / 2; return `M${a.x} ${a.y + 24} C${a.x} ${my}, ${b.x} ${my}, ${b.x} ${b.y - 24}`; }
+function fit(){ const wrap = $("#wrap"), c = $("#canvas"); const W = parseFloat(c.style.width), H = parseFloat(c.style.height); const s = Math.min(1, wrap.clientWidth / W); c.style.transform = `scale(${s})`; wrap.style.height = (H * s) + "px"; }
+addEventListener("resize", fit);
+
+/* ---------- side panel ---------- */
+function select(id){ sel = id; $$("#canvas .node").forEach(n => n.classList.toggle("sel", n.dataset.id === id)); renderSide(); }
+function renderSide(){
+  const i = steps.findIndex(s => s.id === sel), s = steps[i]; const side = $("#side");
+  if(!s){ side.innerHTML = `<p>Select a step to see its details.</p>`; return; }
+  const lane = LANES.find(l => l.id === s.lane), gate = GATES.find(g => g.id === s.gate);
+  if(mode === "view"){
+    side.innerHTML = `<div class="eyebrow">Step ${i + 1} of ${steps.length}</div><h2>${esc(s.title)}</h2>
+      <div class="chips"><span class="chip" style="border-color:var(${lane?.c});color:var(${lane?.c})">${esc(lane?.label)}</span><span class="chip">${esc(gate?.label)} gate</span></div>
+      <p>${esc(s.summary)}</p>
+      <div class="kv"><div><h3>Inputs</h3><ul>${s.inputs.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div><div><h3>Outputs</h3><ul>${s.outputs.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div><div><h3>Done when</h3><p style="color:var(--ink)">${esc(s.done)}</p></div>
+      ${s.files.length ? `<div><h3>In the repo</h3><ul>${s.files.map(f => `<li><a style="color:var(--accent)" href="https://github.com/Kintukka2/PG-Builder/blob/main/${encodeURI(f)}" target="_blank" rel="noopener">${esc(f.split("/").pop())}</a></li>`).join("")}</ul></div>` : ""}</div>
+      <div class="row"><button class="btn" type="button" data-nav="-1" ${i === 0 ? "disabled" : ""}>Previous step</button><button class="btn" type="button" data-nav="1" ${i === steps.length - 1 ? "disabled" : ""}>Next step</button></div>`;
+  } else {
+    side.innerHTML = `<div class="eyebrow">Editing step ${i + 1} of ${steps.length}</div>
+      <div class="field"><label for="e-title">Step name</label><input id="e-title" value="${esc(s.title)}"></div>
+      <div class="row"><div class="field" style="flex:1;min-width:140px"><label for="e-lane">Who does it</label><select id="e-lane">${LANES.map(l => `<option value="${l.id}" ${l.id === s.lane ? "selected" : ""}>${esc(l.label)}</option>`).join("")}</select></div>
+      <div class="field" style="flex:1;min-width:140px"><label for="e-gate">Gate</label><select id="e-gate">${GATES.map(g => `<option value="${g.id}" ${g.id === s.gate ? "selected" : ""}>${esc(g.label)}</option>`).join("")}</select></div></div>
+      <div class="field"><label for="e-summary">What happens</label><textarea id="e-summary">${esc(s.summary)}</textarea></div>
+      <div class="field"><label for="e-inputs">Inputs, one per line</label><textarea id="e-inputs">${esc(s.inputs.join("\n"))}</textarea></div>
+      <div class="field"><label for="e-outputs">Outputs, one per line</label><textarea id="e-outputs">${esc(s.outputs.join("\n"))}</textarea></div>
+      <div class="field"><label for="e-done">Done when</label><input id="e-done" value="${esc(s.done)}"></div>
+      <div class="row"><button class="btn" type="button" data-move="-1" ${i === 0 ? "disabled" : ""}>Move earlier</button><button class="btn" type="button" data-move="1" ${i === steps.length - 1 ? "disabled" : ""}>Move later</button></div>
+      <div class="row"><button class="btn" type="button" id="addStep">Add a step after</button><button class="btn" type="button" id="delStep" ${steps.length < 3 ? "disabled" : ""}>Remove this step</button></div>
+      <p class="notice">Changes stay on this page until you choose <b>Save draft</b>.</p>`;
+    const bind = (id, key, list) => $("#" + id).addEventListener("input", e => { s[key] = list ? e.target.value.split("\n").map(x => x.trim()).filter(Boolean) : e.target.value; softRender(); });
+    bind("e-title", "title"); bind("e-summary", "summary"); bind("e-inputs", "inputs", true); bind("e-outputs", "outputs", true); bind("e-done", "done");
+    $("#e-lane").addEventListener("change", e => { s.lane = e.target.value; render(); });
+    $("#e-gate").addEventListener("change", e => { s.gate = e.target.value; render(); });
+    $$("[data-move]", side).forEach(b => b.addEventListener("click", () => { const j = i + Number(b.dataset.move); [steps[i], steps[j]] = [steps[j], steps[i]]; render(); }));
+    $("#addStep").addEventListener("click", () => { const id = "s" + Date.now().toString(36); steps.splice(i + 1, 0, {id, lane:s.lane, gate:s.gate, title:"New step", summary:"Describe what happens in this step.", inputs:[], outputs:[], done:"", files:[]}); sel = id; render(); $("#e-title")?.select(); });
+    $("#delStep").addEventListener("click", () => { steps.splice(i, 1); sel = steps[Math.min(i, steps.length - 1)].id; render(); });
+  }
+  $$("[data-nav]", side).forEach(b => b.addEventListener("click", () => select(steps[i + Number(b.dataset.nav)].id)));
+}
+let rt = null;
+function softRender(){ clearTimeout(rt); rt = setTimeout(() => { const f = document.activeElement?.id, pos = document.activeElement?.selectionStart; const keep = mode; render(); if(keep === "edit" && f){ const el = $("#" + f); if(el){ el.focus(); try{ el.setSelectionRange(pos, pos); }catch(e){} } } }, 250); }
+
+/* ---------- status, save, approve ---------- */
+function renderStatus(){
+  const st = $("#status"), t = $("#statusText");
+  if(dirty()){ st.dataset.s = "edited"; t.textContent = "Unsaved changes"; }
+  else if(approved){ st.dataset.s = "approved"; t.textContent = `Approved · ${approved.slice(0, 10)}`; }
+  else { st.dataset.s = "draft"; t.textContent = isProposal() ? "Proposal · not approved" : "Draft saved · not approved"; }
+  $("#save").disabled = !dirty(); $("#discard").disabled = !dirty();
+  $("#approve").disabled = dirty() || !!approved;
+}
+async function save(){
+  if(!db){ toast("Open this page in claude.ai to save your draft."); return; }
+  try{ await db.doc("flow/draft").set({steps, updated: new Date().toISOString()}); saved = clone(steps);
+    if(approved){ await db.doc("flow/status").set({state:"draft", at:new Date().toISOString()}); approved = null; }
+    toast("Draft saved."); render(); }catch(e){ toast(e?.code === "invalid_argument" ? "You can view this flow but not change it." : "The draft didn't save. Try again in a moment."); }
+}
+function discard(){ steps = clone(saved); if(!steps.some(s => s.id === sel)) sel = steps[0].id; render(); toast("Changes discarded."); }
+function approveAsk(){
+  const side = $("#side");
+  side.innerHTML = `<div class="confirm"><div class="eyebrow">Approve the flow</div><p>Approving makes this flow the working process for every guide. Claude will add it to the command centre and the project decisions log.</p><div class="row"><button class="btn primary" type="button" id="yes">Approve flow</button><button class="btn" type="button" id="no">Not yet</button></div></div>`;
+  $("#no").addEventListener("click", renderSide);
+  $("#yes").addEventListener("click", async () => {
+    if(!db){ toast("Open this page in claude.ai to approve the flow."); renderSide(); return; }
+    try{ if(isProposal()) await db.doc("flow/draft").set({steps, updated:new Date().toISOString()});
+      const at = new Date().toISOString(); await db.doc("flow/status").set({state:"approved", at}); approved = at; toast("Flow approved."); render(); }
+    catch(e){ toast(e?.code === "invalid_argument" ? "You can view this flow but not approve it." : "The approval didn't save. Try again in a moment."); renderSide(); }
+  });
+}
+function toast(m){ const t = document.createElement("div"); t.className = "toast"; t.textContent = m; $("#toasts").appendChild(t); setTimeout(() => t.remove(), 4500); }
+
+/* ---------- play ---------- */
+async function play(){
+  if(playing){ playing = false; return; }
+  playing = true; $("#play span").textContent = "Stop"; const tok = $("#token");
+  const P = steps.map((s, i) => pos(i, s.lane));
+  for(let i = 0; i < steps.length && playing; i++){
+    select(steps[i].id);
+    $$("#canvas .node").forEach(n => n.classList.toggle("dim", n.dataset.id !== steps[i].id));
+    if(i < steps.length - 1 && !reduce){
+      const path = document.createElementNS("http://www.w3.org/2000/svg", "path"); path.setAttribute("d", edge(P[i], P[i + 1])); const len = path.getTotalLength();
+      tok.classList.add("on"); await new Promise(res => { const t0 = performance.now(); const f = t => { if(!playing) return res(); const p = Math.min(1, (t - t0) / 900); const pt = path.getPointAtLength(len * (1 - Math.pow(1 - p, 2))); tok.style.left = pt.x + "px"; tok.style.top = pt.y + "px"; p < 1 ? requestAnimationFrame(f) : res(); }; setTimeout(() => requestAnimationFrame(f), 1300); });
+    } else await new Promise(r => setTimeout(r, 1500));
+  }
+  playing = false; tok.classList.remove("on"); $$("#canvas .node").forEach(n => n.classList.remove("dim")); $("#play span").textContent = "Play the flow";
+}
+
+/* ---------- wire up ---------- */
+$$("[data-view]").forEach(b => b.addEventListener("click", () => { view = b.dataset.view; $$("[data-view]").forEach(x => x.setAttribute("aria-pressed", String(x === b))); render(); }));
+$$("[data-mode]").forEach(b => b.addEventListener("click", () => { mode = b.dataset.mode; $$("[data-mode]").forEach(x => x.setAttribute("aria-pressed", String(x === b))); renderSide(); }));
+$("#save").addEventListener("click", save); $("#discard").addEventListener("click", discard); $("#approve").addEventListener("click", approveAsk); $("#play").addEventListener("click", play);
+document.addEventListener("keydown", e => { if(/input|textarea|select/i.test(document.activeElement?.tagName || "")) return; const i = steps.findIndex(s => s.id === sel); if(e.key === "ArrowRight" && i < steps.length - 1) select(steps[i + 1].id); if(e.key === "ArrowLeft" && i > 0) select(steps[i - 1].id); });
+render();
+
+(async () => {
+  db = window.claude?.use ? await window.claude.use("db").catch(() => null) : null;
+  if(!db) return;
+  try{
+    const [d, st] = await Promise.all([db.doc("flow/draft").get(), db.doc("flow/status").get()]);
+    if(d.exists && Array.isArray(d.data().steps) && d.data().steps.length){ saved = clone(d.data().steps); if(!dirty() || isProposalSteps(steps)) steps = clone(saved); }
+    if(st.exists && st.data().state === "approved") approved = st.data().at || "";
+    if(!steps.some(s => s.id === sel)) sel = steps[0].id;
+    render();
+  }catch(e){ toast("Couldn't load the saved draft. You're seeing the original proposal."); }
+})();
+function isProposalSteps(x){ return JSON.stringify(x) === JSON.stringify(PROPOSAL); }
+})();
+</script>

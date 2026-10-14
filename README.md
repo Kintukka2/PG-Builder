@@ -28,6 +28,7 @@ All PGs are produced in the current master Word template and follow its companio
 
 ```
 templates/                   PG master template and authoring guide (unchanged)
+command-centre/              Source for the PG Command Centre and Delivery Flow pages (claude.ai artifacts)
 ```
 
 Each topic has its own folder with the same internal structure:
@@ -48,11 +49,13 @@ Backlog rank and release come from the AR development roadmap. Drafting order fo
 | Rank | PG | Release | Draft batch | Gate | Files |
 |---|---|---|---|---|---|
 | 4 | Configure AR Collections Favorites | 1 | 1st (#1) | **Drafted; SME review draft** (v0.2): 30 open validation gaps, 16 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Favorites%20PG%20v0.2.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Configure-Collections-Favourites-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Configure-Collections-Favourites-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Configure-Collections-Favourites-Validation.md) |
-| 5 | Create and save a personalised D365 view | 1 | 1st (#2) | Not started | — |
+| 5 | Create and save a personalised D365 view (*AR Collections Personalized Views*) | 1 | 1st (#2) | **Drafted; SME review draft** (v0.1): 29 open validation gaps, 23 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Personalized%20Views%20PG%20v0.1.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Personalized-Views-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Personalized-Views-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Personalized-Views-Validation.md) |
 | 7 | Review customer aged balances | 1 | 1st (#3) | Not started | — |
 | 11 | View and download a customer invoice | 2 | 1st (#4) | Not started | — |
 | 17 | Export all rows from a D365 grid | 2 | 1st (#5) | Not started | — |
 | 9 | Review customer notes and activities | 1 | 1st (#6) | Not started | — |
+
+Project visibility: the [PG Command Centre](https://claude.ai/artifact/G3PMkvp68jSbqULxECehCi) tracks every deliverable, gate and validation gap; its source is in [`command-centre/`](command-centre/).
 
 Shared AR resources:
 
