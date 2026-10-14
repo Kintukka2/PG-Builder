@@ -158,6 +158,8 @@ Development gates (source 2): Identified → Source reviewed → Gap validated �
 | D-016 | 2026-10-08 | The validation register is the guide's question log. `VG-xx` IDs stay stable and are used in place of `Qxx`. Open items affecting the text are added as Word comments (author "Validation register") anchored to that text. | T2 "Separate writing decisions from missing facts" | Adopted |
 | D-017 | 2026-10-08 | No screenshots or placeholders in the Word PG until menu locations are confirmed. Then insert only the figures that add context, using the screenshot register. | T2 "Screenshots are optional" | Adopted |
 | D-018 | 2026-10-08 | The template has no Troubleshooting section. Troubleshooting content is dropped, and the supported escalation route (D365 issue form, from Additional Resources) moves into the relevant procedure row. | T2 "Retain the standard support content" | Adopted |
+| D-019 | 2026-10-14 | Second PG: process name **AR Collections Personalized Views**. Topic 1 *Create a Personalized View* is a parent topic with four subtopics (Arrange the Columns; Filter the List, optional; Add a Footer Total, optional; Save and Pin the View). Topic 2 *Update a Saved View* is standalone. File name `TBC-AR Collections Personalized Views PG v0.1.docx`. | T2 topic-structure rules; sources 1, 2, 3.1 | Provisional (`VG-24`, `VG-28` in its register) |
+| D-020 | 2026-10-14 | Where a control label or location was not captured, the step names the user action without inventing a label. Each such step carries a Word comment and a VG item. | T2 "Separate writing decisions from missing facts" | Adopted |
 
 ---
 
@@ -187,8 +189,8 @@ These elements came from the Favourites PG. They are candidates for the standard
 
 ## 10. Next steps
 
-1. Send the Word guide `TBC-AR Collections Favorites PG v0.2.docx` for SME factual review. Use the review request pattern in T2, and list only open questions by VG ID.
-2. Run a clean-session D365 test to close the blocking label, location and behavior items (`VG-01` to `VG-07`, `VG-17`, `VG-28`).
-3. Get SME answers for `VG-16`, `VG-30` to `VG-33`. Decide `VG-22` (guide code) and D-006 (ID scheme).
-4. Update the Word file first, then the Markdown preview. Resolve the comments, then refresh the contents and fields.
-5. Then start *Create and save a personalised D365 view* directly in a Save As copy of the master template.
+1. **Favorites guide (v0.2):** SME factual review; clean-session D365 test for its blocking label, location and behavior items; SME answers for its `VG-16` and `VG-30` to `VG-33`.
+2. **Personalized Views guide (v0.1):** get the transcript excerpt and timestamps for the views demonstration (its `VG-27`). That review answers most of its blocking items (`VG-01` to `VG-17`). Then run one clean-session D365 test and send for SME review.
+3. Decide the guide codes (D-006; `VG-22` in Favorites, `VG-24` in Views) and the shared stream and role labels.
+4. Update each Word file first, then its Markdown preview. Resolve the comments, then refresh the contents and fields.
+5. Next in the first drafting batch: *Review customer aged balances*. Keep the ageing-icon legend out of it until validated (source 3.1).
