@@ -96,14 +96,16 @@ The Favourites PG sits in **Module 1, sequence 1.5** ("Add required AR pages to 
 
 **First batch:**
 
-1. Configure AR Collections favourites ← **in progress**
+1. Configure AR Collections favourites
 2. Create and save a personalised D365 view
 3. Review customer aged balances
 4. View and download a customer invoice
 5. Export all rows from a D365 grid
 6. Review customer notes and activities
 
-**Second batch (limited validation needed):** switch legal entities, navigate the workspace, review overdue customers, investigate a customer account, record a collection activity, preview and download a statement, generate and send a statement.
+All six are drafted as SME review drafts (October 2026).
+
+**Second batch (limited validation needed), in progress:** switch legal entities, navigate the workspace, review overdue customers, investigate a customer account, record a collection activity, preview and download a statement, generate and send a statement.
 
 **Do not draft as final:** settle or undo transactions, write-offs, write-off journal submission, customer contact or address maintenance, customer exclusions, payment terms, parent-child fund transfers, direct debit and credit cards.
 
@@ -160,6 +162,13 @@ Development gates (source 2): Identified → Source reviewed → Gap validated �
 | D-018 | 2026-10-08 | The template has no Troubleshooting section. Troubleshooting content is dropped, and the supported escalation route (D365 issue form, from Additional Resources) moves into the relevant procedure row. | T2 "Retain the standard support content" | Adopted |
 | D-019 | 2026-10-14 | Second PG: process name **AR Collections Personalized Views**. Topic 1 *Create a Personalized View* is a parent topic with four subtopics (Arrange the Columns; Filter the List, optional; Add a Footer Total, optional; Save and Pin the View). Topic 2 *Update a Saved View* is standalone. File name `TBC-AR Collections Personalized Views PG v0.1.docx`. | T2 topic-structure rules; sources 1, 2, 3.1 | Provisional (`VG-24`, `VG-28` in its register) |
 | D-020 | 2026-10-14 | Where a control label or location was not captured, the step names the user action without inventing a label. Each such step carries a Word comment and a VG item. | T2 "Separate writing decisions from missing facts" | Adopted |
+| D-021 | 2026-10-14 | Third PG: process name **AR Collections Aged Balances**. Two standalone topics: *Review Customer Aged Balances* (Currency column, zero-balance filter, descending sort) and *Filter Aged Balances by Customer or Currency*. Aging indicators are excluded until validated. Opening a customer belongs to the *Investigate a customer account* guide. | Sources 1, 2, 3.1; T2 topic rules | Provisional (`VG-10`, `VG-17`, `VG-23` in its register) |
+| D-022 | 2026-10-14 | Start each new topic and Part on a new page with the heading's *page break before* setting, not a page-break paragraph. This avoids stray blank pages when a table ends at the foot of a page. | Render review of the Aged Balances guide | Adopted |
+| D-023 | 2026-10-14 | Fourth PG: process name **AR Collections Customer Invoices**. One parent topic, *View and Download a Customer Invoice*, with subprocedures *Open the Invoice Preview* and *Download the Invoice as PDF* (optional). The path to the customer's transactions is not invented; step 1.1.2 names the action only. Finding invoices with Show closed or Hide FX revaluations belongs to the *Review customer transactions* guide. Sending the invoice to the customer is out of scope. | Sources 0, 1, 2, 3.1; T2 parent-topic pattern | Provisional (`VG-01`, `VG-16`, `VG-21`, `VG-22` in its register) |
+| D-024 | 2026-10-14 | Fifth PG: process name **AR Collections Export to Excel**. One standalone topic, *Export All Rows from a Grid*. As a utility task performed on many pages, it opens "the page that holds the data" after the Entity check instead of one Modules/Navigate path. No export volume limit is stated until confirmed. The custom all-customer transaction report and bank statements are separate guides. | Sources 0, 1, 2, 3.1; T2 topic rules | Provisional (`VG-06`, `VG-10`, `VG-15`, `VG-20` in its register) |
+| D-025 | 2026-10-14 | Sixth PG: process name **AR Collections Notes and Activities**. Two standalone topics: *Review Customer Notes* (Notes in the Customer credit and collections workspace, filtered by customer, then optionally by creator, date or note type) and *Review All Customer Activities* (All customers, then View all activities). System-generated entries are described in general terms only. Recording a new activity belongs to the *Record a collection activity* guide. | Sources 0, 1, 2, 3.1; T2 topic rules | Provisional (`VG-05`, `VG-17`, `VG-22` in its register) |
+| D-026 | 2026-10-14 | First second-batch PG: process name **AR Collections Legal Entities**. Two standalone topics: *Switch Legal Entity with the Selector* and *Switch Legal Entity Using the Ledger Code*. Neither starts with the standard Entity/Modules rows, because the switch is the task; each ends by confirming the active legal entity. No URL parameter or example code is given until confirmed. Persistence of Favorites and views across legal entities is not stated. | Sources 0, 1, 2, 3.1; T2 topic rules | Provisional (`VG-05`, `VG-07`, `VG-12`, `VG-17` in its register) |
+| D-027 | 2026-10-14 | Second second-batch PG: process name **AR Collections Workspace**. Two standalone topics: *Open the Customer Credit and Collections Workspace* (Entity, then **Workspaces** in place of **Modules**) and *Locate Collection Work in the Workspace* (the four sections source 2 names as relevant, each referred to its own guide). Other sections are named without saying whether they are used; indicators are out of scope. | Sources 0, 1, 2, 3.2; T2 navigation pattern | Provisional (`VG-08`, `VG-13`, `VG-17` in its register) |
 
 ---
 
@@ -189,8 +198,9 @@ These elements came from the Favourites PG. They are candidates for the standard
 
 ## 10. Next steps
 
-1. **Favorites guide (v0.2):** SME factual review; clean-session D365 test for its blocking label, location and behavior items; SME answers for its `VG-16` and `VG-30` to `VG-33`.
-2. **Personalized Views guide (v0.1):** get the transcript excerpt and timestamps for the views demonstration (its `VG-27`). That review answers most of its blocking items (`VG-01` to `VG-17`). Then run one clean-session D365 test and send for SME review.
-3. Decide the guide codes (D-006; `VG-22` in Favorites, `VG-24` in Views) and the shared stream and role labels.
-4. Update each Word file first, then its Markdown preview. Resolve the comments, then refresh the contents and fields.
-5. Next in the first drafting batch: *Review customer aged balances*. Keep the ageing-icon legend out of it until validated (source 3.1).
+1. **One clean-session D365 test** covering all eight drafted guides: Favorites, Personalized Views, Aged balances, the customer invoice, a grid export, Notes and activities, legal entity switching (which also tests whether Favorites and views carry across entities) and the workspace. Many blocking items overlap across the eight registers: page labels, menu locations (including All customers), Insert columns, filter and sort controls, the customer transactions path, the export menu and the workspace route.
+2. **Recording evidence:** transcript excerpts and timestamps for the views, Aged balances, invoice, export, notes, legal entity and workspace demonstrations (Views `VG-27`, Aged Balances `VG-21`, Customer Invoices `VG-20`, Export to Excel `VG-19`, Notes and Activities `VG-21`, Legal Entities `VG-21`, Workspace `VG-21`).
+3. **SME answers** for the shared governance items in each register: initiation, stream and role, BPO, reports, security role. Also the export volume limit and the handling rule for exported customer data (Export to Excel `VG-06`, `VG-08`).
+4. Decide the guide codes (D-006) and approve or edit the [PG Delivery Flow](https://claude.ai/artifact/Qb7C1s8Vmnt8av3ams3jrJ).
+5. The first drafting batch is complete. The second batch (source 3.1) is in progress: *Switch between legal entities* and *Navigate the workspace* are drafted. Next: review overdue customers (it starts from the workspace's **Customers overdue**), investigate a customer account, record a collection activity, preview and download a statement, generate and send a statement.
+6. Ask the SME for the **legal entity name and code reference** (source 1). It closes Legal Entities `VG-06` and supports every guide's *Check* the **Entity** row.
