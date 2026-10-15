@@ -37,7 +37,7 @@ Each topic has its own folder with the same internal structure:
 <topic>-learning/
   01-procedure-guides/       PG Word files (editable source) and Markdown previews
   02-screenshot-registers/   Figure-to-step mapping, timestamps, captions, callouts
-  03-validation/             Validation-gap registers, baseline reviews, terminology
+  03-validation/             Validation-gap registers, test plans and logs, terminology
   04-quality-assurance/      QA checklists applied before review and publication
   05-project-notes/          Project context, source summary, decisions log
 ```
@@ -68,6 +68,7 @@ Shared AR resources:
 
 - [Project context and decisions](ar-collections-learning/05-project-notes/Project-Context-and-Decisions.md)
 - [PG content QA checklist](ar-collections-learning/04-quality-assurance/PG-Content-QA-Checklist.md)
+- [Clean-session D365 test plan](ar-collections-learning/03-validation/Clean-Session-Test-Plan.md) and its [results log](ar-collections-learning/03-validation/Clean-Session-Test-Log.xlsx): one session that tests 148 validation items across all 13 guides
 
 ## Development gates
 
