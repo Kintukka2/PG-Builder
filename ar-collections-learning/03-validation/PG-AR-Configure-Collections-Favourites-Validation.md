@@ -5,7 +5,7 @@
 | Related PG (editable source) | [`../01-procedure-guides/TBC-AR Collections Favorites PG v0.2.docx`](../01-procedure-guides/TBC-AR%20Collections%20Favorites%20PG%20v0.2.docx) |
 | Markdown preview | [`../01-procedure-guides/PG-AR-Configure-Collections-Favourites-DRAFT.md`](../01-procedure-guides/PG-AR-Configure-Collections-Favourites-DRAFT.md) |
 | Related screenshot register | [`../02-screenshot-registers/PG-AR-Configure-Collections-Favourites-Screenshots.md`](../02-screenshot-registers/PG-AR-Configure-Collections-Favourites-Screenshots.md) |
-| Last updated | 2026-10-08 |
+| Last updated | 2026-10-23 |
 | Items | 33 total: 30 open (16 blocking, 14 non-blocking), 1 deferred, 2 withdrawn |
 
 This file is the **question log** that the PG Template Authoring Guide asks for. It is kept separate from the PG. Nothing in it may appear in the PG as confirmed guidance until its status is **Closed** and the Word file has been updated.
@@ -111,7 +111,7 @@ Changes made to follow `PG_Template_Authoring_Guide_v1.docx`:
 | VG-15 | Whether the module menu has a search or filter. | — | — | — | — | **Withdrawn.** Only needed for the removed Troubleshooting section (T7). |
 | VG-16 | Whether the D365 issue form is the correct route when a module or page is not available. | Step 11 | 17 | B | SME | Open. Candidate route identified from the template's User Support block. |
 | VG-17 | The security role that grants access to these modules and pages, and a test with it. | PROCESS START | 7 | B | Test, SME | Open |
-| VG-18 | What AR Collections users use **Customer payment journal** for. | Key concepts (pages table) | 5 | N | SME, Rec | Open |
+| VG-18 | What AR Collections users use **Customer payment journal** for. | Key concepts (pages table) | 5 | N | SME, Rec | Open. Part 2 notes (source 4.0) give evidence: transferring funds between customer accounts and restoring written-off or overpayment amounts. Close after the recording check (`SRC-01` in the [Part 2 register](Part2-CPJL-and-Transfers-Validation.md)). |
 | VG-19 | Wording for **Open customer invoices**, checked against the recording. | Key concepts (pages table) | 6 | N | Rec | Open |
 | VG-20 | Baseline claim that **Aged balances** gives access to collection activities. | Not in guide (removed) | — | N | Rec, SME | Open |
 | VG-21 | Label distinction between the **Credit and collections** module and the **Customer Credit and Collections** workspace. | Steps 3–6 | — | N | Test | Open |
@@ -176,3 +176,4 @@ This combines the source 1 §4 gate with the authoring guide's final checklist.
 |---|---|
 | 2026-10-08 | Register created from the review of baseline draft v0.1 (source 3.2). |
 | 2026-10-08 | Converted to the PG master template. Added `VG-30` to `VG-33`. Withdrew `VG-15` and `VG-29`. Deferred `VG-14`. Re-rated `VG-24` and `VG-27` as non-blocking (screenshots optional). Mapped items to Word comments. |
+| 2026-10-23 | `VG-18`: Part 2 evidence noted. Still open until the recording check. |

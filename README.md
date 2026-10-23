@@ -12,7 +12,7 @@ Each PG covers **one** D365 task and its controls. PGs sit inside a learning arc
 
 | Topic | Folder | Status |
 |---|---|---|
-| **Accounts Receivable (AR) Collections** | [`ar-collections-learning/`](ar-collections-learning/) | Active. First and second drafting batches complete: thirteen PGs in SME review draft. |
+| **Accounts Receivable (AR) Collections** | [`ar-collections-learning/`](ar-collections-learning/) | Active. First and second drafting batches complete: thirteen PGs in SME review draft. Part 2 adds three working drafts (customer account transfers and restorations) and a Customer Payment Journal controls reference. |
 | *Further D365 topics* | *To be added as sibling folders* | Planned |
 
 ## PG template (governs every PG)
@@ -40,6 +40,7 @@ Each topic has its own folder with the same internal structure:
   03-validation/             Validation-gap registers, test plans and logs, terminology
   04-quality-assurance/      QA checklists applied before review and publication
   05-project-notes/          Project context, source summary, decisions log
+  06-reference-guides/       Reference content shared by several PGs (for example journal controls)
 ```
 
 ## AR Collections: PG status tracker
@@ -61,6 +62,18 @@ Backlog rank and release come from the AR development roadmap. Drafting order fo
 | 10 | Record a collection activity (*AR Collections Collection Activities*) | 1 | 2nd (#5) | **Drafted; SME review draft** (v0.1): 24 open validation gaps, 17 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Collection%20Activities%20PG%20v0.1.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Collection-Activities-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Collection-Activities-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Collection-Activities-Validation.md) |
 | 12 | Generate and send a customer statement (*AR Collections Statement Distribution*) | 2 | 2nd (#7) | **Drafted; SME review draft** (v0.1): 25 open validation gaps, 19 blocking. Customer-facing: not tested on real customers until its control items close | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Statement%20Distribution%20PG%20v0.1.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Statement-Distribution-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Statement-Distribution-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Statement-Distribution-Validation.md) |
 | 13 | Preview and download a customer statement (*AR Collections Statement Preview*) | 2 | 2nd (#6) | **Drafted; SME review draft** (v0.1): 24 open validation gaps, 16 blocking | [Word PG](ar-collections-learning/01-procedure-guides/TBC-AR%20Collections%20Statement%20Preview%20PG%20v0.1.docx) · [Preview](ar-collections-learning/01-procedure-guides/PG-AR-Statement-Preview-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Statement-Preview-Screenshots.md) · [Validation](ar-collections-learning/03-validation/PG-AR-Statement-Preview-Validation.md) |
+
+### Part 2 working drafts (Customer payment journal and transfers)
+
+From the *AR Training D365* Part 2 update pack. These are **working Markdown drafts**: not yet checked against the Part 2 recording and not yet built in the master template (decision D-037). They are higher-risk and are not finalised until their gaps are validated. One shared [validation register](ar-collections-learning/03-validation/Part2-CPJL-and-Transfers-Validation.md) covers all four (46 open items, 38 blocking).
+
+| Rank | Deliverable | Release | Gate | Files |
+|---|---|---|---|---|
+| 27 | Transfer funds between customer accounts | 3 (moved from 4, proposed D-036) | **Drafted; working Markdown** | [Draft](ar-collections-learning/01-procedure-guides/PG-AR-Transfer-Funds-Between-Customer-Accounts-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Transfer-Funds-Between-Customer-Accounts-Screenshots.md) |
+| 33 | Transfer a parent account payment across child accounts (includes partial allocation) | 3 | **Drafted; working Markdown** | [Draft](ar-collections-learning/01-procedure-guides/PG-AR-Transfer-Parent-Payment-Across-Child-Accounts-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Transfer-Parent-Payment-Across-Child-Accounts-Screenshots.md) |
+| 34 | Restore a written-off or overpayment amount to a customer account | 3 | **Drafted; working Markdown** | [Draft](ar-collections-learning/01-procedure-guides/PG-AR-Restore-Written-Off-Overpayment-DRAFT.md) · [Screenshots](ar-collections-learning/02-screenshot-registers/PG-AR-Restore-Written-Off-Overpayment-Screenshots.md) |
+| 35 | Customer Payment Journal (CPJL) controls reference (includes Simulate Posting) | 3 | **Drafted; working Markdown** | [Reference](ar-collections-learning/06-reference-guides/REF-AR-Customer-Payment-Journal-Controls-DRAFT.md) |
+| 36 | Customer Pools | 4 | **Validation backlog only**: no PG (D-035) | [Register](ar-collections-learning/03-validation/Customer-Pools-Validation.md) |
 
 Project visibility: the [PG Command Centre](https://claude.ai/artifact/G3PMkvp68jSbqULxECehCi) tracks every deliverable, gate and validation gap; its source is in [`command-centre/`](command-centre/).
 
