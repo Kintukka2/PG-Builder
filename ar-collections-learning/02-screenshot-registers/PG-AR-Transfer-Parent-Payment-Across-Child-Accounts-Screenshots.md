@@ -2,12 +2,12 @@
 
 | Field | Value |
 |---|---|
-| Related guide | [`../01-procedure-guides/PG-AR-Transfer-Parent-Payment-Across-Child-Accounts-DRAFT.md`](../01-procedure-guides/PG-AR-Transfer-Parent-Payment-Across-Child-Accounts-DRAFT.md) (working Markdown draft; no Word file yet, decision D-037) |
+| Related PG | [`../01-procedure-guides/TBC-AR Collections Parent Payment Distribution PG v0.1.docx`](../01-procedure-guides/TBC-AR%20Collections%20Parent%20Payment%20Distribution%20PG%20v0.1.docx) (editable source) |
 | Source recording | *AR Training D365*, Part 2. Timestamps have **not been supplied** (`SRC-02`). |
 | Frames reviewed | None |
-| Last updated | 2026-10-23 |
+| Last updated | 2026-10-25 |
 
-> **Template rule.** Screenshots are optional, and a clean guide has no placeholders (decision D-017). Capture only the candidates below that add context, once the labels are confirmed.
+> **Template rule.** Screenshots are optional, and a clean guide has no placeholders (decision D-017). The Word guide has no figures. Capture only the candidates below that add context, once the labels are confirmed.
 
 The capture limitations and clean-session recapture specification in the [AR Collections Favorites screenshot register](PG-AR-Configure-Collections-Favourites-Screenshots.md#4-clean-session-recapture-specification) apply here as well.
 
@@ -25,3 +25,4 @@ The capture limitations and clean-session recapture specification in the [AR Col
 | Date | Change |
 |---|---|
 | 2026-10-23 | Register created with the working draft. There are no timestamps yet. |
+| 2026-10-25 | Linked to the Word guide (v0.1). Step references updated. |

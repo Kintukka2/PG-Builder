@@ -2,13 +2,13 @@
 
 | Field | Value |
 |---|---|
-| Covers | [Transfer Funds Between Customer Accounts](../01-procedure-guides/PG-AR-Transfer-Funds-Between-Customer-Accounts-DRAFT.md) (`TF`) · [Transfer a Parent Account Payment Across Child Accounts](../01-procedure-guides/PG-AR-Transfer-Parent-Payment-Across-Child-Accounts-DRAFT.md) (`PC`) · [Restore a Written-Off or Overpayment Amount](../01-procedure-guides/PG-AR-Restore-Written-Off-Overpayment-DRAFT.md) (`RO`) · [Customer Payment Journal controls reference](../06-reference-guides/REF-AR-Customer-Payment-Journal-Controls-DRAFT.md) (`CPJ`) |
+| Covers (Word files are the editable source) | `TF` AR Collections Customer Account Transfers: [Word](../01-procedure-guides/TBC-AR%20Collections%20Customer%20Account%20Transfers%20PG%20v0.1.docx) · [preview](../01-procedure-guides/PG-AR-Transfer-Funds-Between-Customer-Accounts-DRAFT.md)<br>`PC` AR Collections Parent Payment Distribution: [Word](../01-procedure-guides/TBC-AR%20Collections%20Parent%20Payment%20Distribution%20PG%20v0.1.docx) · [preview](../01-procedure-guides/PG-AR-Transfer-Parent-Payment-Across-Child-Accounts-DRAFT.md)<br>`RO` AR Collections Overpayment and Write-Off Restoration: [Word](../01-procedure-guides/TBC-AR%20Collections%20Overpayment%20and%20Write-Off%20Restoration%20PG%20v0.1.docx) · [preview](../01-procedure-guides/PG-AR-Restore-Written-Off-Overpayment-DRAFT.md)<br>`CPJ` AR Collections Customer Payment Journal Controls (reference): [Word](../06-reference-guides/TBC-AR%20Collections%20Customer%20Payment%20Journal%20Controls%20Reference%20v0.1.docx) · [preview](../06-reference-guides/REF-AR-Customer-Payment-Journal-Controls-DRAFT.md) |
 | Screenshot registers | [Transfer Funds](../02-screenshot-registers/PG-AR-Transfer-Funds-Between-Customer-Accounts-Screenshots.md) · [Parent Payment](../02-screenshot-registers/PG-AR-Transfer-Parent-Payment-Across-Child-Accounts-Screenshots.md) · [Restore](../02-screenshot-registers/PG-AR-Restore-Written-Off-Overpayment-Screenshots.md) |
 | Source | AR Training D365 Part 2 update pack (sources 4.0 to 4.7 in the [project notes](../05-project-notes/Project-Context-and-Decisions.md#1-source-documents)) |
-| Last updated | 2026-10-23 |
+| Last updated | 2026-10-25 |
 | Items | 46 total, all open: 38 blocking, 8 non-blocking |
 
-This file is the **question log** for the three Part 2 working drafts and the shared controls reference (decision D-016). One register covers all four documents because they share most of their controls. IDs are prefixed by scope and never renumbered (decision D-038):
+This file is the **question log** for the three Part 2 guides and the shared controls reference (decision D-016). All four are SME review drafts in the PG master template (v0.1, decision D-041). Each open item that affects the text is also a Word review comment by "Validation register" (VR), starting with the item's ID. One register covers all four documents because they share most of their controls. IDs are prefixed by scope and never renumbered (decision D-038):
 
 | Prefix | Scope |
 |---|---|
@@ -48,14 +48,14 @@ Customer Pools has its own register: [Customer-Pools-Validation.md](Customer-Poo
 
 | # | Decision | Reason |
 |---|---|---|
-| G1 | The three guides and the reference are **working Markdown drafts**. They follow the master template's section order so that the Word build is mechanical, but they are not built in Word until the recording is checked (D-037). | Handover task 5. Avoids building Word review comments on unchecked AI notes. |
+| G1 | The three guides and the reference started as working Markdown drafts (D-037). At the user's request they are now built in the PG master template as v0.1 SME review drafts, before the recording check (D-041). The recording check (`SRC-01`) still blocks testing on real accounts and publication. | Handover task 5; user request of 2026-10-25. |
 | G2 | Each guide uses one parent topic with three subprocedures (Restore: two): create the journal and the first line, add the remaining lines, then validate and post. | Matches the source drafts' sequence. The validate-and-post subprocedure is shared. |
-| G3 | **Partial allocation** is part of the Parent Payment guide (steps 1.1.8 and 1.3.5), not a separate guide. **Simulate Posting** is covered in the reference and in each guide's validate-and-post subprocedure (D-039). | Roadmap items 17 and 19 have no steps beyond the ones already in those guides. |
-| G4 | Steps the notes imply but do not show precisely enough (opening the journal lines, adding a line, the Post control, checking the result after posting) are **validation placeholders**, not invented steps. | Handover task 10; D-020. |
+| G3 | **Partial allocation** is part of the Parent Payment guide (steps 1.1.9 and 1.3.5), not a separate guide. **Simulate Posting** is covered in the reference and in each guide's validate-and-post subprocedure (D-039). | Roadmap items 17 and 19 have no steps beyond the ones already in those guides. |
+| G4 | Steps the notes imply but do not show precisely enough (opening the journal lines, adding a line, the Post control, checking the result after posting) name the action without inventing a label, and carry a Word comment. The Markdown working drafts called these validation placeholders. | Handover task 10; D-020. |
 | G5 | The notes give "leave financial tags, invoice number and bank account blank" and "do not change pre-populated dimensions" for **restoration entries only**. They are steps in the Restore guide and questions for the two transfer guides (`CPJ-10`, `CPJ-11`). | The notes do not say whether these rules apply to transfers. |
 | G6 | No role is named as able to post a CPJL, and no approval rule is stated. | Handover source discipline; `CPJ-16`, `CPJ-17`. |
-| G7 | Troubleshooting is limited to what the notes support: read a Simulate Posting error, correct it, and ask for help if it cannot be resolved. It sits in the procedure row (D-018). | The support route is not confirmed (`CPJ-15`). |
-| G8 | Every guide starts with the standard navigation pattern (*Check* the **Entity**). The location of **Customer payment journal** comes from the Favorites guide, not from Part 2. | D-015; Favorites `VG-04`. |
+| G7 | Troubleshooting is limited to what the notes support: read a Simulate Posting error, correct it, and get help if it cannot be resolved. It sits in the procedure row and names the template's standard route, the D365 issue form (D-018). | The production support route is not confirmed (`CPJ-15`). |
+| G8 | Every guide starts with the standard navigation pattern: *Check* the **Entity**, *Click* **Modules**, then *Navigate* to **Customer payment journal** under **Credit and collections**. The module comes from the Favorites guide, not from Part 2; the menu group is open. | D-015; Favorites `VG-04`. |
 
 ---
 
@@ -73,7 +73,7 @@ Customer Pools has its own register: [Customer-Pools-Validation.md](Customer-Poo
 |---|---|---|---|---|---|
 | SRC-01 | Check every step in the three guides and every control in the reference against the Part 2 recording or transcript. The notes are Teams AI-generated. | All four documents | B | Rec | Open |
 | SRC-02 | Recording timestamps for the restoration, two-line transfer, parent-to-multiple-child, partial allocation and Simulate Posting demonstrations. | Screenshot registers | N | Rec | Open |
-| SRC-03 | What "PG/Ava follow-up support" in the notes refers to, and whether the guides should point to it. | REF Related content | N | SME | Open |
+| SRC-03 | What "PG/Ava follow-up support" in the notes refers to, and whether the guides should point to it. The master template's *Additional Resources* already lists **AVA - Atlas Virtual Assistant** and **Procedure Guides** as self-service resources, which is probably what the notes mean. | Additional Resources (all) | N | SME | Open |
 | SRC-04 | Whether to adopt the Part 2 roadmap's Release 3A placement for transfers and restoration. Source 2 ranks *Transfer funds between accounts* 27, in Release 4. Proposed in D-036. | Document control (all) | N | Dec | Open |
 
 ### 3.2 Governance (`GOV`)
@@ -90,23 +90,23 @@ Customer Pools has its own register: [Customer-Pools-Validation.md](Customer-Poo
 
 | ID | Item to confirm | Location | Priority | Method | Status |
 |---|---|---|---|---|---|
-| CPJ-01 | Navigation and controls: the path to **Customer payment journal** (Favorites `VG-04` places it in **Credit and collections**), the control that creates a new journal, how the journal lines are opened, and how a new line is added. | TF/PC/RO steps 1.1.2, 1.1.3, 1.1.5, 1.2.1; REF control 1 | B | Test, Rec | Open |
-| CPJ-02 | How the CPJL journal name or code appears and is selected when a journal is created. | TF/PC/RO step 1.1.3; REF control 1 | B | Test, Rec | Open |
-| CPJ-03 | Exact labels of the header **Description** field and the line **Description** field. | TF/PC/RO steps 1.1.4 and line descriptions; REF control 2 | B | Test, Rec | Open |
-| CPJ-04 | The description standard: required wording and customer codes for header and line descriptions. The notes give examples only. | TF/PC/RO description steps; REF control 2 | N | SME | Open |
-| CPJ-05 | The date field label and default, and the backdating rule. The notes give two wordings: the original payment date may be used for a wrong-account correction "when appropriate" (TF), and a prior-period date only when required and the period is open (RO). Confirm the rule and who decides. | TF/PC/RO date step; REF control 3 | B | Test, SME | Open |
-| CPJ-06 | How debits and credits are shown and entered: separate **Debit** and **Credit** fields, or signed amounts. | TF/PC/RO amount steps; REF control 5 | B | Test | Open |
-| CPJ-07 | The currency field label and behavior, and what to do if the original currency cannot be used. | TF/PC/RO currency rule; REF control 4 | B | Test, SME | Open |
-| CPJ-08 | Exact labels of **Offset account type**, its **Ledger** value and the offset (main) account field, and how the account lookup works. Also whether the offset is entered on each line. | TF/PC/RO offset steps; REF control 6 | B | Test | Open |
-| CPJ-09 | Whether the guides should show account numbers for the Overpayment ledger and the bank-to-bank transfer clearing account, or only names to search for. | REF control 6 | B | Dec, SME | Open |
-| CPJ-10 | Fields to leave blank (financial tags, invoice number, bank account): their exact labels, and whether the rule also applies to transfers. | RO step 1.1.11; TF/PC Key concepts; REF control 7 | B | Test, SME | Open |
-| CPJ-11 | Pre-populated financial dimensions: confirm they are never changed, whether there are exceptions, and whether the rule also applies to transfers. | RO step 1.1.14; TF/PC Key concepts; REF control 8 | B | SME | Open |
-| CPJ-12 | Which fields complete when the user tabs through a line (the notes mention voucher information). | TF/PC/RO "Complete the line" steps; REF control 9 | N | Test, Rec | Open |
-| CPJ-13 | Where the journal totals are shown, to check that debits equal credits. | TF/PC step 1.3.1; REF control 10 | B | Test | Open |
-| CPJ-14 | The **Simulate Posting** label and location, and how results are shown. The notes describe a blue result as ready and red results as errors. | TF/PC step 1.3.2, RO step 1.2.1; REF control 11 | B | Test, Rec | Open |
-| CPJ-15 | Common Simulate Posting errors and their fixes, and the support route when an error cannot be resolved. The notes mention escalation to "SYD" during training. | TF/PC step 1.3.3, RO step 1.2.2; REF control 11 | B | SME | Open |
-| CPJ-16 | The **Post** control label and location, and which role may post a CPJL. | TF/PC step 1.3.4, RO step 1.2.3; REF control 12 | B | Test, SME | Open |
-| CPJ-17 | Whether CPJL transfers and restorations need approval (for example a workflow), and whether any value threshold applies. The amounts in the notes are examples, not thresholds. | TF/PC step 1.3.4, RO step 1.2.3; REF control 12 | B | SME | Open |
+| CPJ-01 | Navigation and controls: the path to **Customer payment journal** (Favorites `VG-04` places it in **Credit and collections**), the control that creates a new journal, how the journal lines are opened, and how a new line is added. | TF/PC/RO steps 1.1.3, 1.1.4 and 1.1.6; TF/PC step 1.2.1; REF Journal set-up | B | Test, Rec | Open |
+| CPJ-02 | How the CPJL journal name or code appears and is selected when a journal is created. | TF/PC/RO step 1.1.4; Key concepts; REF Journal set-up | B | Test, Rec | Open |
+| CPJ-03 | Exact labels of the header **Description** field and the line **Description** field. | TF/PC/RO step 1.1.5 and the line description steps; REF Journal set-up | B | Test, Rec | Open |
+| CPJ-04 | The description standard: required wording and customer codes for header and line descriptions. The notes give examples only. | TF/PC/RO description steps; REF Journal set-up | N | SME | Open |
+| CPJ-05 | The date field label and default, and the backdating rule. The notes give two wordings: the original payment date may be used for a wrong-account correction "when appropriate" (TF), and a prior-period date only when required and the period is open (RO). Confirm the rule and who decides. | TF/PC/RO date step; REF Journal set-up | B | Test, SME | Open |
+| CPJ-06 | How debits and credits are shown and entered: separate **Debit** and **Credit** fields, or signed amounts. | TF/PC/RO amount steps; REF Line coding | B | Test | Open |
+| CPJ-07 | The currency field label and behavior, and what to do if the original currency cannot be used. | TF/PC/RO currency rule; REF Journal set-up | B | Test, SME | Open |
+| CPJ-08 | Exact labels of **Offset account type**, its **Ledger** value and the offset (main) account field, and how the account lookup works. Also whether the offset is entered on each line. | TF/PC/RO offset steps; REF Line coding | B | Test | Open |
+| CPJ-09 | Whether the guides should show account numbers for the Overpayment ledger and the bank-to-bank transfer clearing account, or only names to search for. | REF Line coding | B | Dec, SME | Open |
+| CPJ-10 | Fields to leave blank (financial tags, invoice number, bank account): their exact labels, and whether the rule also applies to transfers. | RO step 1.1.11; TF/PC Key concepts; REF Line coding | B | Test, SME | Open |
+| CPJ-11 | Pre-populated financial dimensions: confirm they are never changed, whether there are exceptions, and whether the rule also applies to transfers. | RO step 1.1.14; TF/PC Key concepts; REF Line coding | B | SME | Open |
+| CPJ-12 | Which fields complete when the user tabs through a line (the notes mention voucher information). | TF/PC/RO "Complete the line" steps; REF Line coding | N | Test, Rec | Open |
+| CPJ-13 | Where the journal totals are shown, to check that debits equal credits. | TF/PC step 1.3.1; REF Validation and posting | B | Test | Open |
+| CPJ-14 | The **Simulate Posting** label and location, and how results are shown. The notes describe a blue result as ready and red results as errors. | TF/PC step 1.3.2, RO step 1.2.1; REF Validation and posting | B | Test, Rec | Open |
+| CPJ-15 | Common Simulate Posting errors and their fixes, and the support route when an error cannot be resolved. The notes mention escalation to "SYD" during training. | TF/PC step 1.3.3, RO step 1.2.2; REF Validation and posting | B | SME | Open |
+| CPJ-16 | The **Post** control label and location, and which role may post a CPJL. | TF/PC step 1.3.4, RO step 1.2.3; REF Validation and posting | B | Test, SME | Open |
+| CPJ-17 | Whether CPJL transfers and restorations need approval (for example a workflow), and whether any value threshold applies. The amounts in the notes are examples, not thresholds. | TF/PC step 1.3.4, RO step 1.2.3; REF Validation and posting | B | SME | Open |
 | CPJ-18 | How to confirm the result after posting, for example in the customer's transactions (see the Customer Account guide). | TF step 1.3.5, PC step 1.3.6, RO step 1.2.4 | B | Test, SME | Open |
 | CPJ-19 | How a posted journal is corrected or reversed. | PROCESS COMPLETE (all); REF "Not covered" | B | SME | Open |
 | CPJ-20 | What to do with an unposted journal that is no longer needed. It would appear under **Payment journals not posted** in the workspace (Workspace `VG-05`). | REF "Not covered" | N | SME, Test | Open |
@@ -118,7 +118,7 @@ Customer Pools has its own register: [Customer-Pools-Validation.md](Customer-Poo
 |---|---|---|---|---|---|
 | TF-01 | Initiation events. The notes give two: a payment posted to the wrong customer account, and funds to move between related accounts once the destination is confirmed. Confirm them and add any others. | Part 1 Initiation; topic Initiation | B | SME | Open |
 | TF-02 | How the correct destination account is confirmed, and what evidence is kept. | PROCESS START (1.1); Key concepts | B | SME | Open |
-| TF-03 | The exact label and value of the bank-to-bank transfer clearing account. | Key concepts; steps 1.1.11 and 1.2.6 | B | Test, SME | Open |
+| TF-03 | The exact label and value of the bank-to-bank transfer clearing account. | Key concepts; steps 1.1.12 and 1.2.6 | B | Test, SME | Open |
 | TF-04 | Whether the destination line also takes the Ledger offset and the clearing account in the demonstrated UI, as the source draft implies (step 12). | Steps 1.2.5 and 1.2.6 | B | Rec, Test | Open |
 | TF-05 | What to do when the payment is already settled against invoices on the wrong account. Not covered by the notes. | PROCESS START (1.1) | B | SME | Open |
 | TF-06 | Whether transfers between customers in different legal entities are in scope. Not covered by the notes. | Part Description (out of scope) | N | SME | Open |
@@ -129,7 +129,7 @@ Customer Pools has its own register: [Customer-Pools-Validation.md](Customer-Poo
 |---|---|---|---|---|---|
 | PC-01 | The formal method or reference for confirming a parent-child relationship. The Part 1 notes say D365 has no reliable parent-child indicator. Linked to backlog rank 26, *Identify parent-child accounts* (knowledge article, not ready). | Key concepts; PROCESS START (1.1) | B | SME | Open |
 | PC-02 | The evidence needed to confirm the allocation to each child account (the notes name remittance and customer confirmation), and where it is kept. | Key concepts; PROCESS START (1.1) | B | SME | Open |
-| PC-03 | The clearing-account treatment on a distribution with several lines: whether the parent line and each child line take the Ledger offset and the clearing account. | Steps 1.1.10, 1.1.11, 1.2.5 and 1.2.6 | B | Rec, Test | Open |
+| PC-03 | The clearing-account treatment on a distribution with several lines: whether the parent line and each child line take the Ledger offset and the clearing account. | Steps 1.1.11, 1.1.12, 1.2.5 and 1.2.6 | B | Rec, Test | Open |
 | PC-04 | Where, how and at what point the note that explains a residual left on the parent account is added (for example a customer note or the journal line), and its wording. | Key concepts; step 1.3.5 | B | Rec, SME | Open |
 | PC-05 | Who follows up a residual left on the parent account, and when. | Key concepts | N | SME | Open |
 | PC-06 | Initiation events. The notes give one: a payment held on a parent account must be distributed to one or more confirmed child accounts. | Part 1 Initiation; topic Initiation | B | SME | Open |
@@ -175,7 +175,7 @@ The gaps the three source drafts list are also covered: verification after posti
 | Check | Transfer Funds | Parent Payment | Restore |
 |---|---|---|---|
 | Steps checked against the Part 2 recording | Open (`SRC-01`) | Open (`SRC-01`) | Open (`SRC-01`) |
-| Built in the PG master template | Not started (D-037) | Not started | Not started |
+| Built in the PG master template | Done: v0.1 SME review draft (D-041) | Done | Done |
 | Exact system labels and navigation | Open (`CPJ-01` to `CPJ-03`, `CPJ-08`, `CPJ-14`, `CPJ-16`) | Open (same) | Open (same) |
 | Account labels and values | Open (`TF-03`, `CPJ-09`) | Open (`TF-03`, `CPJ-09`) | Open (`RO-01`, `CPJ-09`) |
 | Business rules (dates, currency, blank fields, dimensions) | Open (`CPJ-05`, `CPJ-07`, `CPJ-10`, `CPJ-11`) | Open (same) | Open (same) |
@@ -191,3 +191,4 @@ The gaps the three source drafts list are also covered: verification after posti
 | Date | Change |
 |---|---|
 | 2026-10-23 | Register created from the AR Training D365 Part 2 update pack, with the three working drafts and the controls reference. |
+| 2026-10-25 | The three guides and the reference are built in the PG master template as v0.1 SME review drafts (D-041), with every open item that affects the text as a Word comment. Step locations updated for the added *Click* **Modules** step. `SRC-03` notes the template's AVA entry. |
