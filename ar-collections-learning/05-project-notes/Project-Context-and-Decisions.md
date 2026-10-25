@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | Topic | D365 Accounts Receivable (AR) Collections |
-| Last updated | 2026-10-15 |
-| Current focus | First PG: *Configure AR Collections Favourites in D365* |
+| Last updated | 2026-10-23 |
+| Current focus | Validation of the 13 SME review drafts (clean-session test and SME question pack). Part 2 adds three working drafts for Customer payment journal (CPJL) transfers and restorations, and a CPJL controls reference. |
 
 This file records the project context drawn from the source documents, inconsistencies found between them, and decisions made during development. Update it whenever a decision is made or a source is added.
 
@@ -12,7 +12,7 @@ This file records the project context drawn from the source documents, inconsist
 
 ## 1. Source documents
 
-Sources 0–3.2 are the source of truth for **process content**. They are held outside this repository and must not be overwritten. T1 and T2 are the source of truth for **PG format and authoring rules**. They are stored unchanged in `/templates`. Always Save As a copy; never edit the master.
+Sources 0–3.2 are the source of truth for **process content**. Source 4 (the Part 2 update pack) adds working evidence for the Part 2 session: its notes are Teams AI-generated, so they are evidence to check against the recording, not authority (D-035). All sources are held outside this repository and must not be overwritten. T1 and T2 are the source of truth for **PG format and authoring rules**. They are stored unchanged in `/templates`. Always Save As a copy; never edit the master.
 
 | Ref | File | Content | Primary use |
 |---|---|---|---|
@@ -21,10 +21,18 @@ Sources 0–3.2 are the source of truth for **process content**. They are held o
 | 2 | `2. D365 AR learning development roadmap.txt` | Release 1–4 roadmap. 32-item prioritised master backlog. Cross-release workstreams (screenshots, business rules, references, assurance). Development gates. Definitions of ready. | Delivery roadmap and gates |
 | 3.1 | `3.1 Recommended first drafting batch.txt` | First drafting batch (6 PGs), second batch hold list, "do not draft as final" list. | Drafting order |
 | 3.2 | `3.2 Configure AR Collections Favour.txt` | Baseline draft v0.1 of the Favourites PG. Screenshot plan with timestamps, captions and callouts. | Baseline for the first PG |
+| 4.0 | `00_Source_Notes_Part1_and_Part2.docx` (in `AR_Training_D365_Part2_Update_Pack.zip`) | Source status, and the Part 1 and Part 2 topic inventories from Teams AI-generated meeting notes. Customer Pools finding. | Part 2 evidence (to check against the recording) |
+| 4.1 | `01_Updated_Learning_Architecture.docx` | Architecture change from Part 2: a Customer Payment Journals module (Priority 2) and customer account transfers (Priority 3). | Learning architecture update |
+| 4.2 | `02_Updated_Development_Roadmap.docx` | Releases 1, 2, 3A, 3B and 4, numbered 1 to 23. Release 3A: CPJL and transfers. | Roadmap update |
+| 4.3 | `03_Updated_Readiness_and_Gap_Matrix.docx` | Readiness of each Part 2 topic. The CPJL validation checklist (14 checks) and the Customer Pools checklist (7 checks). | Readiness and validation |
+| 4.4 | `04_PG_Draft_Transfer_Funds_Between_Customer_Accounts.docx` | Working PG draft: 15 steps. | Baseline for the Transfer Funds guide |
+| 4.5 | `05_PG_Draft_Parent_to_Child_Account_Transfer.docx` | Working PG draft: 11 steps, with partial allocation. | Baseline for the Parent Payment guide |
+| 4.6 | `06_PG_Draft_Restore_Written_Off_Overpayment.docx` | Working PG draft: 13 steps. | Baseline for the Restore guide |
+| 4.7 | `07_Claude_Code_Handover_Prompt.txt` | Tasks and source discipline for the Part 2 batch. | Instructions, not process evidence |
 | T1 | `PG_Word_Template-MASTER TEMPLATE.docx` (in [`/templates`](../../templates/)) | The master Word template currently in use: cover, contents, version history, About this guide, Parts 1–3, Additional Resources, boundary rows and styles. | **Governs PG format and output** |
 | T2 | `PG_Template_Authoring_Guide_v1.docx` (in [`/templates`](../../templates/)) | Companion authoring handbook: section-by-section content rules, the action-row pattern, the standard navigation pattern, the question log, Word maintenance and the final checklist. | **Governs PG authoring rules** |
 
-The underlying evidence for all sources is the *AR Training D365* session recording and transcript.
+The underlying evidence for all sources is the *AR Training D365* session recording and transcript. Source 4 covers Part 2 of the same session.
 
 ---
 
@@ -81,6 +89,21 @@ Source 1 also uses: system overview, guided practice, microlearning, knowledge n
 
 The Favourites PG sits in **Module 1, sequence 1.5** ("Add required AR pages to Favourites"). It is supported by **1.6**, a guided practice that opens each of the four pages.
 
+### 4.4 Part 2 update (source 4.1)
+
+Part 2 closes the evidence gap for customer account transfers and Customer payment journals. It does **not** close the gap for Customer Pools (D-035).
+
+| Area | Before Part 2 | After Part 2 |
+|---|---|---|
+| Customer payment journal (CPJL) | Named only as a Favorites page; its use was open (Favorites `VG-18`) | Priority 2 module: purpose, descriptions, line coding, currency, offsets and validation. Reference drafted. |
+| Transfer funds between customer accounts | Not ready (source 2 rank 27, Release 4) | Strong PG candidate: two balanced lines, bank-to-bank transfer clearing offset. Working draft. |
+| Parent payment across child accounts | Not ready; "do not draft" (section 6) | Strong PG candidate: one parent debit, several child credits. Working draft. |
+| Partial parent-account allocation | Not covered | Covered: move only the confirmed amount; the residual stays on the parent with a note. Part of the Parent Payment guide (D-039). |
+| Restore a written-off or overpayment amount | Not covered | Strong PG candidate: customer credit, Overpayment ledger offset. Working draft. |
+| Simulate Posting | Not covered | Shared control: in the reference and each guide's validate-and-post steps (D-039). |
+| Identify parent-child relationships | Not ready (rank 26) | Still partial. Part 1 notes: D365 has no reliable indicator (`PC-01`). |
+| Customer Pools | Not in the backlog | Not ready. Validation backlog only ([register](../03-validation/Customer-Pools-Validation.md)). |
+
 ## 5. Development priorities
 
 ### 5.1 Releases (source 2)
@@ -109,6 +132,23 @@ All six are drafted as SME review drafts (October 2026).
 
 **Do not draft as final:** settle or undo transactions, write-offs, write-off journal submission, customer contact or address maintenance, customer exclusions, payment terms, parent-child fund transfers, direct debit and credit cards.
 
+**Part 2 working drafts (October 2026):** transfer funds between customer accounts, transfer a parent account payment across child accounts, and restore a written-off or overpayment amount, plus the CPJL controls reference. They are working drafts only. The "do not draft as final" rule still applies to them.
+
+### 5.3 Part 2 roadmap (source 4.2)
+
+Source 4.2 renumbers the roadmap 1 to 23 and splits Release 3. The source 2 backlog ranks stay the project's IDs (I-10). New items take ranks from 33.
+
+| Part 2 item | Deliverable | Release | Source 2 rank | Project position |
+|---|---|---|---|---|
+| 14 | Understand Customer Payment Journals (CPJL) | 3A | New (35) | Reference drafted |
+| 15 | Transfer funds between customer accounts | 3A | 27 | PG working draft; moved from Release 4 to 3 (D-036) |
+| 16 | Transfer a parent-account payment across child accounts | 3A | New (33) | PG working draft |
+| 17 | Handle a partial parent-account allocation | 3A | — | Covered in item 16 (D-039) |
+| 18 | Restore a written-off or overpayment amount | 3A | New (34) | PG working draft |
+| 19 | Validate a CPJL using Simulate Posting | 3A | — | Covered in the reference and items 15, 16 and 18 (D-039) |
+| 20 to 23 | Write-offs, write-off journal, contacts and addresses, exclusions | 3B | 18 to 25 | Unchanged: not drafted |
+| Release 4 | Customer Pools; parent-child identification; payment terms; direct debit and credit cards; custom transaction report; daily bank statements | 4 | New (36); 26; 30; 31 and 32; 28; 29 | Customer Pools added as a validation item only (D-035). Others unchanged. |
+
 ## 6. Draft-ready vs validation-blocked content
 
 | Category | Meaning | Rule |
@@ -116,7 +156,7 @@ All six are drafted as SME review drafts (October 2026).
 | **Ready to draft** | Meets the definition of ready for drafting (source 2): clear task boundary, known starting path, actions demonstrated, exact labels available, gaps recorded, module assigned. | May be drafted. Gaps go into the validation register. |
 | **Draft ready, publication blocked** | Can be drafted from the recording, but has unresolved business rules, approvals or cross-system effects. Examples: unallocated payments, write-offs, contact maintenance. | Draft only as a working draft. Do **not** finalise until the listed gaps are validated. |
 | **System steps ready, governance blocked** | The system steps are demonstrated, but reasons, approvals, documentation or review controls are missing. Example: exclude from credit management. | Same as above. |
-| **Partial / Not ready** | The process was discussed but not demonstrated in enough detail. Examples: parent-child transfers, bank statements, payment terms. | Do not draft a PG. Collect evidence first (SME playback or a new recording). |
+| **Partial / Not ready** | The process was discussed but not demonstrated in enough detail. Examples: bank statements, payment terms, Customer Pools, parent-child identification. (Parent-child *transfers* moved to "draft ready, publication blocked" with the Part 2 evidence, D-035.) | Do not draft a PG. Collect evidence first (SME playback or a new recording). |
 | **Ready for publication** | Meets the definition of ready for publication and passes the 20-point publication gate (sources 1 and 2). | May be published after process-owner approval. |
 
 Development gates (source 2): Identified → Source reviewed → Gap validated → Drafted → System tested → SME validated → Process-owner approved → Published.
@@ -135,6 +175,13 @@ Development gates (source 2): Identified → Source reviewed → Gap validated �
 | I-06 | "Credit & Collections" (source 0) vs "Credit and collections" (module) vs "Customer Credit and Collections" (workspace). | 0, 1, 2, 3.2 | Module and workspace are kept distinct. Validate (`VG-21`). |
 | I-07 | The Favourites PG title varies across all five sources. | 0, 1, 2, 3.1, 3.2 | Title from the task brief is used (D-002). |
 | I-08 | Source 0 lists "Persist Views Across Legal Entities" as covered. Source 1 marks view scope "Ready with validation". Source 3.1 says to phrase it exactly as demonstrated and validate it. | 0 vs 1, 3.1 | Treat as a validation item in the Views PG. Do not carry it into the Favourites PG. |
+| I-09 | Release placement of transfers. Source 2 ranks *Transfer funds between accounts* 27, in Release 4 (not ready). Source 4.2 puts transfers and restoration in Release 3A. | 2 vs 4.2 | Part 2 supplies the evidence that blocked them, so they move to Release 3 (D-036, proposed; `SRC-04`). |
+| I-10 | Numbering. Source 4.2 numbers its roadmap 1 to 23, which does not match the source 2 backlog ranks 1 to 32. | 2 vs 4.2 | Source 2 ranks stay the IDs. New Part 2 items take ranks 33 to 36 (D-036). |
+| I-11 | Source 4.2's Release 1 lists seven items. It leaves out orientation, legal entities and workspace (source 2 ranks 1 to 3), which are in source 2's Release 1. | 2 vs 4.2 | Not a removal. Source 2 governs Releases 1 and 2. The Legal Entities and Workspace drafts keep their place. |
+| I-12 | Date rule wording. The transfer draft says a wrong-account correction may use the original payment date "when appropriate". The restore draft says to use a prior-period date only when required and the period is open. | 4.4 vs 4.6 | Both kept as stated in the notes. One rule to confirm (`CPJ-05`). |
+| I-13 | Blank fields and dimensions. "Leave financial tags, invoice number and bank account blank" and "do not change pre-populated dimensions" are stated for restoration entries only. | 4.6 vs 4.4, 4.5 | Steps in the Restore guide only. Questions for the transfer guides (`CPJ-10`, `CPJ-11`). |
+| I-14 | Source 4.1 has two "Priority 3" sections (customer account transfers; controlled financial processing), and lists restoration under the second. Source 4.2 puts restoration in Release 3A with the transfers. | 4.1 vs 4.2 | Source 4.2 governs packaging, as source 2 does for earlier releases (D-005). |
+| I-15 | Source 4.3 rates transfers and restoration as strong candidates, while source 4.0 says all Part 2 content must be validated against the recording. | 4.0 vs 4.3 | Strong *draft* candidates only. Nothing is publishable until the recording check (`SRC-01`). |
 
 ---
 
@@ -176,6 +223,12 @@ Development gates (source 2): Identified → Source reviewed → Gap validated �
 | D-032 | 2026-10-14 | Last second-batch PG: process name **AR Collections Statement Distribution**. One parent topic, *Generate and Send a Customer Statement*, with *Send the Statement* (Only open, company logo, Print management destination, generate) and *Verify Statement Delivery* (delivery message, Collections sent mailbox where required, failed-delivery process). Checks before sending are Key concept rules. As a customer-facing guide, it is not tested on real customers until the parameter, recipient, multi-currency and failed-delivery items close. | Sources 0, 1, 2, 3.1 | Provisional (`VG-05`, `VG-06`, `VG-10`, `VG-12`, `VG-17`, `VG-21` in its register) |
 | D-033 | 2026-10-15 | Validate all 13 guides in **one clean-session D365 test**, run as a single route that visits each page once (menus once in S2; the Aged balances grid reused for the export). Every open Test-method item is assigned to exactly one step. Safety rules: test customer only, no financial changes (S9 read-only), nothing sent to a customer (S12 uses Screen; S13 gated), mock note text, missing controls recorded as possible security causes. | Validation registers; D-016; brief rules on security diagnosis | Proposed (plan awaiting SME review) |
 | D-034 | 2026-10-15 | Collect all non-test answers through one **SME question pack**: each shared rule is asked once and applied to every guide that uses it. Every open item whose method includes SME, Rec or Dec maps to exactly one answer row (191 items, 119 blocking); Test-only items stay with the test plan (D-033). Scope boundaries are put to the BPO as the drafts' current choice, not as settled. Answers close register items only when recorded with name and date. | Validation registers; D-016; D-033 | Proposed (pack awaiting SME answers) |
+| D-035 | 2026-10-23 | Part 2 (source 4) closes the evidence gap for **Customer payment journals and customer account transfers**: transfer between customers, parent to multiple children, partial allocation, restoration through the Overpayment ledger, and Simulate Posting. These move from "partial / not ready" to "draft ready, publication blocked". It does **not** close the **Customer Pools** gap: Customer Pools stays a validation backlog item with no PG ([register](../03-validation/Customer-Pools-Validation.md)). The Part 2 notes are Teams AI-generated, so every Part 2 statement is labelled as stated in the notes and stays unconfirmed until checked against the recording. The example amounts in the notes ($100; $10,000, $8,000 and $2,000) are examples, not thresholds. | Source 4 and its handover (4.7); D-001; D-004 | Adopted |
+| D-036 | 2026-10-23 | Release placement: *Transfer funds between accounts* (rank 27) moves from Release 4 to Release 3, with the new Part 2 items. Source 2 ranks stay the project's IDs. New items: rank 33 *Transfer a parent account payment across child accounts*, 34 *Restore a written-off or overpayment amount*, 35 *Customer Payment Journal controls reference*, 36 *Customer Pools* (validation only). Nothing previously drafted is moved or removed. | I-09, I-10, I-11 | Proposed (confirm with the BPO, `SRC-04`) |
+| D-037 | 2026-10-23 | The three Part 2 guides and the reference start as **working Markdown drafts**. They follow the master template's section order and boundary rows, so the Word build is mechanical, but they are not built in Word until the Part 2 recording is checked. This is an exception to D-013 (Word is the editable source) for unchecked AI-note evidence. Once built, the Word file becomes the editable source and the Markdown file becomes its preview. | Handover task 5; avoids Word review comments on unchecked notes | Adopted |
+| D-038 | 2026-10-23 | One validation register covers the three Part 2 guides and the reference, because most items are shared. IDs are prefixed by scope (`SRC`, `GOV`, `CPJ`, `TF`, `PC`, `RO`) instead of a per-guide `VG-xx` sequence. Customer Pools uses `CP-xx` in its own register. This amends D-007 for this batch only. | Handover suggested files; traceability | Adopted |
+| D-039 | 2026-10-23 | Part 2 roadmap item 17 (partial allocation) is part of the Parent Payment guide. Item 19 (Simulate Posting) is a shared control in the reference and in each guide's validate-and-post subprocedure. Neither is a separate guide unless the recording shows steps beyond these. | No steps beyond those already in the guides | Adopted |
+| D-040 | 2026-10-23 | New folder `06-reference-guides` for reference content (a source 0 content type). The first entry is the CPJL controls reference, limited to controls the Part 2 notes support. | Handover suggested files | Adopted |
 
 ---
 
@@ -209,8 +262,12 @@ These elements came from the Favourites PG. They are candidates for the standard
 2. **Recording evidence:** transcript excerpts and timestamps for the views, Aged balances, invoice, export, notes, legal entity, workspace, overdue, customer account, activity and statement demonstrations (Views `VG-27`, Aged Balances `VG-21`, Customer Invoices `VG-20`, Export to Excel `VG-19`, Notes and Activities `VG-21`, Legal Entities `VG-21`, Workspace `VG-21`, Overdue Customers `VG-21`, Customer Account `VG-23`, Collection Activities `VG-23`, Statement Preview `VG-23`, Statement Distribution `VG-25`).
 3. **SME answers** through the [SME question pack](../03-validation/SME-Question-Pack.md) and its [response sheet](../03-validation/SME-Question-Pack-Responses.xlsx): 31 questions that cover 191 open items (119 blocking). Answer A1 to A6 first (initiation, stream and role, BPO, reports, security role, review and approval; 78 blocking items). The export volume limit and the handling rule for exported customer data (Export to Excel `VG-06`, `VG-08`) are question B2.
 4. Decide the guide codes (D-006) and approve or edit the [PG Delivery Flow](https://claude.ai/artifact/Qb7C1s8Vmnt8av3ams3jrJ).
-5. Both drafting batches are complete. Before any further drafting, the priority is validation: the clean-session test (step 1) and the SME answers (steps 3 and 6 to 9). The remaining backlog items are higher-risk (settlement, write-offs, customer maintenance, exclusions, payment terms, account transfers) and stay behind the validation gate (source 3.1).
+5. Both drafting batches are complete, and Part 2 adds three working drafts (step 10). Before any further drafting, the priority is validation: the clean-session test (step 1) and the SME answers (steps 3 and 6 to 9). The remaining backlog items are higher-risk (settlement, write-offs, customer maintenance, exclusions, payment terms, account transfers) and stay behind the validation gate (source 3.1).
 6. Ask the SME for the **legal entity name and code reference** (source 1). It closes Legal Entities `VG-06` and supports every guide's *Check* the **Entity** row. Pack question **B7**.
 7. Ask the SME for the **collections prioritization rules** and the **aging indicator legend** (source 1, checklist A). They close Overdue Customers `VG-11` and `VG-12` and Aged Balances `VG-10`. The prioritization rules are pack question **B4.3**. The aging legend items are deferred, so they are outside the pack until they are reopened.
 8. Ask the SME for the **AR collection-note standard** (source 1, open questions B): approved activity types, mandatory and prohibited content, naming convention, and example notes. It closes Collection Activities `VG-05`, `VG-06` and `VG-09` to `VG-11`. Pack questions **B3.1** to **B3.3**.
 9. Ask the SME for the **statement controls** (source 2, required validation): approved parameters, recipient source, multi-currency exclusion rules and the failed-delivery process. They close Statement Distribution `VG-05`, `VG-06`, `VG-10`, `VG-12` and `VG-17`, and Statement Preview `VG-03` to `VG-05`. Pack questions **B5.1** to **B5.4**, which also gate test station S13.
+10. **Check the Part 2 recording** against the three working drafts and the CPJL reference (`SRC-01`), and record timestamps (`SRC-02`). Then build the guides in the master template (D-037). Register: [Part2-CPJL-and-Transfers-Validation.md](../03-validation/Part2-CPJL-and-Transfers-Validation.md) (46 items, 38 blocking).
+11. **Part 2 SME questions.** The SME question pack predates Part 2. Add a short supplement for the Part 2 SME and decision items: role and posting permission, approval, account values, the backdating rule, blank fields and dimensions, the parent-child method, residual notes, reversal and the support route (`GOV`, `CPJ`, `TF`, `PC` and `RO` items).
+12. **Customer Pools evidence.** Ask the SME whether AR Collections uses Customer Pools before any further work ([register](../03-validation/Customer-Pools-Validation.md), `CP-01` to `CP-07`).
+13. Part 2 gives evidence for Favorites `VG-18` (what Customer payment journal is used for). Close it once the recording check confirms it.
