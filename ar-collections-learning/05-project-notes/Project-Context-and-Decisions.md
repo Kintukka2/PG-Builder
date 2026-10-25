@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | Topic | D365 Accounts Receivable (AR) Collections |
-| Last updated | 2026-10-23 |
-| Current focus | Validation of the 13 SME review drafts (clean-session test and SME question pack). Part 2 adds three working drafts for Customer payment journal (CPJL) transfers and restorations, and a CPJL controls reference. |
+| Last updated | 2026-10-25 |
+| Current focus | Validation of the 13 SME review drafts (clean-session test and SME question pack). Part 2 adds three SME review drafts for Customer payment journal (CPJL) transfers and restorations, and a CPJL controls reference, built from AI-generated notes that still need the recording check. |
 
 This file records the project context drawn from the source documents, inconsistencies found between them, and decisions made during development. Update it whenever a decision is made or a source is added.
 
@@ -132,7 +132,7 @@ All six are drafted as SME review drafts (October 2026).
 
 **Do not draft as final:** settle or undo transactions, write-offs, write-off journal submission, customer contact or address maintenance, customer exclusions, payment terms, parent-child fund transfers, direct debit and credit cards.
 
-**Part 2 working drafts (October 2026):** transfer funds between customer accounts, transfer a parent account payment across child accounts, and restore a written-off or overpayment amount, plus the CPJL controls reference. They are working drafts only. The "do not draft as final" rule still applies to them.
+**Part 2 drafts (October 2026):** transfer funds between customer accounts, transfer a parent account payment across child accounts, and restore a written-off or overpayment amount, plus the CPJL controls reference. All four are v0.1 SME review drafts in the master template (D-041). The "do not draft as final" rule still applies to them.
 
 ### 5.3 Part 2 roadmap (source 4.2)
 
@@ -140,11 +140,11 @@ Source 4.2 renumbers the roadmap 1 to 23 and splits Release 3. The source 2 back
 
 | Part 2 item | Deliverable | Release | Source 2 rank | Project position |
 |---|---|---|---|---|
-| 14 | Understand Customer Payment Journals (CPJL) | 3A | New (35) | Reference drafted |
-| 15 | Transfer funds between customer accounts | 3A | 27 | PG working draft; moved from Release 4 to 3 (D-036) |
-| 16 | Transfer a parent-account payment across child accounts | 3A | New (33) | PG working draft |
+| 14 | Understand Customer Payment Journals (CPJL) | 3A | New (35) | Reference: SME review draft (D-041, D-042) |
+| 15 | Transfer funds between customer accounts | 3A | 27 | PG SME review draft (D-041); moved from Release 4 to 3 (D-036) |
+| 16 | Transfer a parent-account payment across child accounts | 3A | New (33) | PG SME review draft (D-041) |
 | 17 | Handle a partial parent-account allocation | 3A | — | Covered in item 16 (D-039) |
-| 18 | Restore a written-off or overpayment amount | 3A | New (34) | PG working draft |
+| 18 | Restore a written-off or overpayment amount | 3A | New (34) | PG SME review draft (D-041) |
 | 19 | Validate a CPJL using Simulate Posting | 3A | — | Covered in the reference and items 15, 16 and 18 (D-039) |
 | 20 to 23 | Write-offs, write-off journal, contacts and addresses, exclusions | 3B | 18 to 25 | Unchanged: not drafted |
 | Release 4 | Customer Pools; parent-child identification; payment terms; direct debit and credit cards; custom transaction report; daily bank statements | 4 | New (36); 26; 30; 31 and 32; 28; 29 | Customer Pools added as a validation item only (D-035). Others unchanged. |
@@ -225,10 +225,12 @@ Development gates (source 2): Identified → Source reviewed → Gap validated �
 | D-034 | 2026-10-15 | Collect all non-test answers through one **SME question pack**: each shared rule is asked once and applied to every guide that uses it. Every open item whose method includes SME, Rec or Dec maps to exactly one answer row (191 items, 119 blocking); Test-only items stay with the test plan (D-033). Scope boundaries are put to the BPO as the drafts' current choice, not as settled. Answers close register items only when recorded with name and date. | Validation registers; D-016; D-033 | Proposed (pack awaiting SME answers) |
 | D-035 | 2026-10-23 | Part 2 (source 4) closes the evidence gap for **Customer payment journals and customer account transfers**: transfer between customers, parent to multiple children, partial allocation, restoration through the Overpayment ledger, and Simulate Posting. These move from "partial / not ready" to "draft ready, publication blocked". It does **not** close the **Customer Pools** gap: Customer Pools stays a validation backlog item with no PG ([register](../03-validation/Customer-Pools-Validation.md)). The Part 2 notes are Teams AI-generated, so every Part 2 statement is labelled as stated in the notes and stays unconfirmed until checked against the recording. The example amounts in the notes ($100; $10,000, $8,000 and $2,000) are examples, not thresholds. | Source 4 and its handover (4.7); D-001; D-004 | Adopted |
 | D-036 | 2026-10-23 | Release placement: *Transfer funds between accounts* (rank 27) moves from Release 4 to Release 3, with the new Part 2 items. Source 2 ranks stay the project's IDs. New items: rank 33 *Transfer a parent account payment across child accounts*, 34 *Restore a written-off or overpayment amount*, 35 *Customer Payment Journal controls reference*, 36 *Customer Pools* (validation only). Nothing previously drafted is moved or removed. | I-09, I-10, I-11 | Proposed (confirm with the BPO, `SRC-04`) |
-| D-037 | 2026-10-23 | The three Part 2 guides and the reference start as **working Markdown drafts**. They follow the master template's section order and boundary rows, so the Word build is mechanical, but they are not built in Word until the Part 2 recording is checked. This is an exception to D-013 (Word is the editable source) for unchecked AI-note evidence. Once built, the Word file becomes the editable source and the Markdown file becomes its preview. | Handover task 5; avoids Word review comments on unchecked notes | Adopted |
+| D-037 | 2026-10-23 | The three Part 2 guides and the reference start as **working Markdown drafts**. They follow the master template's section order and boundary rows, so the Word build is mechanical, but they are not built in Word until the Part 2 recording is checked. This is an exception to D-013 (Word is the editable source) for unchecked AI-note evidence. Once built, the Word file becomes the editable source and the Markdown file becomes its preview. | Handover task 5; avoids Word review comments on unchecked notes | **Amended by D-041**: the Word build was brought forward |
 | D-038 | 2026-10-23 | One validation register covers the three Part 2 guides and the reference, because most items are shared. IDs are prefixed by scope (`SRC`, `GOV`, `CPJ`, `TF`, `PC`, `RO`) instead of a per-guide `VG-xx` sequence. Customer Pools uses `CP-xx` in its own register. This amends D-007 for this batch only. | Handover suggested files; traceability | Adopted |
 | D-039 | 2026-10-23 | Part 2 roadmap item 17 (partial allocation) is part of the Parent Payment guide. Item 19 (Simulate Posting) is a shared control in the reference and in each guide's validate-and-post subprocedure. Neither is a separate guide unless the recording shows steps beyond these. | No steps beyond those already in the guides | Adopted |
 | D-040 | 2026-10-23 | New folder `06-reference-guides` for reference content (a source 0 content type). The first entry is the CPJL controls reference, limited to controls the Part 2 notes support. | Handover suggested files | Adopted |
+| D-041 | 2026-10-25 | At the user's request, the three Part 2 guides are built in the PG master template as **v0.1 SME review drafts** before the recording check. Process names: **AR Collections Customer Account Transfers**, **AR Collections Parent Payment Distribution** and **AR Collections Overpayment and Write-Off Restoration**. Each has one parent topic with subprocedures (three, three and two). Every procedure starts with the full standard navigation pattern (Entity, Modules, then Navigate to **Customer payment journal** under **Credit and collections**), which adds a step to each first subprocedure. Open items become Word comments that start with their register ID. The Word file is now the editable source and the Markdown file its preview, which also keeps a step-evidence table. The recording check (`SRC-01`) still blocks testing on real accounts and publication. | User request; D-013; D-015; D-020 | Adopted |
+| D-042 | 2026-10-25 | The CPJL controls reference is built from the master template as a **Reference Guide** (title changed from "Procedure Guide"). Its controls sit in Part 1 *Key concepts* tables (Journal set-up, Line coding, Validation and posting, Allocations and amounts, Not covered by this reference). Part 2 lists the three guides instead of procedures. Files sit in `06-reference-guides`. | D-040; the template has no reference layout | Adopted |
 
 ---
 
@@ -267,7 +269,7 @@ These elements came from the Favourites PG. They are candidates for the standard
 7. Ask the SME for the **collections prioritization rules** and the **aging indicator legend** (source 1, checklist A). They close Overdue Customers `VG-11` and `VG-12` and Aged Balances `VG-10`. The prioritization rules are pack question **B4.3**. The aging legend items are deferred, so they are outside the pack until they are reopened.
 8. Ask the SME for the **AR collection-note standard** (source 1, open questions B): approved activity types, mandatory and prohibited content, naming convention, and example notes. It closes Collection Activities `VG-05`, `VG-06` and `VG-09` to `VG-11`. Pack questions **B3.1** to **B3.3**.
 9. Ask the SME for the **statement controls** (source 2, required validation): approved parameters, recipient source, multi-currency exclusion rules and the failed-delivery process. They close Statement Distribution `VG-05`, `VG-06`, `VG-10`, `VG-12` and `VG-17`, and Statement Preview `VG-03` to `VG-05`. Pack questions **B5.1** to **B5.4**, which also gate test station S13.
-10. **Check the Part 2 recording** against the three working drafts and the CPJL reference (`SRC-01`), and record timestamps (`SRC-02`). Then build the guides in the master template (D-037). Register: [Part2-CPJL-and-Transfers-Validation.md](../03-validation/Part2-CPJL-and-Transfers-Validation.md) (46 items, 38 blocking).
+10. **Check the Part 2 recording** against the three working drafts and the CPJL reference (`SRC-01`), and record timestamps (`SRC-02`). The guides are already built in the master template (D-041), so update the Word files and their previews from the results. Register: [Part2-CPJL-and-Transfers-Validation.md](../03-validation/Part2-CPJL-and-Transfers-Validation.md) (46 items, 38 blocking).
 11. **Part 2 SME questions.** The SME question pack predates Part 2. Add a short supplement for the Part 2 SME and decision items: role and posting permission, approval, account values, the backdating rule, blank fields and dimensions, the parent-child method, residual notes, reversal and the support route (`GOV`, `CPJ`, `TF`, `PC` and `RO` items).
 12. **Customer Pools evidence.** Ask the SME whether AR Collections uses Customer Pools before any further work ([register](../03-validation/Customer-Pools-Validation.md), `CP-01` to `CP-07`).
 13. Part 2 gives evidence for Favorites `VG-18` (what Customer payment journal is used for). Close it once the recording check confirms it.

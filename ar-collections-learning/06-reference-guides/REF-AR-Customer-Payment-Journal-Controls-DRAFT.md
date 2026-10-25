@@ -1,92 +1,138 @@
-# Reference: Customer Payment Journal (CPJL) Controls
+# D365 F&O: AR Collections Customer Payment Journal Controls Reference Guide
 
-> **WORKING DRAFT. Not validated, not approved, not for publication.**
+> **SME REVIEW DRAFT. Not validated or approved.**
 >
-> This reference lists the controls shared by the three Part 2 working guides. It includes **only** controls the *AR Training D365* Part 2 notes support (sources 4.0, 4.3 to 4.6). Those notes are Teams AI-generated and have not been checked against the recording (`SRC-01`). Anything the notes do not cover is listed under [Not covered by the sources](#not-covered-by-the-sources), not filled in. `[XX-nn]` markers point to the [validation register](../03-validation/Part2-CPJL-and-Transfers-Validation.md).
+> This is a Markdown preview of the Word reference [`TBC-AR Collections Customer Payment Journal Controls Reference v0.1.docx`](TBC-AR%20Collections%20Customer%20Payment%20Journal%20Controls%20Reference%20v0.1.docx). That reference was built from the PG master template in [`/templates`](../../templates/). **The Word file is the editable source.**
+>
+> **Built from AI-generated notes.** The content comes from Teams AI-generated notes of the *AR Training D365* Part 2 session and has not yet been checked against the recording (`SRC-01`). It supports three higher-risk guides and is not finalised until its items close.
+>
+> `[XX-nn]` markers show unconfirmed items. In the Word file, each one is a review comment. Full details are in the [validation register](../03-validation/Part2-CPJL-and-Transfers-Validation.md). The markers are not part of the reference text.
 
-## Document control
+The fixed template content is not repeated here: cover, Contents, *About this guide* and *Additional Resources*.
 
-| Field | Value |
-|---|---|
-| Reference code and final title | To be confirmed `[GOV-03]` |
-| Version | 0.1 working draft, October 2026. Author: Daniel Moreira. |
-| Business process owner | To be confirmed `[GOV-02]` |
-| Status | Working draft (Part 2 roadmap item 14, Release 3A). Not a procedure: the steps are in the guides below. |
-| Content type | Reference guide (source 0 content types). |
+**Version history**
 
-## Purpose and use
+| ID | Date | Author/s | BPO | Description of change |
+|---|---|---|---|---|
+| 0.1 | October 2026 | Daniel Moreira | To be confirmed `[GOV-02]` | SME review draft created from the PG master template. Built from the Part 2 notes; not yet checked against the recording, validated or approved. `[SRC-01]` |
 
-Use this reference to check that a Customer payment journal (CPJL) entry follows the controls demonstrated in Part 2 of the AR Training D365 session. It supports these guides:
+Reference code and final title: `[GOV-03]`.
 
-| Code | Guide | Journal pattern |
+---
+
+## Part 1: What do I need to know? (AR Collections Customer Payment Journal Controls)
+
+### High-level process
+
+##### Part Description
+
+This reference lists the controls that apply when you prepare a **Customer payment journal** (CPJL) to transfer funds between customer accounts, distribute a parent-account payment across child accounts, or restore a written-off or overpayment amount. It includes only the controls demonstrated in Part 2 of the AR Training D365 session. The steps are in the three guides listed in Part 2.
+
+Posting permission, approval, checking the result after posting, and correcting or reversing a posted journal are not covered until confirmed. `[CPJ-16 to CPJ-19]`
+
+##### Initiation
+
+- You are preparing a CPJL to transfer or restore customer funds.
+
+##### Stream
+
+| Stream | Process Area | Key Roles |
 |---|---|---|
-| TF | [Transfer Funds Between Customer Accounts](../01-procedure-guides/PG-AR-Transfer-Funds-Between-Customer-Accounts-DRAFT.md) | Debit the source customer, credit the destination customer. Offset: bank-to-bank transfer clearing account. |
-| PC | [Transfer a Parent Account Payment Across Child Accounts](../01-procedure-guides/PG-AR-Transfer-Parent-Payment-Across-Child-Accounts-DRAFT.md) | Debit the parent account, credit each child account. Offset: bank-to-bank transfer clearing account. |
-| RO | [Restore a Written-Off or Overpayment Amount](../01-procedure-guides/PG-AR-Restore-Written-Off-Overpayment-DRAFT.md) | Credit the customer. Offset: Overpayment ledger. |
+| Accounts Receivable `[GOV-01]` | AR Collections | • To be confirmed |
 
-## Controls
+##### Process
 
-**Applies to:** ● = the notes state the control for this entry type, or for CPJL entries generally. ○ = the guide applies it, but the notes state it only for the other entry types (see the open item in the row). — = not stated.
+| # | Action | Who | When | Where |
+|---|---|---|---|---|
+| 1 | [AR Collections Customer Account Transfers](#part-2-how-do-i-do-it-ar-collections-customer-payment-journal-controls) | To be confirmed | When a payment is on the wrong customer account, or funds must move to a confirmed related account | D365 |
+| 2 | [AR Collections Parent Payment Distribution](#part-2-how-do-i-do-it-ar-collections-customer-payment-journal-controls) | To be confirmed | When a payment on a parent account must be distributed to confirmed child accounts | D365 |
+| 3 | [AR Collections Overpayment and Write-Off Restoration](#part-2-how-do-i-do-it-ar-collections-customer-payment-journal-controls) | To be confirmed | When an overpayment or written-off amount must be put back on a customer account | D365 |
 
-| # | Control | What to do | TF | PC | RO | Open items |
-|---|---|---|---|---|---|---|
-| 1 | **Use CPJL** | Use the Customer payment journal (CPJL) to transfer funds between customer accounts and to restore written-off or overpayment amounts. | ● | ● | ● | Navigation and journal name `CPJ-01`, `CPJ-02` |
-| 2 | **Describe the journal and every line** | Enter a clear description on the journal header and on each line, so the entry can be identified in each customer's history. Include the relevant customer code. | ● | ● | ● | Field labels `CPJ-03`; wording standard `CPJ-04` |
-| 3 | **Use the right date** | The current date is the default. A wrong-account correction may use the original customer payment date when appropriate. A prior-period date is used only when required and the period is open. | ● | ○ | ● | Field label and backdating rule `CPJ-05` |
-| 4 | **Keep the original currency** | Enter every line in the currency of the original payment or transaction. | ● | ● | ● | Field and behavior `CPJ-07` |
-| 5 | **Debit to remove, credit to return** | Funds removed from a customer account are a debit. Funds placed on a customer account are a credit. | ● | ● | ● | How debits and credits are shown `CPJ-06` |
-| 6 | **Offset to the correct ledger account** | Set **Offset account type** to **Ledger**. For a transfer between customer accounts, use the bank-to-bank transfer clearing account; do not post directly to a bank account. For a restoration, use the Overpayment ledger. | ● | ● | ● | Labels and per-line entry `CPJ-08`; clearing account `TF-03`, `TF-04`, `PC-03`; Overpayment ledger `RO-01`; account numbers `CPJ-09` |
-| 7 | **Leave unsupported fields blank** | Do not enter financial tags, an invoice number or a bank account. | ○ | ○ | ● | Labels, and whether this applies to transfers `CPJ-10` |
-| 8 | **Keep pre-populated dimensions** | Do not change the financial dimensions that fill in automatically. | ○ | ○ | ● | Exceptions, and whether this applies to transfers `CPJ-11` |
-| 9 | **Complete each line before the next** | Tab through every field in a line before you start the next line, so that fields such as the voucher fill in correctly. | ● | ● | ● | Which fields complete `CPJ-12` |
-| 10 | **Balance the journal** | Total debits must equal total credits. In a distribution, the child credits must add up to the parent debit. | ● | ● | — | Where totals are shown `CPJ-13` |
-| 11 | **Simulate before posting** | Run Simulate Posting. The notes describe a blue result as ready to post, and red results as errors to read and correct, or to get help with. | ● | ● | ● | Label and results `CPJ-14`; errors and support route `CPJ-15` |
-| 12 | **Post only when complete and validated** | Post only after every line is complete, the journal balances and Simulate Posting succeeds. | ● | ● | ● | Post control and permission `CPJ-16`; approval `CPJ-17` |
+### Roles and responsibilities
 
-The notes do not state a balance check for a restoration. The pack's restore draft enters the customer credit and its offset on the same line.
+##### Overview
 
-### Partial allocation (PC only)
+The business roles that prepare and post these journals are not yet confirmed. `[CPJ-16, CPJ-17]`
 
-Move only the confirmed amount. The rest stays on the parent account, with a note that explains its purpose. Where the note goes is open (`PC-04`).
-
-### Example amounts
-
-The Part 2 material uses example amounts: $100 (named in the handover, source 4.7), and a $10,000 receipt with $8,000 distributed and $2,000 left on the parent account. They are **examples only**. They are not thresholds, limits or approval levels (`CPJ-17`).
-
-## Not covered by the sources
-
-Do not infer these. Each is an open validation item.
-
-| Topic | Item |
+| Tasks / Business Roles | To be confirmed |
 |---|---|
-| Who may post a CPJL | `CPJ-16` |
-| Whether approval is required, and any threshold | `CPJ-17` |
-| How to verify the result after posting | `CPJ-18` |
-| How to correct or reverse a posted journal | `CPJ-19` |
-| What to do with an unposted journal that is no longer needed | `CPJ-20` |
-| The security role needed to create a CPJL | `CPJ-21` |
-| Account numbers for the Overpayment ledger and the clearing account | `CPJ-09`, `RO-01`, `TF-03` |
-| The support route for unresolved Simulate Posting errors (the notes mention "SYD" during training) | `CPJ-15` |
-| What "PG/Ava follow-up support" refers to | `SRC-03` |
+| [AR Collections Customer Account Transfers](#part-2-how-do-i-do-it-ar-collections-customer-payment-journal-controls) | R |
+| [AR Collections Parent Payment Distribution](#part-2-how-do-i-do-it-ar-collections-customer-payment-journal-controls) | R |
+| [AR Collections Overpayment and Write-Off Restoration](#part-2-how-do-i-do-it-ar-collections-customer-payment-journal-controls) | R |
 
-## Glossary
+### Key concepts
 
-| Term | Meaning in this reference |
+##### Overview
+
+These controls apply to every CPJL entry in the three guides, unless a row says otherwise. The amounts used in the training are examples only, not thresholds.
+
+##### Journal set-up
+
+| Control | What to do |
 |---|---|
-| **CPJL** | The Customer payment journal, as named in the Part 2 notes. How the code appears in D365 is open (`CPJ-02`). |
-| **Offset account** | The ledger account on the other side of a customer line. |
-| **Bank-to-bank transfer clearing account** | The ledger account used as the offset for transfers between customer accounts. |
-| **Overpayment ledger** | The main account used as the offset for restoring an amount to a customer account. |
-| **Simulate Posting** | A check run on the journal before posting, which shows whether it is ready or has errors (`CPJ-14`). |
+| **Use CPJL** | Use the Customer payment journal (CPJL) to transfer funds between customer accounts and to restore written-off or overpayment amounts. `[CPJ-01, CPJ-02]` |
+| **Describe the journal and every line** | Enter a clear description on the journal and on each line, including the relevant customer code, so the entry can be identified in each customer's history. `[CPJ-03, CPJ-04]` |
+| **Use the right date** | The current date is the default. A wrong-account correction may use the original customer payment date when appropriate. Use a prior-period date only when it is required and the period is open. `[CPJ-05]` |
+| **Keep the original currency** | Enter every line in the currency of the original payment or transaction. `[CPJ-07]` |
 
-## Related content
+##### Line coding
 
-- [Part 2 validation register](../03-validation/Part2-CPJL-and-Transfers-Validation.md)
-- [AR Collections Favorites](../01-procedure-guides/PG-AR-Configure-Collections-Favourites-DRAFT.md): adds **Customer payment journal** to favorites.
-- [AR Collections Workspace](../01-procedure-guides/PG-AR-Workspace-DRAFT.md): **Payment journals not posted** and **Open payment journals**.
-
-## Change log
-
-| Date | Change |
+| Control | What to do |
 |---|---|
-| 2026-10-23 | Reference created from the AR Training D365 Part 2 update pack. |
+| **Debit to remove, credit to return** | Funds removed from a customer account are a debit. Funds placed on a customer account are a credit. `[CPJ-06]` |
+| **Offset to the correct ledger account** | Set **Offset account type** to **Ledger**. For a transfer between customer accounts, use the bank-to-bank transfer clearing account, never a bank account. For a restoration, use the Overpayment ledger. `[CPJ-08, CPJ-09, TF-03, RO-01]` |
+| **Leave unsupported fields blank** | For a restoration, do not enter financial tags, an invoice number or a bank account. `[CPJ-10]` |
+| **Keep pre-populated dimensions** | For a restoration, do not change the financial dimensions that fill in automatically. `[CPJ-11]` |
+| **Complete each line before the next** | Tab through every field in a line before you start the next one, so that fields such as the voucher fill in correctly. `[CPJ-12]` |
+
+##### Validation and posting
+
+| Control | What to do |
+|---|---|
+| **Balance the journal** | For a transfer or distribution, total debits must equal total credits. In a distribution, the child credits must add up to the parent debit. `[CPJ-13]` |
+| **Simulate before posting** | Run Simulate Posting. A blue result means the journal is ready to post. A red result shows errors to read and correct. If you cannot resolve an error, log a request through the D365 issue form (see **Additional Resources**). `[CPJ-14, CPJ-15]` |
+| **Post only when complete and validated** | Post only after every line is complete, the journal balances and Simulate Posting succeeds. `[CPJ-16, CPJ-17]` |
+
+##### Allocations and amounts
+
+| Term | Description |
+|---|---|
+| **Partial allocation** | In a parent-account distribution, move only the confirmed amount. The rest stays on the parent account, with a note that explains its purpose. `[PC-04]` |
+| **Example amounts** | The training uses example amounts: $100, and a $10,000 receipt with $8,000 distributed and $2,000 left on the parent account. They are examples only, not thresholds, limits or approval levels. |
+
+##### Not covered by this reference `[CPJ-16 to CPJ-21]`
+
+| Topic | Status |
+|---|---|
+| **Who may post a CPJL** | To be confirmed. |
+| **Whether approval is needed** | To be confirmed. |
+| **Checking the result after posting** | To be confirmed. The AR Collections Customer Account guide covers reviewing customer transactions. |
+| **Correcting or reversing a posted journal** | To be confirmed. |
+| **An unposted journal that is no longer needed** | To be confirmed. |
+| **The security role needed** | To be confirmed. If a page or control is missing, a security setting is a possible cause, not a confirmed one. |
+
+---
+
+## Part 2: How do I do it? (AR Collections Customer Payment Journal Controls)
+
+The procedures that apply these controls are in these guides:
+
+- [**AR Collections Customer Account Transfers**](../01-procedure-guides/PG-AR-Transfer-Funds-Between-Customer-Accounts-DRAFT.md): transfer funds between customer accounts.
+- [**AR Collections Parent Payment Distribution**](../01-procedure-guides/PG-AR-Transfer-Parent-Payment-Across-Child-Accounts-DRAFT.md): distribute a parent-account payment across child accounts, including a partial allocation.
+- [**AR Collections Overpayment and Write-Off Restoration**](../01-procedure-guides/PG-AR-Restore-Written-Off-Overpayment-DRAFT.md): put a written-off or overpayment amount back on a customer account.
+
+Each guide includes the Simulate Posting and posting steps, so this reference has no procedures of its own.
+
+---
+
+## Part 3: Reports (AR Collections Customer Payment Journal Controls)
+
+##### Overview
+
+Reports for these processes are pending SME confirmation. `[GOV-04]`
+
+---
+
+## Additional Resources
+
+The standard template block, unchanged.
