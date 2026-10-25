@@ -9,7 +9,7 @@
 | Companion | The main [SME question pack](SME-Question-Pack.md) covers the first 13 guides. This supplement uses `P2-` IDs so the two never clash. |
 | Not in this pack | `CPJ-06`, `CPJ-08`, `CPJ-13` need a D365 test only. The clean-session test plan has no Customer payment journal station yet; they need a controlled test in a test environment. |
 | Status | Draft for SME review. No answers yet. |
-| Last updated | 2026-10-26 |
+| Last updated | 2026-10-25 |
 
 ## Why this matters
 
@@ -400,4 +400,4 @@ Customer Pools is not covered by the Part 1 or Part 2 notes, so no guide is draf
 
 | Date | Change |
 |---|---|
-| 2026-10-26 | Supplement created from the Part 2 and Customer Pools registers. |
+| 2026-10-25 | Supplement created from the Part 2 and Customer Pools registers. |

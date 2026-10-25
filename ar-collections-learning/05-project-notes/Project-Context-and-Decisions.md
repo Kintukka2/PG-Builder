@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Topic | D365 Accounts Receivable (AR) Collections |
-| Last updated | 2026-10-26 |
+| Last updated | 2026-10-25 |
 | Current focus | Validation of the 13 SME review drafts (clean-session test and SME question pack). Part 2 adds three SME review drafts for Customer payment journal (CPJL) transfers and restorations, and a CPJL controls reference, built from AI-generated notes that still need the recording check. |
 
 This file records the project context drawn from the source documents, inconsistencies found between them, and decisions made during development. Update it whenever a decision is made or a source is added.
@@ -231,7 +231,7 @@ Development gates (source 2): Identified → Source reviewed → Gap validated �
 | D-040 | 2026-10-23 | New folder `06-reference-guides` for reference content (a source 0 content type). The first entry is the CPJL controls reference, limited to controls the Part 2 notes support. | Handover suggested files | Adopted |
 | D-041 | 2026-10-25 | At the user's request, the three Part 2 guides are built in the PG master template as **v0.1 SME review drafts** before the recording check. Process names: **AR Collections Customer Account Transfers**, **AR Collections Parent Payment Distribution** and **AR Collections Overpayment and Write-Off Restoration**. Each has one parent topic with subprocedures (three, three and two). Every procedure starts with the full standard navigation pattern (Entity, Modules, then Navigate to **Customer payment journal** under **Credit and collections**), which adds a step to each first subprocedure. Open items become Word comments that start with their register ID. The Word file is now the editable source and the Markdown file its preview, which also keeps a step-evidence table. The recording check (`SRC-01`) still blocks testing on real accounts and publication. | User request; D-013; D-015; D-020 | Adopted |
 | D-042 | 2026-10-25 | The CPJL controls reference is built from the master template as a **Reference Guide** (title changed from "Procedure Guide"). Its controls sit in Part 1 *Key concepts* tables (Journal set-up, Line coding, Validation and posting, Allocations and amounts, Not covered by this reference). Part 2 lists the three guides instead of procedures. Files sit in `06-reference-guides`. | D-040; the template has no reference layout | Adopted |
-| D-043 | 2026-10-26 | Collect the Part 2 and Customer Pools answers through a **Part 2 supplement** to the SME question pack, with `P2-` question IDs so it never clashes with the main pack. Every open item whose method includes SME, Rec or Dec maps to exactly one question (50 items, 42 blocking). The three Test-only items (`CPJ-06`, `CPJ-08`, `CPJ-13`) wait for a controlled Customer payment journal test, which the clean-session test plan does not include yet. | D-034; D-035 | Proposed (supplement awaiting SME answers) |
+| D-043 | 2026-10-25 | Collect the Part 2 and Customer Pools answers through a **Part 2 supplement** to the SME question pack, with `P2-` question IDs so it never clashes with the main pack. Every open item whose method includes SME, Rec or Dec maps to exactly one question (50 items, 42 blocking). The three Test-only items (`CPJ-06`, `CPJ-08`, `CPJ-13`) wait for a controlled Customer payment journal test, which the clean-session test plan does not include yet. | D-034; D-035 | Proposed (supplement awaiting SME answers) |
 
 ---
 
