@@ -5,6 +5,7 @@
 | Status | **Not ready. Validation backlog only.** No PG, knowledge article or reference is drafted (decision D-035). |
 | Source | AR Training D365 Part 2 update pack (sources 4.0, 4.1, 4.2 and 4.3 in the [project notes](../05-project-notes/Project-Context-and-Decisions.md#1-source-documents)) |
 | Roadmap | Part 2 roadmap Release 4, "validation-dependent or specialist". Not in the source 2 backlog. |
+| SME questions | [Part 2 supplement](SME-Question-Pack-Part2-Supplement.md), Part E (`P2-E1` to `P2-E4`) |
 | Last updated | 2026-10-23 |
 | Items | 7 total, all open and blocking |
 
