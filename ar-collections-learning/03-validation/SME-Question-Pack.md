@@ -6,13 +6,15 @@
 | Questions | 31, grouped so each rule is answered once and applied to every guide that uses it |
 | Response sheet | [`SME-Question-Pack-Responses.xlsx`](SME-Question-Pack-Responses.xlsx): one row per answer, plus an index of every item |
 | Companion | The [clean-session test plan](Clean-Session-Test-Plan.md) covers the items that a D365 test can answer. 31 items here also have a test part; the test confirms the label, and this pack confirms the intended behavior or rule. |
-| Status | Draft for SME review. No answers yet. |
-| Last updated | 2026-10-15 |
+| Legacy PG proposals | 11 questions (46 items) show a proposed answer from the legacy O2C procedure guides, where the [legacy cross-comparison](Legacy-O2C-PG-Cross-Comparison.md) rates the evidence strong. |
+| Status | Draft for SME review. No answers yet. Legacy PG proposals added 2026-10-26. |
+| Last updated | 2026-10-26 |
 
 ## How to answer
 
 - Answer in the response sheet or directly in this document, quoting the question ID (for example **B5.1**).
 - "Don't know" or "Ask someone else" is a useful answer: name who to ask.
+- A **Legacy PG proposal** comes from the legacy O2C procedure guides, which are reference evidence only (D-044; see the [legacy cross-comparison](Legacy-O2C-PG-Cross-Comparison.md)). Confirm it, correct it, or say it no longer applies. A proposal is not an answer: an item closes only on your answer.
 - Where a document exists, attach it rather than summarising it (for example the legal entity code reference or a note standard).
 - Nothing here is final until answered. The guides show these items as review comments, and nothing is invented to fill them.
 
@@ -36,25 +38,27 @@ Shared across all 13 guides. Answer once per guide where a table is given.
 
 What events start this task? Confirm or correct the draft wording.
 
-| ID | Guide | Item | Current draft | Answer |
-|---|---|---|---|---|
-| A1.FAV | Favorites | VG-30 (B) | A new AR Collections user is setting up D365 before starting routine AR Collections work. | |
-| A1.VIEW | Personalized Views | VG-21 (B) | A page does not show the information needed for collection work, such as due dates, currencies or overdue balances. | |
-| A1.AGED | Aged Balances | VG-14 (B) | A Collections Officer needs to identify customers with outstanding balances before starting collection work. | |
-| A1.INV | Customer Invoices | VG-13 (B) | A customer or colleague needs a copy of an invoice, or the invoice must be reviewed before contacting the customer. | |
-| A1.EXP | Export to Excel | VG-12 (B) | A Collections Officer needs D365 grid data in Excel for internal analysis. | |
-| A1.NOTE | Notes and Activities | VG-14 (B) | A Collections Officer needs to review previous collection notes and contact with a customer before contacting them. | |
-| A1.LE | Legal Entities | VG-14 (B) | A Collections Officer needs to work in a legal entity other than the one that is active. | |
-| A1.WS | Workspace | VG-14 (B) | A Collections Officer starts their collection work for the day. | |
-| A1.OD | Overdue Customers | VG-14 (B) | A Collections Officer needs to identify which customers to contact about overdue balances. | |
-| A1.ACCT | Customer Account | VG-16 (B) | A Collections Officer needs to understand a customer's account before contacting them. | |
-| A1.ACT | Collection Activities | VG-16 (B) | A Collections Officer has contacted a customer, or been contacted by them, about their account. | |
-| A1.SP | Statement Preview | VG-16 (B) | A Collections Officer needs to review a customer statement, or needs a copy of it, without sending it to the customer. | |
-| A1.SD | Statement Distribution | VG-18 (B) | A customer statement must be sent to the customer. | |
+| ID | Guide | Item | Current draft | Legacy PG proposal | Answer |
+|---|---|---|---|---|---|
+| A1.FAV | Favorites | VG-30 (B) | A new AR Collections user is setting up D365 before starting routine AR Collections work. | — | |
+| A1.VIEW | Personalized Views | VG-21 (B) | A page does not show the information needed for collection work, such as due dates, currencies or overdue balances. | — | |
+| A1.AGED | Aged Balances | VG-14 (B) | A Collections Officer needs to identify customers with outstanding balances before starting collection work. | Monitoring is part of the daily collection routine. Also: a weekly debt review cycle, after statements are issued, and customer or internal queries about an account. *(230 §2; Part 1 Process)* | |
+| A1.INV | Customer Invoices | VG-13 (B) | A customer or colleague needs a copy of an invoice, or the invoice must be reviewed before contacting the customer. | — | |
+| A1.EXP | Export to Excel | VG-12 (B) | A Collections Officer needs D365 grid data in Excel for internal analysis. | — | |
+| A1.NOTE | Notes and Activities | VG-14 (B) | A Collections Officer needs to review previous collection notes and contact with a customer before contacting them. | Part of the daily routine: review previous activities and make sure earlier correspondence is recorded before making new contact. *(230 §2, §2.2)* | |
+| A1.LE | Legal Entities | VG-14 (B) | A Collections Officer needs to work in a legal entity other than the one that is active. | — | |
+| A1.WS | Workspace | VG-14 (B) | A Collections Officer starts their collection work for the day. | — | |
+| A1.OD | Overdue Customers | VG-14 (B) | A Collections Officer needs to identify which customers to contact about overdue balances. | Customer balances remain unpaid beyond agreed payment terms, after system reports or automated reminders, or at the Group Billing and Credit Manager's request. *(230 Part 1 Initiation)* | |
+| A1.ACCT | Customer Account | VG-16 (B) | A Collections Officer needs to understand a customer's account before contacting them. | — | |
+| A1.ACT | Collection Activities | VG-16 (B) | A Collections Officer has contacted a customer, or been contacted by them, about their account. | Immediately after customer contact by phone or email, or after any collection action that needs documenting. *(230 §5)* | |
+| A1.SP | Statement Preview | VG-16 (B) | A Collections Officer needs to review a customer statement, or needs a copy of it, without sending it to the customer. | — | |
+| A1.SD | Statement Distribution | VG-18 (B) | A customer statement must be sent to the customer. | Statements go out automatically on the 5th of each month. Send ad hoc only when a customer asks for a copy, or when a Collections Officer must give updated balance information. Differs from the draft: adds the monthly run and limits the guide to ad hoc sends. *(230 §1)* | |
 
 ### A2 Stream, process area and role
 
 Confirm the Stream, Process Area and business role name.
+
+**Legacy PG proposal (all 13 guides; confirm or correct).** Stream **O2C** (Order-to-Cash), process area **Collections**, role **Collections Officer**. The legacy Collections PG also names the **Group Billing and Credit Manager** in this process area, and files Onboarding and Maintenance, Invoices, Payments and Subscription Billing under the same O2C stream. This differs from the drafts' Accounts Receivable and AR Collections. *Source: 230 and 210 Part 1 Stream.*
 
 | ID | Guide | Item | Current draft | Answer |
 |---|---|---|---|---|
@@ -75,6 +79,8 @@ Confirm the Stream, Process Area and business role name.
 ### A3 Business process owner
 
 Who is the business process owner (BPO) for this guide?
+
+**Legacy PG proposal (all 13 guides; confirm or correct).** **Christoper Clarke**, the BPO on every version of the legacy Collections PG (2.0 to 2.3) and on the Subscription Billing PG. Both version histories spell the name this way: please confirm the spelling. *Source: 230 and 211 version history.*
 
 | ID | Guide | Item | Current draft | Answer |
 |---|---|---|---|---|
@@ -158,6 +164,8 @@ Who does the SME factual review, who tests the guide (not the author), and who a
 
 **Current draft or evidence.** The Favorites guide points users to the D365 issue form (from the template's Additional Resources). No environment is named.
 
+**Legacy PG proposal (Favorites VG-16; confirm or correct).** Yes. Every legacy PG sends users to the **D365 issue form** on the Atlas D365 User Support Hub ("the fastest way to get help"). The legacy wording limits it to "go-live and early adoption", so confirm the route still applies. Favorites VG-26 (environment and sign-in) is not covered. *Source: 230 and 200 Additional Resources.*
+
 **Answers:** Favorites VG-16 (B), Favorites VG-26.
 
 **Answer:**
@@ -211,6 +219,8 @@ Grouped by theme so each rule is answered once and applied to every guide that u
 **Question.** Which activity types are approved? Should "Action" always be used, or do Activity, Event, Appointment and Task have different uses?
 
 **Current draft or evidence.** The Collection Activities guide gives email and phone as examples only.
+
+**Legacy PG proposal (confirm or correct).** After **+ New**, the user picks an activity type, each with its own use: **Action** (a follow-up that has happened, such as a call or reminder), **Appointment** (a future call or meeting), **Event** (a general update or collection milestone) and **Task** (an internal reminder, such as checking status next week). The interaction goes in a separate **Type** field, for example **Phone call**. This differs from the draft, which treats email or phone as the activity type. *Source: 230 Key concepts; §5 steps 6 to 7.*
 
 **Answers:** Collection Activities VG-05 (B), Collection Activities VG-06.
 
@@ -284,6 +294,8 @@ Grouped by theme so each rule is answered once and applied to every guide that u
 
 **Current draft or evidence.** Preview guide: clear it and select Screen. Send guide: select it so the statement is delivered.
 
+**Legacy PG proposal (confirm or correct).** The label is **Use print management destination** (a toggle). Set to Yes, it applies the print management settings configured for the customer and sends the output automatically, so a preview must leave it off. Recipients are the customer's email contacts with **Purpose = Business** on the **Contact information** FastTab, synchronized with CargoWise; the **Primary** contact is the default. Only Business contacts receive statements, invoices and collection letters, and changing a contact's Purpose removes it through the integration. *Source: 230 §1 step 4, §6.2 step 11, Key concepts, §2.3; 200 §3.4.*
+
 **Answers:** Statement Preview VG-05 (B), Statement Distribution VG-05 (B), Statement Distribution VG-06 (B).
 
 **Answer:**
@@ -295,6 +307,8 @@ Grouped by theme so each rule is answered once and applied to every guide that u
 **Question.** What are the approved statement parameters? Must Only open always be selected? When must the company logo be included?
 
 **Current draft or evidence.** Both statement guides select Only open and include the company logo.
+
+**Legacy PG proposal (confirm or correct).** The legacy ad hoc statement sets **Use print management destination** = Yes, **Date interval** (for example Current year, or From and To dates), **Only open** = Yes, **Balance other than zero** = Yes and **Include company logo** = Yes. The customer goes in **Records to include** (Filter, then the account in Criteria); left blank, the statement runs for **all customers**. The statement then runs as a batch job: **Batch processing** = Yes, a **Recurrence** start time in the future (+1 hour), and **Maximum retries** = 0 on the batch task, because otherwise "the system will send multiple copies to the customer". Statements also go out automatically on the 5th of each month. The drafts have none of Date interval, Balance other than zero, the batch settings or the blank-filter warning. *Source: 230 §1 steps 4 to 19.*
 
 **Answers:** Statement Preview VG-03 (B), Statement Preview VG-04 (B), Statement Distribution VG-03 (B), Statement Distribution VG-04 (B), Statement Distribution VG-17 (B).
 
@@ -344,6 +358,8 @@ Grouped by theme so each rule is answered once and applied to every guide that u
 
 **Current draft or evidence.** Both guides ask for a meaningful file name and do not give a location.
 
+**Legacy PG proposal (Customer Invoices VG-21; confirm or correct).** A Collections Officer resends an invoice from the customer record: **Invoice > Journals > Tax invoice journal**, select the invoice, **Document > Send > Copy**, check **Print management** (delivery method and recipient), then **OK**. The first send belongs to Billing (License Management Administrator). The other B6 items are not covered. *Source: 230 §6.1; 210 §1.4.*
+
 **Answers:** Customer Invoices VG-06, Customer Invoices VG-08, Customer Invoices VG-09, Customer Invoices VG-11, Customer Invoices VG-21, Statement Preview VG-10, Statement Preview VG-11.
 
 **Answer:**
@@ -355,6 +371,8 @@ Grouped by theme so each rule is answered once and applied to every guide that u
 **Question.** Please provide the legal entity name and code reference (business name and D365 ledger code). When is switching through the URL appropriate? Which legal entities do AR Collections users need? Confirm the wording of: ledger codes differ between CargoWise and D365; work with business names; confirm the active legal entity before processing. Do any AR Collections pages show data from more than one legal entity?
 
 **Current draft or evidence.** Rules come from source 0 and source 2. No code list or URL format is in the guide.
+
+**Legacy PG proposal (Legal Entities VG-10; confirm or correct).** Every legacy procedure opens with the same control: *Check* the **Entity**: "Confirm you are signed into the correct Legal Entity (top-right)." The owner is not stated, and the other B7 items are not covered. *Source: all legacy PGs, step 1.*
 
 **Answers:** Legal Entities VG-06 (B), Legal Entities VG-07 (B), Legal Entities VG-08, Legal Entities VG-09, Legal Entities VG-10, Legal Entities VG-13, Legal Entities VG-22.
 
@@ -380,6 +398,8 @@ Grouped by theme so each rule is answered once and applied to every guide that u
 
 **Current draft or evidence.** Drafts: amounts may show in the ledger's reporting currency; revaluations are entries D365 creates when it revalues foreign currency balances; settlement history shows what a transaction was settled against.
 
+**Legacy PG proposal (Customer Account VG-03; confirm or correct).** Yes for Aged balances: the legacy monitoring task clicks the customer **Name** in Aged balances to open the customer's **Collections** page and review **Open transactions**. The legacy PGs do not use Customers overdue. This bears on decision D2.1, whose default keeps opening a customer out of the Aged Balances guide. The other B9 items are not covered. *Source: 230 §2.1 steps 5 to 6.*
+
 **Answers:** Aged Balances VG-09, Customer Account VG-08, Customer Account VG-12 (B), Customer Account VG-03.
 
 **Answer:**
@@ -403,6 +423,8 @@ Grouped by theme so each rule is answered once and applied to every guide that u
 **Question.** What do AR Collections users use Customer payment journal for? Does Aged balances give access to collection activities? Which page did the views demonstration use, and which recommended columns exist on each page? Is there a view naming convention, and should the prepared Aged balances list be a standard saved view? Are saved views personal? Should Update a Saved View stay a separate topic?
 
 **Current draft or evidence.** These points come from the baseline drafts and are not confirmed.
+
+**Legacy PG proposal (Favorites VG-18; confirm or correct).** Collections uses Customer payment journal (CPJL) to transfer open or closed payments between customer accounts when a payment is on the wrong account. Receipting also uses it for payments automated settlement can't process: cheques and failed imports, backdated adjustments, parent-child batch payments, payments across several accounts and intercompany transfers. This matches the Part 2 notes. The other B11 items are not covered. *Source: 230 §6.7; 220 §4.*
 
 **Answers:** Favorites VG-18, Favorites VG-20, Personalized Views VG-01 (B), Personalized Views VG-12, Personalized Views VG-19, Personalized Views VG-28, Aged Balances VG-22.
 
@@ -506,3 +528,4 @@ Confirm each scope boundary, or say which to change. Each is the drafts' current
 | Date | Change |
 |---|---|
 | 2026-10-15 | Pack created from the 13 validation registers. |
+| 2026-10-26 | Legacy PG proposals added to 11 questions (46 items) from the strong evidence in the legacy cross-comparison. The response sheet has a matching column. No answers recorded. |

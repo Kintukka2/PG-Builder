@@ -8,8 +8,9 @@
 | Response sheet | [`SME-Question-Pack-Part2-Responses.xlsx`](SME-Question-Pack-Part2-Responses.xlsx): one row per answer, plus an index of every item |
 | Companion | The main [SME question pack](SME-Question-Pack.md) covers the first 13 guides. This supplement uses `P2-` IDs so the two never clash. |
 | Not in this pack | `CPJ-06`, `CPJ-08`, `CPJ-13` need a D365 test only. The clean-session test plan has no Customer payment journal station yet; they need a controlled test in a test environment. |
-| Status | Draft for SME review. No answers yet. |
-| Last updated | 2026-10-25 |
+| Legacy PG proposals | 11 questions (16 items) show a proposed answer from the legacy O2C procedure guides, where the [legacy cross-comparison](Legacy-O2C-PG-Cross-Comparison.md) rates the evidence strong. |
+| Status | Draft for SME review. No answers yet. Legacy PG proposals added 2026-10-26. |
+| Last updated | 2026-10-26 |
 
 ## Why this matters
 
@@ -19,6 +20,7 @@ These guides move or reinstate customer funds. They were built from Teams AI-gen
 
 - Answer in the response sheet or directly in this document, quoting the question ID (for example **P2-B4**).
 - "Don't know" or "Ask someone else" is a useful answer: name who to ask.
+- A **Legacy PG proposal** comes from the legacy O2C procedure guides, which are reference evidence only (D-044; see the [legacy cross-comparison](Legacy-O2C-PG-Cross-Comparison.md)). Confirm it, correct it, or say it no longer applies. A proposal is not an answer: an item closes only on your answer.
 - Where a document exists (an account list, a journal procedure, an approval policy), attach it rather than summarising it.
 - Nothing here is final until answered. The guides show these items as review comments, and nothing is invented to fill them.
 
@@ -44,6 +46,8 @@ Who does this work, who may post, and what needs approval. These answers decide 
 
 **Current draft or evidence.** All three guides show the role as "To be confirmed". The notes do not say who may post. The guides do not name a security role.
 
+**Legacy PG proposal (CPJ-16; confirm or correct).** **Post** is on the Main toolbar. A journal that needs approval shows the **Approval** button and hides **Post** until it is approved; the journal is posted after approval. As partial evidence only, the legacy PGs have the Collections Officer prepare transfers between customer accounts and the Receipting Officer create manual payment journals. The security role (CPJ-21) is not covered. *Source: 230 §6.7 steps 23 to 25 and Roles; 220 §4.1 steps 9 to 11 and Roles.*
+
 **Answers:** GOV-01 (B), CPJ-16 (B), CPJ-21 (B).
 
 **Answer:**
@@ -56,6 +60,8 @@ Who does this work, who may post, and what needs approval. These answers decide 
 
 **Current draft or evidence.** To be confirmed in all four documents.
 
+**Legacy PG proposal (confirm or correct).** **Christoper Clarke**, the BPO on every version of the legacy Collections PG, which includes the transfer procedure (230 §6.7). The version history spells the name this way: please confirm the spelling. *Source: 230 version history.*
+
 **Answers:** GOV-02 (B).
 
 **Answer:**
@@ -67,6 +73,8 @@ Who does this work, who may post, and what needs approval. These answers decide 
 **Question.** Do CPJL transfers, distributions or restorations need approval (for example a workflow)? Is there a value threshold? Who authorizes putting a written-off or overpayment amount back on a customer account, and what evidence is kept?
 
 **Current draft or evidence.** The guides say approval is not confirmed. The amounts in the training ($100; $10,000, $8,000 and $2,000) are treated as examples, not thresholds.
+
+**Legacy PG proposal (CPJ-17; confirm or correct).** Yes. After Simulate posting, **Approval > Report as ready** routes the journal. A user who is not an approver asks the **Receipting team** to approve it (Options > Share > Get a link gives a link to the journal). The approver clicks **Approve**, then the journal is posted. The journal name decides whether approval applies: "The journal name controls posting behavior and approval workflow." No value threshold is stated, and who authorizes a restoration (RO-03) is not covered. *Source: 230 §6.7 steps 22 to 25; 220 §4.1 steps 5 and 9 to 11.*
 
 **Answers:** CPJ-17 (B), RO-03 (B).
 
@@ -134,6 +142,8 @@ The rules the Part 2 notes state only partly, or not at all.
 
 **Current draft or evidence.** Every line uses the currency of the original payment or transaction.
 
+**Legacy PG proposal (confirm or correct).** **Currency** fills in from the line's **Account**. Confirm it matches the currency of the original receipt. If the currencies differ, stop and escalate before going on. *Source: 230 §6.7 steps 12 and 19; 220 §4.2 step 9.*
+
 **Answers:** CPJ-07 (B).
 
 **Answer:**
@@ -157,6 +167,8 @@ The rules the Part 2 notes state only partly, or not at all.
 **Question.** What are the exact name and value of the bank-to-bank transfer clearing account, and of the Overpayment ledger (main account)? What lookup term do users search for?
 
 **Current draft or evidence.** Transfers and distributions use the bank-to-bank transfer clearing account. Restorations use the Overpayment ledger. No account values are in the guides.
+
+**Legacy PG proposal (TF-03; confirm or correct).** The legacy transfer procedure sets the source line's **Offset account type** to **Ledger** and its **Offset account** to **100949**, "to ensure no impact to the bank". It does not give the account's name. Its destination line uses Bank instead, which contradicts this (see P2-C3). The Overpayment ledger (RO-01) is not covered. *Source: 230 §6.7 steps 13 to 14 and 20 to 21.*
 
 **Answers:** TF-03 (B), RO-01 (B).
 
@@ -218,6 +230,8 @@ The rules the Part 2 notes state only partly, or not at all.
 
 **Current draft or evidence.** The guides end with a check step whose method is open, and state that correction is not yet confirmed. Unposted journals appear under Payment journals not posted in the workspace.
 
+**Legacy PG proposal (CPJ-19; confirm or correct).** To reverse a posted journal: **Accounts receivable > Payments > Customer payment journals**, open the journal batch, select the payment line, click **Voucher**, then **Reverse transactions**. Set **Use existing date for reversal** (Yes keeps the original posting date) or enter a **Reversal date**, and enter a **Reason comment**. Click **Reverse**, then **Post**. Checking the result (CPJ-18) and unposted journals (CPJ-20) are not covered. *Source: 220 §4.3.*
+
 **Answers:** CPJ-18 (B), CPJ-19 (B), CPJ-20.
 
 **Answer:**
@@ -229,6 +243,8 @@ The rules the Part 2 notes state only partly, or not at all.
 **Question.** What are the common Simulate Posting errors and their fixes? Where should users go when they cannot resolve one? Does "PG/Ava follow-up support" in the notes mean the Procedure Guides and AVA (Atlas Virtual Assistant)?
 
 **Current draft or evidence.** During training, errors were escalated to "SYD". The guides point to the D365 issue form, the template's standard route. The template already lists AVA and Procedure Guides under Additional Resources.
+
+**Legacy PG proposal (SRC-03; confirm or correct).** Yes. The legacy PGs list **AVA - Atlas Virtual Assistant**, "your AI assistant for navigating the Procedure Guides", and the **Procedure Guides** as self-service resources. Simulate Posting errors (CPJ-15) are covered only as "a journal does not post while approval is pending or a validation error remains". *Source: 230 and 200 Additional Resources; 220 Troubleshooting.*
 
 **Answers:** CPJ-15 (B), SRC-03.
 
@@ -259,6 +275,8 @@ The Part 2 notes are Teams AI-generated. These checks compare them with the reco
 **Question.** From the recording, note the exact labels of: the menu path to Customer payment journal; the control that creates a journal; how the CPJL journal name is selected; how the journal lines are opened and a new line is added; the header and line Description fields; and Simulate Posting, with how its result is shown.
 
 **Current draft or evidence.** The guides name these actions without labels (D-020). Simulate Posting results are described as blue (ready) and red (errors).
+
+**Legacy PG proposal (CPJ-01, CPJ-02, CPJ-03, CPJ-14; check against the recording).** **+New** creates the journal header. The journal name is selected in the **Name** field (**CPJL**, journal type Customer payments). The header **Description** fills in and is overwritten with the purpose. The **Journal batch number** hyperlink opens the lines, and **+New** adds a line, which has its own **Description**. Simulate Posting is **Validate > Simulate posting** on the Main toolbar; errors appear as messages to correct before validating again. The legacy menu path is **Accounts receivable > Payments > Customer payment journal(s)**, not Credit and collections as in the guides, so check both. *Source: 230 §6.7 steps 3 to 17 and 22; 220 §4.1 steps 3 to 8.*
 
 **Answers:** CPJ-01 (B), CPJ-02 (B), CPJ-03 (B), CPJ-14 (B).
 
@@ -314,6 +332,8 @@ Decisions the project team makes with the BPO.
 
 **Current draft or evidence.** No account numbers are shown.
 
+**Legacy PG proposal (confirm or correct).** The legacy Collections PG prints the account number (**100949**) in its transfer steps, so the legacy precedent is to show account numbers. *Source: 230 §6.7 step 14.*
+
 **Answers:** CPJ-09 (B).
 
 **Answer:**
@@ -344,6 +364,8 @@ Customer Pools is not covered by the Part 1 or Part 2 notes, so no guide is draf
 
 **Current draft or evidence.** No source describes Customer Pools.
 
+**Legacy PG proposal (confirm or correct).** Yes. The legacy Collections PG v2.3 (October 2026) has a Customer Pools topic. Pools group customer accounts by defined criteria (customer group, legal entity or financial dimensions) and are assigned to Collections agents, to establish customer ownership and support follow-up and workload allocation. Managers (the Group Billing and Credit Manager) create and maintain the pools and the agent assignments. *Source: 230 §3 and Roles.*
+
 **Answers:** CP-01 (B), CP-02 (B), CP-03 (B).
 
 **Answer:**
@@ -355,6 +377,8 @@ Customer Pools is not covered by the Part 1 or Part 2 notes, so no guide is draf
 **Question.** If they are used: how are customers assigned to a pool, and how do pools affect which customers a user works each day?
 
 **Current draft or evidence.** Not described.
+
+**Legacy PG proposal (CP-04; confirm or correct).** A pool's criteria decide which customers it holds: **Credit and collections > Setup > Customer pools**, **New**, enter the **Pool ID** and **Pool description**, set **Pool type** = Collections, then **Select pool criteria** (Advanced query, **Range** tab: Table, Field, Criteria), **Preview pool customers** and **Save**. Pools reach a user through **Credit and collections > Setup > Collections agents**: add the Worker, add each **Pool ID** and set the **Default pool**. How pools change the daily work list (CP-06) is stated only as "ownership and workload allocation". *Source: 230 §3.1 and §3.2.*
 
 **Answers:** CP-04 (B), CP-06 (B).
 
@@ -401,3 +425,4 @@ Customer Pools is not covered by the Part 1 or Part 2 notes, so no guide is draf
 | Date | Change |
 |---|---|
 | 2026-10-25 | Supplement created from the Part 2 and Customer Pools registers. |
+| 2026-10-26 | Legacy PG proposals added to 11 questions (16 items) from the strong evidence in the legacy cross-comparison. The response sheet has a matching column. No answers recorded. |

@@ -370,7 +370,7 @@ For the legacy review. None of these changes the analysis above.
 ## 9. Recommended next steps
 
 1. **Raise the two statement controls now** (section 6, rows 1 and 2) with SME questions B5.1 and B5.2, and add them to the S13 gate in the [clean-session test plan](Clean-Session-Test-Plan.md).
-2. **Use the strong legacy answers as proposed answers in the SME packs.** For A1, A2, A3, A7, B3.1, B5.1, B5.2, B6, B7, B9, B11, P2-A1, P2-A2, P2-A3, P2-B2, P2-B4, P2-B9, P2-B10, P2-C2, P2-D2, P2-E1, P2-E2, the SME then confirms or corrects instead of writing from scratch.
+2. **Use the strong legacy answers as proposed answers in the SME packs.** For A1, A2, A3, A7, B3.1, B5.1, B5.2, B6, B7, B9, B11, P2-A1, P2-A2, P2-A3, P2-B2, P2-B4, P2-B9, P2-B10, P2-C2, P2-D2, P2-E1, P2-E2, the SME then confirms or corrects instead of writing from scratch. **Done 2026-10-26:** both packs and their response sheets show these as **Legacy PG proposal** entries (22 questions, 62 items). The other 30 strong items are test-only and wait for the clean-session test (step 3).
 3. **Give the test the legacy labels as expected values.** Where they differ from the drafts (section 5: Customer payment journal path, activity controls, statement page, open and closed transactions, invoice copy route), record which one D365 shows.
 4. **Reopen Customer Pools** (D-035) with Collections PG §3 as evidence. If P2-E1 is yes, Customer Pools meets most of the definition of ready.
 5. **Reopen the deferred aging-indicator items** (Aged Balances VG-10, Overdue Customers VG-12) with the legacy legend, and add a check of the icons to test station S6.
@@ -382,3 +382,4 @@ For the legacy review. None of these changes the analysis above.
 | Date | Change |
 |---|---|
 | 2026-10-25 | Analysis created from the five legacy O2C PGs and the 15 validation registers. |
+| 2026-10-26 | Step 2 done: strong legacy answers added to both SME packs and response sheets as proposals. |
