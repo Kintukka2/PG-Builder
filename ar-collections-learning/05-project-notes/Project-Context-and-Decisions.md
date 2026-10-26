@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Topic | D365 Accounts Receivable (AR) Collections |
-| Last updated | 2026-10-25 |
+| Last updated | 2026-10-26 |
 | Current focus | Validation of the 13 SME review drafts (clean-session test and SME question pack). Part 2 adds three SME review drafts for Customer payment journal (CPJL) transfers and restorations, and a CPJL controls reference, built from AI-generated notes that still need the recording check. |
 
 This file records the project context drawn from the source documents, inconsistencies found between them, and decisions made during development. Update it whenever a decision is made or a source is added.
@@ -285,4 +285,4 @@ These elements came from the Favourites PG. They are candidates for the standard
 11. **Part 2 SME answers** through the [Part 2 supplement](../03-validation/SME-Question-Pack-Part2-Supplement.md) and its [response sheet](../03-validation/SME-Question-Pack-Part2-Responses.xlsx): 27 questions for 50 items (42 blocking). Answer **P2-C1** (recording check) first, then **P2-A1** and **P2-A3** (who may post, and approval). Three Test-only items (`CPJ-06`, `CPJ-08`, `CPJ-13`) need a controlled CPJL test in a test environment, not yet in the test plan.
 12. **Customer Pools evidence:** supplement question **P2-E1**. A "no" closes most of Part E ([register](../03-validation/Customer-Pools-Validation.md)).
 13. Part 2 gives evidence for Favorites `VG-18` (what Customer payment journal is used for). Close it once the recording check confirms it.
-14. **Legacy O2C PG evidence** ([cross-comparison](../03-validation/Legacy-O2C-PG-Cross-Comparison.md)): 184 of the 364 unresolved items have legacy evidence, 92 of it strong. Raise the statement duplicate-send and blank-recipient controls with the SME before test station S13 (I-19). Put the strong answers to the SME as proposed answers. Reopen Customer Pools (I-16, P2-E1) and the aging indicator items in step 7, for which the legacy PG gives the full legend.
+14. **Legacy O2C PG evidence** ([cross-comparison](../03-validation/Legacy-O2C-PG-Cross-Comparison.md)): 184 of the 364 unresolved items have legacy evidence, 92 of it strong. Raise the statement duplicate-send and blank-recipient controls with the SME before test station S13 (I-19). The strong answers are now in both SME packs and response sheets as **Legacy PG proposals** (22 questions, 62 items) for the SME to confirm or correct. Reopen Customer Pools (I-16, P2-E1) and the aging indicator items in step 7, for which the legacy PG gives the full legend.

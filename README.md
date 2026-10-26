@@ -82,8 +82,8 @@ Shared AR resources:
 - [Project context and decisions](ar-collections-learning/05-project-notes/Project-Context-and-Decisions.md)
 - [PG content QA checklist](ar-collections-learning/04-quality-assurance/PG-Content-QA-Checklist.md)
 - [Clean-session D365 test plan](ar-collections-learning/03-validation/Clean-Session-Test-Plan.md) and its [results log](ar-collections-learning/03-validation/Clean-Session-Test-Log.xlsx): one session that tests 148 validation items across all 13 guides
-- [SME question pack](ar-collections-learning/03-validation/SME-Question-Pack.md) and its [response sheet](ar-collections-learning/03-validation/SME-Question-Pack-Responses.xlsx): 31 questions that answer the 191 open items needing an SME, a recording or a project decision
-- [SME question pack, Part 2 supplement](ar-collections-learning/03-validation/SME-Question-Pack-Part2-Supplement.md) and its [response sheet](ar-collections-learning/03-validation/SME-Question-Pack-Part2-Responses.xlsx): 27 questions that answer the 50 open Part 2 and Customer Pools items (42 blocking)
+- [SME question pack](ar-collections-learning/03-validation/SME-Question-Pack.md) and its [response sheet](ar-collections-learning/03-validation/SME-Question-Pack-Responses.xlsx): 31 questions that answer the 191 open items needing an SME, a recording or a project decision. 11 questions (46 items) carry a legacy PG proposal to confirm
+- [SME question pack, Part 2 supplement](ar-collections-learning/03-validation/SME-Question-Pack-Part2-Supplement.md) and its [response sheet](ar-collections-learning/03-validation/SME-Question-Pack-Part2-Responses.xlsx): 27 questions that answer the 50 open Part 2 and Customer Pools items (42 blocking). 11 questions (16 items) carry a legacy PG proposal to confirm
 - [Legacy O2C PG cross-comparison](ar-collections-learning/03-validation/Legacy-O2C-PG-Cross-Comparison.md): what the five legacy O2C procedure guides cover compared with the drafts, and which open items they help answer (184 of 364, 92 strong). Reference evidence only (D-044).
 
 ## Development gates
