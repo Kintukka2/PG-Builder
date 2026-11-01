@@ -4,7 +4,7 @@
 |---|---|
 | Rule | One task per topic, inside a process-level guide (D-045). The 17 AR Collections drafts are **topic drafts**: each one merges into a destination guide. |
 | Guide codes | From the O2C PG Numbering Standard v1.3 (T3). This plan proposes two new codes: **221** and **260** (D-046). |
-| Status | Proposed. **260 and 221 are built as v0.1 working drafts** (D-048). Before either circulates beyond the project team, the register owner records both codes in `O2C_PG_Numbering_Register.json` and its companion, and the BPO confirms the scope of 221 and the split from 230. 240 Direct Debit is required but has no document yet (D-049). |
+| Status | Proposed. **260 and 221 are built as v0.1 working drafts** (D-048). Both are shared with the SME for review only (D-048). Before either circulates further, the register owner records both codes in `O2C_PG_Numbering_Register.json` and its companion, and the BPO confirms the scope of 221 and the split from 230. 240 Direct Debit is required but has no document yet (D-049). |
 | Last updated | 2026-11-01 |
 
 ---

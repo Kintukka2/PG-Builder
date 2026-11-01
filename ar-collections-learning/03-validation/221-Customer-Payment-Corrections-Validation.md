@@ -4,7 +4,7 @@
 |---|---|
 | Guide (editable source) | [`221-Customer Payment Corrections PG v0.1.docx`](../01-procedure-guides/221-Customer%20Payment%20Corrections%20PG%20v0.1.docx) |
 | Markdown preview | [`PG-221-Customer-Payment-Corrections-DRAFT.md`](../01-procedure-guides/PG-221-Customer-Payment-Corrections-DRAFT.md) |
-| Status | Working draft v0.1. Code 221 is proposed (D-046): not yet recorded in the numbering register or confirmed by the BPO. Do not circulate beyond the project team until it is (D-048). |
+| Status | Working draft v0.1. Code 221 is proposed (D-046): not yet recorded in the numbering register or confirmed by the BPO. Shared with the SME for review only (SME review pack v2); do not circulate further until it is (D-048). |
 | Last updated | 2026-11-01 |
 | Items | 20 guide-level items (`G221`), all open: 19 blocking, 1 non-blocking. 106 carried review comments from the topic drafts. |
 
@@ -107,3 +107,4 @@ Part 2 register items that are not anchored as a review comment in this guide. T
 | Date | Change |
 |---|---|
 | 2026-11-01 | Register created with the v0.1 working draft, assembled from the topic drafts (D-045, D-046, D-048). |
+| 2026-11-01 | Guide added to the SME review pack (v2) for review only (D-048 amendment). |
