@@ -115,7 +115,7 @@ Changes made to follow `PG_Template_Authoring_Guide_v1.docx`:
 | VG-19 | Wording for **Open customer invoices**, checked against the recording. | Key concepts (pages table) | 6 | N | Rec | Open |
 | VG-20 | Baseline claim that **Aged balances** gives access to collection activities. | Not in guide (removed) | — | N | Rec, SME | Open |
 | VG-21 | Label distinction between the **Credit and collections** module and the **Customer Credit and Collections** workspace. | Steps 3–6 | — | N | Test | Open |
-| VG-22 | Guide code and final title. Source 0 proposes `PG-AR-010`. The authoring guide requires an assigned code (`NNN-Guide Title PG vX.docx`). | Cover; file name | 0 | B | Dec | Open |
+| VG-22 | Destination guide and topic (D-045). Proposed: 260 O2C Getting Started, topic 2 Add Pages to Favorites. The four AR Collections pages go in 230 Collections Part 1 (Set up D365 for collections work). | Cover; file name; destination guide | 0 | B | Dec | Open |
 | VG-23 | Whether the legal entity affects Favorites. If it does not, Step 1 can be removed. | Step 1 | 9 | N | Test | Open |
 | VG-24 | Screenshots captured in a clean session, if screenshots are used (D-017). | — | — | N | Test | Open |
 | VG-25 | SME factual review, designated reviewer, and process-owner approval. | Whole guide | — | B | SME | Open |

@@ -6,7 +6,8 @@ It combines:
 
 - the final checklist in [`PG_Template_Authoring_Guide_v1.docx`](../../templates/PG_Template_Authoring_Guide_v1.docx), which governs format and authoring rules;
 - the publication gate in source 1 §4 and the definition of ready for publication in source 2;
-- this project's evidence rules.
+- this project's evidence rules;
+- the O2C PG numbering standard (T3) and the [O2C PG suite plan](../05-project-notes/O2C-PG-Suite-Plan.md), which govern guide codes and where each topic belongs (D-045, D-046).
 
 Where they differ, the authoring guide governs format and this project's evidence rules govern content.
 
@@ -21,7 +22,7 @@ Mark each item: ✅ met · ❌ not met · N/A. For each ❌, record a `VG-xx` ID
 - [ ] `[Process Name]` is replaced everywhere, including the **Title** property (File > Info > Properties). The footer shows the title.
 - [ ] Unused template examples (standalone, parent with subtopics, off-system, report blocks) are removed.
 - [ ] Every placeholder and author instruction is replaced or removed. Search for `[`, "Process Name", "Role A" and "Fill the empty cell".
-- [ ] The file name follows `NNN-Guide Title PG vX.docx`, using the assigned guide code and the actual revision.
+- [ ] The file name follows `NNN-Guide Title PG vX.docx`, using the code from the O2C numbering standard (recorded in the register before the draft circulates) and the actual revision. A topic draft keeps its `TBC-` working name until it merges.
 
 ## B. Part 1
 
@@ -69,6 +70,15 @@ Mark each item: ✅ met · ❌ not met · N/A. For each ❌, record a `VG-xx` ID
 - [ ] Before release: blocking VG items are closed, comments and tracked changes are resolved, and draft notes are removed.
 - [ ] Someone other than the author has tested the procedure. The SME, the designated reviewer and the process owner have approved it, with the evidence recorded.
 - [ ] Handoff: the editable Word file, its review or approval status, the question log (validation register) and a review PDF if required.
+
+## H. Topic placement (D-045)
+
+- [ ] Each task is one topic (a major topic or a subtopic) in the destination guide the suite plan gives it, not a standalone guide.
+- [ ] No task is repeated in another guide. Related guides link to the topic instead.
+- [ ] General D365 steps (legal entity, favorites, views, export) link to 260 O2C Getting Started instead of being repeated. Role-specific setup stays in the role's guide.
+- [ ] A merged topic keeps its question-log IDs, with the draft name (for example *Aged Balances VG-03*).
+- [ ] After a merge, the Process table, roles matrix, Key concepts and Part 3 cover the new topic, and topic numbering and links are rebuilt and tested.
+- [ ] A split or merger of existing topics has its predecessor mapping recorded, as the numbering standard requires.
 
 **Review notes**
 

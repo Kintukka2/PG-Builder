@@ -65,7 +65,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-13 | Initiation events for this task. | Part 1 Initiation; topic Initiation; Process table *When* | 2 | B | SME | Open |
 | VG-14 | Stream, process area and business role name. Shared with the other AR Collections guides. | Stream table; Process table; Roles matrix | 3 | B | SME | Open |
 | VG-15 | Business process owner (BPO). | Version history | 1 | B | SME | Open |
-| VG-16 | Guide code and final title. Source 0 proposes `PG-AR-016`. | Cover; file name | 0 | B | Dec | Open |
+| VG-16 | Destination guide and topic (D-045). Proposed: 230 Collections, topic 7.1 Retrieve or Resend a Customer Invoice, merged with legacy topic 6.1. | Cover; file name; destination guide | 0 | B | Dec | Open |
 | VG-17 | Whether any reports or inquiries apply. If none, "No applicable reports". | Part 3 | 17 | B | SME | Open |
 | VG-18 | The security role needed to open original documents and print preview, and a test with it. | PROCESS START (1.1) | — | B | Test, SME | Open |
 | VG-19 | SME factual review, a test by someone other than the author, and approval. | Whole guide | — | B | SME | Open |
@@ -89,7 +89,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | Exact system labels | Open (`VG-01` to `VG-05`, `VG-07`) |
 | Business rules separate from procedure | Met (PDF rule in Key concepts) |
 | Reports | Open (`VG-17`) |
-| Roles, BPO, guide code | Open (`VG-14`, `VG-15`, `VG-16`) |
+| Roles, BPO, destination topic | Open (`VG-14`, `VG-15`, `VG-16`) |
 | Peer test, SME review, approval | Open (`VG-18`, `VG-19`) |
 | Review comments resolved before release | Open (18 Word comments) |
 

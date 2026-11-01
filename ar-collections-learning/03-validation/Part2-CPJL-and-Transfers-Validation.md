@@ -83,7 +83,7 @@ Customer Pools has its own register: [Customer-Pools-Validation.md](Customer-Poo
 |---|---|---|---|---|---|
 | GOV-01 | Stream, process area and the business role that prepares these journals. Confirm whether Collections Officers do this work or another team does. | Part 1 Stream, Process and Roles (all) | B | SME | Open |
 | GOV-02 | Business process owner (BPO) for each guide. | Document control (all) | B | SME | Open |
-| GOV-03 | Guide codes and final titles (D-006). | Document control (all) | B | Dec | Open |
+| GOV-03 | Destination guide and topic for the three guides and the reference (D-045). Proposed: 221 Customer Payment Corrections, topics 3, 4 and 5, and its Part 1 Key concepts (D-046). | Document control (all) | B | Dec | Open |
 | GOV-04 | Whether any reports or inquiries apply. If none, "No applicable reports". | Part 3 (all) | B | SME | Open |
 | GOV-05 | SME factual review, a test by someone other than the author, and approval. | Whole guide (all) | B | SME | Open |
 
@@ -182,7 +182,7 @@ The gaps the three source drafts list are also covered: verification after posti
 | Business rules (dates, currency, blank fields, dimensions) | Open (`CPJ-05`, `CPJ-07`, `CPJ-10`, `CPJ-11`) | Open (same) | Open (same) |
 | Business checks before processing | Open (`TF-02`, `TF-05`) | Open (`PC-01`, `PC-02`) | Open (`RO-02`, `RO-03`) |
 | Posting permission, approval, verification, reversal | Open (`CPJ-16` to `CPJ-19`) | Open (same) | Open (same) |
-| Roles, BPO, guide code, reports | Open (`GOV-01` to `GOV-04`) | Open (same) | Open (same) |
+| Roles, BPO, destination topic, reports | Open (`GOV-01` to `GOV-04`) | Open (same) | Open (same) |
 | SME review, peer test, approval | Open (`GOV-05`) | Open (`GOV-05`) | Open (`GOV-05`) |
 
 ---

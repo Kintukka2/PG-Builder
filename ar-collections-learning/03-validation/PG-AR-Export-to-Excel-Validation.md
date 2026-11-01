@@ -63,7 +63,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-12 | Initiation events for this task. | Part 1 Initiation; topic Initiation; Process table *When* | 2 | B | SME | Open |
 | VG-13 | Stream, process area and business role name. Shared with the other AR Collections guides. | Stream table; Process table; Roles matrix | 3 | B | SME | Open |
 | VG-14 | Business process owner (BPO). | Version history | 1 | B | SME | Open |
-| VG-15 | Guide code and final title. Source 0 proposes `PG-AR-019 Export D365 Customer Data to Excel`; source 2 uses "Export all rows from a D365 grid". | Cover; file name | 0 | B | Dec | Open |
+| VG-15 | Destination guide and topic (D-045). Proposed: 260 O2C Getting Started, topic 5 Export All Rows from a Grid. | Cover; file name; destination guide | 0 | B | Dec | Open |
 | VG-16 | Whether any reports or inquiries apply. If none, "No applicable reports". | Part 3 | 14 | B | SME | Open |
 | VG-17 | Whether exporting needs a specific security role or permission, and a test with it. If the option is missing for a user, security access is a possible cause, not a confirmed one. | PROCESS START | — | B | Test, SME | Open |
 | VG-18 | SME factual review, a test by someone other than the author, and approval. | Whole guide | — | B | SME | Open |
@@ -85,7 +85,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | Exact system labels | Open (`VG-01` to `VG-03`) |
 | Business rules separate from procedure | Met (internal-analysis and data handling rules in Key concepts) |
 | Reports | Open (`VG-16`) |
-| Roles, BPO, guide code | Open (`VG-13`, `VG-14`, `VG-15`) |
+| Roles, BPO, destination topic | Open (`VG-13`, `VG-14`, `VG-15`) |
 | Peer test, SME review, approval | Open (`VG-17`, `VG-18`) |
 | Review comments resolved before release | Open (15 Word comments) |
 

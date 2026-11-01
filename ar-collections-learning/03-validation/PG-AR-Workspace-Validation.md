@@ -63,7 +63,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-14 | Initiation events for this task. | Part 1 Initiation; topic Initiations; Process table *When* | 2, 11 | B | SME | Open |
 | VG-15 | Stream, process area and business role name. Shared with the other AR Collections guides. | Stream table; Process table; Roles matrix | 3 | B | SME | Open |
 | VG-16 | Business process owner (BPO). | Version history | 1 | B | SME | Open |
-| VG-17 | Guide code and final title. Source 0 proposes `PG-AR-001 Navigate and Interpret the Customer Credit & Collections Workspace`. | Cover; file name | 0 | B | Dec | Open |
+| VG-17 | Destination guide and topic (D-045). Proposed: 230 Collections, topic 1 Start the Collections Day. | Cover; file name; destination guide | 0 | B | Dec | Open |
 | VG-18 | Whether any reports or inquiries apply. If none, "No applicable reports". | Part 3 | 16 | B | SME | Open |
 | VG-19 | The security role needed for the workspace, and a test with it. | PROCESS START (Topic 1) | — | B | Test, SME | Open |
 | VG-20 | SME factual review, a test by someone other than the author, and approval. | Whole guide | — | B | SME | Open |
@@ -85,7 +85,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | Exact system labels | Open (`VG-01`, `VG-02`, `VG-04` to `VG-07`) |
 | Business rules separate from procedure | Not applicable: no business rules in scope |
 | Reports | Open (`VG-18`) |
-| Roles, BPO, guide code | Open (`VG-15`, `VG-16`, `VG-17`) |
+| Roles, BPO, destination topic | Open (`VG-15`, `VG-16`, `VG-17`) |
 | Peer test, SME review, approval | Open (`VG-19`, `VG-20`) |
 | Review comments resolved before release | Open (17 Word comments) |
 

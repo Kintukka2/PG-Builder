@@ -66,7 +66,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-16 | Initiation events for this task. | Part 1 Initiation; topic Initiation; Process table *When* | 2 | B | SME | Open |
 | VG-17 | Stream, process area and business role name. Shared with the other AR Collections guides. | Stream table; Process table; Roles matrix | 3 | B | SME | Open |
 | VG-18 | Business process owner (BPO). | Version history | 1 | B | SME | Open |
-| VG-19 | Guide code and final title, and whether preview and send are separate guides (source 0 proposes one: `PG-AR-018`). | Cover; file name | 0 | B | Dec | Open |
+| VG-19 | Destination guide and topic (D-045). Proposed: 230 Collections, topic 6.1 Preview and Download a Customer Statement. Preview and send stay separate subtopics of topic 6. | Cover; file name; destination guide | 0 | B | Dec | Open |
 | VG-20 | Whether any reports or inquiries apply. If none, "No applicable reports". | Part 3 | 21 | B | SME | Open |
 | VG-21 | The security role needed to generate statements, and a test with it. | PROCESS START (1.1) | — | B | Test, SME | Open |
 | VG-22 | SME factual review, a test by someone other than the author, and approval. | Whole guide | — | B | SME | Open |
@@ -90,7 +90,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | Business rules separate from procedure | Met (destination check and PDF rule in Key concepts) |
 | Customer-facing risk controlled | Met in the text: Print management cleared, Screen selected; pending `VG-05` |
 | Reports | Open (`VG-20`) |
-| Roles, BPO, guide code | Open (`VG-17`, `VG-18`, `VG-19`) |
+| Roles, BPO, destination topic | Open (`VG-17`, `VG-18`, `VG-19`) |
 | Peer test, SME review, approval | Open (`VG-21`, `VG-22`) |
 | Review comments resolved before release | Open (22 Word comments) |
 

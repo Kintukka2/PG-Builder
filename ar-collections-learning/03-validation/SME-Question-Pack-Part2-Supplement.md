@@ -10,7 +10,7 @@
 | Not in this pack | `CPJ-06`, `CPJ-08`, `CPJ-13` need a D365 test only. The clean-session test plan has no Customer payment journal station yet; they need a controlled test in a test environment. |
 | Legacy PG proposals | 11 questions (16 items) show a proposed answer from the legacy O2C procedure guides, where the [legacy cross-comparison](Legacy-O2C-PG-Cross-Comparison.md) rates the evidence strong. |
 | Status | Draft for SME review. No answers yet. Legacy PG proposals added 2026-10-26. |
-| Last updated | 2026-10-26 |
+| Last updated | 2026-11-01 |
 
 ## Why this matters
 
@@ -60,7 +60,7 @@ Who does this work, who may post, and what needs approval. These answers decide 
 
 **Current draft or evidence.** To be confirmed in all four documents.
 
-**Legacy PG proposal (confirm or correct).** **Christoper Clarke**, the BPO on every version of the legacy Collections PG, which includes the transfer procedure (230 §6.7). The version history spells the name this way: please confirm the spelling. *Source: 230 version history.*
+**Legacy PG proposal (confirm or correct).** **Christopher Clarke**, the BPO on every version of the legacy Collections PG, which includes the transfer procedure (230 §6.7). The O2C PG numbering standard lists Christopher Clarke as BPO for all six O2C guides, including 220 and 230; the legacy version history spells the name "Christoper". *Source: 230 version history; O2C PG Numbering Standard v1.3.*
 
 **Answers:** GOV-02 (B).
 
@@ -314,11 +314,11 @@ The Part 2 notes are Teams AI-generated. These checks compare them with the reco
 
 Decisions the project team makes with the BPO.
 
-### P2-D1 Guide codes and titles
+### P2-D1 Destination guide and topic
 
-**Question.** Assign codes and confirm final titles for the three guides and the reference (D-006).
+**Question.** Confirm the destination guide and topic for the three guides and the reference, or change them (D-045, D-046).
 
-**Current draft or evidence.** Working process names: AR Collections Customer Account Transfers, Parent Payment Distribution, Overpayment and Write-Off Restoration, and Customer Payment Journal Controls.
+**Current draft or evidence.** Proposed: a new guide, **221 Customer Payment Corrections**, in the 220–229 Customer Payments family, which the numbering standard reserves for settlement and payment corrections. Transfers becomes topic 3 (replacing legacy 230 §6.7), Parent Payment Distribution topic 4 and Restoration topic 5, and the CPJL controls reference becomes Part 1 Key concepts. 221 also takes legacy 230 §6.5, §6.6 and §6.8. See the [O2C PG suite plan](../05-project-notes/O2C-PG-Suite-Plan.md).
 
 **Answers:** GOV-03 (B).
 
@@ -426,3 +426,4 @@ Customer Pools is not covered by the Part 1 or Part 2 notes, so no guide is draf
 |---|---|
 | 2026-10-25 | Supplement created from the Part 2 and Customer Pools registers. |
 | 2026-10-26 | Legacy PG proposals added to 11 questions (16 items) from the strong evidence in the legacy cross-comparison. The response sheet has a matching column. No answers recorded. |
+| 2026-11-01 | P2-D1 now asks the SME to confirm the destination (D-045, D-046), not guide codes. The P2-A2 proposal uses the BPO spelling from the O2C PG numbering standard. |
