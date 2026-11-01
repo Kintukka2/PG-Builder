@@ -16,7 +16,7 @@ The fixed template content is not repeated here: cover, Contents, *About this gu
 |---|---|---|---|---|
 | 0.1 | October 2026 | Daniel Moreira | To be confirmed `[GOV-02]` | SME review draft created from the PG master template. Built from the Part 2 notes; not yet checked against the recording, validated or approved. `[SRC-01]` |
 
-Reference code and final title: `[GOV-03]`.
+Destination guide and topic (D-045, 221 Customer Payment Corrections): `[GOV-03]`.
 
 ---
 

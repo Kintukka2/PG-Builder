@@ -8,7 +8,7 @@
 | Companion | The [clean-session test plan](Clean-Session-Test-Plan.md) covers the items that a D365 test can answer. 31 items here also have a test part; the test confirms the label, and this pack confirms the intended behavior or rule. |
 | Legacy PG proposals | 11 questions (46 items) show a proposed answer from the legacy O2C procedure guides, where the [legacy cross-comparison](Legacy-O2C-PG-Cross-Comparison.md) rates the evidence strong. |
 | Status | Draft for SME review. No answers yet. Legacy PG proposals added 2026-10-26. |
-| Last updated | 2026-10-26 |
+| Last updated | 2026-11-01 |
 
 ## How to answer
 
@@ -26,7 +26,7 @@
 | 2 | **B5.1 to B5.4** | Statement controls. They gate test station S13 and decide whether the statement guides are safe to use. |
 | 3 | **B7** | The legal entity code reference, which every guide's *Check the Entity* step depends on. |
 | 4 | **B3.1 to B3.3** and **B4.1 to B4.3** | The collection-note standard and the overdue-account rules. |
-| 5 | **D1** and **D2** | Guide codes and scope boundaries. The project team decides these with the BPO. |
+| 5 | **D1** and **D2** | Destination topics and scope boundaries. The project team confirms these with the BPO. |
 
 ---
 
@@ -80,7 +80,7 @@ Confirm the Stream, Process Area and business role name.
 
 Who is the business process owner (BPO) for this guide?
 
-**Legacy PG proposal (all 13 guides; confirm or correct).** **Christoper Clarke**, the BPO on every version of the legacy Collections PG (2.0 to 2.3) and on the Subscription Billing PG. Both version histories spell the name this way: please confirm the spelling. *Source: 230 and 211 version history.*
+**Legacy PG proposal (all 13 guides; confirm or correct).** **Christopher Clarke**, the BPO on every version of the legacy Collections PG (2.0 to 2.3) and on the Subscription Billing PG. The O2C PG numbering standard lists Christopher Clarke as BPO for all six O2C guides; the legacy version histories spell the name "Christoper". *Source: 230 and 211 version history; O2C PG Numbering Standard v1.3.*
 
 | ID | Guide | Item | Current draft | Answer |
 |---|---|---|---|---|
@@ -475,25 +475,25 @@ Provide the transcript excerpt and timestamps for this guide's demonstration in 
 
 Each decision has a proposed default: the drafts' current choice. Confirm or change it.
 
-### D1 Guide code and final title
+### D1 Destination guide and topic
 
-Assign the guide code and confirm the final title (decision D-006).
+Under decision D-045, each task is a topic inside a process-level guide, so these drafts do not get guide codes of their own. Confirm each proposed destination and topic title, or change it. New guide codes follow the O2C PG numbering standard (D-046); see the [O2C PG suite plan](../05-project-notes/O2C-PG-Suite-Plan.md).
 
-| ID | Guide | Item | Source or current text | Answer |
+| ID | Guide | Item | Proposed destination | Answer |
 |---|---|---|---|---|
-| D1.FAV | Favorites | VG-22 (B) | Guide code and final title. Source 0 proposes PG-AR-010. The authoring guide requires an assigned code (NNN-Guide Title PG vX.docx). | |
-| D1.VIEW | Personalized Views | VG-24 (B) | Guide code and final title. Source 0 proposes PG-AR-004. | |
-| D1.AGED | Aged Balances | VG-17 (B) | Guide code and final title. Source 0 proposes PG-AR-007. | |
-| D1.INV | Customer Invoices | VG-16 (B) | Guide code and final title. Source 0 proposes PG-AR-016. | |
-| D1.EXP | Export to Excel | VG-15 (B) | Guide code and final title. Source 0 proposes PG-AR-019 Export D365 Customer Data to Excel; source 2 uses "Export all rows from a D365 grid". | |
-| D1.NOTE | Notes and Activities | VG-17 (B) | Guide code and final title, and whether notes and activities stay in one guide. Source 0 proposes PG-AR-008 and PG-AR-022. | |
-| D1.LE | Legal Entities | VG-17 (B) | Guide code and final title. Source 0 gives no code; source 2 uses "Switch to the required legal entity in D365". | |
-| D1.WS | Workspace | VG-17 (B) | Guide code and final title. Source 0 proposes PG-AR-001 Navigate and Interpret the Customer Credit & Collections Workspace. | |
-| D1.OD | Overdue Customers | VG-17 (B) | Guide code and final title. Source 0 proposes PG-AR-002 Review and Manage Overdue Customers. | |
-| D1.ACCT | Customer Account | VG-19 (B) | Guide code and final title, and whether source 0's three suggested guides (PG-AR-005, -015, -017) stay combined here. | |
-| D1.ACT | Collection Activities | VG-19 (B) | Guide code and final title. Source 0 proposes PG-AR-003 Record Collection Activities Against a Customer. | |
-| D1.SP | Statement Preview | VG-19 (B) | Guide code and final title, and whether preview and send are separate guides (source 0 proposes one: PG-AR-018). | |
-| D1.SD | Statement Distribution | VG-21 (B) | Guide code and final title. Source 0 proposes PG-AR-018 Generate and Send Customer Statements. | |
+| D1.FAV | Favorites | VG-22 (B) | 260 O2C Getting Started, topic 2 Add Pages to Favorites. The four AR Collections pages go in 230 Collections Part 1 (Set up D365 for collections work). | |
+| D1.VIEW | Personalized Views | VG-24 (B) | 260 O2C Getting Started, topics 3 Create a Personalized View and 4 Update a Saved View. The recommended columns go in 230 Collections Part 1. | |
+| D1.AGED | Aged Balances | VG-17 (B) | 230 Collections, topic 2.2 Review Aged Balances, merged with legacy topic 2.1. | |
+| D1.INV | Customer Invoices | VG-16 (B) | 230 Collections, topic 7.1 Retrieve or Resend a Customer Invoice, merged with legacy topic 6.1. | |
+| D1.EXP | Export to Excel | VG-15 (B) | 260 O2C Getting Started, topic 5 Export All Rows from a Grid. | |
+| D1.NOTE | Notes and Activities | VG-17 (B) | 230 Collections, topic 2.4 Review Notes and Activities, merged with legacy topic 2.2. Notes and activities stay in one topic. | |
+| D1.LE | Legal Entities | VG-17 (B) | 260 O2C Getting Started, topic 1 Switch Legal Entity. | |
+| D1.WS | Workspace | VG-17 (B) | 230 Collections, topic 1 Start the Collections Day. | |
+| D1.OD | Overdue Customers | VG-17 (B) | 230 Collections, topics 2.1 Review Customers Overdue and 4.1 Check an Overdue Balance Before Contact. | |
+| D1.ACCT | Customer Account | VG-19 (B) | 230 Collections, topic 2.3 Investigate a Customer Account, with its three subtopics kept together. | |
+| D1.ACT | Collection Activities | VG-19 (B) | 230 Collections, topic 5 Record a Customer Activity, merged with legacy topic 5. | |
+| D1.SP | Statement Preview | VG-19 (B) | 230 Collections, topic 6.1 Preview and Download a Customer Statement. Preview and send stay separate subtopics of topic 6. | |
+| D1.SD | Statement Distribution | VG-21 (B) | 230 Collections, topic 6.2 Send a Customer Statement, merged with legacy topic 1. | |
 
 ### D2 Scope boundaries
 
@@ -529,3 +529,4 @@ Confirm each scope boundary, or say which to change. Each is the drafts' current
 |---|---|
 | 2026-10-15 | Pack created from the 13 validation registers. |
 | 2026-10-26 | Legacy PG proposals added to 11 questions (46 items) from the strong evidence in the legacy cross-comparison. The response sheet has a matching column. No answers recorded. |
+| 2026-11-01 | D1 now asks the SME to confirm each draft's destination topic (D-045, D-046), not a guide code. The A3 proposal uses the BPO spelling from the O2C PG numbering standard. |

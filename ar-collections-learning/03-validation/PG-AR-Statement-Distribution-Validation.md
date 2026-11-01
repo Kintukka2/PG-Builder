@@ -70,7 +70,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-18 | Initiation events, for example a statement cycle or a customer request. | Part 1 Initiation; topic Initiation; Process table *When* | 2 | B | SME | Open |
 | VG-19 | Stream, process area and business role name. Shared with the other AR Collections guides. | Stream table; Process table; Roles matrix | 3 | B | SME | Open |
 | VG-20 | Business process owner (BPO). | Version history | 1 | B | SME | Open |
-| VG-21 | Guide code and final title. Source 0 proposes `PG-AR-018 Generate and Send Customer Statements`. | Cover; file name | 0 | B | Dec | Open |
+| VG-21 | Destination guide and topic (D-045). Proposed: 230 Collections, topic 6.2 Send a Customer Statement, merged with legacy topic 1. | Cover; file name; destination guide | 0 | B | Dec | Open |
 | VG-22 | Whether any reports or inquiries apply. If none, "No applicable reports". | Part 3 | 19 | B | SME | Open |
 | VG-23 | The security role needed to send statements, and a test with it. | PROCESS START (1.1) | — | B | Test, SME | Open |
 | VG-24 | SME factual review, a test by someone other than the author, and approval. | Whole guide | — | B | SME | Open |
@@ -93,7 +93,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | Business rules separate from procedure | Met (checks before sending in Key concepts) |
 | Customer-facing controls validated | **Open** (`VG-05`, `VG-06`, `VG-10`, `VG-12`, `VG-17`) |
 | Reports | Open (`VG-22`) |
-| Roles, BPO, guide code | Open (`VG-19`, `VG-20`, `VG-21`) |
+| Roles, BPO, destination topic | Open (`VG-19`, `VG-20`, `VG-21`) |
 | Peer test, SME review, approval | Open (`VG-23`, `VG-24`) |
 | Review comments resolved before release | Open (20 Word comments) |
 

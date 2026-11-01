@@ -65,7 +65,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-16 | Initiation events for this task. | Part 1 Initiation; topic Initiation; Process table *When* | 2 | B | SME | Open |
 | VG-17 | Stream, process area and business role name. Shared with the other AR Collections guides. | Stream table; Process table; Roles matrix | 3 | B | SME | Open |
 | VG-18 | Business process owner (BPO). | Version history | 1 | B | SME | Open |
-| VG-19 | Guide code and final title. Source 0 proposes `PG-AR-003 Record Collection Activities Against a Customer`. | Cover; file name | 0 | B | Dec | Open |
+| VG-19 | Destination guide and topic (D-045). Proposed: 230 Collections, topic 5 Record a Customer Activity, merged with legacy topic 5. | Cover; file name; destination guide | 0 | B | Dec | Open |
 | VG-20 | Whether any reports or inquiries apply. If none, "No applicable reports". | Part 3 | 15 | B | SME | Open |
 | VG-21 | The security role needed to create activities, and a test with it. | PROCESS START | — | B | Test, SME | Open |
 | VG-22 | SME factual review, a test by someone other than the author, and approval. | Whole guide | — | B | SME | Open |
@@ -88,7 +88,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | Business rules separate from procedure | Met (customer-level rule in Key concepts) |
 | Note content standard | Open (`VG-09`, `VG-10`) |
 | Reports | Open (`VG-20`) |
-| Roles, BPO, guide code | Open (`VG-17`, `VG-18`, `VG-19`) |
+| Roles, BPO, destination topic | Open (`VG-17`, `VG-18`, `VG-19`) |
 | Peer test, SME review, approval | Open (`VG-21`, `VG-22`) |
 | Review comments resolved before release | Open (16 Word comments) |
 

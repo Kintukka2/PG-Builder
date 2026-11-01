@@ -14,7 +14,7 @@ The fixed template content is not repeated here: cover, Contents, *About this gu
 |---|---|---|---|---|
 | 0.1 | October 2026 | Daniel Moreira | To be confirmed `[VG-16]` | SME review draft created from the PG master template. Not validated or approved. |
 
-Guide code and final title: `[VG-17]`.
+Destination guide and topic (D-045, 260 O2C Getting Started): `[VG-17]`.
 
 ---
 

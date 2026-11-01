@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | Topic | D365 Accounts Receivable (AR) Collections |
-| Last updated | 2026-10-26 |
-| Current focus | Validation of the 13 SME review drafts (clean-session test and SME question pack). Part 2 adds three SME review drafts for Customer payment journal (CPJL) transfers and restorations, and a CPJL controls reference, built from AI-generated notes that still need the recording check. |
+| Last updated | 2026-11-01 |
+| Current focus | Validation of the 17 topic drafts (clean-session test and SME question packs). Each task is now a topic in a process-level guide (D-045): the drafts merge into 230 Collections and two proposed guides, 221 Customer Payment Corrections and 260 O2C Getting Started (D-046), as the [O2C PG suite plan](O2C-PG-Suite-Plan.md) sets out. |
 
 This file records the project context drawn from the source documents, inconsistencies found between them, and decisions made during development. Update it whenever a decision is made or a source is added.
 
@@ -12,7 +12,7 @@ This file records the project context drawn from the source documents, inconsist
 
 ## 1. Source documents
 
-Sources 0–3.2 are the source of truth for **process content**. Source 4 (the Part 2 update pack) adds working evidence for the Part 2 session: its notes are Teams AI-generated, so they are evidence to check against the recording, not authority (D-035). Sources 5.1 to 5.5 are the legacy O2C procedure guides: reference evidence only, never a source of truth (D-044). All sources are held outside this repository and must not be overwritten. T1 and T2 are the source of truth for **PG format and authoring rules**. They are stored unchanged in `/templates`. Always Save As a copy; never edit the master.
+Sources 0–3.2 are the source of truth for **process content**. Source 4 (the Part 2 update pack) adds working evidence for the Part 2 session: its notes are Teams AI-generated, so they are evidence to check against the recording, not authority (D-035). Sources 5.1 to 5.5 are the legacy O2C procedure guides: reference evidence only, never a source of truth (D-044). All sources are held outside this repository and must not be overwritten. T1 and T2 are the source of truth for **PG format and authoring rules**. They are stored unchanged in `/templates`. Always Save As a copy; never edit the master. T3 is the source of truth for **guide codes and file names**; it is held outside this repository with its register.
 
 | Ref | File | Content | Primary use |
 |---|---|---|---|
@@ -36,6 +36,7 @@ Sources 0–3.2 are the source of truth for **process content**. Source 4 (the P
 | 5.5 | `230-Collections_PGv2.3_16686.docx` | Legacy O2C PG v2.3 (October 2026): statements, monitoring, Customer Pools, activities, write-offs, settlements, transfers. | Reference only (D-044) |
 | T1 | `PG_Word_Template-MASTER TEMPLATE.docx` (in [`/templates`](../../templates/)) | The master Word template currently in use: cover, contents, version history, About this guide, Parts 1–3, Additional Resources, boundary rows and styles. | **Governs PG format and output** |
 | T2 | `PG_Template_Authoring_Guide_v1.docx` (in [`/templates`](../../templates/)) | Companion authoring handbook: section-by-section content rules, the action-row pattern, the standard navigation pattern, the question log, Word maintenance and the final checklist. | **Governs PG authoring rules** |
+| T3 | `O2C_PG_Numbering_Standard_v1.docx` (version 1.3, October 21, 2026; held outside this repository; register owner Daniel Moreira) | Readable companion to `O2C_PG_Numbering_Register.json`. Codes 200 to 299 in ten-number process families, classified by primary business outcome. Current codes 200, 210, 211, 220, 230 and 240; shared 398 and 399. Retired codes 201, 202, 203, 205, 250, 298 and 299. File names, splits, mergers and transitions. | **Governs guide codes and file names** |
 
 The underlying evidence for all sources is the *AR Training D365* session recording and transcript. Source 4 covers Part 2 of the same session.
 
@@ -43,7 +44,7 @@ The underlying evidence for all sources is the *AR Training D365* session record
 
 ## 2. Project objective
 
-Build a role-based AR Collections learning pathway in D365. It is made of granular Procedure Guides (PGs) and supporting learning content. It enables learners to:
+Build a role-based AR Collections learning pathway in D365. It is made of task-level topics in the O2C Procedure Guides (PGs), and supporting learning content. It enables learners to:
 
 1. Navigate the correct D365 environment.
 2. Identify and prioritise collection work.
@@ -55,7 +56,9 @@ Build a role-based AR Collections learning pathway in D365. It is made of granul
 
 (Source 2, roadmap objective.)
 
-Each PG covers **a single granular D365 task and its associated controls**. Learning modules stay learner-focused (source 1).
+Each D365 task and its controls is **one topic** in a process-level PG (D-045). A guide covers one process family outcome, coded under the O2C numbering standard (T3). A task appears in one guide only; other guides link to it. Learning modules stay learner-focused and link to topics (source 1).
+
+This replaces the one-task-per-PG rule that sources 0 to 2 assumed. The authoring guide (T2) already works this way: "A major topic represents a distinct business task or outcome."
 
 ## 3. Intended audience
 
@@ -108,6 +111,16 @@ Part 2 closes the evidence gap for customer account transfers and Customer payme
 | Simulate Posting | Not covered | Shared control: in the reference and each guide's validate-and-post steps (D-039). |
 | Identify parent-child relationships | Not ready (rank 26) | Still partial. Part 1 notes: D365 has no reliable indicator (`PC-01`). |
 | Customer Pools | Not in the backlog | Not ready. Validation backlog only ([register](../03-validation/Customer-Pools-Validation.md)). |
+
+### 4.5 Guide structure (D-045, D-046)
+
+The [O2C PG suite plan](O2C-PG-Suite-Plan.md) maps every topic draft and backlog rank to a destination guide and topic:
+
+| Guide | Receives |
+|---|---|
+| 260 O2C Getting Started (proposed) | Legal Entities, Export to Excel, and the general steps from Favorites and Personalized Views |
+| 230 Collections (expanded) | Workspace, Overdue Customers, Aged Balances, Customer Account, Notes and Activities, Collection Activities, Customer Invoices, Statement Preview and Statement Distribution; the Collections setup content from Favorites and Personalized Views |
+| 221 Customer Payment Corrections (proposed) | Legacy 230 §6.5 to §6.8; the Transfers, Parent Payment Distribution and Restoration topic drafts; the CPJL controls reference as Part 1 Key concepts |
 
 ## 5. Development priorities
 
@@ -175,7 +188,7 @@ Development gates (source 2): Identified → Source reviewed → Gap validated �
 | I-01 | Readiness ratings differ. Source 0 marks write-offs, customer master maintenance, synchronisation and exclusions as "✅ Yes". Sources 1, 2 and 3.1 mark them as publication-blocked or partial. | 0 vs 1, 2, 3.1 | The stricter, later assessment governs (D-004). |
 | I-02 | Release placement differs. Source 1's "Release 1" includes statements, unallocated payments and settlement. Source 2 puts these in Release 2. | 1 vs 2 | Source 2 governs release packaging (D-004). |
 | I-03 | Drafting order differs from backlog rank. Source 3.1 drafts some Release 2 items (invoice, export) before Release 1 items (legal entities, workspace). | 2 vs 3.1 | Source 3.1 governs drafting order. Source 2 governs release packaging (D-005). |
-| I-04 | PG IDs. Source 0 numbers PGs `PG-AR-001` to `022` in topic order (Favourites = `PG-AR-010`). This does not match the source 2 backlog ranks (Favourites = rank 4). | 0 vs 2 | ID scheme not yet decided (D-006). |
+| I-04 | PG IDs. Source 0 numbers PGs `PG-AR-001` to `022` in topic order (Favourites = `PG-AR-010`). This does not match the source 2 backlog ranks (Favourites = rank 4). | 0 vs 2 | Resolved by D-045 and D-046: topics need no IDs of their own, and guides take O2C codes from T3. |
 | I-05 | "Age Balances" (source 0) vs "Aged balances" (sources 1, 2, 3.1, 3.2). | 0 vs others | "Aged balances" is provisional. Validate (`VG-01`). |
 | I-06 | "Credit & Collections" (source 0) vs "Credit and collections" (module) vs "Customer Credit and Collections" (workspace). | 0, 1, 2, 3.2 | Module and workspace are kept distinct. Validate (`VG-21`). |
 | I-07 | The Favourites PG title varies across all five sources. | 0, 1, 2, 3.1, 3.2 | Title from the task brief is used (D-002). |
@@ -204,7 +217,7 @@ Development gates (source 2): Identified → Source reviewed → Gap validated �
 | D-003 | 2026-10-08 | Folder structure: `01-procedure-guides`, `02-screenshot-registers`, `03-validation`, `04-quality-assurance`, `05-project-notes`, under a topic folder (`ar-collections-learning`). | Task brief | Adopted |
 | D-004 | 2026-10-08 | Where readiness or release placement conflicts, the later and stricter assessment governs (sources 1 and 2 over source 0). | Conservative publication control | Adopted |
 | D-005 | 2026-10-08 | Source 3.1 governs drafting order. Source 2 governs release packaging. | I-03 | Adopted |
-| D-006 | 2026-10-08 | PG ID scheme to be decided. Option A: keep source 0 IDs (`PG-AR-010`). Option B: renumber to the source 2 backlog rank. Until decided, files use descriptive names (`PG-AR-<Task-Name>`). | I-04 | **Open** |
+| D-006 | 2026-10-08 | PG ID scheme to be decided. Option A: keep source 0 IDs (`PG-AR-010`). Option B: renumber to the source 2 backlog rank. Until decided, files use descriptive names (`PG-AR-<Task-Name>`). | I-04 | **Superseded by D-045 and D-046** |
 | D-007 | 2026-10-08 | Validation gaps use IDs scoped to each PG (`VG-01`…). Each PG has its own validation register. | Traceability | Adopted |
 | D-008 | 2026-10-08 | Figures are numbered per PG and mapped to steps in a separate screenshot register. The PG holds placeholders until frames are approved. | Task brief | **Amended by D-017**: no placeholders in the Word PG |
 | D-009 | 2026-10-08 | Working format is editable Markdown. Prose uses UK/AU English. UI labels match the D365 screen exactly. | Task brief; source spelling | **Superseded by D-013**. PG text is US English. Working notes may keep UK/AU spelling. |
@@ -238,11 +251,13 @@ Development gates (source 2): Identified → Source reviewed → Gap validated �
 | D-037 | 2026-10-23 | The three Part 2 guides and the reference start as **working Markdown drafts**. They follow the master template's section order and boundary rows, so the Word build is mechanical, but they are not built in Word until the Part 2 recording is checked. This is an exception to D-013 (Word is the editable source) for unchecked AI-note evidence. Once built, the Word file becomes the editable source and the Markdown file becomes its preview. | Handover task 5; avoids Word review comments on unchecked notes | **Amended by D-041**: the Word build was brought forward |
 | D-038 | 2026-10-23 | One validation register covers the three Part 2 guides and the reference, because most items are shared. IDs are prefixed by scope (`SRC`, `GOV`, `CPJ`, `TF`, `PC`, `RO`) instead of a per-guide `VG-xx` sequence. Customer Pools uses `CP-xx` in its own register. This amends D-007 for this batch only. | Handover suggested files; traceability | Adopted |
 | D-039 | 2026-10-23 | Part 2 roadmap item 17 (partial allocation) is part of the Parent Payment guide. Item 19 (Simulate Posting) is a shared control in the reference and in each guide's validate-and-post subprocedure. Neither is a separate guide unless the recording shows steps beyond these. | No steps beyond those already in the guides | Adopted |
-| D-040 | 2026-10-23 | New folder `06-reference-guides` for reference content (a source 0 content type). The first entry is the CPJL controls reference, limited to controls the Part 2 notes support. | Handover suggested files | Adopted |
+| D-040 | 2026-10-23 | New folder `06-reference-guides` for reference content (a source 0 content type). The first entry is the CPJL controls reference, limited to controls the Part 2 notes support. | Handover suggested files | Adopted. **Amended by D-045:** the reference merges into 221 Part 1 Key concepts. |
 | D-041 | 2026-10-25 | At the user's request, the three Part 2 guides are built in the PG master template as **v0.1 SME review drafts** before the recording check. Process names: **AR Collections Customer Account Transfers**, **AR Collections Parent Payment Distribution** and **AR Collections Overpayment and Write-Off Restoration**. Each has one parent topic with subprocedures (three, three and two). Every procedure starts with the full standard navigation pattern (Entity, Modules, then Navigate to **Customer payment journal** under **Credit and collections**), which adds a step to each first subprocedure. Open items become Word comments that start with their register ID. The Word file is now the editable source and the Markdown file its preview, which also keeps a step-evidence table. The recording check (`SRC-01`) still blocks testing on real accounts and publication. | User request; D-013; D-015; D-020 | Adopted |
-| D-042 | 2026-10-25 | The CPJL controls reference is built from the master template as a **Reference Guide** (title changed from "Procedure Guide"). Its controls sit in Part 1 *Key concepts* tables (Journal set-up, Line coding, Validation and posting, Allocations and amounts, Not covered by this reference). Part 2 lists the three guides instead of procedures. Files sit in `06-reference-guides`. | D-040; the template has no reference layout | Adopted |
+| D-042 | 2026-10-25 | The CPJL controls reference is built from the master template as a **Reference Guide** (title changed from "Procedure Guide"). Its controls sit in Part 1 *Key concepts* tables (Journal set-up, Line coding, Validation and posting, Allocations and amounts, Not covered by this reference). Part 2 lists the three guides instead of procedures. Files sit in `06-reference-guides`. | D-040; the template has no reference layout | Adopted. **Amended by D-045:** its content becomes 221 Part 1 Key concepts when merged. |
 | D-043 | 2026-10-25 | Collect the Part 2 and Customer Pools answers through a **Part 2 supplement** to the SME question pack, with `P2-` question IDs so it never clashes with the main pack. Every open item whose method includes SME, Rec or Dec maps to exactly one question (50 items, 42 blocking). The three Test-only items (`CPJ-06`, `CPJ-08`, `CPJ-13`) wait for a controlled Customer payment journal test, which the clean-session test plan does not include yet. | D-034; D-035 | Proposed (supplement awaiting SME answers) |
 | D-044 | 2026-10-25 | The five legacy O2C procedure guides (sources 5.1 to 5.5) are **reference evidence, not a source of truth**: they are about a year old and under review. They supply candidate answers and expected labels, mapped in the [legacy cross-comparison](../03-validation/Legacy-O2C-PG-Cross-Comparison.md). No register item closes on legacy evidence alone: it needs a test result, the recording or an SME answer. Where legacy content disagrees with the recording or a test, the recording and the test govern. | User direction; D-001 | Adopted |
+| D-045 | 2026-11-01 | **One task per topic.** Each D365 task and its controls is one topic (a major Part 2 topic or a subtopic, as T2 defines them) in a process-level PG, not a PG of its own. This replaces the one-task-per-PG rule from sources 0 to 2 (README; section 2). The 17 drafts become **topic drafts**, each mapped to a destination guide and topic in the [O2C PG suite plan](O2C-PG-Suite-Plan.md): 230 Collections (nine drafts, plus the Collections setup content from Favorites and Personalized Views), 260 O2C Getting Started (Legal Entities, Export to Excel and the general steps from Favorites and Personalized Views) and 221 Customer Payment Corrections (the three Part 2 guides and the CPJL controls reference). A task lives in one guide only; other guides link to it. Topic drafts keep their working files and registers, with stable item IDs, until they merge. Merging creates the destination guide's next draft version, and the published version stays live until that draft passes its gates. T1 and T2 are unchanged. SME pack D1 and P2-D1 now ask the SME to confirm destinations. | User direction; T2 topic rules; legacy suite structure | Adopted |
+| D-046 | 2026-11-01 | **Guide codes follow the O2C PG Numbering Standard v1.3 (T3).** Proposed allocations: **221 Customer Payment Corrections**, because T3 puts settlement and payment corrections in 220–229, not Collections; and **260 O2C Getting Started**, opening a new family, 260–269. T3 reserves 250–299 for new O2C families, 250 is retired, and 260 is the first block that starts on a usable number. Predecessor mapping for the split: 230 §6.5 → 221 topic 1, §6.6 → topic 2, §6.7 → topic 3, §6.8 → topic 6. 230 §2.4 (direct debit and eBanking details) → 240, if 240 does not already cover it. 230 §6.4 Debt Write-off stays in 230. Retired codes are never used. Working files: `221-Customer Payment Corrections PG v0.1.docx` and `260-O2C Getting Started PG v0.1.docx`. If other streams adopt the Getting Started guide, it becomes one shared guide with one code. | T3 rules for future guides; D-045 | **Proposed.** The register owner records 221 and 260 in `O2C_PG_Numbering_Register.json` and its companion, and the BPO confirms the scope of 221 and the 230 split, before any 221 or 260 draft circulates. |
 
 ---
 
@@ -275,7 +290,7 @@ These elements came from the Favourites PG. They are candidates for the standard
 1. **One clean-session D365 test** using the [test plan](../03-validation/Clean-Session-Test-Plan.md): 16 stations and 87 steps that test the 148 open items whose method includes Test (112 blocking) across all 13 registers. Station S13 (sending a statement) is gated on the SME statement controls in step 9. Record results in the [test log](../03-validation/Clean-Session-Test-Log.xlsx).
 2. **Recording evidence:** transcript excerpts and timestamps for the views, Aged balances, invoice, export, notes, legal entity, workspace, overdue, customer account, activity and statement demonstrations (Views `VG-27`, Aged Balances `VG-21`, Customer Invoices `VG-20`, Export to Excel `VG-19`, Notes and Activities `VG-21`, Legal Entities `VG-21`, Workspace `VG-21`, Overdue Customers `VG-21`, Customer Account `VG-23`, Collection Activities `VG-23`, Statement Preview `VG-23`, Statement Distribution `VG-25`).
 3. **SME answers** through the [SME question pack](../03-validation/SME-Question-Pack.md) and its [response sheet](../03-validation/SME-Question-Pack-Responses.xlsx): 31 questions that cover 191 open items (119 blocking). Answer A1 to A6 first (initiation, stream and role, BPO, reports, security role, review and approval; 78 blocking items). The export volume limit and the handling rule for exported customer data (Export to Excel `VG-06`, `VG-08`) are question B2.
-4. Decide the guide codes (D-006) and approve or edit the [PG Delivery Flow](https://claude.ai/artifact/Qb7C1s8Vmnt8av3ams3jrJ).
+4. **Record the proposed codes** 221 and 260 in the O2C numbering register and its companion, and confirm with the BPO the scope of 221 and the split from 230 (D-046). Then approve or edit the [PG Delivery Flow](https://claude.ai/artifact/Qb7C1s8Vmnt8av3ams3jrJ).
 5. Both drafting batches are complete, and Part 2 adds three working drafts (step 10). Before any further drafting, the priority is validation: the clean-session test (step 1) and the SME answers (steps 3 and 6 to 9). The remaining backlog items are higher-risk (settlement, write-offs, customer maintenance, exclusions, payment terms, account transfers) and stay behind the validation gate (source 3.1).
 6. Ask the SME for the **legal entity name and code reference** (source 1). It closes Legal Entities `VG-06` and supports every guide's *Check* the **Entity** row. Pack question **B7**.
 7. Ask the SME for the **collections prioritization rules** and the **aging indicator legend** (source 1, checklist A). They close Overdue Customers `VG-11` and `VG-12` and Aged Balances `VG-10`. The prioritization rules are pack question **B4.3**. The aging legend items are deferred, so they are outside the pack until they are reopened.
@@ -286,3 +301,4 @@ These elements came from the Favourites PG. They are candidates for the standard
 12. **Customer Pools evidence:** supplement question **P2-E1**. A "no" closes most of Part E ([register](../03-validation/Customer-Pools-Validation.md)).
 13. Part 2 gives evidence for Favorites `VG-18` (what Customer payment journal is used for). Close it once the recording check confirms it.
 14. **Legacy O2C PG evidence** ([cross-comparison](../03-validation/Legacy-O2C-PG-Cross-Comparison.md)): 184 of the 364 unresolved items have legacy evidence, 92 of it strong. Raise the statement duplicate-send and blank-recipient controls with the SME before test station S13 (I-19). The strong answers are now in both SME packs and response sheets as **Legacy PG proposals** (22 questions, 62 items) for the SME to confirm or correct. Reopen Customer Pools (I-16, P2-E1) and the aging indicator items in step 7, for which the legacy PG gives the full legend.
+15. **Merge topic drafts** into their destination guides as each meets the merge gate in the [O2C PG suite plan](O2C-PG-Suite-Plan.md): codes recorded (step 4), conflicts with legacy content resolved, and a new draft version of the destination guide.

@@ -70,7 +70,7 @@ This file is the guide's **question log**, as the PG Template Authoring Guide re
 | VG-21 | Initiation events. | Part 1 Initiation; topic Initiations; Process table *When* | 2 | B | SME | Open |
 | VG-22 | Stream, process area and business role name. Shared with the AR Collections Favorites guide (its VG-31). | Stream table; Process table; Roles matrix; Responsibility | 3 | B | SME | Open |
 | VG-23 | Business process owner (BPO). | Version history | 1 | B | SME | Open |
-| VG-24 | Guide code and final title. Source 0 proposes `PG-AR-004`. | Cover; file name | 0 | B | Dec | Open |
+| VG-24 | Destination guide and topic (D-045). Proposed: 260 O2C Getting Started, topics 3 Create a Personalized View and 4 Update a Saved View. The recommended columns go in 230 Collections Part 1. | Cover; file name; destination guide | 0 | B | Dec | Open |
 | VG-25 | The security role needed, and whether view personalization can be restricted. Test with the standard AR Collections role. | PROCESS START (1.1) | — | B | Test, SME | Open |
 | VG-26 | SME factual review, a test by someone other than the author, designated reviewer and process-owner approval. | Whole guide | — | B | SME | Open |
 | VG-27 | Recording timestamps for the views demonstration. These are needed for frame review and screenshots. | Screenshot register | — | N | Rec | Open |
@@ -110,7 +110,7 @@ The terms shared with the AR Collections Favorites guide (Navigation Pane, Legal
 | Exact system labels | Open (`VG-03` to `VG-17`) |
 | Expected outcomes are confirmed | Open (`VG-15`, `VG-18`) |
 | Reports | Open (`VG-20`) |
-| Roles, BPO, guide code | Open (`VG-22`, `VG-23`, `VG-24`) |
+| Roles, BPO, destination topic | Open (`VG-22`, `VG-23`, `VG-24`) |
 | Peer test, SME review, approval | Open (`VG-25`, `VG-26`) |
 | Review comments resolved before release | Open (31 Word comments) |
 
