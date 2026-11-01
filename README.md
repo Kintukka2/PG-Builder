@@ -46,7 +46,7 @@ Each topic has its own folder with the same internal structure:
 
 ## AR Collections: guides
 
-Codes 221 and 260 are proposed (D-046): neither guide circulates beyond the project team until the register owner records its code and the BPO confirms its scope (D-048).
+Codes 221 and 260 are proposed (D-046). Both guides are shared with the SME for review only (SME review pack v2); neither circulates further until the register owner records its code and the BPO confirms its scope (D-048).
 
 | Code | Guide | Gate | Topics | Files |
 |---|---|---|---|---|
