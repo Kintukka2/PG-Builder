@@ -5,8 +5,10 @@
 | Related PG (editable source) | [`../01-procedure-guides/TBC-AR Collections Favorites PG v0.2.docx`](../01-procedure-guides/TBC-AR%20Collections%20Favorites%20PG%20v0.2.docx) |
 | Markdown preview | [`../01-procedure-guides/PG-AR-Configure-Collections-Favourites-DRAFT.md`](../01-procedure-guides/PG-AR-Configure-Collections-Favourites-DRAFT.md) |
 | Related screenshot register | [`../02-screenshot-registers/PG-AR-Configure-Collections-Favourites-Screenshots.md`](../02-screenshot-registers/PG-AR-Configure-Collections-Favourites-Screenshots.md) |
-| Last updated | 2026-10-23 |
+| Last updated | 2026-11-01 |
 | Items | 33 total: 30 open (16 blocking, 14 non-blocking), 1 deferred, 2 withdrawn |
+
+> **Partly merged (D-048).** The general steps are now topic 3 of the [260 O2C Getting Started v0.1](../01-procedure-guides/260-O2C%20Getting%20Started%20PG%20v0.1.docx) working draft, where the carried comments read *Favorites VG-xx* (register: [260-O2C-Getting-Started-Validation.md](260-O2C-Getting-Started-Validation.md)). This draft stays live for the four AR Collections pages (`VG-01`, `VG-03` to `VG-05`, `VG-18`, `VG-19`), which go to 230 Collections Part 1. Answers recorded here apply to both.
 
 This file is the **question log** that the PG Template Authoring Guide asks for. It is kept separate from the PG. Nothing in it may appear in the PG as confirmed guidance until its status is **Closed** and the Word file has been updated.
 
@@ -115,7 +117,7 @@ Changes made to follow `PG_Template_Authoring_Guide_v1.docx`:
 | VG-19 | Wording for **Open customer invoices**, checked against the recording. | Key concepts (pages table) | 6 | N | Rec | Open |
 | VG-20 | Baseline claim that **Aged balances** gives access to collection activities. | Not in guide (removed) | — | N | Rec, SME | Open |
 | VG-21 | Label distinction between the **Credit and collections** module and the **Customer Credit and Collections** workspace. | Steps 3–6 | — | N | Test | Open |
-| VG-22 | Destination guide and topic (D-045). Proposed: 260 O2C Getting Started, topic 2 Add Pages to Favorites. The four AR Collections pages go in 230 Collections Part 1 (Set up D365 for collections work). | Cover; file name; destination guide | 0 | B | Dec | Open |
+| VG-22 | Destination guide and topic (D-045). Proposed: 260 O2C Getting Started, topic 3 Add Pages to Favorites. The four AR Collections pages go in 230 Collections Part 1 (Set up D365 for collections work). Merged into the 260 v0.1 working draft (D-048). | Cover; file name; destination guide | 0 | B | Dec | Open |
 | VG-23 | Whether the legal entity affects Favorites. If it does not, Step 1 can be removed. | Step 1 | 9 | N | Test | Open |
 | VG-24 | Screenshots captured in a clean session, if screenshots are used (D-017). | — | — | N | Test | Open |
 | VG-25 | SME factual review, designated reviewer, and process-owner approval. | Whole guide | — | B | SME | Open |
@@ -177,3 +179,4 @@ This combines the source 1 §4 gate with the authoring guide's final checklist.
 | 2026-10-08 | Register created from the review of baseline draft v0.1 (source 3.2). |
 | 2026-10-08 | Converted to the PG master template. Added `VG-30` to `VG-33`. Withdrew `VG-15` and `VG-29`. Deferred `VG-14`. Re-rated `VG-24` and `VG-27` as non-blocking (screenshots optional). Mapped items to Word comments. |
 | 2026-10-23 | `VG-18`: Part 2 evidence noted. Still open until the recording check. |
+| 2026-11-01 | Merged into 260 v0.1 (D-048); D1 destination renumbered (D-048). |
