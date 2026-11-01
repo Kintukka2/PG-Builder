@@ -481,13 +481,13 @@ Under decision D-045, each task is a topic inside a process-level guide, so thes
 
 | ID | Guide | Item | Proposed destination | Answer |
 |---|---|---|---|---|
-| D1.FAV | Favorites | VG-22 (B) | 260 O2C Getting Started, topic 2 Add Pages to Favorites. The four AR Collections pages go in 230 Collections Part 1 (Set up D365 for collections work). | |
-| D1.VIEW | Personalized Views | VG-24 (B) | 260 O2C Getting Started, topics 3 Create a Personalized View and 4 Update a Saved View. The recommended columns go in 230 Collections Part 1. | |
+| D1.FAV | Favorites | VG-22 (B) | 260 O2C Getting Started, topic 3 Add Pages to Favorites. The four AR Collections pages go in 230 Collections Part 1 (Set up D365 for collections work). Merged into the 260 v0.1 working draft (D-048). | |
+| D1.VIEW | Personalized Views | VG-24 (B) | 260 O2C Getting Started, topics 4 Create a Personalized View and 5 Update a Saved View. The recommended columns go in 230 Collections Part 1. Merged into the 260 v0.1 working draft (D-048). | |
 | D1.AGED | Aged Balances | VG-17 (B) | 230 Collections, topic 2.2 Review Aged Balances, merged with legacy topic 2.1. | |
 | D1.INV | Customer Invoices | VG-16 (B) | 230 Collections, topic 7.1 Retrieve or Resend a Customer Invoice, merged with legacy topic 6.1. | |
-| D1.EXP | Export to Excel | VG-15 (B) | 260 O2C Getting Started, topic 5 Export All Rows from a Grid. | |
+| D1.EXP | Export to Excel | VG-15 (B) | 260 O2C Getting Started, topic 6 Export All Rows from a Grid. Merged into the 260 v0.1 working draft (D-048). | |
 | D1.NOTE | Notes and Activities | VG-17 (B) | 230 Collections, topic 2.4 Review Notes and Activities, merged with legacy topic 2.2. Notes and activities stay in one topic. | |
-| D1.LE | Legal Entities | VG-17 (B) | 260 O2C Getting Started, topic 1 Switch Legal Entity. | |
+| D1.LE | Legal Entities | VG-17 (B) | 260 O2C Getting Started, topics 1 Switch Legal Entity with the Selector and 2 Switch Legal Entity Using the Ledger Code. Merged into the 260 v0.1 working draft (D-048). | |
 | D1.WS | Workspace | VG-17 (B) | 230 Collections, topic 1 Start the Collections Day. | |
 | D1.OD | Overdue Customers | VG-17 (B) | 230 Collections, topics 2.1 Review Customers Overdue and 4.1 Check an Overdue Balance Before Contact. | |
 | D1.ACCT | Customer Account | VG-19 (B) | 230 Collections, topic 2.3 Investigate a Customer Account, with its three subtopics kept together. | |
@@ -521,7 +521,7 @@ Confirm each scope boundary, or say which to change. Each is the drafts' current
 1. Record each answer in the response sheet with the person and date.
 2. In each affected validation register, close the item with the answer as evidence (for example "Closed: SME pack B5.2, 2026-10-xx"), or keep it open with the partial answer.
 3. Update the Word guides, remove the matching review comments, and move the changed guides to v0.2 together with the clean-session test results.
-4. Update the Command Centre gaps and the project notes decisions.
+4. Apply answers for merged items to the 260 and 221 Word guides (D-048), and update the README tracker and the project notes decisions.
 
 ## Change log
 
@@ -530,3 +530,4 @@ Confirm each scope boundary, or say which to change. Each is the drafts' current
 | 2026-10-15 | Pack created from the 13 validation registers. |
 | 2026-10-26 | Legacy PG proposals added to 11 questions (46 items) from the strong evidence in the legacy cross-comparison. The response sheet has a matching column. No answers recorded. |
 | 2026-11-01 | D1 now asks the SME to confirm each draft's destination topic (D-045, D-046), not a guide code. The A3 proposal uses the BPO spelling from the O2C PG numbering standard. |
+| 2026-11-01 | D1 destinations for Favorites, Personalized Views, Export to Excel and Legal Entities use the 260 topic numbers of the v0.1 working draft (D-048). The Command Centre step is removed (D-047). |

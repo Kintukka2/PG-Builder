@@ -8,6 +8,8 @@
 >
 > `[XX-nn]` markers show unconfirmed items. In the Word file, each one is a review comment. Full details are in the [validation register](../03-validation/Part2-CPJL-and-Transfers-Validation.md). The markers are not part of the guide text.
 
+> **Merged and frozen (D-048).** This draft is now topic 3 of [221 Customer Payment Corrections v0.1](221-Customer%20Payment%20Corrections%20PG%20v0.1.docx). Edit that guide, not this draft.
+
 The fixed template content is not repeated here: cover, Contents, *About this guide* and *Additional Resources*.
 
 **Version history**

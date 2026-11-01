@@ -6,8 +6,10 @@
 | Screenshot registers | [Transfer Funds](../02-screenshot-registers/PG-AR-Transfer-Funds-Between-Customer-Accounts-Screenshots.md) · [Parent Payment](../02-screenshot-registers/PG-AR-Transfer-Parent-Payment-Across-Child-Accounts-Screenshots.md) · [Restore](../02-screenshot-registers/PG-AR-Restore-Written-Off-Overpayment-Screenshots.md) |
 | SME questions | [Part 2 supplement to the SME question pack](SME-Question-Pack-Part2-Supplement.md): every SME, recording and decision item here maps to one `P2-` question |
 | Source | AR Training D365 Part 2 update pack (sources 4.0 to 4.7 in the [project notes](../05-project-notes/Project-Context-and-Decisions.md#1-source-documents)) |
-| Last updated | 2026-10-25 |
+| Last updated | 2026-11-01 |
 | Items | 46 total, all open: 38 blocking, 8 non-blocking |
+
+> **Merged and frozen (D-048).** The three guides are now topics 3, 4 and 5 of the [221 Customer Payment Corrections v0.1](../01-procedure-guides/221-Customer%20Payment%20Corrections%20PG%20v0.1.docx) working draft, and the CPJL controls reference is its Part 1 Key concepts (register: [221-Customer-Payment-Corrections-Validation.md](221-Customer-Payment-Corrections-Validation.md)). Edit the 221 Word file, not these four drafts. This register stays the record for every `SRC`, `GOV`, `CPJ`, `TF`, `PC` and `RO` item: record answers here, and they apply to 221.
 
 This file is the **question log** for the three Part 2 guides and the shared controls reference (decision D-016). All four are SME review drafts in the PG master template (v0.1, decision D-041). Each open item that affects the text is also a Word review comment by "Validation register" (VR), starting with the item's ID. One register covers all four documents because they share most of their controls. IDs are prefixed by scope and never renumbered (decision D-038):
 
@@ -83,7 +85,7 @@ Customer Pools has its own register: [Customer-Pools-Validation.md](Customer-Poo
 |---|---|---|---|---|---|
 | GOV-01 | Stream, process area and the business role that prepares these journals. Confirm whether Collections Officers do this work or another team does. | Part 1 Stream, Process and Roles (all) | B | SME | Open |
 | GOV-02 | Business process owner (BPO) for each guide. | Document control (all) | B | SME | Open |
-| GOV-03 | Destination guide and topic for the three guides and the reference (D-045). Proposed: 221 Customer Payment Corrections, topics 3, 4 and 5, and its Part 1 Key concepts (D-046). | Document control (all) | B | Dec | Open |
+| GOV-03 | Destination guide and topic for the three guides and the reference (D-045). Proposed: 221 Customer Payment Corrections, topics 3, 4 and 5, and its Part 1 Key concepts (D-046). Merged into the 221 v0.1 working draft (D-048). | Document control (all) | B | Dec | Open |
 | GOV-04 | Whether any reports or inquiries apply. If none, "No applicable reports". | Part 3 (all) | B | SME | Open |
 | GOV-05 | SME factual review, a test by someone other than the author, and approval. | Whole guide (all) | B | SME | Open |
 
@@ -193,3 +195,4 @@ The gaps the three source drafts list are also covered: verification after posti
 |---|---|
 | 2026-10-23 | Register created from the AR Training D365 Part 2 update pack, with the three working drafts and the controls reference. |
 | 2026-10-25 | The three guides and the reference are built in the PG master template as v0.1 SME review drafts (D-041), with every open item that affects the text as a Word comment. Step locations updated for the added *Click* **Modules** step. `SRC-03` notes the template's AVA entry. |
+| 2026-11-01 | Merged into 221 v0.1 (D-048): the four drafts are frozen and this register stays the record for their items. `GOV-03` notes the merge. |

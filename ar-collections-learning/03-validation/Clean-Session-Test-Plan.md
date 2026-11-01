@@ -7,7 +7,7 @@
 | Route | 16 stations, 87 steps, in one session; station S13 is gated |
 | Results log | [`Clean-Session-Test-Log.xlsx`](Clean-Session-Test-Log.xlsx): one row per step and one row per item |
 | Status | Draft plan for SME review. Not yet run. |
-| Last updated | 2026-10-15 |
+| Last updated | 2026-11-01 |
 
 This plan tests the drafts against D365. It does not change them. Every step names the validation items it tests (`FAV 02` means Favorites VG-02). Record what D365 actually shows; where it differs from the draft, the draft changes.
 
@@ -325,7 +325,7 @@ Items that need an SME answer, a recording or a project decision are not tested 
 1. **Results log.** Complete the *Items* sheet: for each item, the result (*Confirmed*, *Differs from draft* or *Could not test*) and the evidence (step ID, screenshot or recording time).
 2. **Validation registers.** For each tested item, change *Status* to *Closed* with the evidence, for example "Closed: test S6.4, 2026-10-xx". Items that differ from the draft stay open until the guide text is changed. Add a change-log entry to each register.
 3. **Word guides.** Update the text to match D365, remove the review comment for each closed item, and move each changed guide to v0.2. Regenerate its PDF and Markdown preview.
-4. **Command Centre.** Set each closed gap to *Closed* and move guides whose blocking test items are all closed to *System tested*.
+4. **README tracker.** Move each topic draft or guide whose blocking test items are all closed to *System tested*. Apply results for merged items to the 260 and 221 Word guides (D-048).
 5. **Findings.** Anything that contradicts the drafts or the sources goes to the SME with the step ID. Missing controls are listed as possible security causes (S15.1), not diagnoses.
 
 ## 7. Exit criteria
@@ -340,3 +340,4 @@ Items that need an SME answer, a recording or a project decision are not tested 
 | Date | Change |
 |---|---|
 | 2026-10-15 | Plan created from the 13 validation registers. |
+| 2026-11-01 | After-session step 4 uses the README tracker instead of the retired Command Centre (D-047), and applies results for merged items to 260 and 221 (D-048). |

@@ -6,6 +6,8 @@
 >
 > `[VG-xx]` markers show unconfirmed items. In the Word file, each one is a review comment. Full details are in the [validation register](../03-validation/PG-AR-Legal-Entities-Validation.md). The markers are not part of the guide text.
 
+> **Merged and frozen (D-048).** This draft is now topics 1 and 2 of [260 O2C Getting Started v0.1](260-O2C%20Getting%20Started%20PG%20v0.1.docx). Edit that guide, not this draft.
+
 The fixed template content is not repeated here: cover, Contents, *About this guide* and *Additional Resources*.
 
 **Version history**

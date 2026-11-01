@@ -318,7 +318,7 @@ Decisions the project team makes with the BPO.
 
 **Question.** Confirm the destination guide and topic for the three guides and the reference, or change them (D-045, D-046).
 
-**Current draft or evidence.** Proposed: a new guide, **221 Customer Payment Corrections**, in the 220–229 Customer Payments family, which the numbering standard reserves for settlement and payment corrections. Transfers becomes topic 3 (replacing legacy 230 §6.7), Parent Payment Distribution topic 4 and Restoration topic 5, and the CPJL controls reference becomes Part 1 Key concepts. 221 also takes legacy 230 §6.5, §6.6 and §6.8. See the [O2C PG suite plan](../05-project-notes/O2C-PG-Suite-Plan.md).
+**Current draft or evidence.** Proposed: a new guide, **221 Customer Payment Corrections**, in the 220–229 Customer Payments family, which the numbering standard reserves for settlement and payment corrections. Transfers becomes topic 3 (replacing legacy 230 §6.7), Parent Payment Distribution topic 4 and Restoration topic 5, and the CPJL controls reference becomes Part 1 Key concepts. 221 also takes legacy 230 §6.5, §6.6 and §6.8. All four are now merged into the 221 v0.1 working draft (D-048). See the [O2C PG suite plan](../05-project-notes/O2C-PG-Suite-Plan.md).
 
 **Answers:** GOV-03 (B).
 
@@ -418,7 +418,7 @@ Customer Pools is not covered by the Part 1 or Part 2 notes, so no guide is draf
 2. Close each item in the Part 2 or Customer Pools register with the answer as evidence (for example "Closed: SME pack P2-B4, 2026-11-xx"), or keep it open with the partial answer.
 3. Update the Word guides and the reference, remove the matching review comments, and move them to v0.2.
 4. If P2-E1 confirms that Customer Pools are used, draft them only once they meet the definition of ready (source 2).
-5. Update the Command Centre gaps and the project notes decisions.
+5. Apply the answers to the 221 Word guide, where these items now sit (D-048), and update the README tracker and the project notes decisions.
 
 ## Change log
 
@@ -427,3 +427,4 @@ Customer Pools is not covered by the Part 1 or Part 2 notes, so no guide is draf
 | 2026-10-25 | Supplement created from the Part 2 and Customer Pools registers. |
 | 2026-10-26 | Legacy PG proposals added to 11 questions (16 items) from the strong evidence in the legacy cross-comparison. The response sheet has a matching column. No answers recorded. |
 | 2026-11-01 | P2-D1 now asks the SME to confirm the destination (D-045, D-046), not guide codes. The P2-A2 proposal uses the BPO spelling from the O2C PG numbering standard. |
+| 2026-11-01 | P2-D1 notes the 221 v0.1 working draft (D-048). The Command Centre step is removed (D-047). |
