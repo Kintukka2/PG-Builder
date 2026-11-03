@@ -6,7 +6,7 @@
 >
 > `[VG-xx]` markers show unconfirmed items. In the Word file, each one is a review comment for the SME. Full details are in the [validation register](../03-validation/PG-AR-Configure-Collections-Favourites-Validation.md). The markers are not part of the guide text.
 
-> **Partly merged (D-048).** The general steps are now topic 3 of [260 O2C Getting Started v0.1](260-O2C%20Getting%20Started%20PG%20v0.1.docx). This draft stays live for the four AR Collections pages, which go to 230 Collections Part 1.
+> **Merged and frozen (D-048, D-052).** The general steps are topic 3 of [260 O2C Getting Started v0.1](260-O2C%20Getting%20Started%20PG%20v0.1.docx), and the four AR Collections pages are in Part 1 of [230 Collections v3.0](230-Collections%20PG%20v3.0.docx). Edit those guides, not this draft.
 
 The fixed template content is not repeated here: cover, Contents, *About this guide* and the *Additional Resources* links. The sections below are the content this guide adds.
 

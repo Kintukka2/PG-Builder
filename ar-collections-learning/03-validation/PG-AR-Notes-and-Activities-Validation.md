@@ -5,8 +5,10 @@
 | Related PG (editable source) | [`../01-procedure-guides/TBC-AR Collections Notes and Activities PG v0.1.docx`](../01-procedure-guides/TBC-AR%20Collections%20Notes%20and%20Activities%20PG%20v0.1.docx) |
 | Markdown preview | [`../01-procedure-guides/PG-AR-Notes-and-Activities-DRAFT.md`](../01-procedure-guides/PG-AR-Notes-and-Activities-DRAFT.md) |
 | Screenshot register | [`../02-screenshot-registers/PG-AR-Notes-and-Activities-Screenshots.md`](../02-screenshot-registers/PG-AR-Notes-and-Activities-Screenshots.md) |
-| Last updated | 2026-10-14 |
+| Last updated | 2026-11-03 |
 | Items | 22 total, all open: 15 blocking, 7 non-blocking |
+
+> **Merged and frozen (D-052).** This topic draft is now topics 2.5 and 2.6 of the [230 Collections v3.0](../01-procedure-guides/230-Collections%20PG%20v3.0.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Notes and Activities VG-xx*.
 
 This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are scoped to this guide and never renumbered. Each open item that affects the text is also a Word review comment by "Validation register" (VR).
 
@@ -68,7 +70,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-14 | Initiation events for this task. | Part 1 Initiation; topic Initiations; Process table *When* | 2, 13 | B | SME | Open |
 | VG-15 | Stream, process area and business role name. Shared with the other AR Collections guides. | Stream table; Process table; Roles matrix | 3 | B | SME | Open |
 | VG-16 | Business process owner (BPO). | Version history | 1 | B | SME | Open |
-| VG-17 | Destination guide and topic (D-045). Proposed: 230 Collections, topic 2.4 Review Notes and Activities, merged with legacy topic 2.2. Notes and activities stay in one topic. | Cover; file name; destination guide | 0 | B | Dec | Open |
+| VG-17 | Destination guide and topic (D-045). Proposed: 230 Collections, topics 2.5 Review Customer Notes and 2.6 Review All Customer Activities, merged with legacy topic 2.2. Merged into the 230 v3.0 working draft (D-052). | Cover; file name; destination guide | 0 | B | Dec | Open |
 | VG-18 | Whether any reports or inquiries apply. If none, "No applicable reports". | Part 3 | 18 | B | SME | Open |
 | VG-19 | The security role needed for the workspace, Notes and View all activities, and a test with it. | PROCESS START (both topics) | — | B | Test, SME | Open |
 | VG-20 | SME factual review, a test by someone other than the author, and approval. | Whole guide | — | B | SME | Open |
@@ -101,3 +103,4 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | Date | Change |
 |---|---|
 | 2026-10-14 | Register created with the v0.1 SME review draft. |
+| 2026-11-03 | Merged into 230 Collections v3.0 (D-052); D1 destination updated to the v3.0 topic numbers. |
