@@ -8,7 +8,7 @@
 | Companion | The [clean-session test plan](Clean-Session-Test-Plan.md) covers the items that a D365 test can answer. 31 items here also have a test part; the test confirms the label, and this pack confirms the intended behavior or rule. |
 | Legacy PG proposals | 11 questions (46 items) show a proposed answer from the legacy O2C procedure guides, where the [legacy cross-comparison](Legacy-O2C-PG-Cross-Comparison.md) rates the evidence strong. |
 | Status | Draft for SME review. No answers yet. Legacy PG proposals added 2026-10-26. |
-| Last updated | 2026-11-01 |
+| Last updated | 2026-11-03 |
 
 ## How to answer
 
@@ -481,19 +481,19 @@ Under decision D-045, each task is a topic inside a process-level guide, so thes
 
 | ID | Guide | Item | Proposed destination | Answer |
 |---|---|---|---|---|
-| D1.FAV | Favorites | VG-22 (B) | 260 O2C Getting Started, topic 3 Add Pages to Favorites. The four AR Collections pages go in 230 Collections Part 1 (Set up D365 for collections work). Merged into the 260 v0.1 working draft (D-048). | |
-| D1.VIEW | Personalized Views | VG-24 (B) | 260 O2C Getting Started, topics 4 Create a Personalized View and 5 Update a Saved View. The recommended columns go in 230 Collections Part 1. Merged into the 260 v0.1 working draft (D-048). | |
-| D1.AGED | Aged Balances | VG-17 (B) | 230 Collections, topic 2.2 Review Aged Balances, merged with legacy topic 2.1. | |
-| D1.INV | Customer Invoices | VG-16 (B) | 230 Collections, topic 7.1 Retrieve or Resend a Customer Invoice, merged with legacy topic 6.1. | |
+| D1.FAV | Favorites | VG-22 (B) | 260 O2C Getting Started, topic 3 Add Pages to Favorites. The four AR Collections pages go in 230 Collections Part 1 (Set up D365 for collections work). Merged into the 260 v0.1 working draft (D-048); the four pages are in the 230 v3.0 working draft (D-052). | |
+| D1.VIEW | Personalized Views | VG-24 (B) | 260 O2C Getting Started, topics 4 Create a Personalized View and 5 Update a Saved View. The recommended columns go in 230 Collections Part 1. Merged into the 260 v0.1 working draft (D-048); the columns are in the 230 v3.0 working draft (D-052). | |
+| D1.AGED | Aged Balances | VG-17 (B) | 230 Collections, topics 2.2 Review Customer Aged Balances, merged with legacy topic 2.1, and 2.3 Filter Aged Balances by Customer or Currency. Merged into the 230 v3.0 working draft (D-052). | |
+| D1.INV | Customer Invoices | VG-16 (B) | 230 Collections, topic 7.1 View and Download a Customer Invoice, merged with legacy topic 6.1. Merged into the 230 v3.0 working draft (D-052). | |
 | D1.EXP | Export to Excel | VG-15 (B) | 260 O2C Getting Started, topic 6 Export All Rows from a Grid. Merged into the 260 v0.1 working draft (D-048). | |
-| D1.NOTE | Notes and Activities | VG-17 (B) | 230 Collections, topic 2.4 Review Notes and Activities, merged with legacy topic 2.2. Notes and activities stay in one topic. | |
+| D1.NOTE | Notes and Activities | VG-17 (B) | 230 Collections, topics 2.5 Review Customer Notes and 2.6 Review All Customer Activities, merged with legacy topic 2.2. Merged into the 230 v3.0 working draft (D-052). | |
 | D1.LE | Legal Entities | VG-17 (B) | 260 O2C Getting Started, topics 1 Switch Legal Entity with the Selector and 2 Switch Legal Entity Using the Ledger Code. Merged into the 260 v0.1 working draft (D-048). | |
-| D1.WS | Workspace | VG-17 (B) | 230 Collections, topic 1 Start the Collections Day. | |
-| D1.OD | Overdue Customers | VG-17 (B) | 230 Collections, topics 2.1 Review Customers Overdue and 4.1 Check an Overdue Balance Before Contact. | |
-| D1.ACCT | Customer Account | VG-19 (B) | 230 Collections, topic 2.3 Investigate a Customer Account, with its three subtopics kept together. | |
-| D1.ACT | Collection Activities | VG-19 (B) | 230 Collections, topic 5 Record a Customer Activity, merged with legacy topic 5. | |
-| D1.SP | Statement Preview | VG-19 (B) | 230 Collections, topic 6.1 Preview and Download a Customer Statement. Preview and send stay separate subtopics of topic 6. | |
-| D1.SD | Statement Distribution | VG-21 (B) | 230 Collections, topic 6.2 Send a Customer Statement, merged with legacy topic 1. | |
+| D1.WS | Workspace | VG-17 (B) | 230 Collections, topic 1 Start the Collections Day. Merged into the 230 v3.0 working draft (D-052). | |
+| D1.OD | Overdue Customers | VG-17 (B) | 230 Collections, topics 2.1 Review Customers Overdue and 4.1 Check an Overdue Balance Before Contact. Merged into the 230 v3.0 working draft (D-052). | |
+| D1.ACCT | Customer Account | VG-19 (B) | 230 Collections, topic 2.4 Investigate a Customer Account, with its three subtopics kept together (2.4.1 to 2.4.3). Merged into the 230 v3.0 working draft (D-052). | |
+| D1.ACT | Collection Activities | VG-19 (B) | 230 Collections, topic 5 Record a Customer Collection Activity, merged with legacy topic 5. Merged into the 230 v3.0 working draft (D-052). | |
+| D1.SP | Statement Preview | VG-19 (B) | 230 Collections, topic 6.1 Preview and Download a Customer Statement. Preview and send stay separate subtopics of topic 6. Merged into the 230 v3.0 working draft (D-052). | |
+| D1.SD | Statement Distribution | VG-21 (B) | 230 Collections, topic 6.2 Generate and Send a Customer Statement, merged with legacy topic 1. Merged into the 230 v3.0 working draft (D-052). | |
 
 ### D2 Scope boundaries
 
@@ -531,3 +531,4 @@ Confirm each scope boundary, or say which to change. Each is the drafts' current
 | 2026-10-26 | Legacy PG proposals added to 11 questions (46 items) from the strong evidence in the legacy cross-comparison. The response sheet has a matching column. No answers recorded. |
 | 2026-11-01 | D1 now asks the SME to confirm each draft's destination topic (D-045, D-046), not a guide code. The A3 proposal uses the BPO spelling from the O2C PG numbering standard. |
 | 2026-11-01 | D1 destinations for Favorites, Personalized Views, Export to Excel and Legal Entities use the 260 topic numbers of the v0.1 working draft (D-048). The Command Centre step is removed (D-047). |
+| 2026-11-03 | D1 destinations use the topic numbers of the 230 v3.0 working draft (D-052): Customer Account is 2.4, Notes and Activities 2.5 and 2.6, Aged Balances 2.2 and 2.3. |

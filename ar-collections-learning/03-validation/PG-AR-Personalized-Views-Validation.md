@@ -5,10 +5,10 @@
 | Related PG (editable source) | [`../01-procedure-guides/TBC-AR Collections Personalized Views PG v0.1.docx`](../01-procedure-guides/TBC-AR%20Collections%20Personalized%20Views%20PG%20v0.1.docx) |
 | Markdown preview | [`../01-procedure-guides/PG-AR-Personalized-Views-DRAFT.md`](../01-procedure-guides/PG-AR-Personalized-Views-DRAFT.md) |
 | Screenshot register | [`../02-screenshot-registers/PG-AR-Personalized-Views-Screenshots.md`](../02-screenshot-registers/PG-AR-Personalized-Views-Screenshots.md) |
-| Last updated | 2026-11-01 |
+| Last updated | 2026-11-03 |
 | Items | 29 open: 23 blocking, 6 non-blocking |
 
-> **Partly merged (D-048).** The general steps are now topics 4 and 5 of the [260 O2C Getting Started v0.1](../01-procedure-guides/260-O2C%20Getting%20Started%20PG%20v0.1.docx) working draft, where the carried comments read *Personalized Views VG-xx* (register: [260-O2C-Getting-Started-Validation.md](260-O2C-Getting-Started-Validation.md)). This draft stays live for the recommended AR Collections columns, which go to 230 Collections Part 1. Answers recorded here apply to both.
+> **Merged and frozen (D-048, D-052).** The general steps are topics 4 and 5 of the [260 O2C Getting Started v0.1](../01-procedure-guides/260-O2C%20Getting%20Started%20PG%20v0.1.docx) working draft, and the recommended AR Collections columns are in Part 1 (*Set up D365 for collections work*) of the [230 Collections v3.0](../01-procedure-guides/230-Collections%20PG%20v3.0.docx) working draft. Edit those guides, not this draft. Record answers here against these IDs; they apply to both.
 
 This file is the guide's **question log**, as the PG Template Authoring Guide requires (decision D-016). The `VG-xx` IDs are scoped to this guide and never renumbered. Each open item that affects the text is also a Word review comment by "Validation register" (VR), anchored to that text.
 
@@ -72,7 +72,7 @@ This file is the guide's **question log**, as the PG Template Authoring Guide re
 | VG-21 | Initiation events. | Part 1 Initiation; topic Initiations; Process table *When* | 2 | B | SME | Open |
 | VG-22 | Stream, process area and business role name. Shared with the AR Collections Favorites guide (its VG-31). | Stream table; Process table; Roles matrix; Responsibility | 3 | B | SME | Open |
 | VG-23 | Business process owner (BPO). | Version history | 1 | B | SME | Open |
-| VG-24 | Destination guide and topic (D-045). Proposed: 260 O2C Getting Started, topics 4 Create a Personalized View and 5 Update a Saved View. The recommended columns go in 230 Collections Part 1. Merged into the 260 v0.1 working draft (D-048). | Cover; file name; destination guide | 0 | B | Dec | Open |
+| VG-24 | Destination guide and topic (D-045). Proposed: 260 O2C Getting Started, topics 4 Create a Personalized View and 5 Update a Saved View. The recommended columns go in 230 Collections Part 1. Merged into the 260 v0.1 working draft (D-048); the columns are in the 230 v3.0 working draft (D-052). | Cover; file name; destination guide | 0 | B | Dec | Open |
 | VG-25 | The security role needed, and whether view personalization can be restricted. Test with the standard AR Collections role. | PROCESS START (1.1) | — | B | Test, SME | Open |
 | VG-26 | SME factual review, a test by someone other than the author, designated reviewer and process-owner approval. | Whole guide | — | B | SME | Open |
 | VG-27 | Recording timestamps for the views demonstration. These are needed for frame review and screenshots. | Screenshot register | — | N | Rec | Open |
@@ -124,3 +124,4 @@ The terms shared with the AR Collections Favorites guide (Navigation Pane, Legal
 |---|---|
 | 2026-10-14 | Register created with the v0.1 SME review draft. |
 | 2026-11-01 | Merged into 260 v0.1 (D-048); D1 destination renumbered (D-048). |
+| 2026-11-03 | AR Collections content merged into 230 Collections v3.0 Part 1 (D-052); the draft is now frozen. |

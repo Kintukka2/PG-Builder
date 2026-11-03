@@ -5,8 +5,10 @@
 | Related PG (editable source) | [`../01-procedure-guides/TBC-AR Collections Statement Distribution PG v0.1.docx`](../01-procedure-guides/TBC-AR%20Collections%20Statement%20Distribution%20PG%20v0.1.docx) |
 | Markdown preview | [`../01-procedure-guides/PG-AR-Statement-Distribution-DRAFT.md`](../01-procedure-guides/PG-AR-Statement-Distribution-DRAFT.md) |
 | Screenshot register | [`../02-screenshot-registers/PG-AR-Statement-Distribution-Screenshots.md`](../02-screenshot-registers/PG-AR-Statement-Distribution-Screenshots.md) |
-| Last updated | 2026-10-14 |
+| Last updated | 2026-11-03 |
 | Items | 25 total, all open: 19 blocking, 6 non-blocking |
+
+> **Merged and frozen (D-052).** This topic draft is now topic 6.2 of the [230 Collections v3.0](../01-procedure-guides/230-Collections%20PG%20v3.0.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Statement Distribution VG-xx*.
 
 This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are scoped to this guide and never renumbered. Each open item that affects the text is also a Word review comment by "Validation register" (VR).
 
@@ -70,7 +72,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-18 | Initiation events, for example a statement cycle or a customer request. | Part 1 Initiation; topic Initiation; Process table *When* | 2 | B | SME | Open |
 | VG-19 | Stream, process area and business role name. Shared with the other AR Collections guides. | Stream table; Process table; Roles matrix | 3 | B | SME | Open |
 | VG-20 | Business process owner (BPO). | Version history | 1 | B | SME | Open |
-| VG-21 | Destination guide and topic (D-045). Proposed: 230 Collections, topic 6.2 Send a Customer Statement, merged with legacy topic 1. | Cover; file name; destination guide | 0 | B | Dec | Open |
+| VG-21 | Destination guide and topic (D-045). Proposed: 230 Collections, topic 6.2 Generate and Send a Customer Statement, merged with legacy topic 1. Merged into the 230 v3.0 working draft (D-052). | Cover; file name; destination guide | 0 | B | Dec | Open |
 | VG-22 | Whether any reports or inquiries apply. If none, "No applicable reports". | Part 3 | 19 | B | SME | Open |
 | VG-23 | The security role needed to send statements, and a test with it. | PROCESS START (1.1) | — | B | Test, SME | Open |
 | VG-24 | SME factual review, a test by someone other than the author, and approval. | Whole guide | — | B | SME | Open |
@@ -104,3 +106,4 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | Date | Change |
 |---|---|
 | 2026-10-14 | Register created with the v0.1 SME review draft. |
+| 2026-11-03 | Merged into 230 Collections v3.0 (D-052); D1 destination updated to the v3.0 topic numbers. |

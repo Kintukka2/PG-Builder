@@ -80,18 +80,18 @@ Review comments in the four topic drafts that are not review comments in this gu
 | Legal Entities | `VG-14`: Confirm the events that start this task. Source 2 supports switching to a nominated legal entity before processing. | Guide-level: `G260-04` |
 | Legal Entities | `VG-15`: Confirm the stream name, process area and business role name. These match the other AR Collections guides, where the same question is open. | Guide-level: `G260-05` |
 | Legal Entities | `VG-18`: Confirm whether any reports or inquiries apply to this process. If none apply, this section will read "No applicable reports". | Part 3 now states that no reports apply (decision A5) |
-| Favorites | `VG-22`: Destination guide and topic (D-045). Proposed: 260 O2C Getting Started, topic 3 Add Pages to Favorites. The four AR Collections pages go in 230 Collections Part 1 (Set up D365 for collections work). Merged into the 260 v0.1 working draft (D-048). | Guide-level: `G260-01` |
+| Favorites | `VG-22`: Destination guide and topic (D-045). Proposed: 260 O2C Getting Started, topic 3 Add Pages to Favorites. The four AR Collections pages go in 230 Collections Part 1 (Set up D365 for collections work). Merged into the 260 v0.1 working draft (D-048); the four pages are in the 230 v3.0 working draft (D-052). | Guide-level: `G260-01` |
 | Favorites | `VG-33`: Confirm the business process owner (BPO) for this guide. | Guide-level: `G260-02` |
 | Favorites | `VG-30`: Confirm the events that start this task. The source material supports only initial setup by a new AR Collections user. Are there others, for example a role change? | Guide-level: `G260-04` |
 | Favorites | `VG-31`: Confirm the stream name, process area and business role name. "Accounts Receivable", "AR Collections" and "Collections Officer" come from the training source and may not match the team's standard labels. | Guide-level: `G260-05` |
-| Favorites | `VG-01`: Confirm the exact menu label: "Aged balances" or "Age balances". | Stays open in the topic draft register: AR Collections content for 230 Collections Part 1 |
-| Favorites | `VG-18`: Confirm what AR Collections users use Customer payment journal for. This description is limited to what the training source states. | Stays open in the topic draft register: AR Collections content for 230 Collections Part 1 |
-| Favorites | `VG-19`: Confirm this description against the training recording. | Stays open in the topic draft register: AR Collections content for 230 Collections Part 1 |
-| Favorites | `VG-01 / VG-03`: Confirm the exact label and the menu location of Aged balances. | Stays open in the topic draft register: AR Collections content for 230 Collections Part 1 |
-| Favorites | `VG-04`: Confirm that Customer payment journal is available in the Credit and collections module, and confirm its menu location. | Stays open in the topic draft register: AR Collections content for 230 Collections Part 1 |
-| Favorites | `VG-05`: Confirm the menu location of Open customer invoices in the Accounts receivable module. | Stays open in the topic draft register: AR Collections content for 230 Collections Part 1 |
+| Favorites | `VG-01`: Confirm the exact menu label: "Aged balances" or "Age balances". | Stays open in the topic draft register; applies to the AR Collections page list in 230 Collections v3.0 Part 1 (D-052) |
+| Favorites | `VG-18`: Confirm what AR Collections users use Customer payment journal for. This description is limited to what the training source states. | Stays open in the topic draft register; applies to the AR Collections page list in 230 Collections v3.0 Part 1 (D-052) |
+| Favorites | `VG-19`: Confirm this description against the training recording. | Stays open in the topic draft register; applies to the AR Collections page list in 230 Collections v3.0 Part 1 (D-052) |
+| Favorites | `VG-01 / VG-03`: Confirm the exact label and the menu location of Aged balances. | Stays open in the topic draft register; applies to the AR Collections page list in 230 Collections v3.0 Part 1 (D-052) |
+| Favorites | `VG-04`: Confirm that Customer payment journal is available in the Credit and collections module, and confirm its menu location. | Stays open in the topic draft register; applies to the AR Collections page list in 230 Collections v3.0 Part 1 (D-052) |
+| Favorites | `VG-05`: Confirm the menu location of Open customer invoices in the Accounts receivable module. | Stays open in the topic draft register; applies to the AR Collections page list in 230 Collections v3.0 Part 1 (D-052) |
 | Favorites | `VG-32`: Confirm whether any reports or inquiries apply to this process. If none apply, this section will read "No applicable reports". | Part 3 now states that no reports apply (decision A5) |
-| Personalized Views | `VG-24`: Destination guide and topic (D-045). Proposed: 260 O2C Getting Started, topics 4 Create a Personalized View and 5 Update a Saved View. The recommended columns go in 230 Collections Part 1. Merged into the 260 v0.1 working draft (D-048). | Guide-level: `G260-01` |
+| Personalized Views | `VG-24`: Destination guide and topic (D-045). Proposed: 260 O2C Getting Started, topics 4 Create a Personalized View and 5 Update a Saved View. The recommended columns go in 230 Collections Part 1. Merged into the 260 v0.1 working draft (D-048); the columns are in the 230 v3.0 working draft (D-052). | Guide-level: `G260-01` |
 | Personalized Views | `VG-23`: Confirm the business process owner (BPO) for this guide. | Guide-level: `G260-02` |
 | Personalized Views | `VG-21`: Confirm the events that start this task. The source material supports setting up views that show the information needed for collection work. | Guide-level: `G260-04` |
 | Personalized Views | `VG-22`: Confirm the stream name, process area and business role name. These match the AR Collections Favorites guide, where the same question is open. | Guide-level: `G260-05` |
@@ -110,3 +110,4 @@ Review comments in the four topic drafts that are not review comments in this gu
 |---|---|
 | 2026-11-01 | Register created with the v0.1 working draft, assembled from the topic drafts (D-045, D-046, D-048). |
 | 2026-11-01 | Guide added to the SME review pack (v2) for review only (D-048 amendment). |
+| 2026-11-03 | Section 5: the Favorites page-list items now point to 230 Collections v3.0 Part 1 (D-052). |

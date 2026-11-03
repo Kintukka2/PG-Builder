@@ -4,7 +4,7 @@
 |---|---|
 | Rule | One task per topic, inside a process-level guide (D-045). The 17 AR Collections drafts are **topic drafts**: each one merges into a destination guide. |
 | Guide codes | From the O2C PG Numbering Standard v1.3 (T3). This plan proposes two new codes: **221** and **260** (D-046). |
-| Status | Proposed. **260 and 221 are built as v0.1 working drafts** (D-048). Both are shared with the SME for review only (D-048). Before either circulates further, the register owner records both codes in `O2C_PG_Numbering_Register.json` and its companion, and the BPO confirms the scope of 221 and the split from 230. 240 Direct Debit is required but has no document yet (D-049). |
+| Status | Proposed. **260 and 221 are built as v0.1 working drafts** (D-048). Both are shared with the SME for review only (D-048). Before either circulates further, the register owner records both codes in `O2C_PG_Numbering_Register.json` and its companion, and the BPO confirms the scope of 221 and the split from 230. 230 Collections has a v2.4 draft (the 221 split, D-051) and a v3.0 working draft with the nine topic drafts (D-052). 240 Direct Debit is required but has no document yet (D-049). |
 | Last updated | 2026-11-01 |
 
 ---
@@ -70,7 +70,7 @@ The standard requires a predecessor mapping for a split ("A split into distinct 
 | 210 Customer Invoices; 211 Subscription Billing | None | — |
 | 220 Customer Payments | Links only | §4 Create a Manual Payment Journal links to the journal controls in 221 Part 1. §4.3 Reverse a Customer Payment Journal stays here; 221 links to it. |
 | **221 Customer Payment Corrections** | New (proposed); split from 230. v0.1 working draft built (D-048) | Legacy 230 §6.5, §6.6 and §6.8; the Transfers topic draft (replacing §6.7), Parent Payment Distribution and Restoration topic drafts; the CPJL controls reference as Part 1 Key concepts |
-| **230 Collections** | v2.4 draft applies the split to 221 (D-051); then expanded and restructured (next major version) | Workspace, Overdue Customers, Aged Balances, Customer Account, Notes and Activities, Collection Activities, Customer Invoices, Statement Preview and Statement Distribution; the Collections-specific parts of Favorites and Personalized Views |
+| **230 Collections** | v2.4 draft applies the split to 221 (D-051); v3.0 working draft expanded and restructured (D-052) | Workspace, Overdue Customers, Aged Balances, Customer Account, Notes and Activities, Collection Activities, Customer Invoices, Statement Preview and Statement Distribution; the Collections-specific parts of Favorites and Personalized Views |
 | **240 Direct Debit** | Required; no document yet (D-049) | Proposed: legacy 230 §2.4 and legacy 220 §5. See section 4.4 |
 
 ---
@@ -96,33 +96,38 @@ The two legal entity methods are separate topics because each is complete on its
 
 Candidates found in the legacy PGs, not yet evidenced for AR Collections: add an attachment to a record (210 §1.2); share a link to a page (230 §6.7); check a batch job (230 §1); submit a journal for approval (230 §6.4, §6.7; 220 §4.1). Each needs the recording or an SME before it is drafted.
 
-### 4.2 230 Collections (expanded)
+### 4.2 230 Collections (expanded; v3.0 working draft built)
 
-The v2.4 draft (D-051) applies only the split: 6.5 to 6.8 move to 221, the transaction exclusion steps move to 6.3, and 2.4 is flagged for 240. This outline is the next major version.
+Two drafts exist. **v2.4** (D-051) applies only the split from the published v2.3: 6.5 to 6.8 move to 221, the transaction exclusion steps move to 6.3, and 2.4 is flagged for 240. It is for sign-off together with 221. **v3.0** (D-052) is the next major version, rebuilt in the master template with the nine topic drafts, as below.
 
-**Part 1 additions:** a Key concept **Set up D365 for collections work**, with the four AR Collections favorite pages (from the Favorites topic draft) and the recommended view columns (from the Personalized Views topic draft), linking to 260 topics 3 and 4. Also the workspace definition and the aging indicator legend.
+**Part 1 additions:** a Key concept **Set up D365 for collections work**, with the four AR Collections favorite pages (from the Favorites topic draft) and the recommended view columns (from the Personalized Views topic draft), linking to 260 topics 3 and 4. Also the workspace terms and the Key concepts of every topic draft, after the legacy Key concepts.
 
-| Topic | Source | Type |
+| Topic in v3.0 | Source | Type |
 |---|---|---|
-| 1. Start the Collections Day: 1.1 Open the Customer Credit and Collections Workspace; 1.2 Locate Collection Work | Workspace topic draft | New |
+| 1. Start the Collections Day: 1.1 Open the Customer Credit and Collections Workspace; 1.2 Locate Collection Work in the Workspace | Workspace topic draft | New |
 | 2. Monitor Customers (parent) | Legacy 2 | Existing |
 | 2.1 Review Customers Overdue | Overdue Customers topic draft, topic 1 | New |
-| 2.2 Review Aged Balances | Aged Balances topic draft, with legacy 2.1 | Merge |
-| 2.3 Investigate a Customer Account (open the account, review transactions, review settlement history) | Customer Account topic draft | New |
-| 2.4 Review Notes and Activities | Notes and Activities topic draft, with legacy 2.2 | Merge |
-| 2.5 Update Customer Details | Legacy 2.3 (duplicates 200 §3.4: link instead, BPO to decide) | Existing |
-| 3. Manage Customer Pools and Collections Agents: 3.1, 3.2 | Legacy 3 | Existing |
-| 4. Contact the Customer: 4.1 Check an Overdue Balance Before Contact; 4.2 Contact the Customer (off-system) | Overdue Customers topic draft, topic 2; legacy 4 | New and existing |
-| 5. Record a Customer Activity | Collection Activities topic draft, with legacy 5 | Merge |
-| 6. Manage Customer Statements: 6.1 Preview and Download a Customer Statement; 6.2 Send a Customer Statement | Statement Preview topic draft; Statement Distribution topic draft, with legacy 1 | New and merge |
+| 2.2 Review Customer Aged Balances | Aged Balances topic draft, topic 1; legacy 2.1 as a note | Merge |
+| 2.3 Filter Aged Balances by Customer or Currency | Aged Balances topic draft, topic 2 | New |
+| 2.4 Investigate a Customer Account: 2.4.1 Open the Customer Account; 2.4.2 Review Customer Transactions; 2.4.3 Review Settlement History | Customer Account topic draft | New |
+| 2.5 Review Customer Notes | Notes and Activities topic draft, topic 1 | New |
+| 2.6 Review All Customer Activities | Notes and Activities topic draft, topic 2; legacy 2.2 as a note | Merge |
+| 2.7 Update Customer Details | Legacy 2.3 (duplicates 200 §3.4: link instead, BPO to decide) | Existing |
+| 2.8 Maintain Customer Direct Debit & eBanking Details | Legacy 2.4, until 240 is published | Existing |
+| 3. Manage Customer Pools and Collection Agents: 3.1 Create Customer Pools for Collections; 3.2 Add a New Collections Agent | Legacy 3 | Existing |
+| 4. Contact the Customer (off-system): 4.1 Check an Overdue Balance Before Contact | Legacy 4; Overdue Customers topic draft, topic 2 | Existing and new |
+| 5. Record a Customer Collection Activity | Collection Activities topic draft; legacy 5 as a note | Merge |
+| 6. Manage Customer Statements: 6.1 Preview and Download a Customer Statement (6.1.1, 6.1.2); 6.2 Generate and Send a Customer Statement (6.2.1, 6.2.2) | Statement Preview topic draft; Statement Distribution topic draft, legacy 1 as a note | New and merge |
 | 7. Resolve the Account (parent) | Legacy 6 | Existing |
-| 7.1 Retrieve or Resend a Customer Invoice | Customer Invoices topic draft, with legacy 6.1 | Merge |
+| 7.1 View and Download a Customer Invoice (7.1.1, 7.1.2) | Customer Invoices topic draft; legacy 6.1 as a note | Merge |
 | 7.2 Create and Send a Collection Letter | Legacy 6.2 | Existing |
-| 7.3 Change Customer Account Status (including exclusion from credit management) | Legacy 6.3 | Existing |
+| 7.3 Change Customer Status (including exclusion from credit management) | Legacy 6.3, with the transaction exclusion steps from legacy 6.5 | Existing |
 | 7.4 Write Off an Uncollectible Debt | Legacy 6.4 | Existing |
 | 8. Update and Close a Customer Activity | Legacy 7 | Existing |
 
-**Legacy-to-new topic numbers in 230:** 1 → 6.2; 2.1 → 2.2; 2.2 → 2.4; 2.3 → 2.5; 2.4 → 240; 3 → 3; 4 → 4.2; 5 → 5; 6.1 → 7.1; 6.2 → 7.2; 6.3 → 7.3; 6.4 → 7.4; 6.5 to 6.8 → 221; 7 → 8.
+**Merge rule (D-052):** where a topic draft and a legacy section cover the same task, the draft's procedure is the topic and the legacy-only content is a note with a `G230` item to confirm. No legacy steps are mixed into draft procedures.
+
+**Legacy-to-new topic numbers in 230:** 1 → 6.2; 2 → 2; 2.1 → 2.2; 2.2 → 2.6; 2.3 → 2.7; 2.4 → 2.8, then 240; 3 → 3; 4 → 4; 5 → 5; 6 → 7; 6.1 → 7.1; 6.2 → 7.2; 6.3 → 7.3; 6.4 → 7.4; 6.5 to 6.8 → 221; 7 → 8.
 
 ### 4.3 221 Customer Payment Corrections (new; v0.1 built)
 
@@ -158,19 +163,19 @@ Excluding a transaction from direct debit runs stays in 230 topic 7.3, which lin
 
 | Topic draft | Destination | Merge type | Open items (blocking) |
 |---|---|---|---|
-| Favorites | 260 topic 3 (merged in 260 v0.1); the AR page list goes to 230 Part 1 | Split | 30 (16) |
-| Personalized Views | 260 topics 4 and 5 (merged in 260 v0.1); the recommended columns go to 230 Part 1 | Split | 29 (23) |
+| Favorites | 260 topic 3 (merged in 260 v0.1); the AR page list is in 230 v3.0 Part 1 | Split | 30 (16) |
+| Personalized Views | 260 topics 4 and 5 (merged in 260 v0.1); the recommended columns are in 230 v3.0 Part 1 | Split | 29 (23) |
 | Legal Entities | 260 topics 1 and 2 (merged in 260 v0.1) | New | 22 (13) |
 | Export to Excel | 260 topic 6 (merged in 260 v0.1) | New | 20 (12) |
-| Workspace | 230 topic 1 | New | 22 (14) |
-| Overdue Customers | 230 topics 2.1 and 4.1 | New | 22 (16) |
-| Aged Balances | 230 topic 2.2 | Merge with legacy 2.1 | 22 (15) |
-| Customer Account | 230 topic 2.3 | New | 24 (17) |
-| Notes and Activities | 230 topic 2.4 | Merge with legacy 2.2 | 22 (15) |
-| Collection Activities | 230 topic 5 | Merge with legacy 5 | 24 (17) |
-| Statement Preview | 230 topic 6.1 | New | 24 (16) |
-| Statement Distribution | 230 topic 6.2 | Merge with legacy 1 | 25 (19) |
-| Customer Invoices | 230 topic 7.1 | Merge with legacy 6.1 | 22 (14) |
+| Workspace | 230 topics 1.1 and 1.2 (merged in 230 v3.0) | New | 22 (14) |
+| Overdue Customers | 230 topics 2.1 and 4.1 (merged in 230 v3.0) | New | 22 (16) |
+| Aged Balances | 230 topics 2.2 and 2.3 (merged in 230 v3.0) | Merge with legacy 2.1 | 22 (15) |
+| Customer Account | 230 topic 2.4 (merged in 230 v3.0) | New | 24 (17) |
+| Notes and Activities | 230 topics 2.5 and 2.6 (merged in 230 v3.0) | Merge with legacy 2.2 | 22 (15) |
+| Collection Activities | 230 topic 5 (merged in 230 v3.0) | Merge with legacy 5 | 24 (17) |
+| Statement Preview | 230 topic 6.1 (merged in 230 v3.0) | New | 24 (16) |
+| Statement Distribution | 230 topic 6.2 (merged in 230 v3.0) | Merge with legacy 1 | 25 (19) |
+| Customer Invoices | 230 topic 7.1 (merged in 230 v3.0) | Merge with legacy 6.1 | 22 (14) |
 | Customer Account Transfers | 221 topic 3 (merged in 221 v0.1) | Replace legacy 230 §6.7 | Shared Part 2 register: 46 (38) |
 | Parent Payment Distribution | 221 topic 4 (merged in 221 v0.1) | New | Shared Part 2 register |
 | Overpayment and Write-Off Restoration | 221 topic 5 (merged in 221 v0.1) | New | Shared Part 2 register |
@@ -183,20 +188,20 @@ Excluding a transaction from direct debit runs stays in 230 topic 7.3, which lin
 |---|---|---|
 | 1 | AR Collections orientation (learning module) | Learning content linking to 260 and 230 topic 1 |
 | 2 | Switch between legal entities | 260 topics 1 and 2 |
-| 3 | Navigate the Customer Credit and Collections workspace | 230 topic 1 |
+| 3 | Navigate the Customer Credit and Collections workspace | 230 topics 1.1 and 1.2 |
 | 4 | Configure AR Collections Favorites | 260 topic 3; 230 Part 1 |
 | 5 | Create and save a personalized view | 260 topics 4 and 5; 230 Part 1 |
 | 6 | Review overdue customers | 230 topics 2.1 and 4.1 |
-| 7 | Review customer aged balances | 230 topic 2.2 |
-| 8 | Investigate a customer account | 230 topic 2.3 |
-| 9 | Review customer notes and activities | 230 topic 2.4 |
+| 7 | Review customer aged balances | 230 topics 2.2 and 2.3 |
+| 8 | Investigate a customer account | 230 topic 2.4 |
+| 9 | Review customer notes and activities | 230 topics 2.5 and 2.6 |
 | 10 | Record a collection activity | 230 topic 5 |
 | 11 | View and download a customer invoice | 230 topic 7.1 |
 | 12 | Generate and send a customer statement | 230 topic 6.2 |
 | 13 | Preview and download a customer statement | 230 topic 6.1 |
 | 14 | Investigate unallocated payments | 221 (candidate topic) |
 | 15 | Settle customer transactions | 221 topic 1 |
-| 16 | Review and undo settlements | Review: 230 topic 2.3. Undo: 221 topic 2 |
+| 16 | Review and undo settlements | Review: 230 topic 2.4.3. Undo: 221 topic 2 |
 | 17 | Export all rows from a D365 grid | 260 topic 6 |
 | 18 | Write off a customer transaction | Uncollectible debt: 230 topic 7.4. Bank fee or residual: 221 topic 6 |
 | 19 | Validate and submit a write-off journal | 230 topic 7.4 |
@@ -222,7 +227,7 @@ Excluding a transaction from direct debit runs stays in 230 topic 7.3, which lin
 
 ## 7. Merge gate
 
-A topic draft merges into its destination guide when all of these hold. 260 and 221 were built ahead of this gate at the user's request (D-048): they stay v0.1 working drafts, inside the project team, until gate 1 holds, and gates 2 to 4 still apply before either is published.
+A topic draft merges into its destination guide when all of these hold. 260 and 221 (D-048) and 230 v3.0 (D-052) were built ahead of this gate at the user's request: they stay v0.1 working drafts, inside the project team, until gate 1 holds, and gates 2 to 4 still apply before either is published.
 
 1. **Codes recorded.** For 221 and 260: the register owner has recorded the code, and the BPO has confirmed the scope ("Confirm scope before adding a new standalone guide").
 2. **Conflicts resolved.** Every conflict between the topic and legacy content (cross-comparison section 5) is settled by the D365 test, the recording or the SME. Where legacy content and the recording disagree, the recording governs (D-044).
@@ -244,3 +249,4 @@ A topic draft merges into its destination guide when all of these hold. 260 and 
 | 2026-11-01 | 260 and 221 built as v0.1 working drafts (D-048); 260 topics renumbered 1 to 6; 240 Direct Debit recorded as required with no document yet, with a proposed scope (D-049). |
 | 2026-11-03 | Plan shared with the O2C stakeholders (D-050). ADO tickets: 221 Task 16993, 260 Task 16994, 240 Task 16894, 230 Task 16886. Each guide needs BPO sign-off. |
 | 2026-11-03 | 230 v2.4 draft built from v2.3: the split to 221 applied (D-051, ADO Task 16886). |
+| 2026-11-03 | 230 v3.0 working draft built with the nine topic drafts (D-052); section 4.2 shows it as built, and the destinations in sections 5 and 6 use its topic numbers. |

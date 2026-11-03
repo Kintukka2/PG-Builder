@@ -5,8 +5,10 @@
 | Related PG (editable source) | [`../01-procedure-guides/TBC-AR Collections Aged Balances PG v0.1.docx`](../01-procedure-guides/TBC-AR%20Collections%20Aged%20Balances%20PG%20v0.1.docx) |
 | Markdown preview | [`../01-procedure-guides/PG-AR-Aged-Balances-DRAFT.md`](../01-procedure-guides/PG-AR-Aged-Balances-DRAFT.md) |
 | Screenshot register | [`../02-screenshot-registers/PG-AR-Aged-Balances-Screenshots.md`](../02-screenshot-registers/PG-AR-Aged-Balances-Screenshots.md) |
-| Last updated | 2026-10-14 |
+| Last updated | 2026-11-03 |
 | Items | 23 total: 22 open (15 blocking, 7 non-blocking), 1 deferred |
+
+> **Merged and frozen (D-052).** This topic draft is now topics 2.2 and 2.3 of the [230 Collections v3.0](../01-procedure-guides/230-Collections%20PG%20v3.0.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Aged Balances VG-xx*.
 
 This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are scoped to this guide and never renumbered. Each open item that affects the text is also a Word review comment by "Validation register" (VR).
 
@@ -66,7 +68,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-14 | Initiation events, for example a daily or weekly review. | Part 1 Initiation; topic Initiations; Process table *When* | 2, 12 | B | SME | Open |
 | VG-15 | Stream, process area and business role name. Shared with the other AR Collections guides. | Stream table; Process table; Roles matrix | 3 | B | SME | Open |
 | VG-16 | Business process owner (BPO). | Version history | 1 | B | SME | Open |
-| VG-17 | Destination guide and topic (D-045). Proposed: 230 Collections, topic 2.2 Review Aged Balances, merged with legacy topic 2.1. | Cover; file name; destination guide | 0 | B | Dec | Open |
+| VG-17 | Destination guide and topic (D-045). Proposed: 230 Collections, topics 2.2 Review Customer Aged Balances, merged with legacy topic 2.1, and 2.3 Filter Aged Balances by Customer or Currency. Merged into the 230 v3.0 working draft (D-052). | Cover; file name; destination guide | 0 | B | Dec | Open |
 | VG-18 | Whether any reports or inquiries apply. If none, "No applicable reports". | Part 3 | 15 | B | SME | Open |
 | VG-19 | The security role needed for Aged balances, and a test with it. | PROCESS START | — | B | Test, SME | Open |
 | VG-20 | SME factual review, a test by someone other than the author, and approval. | Whole guide | — | B | SME | Open |
@@ -100,3 +102,4 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | Date | Change |
 |---|---|
 | 2026-10-14 | Register created with the v0.1 SME review draft. |
+| 2026-11-03 | Merged into 230 Collections v3.0 (D-052); D1 destination updated to the v3.0 topic numbers. |
