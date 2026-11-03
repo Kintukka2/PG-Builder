@@ -70,7 +70,7 @@ The standard requires a predecessor mapping for a split ("A split into distinct 
 | 210 Customer Invoices; 211 Subscription Billing | None | — |
 | 220 Customer Payments | Links only | §4 Create a Manual Payment Journal links to the journal controls in 221 Part 1. §4.3 Reverse a Customer Payment Journal stays here; 221 links to it. |
 | **221 Customer Payment Corrections** | New (proposed); split from 230. v0.1 working draft built (D-048) | Legacy 230 §6.5, §6.6 and §6.8; the Transfers topic draft (replacing §6.7), Parent Payment Distribution and Restoration topic drafts; the CPJL controls reference as Part 1 Key concepts |
-| **230 Collections** | Expanded and restructured (next major version) | Workspace, Overdue Customers, Aged Balances, Customer Account, Notes and Activities, Collection Activities, Customer Invoices, Statement Preview and Statement Distribution; the Collections-specific parts of Favorites and Personalized Views |
+| **230 Collections** | v2.4 draft applies the split to 221 (D-051); then expanded and restructured (next major version) | Workspace, Overdue Customers, Aged Balances, Customer Account, Notes and Activities, Collection Activities, Customer Invoices, Statement Preview and Statement Distribution; the Collections-specific parts of Favorites and Personalized Views |
 | **240 Direct Debit** | Required; no document yet (D-049) | Proposed: legacy 230 §2.4 and legacy 220 §5. See section 4.4 |
 
 ---
@@ -97,6 +97,8 @@ The two legal entity methods are separate topics because each is complete on its
 Candidates found in the legacy PGs, not yet evidenced for AR Collections: add an attachment to a record (210 §1.2); share a link to a page (230 §6.7); check a batch job (230 §1); submit a journal for approval (230 §6.4, §6.7; 220 §4.1). Each needs the recording or an SME before it is drafted.
 
 ### 4.2 230 Collections (expanded)
+
+The v2.4 draft (D-051) applies only the split: 6.5 to 6.8 move to 221, the transaction exclusion steps move to 6.3, and 2.4 is flagged for 240. This outline is the next major version.
 
 **Part 1 additions:** a Key concept **Set up D365 for collections work**, with the four AR Collections favorite pages (from the Favorites topic draft) and the recommended view columns (from the Personalized Views topic draft), linking to 260 topics 3 and 4. Also the workspace definition and the aging indicator legend.
 
@@ -241,3 +243,4 @@ A topic draft merges into its destination guide when all of these hold. 260 and 
 | 2026-11-01 | Plan created: one task per topic (D-045), codes 221 and 260 proposed under the O2C numbering standard (D-046). |
 | 2026-11-01 | 260 and 221 built as v0.1 working drafts (D-048); 260 topics renumbered 1 to 6; 240 Direct Debit recorded as required with no document yet, with a proposed scope (D-049). |
 | 2026-11-03 | Plan shared with the O2C stakeholders (D-050). ADO tickets: 221 Task 16993, 260 Task 16994, 240 Task 16894, 230 Task 16886. Each guide needs BPO sign-off. |
+| 2026-11-03 | 230 v2.4 draft built from v2.3: the split to 221 applied (D-051, ADO Task 16886). |
