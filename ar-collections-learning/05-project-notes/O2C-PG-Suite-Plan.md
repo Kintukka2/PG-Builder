@@ -139,12 +139,12 @@ Candidate: investigate an unallocated payment (backlog rank 14), once its conten
 
 ### 4.4 240 Direct Debit (required; no document yet)
 
-240 has a code in T3 and is a required guide, but no document exists yet (D-049). Proposed scope, for the BPO to confirm:
+240 has a code in T3 and is a required guide, but no document exists yet (D-049). This initial scope went to the O2C stakeholders on 2026-11-03 (D-050); Maria Pabalan confirms the rest by the week of 9 November 2026:
 
 | Topic (proposed) | Evidence today | Type |
 |---|---|---|
 | Maintain a customer's direct debit set-up (method of payment, payment specification, eBanking details, direct debit settings, customer bank account) | Legacy 230 §2.4 | Move from 230 |
-| Change or remove direct debit when a customer changes payment method | Legacy 230 §2.4 (final step) | Move from 230 |
+| Change or remove direct debit when a customer changes payment method | Legacy 230 §2.4 (final step) | Move from 230, subject to scope clarification with Maria Pabalan |
 | Process direct debit customer payments (payment proposal, direct debit journal, validate, create and send the direct debit file) | Legacy 220 §5 | Move from 220 |
 | Maintain credit card payments | Backlog rank 32; no content | Scope decision open |
 
@@ -240,3 +240,4 @@ A topic draft merges into its destination guide when all of these hold. 260 and 
 |---|---|
 | 2026-11-01 | Plan created: one task per topic (D-045), codes 221 and 260 proposed under the O2C numbering standard (D-046). |
 | 2026-11-01 | 260 and 221 built as v0.1 working drafts (D-048); 260 topics renumbered 1 to 6; 240 Direct Debit recorded as required with no document yet, with a proposed scope (D-049). |
+| 2026-11-03 | Plan shared with the O2C stakeholders (D-050). ADO tickets: 221 Task 16993, 260 Task 16994, 240 Task 16894, 230 Task 16886. Each guide needs BPO sign-off. |
