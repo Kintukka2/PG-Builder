@@ -185,7 +185,7 @@ Before you start, you need to know how settlement works, the controls that apply
 |---|---|
 | **Who may post a CPJL** | To be confirmed. |
 | **Whether approval is needed** | To be confirmed. |
-| **Checking the result after posting** | To be confirmed. 230 Collections topic 2.3 Investigate a Customer Account covers reviewing customer transactions. |
+| **Checking the result after posting** | To be confirmed. 230 Collections topic 2.4 Investigate a Customer Account covers reviewing customer transactions. |
 | **Correcting or reversing a posted journal** | To be confirmed. Legacy 220 Customer Payments section 4.3 covers reversing a customer payment journal; whether it applies to these journals is to be confirmed. |
 | **An unposted journal that is no longer needed** | To be confirmed. |
 | **The security role needed** | To be confirmed. If a page or control is missing, a security setting is a possible cause, not a confirmed one. |

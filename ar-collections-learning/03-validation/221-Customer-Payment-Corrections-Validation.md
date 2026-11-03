@@ -108,3 +108,4 @@ Part 2 register items that are not anchored as a review comment in this guide. T
 |---|---|
 | 2026-11-01 | Register created with the v0.1 working draft, assembled from the topic drafts (D-045, D-046, D-048). |
 | 2026-11-01 | Guide added to the SME review pack (v2) for review only (D-048 amendment). |
+| 2026-11-03 | Part 1 *Not yet confirmed* points to 230 topic 2.4 Investigate a Customer Account, its number in 230 v3.0 (D-052). |
