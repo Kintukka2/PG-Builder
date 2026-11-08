@@ -155,7 +155,7 @@ Candidate: investigate an unallocated payment (backlog rank 14), once its conten
 | Process direct debit customer payments (payment proposal, direct debit journal, validate, create and send the direct debit file) | Legacy 220 §5 | Move from 220 |
 | Maintain credit card payments | Backlog rank 32; no content | Scope decision open |
 
-Excluding a transaction from direct debit runs stays in 230 topic 7.3, which links to 240. eBanking details used for payment matching (220 §3.4 and §3.5) stay in 220. Nothing is drafted for 240 until the BPO confirms the scope and the legacy steps are checked against a recording or a D365 test (D-044).
+Excluding a transaction from direct debit runs stays in 230 topic 7.3, which links to 240. eBanking details used for payment matching (220 §3.4 and §3.5) stay in 220. Nothing is drafted for 240 until the BPO confirms the scope and the legacy steps are checked against a recording or a D365 test (D-044). Scoping questions for the meeting with Maria Pabalan (ADO Task 16894) are in the doc *240 Direct Debit Scoping Questions* (https://claude.ai/artifact/SegmHCWvsPWuHYeJiLEQdo): scope and boundaries, roles, set-up, collection runs, and controls.
 
 ---
 
@@ -250,3 +250,4 @@ A topic draft merges into its destination guide when all of these hold. 260 and 
 | 2026-11-03 | Plan shared with the O2C stakeholders (D-050). ADO tickets: 221 Task 16993, 260 Task 16994, 240 Task 16894, 230 Task 16886. Each guide needs BPO sign-off. |
 | 2026-11-03 | 230 v2.4 draft built from v2.3: the split to 221 applied (D-051, ADO Task 16886). |
 | 2026-11-03 | 230 v3.0 working draft built with the nine topic drafts (D-052); section 4.2 shows it as built, and the destinations in sections 5 and 6 use its topic numbers. |
+| 2026-11-08 | Section 4.4 links the 240 scoping questions. |

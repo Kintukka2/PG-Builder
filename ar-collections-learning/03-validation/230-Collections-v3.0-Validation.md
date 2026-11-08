@@ -4,7 +4,7 @@
 |---|---|
 | Guide (editable source) | [`230-Collections PG v3.0.docx`](../01-procedure-guides/230-Collections%20PG%20v3.0.docx) |
 | Markdown preview | [`PG-230-Collections-v3.0-DRAFT.md`](../01-procedure-guides/PG-230-Collections-v3.0-DRAFT.md) |
-| Status | Working draft v3.0 (D-052; ADO Task 16886). Internal to the project team until it is reviewed with Maria Pabalan; needs BPO sign-off. Version 2.3, then 2.4, stays published until 3.0 passes its gates. |
+| Status | Working draft v3.0 (D-052; ADO Task 16886). Shared with the SME for review only (SME review pack of 8 November; D-052 amendment); needs BPO sign-off. Version 2.3, then 2.4, stays published until 3.0 passes its gates. |
 | Last updated | 2026-11-03 |
 | Items | 10 guide-level items (`G230`), all open: 10 blocking, 0 non-blocking. 127 carried review comments from the topic drafts. |
 
@@ -147,3 +147,4 @@ Review comments in the nine topic drafts that are not review comments in this gu
 | Date | Change |
 |---|---|
 | 2026-11-03 | Register created with the v3.0 working draft, assembled from v2.4 and the nine topic drafts (D-052, ADO Task 16886). |
+| 2026-11-08 | Guide added to the SME review pack for review only (D-052 amendment). |
