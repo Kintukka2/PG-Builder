@@ -6,7 +6,7 @@
 | Markdown preview | [`PG-230-Collections-v3.0-DRAFT.md`](../01-procedure-guides/PG-230-Collections-v3.0-DRAFT.md) |
 | Status | Working draft v3.0 (D-052; ADO Task 16886). Shared with the SME for review only (SME review pack of 8 November; D-052 amendment); needs BPO sign-off. Version 2.3, then 2.4, stays published until 3.0 passes its gates. |
 | Last updated | 2026-11-03 |
-| Items | 10 guide-level items (`G230`), all open: 10 blocking, 0 non-blocking. 127 carried review comments from the topic drafts. |
+| Items | 10 guide-level items (`G230`), all open: 10 blocking, 0 non-blocking. 126 carried review comments from the topic drafts. |
 
 This file is the guide's **question log** (D-016). It holds the guide-level items, which are scoped to this guide and never renumbered. Review comments carried from the topic drafts keep their ID and draft name, for example *Aged Balances VG-03*, and their source register stays the record for them: an answer recorded there applies here (D-048). Each open item that affects the text is a Word review comment by "Validation register" (VR).
 
@@ -81,7 +81,6 @@ Every review comment in the Word guide, in document order. IDs not starting `G23
 | Topic 2.5 Review Customer Notes | `Notes and Activities VG-01 / VG-02`, `Notes and Activities VG-03`, `Notes and Activities VG-04`, `Notes and Activities VG-06`, `Notes and Activities VG-13` |
 | Topic 2.6 Review All Customer Activities | `Notes and Activities VG-14`, `Notes and Activities VG-07`, `Notes and Activities VG-08`, `Notes and Activities VG-09`, `Notes and Activities VG-10`, `G230-09` |
 | Topic 2.7 Update Customer Details | `G230-10` |
-| Topic 2.8 Maintain Customer Direct Debit & eBanking Details | `G230-04` |
 | Topic 4.1 Check an Overdue Balance Before Contact | `Overdue Customers VG-14`, `Overdue Customers VG-07`, `Overdue Customers VG-08`, `Overdue Customers VG-10` |
 | Topic 5 Record a Customer Collection Activity | `Collection Activities VG-01 / VG-03`, `Collection Activities VG-02`, `Collection Activities VG-04`, `Collection Activities VG-05`, `Collection Activities VG-07`, `Collection Activities VG-08 / VG-09`, `Collection Activities VG-12`, `Collection Activities VG-13`, `G230-11` |
 | Topic 6.1 Preview and Download a Customer Statement | `Statement Preview VG-01`, `Statement Preview VG-02`, `Statement Preview VG-03`, `Statement Preview VG-04`, `Statement Preview VG-05`, `Statement Preview VG-06`, `Statement Preview VG-07`, `Statement Preview VG-08`, `Statement Preview VG-09`, `Statement Preview VG-10 / VG-12`, `Statement Preview VG-11`, `Statement Preview VG-24` |
@@ -148,3 +147,4 @@ Review comments in the nine topic drafts that are not review comments in this gu
 |---|---|
 | 2026-11-03 | Register created with the v3.0 working draft, assembled from v2.4 and the nine topic drafts (D-052, ADO Task 16886). |
 | 2026-11-08 | Guide added to the SME review pack for review only (D-052 amendment). |
+| 2026-11-09 | Topic 2.8 now links to 240 Direct Debit and Credit Card Payments, topic 1, instead of repeating the steps (D-053). `G230-04` closed: decided at the 9 November meeting. |
