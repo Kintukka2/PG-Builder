@@ -40,7 +40,7 @@ Unchanged: 6.4 Debt Write-off, every other topic, Part 3 Reports and Additional 
 | G230-01 | Version 2.4 needs BPO sign-off. Version 2.3 stays published until 2.4 and 221 are both signed off, so settling, unsettling, transfers and bank fee write-offs are never missing from the live guides. | Version history | B | SME | Open |
 | G230-02 | Confirm the split: 6.5 to 221 topic 1, 6.6 to topic 2, 6.7 to topic 3 (replaced by the transfer steps from the recent training), 6.8 to topic 6. ADO Task 16993 tracks 221. | Topic 6 note | B | SME | Open |
 | G230-03 | Confirm the transaction-level exclusion steps moved from 6.5, and whether the checkbox saves on its own or needs **Save**. In 6.5 they ran just before posting the settlement. | 6.3, steps 19 to 21 | B | SME, Test | Open |
-| G230-04 | Confirm when 2.4 moves to 240 Direct Debit. Maria Pabalan confirms the remaining 240 scope by the week of 9 November 2026 (D-049, D-050). | 2.4 note | B | SME | Open |
+| G230-04 | Confirm when 2.4 moves to 240 Direct Debit. Maria Pabalan confirms the remaining 240 scope by the week of 9 November 2026 (D-049, D-050). | 2.4 note | B | SME | Closed: 9 November meeting (D-053). 230 keeps this topic as a link to 240 topic 1; the published guide keeps the steps until 240 is published. |
 
 ---
 
@@ -49,3 +49,4 @@ Unchanged: 6.4 Debt Write-off, every other topic, Part 3 Reports and Additional 
 | Date | Change |
 |---|---|
 | 2026-11-03 | Register created with the v2.4 draft (ADO Task 16886). |
+| 2026-11-09 | `G230-04` closed by the 9 November meeting (D-053). |

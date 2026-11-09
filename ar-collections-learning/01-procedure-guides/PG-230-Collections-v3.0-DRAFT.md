@@ -17,7 +17,7 @@ The fixed template content is not repeated here: cover, Contents, *About this gu
 | 2.2 | May 2026 | Suzanne Starr | Christoper Clarke | Content Update (CW1) |
 | 2.3 | October 2026 | Daniel Moreira | Christoper Clarke | Content Review |
 | 2.4 | November 2026 | Daniel Moreira | Christopher Clarke | Content Update, draft (ADO 16886): 6.5 to 6.8 moved to 221; 2.4 to move to 240 |
-| 3.0 | November 2026 | Daniel Moreira | Christopher Clarke | Working draft (ADO 16886): rebuilt in the PG master template; nine AR Collections topic drafts merged. Not validated or approved. `[G230-05]` |
+| 3.0 | November 2026 | Daniel Moreira | Christopher Clarke | Working draft (ADO 16886): rebuilt in the PG master template; nine AR Collections topic drafts merged; 2.8 links to 240. Not validated or approved. `[G230-05]` |
 
 Guide code, title and scope: `[]`.
 
@@ -478,7 +478,7 @@ This topic includes these steps:
 | [Review Customer Notes](#25-review-customer-notes) | Read the notes recorded for a customer. |
 | [Review All Customer Activities](#26-review-all-customer-activities) | Review previous collection activities for a customer. |
 | [Update Customer Details](#27-update-customer-details) | Review and update customer contact and account details. |
-| [Maintain Customer Direct Debit & eBanking Details](#28-maintain-customer-direct-debit--ebanking-details) | Maintain direct debit, banking and eBanking records. Moving to 240 Direct Debit. |
+| [Maintain Customer Direct Debit & eBanking Details](#28-maintain-customer-direct-debit--ebanking-details) | See 240 Direct Debit and Credit Card Payments, topic 1. |
 
 #### 2.1 Review Customers Overdue
 
@@ -747,45 +747,11 @@ Complete the steps below to Update Customer Details:
 
 #### 2.8 Maintain Customer Direct Debit & eBanking Details
 
-> **Note:** This topic is planned to move to **240 Direct Debit** (initial scope shared with the O2C stakeholders on 3 November 2026; ADO Task 16894). It stays in this guide until 240 is published. `[G230-04]`
+##### Description
 
-##### Procedure
+Direct debit and credit card details are maintained in **240 Direct Debit and Credit Card Payments**, topic 1 Maintain a Customer's Direct Debit Details. This topic stays here as the way in from Collections (D-053).
 
-Complete the steps below to Maintain Customer Direct Debit & eBanking Details:
-
-| **Action** | **Description** |
-|---|---|
-| *PROCESS START* | **Pre-requisite:**<br>1. *The customer account must exist in D365 F&O, and the approved customer authorisation form with current banking details must be available before creating or updating direct debit and eBanking records.* |
-| 2. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
-| 3. *Click* **Modules**. | From the left-hand **Navigation Pane**, click **Modules**. |
-| 4. *Navigate* to the **All Customers** page. | From the Navigation pane, select;<br>5. **Accounts receivable >**<br>6. **Customers >**<br>7. **All customers.**<br>The **All customers** page is displayed. |
-| 8. *Search* for the **Customer.** | In the **Filter** field, start *typing* the **customer’s** **name** or **account**.<br>If searching by customer name, select **Name** from the dropdown list (alternatively *select* **Account** or **Invoice** **account** as required).<br>The matching customer records are displayed in the list. |
-| 9. *Open the* **Customer Record.** | *Click* the **Account** hyperlink for the selected customer to open the record. |
-| 10. *Open* the **Payment defaults** FastTab. | *Scroll* to and *expand* the **Payment defaults** FastTab.<br>This section controls how customer payments are processed in D366. |
-| 11. *Edit* the **Payment defaults.** | On the Main Toolbar, *click* **Edit** to update the customer payment configuration fields. |
-| 12. *Update* **Method of payment** field. | In the **Method of payment** field, *select* the required direct debit payment method from the dropdown list, e.g., DDHDBCAU, DDHSBCUS.<br>The Method of payment determines how customer payments are generated and processed during direct debit payment runs.<br>Important:<br>When Method of payment is selected, D365 may automatically populate the related Payment specification field based on the configured payment setup. |
-| 13. *Validate* the **Payment specification** field. | Review the **Payment specification** and confirm that the automatically populated value is correct for the customer direct debit setup e.g., ACH-CCD = DDHSBCUS, DE = DDWBCAU.<br>The Payment specification identified the banking configuration and payment file format used during direct debit processing.<br>If the Payment specification field does not automatically populate, manually select the correct value from the dropdown list. |
-| 14. *Save* the **Payment** **default** **changes.** | On the Main toolbar, *click* **Save** to save the update before continuing. |
-| 15. *Click* **Modules**. | From the navigation pane, *click* **Modules** to expand the list of available functional areas. |
-| 16. *Navigate* to the **Customer eBanking details** page. | From the Navigation pane, select;<br>17. **Treasury Automation Suite** ><br>18. **Common** ><br>19. **Customer eBanking details.**<br>The Customer eBanking details page is used to maintain customer eBanking records by Treasury Automation Suite for payment processing. |
-| 20. *Search* for the **Customer** **eBanking** **record**. | Search for the customer using the customer account or customer name. If an existing customer eBanking record is displayed, review and update the existing information as required. |
-| 21. *Create* a **New** **eBanking** **record** (If required). | If the customer does not already exist in Customer eBanking details, *click* **+New.** Populate the required fields:<br>Note: The Customer eBanking details record links the customer account to Treasury Automation Suite (TAS) payment processing functionality and is used during automated payment matching, direct debit processing, and customer settlement activities. Alternate customer names may assist TAS in identifying customer payments where the bank transaction narrative differs from the official customer’s name. |
-| 22. *Configure* the **eSettlement / Lockbox settings***.* | Scroll to and expand the eSettlement / Lockbox section and complete the following fields:<br>Note: The eSettlement/lockbox settings control how imported customer payments and bank transactions are matched and settled against customer invoices during automated settlement processing. Incorrect settlement configuration may result in unmatched transactions, incorrect invoice allocations, or failed automated settlement processing. |
-| 23. *Configure* the **Direct Debit settings**. | Scroll to the Direct Debits section and update the required fields to enable the customer for direct debit processing.<br>Note: The Direct debit settings section controls whether the customer is enabled for automated direct debit processing within TAS. If these settings are not configured correctly, the customer may not be included in direct debit payment proposal processing. |
-| 24. *Create* a **Customer bank account.** | On the Main Toolbar, *click* **Customer bank accounts**.<br>The Customer bank accounts page is displayed. |
-| 25. *Click* **+New***.* | On the Main Toolbar, *click* **+New** to create a customer bank record.<br>This stores the customer’s banking information used for direct debit processing. |
-| 26. *Click* **Edit***.* | On the Main Toolbar, *click* **Edit**. |
-| 27. *Enter* the **Customer Bank Account** fields*.* | Scroll to and expand the General section.<br>Complete the required bank account fields;<br>Important:<br>Banking details must match exactly the approved customer authorization form. Incorrect banking information may cause direct debit errors. |
-| 28. *Add* **Address information***.* | Scroll to and expand the Address section. On the Address Toolbar, *click* +New. The New address pane will open.<br>Note: A full physical bank address is not required for this process. |
-| 29. *Click* **Save***.* | On the Main toolbar, *click* **Save** to save the customer's bank account configuration. |
-| 30. *Return* to **Customer eBanking details** screen. | On the Main Toolbar, *click* the **back arrow** to return to the **Customer eBanking details** screen. |
-| 31. *Create* a **Payment specifications** record*.* | On the Main toolbar, *click* **Payment specifications** tab to open the Customer eBanking payment spec details. |
-| 32. *Click* **+New***.* | On the Main Toolbar, *click* **+New** to create a new payment specification record used for direct debit processing. |
-| 33. *Populate* the **Payment specifications** fields*.* | In the Customer eBanking spec details page, complete the following fields: |
-| 34. *Save* the **Payment** **specification** **record***.* | On the Main toolbar, *click* Save to finalize the direct debit payment specification setup. |
-| 35. *Validate the Direct Debit configuration.* | Review and confirm the following information is correctly configured:<br>36. Method of payment is correct.<br>37. Payment specifications are assigned.<br>38. Customer bank accounts exist.<br>39. The currency is correct. Direct debits are activated.<br>40. The company's bank account is assigned. |
-| 41. *OPTIONAL:Update or Remove* **Direct Debit Details**. | If a customer changes payment method or opts out of direct debit processing:<br>42. Update or remove the Method of payment<br>43. Update or remove the Payment specification<br>44. Remove direct debit related banking details where required.<br>45. Update the customer to a new agreed payment arrangement.<br>Examples include:<br>46. Customer changing from Direct Debit to EFT<br>47. Customer moving to Credit Card payments<br>48. Customer temporarily opting out of direct debit processing. |
-| *PROCESS COMPLETE* | **Outcomes***:*<br>49. *Customer direct debit and eBanking details are correctly configured in D365 F&O and TAS.*<br>50. *Customer payment methods and banking information are accurately maintained for direct debit processing.*<br>51. *Customer records reflect current payment arrangements and direct debit status.* |
+Customer alternate names for payment matching are maintained by the receiving team (220 Customer Payments).
 
 ### 3. Manage Customer Pools and Collection Agents
 
