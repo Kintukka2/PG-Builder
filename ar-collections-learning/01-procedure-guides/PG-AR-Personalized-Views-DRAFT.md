@@ -6,7 +6,7 @@
 >
 > `[VG-xx]` markers show unconfirmed items. In the Word file, each one is a review comment for the SME. Full details are in the [validation register](../03-validation/PG-AR-Personalized-Views-Validation.md). The markers are not part of the guide text.
 
-> **Merged and frozen (D-048, D-052).** The general steps are topics 4 and 5 of [260 O2C Getting Started v0.1](260-O2C%20Getting%20Started%20PG%20v0.1.docx), and the recommended AR Collections columns are in Part 1 of [230 Collections v3.0](230-Collections%20PG%20v3.0.docx). Edit those guides, not this draft.
+> **Merged and frozen (D-048, D-052).** The general steps are topics 4 and 5 of [260 O2C Getting Started v0.2](260-O2C%20Getting%20Started%20PG%20v0.2.docx), and the recommended AR Collections columns are in Part 1 of [230 Collections v3.0](230-Collections%20PG%20v3.0.docx). Edit those guides, not this draft.
 
 The fixed template content is not repeated here: cover, Contents, *About this guide* and the *Additional Resources* links. The sections below are the content this guide adds.
 

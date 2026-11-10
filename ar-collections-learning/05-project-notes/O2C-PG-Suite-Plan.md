@@ -4,7 +4,7 @@
 |---|---|
 | Rule | One task per topic, inside a process-level guide (D-045). The 17 AR Collections drafts are **topic drafts**: each one merges into a destination guide. |
 | Guide codes | From the O2C PG Numbering Standard v1.3 (T3). This plan proposes two new codes: **221** and **260** (D-046). |
-| Status | Proposed. **260 and 221 are built as v0.1 working drafts** (D-048). Both are shared with the SME for review only (D-048). Before either circulates further, the register owner records both codes in `O2C_PG_Numbering_Register.json` and its companion, and the BPO confirms the scope of 221 and the split from 230. 230 Collections has a v2.4 draft (the 221 split, D-051) and a v3.0 working draft with the nine topic drafts (D-052). 240 Direct Debit and Credit Card Payments is a v0.1 skeleton (D-053). |
+| Status | Proposed. **260 and 221 are built as v0.1 working drafts** (D-048); 260 is now v0.2, with the SME review of 10 November applied (D-054). Both are shared with the SME for review only (D-048). Before either circulates further, the register owner records both codes in `O2C_PG_Numbering_Register.json` and its companion, and the BPO confirms the scope of 221 and the split from 230. 230 Collections has a v2.4 draft (the 221 split, D-051) and a v3.0 working draft with the nine topic drafts (D-052). 240 Direct Debit and Credit Card Payments is a v0.1 skeleton (D-053). |
 | Last updated | 2026-11-01 |
 
 ---
@@ -42,7 +42,7 @@ Retired codes are never reused: 201, 202, 203, 205, 250, 298 and 299.
 
 If other streams later want the same Getting Started guide, it becomes one shared guide with one code, like 398 and 399 ("A shared guide needs one code").
 
-File names follow the standard: `221-Customer Payment Corrections PG v0.1.docx` and `260-O2C Getting Started PG v0.1.docx` for the working Word files, and `NNN-Guide Title PG.pdf` once published.
+File names follow the standard: `221-Customer Payment Corrections PG v0.1.docx` and `260-O2C Getting Started PG v0.2.docx` for the working Word files, and `NNN-Guide Title PG.pdf` once published.
 
 ### 2.2 Predecessor mapping
 
@@ -65,7 +65,7 @@ The standard requires a predecessor mapping for a split ("A split into distinct 
 
 | Guide | Change | Receives |
 |---|---|---|
-| **260 O2C Getting Started** | New (proposed). v0.1 working draft built (D-048) | Legal Entities, Export to Excel, and the general steps from Favorites and Personalized Views |
+| **260 O2C Getting Started** | New (proposed). v0.2 working draft built (D-048, D-054) | Legal Entities, Export to Excel, and the general steps from Favorites and Personalized Views |
 | 200 Customer Onboarding and Maintenance | None from the drafts | Keeps contact, address and payment-terms maintenance (backlog ranks 21 to 23 and 30) |
 | 210 Customer Invoices; 211 Subscription Billing | None | — |
 | 220 Customer Payments | Links only | §4 Create a Manual Payment Journal links to the journal controls in 221 Part 1. §4.3 Reverse a Customer Payment Journal stays here; 221 links to it. |
@@ -79,7 +79,7 @@ The standard requires a predecessor mapping for a split ("A split into distinct 
 
 Proposed outlines. The BPO can reorder or rename topics; titles follow T2 ("a clear verb and object"). 260 and 221 are built to these outlines as v0.1 working drafts (D-048).
 
-### 4.1 260 O2C Getting Started (new; v0.1 built)
+### 4.1 260 O2C Getting Started (new; v0.2 built)
 
 **Part 1 Key concepts:** Navigation Pane options (Modules, Workspaces, Favorites); legal entities (business names, D365 and CargoWise ledger codes, confirm before processing); views (view, default view, view scope, filter operators); grid exports (Export all rows, configured columns, volume limits, internal use only, data handling).
 
@@ -91,6 +91,7 @@ Proposed outlines. The BPO can reorder or rename topics; titles follow T2 ("a cl
 | 4. Create a Personalized View: 4.1 Arrange the Columns; 4.2 Filter the List (optional); 4.3 Add a Footer Total (optional); 4.4 Save and Pin the View | Personalized Views topic draft, topic 1 | New |
 | 5. Update a Saved View | Personalized Views topic draft, topic 2 | New |
 | 6. Export All Rows from a Grid | Export to Excel topic draft | New |
+| 7. Remove a Page from Favorites | New steps at the SME's request (D-054; Favorites `VG-14`). At the end so topics 1 to 6 keep their numbers | New |
 
 The two legal entity methods are separate topics because each is complete on its own (Legal Entities decision L1; D-048).
 
@@ -261,3 +262,4 @@ A topic draft merges into its destination guide when all of these hold. 260 and 
 | 2026-11-03 | 230 v3.0 working draft built with the nine topic drafts (D-052); section 4.2 shows it as built, and the destinations in sections 5 and 6 use its topic numbers. |
 | 2026-11-08 | Section 4.4 links the 240 scoping questions. |
 | 2026-11-09 | 240 scope and structure from the 9 November meeting (D-053): section 4.4 shows the v0.1 skeleton; 230 topic 2.8 links to 240 topic 1. |
+| 2026-11-10 | 260 v0.2: SME review by Maria Pabalan applied (D-054); section 4.1 adds topic 7 Remove a Page from Favorites. |

@@ -5,10 +5,10 @@
 | Related PG (editable source) | [`../01-procedure-guides/TBC-AR Collections Legal Entities PG v0.1.docx`](../01-procedure-guides/TBC-AR%20Collections%20Legal%20Entities%20PG%20v0.1.docx) |
 | Markdown preview | [`../01-procedure-guides/PG-AR-Legal-Entities-DRAFT.md`](../01-procedure-guides/PG-AR-Legal-Entities-DRAFT.md) |
 | Screenshot register | [`../02-screenshot-registers/PG-AR-Legal-Entities-Screenshots.md`](../02-screenshot-registers/PG-AR-Legal-Entities-Screenshots.md) |
-| Last updated | 2026-11-01 |
+| Last updated | 2026-11-10 |
 | Items | 22 total, all open: 13 blocking, 9 non-blocking |
 
-> **Merged and frozen (D-048).** This topic draft is now topics 1 and 2 of the [260 O2C Getting Started v0.1](../01-procedure-guides/260-O2C%20Getting%20Started%20PG%20v0.1.docx) working draft (register: [260-O2C-Getting-Started-Validation.md](260-O2C-Getting-Started-Validation.md)). Edit the 260 Word file, not this draft. Record answers here against these IDs; they apply to 260, where each carried comment reads *Legal Entities VG-xx*.
+> **Merged and frozen (D-048).** This topic draft is now topics 1 and 2 of the [260 O2C Getting Started v0.2](../01-procedure-guides/260-O2C%20Getting%20Started%20PG%20v0.2.docx) working draft (register: [260-O2C-Getting-Started-Validation.md](260-O2C-Getting-Started-Validation.md)). Edit the 260 Word file, not this draft. Record answers here against these IDs; they apply to 260, where each carried comment reads *Legal Entities VG-xx*.
 
 This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are scoped to this guide and never renumbered. Each open item that affects the text is also a Word review comment by "Validation register" (VR).
 
@@ -55,7 +55,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-02 | What the selector list shows (business names, ledger codes or both) and whether it can be searched. | Topic 1 Step 2 | 9 | B | Test | Open |
 | VG-03 | What D365 displays after the switch, for example the same page or the dashboard. | Topic 1 Step 3 | 10 | N | Test | Open |
 | VG-04 | How the active legal entity is shown, so users can check it. | Topic 1 Step 4; Topic 2 Step 5 | 11 | B | Test | Open |
-| VG-05 | Which part of the D365 URL holds the ledger code, and how users recognise it. | Topic 2 Step 2 | 13 | B | Test, Rec | Open |
+| VG-05 | Which part of the D365 URL holds the ledger code, and how users recognise it. | Topic 2 Step 2 | 13 | B | Test, Rec | Open. SME answer (Maria Pabalan, 260 review of 10 Nov 2026; D-054): the ledger code follows `cmp=` in the D365 URL, for example `?cmp=112a&mi=LedgerJournalTable_CustPaym`. Applied in 260 v0.2 topic 2 steps 2 and 3, with the example. The test still confirms it. |
 | VG-06 | Where users find the D365 ledger code for each legal entity (the legal entity name and code reference in source 1). | Topic 2 Step 3 | 14 | B | SME | Open |
 | VG-07 | When switching through the URL is appropriate. | Topic 2 Initiation | 12 | B | SME | Open |
 | VG-08 | Wording of the statement that D365 and CargoWise ledger codes differ. | Key concepts | 5 | N | SME | Open |
@@ -101,3 +101,4 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 |---|---|
 | 2026-10-14 | Register created with the v0.1 SME review draft. |
 | 2026-11-01 | Merged into 260 v0.1 (D-048); D1 destination renumbered (D-048). |
+| 2026-11-10 | `VG-05`: SME answer from the 260 review recorded and applied in 260 v0.2 (D-054). |
