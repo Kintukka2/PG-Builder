@@ -24,7 +24,7 @@ All PGs are produced in the current master Word template and follow its companio
 | [`PG_Word_Template-MASTER TEMPLATE.docx`](templates/) | Master layout. Never edit it. Use **Save As** to start each PG. |
 | [`PG_Template_Authoring_Guide_v1.docx`](templates/) | Content and formatting rules, and the final checklist. |
 
-Guide codes and file names follow the **O2C PG Numbering Standard v1.3** and its register (`O2C_PG_Numbering_Register.json`), held outside this repository by the register owner (T3, D-046).
+Guide codes and file names follow the **O2C PG Numbering Standard v1.3** and its register (`O2C_PG_Numbering_Register.json`), held outside this repository by the register owner (T3, D-046). Files that Claude creates or rebuilds start with `CLAUDE-` until they are published, when the prefix is removed (D-056; see [CLAUDE.md](CLAUDE.md)).
 
 ## Repository structure
 

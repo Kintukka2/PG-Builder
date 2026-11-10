@@ -42,7 +42,7 @@ Retired codes are never reused: 201, 202, 203, 205, 250, 298 and 299.
 
 If other streams later want the same Getting Started guide, it becomes one shared guide with one code, like 398 and 399 ("A shared guide needs one code").
 
-File names follow the standard: `220-Customer Payments PG v3.0.docx` and `260-O2C Getting Started PG v0.2.docx` for the working Word files, and `NNN-Guide Title PG.pdf` once published.
+File names follow the standard: `220-Customer Payments PG v3.0.docx` and `260-O2C Getting Started PG v0.2.docx` for the working Word files, and `NNN-Guide Title PG.pdf` once published. From 10 November 2026, files that Claude creates or rebuilds start with `CLAUDE-` (for example `CLAUDE-260-O2C Getting Started PG v0.2.docx`); the prefix is removed at publication (D-056).
 
 ### 2.2 Predecessor mapping
 
@@ -266,3 +266,4 @@ A topic draft merges into its destination guide when all of these hold. 260 and 
 | 2026-11-09 | 240 scope and structure from the 9 November meeting (D-053): section 4.4 shows the v0.1 skeleton; 230 topic 2.8 links to 240 topic 1. |
 | 2026-11-10 | 260 v0.2: SME review by Maria Pabalan applied (D-054); section 4.1 adds topic 7 Remove a Page from Favorites. |
 | 2026-11-10 | 221 withdrawn and merged into 220 Customer Payments v3.0 (D-055): sections 2, 3, 4.3, 5, 6 and 7 updated; section 4.3 is now the 220 v3.0 outline. |
+| 2026-11-10 | Section 2: the `CLAUDE-` prefix for Claude working files (D-056). |
