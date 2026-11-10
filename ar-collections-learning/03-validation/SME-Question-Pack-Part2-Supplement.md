@@ -418,7 +418,7 @@ Customer Pools is not covered by the Part 1 or Part 2 notes, so no guide is draf
 2. Close each item in the Part 2 or Customer Pools register with the answer as evidence (for example "Closed: SME pack P2-B4, 2026-11-xx"), or keep it open with the partial answer.
 3. Update the Word guides and the reference, remove the matching review comments, and move them to v0.2.
 4. If P2-E1 confirms that Customer Pools are used, draft them only once they meet the definition of ready (source 2).
-5. Apply the answers to the 221 Word guide, where these items now sit (D-048), and update the README tracker and the project notes decisions.
+5. Apply the answers to the 220 v3.0 Word guide, where these items now sit (D-048; 221 merged into 220, D-055), and update the README tracker and the project notes decisions.
 
 ## Change log
 

@@ -8,7 +8,7 @@
 >
 > `[XX-nn]` markers show unconfirmed items. In the Word file, each one is a review comment. Full details are in the [validation register](../03-validation/Part2-CPJL-and-Transfers-Validation.md). The markers are not part of the reference text.
 
-> **Merged and frozen (D-048).** This reference is now Part 1 Key concepts of [221 Customer Payment Corrections v0.1](../01-procedure-guides/221-Customer%20Payment%20Corrections%20PG%20v0.1.docx). Edit that guide, not this reference.
+> **Merged and frozen (D-048).** This reference is now Part 1 Key concepts of [221 Customer Payment Corrections v0.1](../01-procedure-guides/221-Customer%20Payment%20Corrections%20PG%20v0.1.docx). Edit that guide, not this reference. Since D-055, 221 is merged into [220 Customer Payments v3.0](../01-procedure-guides/220-Customer%20Payments%20PG%20v3.0.docx), where this is Part 1 Key concepts. Edit 220.
 
 The fixed template content is not repeated here: cover, Contents, *About this guide* and *Additional Resources*.
 

@@ -4,8 +4,8 @@
 |---|---|
 | Guide (editable source) | [`221-Customer Payment Corrections PG v0.1.docx`](../01-procedure-guides/221-Customer%20Payment%20Corrections%20PG%20v0.1.docx) |
 | Markdown preview | [`PG-221-Customer-Payment-Corrections-DRAFT.md`](../01-procedure-guides/PG-221-Customer-Payment-Corrections-DRAFT.md) |
-| Status | Working draft v0.1. Code 221 is proposed (D-046): not yet recorded in the numbering register or confirmed by the BPO. Shared with the SME for review only (SME review pack v2); do not circulate further until it is (D-048). |
-| Last updated | 2026-11-01 |
+| Status | **Withdrawn (D-055).** Merged into 220 Customer Payments v3.0; code 221 is not used. Open `G221` items carried into 220 keep their IDs and stay open here; see the [220 v3.0 register](220-Customer-Payments-v3.0-Validation.md), section 5, for the rest. |
+| Last updated | 2026-11-10 |
 | Items | 20 guide-level items (`G221`), all open: 19 blocking, 1 non-blocking. 106 carried review comments from the topic drafts. |
 
 This file is the guide's **question log** (D-016). It holds the guide-level items, which are scoped to this guide and never renumbered. Review comments carried from the topic drafts keep their ID, and their source register stays the record for them: an answer recorded there applies here (D-048). Each open item that affects the text is a Word review comment by "Validation register" (VR).
@@ -109,3 +109,4 @@ Part 2 register items that are not anchored as a review comment in this guide. T
 | 2026-11-01 | Register created with the v0.1 working draft, assembled from the topic drafts (D-045, D-046, D-048). |
 | 2026-11-01 | Guide added to the SME review pack (v2) for review only (D-048 amendment). |
 | 2026-11-03 | Part 1 *Not yet confirmed* points to 230 topic 2.4 Investigate a Customer Account, its number in 230 v3.0 (D-052). |
+| 2026-11-10 | Withdrawn: merged into 220 Customer Payments v3.0 after Maria Pabalan confirmed that Collections Officers do the tasks of both guides (D-055). |

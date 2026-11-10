@@ -16,10 +16,8 @@ The fixed template content is not repeated here: cover, Contents, *About this gu
 | 2.1 | April 2026 | Suzanne Starr | Christoper Clarke | Content Update (DD + Bank) |
 | 2.2 | May 2026 | Suzanne Starr | Christoper Clarke | Content Update (CW1) |
 | 2.3 | October 2026 | Daniel Moreira | Christoper Clarke | Content Review |
-| 2.4 | November 2026 | Daniel Moreira | Christopher Clarke | Content Update, draft (ADO 16886): 6.5 to 6.8 moved to 221; 2.4 to move to 240 |
+| 2.4 | November 2026 | Daniel Moreira | Christopher Clarke | Content Update, draft (ADO 16886): 6.5 to 6.8 moved to 220 v3.0; 2.4 to move to 240 |
 | 3.0 | November 2026 | Daniel Moreira | Christopher Clarke | Working draft (ADO 16886): rebuilt in the PG master template; nine AR Collections topic drafts merged; 2.8 links to 240. Not validated or approved. `[G230-05]` |
-
-Guide code, title and scope: `[]`.
 
 ---
 
@@ -39,7 +37,7 @@ At a high level, the Collections process follows these stages:
 - **Contact the Customer**: check the overdue balance, then engage with the customer by phone or email to discuss overdue invoices, confirm payment status or disputes, and agree on next steps.
 - **Record a Customer Collection Activity**: record collection interactions, outcomes and agreed actions in D365, and attach relevant supporting correspondence and documents.
 - **Manage Customer Statements**: preview, download and send customer statements.
-- **Resolve the Account**: resend invoices, issue collection letters, update customer status or process approved debt write-offs. Payment corrections are in 221 Customer Payment Corrections.
+- **Resolve the Account**: resend invoices, issue collection letters, update customer status or process approved debt write-offs. Payment corrections are in 220 Customer Payments.
 - **Update and Close a Customer Activity**: update the activity record in D365 with the outcome and close it once the issue is resolved and no further follow-up is required.
 
 General D365 tasks (switching legal entity, Favorites, personalized views and exporting grid data) are in 260 O2C Getting Started.
@@ -207,14 +205,14 @@ Customer or transactions excluded from credit management may not be included in 
 
 **Customer Payment Management**
 
-Customer payments may require manual adjustment to ensure balances are correctly reflected. These corrections are in 221 Customer Payment Corrections:
+Customer payments may require manual adjustment to ensure balances are correctly reflected. These corrections are in 220 Customer Payments (version 3.0):
 
 | Action | Timing |
 |---|---|
-| **Settle Customer Accounts** | Match customer payments against outstanding invoices. See 221 topic 1. |
-| **Unsettle Customer Accounts** | Reverse an incorrect settlement. See 221 topic 2. |
-| **Transfer Open / Closed Payments** | Move payments between customer accounts when allocated incorrectly. See 221 topic 3. |
-| **Bank Fee Write-off** | Clear small residual balances caused by fees, FX differences, or minor variances. See 221 topic 6. |
+| **Settle Customer Accounts** | Match customer payments against outstanding invoices. See 220 topic 2.3. |
+| **Unsettle Customer Accounts** | Reverse an incorrect settlement. See 220 topic 3.1. |
+| **Transfer Open / Closed Payments** | Move payments between customer accounts when allocated incorrectly. See 220 topic 3.3. |
+| **Bank Fee Write-off** | Clear small residual balances caused by fees, FX differences, or minor variances. See 220 topic 3.6. |
 
 ##### Customer Contact Integration (CW1 ↔ D365 F&O)
 
@@ -289,7 +287,7 @@ This integration is critical to the Collections process, as it ensures:
 
 | Rule | Description |
 |---|---|
-| **Do not undo settlements here** | This topic only reviews settlement history. Undoing a settlement changes financial records and is in 221 Customer Payment Corrections, topic 2 Undo a Settlement. `[Customer Account VG-13]` |
+| **Do not undo settlements here** | This topic only reviews settlement history. Undoing a settlement changes financial records and is in 220 Customer Payments, topic 3.1 Undo a Settlement. `[Customer Account VG-13]` |
 
 ##### Notes and activities
 
@@ -1091,7 +1089,7 @@ This topic includes these steps:
 | [Change Customer Status](#73-change-customer-status) | Update the customer's account status, or exclude the customer or a transaction from credit management. |
 | [Write Off an Uncollectible Debt](#74-write-off-an-uncollectible-debt) | Initiate and process the write-off once management approval has been obtained. |
 
-> **Note:** Settling and unsettling customer accounts, transferring open or closed payments, and writing off bank fees or small residuals are in **221 Customer Payment Corrections** (topics 1, 2, 3 and 6).
+> **Note:** Settling and unsettling customer accounts, transferring open or closed payments, and writing off bank fees or small residuals are in **220 Customer Payments** (topics 2.3, 3.1, 3.3 and 3.6).
 
 #### 7.1 View and Download a Customer Invoice
 

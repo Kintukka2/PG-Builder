@@ -328,7 +328,7 @@ The 260 guide-level items `G260-07` (S6.9) and `G260-08` (S2.8) are also tested 
 1. **Results log.** Complete the *Items* sheet: for each item, the result (*Confirmed*, *Differs from draft* or *Could not test*) and the evidence (step ID, screenshot or recording time).
 2. **Validation registers.** For each tested item, change *Status* to *Closed* with the evidence, for example "Closed: test S6.4, 2026-10-xx". Items that differ from the draft stay open until the guide text is changed. Add a change-log entry to each register.
 3. **Word guides.** Update the text to match D365, remove the review comment for each closed item, and move each changed guide to v0.2. Regenerate its PDF and Markdown preview.
-4. **README tracker.** Move each topic draft or guide whose blocking test items are all closed to *System tested*. Apply results for merged items to the 260 and 221 Word guides (D-048).
+4. **README tracker.** Move each topic draft or guide whose blocking test items are all closed to *System tested*. Apply results for merged items to the 260 and 220 v3.0 Word guides (D-048; 220 v3.0 absorbed 221, D-055).
 5. **Findings.** Anything that contradicts the drafts or the sources goes to the SME with the step ID. Missing controls are listed as possible security causes (S15.1), not diagnoses.
 
 ## 7. Exit criteria
@@ -345,3 +345,4 @@ The 260 guide-level items `G260-07` (S6.9) and `G260-08` (S2.8) are also tested 
 | 2026-10-15 | Plan created from the 13 validation registers. |
 | 2026-11-01 | After-session step 4 uses the README tracker instead of the retired Command Centre (D-047), and applies results for merged items to 260 and 221 (D-048). |
 | 2026-11-10 | Step S2.8 added and S6.4, S6.7, S6.8 and S6.9 updated with the SME answers from the 260 review (D-054): Favorites `VG-14` reopened; `G260-07` and `G260-08` tested. The results log has the same changes. |
+| 2026-11-10 | After-session step 4 applies results to 220 v3.0, which absorbed 221 (D-055). |

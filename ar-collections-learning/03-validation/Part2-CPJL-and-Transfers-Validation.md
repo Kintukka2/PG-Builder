@@ -6,10 +6,10 @@
 | Screenshot registers | [Transfer Funds](../02-screenshot-registers/PG-AR-Transfer-Funds-Between-Customer-Accounts-Screenshots.md) · [Parent Payment](../02-screenshot-registers/PG-AR-Transfer-Parent-Payment-Across-Child-Accounts-Screenshots.md) · [Restore](../02-screenshot-registers/PG-AR-Restore-Written-Off-Overpayment-Screenshots.md) |
 | SME questions | [Part 2 supplement to the SME question pack](SME-Question-Pack-Part2-Supplement.md): every SME, recording and decision item here maps to one `P2-` question |
 | Source | AR Training D365 Part 2 update pack (sources 4.0 to 4.7 in the [project notes](../05-project-notes/Project-Context-and-Decisions.md#1-source-documents)) |
-| Last updated | 2026-11-01 |
+| Last updated | 2026-11-10 |
 | Items | 46 total, all open: 38 blocking, 8 non-blocking |
 
-> **Merged and frozen (D-048).** The three guides are now topics 3, 4 and 5 of the [221 Customer Payment Corrections v0.1](../01-procedure-guides/221-Customer%20Payment%20Corrections%20PG%20v0.1.docx) working draft, and the CPJL controls reference is its Part 1 Key concepts (register: [221-Customer-Payment-Corrections-Validation.md](221-Customer-Payment-Corrections-Validation.md)). Edit the 221 Word file, not these four drafts. This register stays the record for every `SRC`, `GOV`, `CPJ`, `TF`, `PC` and `RO` item: record answers here, and they apply to 221.
+> **Merged and frozen (D-048).** The three guides are now topics 3, 4 and 5 of the [221 Customer Payment Corrections v0.1](../01-procedure-guides/221-Customer%20Payment%20Corrections%20PG%20v0.1.docx) working draft, and the CPJL controls reference is its Part 1 Key concepts. **Since D-055, 221 is merged into [220 Customer Payments v3.0](../01-procedure-guides/220-Customer%20Payments%20PG%20v3.0.docx)**: the three guides are its topics 3.3, 3.4 and 3.5, and the controls are in its Part 1 Key concepts (register: [221-Customer-Payment-Corrections-Validation.md](221-Customer-Payment-Corrections-Validation.md)). Edit the 221 Word file, not these four drafts. This register stays the record for every `SRC`, `GOV`, `CPJ`, `TF`, `PC` and `RO` item: record answers here, and they apply to 221.
 
 This file is the **question log** for the three Part 2 guides and the shared controls reference (decision D-016). All four are SME review drafts in the PG master template (v0.1, decision D-041). Each open item that affects the text is also a Word review comment by "Validation register" (VR), starting with the item's ID. One register covers all four documents because they share most of their controls. IDs are prefixed by scope and never renumbered (decision D-038):
 
@@ -83,9 +83,9 @@ Customer Pools has its own register: [Customer-Pools-Validation.md](Customer-Poo
 
 | ID | Item to confirm | Location | Priority | Method | Status |
 |---|---|---|---|---|---|
-| GOV-01 | Stream, process area and the business role that prepares these journals. Confirm whether Collections Officers do this work or another team does. | Part 1 Stream, Process and Roles (all) | B | SME | Open |
+| GOV-01 | Stream, process area and the business role that prepares these journals. Confirm whether Collections Officers do this work or another team does. | Part 1 Stream, Process and Roles (all) | B | SME | Answered. SME answer (Maria Pabalan, 221 review comment of 10 Nov 2026; D-055): Collections Officers prepare and post transfers, distributions and restorations. Applied in 220 v3.0 (Process, roles and topics 3.3 to 3.5). |
 | GOV-02 | Business process owner (BPO) for each guide. | Document control (all) | B | SME | Open |
-| GOV-03 | Destination guide and topic for the three guides and the reference (D-045). Proposed: 221 Customer Payment Corrections, topics 3, 4 and 5, and its Part 1 Key concepts (D-046). Merged into the 221 v0.1 working draft (D-048). | Document control (all) | B | Dec | Open |
+| GOV-03 | Destination guide and topic for the three guides and the reference (D-045). Proposed: 221 Customer Payment Corrections, topics 3, 4 and 5, and its Part 1 Key concepts (D-046). Merged into the 221 v0.1 working draft (D-048). | Document control (all) | B | Dec | Superseded (D-055): 221 is merged into 220 Customer Payments v3.0, topics 3.3, 3.4 and 3.5, with the controls in Part 1 Key concepts. |
 | GOV-04 | Whether any reports or inquiries apply. If none, "No applicable reports". | Part 3 (all) | B | SME | Open |
 | GOV-05 | SME factual review, a test by someone other than the author, and approval. | Whole guide (all) | B | SME | Open |
 
@@ -108,12 +108,12 @@ Customer Pools has its own register: [Customer-Pools-Validation.md](Customer-Poo
 | CPJ-13 | Where the journal totals are shown, to check that debits equal credits. | TF/PC step 1.3.1; REF Validation and posting | B | Test | Open |
 | CPJ-14 | The **Simulate Posting** label and location, and how results are shown. The notes describe a blue result as ready and red results as errors. | TF/PC step 1.3.2, RO step 1.2.1; REF Validation and posting | B | Test, Rec | Open |
 | CPJ-15 | Common Simulate Posting errors and their fixes, and the support route when an error cannot be resolved. The notes mention escalation to "SYD" during training. | TF/PC step 1.3.3, RO step 1.2.2; REF Validation and posting | B | SME | Open |
-| CPJ-16 | The **Post** control label and location, and which role may post a CPJL. | TF/PC step 1.3.4, RO step 1.2.3; REF Validation and posting | B | Test, SME | Open |
-| CPJ-17 | Whether CPJL transfers and restorations need approval (for example a workflow), and whether any value threshold applies. The amounts in the notes are examples, not thresholds. | TF/PC step 1.3.4, RO step 1.2.3; REF Validation and posting | B | SME | Open |
+| CPJ-16 | The **Post** control label and location, and which role may post a CPJL. | TF/PC step 1.3.4, RO step 1.2.3; REF Validation and posting | B | Test, SME | Answered. SME answer (Maria Pabalan, 221 review comment of 10 Nov 2026; D-055): Collections Officers and Receipting Officers may post a CPJL. Applied in 220 v3.0 Part 1 (*Posting and permissions*). The **Post** label still needs the test. |
+| CPJ-17 | Whether CPJL transfers and restorations need approval (for example a workflow), and whether any value threshold applies. The amounts in the notes are examples, not thresholds. | TF/PC step 1.3.4, RO step 1.2.3; REF Validation and posting | B | SME | Answered. SME answer (Maria Pabalan, 221 review comment of 10 Nov 2026; D-055): no approvals are required for a CPJL. Applied in 220 v3.0 Part 1 (*Posting and permissions*). |
 | CPJ-18 | How to confirm the result after posting, for example in the customer's transactions (see the Customer Account guide). | TF step 1.3.5, PC step 1.3.6, RO step 1.2.4 | B | Test, SME | Open |
 | CPJ-19 | How a posted journal is corrected or reversed. | PROCESS COMPLETE (all); REF "Not covered" | B | SME | Open |
-| CPJ-20 | What to do with an unposted journal that is no longer needed. It would appear under **Payment journals not posted** in the workspace (Workspace `VG-05`). | REF "Not covered" | N | SME, Test | Open |
-| CPJ-21 | The security role needed to open and create a CPJL, and a test with it. A missing page or control may have a security cause; that is a possible cause, not a diagnosis. | PROCESS START (all) | B | Test, SME | Open |
+| CPJ-20 | What to do with an unposted journal that is no longer needed. It would appear under **Payment journals not posted** in the workspace (Workspace `VG-05`). | REF "Not covered" | N | SME, Test | Answered. SME answer (Maria Pabalan, 221 review comment of 10 Nov 2026; D-055): a Collections Officer can delete an unposted journal that is no longer needed. Applied in 220 v3.0 Part 1; the steps are still to confirm. |
+| CPJ-21 | The security role needed to open and create a CPJL, and a test with it. A missing page or control may have a security cause; that is a possible cause, not a diagnosis. | PROCESS START (all) | B | Test, SME | Open. Maria Pabalan (10 Nov 2026) is not sure of the role and suggests checking with Tony Chen (`G220-05`). |
 
 ### 3.4 Transfer Funds Between Customer Accounts (`TF`)
 
@@ -196,3 +196,4 @@ The gaps the three source drafts list are also covered: verification after posti
 | 2026-10-23 | Register created from the AR Training D365 Part 2 update pack, with the three working drafts and the controls reference. |
 | 2026-10-25 | The three guides and the reference are built in the PG master template as v0.1 SME review drafts (D-041), with every open item that affects the text as a Word comment. Step locations updated for the added *Click* **Modules** step. `SRC-03` notes the template's AVA entry. |
 | 2026-11-01 | Merged into 221 v0.1 (D-048): the four drafts are frozen and this register stays the record for their items. `GOV-03` notes the merge. |
+| 2026-11-10 | 221 is merged into 220 Customer Payments v3.0 (D-055). SME answers from Maria Pabalan's 221 review comments recorded against `GOV-01`, `CPJ-16`, `CPJ-17` and `CPJ-20`; `CPJ-21` noted; `GOV-03` superseded. |

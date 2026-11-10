@@ -148,3 +148,4 @@ Review comments in the nine topic drafts that are not review comments in this gu
 | 2026-11-03 | Register created with the v3.0 working draft, assembled from v2.4 and the nine topic drafts (D-052, ADO Task 16886). |
 | 2026-11-08 | Guide added to the SME review pack for review only (D-052 amendment). |
 | 2026-11-09 | Topic 2.8 now links to 240 Direct Debit and Credit Card Payments, topic 1, instead of repeating the steps (D-053). `G230-04` closed: decided at the 9 November meeting. |
+| 2026-11-10 | References to 221 Customer Payment Corrections now point to 220 Customer Payments v3.0 (topics 2.3, 3.1, 3.3 and 3.6), which absorbed 221 (D-055). |
