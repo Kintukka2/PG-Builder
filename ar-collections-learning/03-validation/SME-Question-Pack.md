@@ -521,7 +521,7 @@ Confirm each scope boundary, or say which to change. Each is the drafts' current
 1. Record each answer in the response sheet with the person and date.
 2. In each affected validation register, close the item with the answer as evidence (for example "Closed: SME pack B5.2, 2026-10-xx"), or keep it open with the partial answer.
 3. Update the Word guides, remove the matching review comments, and move the changed guides to v0.2 together with the clean-session test results.
-4. Apply answers for merged items to the 260 and 221 Word guides (D-048), and update the README tracker and the project notes decisions.
+4. Apply answers for merged items to the 260 and 220 v3.0 Word guides (D-048; 220 v3.0 absorbed 221, D-055), and update the README tracker and the project notes decisions.
 
 ## Change log
 

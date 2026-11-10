@@ -339,7 +339,7 @@ Rules or checks in the legacy PGs with no counterpart in the drafts, highest ris
 | Create and send a collection letter when automation fails | 230 §6.2 | Stays in 230 as topic 7.2 (suite plan). |
 | Update and close a customer activity (resolution, attachments, Set as complete; statuses Open, In Progress, Resolved, Closed) | 230 §7; Key concepts | Stays in 230 as topic 8, after topic 5 Record a Customer Activity (suite plan). |
 | Resend an invoice to a customer | 230 §6.1 | Answers Customer Invoices VG-21. Merges with the Customer Invoices topic draft as 230 topic 7.1 (suite plan). |
-| Reverse a customer payment journal | 220 §4.3 | Answers CPJ-19. Stays in 220; 221 links to it (suite plan). |
+| Reverse a customer payment journal | 220 §4.3 | Answers CPJ-19. Stays in 220: topic 3.2 of v3.0, next to the other corrections (D-055). |
 | Collections timeline and automation: pre-due reminder, three letters, exclusion effects | 230 Key concepts | Knowledge article for Module 2. |
 | CW1 and D365 contact integration rules | 230, 200 Key concepts | Reference for Module 3 (D365 and CargoWise synchronisation). |
 
