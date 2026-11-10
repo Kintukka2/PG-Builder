@@ -5,10 +5,10 @@
 | Related PG (editable source) | [`../01-procedure-guides/TBC-AR Collections Favorites PG v0.2.docx`](../01-procedure-guides/TBC-AR%20Collections%20Favorites%20PG%20v0.2.docx) |
 | Markdown preview | [`../01-procedure-guides/PG-AR-Configure-Collections-Favourites-DRAFT.md`](../01-procedure-guides/PG-AR-Configure-Collections-Favourites-DRAFT.md) |
 | Related screenshot register | [`../02-screenshot-registers/PG-AR-Configure-Collections-Favourites-Screenshots.md`](../02-screenshot-registers/PG-AR-Configure-Collections-Favourites-Screenshots.md) |
-| Last updated | 2026-11-03 |
+| Last updated | 2026-11-10 |
 | Items | 33 total: 30 open (16 blocking, 14 non-blocking), 1 deferred, 2 withdrawn |
 
-> **Merged and frozen (D-048, D-052).** The general steps are topic 3 of the [260 O2C Getting Started v0.1](../01-procedure-guides/260-O2C%20Getting%20Started%20PG%20v0.1.docx) working draft, and the four AR Collections pages are in Part 1 (*Set up D365 for collections work*) of the [230 Collections v3.0](../01-procedure-guides/230-Collections%20PG%20v3.0.docx) working draft. Edit those guides, not this draft. Record answers here against these IDs; they apply to both.
+> **Merged and frozen (D-048, D-052).** The general steps are topic 3 of the [260 O2C Getting Started v0.2](../01-procedure-guides/260-O2C%20Getting%20Started%20PG%20v0.2.docx) working draft, and the four AR Collections pages are in Part 1 (*Set up D365 for collections work*) of the [230 Collections v3.0](../01-procedure-guides/230-Collections%20PG%20v3.0.docx) working draft. Edit those guides, not this draft. Record answers here against these IDs; they apply to both.
 
 This file is the **question log** that the PG Template Authoring Guide asks for. It is kept separate from the PG. Nothing in it may appear in the PG as confirmed guidance until its status is **Closed** and the Word file has been updated.
 
@@ -102,14 +102,14 @@ Changes made to follow `PG_Template_Authoring_Guide_v1.docx`:
 | VG-04 | Confirm **Customer payment journal** is available in **Credit and collections**, and its menu location. | Step 6 | 14 | B | Test, Rec | Open |
 | VG-05 | Menu group or submenu for **Open customer invoices** in **Accounts receivable**. | Step 9 | 15 | B | Test | Open |
 | VG-06 | Whether a submenu must be expanded first, and whether the star is always visible or only on hover. | Steps 4–6, 9 | 11 | B | Test | Open |
-| VG-07 | Star appearance before and after it is clicked. Whether clicking a selected star removes the favorite. If it does, add a warning before Steps 4–6 and 9. | Steps 4–6, 9 | 12 | B | Test | Open |
+| VG-07 | Star appearance before and after it is clicked. Whether clicking a selected star removes the favorite. If it does, add a warning before Steps 4–6 and 9. | Steps 4–6, 9 | 12 | B | Test | Open. 260 v0.2 topic 7 *Remove a Page from Favorites* relies on clicking a filled star to remove the favorite; tested with `G260-08` (D-054). |
 | VG-08 | **Modules** icon and its label or tooltip. The trainer describes it as three dots with horizontal lines. | Step 2 | 10 | N | Test, Rec | Open |
 | VG-09 | **Favorites** icon and its label or tooltip. | Step 10 | 16 | N | Test, Rec | Open |
 | VG-10 | Whether favorites are the same across legal entities. | Step 1; PROCESS COMPLETE | 9, 18 | N | Test | Open |
 | VG-11 | Whether favorites persist between sessions, browsers and devices. | PROCESS COMPLETE | 18 | N | Test | Open |
 | VG-12 | How to show the **Navigation Pane** if it is hidden or collapsed. | PROCESS START | 8 | N | Test | Open |
 | VG-13 | Order in which favorites are listed. | Step 11 | 17 | N | Test | Open |
-| VG-14 | How to remove a favorite. | Not in guide | — | N | Test | **Deferred.** Out of scope for this guide; revisit if a removal topic is needed. |
+| VG-14 | How to remove a favorite. | Not in guide | — | N | Test | **Reopened** (SME request, Maria Pabalan, 260 review of 10 Nov 2026; D-054). Removal steps are 260 v0.2 topic 7 *Remove a Page from Favorites*; the test is `G260-08`. |
 | VG-15 | Whether the module menu has a search or filter. | — | — | — | — | **Withdrawn.** Only needed for the removed Troubleshooting section (T7). |
 | VG-16 | Whether the D365 issue form is the correct route when a module or page is not available. | Step 11 | 17 | B | SME | Open. Candidate route identified from the template's User Support block. |
 | VG-17 | The security role that grants access to these modules and pages, and a test with it. | PROCESS START | 7 | B | Test, SME | Open |
@@ -181,3 +181,4 @@ This combines the source 1 §4 gate with the authoring guide's final checklist.
 | 2026-10-23 | `VG-18`: Part 2 evidence noted. Still open until the recording check. |
 | 2026-11-01 | Merged into 260 v0.1 (D-048); D1 destination renumbered (D-048). |
 | 2026-11-03 | AR Collections content merged into 230 Collections v3.0 Part 1 (D-052); the draft is now frozen. |
+| 2026-11-10 | `VG-14` reopened at the SME's request: removal steps are 260 v0.2 topic 7 (D-054). `VG-07` noted. |

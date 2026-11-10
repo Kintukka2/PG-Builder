@@ -5,10 +5,10 @@
 | Related PG (editable source) | [`../01-procedure-guides/TBC-AR Collections Personalized Views PG v0.1.docx`](../01-procedure-guides/TBC-AR%20Collections%20Personalized%20Views%20PG%20v0.1.docx) |
 | Markdown preview | [`../01-procedure-guides/PG-AR-Personalized-Views-DRAFT.md`](../01-procedure-guides/PG-AR-Personalized-Views-DRAFT.md) |
 | Screenshot register | [`../02-screenshot-registers/PG-AR-Personalized-Views-Screenshots.md`](../02-screenshot-registers/PG-AR-Personalized-Views-Screenshots.md) |
-| Last updated | 2026-11-03 |
+| Last updated | 2026-11-10 |
 | Items | 29 open: 23 blocking, 6 non-blocking |
 
-> **Merged and frozen (D-048, D-052).** The general steps are topics 4 and 5 of the [260 O2C Getting Started v0.1](../01-procedure-guides/260-O2C%20Getting%20Started%20PG%20v0.1.docx) working draft, and the recommended AR Collections columns are in Part 1 (*Set up D365 for collections work*) of the [230 Collections v3.0](../01-procedure-guides/230-Collections%20PG%20v3.0.docx) working draft. Edit those guides, not this draft. Record answers here against these IDs; they apply to both.
+> **Merged and frozen (D-048, D-052).** The general steps are topics 4 and 5 of the [260 O2C Getting Started v0.2](../01-procedure-guides/260-O2C%20Getting%20Started%20PG%20v0.2.docx) working draft, and the recommended AR Collections columns are in Part 1 (*Set up D365 for collections work*) of the [230 Collections v3.0](../01-procedure-guides/230-Collections%20PG%20v3.0.docx) working draft. Edit those guides, not this draft. Record answers here against these IDs; they apply to both.
 
 This file is the guide's **question log**, as the PG Template Authoring Guide requires (decision D-016). The `VG-xx` IDs are scoped to this guide and never renumbered. Each open item that affects the text is also a Word review comment by "Validation register" (VR), anchored to that text.
 
@@ -56,16 +56,16 @@ This file is the guide's **question log**, as the PG Template Authoring Guide re
 | VG-05 | How a column is removed, and the control label. | 1.1 Step 6 | 13 | B | Test, Rec | Open |
 | VG-06 | How columns are repositioned. | 1.1 Step 7 | 14 | B | Test, Rec | Open |
 | VG-07 | How a column filter is opened, and the control label. | 1.2 Step 1 | 15 | B | Test, Rec | Open |
-| VG-08 | Exact operator labels (**not equal to**, **is one of**) and the control that applies the filter. | Key concepts (Filter operators); 1.2 Step 2 | 7, 16 | B | Test, Rec | Open |
+| VG-08 | Exact operator labels (**not equal to**, **is one of**) and the control that applies the filter. | Key concepts (Filter operators); 1.2 Step 2 | 7, 16 | B | Test, Rec | Open. SME answer (Maria Pabalan, 260 review of 10 Nov 2026; D-054): the full operator list by column type (text; number and amount; date). **not equal to** is **does not equal** for amounts. Applied in 260 v0.2 Key concepts and topic 4.2. The test still confirms the labels and the control that applies the filter. |
 | VG-09 | How the grid footer is shown, and the control label. | 1.3 Step 1 | 18 | B | Test, Rec | Open |
-| VG-10 | How a sum is added, the exact label, and which columns support a sum. | 1.3 Step 2 | 19 | B | Test, Rec | Open |
-| VG-11 | Exact label and location of **Save as**. | 1.4 Step 1 | 20 | B | Test, Rec | Open |
+| VG-10 | How a sum is added, the exact label, and which columns support a sum. | 1.3 Step 2 | 19 | B | Test, Rec | Open. SME answer (Maria Pabalan, 260 review of 10 Nov 2026; D-054): hover over the footer under the column until a **+** symbol appears, then click it. Applied in 260 v0.2 topic 4.3 step 2. The test still confirms the label and which columns support a sum. |
+| VG-11 | Exact label and location of **Save as**. | 1.4 Step 1 | 20 | B | Test, Rec | Open. SME answer (Maria Pabalan, 260 review of 10 Nov 2026; D-054): **Save as** is in the view selector, opened from the view name beside the page title. The view name is **My view** for a user who has never saved a view, and an asterisk after it marks unsaved changes. Applied in 260 v0.2 topic 4.4 steps 1 and 2. The test still confirms the labels. |
 | VG-12 | Whether a view naming convention applies. Source 1 lists a recommended AR view naming convention as a reference still to be developed. | 1.4 Step 2 | 21 | N | SME, Dec | Open |
 | VG-13 | The control that completes Save as. | 1.4 Step 3 | 22 | B | Test | Open |
-| VG-14 | Exact label and location of **Pin as default** (source 0 says "Set Default View"), and what pinning does. | Key concepts (Default view); 1.4 Step 4 | 5, 23 | B | Test, Rec | Open |
+| VG-14 | Exact label and location of **Pin as default** (source 0 says "Set Default View"), and what pinning does. | Key concepts (Default view); 1.4 Step 4 | 5, 23 | B | Test, Rec | Open. SME answer (Maria Pabalan, 260 review of 10 Nov 2026; D-054): an option also sets the view as the default across all legal entities. Applied in 260 v0.2 topic 4.4 step 6; its label and location are `G260-07`. |
 | VG-15 | How D365 shows a saved view and the pinned default. | 1.4 Step 5 | 24 | B | Test | Open |
-| VG-16 | How a saved view is selected on a page. | Topic 2 Step 3 | 28 | B | Test | Open |
-| VG-17 | Exact label and location of the control that saves changes to an existing view (source 0 says "Save View"). | Topic 2 Step 5 | 29 | B | Test, Rec | Open |
+| VG-16 | How a saved view is selected on a page. | Topic 2 Step 3 | 28 | B | Test | Open. SME answer (Maria Pabalan, 260 review of 10 Nov 2026; D-054): views are selected in the view selector, opened from the view name beside the page title. Applied in 260 v0.2 topic 5 step 3. |
+| VG-17 | Exact label and location of the control that saves changes to an existing view (source 0 says "Save View"). | Topic 2 Step 5 | 29 | B | Test, Rec | Open. SME answer (Maria Pabalan, 260 review of 10 Nov 2026; D-054): changes are saved from the view selector; an asterisk after the view name marks unsaved changes. Applied in 260 v0.2 topic 5 step 5. The test still confirms the **Save** label. |
 | VG-18 | That filters and footer totals are saved as part of the view. | Key concepts (View); 1.4 PROCESS COMPLETE | 4, 25 | B | Test | Open |
 | VG-19 | Whether a saved view is personal or visible to other users. | 1.4 PROCESS COMPLETE | 25 | N | Test, SME | Open |
 | VG-20 | Whether any reports or inquiries apply. If none, "No applicable reports". | Part 3 | 30 | B | SME | Open |
@@ -125,3 +125,4 @@ The terms shared with the AR Collections Favorites guide (Navigation Pane, Legal
 | 2026-10-14 | Register created with the v0.1 SME review draft. |
 | 2026-11-01 | Merged into 260 v0.1 (D-048); D1 destination renumbered (D-048). |
 | 2026-11-03 | AR Collections content merged into 230 Collections v3.0 Part 1 (D-052); the draft is now frozen. |
+| 2026-11-10 | `VG-08`, `VG-10`, `VG-11`, `VG-14`, `VG-16`, `VG-17`: SME answers from the 260 review recorded and applied in 260 v0.2 (D-054). |

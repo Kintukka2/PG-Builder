@@ -3,11 +3,11 @@
 | Field | Value |
 |---|---|
 | Scope | The 13 AR Collections procedure guides in SME review draft |
-| Items tested | 148 open validation items whose method includes **Test** (112 blocking, 36 non-blocking), across all 13 validation registers |
-| Route | 16 stations, 87 steps, in one session; station S13 is gated |
+| Items tested | 149 open validation items whose method includes **Test** (112 blocking, 37 non-blocking), across all 13 validation registers, plus two 260 guide-level items (`G260-07`, `G260-08`) |
+| Route | 16 stations, 88 steps, in one session; station S13 is gated |
 | Results log | [`Clean-Session-Test-Log.xlsx`](Clean-Session-Test-Log.xlsx): one row per step and one row per item |
 | Status | Draft plan for SME review. Not yet run. |
-| Last updated | 2026-11-01 |
+| Last updated | 2026-11-10 |
 
 This plan tests the drafts against D365. It does not change them. Every step names the validation items it tests (`FAV 02` means Favorites VG-02). Record what D365 actually shows; where it differs from the draft, the draft changes.
 
@@ -70,7 +70,7 @@ The order reuses each page once: menus are walked once (S2) and serve every late
 |---|---|---|---|---|
 | [S0](#s0-session-setup-and-navigation-pane) | Session setup and Navigation Pane | FAV, WS | 5 | 2 |
 | [S1](#s1-legal-entity-switching) | Legal entity switching | LE, FAV | 7 | 4 |
-| [S2](#s2-modules-menus-and-favorites) | Modules, menus and Favorites | FAV, AGED, ACCT, NOTE, ACT | 14 | 12 |
+| [S2](#s2-modules-menus-and-favorites) | Modules, menus and Favorites | FAV, AGED, ACCT, NOTE, ACT | 15 | 12 |
 | [S3](#s3-customer-credit-and-collections-workspace) | Customer credit and collections workspace | WS, NOTE, OD | 12 | 8 |
 | [S4](#s4-notes) | Notes | NOTE | 4 | 3 |
 | [S5](#s5-customers-overdue) | Customers overdue | OD, ACT | 8 | 5 |
@@ -84,7 +84,7 @@ The order reuses each page once: menus are walked once (S2) and serve every late
 | [S13](#s13-statement-send-gated) | Statement send (gated) ⚠️ | SD | 3 | 3 |
 | [S14](#s14-persistence) | Persistence | FAV, VIEW, LE | 5 | 0 |
 | [S15](#s15-security-role-and-wrap-up) | Security role and wrap-up | ALL | 15 | 13 |
-| | **Total** | | **148** | **112** |
+| | **Total** | | **149** | **112** |
 
 ---
 
@@ -126,6 +126,7 @@ Walk the module menus once and run the Favorites guide. This tests the shared me
 | S2.5 | Open Accounts receivable and find Open customer invoices. | Menu group or submenu that contains Open customer invoices. | FAV 05 |
 | S2.6 | Add All customers to Favorites with its star. Capture the star before and after. Click the selected star once more, then re-add it if it was removed. | Star appearance before and after; whether it shows only on hover; whether clicking a selected star removes the favorite. | FAV 07 |
 | S2.7 | Add Aged balances, Customer payment journal and Open customer invoices to Favorites. Open Favorites. | The order in which the four favorites are listed. | FAV 13 |
+| S2.8 | Open Favorites and click the filled star next to Customer payment journal. Check that it is no longer listed, then add it again from its module menu (later stations use it). | Whether the star in the favorites list removes the page; whether the filled star in the module menu does the same; whether the page still opens from its module menu. | FAV 07, 14; G260-08 |
 
 ### S3 Customer credit and collections workspace
 
@@ -176,12 +177,12 @@ Run the Aged Balances guide and the Personalized Views guide on the same grid. S
 | S6.1 | Open Aged balances from Favorites. Check whether the Currency column is shown, and whether the page has an aging period or band selector. | Currency column shown by default (yes or no); any aging period or band selector and its label. | AGED 11, 12 |
 | S6.2 | Click Insert columns, add Currency and apply the selection. | Location of Insert columns on this page; what D365 displays; the control that applies the selection. | AGED 04; VIEW 03, 04 |
 | S6.3 | Remove one column, then move another column to a new position. | How a column is removed and its label; how columns are repositioned. | VIEW 05, 06 |
-| S6.4 | Identify the balance column to filter. Open its filter, select not equal to, enter 0 and apply. | Exact balance column label; how the filter opens; operator labels; the apply control. | AGED 03, 05; VIEW 07, 08, 29 |
+| S6.4 | Identify the balance column to filter. Open its filter, select does not equal (the SME answer; the draft says not equal to), enter 0 and apply. | Exact balance column label; how the filter opens; the operator labels listed for an amount column (compare with 260 v0.2 Key concepts, Filter operators); the apply control. | AGED 03, 05; VIEW 07, 08, 29 |
 | S6.5 | Sort the balance column from largest to smallest. | How the column is sorted and the sort option label. | AGED 06 |
 | S6.6 | Open the customer column filter, select is one of and choose two customers. | Exact customer column label; whether is one of allows several. | AGED 07 |
-| S6.7 | Show the grid footer and add a sum to the balance column. | How the footer is shown; how a sum is added; which columns support a sum. | VIEW 09, 10 |
-| S6.8 | Save the layout as a new view named "TEST - delete after session". Complete Save as. | Label and location of Save as; the control that completes it. | VIEW 11, 13 |
-| S6.9 | Pin the test view as the default. Note how D365 shows the saved view and the pinned default. | Label and location of Pin as default and what it does; how a saved and a pinned view are shown. | VIEW 14, 15 |
+| S6.7 | Show the grid footer. Hover over the footer under the balance column until a + symbol appears, then click it. | How the footer is shown; whether the + appears on hover and what it adds; which columns support a sum. | VIEW 09, 10 |
+| S6.8 | Click the view name beside the page title to open the view selector. Note the view name (My view for a user with no saved views) and any asterisk. Save the layout as a new view named "TEST - delete after session" and complete Save as. | View name shown before saving and whether an asterisk marks the unsaved changes; label and location of Save as; the control that completes it. | VIEW 11, 13 |
+| S6.9 | Pin the test view as the default. Find the option to set it as the default across all legal entities, and record it without selecting it. Note how D365 shows the saved view and the pinned default. | Label and location of Pin as default and what it does; label and location of the all-legal-entities default option; how a saved and a pinned view are shown. | VIEW 14, 15; G260-07 |
 | S6.10 | Change the view (add a column), save the change to the existing view, then reselect the view from the view selector. | The control that saves changes to an existing view; how a saved view is selected. | VIEW 16, 17 |
 | S6.11 | Leave the page and come back. Check whether the filter and footer total are kept. | Whether filters and totals are saved with the view. | VIEW 18 |
 
@@ -303,7 +304,7 @@ Items that need an SME answer, a recording or a project decision are not tested 
 
 | Guide | Open items | Tested here (B / N) | Stations | Left for SME, recording or decision |
 |---|---|---|---|---|
-| AR Collections Favorites | 30 | 18 (9 / 9) | S0, S1, S2, S14, S15 | 12 |
+| AR Collections Favorites | 31 | 19 (9 / 10) | S0, S1, S2, S14, S15 | 12 |
 | AR Collections Personalized Views | 29 | 19 (16 / 3) | S6, S14, S15 | 10 |
 | AR Collections Aged Balances | 22 | 10 (8 / 2) | S2, S6, S15 | 12 |
 | AR Collections Customer Invoices | 22 | 9 (8 / 1) | S8, S9, S10, S15 | 13 |
@@ -316,7 +317,9 @@ Items that need an SME answer, a recording or a project decision are not tested 
 | AR Collections Collection Activities | 24 | 11 (9 / 2) | S2, S5, S8, S11, S15 | 13 |
 | AR Collections Statement Preview | 24 | 10 (10 / 0) | S12, S15 | 14 |
 | AR Collections Statement Distribution | 25 | 9 (8 / 1) | S12, S13, S15 | 16 |
-| **Total** | **308** | **148 (112 / 36)** | | **160** |
+| **Total** | **309** | **149 (112 / 37)** | | **160** |
+
+The 260 guide-level items `G260-07` (S6.9) and `G260-08` (S2.8) are also tested here. They are not in the counts above. Favorites `VG-14` was deferred until the SME asked for removal steps (D-054).
 
 ---
 
@@ -341,3 +344,4 @@ Items that need an SME answer, a recording or a project decision are not tested 
 |---|---|
 | 2026-10-15 | Plan created from the 13 validation registers. |
 | 2026-11-01 | After-session step 4 uses the README tracker instead of the retired Command Centre (D-047), and applies results for merged items to 260 and 221 (D-048). |
+| 2026-11-10 | Step S2.8 added and S6.4, S6.7, S6.8 and S6.9 updated with the SME answers from the 260 review (D-054): Favorites `VG-14` reopened; `G260-07` and `G260-08` tested. The results log has the same changes. |

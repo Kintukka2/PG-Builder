@@ -8,7 +8,7 @@
 | Last updated | 2026-11-01 |
 | Items | 20 total, all open: 12 blocking, 8 non-blocking |
 
-> **Merged and frozen (D-048).** This topic draft is now topic 6 of the [260 O2C Getting Started v0.1](../01-procedure-guides/260-O2C%20Getting%20Started%20PG%20v0.1.docx) working draft (register: [260-O2C-Getting-Started-Validation.md](260-O2C-Getting-Started-Validation.md)). Edit the 260 Word file, not this draft. Record answers here against these IDs; they apply to 260, where each carried comment reads *Export to Excel VG-xx*.
+> **Merged and frozen (D-048).** This topic draft is now topic 6 of the [260 O2C Getting Started v0.2](../01-procedure-guides/260-O2C%20Getting%20Started%20PG%20v0.2.docx) working draft (register: [260-O2C-Getting-Started-Validation.md](260-O2C-Getting-Started-Validation.md)). Edit the 260 Word file, not this draft. Record answers here against these IDs; they apply to 260, where each carried comment reads *Export to Excel VG-xx*.
 
 This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are scoped to this guide and never renumbered. Each open item that affects the text is also a Word review comment by "Validation register" (VR).
 
