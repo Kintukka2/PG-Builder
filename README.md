@@ -13,6 +13,7 @@ Each D365 task and its controls is **one topic** inside a process-level PG (D-04
 | Topic | Folder | Status |
 |---|---|---|
 | **Accounts Receivable (AR) Collections** | [`ar-collections-learning/`](ar-collections-learning/) | Active. Every topic draft is merged into a working draft: **260 O2C Getting Started** (D-048, D-054), **220 Customer Payments v3.0**, which absorbed 221 Customer Payment Corrections (D-055), and **230 Collections v3.0** (D-052), with a 230 v2.4 draft for the split of 6.5 to 6.8 (D-051). **240 Direct Debit and Credit Card Payments** is a v0.1 skeleton, to be filled from the 11 November recording (D-053). |
+| **Accounts Payable (AP) Vendor Invoices** | [`ap-vendor-invoices-learning/`](ap-vendor-invoices-learning/) | Active. The legacy **Vendor Invoices (NZ) v0.2** guide is converted to the master template as a **v1.0 working draft** (D-057), with 22 items open (17 blocking). P2P stream: the guide code is to be allocated. |
 | *Further D365 topics* | *To be added as sibling folders* | Planned |
 
 ## PG template (governs every PG)
@@ -97,6 +98,14 @@ Shared AR resources:
 - [SME question pack](ar-collections-learning/03-validation/SME-Question-Pack.md) and its [response sheet](ar-collections-learning/03-validation/SME-Question-Pack-Responses.xlsx): 31 questions that answer the 191 open items needing an SME, a recording or a project decision. 11 questions (46 items) carry a legacy PG proposal to confirm
 - [SME question pack, Part 2 supplement](ar-collections-learning/03-validation/SME-Question-Pack-Part2-Supplement.md) and its [response sheet](ar-collections-learning/03-validation/SME-Question-Pack-Part2-Responses.xlsx): 27 questions that answer the 50 open Part 2 and Customer Pools items (42 blocking). 11 questions (16 items) carry a legacy PG proposal to confirm
 - [Legacy O2C PG cross-comparison](ar-collections-learning/03-validation/Legacy-O2C-PG-Cross-Comparison.md): what the five legacy O2C procedure guides cover compared with the drafts, and which open items they help answer (184 of 364, 92 strong). Reference evidence only (D-044).
+
+## AP Vendor Invoices: guide
+
+The legacy guide (version 0.2, January 2025, BPO Ghada Boulos) is converted to the master template at the user's request (D-057). Its content is legacy reference evidence until the SME and a clean-session test confirm it. Vendor Invoices is in the Purchase-to-Pay (P2P) stream, outside the O2C codes, so the file name uses `TBC` until the register owner allocates a code (`VI-01`).
+
+| Code | Guide | Gate | Topics | Files |
+|---|---|---|---|---|
+| TBC | Vendor Invoices (NZ) | **v1.0 working draft** (D-057): legacy v0.2 rebuilt in the master template; 22 guide-level items open (17 blocking), each that affects the text a Word review comment. v0.2 stays live until 1.0 passes its gates | 1 Create a Vendor Invoice (1.1 to 1.4); 2 Submit a Vendor Invoice to the Workflow; 3 Post a Vendor Invoice; 4 Confirm a Purchase Order; Part 3: 12 reports | [Word PG](ap-vendor-invoices-learning/01-procedure-guides/CLAUDE-TBC-Vendor%20Invoices%20PG%20v1.0.docx) · [PDF](ap-vendor-invoices-learning/01-procedure-guides/CLAUDE-TBC-Vendor%20Invoices%20PG%20v1.0.pdf) · [Preview](ap-vendor-invoices-learning/01-procedure-guides/PG-Vendor-Invoices-v1.0-DRAFT.md) · [Validation](ap-vendor-invoices-learning/03-validation/Vendor-Invoices-v1.0-Validation.md) · [Decisions](ap-vendor-invoices-learning/05-project-notes/Project-Context-and-Decisions.md) |
 
 ## Development gates
 
