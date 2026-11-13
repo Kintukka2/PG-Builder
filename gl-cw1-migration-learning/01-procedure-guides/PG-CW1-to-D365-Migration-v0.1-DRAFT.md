@@ -76,32 +76,32 @@ The Ledger Owner (LO) prepares the migration files, the reversal in CW1, the SPE
 
 | **Tasks / Business Roles** | **Ledger Owner (LO)** | **Regional Accounting Manager (RAM)** | **Reporting Team** | **TM1 Administrator** | **CW1 Administrator** | **Finance Transformation** |
 |---|---|---|---|---|---|---|
-| 1 [Map the CW1 Ledger to TM1](#1-map-the-cw1-ledger-to-tm1) |  |  |  | R |  |  |
-| 2 [Analyze the CW1 Closing Trial Balance](#2-analyze-the-cw1-closing-trial-balance) | R |  | R |  |  |  |
-| 3 [Prepare the Breakdown Files](#3-prepare-the-breakdown-files) | R | R |  |  |  |  |
-| 4 [Prepare the Opening Balance File](#4-prepare-the-opening-balance-file) | R |  |  |  |  |  |
-| 4.1 [Complete the TB OB Tab](#41-complete-the-tb-ob-tab) | R |  |  |  |  |  |
-| 4.2 [Add Breakdown Lines](#42-add-breakdown-lines) | R |  |  |  |  |  |
-| 4.3 [Complete the AMCS Upload Tab](#43-complete-the-amcs-upload-tab) | R |  |  |  |  |  |
-| 5 [Reverse the Balances in CW1](#5-reverse-the-balances-in-cw1) | R |  |  | R | R | R |
-| 5.1 [Flag the Ledgers with CW1 Activity in the Cutover Month](#51-flag-the-ledgers-with-cw1-activity-in-the-cutover-month) |  |  |  | R |  | R |
-| 5.2 [Prepare the ADAW Clear-Out Journal](#52-prepare-the-adaw-clear-out-journal) | R |  |  |  |  |  |
-| 5.3 [Import the ADAW Journal into CW1](#53-import-the-adaw-journal-into-cw1) | R |  |  |  | R |  |
-| 5.4 [Confirm the Migration-Month Trial Balance in CW1](#54-confirm-the-migration-month-trial-balance-in-cw1) | R |  |  |  |  |  |
-| 5.5 [Disconnect the CW1 Feed to TM1](#55-disconnect-the-cw1-feed-to-tm1) |  |  |  | R |  |  |
-| 6 [Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates) | R |  |  |  |  |  |
-| 6.1 [Change the Maximum Penny-Rounding Difference](#61-change-the-maximum-penny-rounding-difference) |  |  |  |  |  |  |
-| 6.2 [Redirect the Penny Difference Posting Account](#62-redirect-the-penny-difference-posting-account) |  |  |  |  |  |  |
-| 6.3 [Revert the Original Configuration](#63-revert-the-original-configuration) |  |  |  |  |  |  |
-| 7 [Book the Post-Upload Adjustment Journals](#7-book-the-post-upload-adjustment-journals) | R | R |  |  |  |  |
-| 8 [Check the D365 Trial Balance After Go-Live](#8-check-the-d365-trial-balance-after-go-live) | R | R |  |  |  |  |
-| 8.1 [Extract the D365 Trial Balance](#81-extract-the-d365-trial-balance) | R |  |  |  |  |  |
-| 8.2 [Compare with the Intended Migration Balances](#82-compare-with-the-intended-migration-balances) | R |  |  |  |  |  |
-| 8.3 [Reconcile the Migration Journals](#83-reconcile-the-migration-journals) | R |  |  |  |  |  |
-| 8.4 [Check the Subledger Balances](#84-check-the-subledger-balances) | R |  |  |  |  |  |
-| 8.5 [Check the Reporting Currency Balances](#85-check-the-reporting-currency-balances) | R |  |  |  |  |  |
-| 8.6 [Confirm the CW1 Side and Sign Off](#86-confirm-the-cw1-side-and-sign-off) | R | R |  |  |  |  |
-| 9 [Complete the Pre Go-Live Checklist](#9-complete-the-pre-go-live-checklist) | R | R | R | R |  |  |
+| [1. Map the CW1 Ledger to TM1](#1-map-the-cw1-ledger-to-tm1) |  |  |  | R |  |  |
+| [2. Analyze the CW1 Closing Trial Balance](#2-analyze-the-cw1-closing-trial-balance) | R |  | R |  |  |  |
+| [3. Prepare the Breakdown Files](#3-prepare-the-breakdown-files) | R | R |  |  |  |  |
+| [4. Prepare the Opening Balance File](#4-prepare-the-opening-balance-file) | R |  |  |  |  |  |
+| [4.1 Complete the TB OB Tab](#41-complete-the-tb-ob-tab) | R |  |  |  |  |  |
+| [4.2 Add Breakdown Lines](#42-add-breakdown-lines) | R |  |  |  |  |  |
+| [4.3 Complete the AMCS Upload Tab](#43-complete-the-amcs-upload-tab) | R |  |  |  |  |  |
+| [5. Reverse the Balances in CW1](#5-reverse-the-balances-in-cw1) | R |  |  | R | R | R |
+| [5.1 Flag the Ledgers with CW1 Activity in the Cutover Month](#51-flag-the-ledgers-with-cw1-activity-in-the-cutover-month) |  |  |  | R |  | R |
+| [5.2 Prepare the ADAW Clear-Out Journal](#52-prepare-the-adaw-clear-out-journal) | R |  |  |  |  |  |
+| [5.3 Import the ADAW Journal into CW1](#53-import-the-adaw-journal-into-cw1) | R |  |  |  | R |  |
+| [5.4 Confirm the Migration-Month Trial Balance in CW1](#54-confirm-the-migration-month-trial-balance-in-cw1) | R |  |  |  |  |  |
+| [5.5 Disconnect the CW1 Feed to TM1](#55-disconnect-the-cw1-feed-to-tm1) |  |  |  | R |  |  |
+| [6. Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates) | R |  |  |  |  |  |
+| [6.1 Change the Maximum Penny-Rounding Difference](#61-change-the-maximum-penny-rounding-difference) |  |  |  |  |  |  |
+| [6.2 Redirect the Penny Difference Posting Account](#62-redirect-the-penny-difference-posting-account) |  |  |  |  |  |  |
+| [6.3 Revert the Original Configuration](#63-revert-the-original-configuration) |  |  |  |  |  |  |
+| [7. Book the Post-Upload Adjustment Journals](#7-book-the-post-upload-adjustment-journals) | R | R |  |  |  |  |
+| [8. Check the D365 Trial Balance After Go-Live](#8-check-the-d365-trial-balance-after-go-live) | R | R |  |  |  |  |
+| [8.1 Extract the D365 Trial Balance](#81-extract-the-d365-trial-balance) | R |  |  |  |  |  |
+| [8.2 Compare with the Intended Migration Balances](#82-compare-with-the-intended-migration-balances) | R |  |  |  |  |  |
+| [8.3 Reconcile the Migration Journals](#83-reconcile-the-migration-journals) | R |  |  |  |  |  |
+| [8.4 Check the Subledger Balances](#84-check-the-subledger-balances) | R |  |  |  |  |  |
+| [8.5 Check the Reporting Currency Balances](#85-check-the-reporting-currency-balances) | R |  |  |  |  |  |
+| [8.6 Confirm the CW1 Side and Sign Off](#86-confirm-the-cw1-side-and-sign-off) | R | R |  |  |  |  |
+| [9. Complete the Pre Go-Live Checklist](#9-complete-the-pre-go-live-checklist) | R | R | R | R |  |  |
 
 \*R = Responsible
 
@@ -119,7 +119,7 @@ Before you start, you need to know the terms used in this guide, the groups of a
 
 | **Term** | **Meaning** |
 |---|---|
-| **ADAW** | Advanced Data Automation Wizard: the CW1 tool used to upload GL journals from an Excel template ([5 Reverse the Balances in CW1](#5-reverse-the-balances-in-cw1)). |
+| **ADAW** | Advanced Data Automation Wizard: the CW1 tool used to upload GL journals from an Excel template ([5. Reverse the Balances in CW1](#5-reverse-the-balances-in-cw1)). |
 | **AMCS** | The D365 general ledger upload template (multi-ledger journal import), used for the breakdown and OB uploads. |
 | **BU** | Business unit (the **BusinessUnit** dimension). |
 | **CC** | Cost center (the **CostCenter** dimension). |
@@ -239,7 +239,7 @@ In the current configuration, a variance of USD 10.00 or less between the debit 
 | **Maximum penny-rounding difference in the reporting currency** (**General ledger parameters**, **Ledger** tab) | **10.00** (USD) | The calculated value: the difference between the SPE accounts converted to reporting currency at the migration-date rate and their values at historical rates. |
 | Main account for **Penny difference in reporting currency** (**Accounts for automatic transactions**) | **551404** - Rounding Difference Reporting Currency | **314200** - Foreign Currency Translation Reserve, so that the movement is recorded as a foreign currency translation rather than a rounding difference. |
 
-The steps are in [6 Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates). Details are in [Bug 11817](https://dev.azure.com/wtg-finance/Atlas%20D365/_workitems/edit/11817). `[CM-10]`
+The steps are in [6. Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates). Details are in [Bug 11817](https://dev.azure.com/wtg-finance/Atlas%20D365/_workitems/edit/11817). `[CM-10]`
 
 ---
 
@@ -291,10 +291,10 @@ The example below shows a TM1 closing TB annotated with the migration status of 
 | Run the Closing TB | • Run the CW1 closing TB in TM1. `[CM-11]` |
 | Identify the SL Accounts | • Identify the accounts whose balances are uploaded to the SL: trade receivables, trade creditors, inter-business receivables and payables, subscription billing, prepayments, PPE, leases and banks. |
 | Identify the Accounts That Need a Breakdown | • Identify the accounts that need a breakdown for the upload, and the basis of each breakdown: see [Breakdowns Required](#breakdowns-required). |
-| Identify the SPE Accounts | • Identify the accounts that need a special FX rate for conversion to reporting currency. These are the SPE balances: see [6 Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates). |
+| Identify the SPE Accounts | • Identify the accounts that need a special FX rate for conversion to reporting currency. These are the SPE balances: see [6. Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates). |
 | Identify the Monetary Items to Revalue | • Identify the monetary items that need to be revalued.<br>• Separate the last CW1 revaluation from the SL and GL opening balance: it is uploaded as a separate transaction, which is then reversed in the month of migration. `[CM-13]` |
 | Obtain the Reconciled Breakdowns | • For every account identified, obtain a detailed, reconciled breakdown of the closing balance from the Reporting team, with the pending items in the AMCS upload format. `[CM-12]`<br>• For P&L accounts there is little to do, unless D365 dimensions are needed for balances that pre-date D365. For items held in the functional currency that need no revaluation or settlement, uploading the closing balance is sufficient. |
-| Handoff to the Breakdown Files | • The migration status of each account (for example, SPE, PPE upload or file ready).<br>• Continue to [3 Prepare the Breakdown Files](#3-prepare-the-breakdown-files). |
+| Handoff to the Breakdown Files | • The migration status of each account (for example, SPE, PPE upload or file ready).<br>• Continue to [3. Prepare the Breakdown Files](#3-prepare-the-breakdown-files). |
 
 ### 3. Prepare the Breakdown Files
 
@@ -302,7 +302,7 @@ The example below shows a TM1 closing TB annotated with the migration status of 
 
 ##### Task Overview
 
-Prepare the required breakdowns on the AMCS template, adding extra tabs for the supporting workings. Breakdown files can be grouped by level 4 account, and every breakdown is checked against the TM1 balance. Transactions that need to be reversed once the balances are in D365 are highlighted in red; they are booked in D365 in [7 Book the Post-Upload Adjustment Journals](#7-book-the-post-upload-adjustment-journals).
+Prepare the required breakdowns on the AMCS template, adding extra tabs for the supporting workings. Breakdown files can be grouped by level 4 account, and every breakdown is checked against the TM1 balance. Transactions that need to be reversed once the balances are in D365 are highlighted in red; they are booked in D365 in [7. Book the Post-Upload Adjustment Journals](#7-book-the-post-upload-adjustment-journals).
 
 The example below shows a breakdown on the AMCS template, with an item to be reversed highlighted in red. `[CM-37]`
 
@@ -319,9 +319,9 @@ The example below shows a breakdown on the AMCS template, with an item to be rev
 |---|---|
 | Prepare Each Breakdown File | Each breakdown file contains:<br>• A TM1 report showing the closing balances being migrated.<br>• A support tab showing how the breakdown was prepared, which also provides support for audit purposes.<br>• The final breakdown on the AMCS template, ready for upload. `[CM-12]` |
 | Check to TM1 | • Check every breakdown against the TM1 balance. |
-| Highlight the Items to Reverse | • Highlight in red the transactions that need to be reversed once the balances are in D365, for example unrealized FX, rounding differences and write-offs.<br>• All highlighted items are combined into a single journal, which is reversed in D365: see [7 Book the Post-Upload Adjustment Journals](#7-book-the-post-upload-adjustment-journals). `[CM-14]` |
+| Highlight the Items to Reverse | • Highlight in red the transactions that need to be reversed once the balances are in D365, for example unrealized FX, rounding differences and write-offs.<br>• All highlighted items are combined into a single journal, which is reversed in D365: see [7. Book the Post-Upload Adjustment Journals](#7-book-the-post-upload-adjustment-journals). `[CM-14]` |
 | Review the Breakdown File | • The RAM reviews each breakdown file.<br>• Add a comment to the name of each file showing its review status, so that the review can be tracked. `[CM-15]` |
-| Handoff to the OB File | • Reviewed breakdown files, checked to TM1.<br>• Continue to [4 Prepare the Opening Balance File](#4-prepare-the-opening-balance-file). |
+| Handoff to the OB File | • Reviewed breakdown files, checked to TM1.<br>• Continue to [4. Prepare the Opening Balance File](#4-prepare-the-opening-balance-file). |
 
 ### 4. Prepare the Opening Balance File
 
@@ -337,7 +337,7 @@ Once all the breakdowns are complete, prepare the OB file: one OB workbook per e
 
 ##### Initiation
 
-- All the breakdown files are complete ([3 Prepare the Breakdown Files](#3-prepare-the-breakdown-files)).
+- All the breakdown files are complete ([3. Prepare the Breakdown Files](#3-prepare-the-breakdown-files)).
 
 ##### Topic Overview
 
@@ -357,7 +357,7 @@ Complete these steps to fill in the TB OB tab:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* | *Pre-requisites:*<br>• The OB workbook for the entity, with its tabs in the order set out in [Opening Balance Workbook](#opening-balance-workbook).<br>• The TM1 TB report of the balances to be migrated, and the reviewed CW1 to TM1 ledger mapping file ([1 Map the CW1 Ledger to TM1](#1-map-the-cw1-ledger-to-tm1)).<br>• The reviewed breakdown files ([3 Prepare the Breakdown Files](#3-prepare-the-breakdown-files)).<br>*Responsibility:*<br>• Ledger Owner (LO) |
+| *PROCESS START* | *Pre-requisites:*<br>• The OB workbook for the entity, with its tabs in the order set out in [Opening Balance Workbook](#opening-balance-workbook).<br>• The TM1 TB report of the balances to be migrated, and the reviewed CW1 to TM1 ledger mapping file ([1. Map the CW1 Ledger to TM1](#1-map-the-cw1-ledger-to-tm1)).<br>• The reviewed breakdown files ([3. Prepare the Breakdown Files](#3-prepare-the-breakdown-files)).<br>*Responsibility:*<br>• Ledger Owner (LO) |
 | 1. *Refresh* the **CW1 CoA Structure** tab. | Tab 3 is the TM1 report of the CW1 chart of accounts structure. Refresh the TM1 report if new accounts need to be added. |
 | 2. *Update* the **D356 CoA** tab. | Tab 4 is the D365 chart of accounts. Update it with the latest D365 report to include any new accounts. `[CM-16]` |
 | 3. *Update* the **New dimensions** tab. | Tab 6 lists the new **BusinessUnit** and **Product** dimension values to be created in D365. Update it to include any new dimensions. |
@@ -368,7 +368,7 @@ Complete these steps to fill in the TB OB tab:
 | 8. *Check* the **Level 6 check** (column I). | Column I shows **YES** if the CW1 Level 6 (column C) equals the D365 Level 6 (column H). Review any line that does not show **YES**. |
 | 9. *Check* the **Account Name Check** (column J). | Column J shows **YES** if the CW1 and D365 account names share enough key words, that is, the word-match score is at or above the **Name match threshold** in cell J92 (default **0.5**). This is a sense check only. `[CM-19]` |
 | 10. *Check* **Does manual entry need to be enabled?** (column G). | Column G shows the D365 **Do not allow manual entry** flag. If it is **Yes**, manual entry must be enabled on that main account in D365 before the upload. `[CM-17]` |
-| 11. *Enter* the **Dimensions** (columns Q to U). | Enter **BU**, **CC**, **Product**, **Activity** and **TP** for each line. Columns L to P show the allowed values or ranges for each dimension of the D365 account, for example **10000** or **10000..99998**. **Not found** means there is no active structure for the account.<br>• P&L lines: use CC **50005** - Finance, to offset the CW1 Finance department (870) used for the reversal in [5 Reverse the Balances in CW1](#5-reverse-the-balances-in-cw1). `[CM-18]` Revenue accounts use CC **10000**: in the template, revenue and professional-services accounts take CC from column M, because their structure fixes CC 10000. Put the entity's BU (and Product where needed) on P&L lines.<br>• Balance sheet lines: use the default values (BU **9999**, CC **99999**, Product **999999**, Activity **999999**, TP **9999**), unless the structure needs a specific value. |
+| 11. *Enter* the **Dimensions** (columns Q to U). | Enter **BU**, **CC**, **Product**, **Activity** and **TP** for each line. Columns L to P show the allowed values or ranges for each dimension of the D365 account, for example **10000** or **10000..99998**. **Not found** means there is no active structure for the account.<br>• P&L lines: use CC **50005** - Finance, to offset the CW1 Finance department (870) used for the reversal in [5. Reverse the Balances in CW1](#5-reverse-the-balances-in-cw1). `[CM-18]` Revenue accounts use CC **10000**: in the template, revenue and professional-services accounts take CC from column M, because their structure fixes CC 10000. Put the entity's BU (and Product where needed) on P&L lines.<br>• Balance sheet lines: use the default values (BU **9999**, CC **99999**, Product **999999**, Activity **999999**, TP **9999**), unless the structure needs a specific value. |
 | 12. *Check* the **FD Check** (column V). | Column V shows **YES** if every dimension in columns Q to U falls within the allowed values in columns L to P. Otherwise it shows **NO:** followed by the failing dimensions. Correct the dimensions until every line shows **YES**. |
 | 13. *Check* the **Debit** and **Credit** (columns W and X). | A formula takes the balance from column D: positive balances flow to **Debit** and negative balances to **Credit**. For breakdown lines, see [4.2 Add Breakdown Lines](#42-add-breakdown-lines). |
 | 14. *Enter* the **Currency** (column Y). | Enter the ledger (functional) currency. Balances needed in a foreign currency are uploaded separately: upload the functional currency balance first, then book an extra journal that reverses the functional currency amount and replaces it with the transaction currency amounts. `[CM-21]` |
@@ -386,7 +386,7 @@ Complete these steps to add breakdown lines to the TB OB tab:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* | *Pre-requisites:*<br>• An account that is uploaded in more detail than its TM1 closing balance, for example by customer, vendor or transaction ([2 Analyze the CW1 Closing Trial Balance](#2-analyze-the-cw1-closing-trial-balance)).<br>• The reviewed breakdown file for the account ([3 Prepare the Breakdown Files](#3-prepare-the-breakdown-files)).<br>*Responsibility:*<br>• Ledger Owner (LO) |
+| *PROCESS START* | *Pre-requisites:*<br>• An account that is uploaded in more detail than its TM1 closing balance, for example by customer, vendor or transaction ([2. Analyze the CW1 Closing Trial Balance](#2-analyze-the-cw1-closing-trial-balance)).<br>• The reviewed breakdown file for the account ([3. Prepare the Breakdown Files](#3-prepare-the-breakdown-files)).<br>*Responsibility:*<br>• Ledger Owner (LO) |
 | 1. *Keep* the **Original Line**. | Keep the account's original TM1 line, with its TM1 balance in column D unchanged. This keeps the column D check (sum of column D = 0) intact. |
 | 2. *Enter* the **First Breakdown Item**. | On the original line, overwrite the formula in column W (**Debit**) or X (**Credit**) with the amount of the first breakdown item. |
 | 3. *Complete* the **Original Line**. | Complete its dimensions (columns Q to U), description (column Z), and **FinTag 2** / **FinTag 3** (columns AA and AB).<br>Breakdown lines use free text that refers to the specific transaction, for example **DD/MM D365 Migration - &lt;period>-&lt;reference>-MATCH NO. &lt;match no.>**. `[CM-20]` |
@@ -624,7 +624,7 @@ Complete these steps to revert the original configuration:
 
 ##### Description
 
-Once the opening TB has been uploaded to D365, book adjustment journals in D365 for the items identified during the breakdown work and highlighted in red in the breakdown files ([3 Prepare the Breakdown Files](#3-prepare-the-breakdown-files)). These include unrealized FX and revaluation amounts to be reversed, rounding differences to be written off, write-offs needed, and other reconciling items to be cleared.
+Once the opening TB has been uploaded to D365, book adjustment journals in D365 for the items identified during the breakdown work and highlighted in red in the breakdown files ([3. Prepare the Breakdown Files](#3-prepare-the-breakdown-files)). These include unrealized FX and revaluation amounts to be reversed, rounding differences to be written off, write-offs needed, and other reconciling items to be cleared.
 
 Booking them as separate, reviewed journals keeps each adjustment traceable to its breakdown file and its supporting workings. `[CM-14]`
 
@@ -643,9 +643,9 @@ Complete these steps to book the post-upload adjustment journals:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* | *Pre-requisites:*<br>• The TB/OB upload is posted in D365.<br>• The breakdown files, with the items to reverse highlighted in red ([3 Prepare the Breakdown Files](#3-prepare-the-breakdown-files)).<br>*Responsibility:*<br>• Ledger Owner (LO): prepares<br>• Regional Accounting Manager (RAM): reviews |
+| *PROCESS START* | *Pre-requisites:*<br>• The TB/OB upload is posted in D365.<br>• The breakdown files, with the items to reverse highlighted in red ([3. Prepare the Breakdown Files](#3-prepare-the-breakdown-files)).<br>*Responsibility:*<br>• Ledger Owner (LO): prepares<br>• Regional Accounting Manager (RAM): reviews |
 | 1. *Collect* the **Highlighted Items**. | From the breakdown files, collect the items highlighted in red: unrealized FX and revaluation amounts to be reversed, rounding differences to be written off, write-offs needed, and other reconciling items to be cleared. |
-| 2. *Prepare* the **Adjustment Journals** in D365. | Prepare the journals in the migration month, so that they are included in the post go-live check ([8 Check the D365 Trial Balance After Go-Live](#8-check-the-d365-trial-balance-after-go-live)). Keep each journal traceable to its breakdown file and supporting workings.<br><mark>The D365 steps to prepare and post these journals are to be confirmed.</mark> `[CM-32]` |
+| 2. *Prepare* the **Adjustment Journals** in D365. | Prepare the journals in the migration month, so that they are included in the post go-live check ([8. Check the D365 Trial Balance After Go-Live](#8-check-the-d365-trial-balance-after-go-live)). Keep each journal traceable to its breakdown file and supporting workings.<br><mark>The D365 steps to prepare and post these journals are to be confirmed.</mark> `[CM-32]` |
 | 3. *Review* the **Adjustment Journals**. | The RAM reviews the journals before they are posted. |
 | 4. *Post* the **Adjustment Journals**. | Post the reviewed journals in the migration month. `[CM-32]` |
 | *PROCESS COMPLETE* | *Outcomes:*<br>• The adjustment journals are reviewed and posted in D365 in the migration month, each traceable to its breakdown file and supporting workings. |
@@ -706,7 +706,7 @@ Complete these steps to compare the D365 TB with the intended migration balances
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* | *Pre-requisites:*<br>• The D365 TB ([8.1 Extract the D365 Trial Balance](#81-extract-the-d365-trial-balance)).<br>• The OB file ([4 Prepare the Opening Balance File](#4-prepare-the-opening-balance-file)).<br>*Responsibility:*<br>• Ledger Owner (LO) |
+| *PROCESS START* | *Pre-requisites:*<br>• The D365 TB ([8.1 Extract the D365 Trial Balance](#81-extract-the-d365-trial-balance)).<br>• The OB file ([4. Prepare the Opening Balance File](#4-prepare-the-opening-balance-file)).<br>*Responsibility:*<br>• Ledger Owner (LO) |
 | 1. *Compare* the **D365 TB** with the intended migration balances. | The intended balances are the TM1 debit and credit balances in columns W and X of the TB OB tab, and the lines in Tab 1 (AMCS upload). |
 | 2. *Trace* each **D365 Balance** to its CW1 and TM1 account. | Compare by D365 main account, using the CW1/TM1 mapping in the OB file (column E, checked against the D365 CoA in columns F to H). |
 | 3. *Explain* each **Difference**. | The expected difference is zero. Document and explain every difference in the reconciliation workbook, with a reference to the journal or breakdown file that causes it. `[CM-34]` |
@@ -727,8 +727,8 @@ Complete these steps to reconcile each migration journal to its workings:
 | 2. *Reconcile* the **Separate Revaluation Transaction**. | Together with the OB upload, it brings the revalued monetary items back to the TM1 closing balance. Reconcile it to the last CW1 revaluation. `[CM-13]` |
 | 3. *Reconcile* the **Revaluation Reversal**. | The reversal of the revaluation in the migration month is expected to change the net balance against the intended OB by the amount of the last CW1 revaluation. Reconcile it to the last CW1 revaluation. |
 | 4. *Reconcile* the **Foreign Currency Replacement Journal**. | The journal for balances needed in a foreign currency (column Y) has no net change in functional currency: the functional currency amount is reversed and rebooked in transaction currency. Reconcile it to the foreign currency workings. |
-| 5. *Reconcile* the **SPE Historical-Rate Journal**. | The SPE journal ([6 Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates)) has no net change in functional currency. In reporting currency, the difference is posted to FCTR (314200). Reconcile it to the SPE workings and the SPE table. |
-| 6. *Reconcile* the **Combined Reversal Journal**. | The journal for the items highlighted in red ([3 Prepare the Breakdown Files](#3-prepare-the-breakdown-files)), booked and reviewed in [7 Book the Post-Upload Adjustment Journals](#7-book-the-post-upload-adjustment-journals), is expected to change the net balance by the total of the highlighted items (unrealized FX, rounding differences and write-offs). Reconcile it to the breakdown files (items in red). `[CM-14]` |
+| 5. *Reconcile* the **SPE Historical-Rate Journal**. | The SPE journal ([6. Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates)) has no net change in functional currency. In reporting currency, the difference is posted to FCTR (314200). Reconcile it to the SPE workings and the SPE table. |
+| 6. *Reconcile* the **Combined Reversal Journal**. | The journal for the items highlighted in red ([3. Prepare the Breakdown Files](#3-prepare-the-breakdown-files)), booked and reviewed in [7. Book the Post-Upload Adjustment Journals](#7-book-the-post-upload-adjustment-journals), is expected to change the net balance by the total of the highlighted items (unrealized FX, rounding differences and write-offs). Reconcile it to the breakdown files (items in red). `[CM-14]` |
 | *STEP COMPLETE* | • Each migration journal is reconciled to its workings.<br>• Continue to [8.4 Check the Subledger Balances](#84-check-the-subledger-balances). |
 
 #### 8.4 Check the Subledger Balances
@@ -741,7 +741,7 @@ Complete these steps for each SL account:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* | *Pre-requisites:*<br>• The SL accounts identified in [2 Analyze the CW1 Closing Trial Balance](#2-analyze-the-cw1-closing-trial-balance): trade receivables, trade creditors, inter-business receivables and payables, subscription billing, prepayments, PPE, leases and banks.<br>*Responsibility:*<br>• Ledger Owner (LO) |
+| *PROCESS START* | *Pre-requisites:*<br>• The SL accounts identified in [2. Analyze the CW1 Closing Trial Balance](#2-analyze-the-cw1-closing-trial-balance): trade receivables, trade creditors, inter-business receivables and payables, subscription billing, prepayments, PPE, leases and banks.<br>*Responsibility:*<br>• Ledger Owner (LO) |
 | 1. *Check* the **GL Upload**. | Agree the SL account balance uploaded to the GL as part of the OB to the TB OB tab of the OB file. Expected result: it agrees to the intended balance. |
 | 2. *Check* the **GL Reversal**. | Compare the reversal of the GL upload with the GL upload. Expected result: they net to zero, with no double count and no missing reversal. |
 | 3. *Check* the **SL Re-Upload**. | Compare the balance re-uploaded to the SL with the intended balance. Expected result: the SL re-upload equals the intended balance. |
@@ -758,7 +758,7 @@ Complete these steps to check the reporting currency balances:
 | **Action** | **Description** |
 |---|---|
 | *PROCESS START* | *Pre-requisites:*<br>• The SL balances are checked ([8.4 Check the Subledger Balances](#84-check-the-subledger-balances)).<br>*Responsibility:*<br>• Ledger Owner (LO) |
-| 1. *Check* the **Reporting Currency Balances**. | Balances should be converted at the migration-month rate, except SPE balances, which should carry the historical rates from the SPE table, with the difference posted to FCTR (314200), as described in [6 Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates). |
+| 1. *Check* the **Reporting Currency Balances**. | Balances should be converted at the migration-month rate, except SPE balances, which should carry the historical rates from the SPE table, with the difference posted to FCTR (314200), as described in [6. Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates). |
 | 2. *Confirm* the **Maximum Penny-Rounding Difference** is reverted. | **Maximum penny-rounding difference in the reporting currency** is back to **10.00** (USD): see [6.3 Revert the Original Configuration](#63-revert-the-original-configuration). |
 | 3. *Confirm* the **Posting Account** is reverted. | The main account for **Penny difference in reporting currency** is back to **551404** - Rounding Difference Reporting Currency. |
 | *STEP COMPLETE* | • The reporting currency balances are as expected, and the temporary D365 settings are reverted.<br>• Continue to [8.6 Confirm the CW1 Side and Sign Off](#86-confirm-the-cw1-side-and-sign-off). |
@@ -801,24 +801,24 @@ Use this checklist to track the completion of each deliverable. Each deliverable
 
 | **#** | **Deliverable** | **Owner** | **Topic** | **Status** |
 |---|---|---|---|---|
-| 1 | CW1 to TM1 ledger mapping file prepared and reviewed | TM1 administrator `[CM-06]` | [1 Map the CW1 Ledger to TM1](#1-map-the-cw1-ledger-to-tm1) | ☐ |
-| 2 | CW1 closing TB in TM1 analyzed (SL uploads, breakdowns, SPE and revaluation) | LO | [2 Analyze the CW1 Closing Trial Balance](#2-analyze-the-cw1-closing-trial-balance) | ☐ |
-| 3 | Detailed, reconciled breakdowns of closing balances provided, with pending items in AMCS format | Reporting team | [2 Analyze the CW1 Closing Trial Balance](#2-analyze-the-cw1-closing-trial-balance) | ☐ |
-| 4 | Breakdown files prepared on the AMCS template, checked to TM1, with items to reverse highlighted in red | LO | [3 Prepare the Breakdown Files](#3-prepare-the-breakdown-files) | ☐ |
-| 5 | Breakdown files reviewed and review status added to each file name | RAM | [3 Prepare the Breakdown Files](#3-prepare-the-breakdown-files) | ☐ |
-| 6 | Last CW1 revaluation uploaded as a separate transaction and reversed in the migration month | LO | [2 Analyze the CW1 Closing Trial Balance](#2-analyze-the-cw1-closing-trial-balance) | ☐ |
-| 7 | OB file completed (all seven tabs updated, Level 6 and account name checks reviewed, AMCS tab extended to every TB OB line) | LO | [4 Prepare the Opening Balance File](#4-prepare-the-opening-balance-file) | ☐ |
+| 1 | CW1 to TM1 ledger mapping file prepared and reviewed | TM1 administrator `[CM-06]` | [1. Map the CW1 Ledger to TM1](#1-map-the-cw1-ledger-to-tm1) | ☐ |
+| 2 | CW1 closing TB in TM1 analyzed (SL uploads, breakdowns, SPE and revaluation) | LO | [2. Analyze the CW1 Closing Trial Balance](#2-analyze-the-cw1-closing-trial-balance) | ☐ |
+| 3 | Detailed, reconciled breakdowns of closing balances provided, with pending items in AMCS format | Reporting team | [2. Analyze the CW1 Closing Trial Balance](#2-analyze-the-cw1-closing-trial-balance) | ☐ |
+| 4 | Breakdown files prepared on the AMCS template, checked to TM1, with items to reverse highlighted in red | LO | [3. Prepare the Breakdown Files](#3-prepare-the-breakdown-files) | ☐ |
+| 5 | Breakdown files reviewed and review status added to each file name | RAM | [3. Prepare the Breakdown Files](#3-prepare-the-breakdown-files) | ☐ |
+| 6 | Last CW1 revaluation uploaded as a separate transaction and reversed in the migration month | LO | [2. Analyze the CW1 Closing Trial Balance](#2-analyze-the-cw1-closing-trial-balance) | ☐ |
+| 7 | OB file completed (all seven tabs updated, Level 6 and account name checks reviewed, AMCS tab extended to every TB OB line) | LO | [4. Prepare the Opening Balance File](#4-prepare-the-opening-balance-file) | ☐ |
 | 8 | FD Check (column V of the TB OB tab) shows YES on every line before upload | LO | [4.1 Complete the TB OB Tab](#41-complete-the-tb-ob-tab) | ☐ |
 | 9 | TB OB checks equal zero (sum of column D in the Check row; cell W92, total debits less total credits), and AMCS totals agree to the TB OB totals | LO | [4.3 Complete the AMCS Upload Tab](#43-complete-the-amcs-upload-tab) | ☐ |
 | 10 | Foreign currency replacement journal prepared, where needed | LO | [4.1 Complete the TB OB Tab](#41-complete-the-tb-ob-tab) | ☐ |
-| 11 | Reversal journal for items highlighted in red prepared for D365 | LO | [7 Book the Post-Upload Adjustment Journals](#7-book-the-post-upload-adjustment-journals) | ☐ |
-| 12 | CW1 reversal booked with the ADAW journal and migration-month TB confirmed to net to zero | LO | [5 Reverse the Balances in CW1](#5-reverse-the-balances-in-cw1) | ☐ |
+| 11 | Reversal journal for items highlighted in red prepared for D365 | LO | [7. Book the Post-Upload Adjustment Journals](#7-book-the-post-upload-adjustment-journals) | ☐ |
+| 12 | CW1 reversal booked with the ADAW journal and migration-month TB confirmed to net to zero | LO | [5. Reverse the Balances in CW1](#5-reverse-the-balances-in-cw1) | ☐ |
 | 13 | CW1 Confirmation tab of the ADAW workbook completed with the JE numbers for each CW1 company | LO | [5.3 Import the ADAW Journal into CW1](#53-import-the-adaw-journal-into-cw1) | ☐ |
-| 14 | SPE workings and journal prepared from the SPE table | LO | [6 Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates) | ☐ |
-| 15 | D365 settings temporarily changed for the SPE journal, then reverted to the original configuration (maximum penny-rounding difference 10.00 USD; posting account 551404) immediately after posting | <mark>To be confirmed</mark> `[CM-30]` | [6 Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates) | ☐ |
-| 16 | Post-upload adjustment journals (FX reversals, rounding write-offs, other) prepared in D365 | LO | [7 Book the Post-Upload Adjustment Journals](#7-book-the-post-upload-adjustment-journals) | ☐ |
-| 17 | Adjustment journals reviewed before posting | RAM | [7 Book the Post-Upload Adjustment Journals](#7-book-the-post-upload-adjustment-journals) | ☐ |
-| 18 | Post go-live check prepared: D365 TB at the migration date reconciled to the intended migration balances (TB OB tab and AMCS upload), covering all migration journals and the SL GL upload, reversal and re-upload, with any difference explained | LO | [8 Check the D365 Trial Balance After Go-Live](#8-check-the-d365-trial-balance-after-go-live) | ☐ |
+| 14 | SPE workings and journal prepared from the SPE table | LO | [6. Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates) | ☐ |
+| 15 | D365 settings temporarily changed for the SPE journal, then reverted to the original configuration (maximum penny-rounding difference 10.00 USD; posting account 551404) immediately after posting | <mark>To be confirmed</mark> `[CM-30]` | [6. Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates) | ☐ |
+| 16 | Post-upload adjustment journals (FX reversals, rounding write-offs, other) prepared in D365 | LO | [7. Book the Post-Upload Adjustment Journals](#7-book-the-post-upload-adjustment-journals) | ☐ |
+| 17 | Adjustment journals reviewed before posting | RAM | [7. Book the Post-Upload Adjustment Journals](#7-book-the-post-upload-adjustment-journals) | ☐ |
+| 18 | Post go-live check prepared: D365 TB at the migration date reconciled to the intended migration balances (TB OB tab and AMCS upload), covering all migration journals and the SL GL upload, reversal and re-upload, with any difference explained | LO | [8. Check the D365 Trial Balance After Go-Live](#8-check-the-d365-trial-balance-after-go-live) | ☐ |
 | 19 | Post go-live reconciliation reviewed and review status added to the file name | RAM | [8.6 Confirm the CW1 Side and Sign Off](#86-confirm-the-cw1-side-and-sign-off) | ☐ |
 
 ---

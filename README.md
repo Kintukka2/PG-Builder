@@ -146,6 +146,7 @@ Higher-risk topics (settlement, write-offs, customer maintenance, exclusions, pa
 
 - Action | Description rows, one action per row.
 - *Italic* verb; **bold** UI labels and business objects.
+- Bulleted lists in body text use the **Bullet 1.2** style, and links to a topic include its number in the link text (**1. Title**, **4.1 Title**) (D-061; see [CLAUDE.md](CLAUDE.md)).
 - PROCESS START, STEP COMPLETE and PROCESS COMPLETE boundary rows.
 - The standard navigation pattern (*Check* the **Entity** → *Click* **Modules**).
 

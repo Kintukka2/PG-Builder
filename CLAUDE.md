@@ -18,7 +18,12 @@ The master template shows each key concept as a two-column `[Heading] | [Body/ D
 - A bulleted list for rules or items in no particular order, and a numbered list when the order matters.
 - A mix of these, for example a lead paragraph, a table and an Important box.
 
-Keep the template's look: tables copy the concept table (dark blue header row), paragraphs use **PG Body Text**, bulleted lists use the **List Paragraph** bullets from *About this guide* (**CW_Bullet 1** stays for Responsibility and Initiation), and warnings use the **PG Important Box**. Size table columns so that no word breaks across lines.
+Keep the template's look: tables copy the concept table (dark blue header row), paragraphs use **PG Body Text**, bulleted lists use **Bullet 1.2** (D-061), and warnings use the **PG Important Box**. Size table columns so that no word breaks across lines.
+
+## Bullets and topic links (D-061)
+
+- **Bullets:** every bulleted list in body text uses the **Bullet 1.2** style: Part Description, Initiation, Responsibility, Task Overview and Key concepts. Do not use **CW_Bullet 1** for these lists, even though the authoring guide's style table names it for Responsibility and Initiation: it uses the theme font and looks wrong beside body text. Inside procedure tables, the template's own bullets stay (Bullet 1.2 in PROCESS START and Description cells, the PROCESS START/END Body bullets in STEP COMPLETE rows, and CW_Bullet 1 in the navigation path).
+- **Topic links:** when a link names a topic, the topic number is part of the link's display text, written as the heading shows it: **1. Map the CW1 Ledger to TM1** for a topic, **4.1 Complete the TB OB Tab** for a subtopic. This applies to the roles matrix, Topic Overview tables, checklists, "Continue to" links and cross-references in text. The Process table keeps the number in its own **#** column and links the title only, as the template shows.
 
 ## Internal notes to the author: `ACTION: REVIEW REQUIREMENT` (D-060)
 
