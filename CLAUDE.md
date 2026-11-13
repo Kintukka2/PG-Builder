@@ -19,3 +19,13 @@ The master template shows each key concept as a two-column `[Heading] | [Body/ D
 - A mix of these, for example a lead paragraph, a table and an Important box.
 
 Keep the template's look: tables copy the concept table (dark blue header row), paragraphs use **PG Body Text**, bulleted lists use the **List Paragraph** bullets from *About this guide* (**CW_Bullet 1** stays for Responsibility and Initiation), and warnings use the **PG Important Box**. Size table columns so that no word breaks across lines.
+
+## Internal notes to the author: `ACTION: REVIEW REQUIREMENT` (D-060)
+
+Any text in a draft guide that speaks to the author or reviewer rather than the reader uses the template's **ACTION: REVIEW REQUIREMENT** style (yellow fill, red text), so it stands out as a note to resolve, not guide content. Examples: "This guide does not yet describe…", "to be confirmed", "Navigation to be confirmed", "No role is marked until…".
+
+- A standalone note is its own paragraph in the paragraph style (a yellow box).
+- A phrase inside a sentence, list or table cell uses the linked character style, **ACTION: REVIEW REQUIREMENT Char**, on those words only.
+- Keep the note short and keep its review comment and validation item: the comment and the register stay the record of the question.
+- Remove every note in this style before publication, with its item closed. Search for the style as part of the final check.
+- Text that stays in the published guide, such as a real step whose detail is still being confirmed, keeps its normal style and carries only the review comment.

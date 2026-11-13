@@ -5,6 +5,8 @@
 > This is a Markdown preview of the Word guide [`CLAUDE-TBC-CW1 to D365 Migration PG v0.1.docx`](CLAUDE-TBC-CW1%20to%20D365%20Migration%20PG%20v0.1.docx). It converts the *CW1 to D365 Migration - Go-Live Manual* (version date October 2026) to the PG master template (D-058). **The Word file is the editable source.**
 >
 > Markers such as `[CM-05]` show unconfirmed items. In the Word file, each one is a review comment. The items are in the [validation register](../03-validation/CW1-to-D365-Migration-v0.1-Validation.md). The markers are not part of the guide text. Rows of a procedure that happen outside D365 (in Excel, TM1 or CW1) are shaded gray in the Word file.
+>
+> Notes marked **ACTION: REVIEW REQUIREMENT**, and <mark>highlighted</mark> phrases, are internal notes to the author (yellow, in the Word style of the same name). They are removed before publication (D-060).
 
 The fixed template content is not repeated here: cover, Contents, *About this guide* and *Additional Resources*.
 
@@ -38,7 +40,7 @@ At a high level, the migration follows these stages:
 - **Check the D365 Trial Balance After Go-Live**: reconcile the D365 TB with the balances intended to be migrated, and sign off.
 - **Complete the Pre Go-Live Checklist**: track each deliverable to completion.
 
-This guide does not yet describe how the OB file `[CM-23]` and the subledger balances `[CM-24]` are uploaded to D365.
+> **ACTION: REVIEW REQUIREMENT.** This guide does not yet describe how the OB file `[CM-23]` and the subledger balances `[CM-24]` are uploaded to D365.
 
 ##### Initiation
 
@@ -61,7 +63,7 @@ The high-level CW1 to D365 Migration process is as follows:
 | **3** | [Prepare the Breakdown Files](#3-prepare-the-breakdown-files) | Ledger Owner (LO) prepares; Regional Accounting Manager (RAM) reviews | When the accounts that need a breakdown are identified | Excel; TM1 |
 | **4** | [Prepare the Opening Balance File](#4-prepare-the-opening-balance-file) | Ledger Owner (LO) | When all the breakdown files are complete | Excel |
 | **5** | [Reverse the Balances in CW1](#5-reverse-the-balances-in-cw1) | Ledger Owner (LO); CW1 administrator; TM1 administrator; Finance Transformation | When the D365 TB has been loaded | CW1; TM1; Excel |
-| **6** | [Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates) | Ledger Owner (LO) prepares the SPE workings; the owner of the D365 settings is to be confirmed `[CM-30]` | As part of the TB upload | Excel; D365 |
+| **6** | [Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates) | Ledger Owner (LO) prepares the SPE workings; <mark>the owner of the D365 settings is to be confirmed</mark> `[CM-30]` | As part of the TB upload | Excel; D365 |
 | **7** | [Book the Post-Upload Adjustment Journals](#7-book-the-post-upload-adjustment-journals) | Ledger Owner (LO) prepares; Regional Accounting Manager (RAM) reviews | After the TB/OB upload is posted in D365, in the migration month | D365; Excel |
 | **8** | [Check the D365 Trial Balance After Go-Live](#8-check-the-d365-trial-balance-after-go-live) | Ledger Owner (LO) prepares; Regional Accounting Manager (RAM) reviews | After go-live, before the first D365 month-end close | D365; Excel; CW1 |
 | **9** | [Complete the Pre Go-Live Checklist](#9-complete-the-pre-go-live-checklist) | The owner of each deliverable | Throughout the migration, until each deliverable is complete | This guide |
@@ -88,7 +90,7 @@ The Ledger Owner (LO) prepares the migration files, the reversal in CW1, the SPE
 | 5.4 [Confirm the Migration-Month Trial Balance in CW1](#54-confirm-the-migration-month-trial-balance-in-cw1) | R |  |  |  |  |  |
 | 5.5 [Disconnect the CW1 Feed to TM1](#55-disconnect-the-cw1-feed-to-tm1) |  |  |  | R |  |  |
 | 6 [Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates) | R |  |  |  |  |  |
-| 6.1 [Change the Maximum Penny-Rounding Difference](#61-change-the-maximum-penny-rounding-difference) `[CM-30]` |  |  |  |  |  |  |
+| 6.1 [Change the Maximum Penny-Rounding Difference](#61-change-the-maximum-penny-rounding-difference) |  |  |  |  |  |  |
 | 6.2 [Redirect the Penny Difference Posting Account](#62-redirect-the-penny-difference-posting-account) |  |  |  |  |  |  |
 | 6.3 [Revert the Original Configuration](#63-revert-the-original-configuration) |  |  |  |  |  |  |
 | 7 [Book the Post-Upload Adjustment Journals](#7-book-the-post-upload-adjustment-journals) | R | R |  |  |  |  |
@@ -103,7 +105,9 @@ The Ledger Owner (LO) prepares the migration files, the reversal in CW1, the SPE
 
 \*R = Responsible
 
-> **Note:** No role is marked for 6.1 to 6.3 until the owner of the D365 settings is confirmed. The business roles shown above are responsible for completing these tasks on a day-to-day basis; however, other business roles may also have access to the same functionality to complete these tasks when required.
+> **ACTION: REVIEW REQUIREMENT.** No role is marked for 6.1 to 6.3 until the owner of the D365 settings is confirmed. `[CM-30]`
+
+> **Note:** The business roles shown above are responsible for completing these tasks on a day-to-day basis; however, other business roles may also have access to the same functionality to complete these tasks when required.
 
 ### Key concepts
 
@@ -409,7 +413,7 @@ Complete these steps to complete the AMCS upload tab:
 | 5. *Check* the **TransDate**. | TransDate is the migration date: the first day of the migration month (for example, **01/10/2026**). `[CM-22]` |
 | 6. *Leave* the **Unused Columns** blank. | Leave **PostingProfile**, **FinTag1**, **ExchRate**, **ReverseDate** and **ReverseEntry** blank for the OB upload. |
 | 7. *Check* the **AMCS Totals**. | Check that total debits equal total credits on the AMCS tab, and that both totals agree to the TB OB totals in columns W and X.<br>**Important:** Do not upload the OB file until every line shows **YES** in the FD Check (column V), the sum of column D in the Check row is **0**, and cell W92 (total debits less total credits) is **0**. |
-| *PROCESS COMPLETE* | *Outcomes:*<br>• The OB file is complete and ready for upload to D365: every line shows **YES** in the FD Check, the TB OB checks equal zero, and the AMCS totals agree to the TB OB totals.<br>• The upload of the OB file to D365 is not described in this guide yet. `[CM-23]` |
+| *PROCESS COMPLETE* | *Outcomes:*<br>• The OB file is complete and ready for upload to D365: every line shows **YES** in the FD Check, the TB OB checks equal zero, and the AMCS totals agree to the TB OB totals.<br>• <mark>The upload of the OB file to D365 is not described in this guide yet.</mark> `[CM-23]` |
 
 ### 5. Reverse the Balances in CW1
 
@@ -543,7 +547,7 @@ So that this journal can be posted, two D365 settings are changed manually and t
 ##### Responsibility
 
 - Ledger Owner (LO): prepares the SPE workings and journal from the SPE table. `[CM-29]`
-- Owner of the D365 settings, to be confirmed `[CM-30]`: changes the D365 settings and reverts them.
+- Owner of the D365 settings, <mark>to be confirmed</mark> `[CM-30]`: changes the D365 settings and reverts them.
 
 ##### Initiation
 
@@ -569,7 +573,7 @@ Complete these steps to change the maximum penny-rounding difference: `[CM-37]`
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* | *Pre-requisites:*<br>• The calculated value: the difference between the SPE accounts converted to reporting currency at the migration-date rate and their values in reporting currency at historical rates (SPE workings). `[CM-29]`<br>*Responsibility:*<br>• Owner of the D365 settings, to be confirmed `[CM-30]` |
+| *PROCESS START* | *Pre-requisites:*<br>• The calculated value: the difference between the SPE accounts converted to reporting currency at the migration-date rate and their values in reporting currency at historical rates (SPE workings). `[CM-29]`<br>*Responsibility:*<br>• Owner of the D365 settings, <mark>to be confirmed</mark> `[CM-30]` |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Click* **Modules**. | From the left-hand **Navigation Pane**, click **Modules**. |
 | 3. *Navigate* to the **General ledger parameters** page. | From the **Navigation Pane**, *select*:<br>• **General ledger >**<br>• **Ledger setup >**<br>• **General ledger parameters**<br>*[Screenshot: D365 Finance and Operations menu with General ledger selected and Ledger setup expanded, highlighting General ledger parameters.]* |
@@ -586,7 +590,7 @@ Complete these steps to redirect the penny difference posting account:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* | *Pre-requisites:*<br>• The maximum penny-rounding difference is changed ([6.1 Change the Maximum Penny-Rounding Difference](#61-change-the-maximum-penny-rounding-difference)).<br>*Responsibility:*<br>• Owner of the D365 settings, to be confirmed `[CM-30]` |
+| *PROCESS START* | *Pre-requisites:*<br>• The maximum penny-rounding difference is changed ([6.1 Change the Maximum Penny-Rounding Difference](#61-change-the-maximum-penny-rounding-difference)).<br>*Responsibility:*<br>• Owner of the D365 settings, <mark>to be confirmed</mark> `[CM-30]` |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Click* **Modules**. | From the left-hand **Navigation Pane**, click **Modules**. |
 | 3. *Navigate* to the **Accounts for automatic transactions** page. | From the **Navigation Pane**, *select*:<br>• **General ledger >**<br>• **Posting setup >**<br>• **Accounts for automatic transactions**<br>*[Screenshot: D365 Finance and Operations menu with General ledger selected and Posting setup expanded, highlighting Accounts for automatic transactions.]* |
@@ -603,7 +607,7 @@ Complete these steps to revert the original configuration:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* | *Pre-requisites:*<br>• The SPE journal is posted.<br>*Responsibility:*<br>• Owner of the D365 settings, to be confirmed `[CM-30]` |
+| *PROCESS START* | *Pre-requisites:*<br>• The SPE journal is posted.<br>*Responsibility:*<br>• Owner of the D365 settings, <mark>to be confirmed</mark> `[CM-30]` |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Click* **Modules**. | From the left-hand **Navigation Pane**, click **Modules**. |
 | 3. *Navigate* to the **General ledger parameters** page. | From the **Navigation Pane**, *select*:<br>• **General ledger >**<br>• **Ledger setup >**<br>• **General ledger parameters** |
@@ -641,7 +645,7 @@ Complete these steps to book the post-upload adjustment journals:
 |---|---|
 | *PROCESS START* | *Pre-requisites:*<br>• The TB/OB upload is posted in D365.<br>• The breakdown files, with the items to reverse highlighted in red ([3 Prepare the Breakdown Files](#3-prepare-the-breakdown-files)).<br>*Responsibility:*<br>• Ledger Owner (LO): prepares<br>• Regional Accounting Manager (RAM): reviews |
 | 1. *Collect* the **Highlighted Items**. | From the breakdown files, collect the items highlighted in red: unrealized FX and revaluation amounts to be reversed, rounding differences to be written off, write-offs needed, and other reconciling items to be cleared. |
-| 2. *Prepare* the **Adjustment Journals** in D365. | Prepare the journals in the migration month, so that they are included in the post go-live check ([8 Check the D365 Trial Balance After Go-Live](#8-check-the-d365-trial-balance-after-go-live)). Keep each journal traceable to its breakdown file and supporting workings.<br>**Note:** The D365 steps to prepare and post these journals are to be confirmed. `[CM-32]` |
+| 2. *Prepare* the **Adjustment Journals** in D365. | Prepare the journals in the migration month, so that they are included in the post go-live check ([8 Check the D365 Trial Balance After Go-Live](#8-check-the-d365-trial-balance-after-go-live)). Keep each journal traceable to its breakdown file and supporting workings.<br><mark>The D365 steps to prepare and post these journals are to be confirmed.</mark> `[CM-32]` |
 | 3. *Review* the **Adjustment Journals**. | The RAM reviews the journals before they are posted. |
 | 4. *Post* the **Adjustment Journals**. | Post the reviewed journals in the migration month. `[CM-32]` |
 | *PROCESS COMPLETE* | *Outcomes:*<br>• The adjustment journals are reviewed and posted in D365 in the migration month, each traceable to its breakdown file and supporting workings. |
@@ -811,7 +815,7 @@ Use this checklist to track the completion of each deliverable. Each deliverable
 | 12 | CW1 reversal booked with the ADAW journal and migration-month TB confirmed to net to zero | LO | [5 Reverse the Balances in CW1](#5-reverse-the-balances-in-cw1) | ☐ |
 | 13 | CW1 Confirmation tab of the ADAW workbook completed with the JE numbers for each CW1 company | LO | [5.3 Import the ADAW Journal into CW1](#53-import-the-adaw-journal-into-cw1) | ☐ |
 | 14 | SPE workings and journal prepared from the SPE table | LO | [6 Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates) | ☐ |
-| 15 | D365 settings temporarily changed for the SPE journal, then reverted to the original configuration (maximum penny-rounding difference 10.00 USD; posting account 551404) immediately after posting | To be confirmed `[CM-30]` | [6 Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates) | ☐ |
+| 15 | D365 settings temporarily changed for the SPE journal, then reverted to the original configuration (maximum penny-rounding difference 10.00 USD; posting account 551404) immediately after posting | <mark>To be confirmed</mark> `[CM-30]` | [6 Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates) | ☐ |
 | 16 | Post-upload adjustment journals (FX reversals, rounding write-offs, other) prepared in D365 | LO | [7 Book the Post-Upload Adjustment Journals](#7-book-the-post-upload-adjustment-journals) | ☐ |
 | 17 | Adjustment journals reviewed before posting | RAM | [7 Book the Post-Upload Adjustment Journals](#7-book-the-post-upload-adjustment-journals) | ☐ |
 | 18 | Post go-live check prepared: D365 TB at the migration date reconciled to the intended migration balances (TB OB tab and AMCS upload), covering all migration journals and the SL GL upload, reversal and re-upload, with any difference explained | LO | [8 Check the D365 Trial Balance After Go-Live](#8-check-the-d365-trial-balance-after-go-live) | ☐ |
@@ -823,22 +827,24 @@ Use this checklist to track the completion of each deliverable. Each deliverable
 
 ##### Overview
 
-The source manual refers to the following D365 reports, which support the OB file and the post go-live check. Their navigation paths are not given in the source and are to be confirmed. `[CM-36]` The TM1 reports used in topics 2 and 4 (the CW1 closing TB, the CW1 CoA structure and the TB by CW1 company) are run in TM1, outside D365.
+The source manual refers to the following D365 reports, which support the OB file and the post go-live check. The TM1 reports used in topics 2 and 4 (the CW1 closing TB, the CW1 CoA structure and the TB by CW1 company) are run in TM1, outside D365.
+
+> **ACTION: REVIEW REQUIREMENT.** The navigation paths of these reports are not given in the source and are to be confirmed. `[CM-36]`
 
 ##### Trial Balance
 
 | **Navigation** | **Description** |
 |---|---|
-| • Navigation to be confirmed `[CM-36]` | The D365 trial balance shows the entity's balances by main account. Run it as at the migration date, in the ledger (functional) currency, by main account and, where relevant, by the dimensions used in the upload (columns Q to U of the TB OB tab). Use it after go-live to check that the D365 balances equal the balances intended to be migrated: see [8.1 Extract the D365 Trial Balance](#81-extract-the-d365-trial-balance). |
+| • <mark>Navigation to be confirmed</mark> `[CM-36]` | The D365 trial balance shows the entity's balances by main account. Run it as at the migration date, in the ledger (functional) currency, by main account and, where relevant, by the dimensions used in the upload (columns Q to U of the TB OB tab). Use it after go-live to check that the D365 balances equal the balances intended to be migrated: see [8.1 Extract the D365 Trial Balance](#81-extract-the-d365-trial-balance). |
 
 ##### Chart of Accounts
 
 | **Navigation** | **Description** |
 |---|---|
-| • Navigation to be confirmed | The D365 chart of accounts report lists the main accounts with their **Name**, **Main account category**, **Main account type**, **Posting type**, **Do not allow manual entry** and **Foreign currency revaluation** settings. Use the latest report to update Tab 4 of the OB workbook (**D356 CoA**), so that the lookups in columns F to H of the TB OB tab find any new accounts. Column G uses the **Do not allow manual entry** flag to show whether manual entry must be enabled before the upload. |
+| • <mark>Navigation to be confirmed</mark> | The D365 chart of accounts report lists the main accounts with their **Name**, **Main account category**, **Main account type**, **Posting type**, **Do not allow manual entry** and **Foreign currency revaluation** settings. Use the latest report to update Tab 4 of the OB workbook (**D356 CoA**), so that the lookups in columns F to H of the TB OB tab find any new accounts. Column G uses the **Do not allow manual entry** flag to show whether manual entry must be enabled before the upload. |
 
 ##### Ledger Account Structures
 
 | **Navigation** | **Description** |
 |---|---|
-| • Navigation to be confirmed | The D365 ledger account structures define the dimensions required for each account, in the order **MainAccount**, **BusinessUnit**, **CostCenter**, **Product**, **Activity**, **TradingPartner**, **Segment**. They are held in Tab 5 of the OB workbook (**LedgerAccountStructureContains**), where only **Active** structures are used by the lookups. Columns L to P of the TB OB tab show the allowed values for each dimension, and the FD Check (column V) checks the entered dimensions against them. |
+| • <mark>Navigation to be confirmed</mark> | The D365 ledger account structures define the dimensions required for each account, in the order **MainAccount**, **BusinessUnit**, **CostCenter**, **Product**, **Activity**, **TradingPartner**, **Segment**. They are held in Tab 5 of the OB workbook (**LedgerAccountStructureContains**), where only **Active** structures are used by the lookups. Columns L to P of the TB OB tab show the allowed values for each dimension, and the FD Check (column V) checks the entered dimensions against them. |

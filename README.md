@@ -132,6 +132,7 @@ Higher-risk topics (settlement, write-offs, customer maintenance, exclusions, pa
 - Each task is one topic. Topic drafts merge into their destination guide, and a task never appears in two guides; other guides link to it (D-045).
 - The Word file is the editable source.
 - Key concepts use the form their content needs: a table with any number of columns, paragraphs, or a bulleted or numbered list (D-059; see [CLAUDE.md](CLAUDE.md)).
+- Notes to the author in a draft (gaps, "to be confirmed") use the template's `ACTION: REVIEW REQUIREMENT` style and are removed before publication (D-060; see [CLAUDE.md](CLAUDE.md)).
 - A Markdown preview sits beside it for review on GitHub. Update the preview after the Word file changes.
 
 **Evidence**
