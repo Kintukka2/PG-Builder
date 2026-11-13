@@ -147,7 +147,8 @@ Before you start, you need to know the terms used in this guide, the groups of a
 | **Monetary items to be revalued** | The last CW1 revaluation is separated from the SL and GL OB, uploaded as a separate transaction, and reversed in the month of migration. `[CM-13]` |
 | **P&L accounts** | Little to do, unless D365 dimensions are needed for balances that pre-date D365. |
 | **Functional currency items** | For items held in the functional currency that need no revaluation or settlement, uploading the closing balance is sufficient. |
-| **Reconciled breakdowns** | Every account identified in the analysis needs a detailed, reconciled breakdown of its closing balance. The Reporting team prepares these breakdowns and provides the pending items in the AMCS upload format. `[CM-12]` |
+
+Every account identified in the analysis needs a detailed, reconciled breakdown of its closing balance. The Reporting team prepares these breakdowns and provides the pending items in the AMCS upload format. `[CM-12]`
 
 ##### Breakdowns Required
 
@@ -163,41 +164,42 @@ Before you start, you need to know the terms used in this guide, the groups of a
 
 ##### Opening Balance Workbook
 
-Prepare one OB workbook per entity. The workings tab is named with the D365 company code, and the tabs appear in the order above.
+Prepare one OB workbook per entity. The workings tab is named with the D365 company code, and the tabs appear in this order:
 
-| **Tab** | **Name and purpose** |
-|---|---|
-| 1 | **AMCSMultiLedgerJournalImport_GL**: the AMCS upload file. It is formula-linked to the TB OB tab, so the data flows into this tab once Tab 2 is complete: see [4.3 Complete the AMCS Upload Tab](#43-complete-the-amcs-upload-tab). |
-| 2 | **&lt;company code> TB OB** (for example, **234A TB OB**): the main working tab for the opening balance: see [4.1 Complete the TB OB Tab](#41-complete-the-tb-ob-tab). Row 1 labels the source of each column (**From TM1 Report**, **From Adam's file**, **From D365 report**, **Check** and **To be populated by LO**), and row 2 holds the column headers. |
-| 3 | **CW1 CoA Structure**: the TM1 report of the CW1 chart of accounts structure. |
-| 4 | **D356 CoA**: the D365 chart of accounts, with columns including **Main account**, **Name**, **Main account category**, **Main account type**, **Posting type**, **Do not allow manual entry** and **Foreign currency revaluation**. `[CM-16]` |
-| 5 | **LedgerAccountStructureContains**: the D365 ledger account structures (**Ledger Account Structure**), which define the dimensions required for each account. Dimension order: **MainAccount**, **BusinessUnit**, **CostCenter**, **Product**, **Activity**, **TradingPartner**, **Segment**. Only **Active** structures are used by the lookups. |
-| 6 | **New dimensions**: new **BusinessUnit** and **Product** dimension values to be created in D365. |
-| 7 | **TB TM1 &lt;period>** (for example, **TB TM1 P03**): the TM1 TB report by CW1 company, showing the balances to be migrated. |
+| **Tab** | **Name** | **Purpose** |
+|---|---|---|
+| 1 | **AMCSMultiLedgerJournalImport_GL** | The AMCS upload file. It is formula-linked to the TB OB tab, so the data flows into this tab once Tab 2 is complete: see [4.3 Complete the AMCS Upload Tab](#43-complete-the-amcs-upload-tab). |
+| 2 | **&lt;company code> TB OB** (for example, **234A TB OB**) | The main working tab for the opening balance: see [4.1 Complete the TB OB Tab](#41-complete-the-tb-ob-tab). Row 1 labels the source of each column (**From TM1 Report**, **From Adam's file**, **From D365 report**, **Check** and **To be populated by LO**), and row 2 holds the column headers. |
+| 3 | **CW1 CoA Structure** | The TM1 report of the CW1 chart of accounts structure. |
+| 4 | **D356 CoA** | The D365 chart of accounts, with columns including **Main account**, **Name**, **Main account category**, **Main account type**, **Posting type**, **Do not allow manual entry** and **Foreign currency revaluation**. `[CM-16]` |
+| 5 | **LedgerAccountStructureContains** | The D365 ledger account structures (**Ledger Account Structure**), which define the dimensions required for each account, in the order **MainAccount**, **BusinessUnit**, **CostCenter**, **Product**, **Activity**, **TradingPartner**, **Segment**. Only **Active** structures are used by the lookups. |
+| 6 | **New dimensions** | New **BusinessUnit** and **Product** dimension values to be created in D365. |
+| 7 | **TB TM1 &lt;period>** (for example, **TB TM1 P03**) | The TM1 TB report by CW1 company, showing the balances to be migrated. |
 
 ##### Opening Balance Checks
 
-| **Check** | **Rule** |
-|---|---|
-| **Level 6 check** (column I) | **YES** if the CW1 Level 6 (column C) equals the D365 Level 6 (column H). |
-| **Account Name Check** (column J) | **YES** if the CW1 and D365 account names share enough key words, that is, the word-match score is at or above the **Name match threshold** in cell J92 (default **0.5**). This is a sense check only. `[CM-19]` |
-| **FD Check** (column V) | **YES** if every dimension in columns Q to U falls within the allowed values in columns L to P. Otherwise it returns **NO:** followed by the failing dimensions. All lines must show **YES** before upload. |
-| **Check** row | The **Check** row below the data sums columns D, W and X. The sum of column D must be **0**. |
-| Cell **W92** | Total debits less total credits, which must be **0**. |
-| **AMCS totals** | Total debits equal total credits on the AMCS tab, and both totals agree to the TB OB totals in columns W and X. |
-| **TB TM1** check row | The check row **All N Elements with FCTR** on Tab 7 must be zero for each company. |
+| **Check** | **Where** | **Passes when** |
+|---|---|---|
+| **Level 6 check** | TB OB column I | **YES**: the CW1 Level 6 (column C) equals the D365 Level 6 (column H). |
+| **Account Name Check** | TB OB column J | **YES**: the CW1 and D365 account names share enough key words, that is, the word-match score is at or above the **Name match threshold** in cell J92 (default **0.5**). This is a sense check only. `[CM-19]` |
+| **FD Check** | TB OB column V | **YES** on every line: each dimension in columns Q to U falls within the allowed values in columns L to P. Otherwise it returns **NO:** followed by the failing dimensions. |
+| **Check** row | TB OB, below the data | The sum of column D is **0**. The row sums columns D, W and X. |
+| Total debits less total credits | TB OB cell W92 | The cell shows **0**. |
+| **AMCS totals** | Tab 1 | Total debits equal total credits, and both totals agree to the TB OB totals in columns W and X. |
+| **All N Elements with FCTR** | Tab 7 check row | Zero for each company. |
 
 > **Important:** Do not upload the OB file until every line shows **YES** in the FD Check (column V), the sum of column D in the Check row is **0**, and cell W92 (total debits less total credits) is **0**.
 
 ##### Department 001 in CW1
 
-| **Rule** | **Description** |
-|---|---|
-| **Clear-out journal** | Post every line of the ADAW clear-out journal to Department 001 (**D365 cutover use only**): balance sheet and P&L lines, in every ledger. |
-| **Inactive by default** | Department 001 stays inactive in CW1. The CW1 administrator activates it only for this posting, and deactivates it immediately afterwards. |
-| **Why** | Some ledgers keep billing in CW1 after go-live, for example A71, A78, A92 and AUY in AU Main Phase 2, and South Africa (SDT). D365 already reports that billing, so without a filter it would reach TM1 twice. Because only the clear-out journal uses Department 001, TM1 can keep the journal and drop all other CW1 activity on those ledgers in the cutover month. `[CM-25]` |
-| **One rule for every ledger** | A single coding rule for every ledger means that nobody has to decide which department to use. That decision is what went wrong for CCES and South Africa. |
-| **Reversal or repost** | To reverse an ADAW journal, reverse the signs of the amounts in the template and import it again. Any reversal or repost must also use Department 001: the CCES reversal was not posted to 001, so TM1 ignored it. |
+Post every line of the ADAW clear-out journal to Department 001 (**D365 cutover use only**): balance sheet and P&L lines, in every ledger. A single coding rule for every ledger means that nobody has to decide which department to use. That decision is what went wrong for CCES and South Africa.
+
+The rule matters because some ledgers keep billing in CW1 after go-live, for example A71, A78, A92 and AUY in AU Main Phase 2, and South Africa (SDT). D365 already reports that billing, so without a filter it would reach TM1 twice. Because only the clear-out journal uses Department 001, TM1 can keep the journal and drop all other CW1 activity on those ledgers in the cutover month (see [CW1 Feed to TM1 Around Go-Live](#cw1-feed-to-tm1-around-go-live)). `[CM-25]`
+
+Two more rules apply:
+
+- Department 001 stays inactive in CW1. The CW1 administrator activates it only for this posting, and deactivates it immediately afterwards.
+- To reverse an ADAW journal, reverse the signs of the amounts in the template and import it again. Any reversal or repost must also use Department 001: the CCES reversal was not posted to 001, so TM1 ignored it.
 
 ##### ADAW Workbook
 
@@ -222,12 +224,18 @@ TM1 applies the 001-only rule only to the ledgers flagged in [5.1 Flag the Ledge
 
 ##### SPE Balances and Temporary D365 Settings
 
-| **Topic** | **Description** |
-|---|---|
-| **TB upload in functional currency** | Balances are uploaded in the entity's functional currency, ignoring the FX rate used to convert to reporting currency. All accounts are then converted to reporting currency at the current month P&L rate, so the upload creates no difference from a reporting currency perspective. |
-| **SPE balances** | For SPE accounts, the historical rates in the SPE table are preserved, in case D365 consolidation functionality is used in future. A separate journal reverses the SPE balance in functional currency (converted at the migration-month rate) and rebooks it in the respective currencies, converted to reporting currency at the historical rates. The difference in reporting currency is posted to FCTR. LOs prepare the workings using the information in the SPE table. `[CM-29]` |
-| **Current configuration** | A maximum of USD 10.00 can be posted for reporting currency variances. If FX rate rounding, or the use of different exchange rates, creates a variance between the debit and credit in reporting currency (USD), any variance of USD 10.00 or less posts automatically, to account **551404** - Rounding Difference Reporting Currency. |
-| **Temporary change** | Because the SPE journal posts a movement in USD reporting currency, the maximum is raised temporarily to the calculated value, and the posting account is redirected to **314200** - Foreign Currency Translation Reserve, so that the movement is recorded as a foreign currency translation rather than a rounding difference. Both settings are reverted immediately after the SPE journal is posted. Details are in [Bug 11817](https://dev.azure.com/wtg-finance/Atlas%20D365/_workitems/edit/11817). `[CM-10]` |
+The TB is uploaded in each entity's functional currency, ignoring the FX rate used to convert to reporting currency. All accounts are then converted to reporting currency at the current month P&L rate, so the upload creates no difference from a reporting currency perspective.
+
+SPE balances are the exception. Their historical rates in the SPE table are preserved, in case D365 consolidation functionality is used in future. A separate journal reverses each SPE balance in functional currency (converted at the migration-month rate) and rebooks it in the respective currencies, converted to reporting currency at the historical rates. The difference in reporting currency is posted to FCTR. LOs prepare the workings using the information in the SPE table. `[CM-29]`
+
+In the current configuration, a variance of USD 10.00 or less between the debit and credit in reporting currency (USD), from FX rate rounding or different exchange rates, posts automatically to a rounding account. Because the SPE journal posts a movement in USD reporting currency, two D365 settings are changed for the posting and reverted immediately afterwards:
+
+| **Setting** | **Normal value** | **For the SPE journal** |
+|---|---|---|
+| **Maximum penny-rounding difference in the reporting currency** (**General ledger parameters**, **Ledger** tab) | **10.00** (USD) | The calculated value: the difference between the SPE accounts converted to reporting currency at the migration-date rate and their values at historical rates. |
+| Main account for **Penny difference in reporting currency** (**Accounts for automatic transactions**) | **551404** - Rounding Difference Reporting Currency | **314200** - Foreign Currency Translation Reserve, so that the movement is recorded as a foreign currency translation rather than a rounding difference. |
+
+The steps are in [6 Upload the SPE Balances at Historical Rates](#6-upload-the-spe-balances-at-historical-rates). Details are in [Bug 11817](https://dev.azure.com/wtg-finance/Atlas%20D365/_workitems/edit/11817). `[CM-10]`
 
 ---
 
