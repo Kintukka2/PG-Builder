@@ -14,6 +14,7 @@ Each D365 task and its controls is **one topic** inside a process-level PG (D-04
 |---|---|---|
 | **Accounts Receivable (AR) Collections** | [`ar-collections-learning/`](ar-collections-learning/) | Active. Every topic draft is merged into a working draft: **260 O2C Getting Started** (D-048, D-054), **220 Customer Payments v3.0**, which absorbed 221 Customer Payment Corrections (D-055), and **230 Collections v3.0** (D-052), with a 230 v2.4 draft for the split of 6.5 to 6.8 (D-051). **240 Direct Debit and Credit Card Payments** is a v0.1 skeleton, to be filled from the 11 November recording (D-053). |
 | **Accounts Payable (AP) Vendor Invoices** | [`ap-vendor-invoices-learning/`](ap-vendor-invoices-learning/) | Active. The legacy **Vendor Invoices (NZ) v0.2** guide is converted to the master template as a **v1.0 working draft** (D-057), with 22 items open (17 blocking). P2P stream: the guide code is to be allocated. |
+| **General Ledger (GL) CW1 to D365 Migration** | [`gl-cw1-migration-learning/`](gl-cw1-migration-learning/) | Active. The **CW1 to D365 Migration - Go-Live Manual** (October 2026) is converted to the master template as a **v0.1 working draft** (D-058), with 37 items open (26 blocking). Proposed R2R stream: the guide code is to be allocated. |
 | *Further D365 topics* | *To be added as sibling folders* | Planned |
 
 ## PG template (governs every PG)
@@ -106,6 +107,14 @@ The legacy guide (version 0.2, January 2025, BPO Ghada Boulos) is converted to t
 | Code | Guide | Gate | Topics | Files |
 |---|---|---|---|---|
 | TBC | Vendor Invoices (NZ) | **v1.0 working draft** (D-057): legacy v0.2 rebuilt in the master template; 22 guide-level items open (17 blocking), each that affects the text a Word review comment. v0.2 stays live until 1.0 passes its gates | 1 Create a Vendor Invoice (1.1 to 1.4); 2 Submit a Vendor Invoice to the Workflow; 3 Post a Vendor Invoice; 4 Confirm a Purchase Order; Part 3: 12 reports | [Word PG](ap-vendor-invoices-learning/01-procedure-guides/CLAUDE-TBC-Vendor%20Invoices%20PG%20v1.0.docx) · [PDF](ap-vendor-invoices-learning/01-procedure-guides/CLAUDE-TBC-Vendor%20Invoices%20PG%20v1.0.pdf) · [Preview](ap-vendor-invoices-learning/01-procedure-guides/PG-Vendor-Invoices-v1.0-DRAFT.md) · [Validation](ap-vendor-invoices-learning/03-validation/Vendor-Invoices-v1.0-Validation.md) · [Decisions](ap-vendor-invoices-learning/05-project-notes/Project-Context-and-Decisions.md) |
+
+## GL CW1 to D365 Migration: guide
+
+The *CW1 to D365 Migration - Go-Live Manual* (version date October 2026, owner Maria Florencia Ruiz) is converted to the master template at the user's request (D-058). The manual has no version number and still holds six `[Confirm]` notes, so its content is reference evidence until the SME and a clean-session test confirm it. The stream is proposed as Record-to-Report (R2R), outside the O2C codes, so the file name uses `TBC` until the register owner allocates a code (`CM-01`).
+
+| Code | Guide | Gate | Topics | Files |
+|---|---|---|---|---|
+| TBC | CW1 to D365 Migration | **v0.1 working draft** (D-058): the manual rebuilt in the master template; 37 guide-level items open (26 blocking), each a Word review comment (96 comments). The manual does not yet cover the OB upload, the subledger uploads, the SPE journal or the D365 steps for the adjustment journals | 1 Map the CW1 Ledger to TM1; 2 Analyze the CW1 Closing Trial Balance; 3 Prepare the Breakdown Files; 4 Prepare the Opening Balance File (4.1 to 4.3); 5 Reverse the Balances in CW1 (5.1 to 5.5); 6 Upload the SPE Balances at Historical Rates (6.1 to 6.3); 7 Book the Post-Upload Adjustment Journals; 8 Check the D365 Trial Balance After Go-Live (8.1 to 8.6); 9 Complete the Pre Go-Live Checklist; Part 3: 3 reports | [Word PG](gl-cw1-migration-learning/01-procedure-guides/CLAUDE-TBC-CW1%20to%20D365%20Migration%20PG%20v0.1.docx) · [PDF](gl-cw1-migration-learning/01-procedure-guides/CLAUDE-TBC-CW1%20to%20D365%20Migration%20PG%20v0.1.pdf) · [Preview](gl-cw1-migration-learning/01-procedure-guides/PG-CW1-to-D365-Migration-v0.1-DRAFT.md) · [Validation](gl-cw1-migration-learning/03-validation/CW1-to-D365-Migration-v0.1-Validation.md) · [Decisions](gl-cw1-migration-learning/05-project-notes/Project-Context-and-Decisions.md) |
 
 ## Development gates
 
