@@ -2,9 +2,9 @@
 
 > **WORKING DRAFT. Not validated or approved.**
 >
-> This is a Markdown preview of the Word guide [`260-O2C Getting Started PG v0.2.docx`](260-O2C%20Getting%20Started%20PG%20v0.2.docx). It was assembled from the topic drafts named in its version history, under D-045 and D-046. **The Word file is the editable source.**
+> This is a Markdown preview of the Word guide [`CLAUDE-260-O2C Getting Started PG v0.2.docx`](CLAUDE-260-O2C%20Getting%20Started%20PG%20v0.2.docx). It was assembled from the topic drafts named in its version history, under D-045 and D-046. **The Word file is the editable source.**
 >
-> Markers such as `[G260-01]` or `[Legal Entities VG-01]` show unconfirmed items. In the Word file, each one is a review comment. Guide-level items and the index of carried items are in the [validation register](../03-validation/260-O2C-Getting-Started-Validation.md). The markers are not part of the guide text.
+> Markers such as `[G260-01]` or `[Legal Entities VG-01]` show unconfirmed items. In the Word file, each one is a review comment. Guide-level items and the index of carried items are in the [validation register](../03-validation/260-O2C-Getting-Started-Validation.md). Notes marked **ACTION: REVIEW REQUIREMENT**, and <mark>highlighted</mark> phrases, are internal notes to the author (yellow in the Word file); they are removed before publication (D-060). The markers are not part of the guide text.
 
 The fixed template content is not repeated here: cover, Contents, *About this guide* and *Additional Resources*.
 
@@ -12,8 +12,8 @@ The fixed template content is not repeated here: cover, Contents, *About this gu
 
 | ID | Date | Author/s | BPO | Description of change |
 |---|---|---|---|---|
-| 0.1 | November 2026 | Daniel Moreira | To be confirmed | Working draft assembled from the Legal Entities, Favorites, Personalized Views and Export to Excel topic drafts (D-045, D-046). Not validated or approved. |
-| 0.2 | November 2026 | Daniel Moreira | To be confirmed `[G260-02]` | SME review by Maria Pabalan (10 November 2026) applied (D-054): ledger code URL example; view selector, Save as, footer total and all-legal-entities default steps; full filter operator list; topic 7 Remove a Page from Favorites; role O2C End-user. Not validated or approved. |
+| 0.1 | November 2026 | Daniel Moreira | <mark>To be confirmed</mark> | Working draft assembled from the Legal Entities, Favorites, Personalized Views and Export to Excel topic drafts (D-045, D-046). Not validated or approved. |
+| 0.2 | November 2026 | Daniel Moreira | <mark>To be confirmed</mark> `[G260-02]` | SME review by Maria Pabalan (10 November 2026) applied (D-054): ledger code URL example; view selector, Save as, footer total and all-legal-entities default steps; full filter operator list; topic 7 Remove a Page from Favorites; role O2C End-user. Not validated or approved. Formatting brought in line with D-059 to D-061 (D-066): Bullet 1.2 bullets, topic numbers in link text, and notes to the author in the ACTION: REVIEW REQUIREMENT style. |
 
 Guide code, title and scope: `[G260-01]`.
 
@@ -61,13 +61,13 @@ Every O2C user completes these tasks in their own D365 session.
 
 | **Tasks / Business Roles** | O2C End-user |
 |---|---|
-| [Switch Legal Entity with the Selector](#1-switch-legal-entity-with-the-selector) | R |
-| [Switch Legal Entity Using the Ledger Code](#2-switch-legal-entity-using-the-ledger-code) | R |
-| [Add Pages to Favorites](#3-add-pages-to-favorites) | R |
-| [Create a Personalized View](#4-create-a-personalized-view) | R |
-| [Update a Saved View](#5-update-a-saved-view) | R |
-| [Export All Rows from a Grid](#6-export-all-rows-from-a-grid) | R |
-| [Remove a Page from Favorites](#7-remove-a-page-from-favorites) | R |
+| [1. Switch Legal Entity with the Selector](#1-switch-legal-entity-with-the-selector) | R |
+| [2. Switch Legal Entity Using the Ledger Code](#2-switch-legal-entity-using-the-ledger-code) | R |
+| [3. Add Pages to Favorites](#3-add-pages-to-favorites) | R |
+| [4. Create a Personalized View](#4-create-a-personalized-view) | R |
+| [5. Update a Saved View](#5-update-a-saved-view) | R |
+| [6. Export All Rows from a Grid](#6-export-all-rows-from-a-grid) | R |
+| [7. Remove a Page from Favorites](#7-remove-a-page-from-favorites) | R |
 
 \*R = Responsible
 
@@ -147,7 +147,7 @@ The operators you can select depend on the type of column you filter.
 |---|---|
 | **Export all rows** | An option on the grid header that exports the grid's rows to an Excel file. `[Export to Excel VG-01 / VG-05]` |
 | **Configured columns** | The export contains the columns configured on the grid. Add any column you need before you export. `[Export to Excel VG-04]` |
-| **Export volume** | Limits apply to how much data can be exported. The limits for your environment are pending confirmation. `[Export to Excel VG-06]` |
+| **Export volume** | Limits apply to how much data can be exported. <mark>The limits for your environment are pending confirmation.</mark> `[Export to Excel VG-06]` |
 
 ##### Using exported data
 
@@ -184,7 +184,7 @@ Complete these steps to switch legal entity with the selector:
 | 1. *Click* the legal entity selector. `[Legal Entities VG-01]` | In the D365 header (top-right), click the legal entity selector. It shows the active legal entity. |
 | 2. *Find* the required legal entity. `[Legal Entities VG-02]` | Find the legal entity by its business name. |
 | 3. *Select* the legal entity. `[Legal Entities VG-03]` | Select the legal entity. D365 switches to it. |
-| 4. *Confirm* the active legal entity. `[Legal Entities VG-04]` | Check that the selector now shows the required legal entity before you continue.<br>The ledger code after **cmp=** in the browser address bar also changes to the code of the selected legal entity (see [Switch Legal Entity Using the Ledger Code](#2-switch-legal-entity-using-the-ledger-code)). |
+| 4. *Confirm* the active legal entity. `[Legal Entities VG-04]` | Check that the selector now shows the required legal entity before you continue.<br>The ledger code after **cmp=** in the browser address bar also changes to the code of the selected legal entity (see [2. Switch Legal Entity Using the Ledger Code](#2-switch-legal-entity-using-the-ledger-code)). |
 | *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• D365 is working in the required legal entity. |
 
 ### 2. Switch Legal Entity Using the Ledger Code
@@ -236,7 +236,7 @@ Complete these steps to add a page to your Favorites:
 | **Action** | **Description** |
 |---|---|
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365 and to the module that contains the page. `[Favorites VG-17]`<br>• The **Navigation Pane** is visible. `[Favorites VG-12]`<br>*Responsibility:*<br>• O2C End-user |
-| 1. *Check* the **Entity**. `[Favorites VG-23 / VG-10]` | Confirm you are signed into the correct **Legal Entity** (top-right). To change it, see [Switch Legal Entity with the Selector](#1-switch-legal-entity-with-the-selector). |
+| 1. *Check* the **Entity**. `[Favorites VG-23 / VG-10]` | Confirm you are signed into the correct **Legal Entity** (top-right). To change it, see [1. Switch Legal Entity with the Selector](#1-switch-legal-entity-with-the-selector). |
 | 2. *Click* **Modules**. `[Favorites VG-08]` | From the left-hand **Navigation Pane**, click **Modules**. |
 | 3. *Click* the module that contains the page. | From the list of modules, click the module, for example **Credit and collections** or **Accounts receivable**. The module menu opens. |
 | 4. *Click* the favorite star for the page. `[Favorites VG-02 / VG-06, Favorites VG-07]` | In the module menu, find the page and click its favorite star. The page is added to your **Favorites**.<br>To add another page, repeat steps 2 to 4. |
@@ -245,7 +245,7 @@ Complete these steps to add a page to your Favorites:
 | 7. *Click* the page in your favorites list. | The page opens. |
 | *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• The page appears under **Favorites** in the **Navigation Pane**. `[Favorites VG-10 / VG-11]`<br>• The page opens from **Favorites**. |
 
-> **Note:** To remove a page from your **Favorites**, see [Remove a Page from Favorites](#7-remove-a-page-from-favorites).
+> **Note:** To remove a page from your **Favorites**, see [7. Remove a Page from Favorites](#7-remove-a-page-from-favorites).
 
 ### 4. Create a Personalized View
 
@@ -267,10 +267,10 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [Arrange the Columns](#41-arrange-the-columns) | Add the columns you need, remove the ones you do not and reorder them so the most important information appears first. Output: the grid shows the columns you need, in your chosen order. |
-| [Filter the List](#42-filter-the-list) | Optional. Limit the rows shown by filtering on a column value, for example to exclude zero balances or to include only certain customers. Output: the grid shows only the rows you need. |
-| [Add a Footer Total](#43-add-a-footer-total) | Optional. Turn on the grid footer and add a sum to a column, such as an amount or balance column, so you can see the total at a glance. Output: the footer shows the total for the column. |
-| [Save and Pin the View](#44-save-and-pin-the-view) | Save the layout as a named view and pin it as your default, so the page opens with your columns, filters and totals each time you use it. Output: a saved default view for the page. |
+| [4.1 Arrange the Columns](#41-arrange-the-columns) | Add the columns you need, remove the ones you do not and reorder them so the most important information appears first. Output: the grid shows the columns you need, in your chosen order. |
+| [4.2 Filter the List](#42-filter-the-list) | Optional. Limit the rows shown by filtering on a column value, for example to exclude zero balances or to include only certain customers. Output: the grid shows only the rows you need. |
+| [4.3 Add a Footer Total](#43-add-a-footer-total) | Optional. Turn on the grid footer and add a sum to a column, such as an amount or balance column, so you can see the total at a glance. Output: the footer shows the total for the column. |
+| [4.4 Save and Pin the View](#44-save-and-pin-the-view) | Save the layout as a named view and pin it as your default, so the page opens with your columns, filters and totals each time you use it. Output: a saved default view for the page. |
 
 #### 4.1 Arrange the Columns
 
@@ -288,40 +288,40 @@ Complete these steps to show the columns you need, in the order you need:
 | 5. *Confirm* the selected columns are added to the grid. `[Personalized Views VG-04]` | Check that each selected column now appears in the grid. |
 | 6. *Remove* each column you do not need. `[Personalized Views VG-05]` | Remove columns that are not needed for your work, so the grid stays readable. |
 | 7. *Move* the columns into the order you need. `[Personalized Views VG-06]` | Reposition the columns so the information you check first appears first. |
-| *STEP COMPLETE* (light blue) | • The grid shows the columns you need, in your chosen order.<br>• Continue to [Filter the List](#42-filter-the-list) |
+| *STEP COMPLETE* (light blue) | • The grid shows the columns you need, in your chosen order.<br>• Continue to [4.2 Filter the List](#42-filter-the-list) |
 
 #### 4.2 Filter the List
 
 ##### Procedure
 
-This subprocedure is optional. Complete it when the view should show only some rows. Otherwise, continue to [Add a Footer Total](#43-add-a-footer-total).
+This subprocedure is optional. Complete it when the view should show only some rows. Otherwise, continue to [4.3 Add a Footer Total](#43-add-a-footer-total).
 
 Complete these steps to show only the rows you need:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The grid shows the columns you need (see [Arrange the Columns](#41-arrange-the-columns)).<br>*Responsibility:*<br>• O2C End-user |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The grid shows the columns you need (see [4.1 Arrange the Columns](#41-arrange-the-columns)).<br>*Responsibility:*<br>• O2C End-user |
 | 1. *Open* the filter for the column. `[Personalized Views VG-07]` | Open the filter for the column whose values you want to limit. |
 | 2. *Select* the filter operator. `[Personalized Views VG-08]` | Select the operator that matches the rows you want, for example **does not equal** to exclude a value or **is one of** to include several values. The operators depend on the column type: see **Filter operators** in Key concepts for the full list. |
 | 3. *Enter* the filter value. `[Personalized Views VG-29]` | Enter the value or values for the operator. For example, to exclude zero balances, use **does not equal** with the value **0**. |
 | 4. *Confirm* only the required rows are displayed. | Check that the grid shows only the rows that match the filter. |
-| *STEP COMPLETE* (light blue) | • The grid shows only the rows you need.<br>• Continue to [Add a Footer Total](#43-add-a-footer-total) |
+| *STEP COMPLETE* (light blue) | • The grid shows only the rows you need.<br>• Continue to [4.3 Add a Footer Total](#43-add-a-footer-total) |
 
 #### 4.3 Add a Footer Total
 
 ##### Procedure
 
-This subprocedure is optional. Complete it when the view should show a total for a column. Otherwise, continue to [Save and Pin the View](#44-save-and-pin-the-view).
+This subprocedure is optional. Complete it when the view should show a total for a column. Otherwise, continue to [4.4 Save and Pin the View](#44-save-and-pin-the-view).
 
 Complete these steps to show a column total in the grid footer:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The grid shows the columns you need (see [Arrange the Columns](#41-arrange-the-columns)).<br>*Responsibility:*<br>• O2C End-user |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The grid shows the columns you need (see [4.1 Arrange the Columns](#41-arrange-the-columns)).<br>*Responsibility:*<br>• O2C End-user |
 | 1. *Show* the grid footer. `[Personalized Views VG-09]` | Turn on the footer for the grid. |
 | 2. *Add* a **Sum** to the column. `[Personalized Views VG-10]` | Hover over the footer under the column you want totaled, such as an amount or balance column, until a **+** symbol appears. Click **+** to calculate the total for the column. |
 | 3. *Confirm* the total is displayed. | Check that the footer shows the total for the column. |
-| *STEP COMPLETE* (light blue) | • The footer shows the total for the column.<br>• Continue to [Save and Pin the View](#44-save-and-pin-the-view) |
+| *STEP COMPLETE* (light blue) | • The footer shows the total for the column.<br>• Continue to [4.4 Save and Pin the View](#44-save-and-pin-the-view) |
 
 #### 4.4 Save and Pin the View
 
@@ -331,7 +331,7 @@ Complete these steps to save the layout as a named view and pin it as your defau
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The grid shows the columns, and any filters and totals, you need (see [Arrange the Columns](#41-arrange-the-columns)).<br>*Responsibility:*<br>• O2C End-user |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The grid shows the columns, and any filters and totals, you need (see [4.1 Arrange the Columns](#41-arrange-the-columns)).<br>*Responsibility:*<br>• O2C End-user |
 | 1. *Click* the view name. | At the top of the page, click the view name beside the page title to open the view selector. If you have never saved a view, the view name is **My view**.<br>An asterisk (*) after the view name shows that the page has changes you can save. |
 | 2. *Click* **Save as**. `[Personalized Views VG-11]` | In the view selector, click **Save as** to save the current layout as a new view. |
 | 3. *Enter* the view name. `[Personalized Views VG-12]` | Enter a name that identifies the page and the purpose of the view. |
@@ -361,11 +361,11 @@ Complete these steps to update a saved view:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• A saved view for the page (see [Create a Personalized View](#4-create-a-personalized-view)).<br>*Responsibility:*<br>• O2C End-user |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• A saved view for the page (see [4. Create a Personalized View](#4-create-a-personalized-view)).<br>*Responsibility:*<br>• O2C End-user |
 | 1. *Check* the **Entity**. `[Personalized Views VG-02]` | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Open* the page that has the saved view. | Open the page whose view you want to change. |
 | 3. *Select* the saved view. `[Personalized Views VG-16]` | Click the view name beside the page title to open the view selector, then select the view you want to change. |
-| 4. *Make* the change to the layout. | Change the columns, filters or totals as described in [Create a Personalized View](#4-create-a-personalized-view). |
+| 4. *Make* the change to the layout. | Change the columns, filters or totals as described in [4. Create a Personalized View](#4-create-a-personalized-view). |
 | 5. *Click* **Save**. `[Personalized Views VG-17]` | In the view selector, click **Save** to save the change to the selected view. An asterisk (*) after the view name shows that the change is not saved yet. |
 | 6. *Confirm* the view shows the change. | Check that the selected view now includes the change. |
 | *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• The saved view includes the change. |
@@ -393,7 +393,7 @@ Complete these steps to export all rows from a grid:
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365 and to the page that holds the data.<br>*Responsibility:*<br>• O2C End-user |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Open* the page that holds the data. `[Export to Excel VG-10 / VG-11]` | Open the D365 page whose grid holds the data you need, for example **Aged balances** from your **Favorites**. |
-| 3. *Confirm* the grid shows the columns you need. | The export contains the columns configured on the grid. If a column is missing, add it with **Insert columns** (see [Arrange the Columns](#41-arrange-the-columns)). |
+| 3. *Confirm* the grid shows the columns you need. | The export contains the columns configured on the grid. If a column is missing, add it with **Insert columns** (see [4.1 Arrange the Columns](#41-arrange-the-columns)). |
 | 4. *Right-click* the grid header. `[Export to Excel VG-02]` | Right-click the header of any column in the grid. |
 | 5. *Select* **Export all rows**. `[Export to Excel VG-01]` | Select **Export all rows** from the menu. |
 | 6. *Download* the export. `[Export to Excel VG-03]` | Download the exported file when D365 has prepared it. |

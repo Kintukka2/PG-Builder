@@ -2,10 +2,10 @@
 
 | Field | Value |
 |---|---|
-| Guide (editable source) | [`260-O2C Getting Started PG v0.2.docx`](../01-procedure-guides/260-O2C%20Getting%20Started%20PG%20v0.2.docx) |
+| Guide (editable source) | [`CLAUDE-260-O2C Getting Started PG v0.2.docx`](../01-procedure-guides/CLAUDE-260-O2C%20Getting%20Started%20PG%20v0.2.docx) |
 | Markdown preview | [`PG-260-O2C-Getting-Started-DRAFT.md`](../01-procedure-guides/PG-260-O2C-Getting-Started-DRAFT.md) |
-| Status | Working draft v0.2: the SME review by Maria Pabalan of 10 November 2026 is applied (D-054; section 6). Code 260 is proposed (D-046): not yet recorded in the numbering register or confirmed by the BPO. Shared with the SME for review only; do not circulate further until it is (D-048). |
-| Last updated | 2026-11-10 |
+| Status | Working draft v0.2: the SME review by Maria Pabalan of 10 November 2026 is applied (D-054; section 6). Code 260 is proposed (D-046): not yet recorded in the numbering register or confirmed by the BPO. Shared with the SME for review only; do not circulate further until it is (D-048). Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-066); no content or item changes. The PDF beside the Word file predates that change: the user replaces it (D-064). |
+| Last updated | 2026-11-16 |
 | Items | 8 guide-level items (`G260`), all open: 8 blocking, 0 non-blocking. 56 carried review comments from the topic drafts. |
 
 This file is the guide's **question log** (D-016). It holds the guide-level items, which are scoped to this guide and never renumbered. Review comments carried from the topic drafts keep their ID and draft name, for example *Legal Entities VG-01*, and their source register stays the record for them: an answer recorded there applies here (D-048). Each open item that affects the text is a Word review comment by "Validation register" (VR).
@@ -134,3 +134,4 @@ Maria Pabalan reviewed v0.1 in Word (seven comments, and three direct edits made
 | 2026-11-01 | Guide added to the SME review pack (v2) for review only (D-048 amendment). |
 | 2026-11-03 | Section 5: the Favorites page-list items now point to 230 Collections v3.0 Part 1 (D-052). |
 | 2026-11-10 | v0.2: SME review by Maria Pabalan applied (D-054; section 6). New items `G260-07` and `G260-08`; `G260-04` and `G260-05` updated with the SME edits; decision A7 added; role label O2C End-user. |
+| 2026-11-16 | Formatting brought in line with D-059 to D-061 (D-066): Bullet 1.2 bullets (the 15 Initiation and Responsibility bullets, which used CW_Bullet 1), topic numbers in link text (25 links), and the two *To be confirmed* BPO entries in the version history and the pending export limits in the ACTION: REVIEW REQUIREMENT style. The version history table no longer splits a row across pages. Word file renamed with the `CLAUDE-` prefix (D-056); the PDF is now out of date (D-064). |
