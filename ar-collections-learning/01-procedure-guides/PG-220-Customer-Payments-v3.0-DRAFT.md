@@ -2,9 +2,9 @@
 
 > **WORKING DRAFT. Not validated or approved.**
 >
-> This is a Markdown preview of the Word guide [`220-Customer Payments PG v3.0.docx`](220-Customer%20Payments%20PG%20v3.0.docx). It consolidates version 2.1 and 221 Customer Payment Corrections v0.1 (D-055). **The Word file is the editable source.**
+> This is a Markdown preview of the Word guide [`CLAUDE-220-Customer Payments PG v3.0.docx`](CLAUDE-220-Customer%20Payments%20PG%20v3.0.docx). It consolidates version 2.1 and 221 Customer Payment Corrections v0.1 (D-055). **The Word file is the editable source.**
 >
-> Markers such as `[G220-01]` or `[CPJ-14]` show unconfirmed items. In the Word file, each one is a review comment. Guide-level items and the index of carried items are in the [validation register](../03-validation/220-Customer-Payments-v3.0-Validation.md). The markers are not part of the guide text.
+> Markers such as `[G220-01]` or `[CPJ-14]` show unconfirmed items. In the Word file, each one is a review comment. Guide-level items and the index of carried items are in the [validation register](../03-validation/220-Customer-Payments-v3.0-Validation.md). Notes marked **ACTION: REVIEW REQUIREMENT**, and <mark>highlighted</mark> phrases, are internal notes to the author (yellow in the Word file); they are removed before publication (D-060). The markers are not part of the guide text.
 
 The fixed template content is not repeated here: cover, Contents, *About this guide* and *Additional Resources*.
 
@@ -15,7 +15,7 @@ The fixed template content is not repeated here: cover, Contents, *About this gu
 | 1.0 | 17 February 2025 | Michael Thurlow |   | First Version (NZ) |
 | 2.0 | 28 November 2025 | Daniel Moreira |   | Version Update (Global) |
 | 2.1 | 29 January 2026 | Suzanne Starr |   | Content Update (Formatting) |
-| 3.0 | November 2026 | Daniel Moreira | Christopher Clarke | Working draft (D-055): rebuilt in the PG master template; 221 Customer Payment Corrections merged in; Collections Officer roles; settlement methods in topic 2; direct debit links to 240. Not validated or approved. `[G220-01]` |
+| 3.0 | November 2026 | Daniel Moreira | Christopher Clarke | Working draft (D-055): rebuilt in the PG master template; 221 Customer Payment Corrections merged in; Collections Officer roles; settlement methods in topic 2; direct debit links to 240. Not validated or approved. Formatting brought in line with D-059 to D-061 (D-062): Bullet 1.2 bullets, topic numbers in link text, and notes to the author in the ACTION: REVIEW REQUIREMENT style. `[G220-01]` |
 
 ---
 
@@ -36,7 +36,7 @@ In D365, transactions appear in **Process Customer Settlements**, where matching
 - Settle invoices automatically where criteria are met.
 - Place unmatched amounts **On Account**.
 
-This guide covers the work that follows: handling remittance exceptions in ExFlow, settling customer payments by the method that fits the payment, correcting payments and settlements, and maintaining the settlement configuration that drives automatic matching. Version 3.0 also brings in the payment corrections that were drafted as 221 Customer Payment Corrections.
+This guide covers the work that follows: handling remittance exceptions in ExFlow, settling customer payments by the method that fits the payment, correcting payments and settlements, and maintaining the settlement configuration that drives automatic matching. <mark>Version 3.0 also brings in the payment corrections that were drafted as 221 Customer Payment Corrections.</mark>
 
 At a high level, the Customer Payments process follows these stages:
 
@@ -86,26 +86,26 @@ Collections Officers process customer payments and settlements and correct them.
 
 | **Tasks / Business Roles** | Collections Officer | Receipting Officer |
 |---|---|---|
-| 1 [Handle Remittance Exceptions in ExFlow](#1-handle-remittance-exceptions-in-exflow) | R |   |
-| 2 [Settle Customer Payments](#2-settle-customer-payments) | R |   |
-| 2.1 [Settle Bank Statement Payments](#21-settle-bank-statement-payments) | R |   |
-| 2.2 [Record and Settle a Manual Payment Journal](#22-record-and-settle-a-manual-payment-journal) | R |   |
-| 2.3 [Settle Open Customer Transactions](#23-settle-open-customer-transactions) | R |   |
-| 3 [Correct Customer Payments](#3-correct-customer-payments) | R |   |
-| 3.1 [Undo a Settlement](#31-undo-a-settlement) | R |   |
-| 3.2 [Reverse a Customer Payment Journal](#32-reverse-a-customer-payment-journal) | R |   |
-| 3.3 [Transfer Funds Between Customer Accounts](#33-transfer-funds-between-customer-accounts) | R |   |
-| 3.4 [Distribute a Parent Account Payment Across Child Accounts](#34-distribute-a-parent-account-payment-across-child-accounts) | R |   |
-| 3.5 [Restore a Written-Off or Overpayment Amount](#35-restore-a-written-off-or-overpayment-amount) | R |   |
-| 3.6 [Write Off a Bank Fee or Small Residual](#36-write-off-a-bank-fee-or-small-residual) | R |   |
-| 4 [Maintain Settlement Configuration](#4-maintain-settlement-configuration) | R |   |
-| 4.1 [Maintain Customer Settlement Rules](#41-maintain-customer-settlement-rules) | R |   |
-| 4.2 [Maintain Customer Parse Rules](#42-maintain-customer-parse-rules) | R |   |
-| 4.3 [Review Remittance Text Analysis Rules](#43-review-remittance-text-analysis-rules) | R |   |
-| 4.4 [Search for Customer using Alternate name](#44-search-for-customer-using-alternate-name) | R |   |
-| 4.5 [Create or Update Customer Alternate Name](#45-create-or-update-customer-alternate-name) | R |   |
-| 5 [Process Intercompany Customer Payments](#5-process-intercompany-customer-payments) |   | R |
-| 6 [Process Direct Debit Customer Payments](#6-process-direct-debit-customer-payments) |   | R |
+| [1. Handle Remittance Exceptions in ExFlow](#1-handle-remittance-exceptions-in-exflow) | R |   |
+| [2. Settle Customer Payments](#2-settle-customer-payments) | R |   |
+| [2.1 Settle Bank Statement Payments](#21-settle-bank-statement-payments) | R |   |
+| [2.2 Record and Settle a Manual Payment Journal](#22-record-and-settle-a-manual-payment-journal) | R |   |
+| [2.3 Settle Open Customer Transactions](#23-settle-open-customer-transactions) | R |   |
+| [3. Correct Customer Payments](#3-correct-customer-payments) | R |   |
+| [3.1 Undo a Settlement](#31-undo-a-settlement) | R |   |
+| [3.2 Reverse a Customer Payment Journal](#32-reverse-a-customer-payment-journal) | R |   |
+| [3.3 Transfer Funds Between Customer Accounts](#33-transfer-funds-between-customer-accounts) | R |   |
+| [3.4 Distribute a Parent Account Payment Across Child Accounts](#34-distribute-a-parent-account-payment-across-child-accounts) | R |   |
+| [3.5 Restore a Written-Off or Overpayment Amount](#35-restore-a-written-off-or-overpayment-amount) | R |   |
+| [3.6 Write Off a Bank Fee or Small Residual](#36-write-off-a-bank-fee-or-small-residual) | R |   |
+| [4. Maintain Settlement Configuration](#4-maintain-settlement-configuration) | R |   |
+| [4.1 Maintain Customer Settlement Rules](#41-maintain-customer-settlement-rules) | R |   |
+| [4.2 Maintain Customer Parse Rules](#42-maintain-customer-parse-rules) | R |   |
+| [4.3 Review Remittance Text Analysis Rules](#43-review-remittance-text-analysis-rules) | R |   |
+| [4.4 Search for Customer using Alternate name](#44-search-for-customer-using-alternate-name) | R |   |
+| [4.5 Create or Update Customer Alternate Name](#45-create-or-update-customer-alternate-name) | R |   |
+| [5. Process Intercompany Customer Payments](#5-process-intercompany-customer-payments) |   | R |
+| [6. Process Direct Debit Customer Payments](#6-process-direct-debit-customer-payments) |   | R |
 
 \*R = Responsible
 
@@ -156,7 +156,7 @@ What action the Collections Officer must take.
 | Green | Fully Matched | The payment has been successfully matched and settled against one or more open customer invoices | No further investigation is required.<br>These transactions are fully processed by the system. | NA |
 | Yellow | Proposed settlement (requires confirmation). | The customer account and open invoice(s) have been identified, and the system has generated a settlement and transaction is automatically posted. | No manual processing is required.<br>Only review if specifically required e.g. exception or discrepancy identified. | NA |
 | Red | Not matched | The system could not identify the customer account or match the payment to an open invoice. | Review the bank narrative, search for the customer account or invoice or Alternate name.<br>Manually select the invoice and allocate the payment. If no invoice exists, post the payment On account. Escalate to Collections if unresolved. | [2.1.3 Process Customer Settlements – Red Status (Customer or Invoice Not Identified).](#213-process-customer-settlements--red-status-customer-or-invoice-not-identified) |
-| Blue | Posted to customer account (On Account / Unallocated) | The customer account has been identified, but no matching invoice was found. | Review the narrative and open invoices. Apply the payment to the correct invoice(s) where possible or post on account if no match is identified | [2.1.2 Process Customer Settlements – Blue Status (On Account)](#212-process-customer-settlements--blue-status-customer-identified-on-account) |
+| Blue | Posted to customer account (On Account / Unallocated) | The customer account has been identified, but no matching invoice was found. | Review the narrative and open invoices. Apply the payment to the correct invoice(s) where possible or post on account if no match is identified | [2.1.2 Process Customer Settlements – Blue Status (Customer Identified, On Account)](#212-process-customer-settlements--blue-status-customer-identified-on-account) |
 
 ##### Alternate Customer Names
 
@@ -278,10 +278,10 @@ Payments that cannot be fully resolved during settlement stay On Account, and th
 |---|---|
 | **Who may post a CPJL** | Collections Officers and Receipting Officers. |
 | **Whether approval is needed** | No approval is needed to post a CPJL. |
-| **Checking the result after posting** | To be confirmed. 230 Collections topic 2.4 Investigate a Customer Account covers reviewing customer transactions. |
-| **Correcting or reversing a posted journal** | To be confirmed. [3.2 Reverse a Customer Payment Journal](#32-reverse-a-customer-payment-journal) covers reversing a customer payment journal; whether it applies to these journals is to be confirmed. |
-| **An unposted journal that is no longer needed** | A Collections Officer can delete it. The steps are to be confirmed. |
-| **The security role needed** `[G220-05]` | To be confirmed. If a page or control is missing, a security setting is a possible cause, not a confirmed one. |
+| **Checking the result after posting** | <mark>To be confirmed.</mark> 230 Collections topic 2.4 Investigate a Customer Account covers reviewing customer transactions. |
+| **Correcting or reversing a posted journal** | <mark>To be confirmed.</mark> [3.2 Reverse a Customer Payment Journal](#32-reverse-a-customer-payment-journal) covers reversing a customer payment journal; <mark>whether it applies to these journals is to be confirmed.</mark> |
+| **An unposted journal that is no longer needed** | A Collections Officer can delete it. <mark>The steps are to be confirmed.</mark> |
+| **The security role needed** `[G220-05]` | <mark>To be confirmed.</mark> If a page or control is missing, a security setting is a possible cause, not a confirmed one. |
 
 ---
 
@@ -349,7 +349,7 @@ Use the method that fits where the payment is:
 | [2.2 Record and Settle a Manual Payment Journal](#22-record-and-settle-a-manual-payment-journal) | The payment is not on the bank statement (for example a cheque, a delayed file or a failed import), or it needs a backdated entry. Record it in a customer payment journal (**Customer payment journals** page) and settle it before you post. |
 | [2.3 Settle Open Customer Transactions](#23-settle-open-customer-transactions) | The payment is already posted to the customer account, for example On Account, and you now know which invoices or credits it pays. Settle it from the customer's **Transactions** page (**Settlements** > **Settle transactions**). |
 
-> **Note:** To move a posted payment to another customer account, or to distribute a parent account payment to child accounts, see [3 Correct Customer Payments](#3-correct-customer-payments). A small difference between a payment and its invoices is written off with [3.6 Write Off a Bank Fee or Small Residual](#36-write-off-a-bank-fee-or-small-residual).
+> **Note:** To move a posted payment to another customer account, or to distribute a parent account payment to child accounts, see [3. Correct Customer Payments](#3-correct-customer-payments). A small difference between a payment and its invoices is written off with [3.6 Write Off a Bank Fee or Small Residual](#36-write-off-a-bank-fee-or-small-residual).
 
 #### 2.1 Settle Bank Statement Payments
 
@@ -399,9 +399,9 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [Access Customer Settlements](#211-access-customer-settlements) | Open the Process customer settlements page, where imported bank transactions are reviewed and settlement starts. |
-| [Process Customer Settlements – Blue Status](#212-process-customer-settlements--blue-status-customer-identified-on-account) | Review and post payments with a Blue match status: the customer is identified, but the payment is not linked to an invoice. |
-| [Process Customer Settlements – Red Status](#213-process-customer-settlements--red-status-customer-or-invoice-not-identified) | Investigate payments with a Red match status: D365 could not identify the customer or match the payment to an invoice. |
+| [2.1.1 Access Customer Settlements](#211-access-customer-settlements) | Open the Process customer settlements page, where imported bank transactions are reviewed and settlement starts. |
+| [2.1.2 Process Customer Settlements – Blue Status](#212-process-customer-settlements--blue-status-customer-identified-on-account) | Review and post payments with a Blue match status: the customer is identified, but the payment is not linked to an invoice. |
+| [2.1.3 Process Customer Settlements – Red Status](#213-process-customer-settlements--red-status-customer-or-invoice-not-identified) | Investigate payments with a Red match status: D365 could not identify the customer or match the payment to an invoice. |
 
 #### 2.1.1 Access Customer Settlements
 
@@ -523,7 +523,7 @@ The Collections Officer is responsible for manually creating customer payment jo
 
 This process is initiated when a customer payment cannot be processed through the automated settlement process.
 
-> **Note:** Moving a posted payment between customer accounts and distributing a parent account payment are in [3 Correct Customer Payments](#3-correct-customer-payments) (3.3 and 3.4). Intercompany payments are in [5 Process Intercompany Customer Payments](#5-process-intercompany-customer-payments).
+> **Note:** Moving a posted payment between customer accounts and distributing a parent account payment are in [3. Correct Customer Payments](#3-correct-customer-payments) (3.3 and 3.4). Intercompany payments are in [5. Process Intercompany Customer Payments](#5-process-intercompany-customer-payments).
 
 ##### Topic Overview
 
@@ -531,8 +531,8 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [Create a Customer Payment Journal](#221-create-a-customer-payment-journal) | Record the payment in a new customer payment journal. |
-| [Settle the Customer Payment Journal](#222-settle-the-customer-payment-journal) | Settle the journal line against the invoices it pays, then validate and post the journal. |
+| [2.2.1 Create a Customer Payment Journal](#221-create-a-customer-payment-journal) | Record the payment in a new customer payment journal. |
+| [2.2.2 Settle the Customer Payment Journal](#222-settle-the-customer-payment-journal) | Settle the journal line against the invoices it pays, then validate and post the journal. |
 
 #### 2.2.1 Create a Customer Payment Journal
 
@@ -618,7 +618,7 @@ Complete these steps to settle customer transactions:
 | 11. *Click* **Post**. | Click **Post**. The marked transactions are settled and no longer show when **Show** is **Open**. |
 | *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• The payment is settled against the marked invoices or credits.<br>• The customer balance and the transaction status are updated. |
 
-> **Note:** To exclude a transaction from collection letters and direct debit runs, see 230 Collections topic 7.3 Change Customer Account Status. Legacy 230 included it in this procedure as optional steps.
+> **Note:** To exclude a transaction from collection letters and direct debit runs, see 230 Collections topic 7.3 Change Customer Account Status. <mark>Legacy 230 included it in this procedure as optional steps.</mark>
 
 ### 3. Correct Customer Payments
 
@@ -626,9 +626,9 @@ Complete these steps to settle customer transactions:
 
 Use these topics when a customer payment or settlement must be corrected after it is posted: undo a settlement, reverse a customer payment journal, move funds to another customer account, distribute a parent account payment, restore a written-off or overpayment amount, or write off a small residual. Topics 3.3 to 3.5 use a customer payment journal (CPJL): the controls that apply to every CPJL entry are in Part 1 Key concepts. Writing off an uncollectible debt is a different task, in 230 Collections.
 
-Until they are confirmed, these are outside the scope of this topic: a payment already settled against invoices on the wrong account, how to identify a parent-child relationship in D365, and when a write-off should be reversed or cancelled instead of restored. `[RO-02 / CPJ-17 / CPJ-19, PC-01 / CPJ-17 / CPJ-19, CPJ-17 / CPJ-19 / TF-05 / TF-06]`
+<mark>Until they are confirmed,</mark> these are outside the scope of this topic: a payment already settled against invoices on the wrong account, how to identify a parent-child relationship in D365, and when a write-off should be reversed or cancelled instead of restored. `[RO-02 / CPJ-17 / CPJ-19, PC-01 / CPJ-17 / CPJ-19, CPJ-17 / CPJ-19 / TF-05 / TF-06]`
 
-Topics 3.3 to 3.5 and the journal controls in Part 1 come from AI-generated notes of the AR Training D365 Part 2 session and have not been checked against the recording. Topics 2.3, 3.1 and 3.6 come from the legacy 230 Collections PG (v2.3, sections 6.5, 6.6 and 6.8), which is about a year old, and have not been checked against current D365. Do not use these topics on live customer accounts until their blocking items are closed. `[G220-10]`
+> **ACTION: REVIEW REQUIREMENT.** Topics 3.3 to 3.5 and the journal controls in Part 1 come from AI-generated notes of the AR Training D365 Part 2 session and have not been checked against the recording. Topics 2.3, 3.1 and 3.6 come from the legacy 230 Collections PG (v2.3, sections 6.5, 6.6 and 6.8), which is about a year old, and have not been checked against current D365. Do not use these topics on live customer accounts until their blocking items are closed. `[G220-10]`
 
 ##### Responsibility
 
@@ -649,12 +649,12 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [Undo a Settlement](#31-undo-a-settlement) | Reverse a settlement made in error or against the wrong invoices. |
-| [Reverse a Customer Payment Journal](#32-reverse-a-customer-payment-journal) | Reverse a posted customer payment journal and reopen the invoices it settled. |
-| [Transfer Funds Between Customer Accounts](#33-transfer-funds-between-customer-accounts) | Move a payment to the correct customer account, or between related accounts, with a CPJL. |
-| [Distribute a Parent Account Payment Across Child Accounts](#34-distribute-a-parent-account-payment-across-child-accounts) | Distribute a payment held on a parent account to confirmed child accounts. |
-| [Restore a Written-Off or Overpayment Amount](#35-restore-a-written-off-or-overpayment-amount) | Put an overpayment or a written-off amount back on a customer account. |
-| [Write Off a Bank Fee or Small Residual](#36-write-off-a-bank-fee-or-small-residual) | Clear a small residual, such as a bank fee, with a reason code. |
+| [3.1 Undo a Settlement](#31-undo-a-settlement) | Reverse a settlement made in error or against the wrong invoices. |
+| [3.2 Reverse a Customer Payment Journal](#32-reverse-a-customer-payment-journal) | Reverse a posted customer payment journal and reopen the invoices it settled. |
+| [3.3 Transfer Funds Between Customer Accounts](#33-transfer-funds-between-customer-accounts) | Move a payment to the correct customer account, or between related accounts, with a CPJL. |
+| [3.4 Distribute a Parent Account Payment Across Child Accounts](#34-distribute-a-parent-account-payment-across-child-accounts) | Distribute a payment held on a parent account to confirmed child accounts. |
+| [3.5 Restore a Written-Off or Overpayment Amount](#35-restore-a-written-off-or-overpayment-amount) | Put an overpayment or a written-off amount back on a customer account. |
+| [3.6 Write Off a Bank Fee or Small Residual](#36-write-off-a-bank-fee-or-small-residual) | Clear a small residual, such as a bank fee, with a reason code. |
 
 #### 3.1 Undo a Settlement
 
@@ -687,7 +687,7 @@ Complete these steps to undo a settlement:
 | 8. *Open* **Undo settlement**. `[G221-12]` | On the Main Toolbar, click **Settlements > Undo settlement**. The **Undo settlement** page is displayed. |
 | 9. *Mark* the lines to reverse. | In the **Mark** column, select the lines to unsettle, usually the payment and the invoices it was settled against. |
 | 10. *Click* **Reverse**. `[G221-13]` | Click **Reverse**. The settlement is removed, and the payment and the invoices return to open. |
-| 11. *Confirm* the transactions are open. | Set **Show** to **Open** and check that the payment and the invoices are listed. Settle them correctly with [Settle Customer Transactions](#23-settle-open-customer-transactions). |
+| 11. *Confirm* the transactions are open. | Set **Show** to **Open** and check that the payment and the invoices are listed. Settle them correctly with [2.3 Settle Open Customer Transactions](#23-settle-open-customer-transactions). |
 | *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• The incorrect settlement is reversed.<br>• The payment and the invoices are open and can be settled again. |
 
 #### 3.2 Reverse a Customer Payment Journal
@@ -743,9 +743,9 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [Create the Journal and Enter the Source Line](#331-create-the-journal-and-enter-the-source-line) | Create the CPJL and enter the debit line for the customer the funds come from. Output: the source line is complete. |
-| [Enter the Destination Line](#332-enter-the-destination-line) | Enter the matching credit line for the customer receiving the funds. Output: a two-line journal. |
-| [Validate and Post the Journal](#333-validate-and-post-the-journal) | Check the balance, run Simulate Posting, correct errors and post. Output: the transfer is posted. |
+| [3.3.1 Create the Journal and Enter the Source Line](#331-create-the-journal-and-enter-the-source-line) | Create the CPJL and enter the debit line for the customer the funds come from. Output: the source line is complete. |
+| [3.3.2 Enter the Destination Line](#332-enter-the-destination-line) | Enter the matching credit line for the customer receiving the funds. Output: a two-line journal. |
+| [3.3.3 Validate and Post the Journal](#333-validate-and-post-the-journal) | Check the balance, run Simulate Posting, correct errors and post. Output: the transfer is posted. |
 
 #### 3.3.1 Create the Journal and Enter the Source Line
 
@@ -769,7 +769,7 @@ Complete these steps to create the journal and enter the source line:
 | 11. *Select* **Ledger** as the **Offset account type**. `[CPJ-08]` | Set the offset account type to **Ledger**. |
 | 12. *Select* the bank-to-bank transfer clearing account. `[TF-03]` | Select the clearing account used for transfers between customer accounts as the offset account. Do not use a bank account. |
 | 13. *Complete* the line. `[CPJ-12]` | Tab through every field in the line before you start the next one, so that fields such as the voucher fill in correctly. |
-| *STEP COMPLETE* (light blue) | • The source line is complete.<br>• Continue to [Enter the Destination Line](#332-enter-the-destination-line) |
+| *STEP COMPLETE* (light blue) | • The source line is complete.<br>• Continue to [3.3.2 Enter the Destination Line](#332-enter-the-destination-line) |
 
 #### 3.3.2 Enter the Destination Line
 
@@ -779,7 +779,7 @@ Complete these steps to enter the destination line:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The source line is complete (see [Create the Journal and Enter the Source Line](#331-create-the-journal-and-enter-the-source-line)).<br>*Responsibility:*<br>• Collections Officer |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The source line is complete (see [3.3.1 Create the Journal and Enter the Source Line](#331-create-the-journal-and-enter-the-source-line)).<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Add* a new line. `[CPJ-01 / CPJ-05]` | Add another line to the journal. |
 | 2. *Select* the destination customer account. | Select the customer account receiving the funds. The customer name fills in automatically. |
 | 3. *Enter* the amount as a credit. `[CPJ-06]` | Enter the same amount as the source line as a credit, in the same currency. |
@@ -787,7 +787,7 @@ Complete these steps to enter the destination line:
 | 5. *Select* **Ledger** as the **Offset account type**. `[TF-04]` | Apply the same offset treatment as the source line. |
 | 6. *Select* the bank-to-bank transfer clearing account. | Select the same clearing account as the source line. |
 | 7. *Complete* the line. | Tab through every field in the line. |
-| *STEP COMPLETE* (light blue) | • The journal has a source debit line and a matching destination credit line.<br>• Continue to [Validate and Post the Journal](#333-validate-and-post-the-journal) |
+| *STEP COMPLETE* (light blue) | • The journal has a source debit line and a matching destination credit line.<br>• Continue to [3.3.3 Validate and Post the Journal](#333-validate-and-post-the-journal) |
 
 #### 3.3.3 Validate and Post the Journal
 
@@ -797,7 +797,7 @@ Complete these steps to validate and post the journal:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• Both lines are complete (see [Enter the Destination Line](#332-enter-the-destination-line)).<br>*Responsibility:*<br>• Collections Officer |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• Both lines are complete (see [3.3.2 Enter the Destination Line](#332-enter-the-destination-line)).<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Check* the journal balances. `[CPJ-13]` | Confirm that total debits equal total credits, and that the currency and date are correct. |
 | 2. *Run* **Simulate Posting**. `[CPJ-14]` | Check the journal before posting. A blue result means the journal is ready to post. |
 | 3. *Correct* any errors. `[CPJ-15]` | If Simulate Posting shows an error, read it, correct the line it names and run Simulate Posting again. If you cannot resolve the error, log a request through the D365 issue form (see **Additional Resources**) before you post. |
@@ -825,9 +825,9 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [Create the Journal and Enter the Parent Line](#341-create-the-journal-and-enter-the-parent-line) | Create the CPJL and enter the debit for the amount being moved off the parent account. Output: the parent line is complete. |
-| [Enter the Child Lines](#342-enter-the-child-lines) | Enter one credit line for each child account. Output: the distribution is entered. |
-| [Validate and Post the Journal](#343-validate-and-post-the-journal) | Check the totals, run Simulate Posting, correct errors, post, and record any residual. Output: the distribution is posted. |
+| [3.4.1 Create the Journal and Enter the Parent Line](#341-create-the-journal-and-enter-the-parent-line) | Create the CPJL and enter the debit for the amount being moved off the parent account. Output: the parent line is complete. |
+| [3.4.2 Enter the Child Lines](#342-enter-the-child-lines) | Enter one credit line for each child account. Output: the distribution is entered. |
+| [3.4.3 Validate and Post the Journal](#343-validate-and-post-the-journal) | Check the totals, run Simulate Posting, correct errors, post, and record any residual. Output: the distribution is posted. |
 
 #### 3.4.1 Create the Journal and Enter the Parent Line
 
@@ -851,7 +851,7 @@ Complete these steps to create the journal and enter the parent line:
 | 11. *Select* **Ledger** as the **Offset account type**. `[CPJ-08]` | Set the offset account type to **Ledger**. |
 | 12. *Select* the bank-to-bank transfer clearing account. `[TF-03 / PC-03]` | Select the clearing account as the offset account. |
 | 13. *Complete* the line. `[CPJ-12]` | Tab through every field in the line before you start the next one, so that fields such as the voucher fill in correctly. |
-| *STEP COMPLETE* (light blue) | • The parent line is complete.<br>• Continue to [Enter the Child Lines](#342-enter-the-child-lines) |
+| *STEP COMPLETE* (light blue) | • The parent line is complete.<br>• Continue to [3.4.2 Enter the Child Lines](#342-enter-the-child-lines) |
 
 #### 3.4.2 Enter the Child Lines
 
@@ -861,7 +861,7 @@ Complete these steps for each child account:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The parent line is complete (see [Create the Journal and Enter the Parent Line](#341-create-the-journal-and-enter-the-parent-line)).<br>*Responsibility:*<br>• Collections Officer |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The parent line is complete (see [3.4.1 Create the Journal and Enter the Parent Line](#341-create-the-journal-and-enter-the-parent-line)).<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Add* a new line. `[CPJ-01 / CPJ-05]` | Add another line to the journal. |
 | 2. *Select* the child customer account. | Select a child account in the confirmed allocation. The customer name fills in automatically. |
 | 3. *Enter* the child's amount as a credit. `[CPJ-06]` | Enter the amount allocated to this child account as a credit, in the same currency as the parent line. |
@@ -870,7 +870,7 @@ Complete these steps for each child account:
 | 6. *Select* the bank-to-bank transfer clearing account. | Select the same clearing account as the parent line. |
 | 7. *Complete* the line. | Tab through every field in the line. |
 | 8. *Repeat* for each child account. | Repeat steps 1 to 7 until every child account in the confirmed allocation has a credit line. |
-| *STEP COMPLETE* (light blue) | • Every child account in the allocation has a credit line.<br>• Continue to [Validate and Post the Journal](#343-validate-and-post-the-journal) |
+| *STEP COMPLETE* (light blue) | • Every child account in the allocation has a credit line.<br>• Continue to [3.4.3 Validate and Post the Journal](#343-validate-and-post-the-journal) |
 
 #### 3.4.3 Validate and Post the Journal
 
@@ -880,7 +880,7 @@ Complete these steps to validate and post the journal:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The parent line and every child line are complete (see [Enter the Child Lines](#342-enter-the-child-lines)).<br>*Responsibility:*<br>• Collections Officer |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The parent line and every child line are complete (see [3.4.2 Enter the Child Lines](#342-enter-the-child-lines)).<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Check* the distributed total. `[CPJ-13]` | Confirm that the child credits add up to the parent debit, and that the currency and date are correct. |
 | 2. *Run* **Simulate Posting**. `[CPJ-14]` | Check the journal before posting. A blue result means the journal is ready to post. |
 | 3. *Correct* any errors. `[CPJ-15]` | If Simulate Posting shows an error, read it, correct the line it names and run Simulate Posting again. If you cannot resolve the error, log a request through the D365 issue form (see **Additional Resources**) before you post. |
@@ -909,8 +909,8 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [Create the Restoration Line](#351-create-the-restoration-line) | Create the CPJL and enter the customer credit with the Overpayment ledger offset. Output: the line is complete. |
-| [Validate and Post the Journal](#352-validate-and-post-the-journal) | Run Simulate Posting, correct errors and post. Output: the amount is back on the customer account. |
+| [3.5.1 Create the Restoration Line](#351-create-the-restoration-line) | Create the CPJL and enter the customer credit with the Overpayment ledger offset. Output: the line is complete. |
+| [3.5.2 Validate and Post the Journal](#352-validate-and-post-the-journal) | Run Simulate Posting, correct errors and post. Output: the amount is back on the customer account. |
 
 #### 3.5.1 Create the Restoration Line
 
@@ -936,7 +936,7 @@ Complete these steps to create the restoration line:
 | 13. *Select* the Overpayment ledger. `[RO-01]` | Search for and select the Overpayment ledger in the main account field. |
 | 14. *Keep* the dimensions. `[CPJ-11]` | Do not change the financial dimensions that fill in automatically. |
 | 15. *Complete* the line. `[CPJ-12]` | Tab through every field, so fields such as the voucher fill in. |
-| *STEP COMPLETE* (light blue) | • The restoration line is complete.<br>• Continue to [Validate and Post the Journal](#352-validate-and-post-the-journal) |
+| *STEP COMPLETE* (light blue) | • The restoration line is complete.<br>• Continue to [3.5.2 Validate and Post the Journal](#352-validate-and-post-the-journal) |
 
 #### 3.5.2 Validate and Post the Journal
 
@@ -946,7 +946,7 @@ Complete these steps to validate and post the journal:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The restoration line is complete (see [Create the Restoration Line](#351-create-the-restoration-line)).<br>*Responsibility:*<br>• Collections Officer |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The restoration line is complete (see [3.5.1 Create the Restoration Line](#351-create-the-restoration-line)).<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Run* **Simulate Posting**. `[CPJ-14]` | Check the journal before posting. A blue result means the journal is ready to post. |
 | 2. *Correct* any errors. `[CPJ-15]` | If Simulate Posting shows an error, read it, correct the line it names and run Simulate Posting again. If you cannot resolve the error, log a request through the D365 issue form (see **Additional Resources**) before you post. |
 | 3. *Post* the journal. `[CPJ-16 / CPJ-17]` | Post only when the line is complete and Simulate Posting succeeds. |
@@ -962,7 +962,7 @@ Use this procedure to write off a small residual balance on a customer transacti
 ##### Responsibility
 
 - Collections Officer: creates the write-off and submits the journal for approval.
-- Approver: to be confirmed. Approves the write-off journal. `[G221-14]`
+- Approver: <mark>to be confirmed</mark>. Approves the write-off journal. `[G221-14]`
 
 ##### Initiation
 
@@ -1035,11 +1035,11 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [Maintain Customer Settlement Rules](#41-maintain-customer-settlement-rules) | Updates how D365 applies payments when transactions are allocated incorrectly or placed On Account. Improves settlement accuracy and reduces manual intervention. |
-| [Maintain Customer Parse Rules](#42-maintain-customer-parse-rules) | Updates how D365 reads the bank narrative when customer or invoice details are not identified. Improved extraction and matching accuracy. |
-| [Review Remittance Text Analysis Rules](#43-review-remittance-text-analysis-rules) | Analyses how D365 interprets bank narrative to identify why matching failed and determine the correct customer reference. |
-| [Search for Customer using Alternate name](#44-search-for-customer-using-alternate-name) | Identifies customers using alternate names or references when the standard name is not recognized. |
-| [Create or Update Customer Alternate Name](#45-create-or-update-customer-alternate-name) | Maintains alternate customer names to improve future matching and reduce repeat investigation. |
+| [4.1 Maintain Customer Settlement Rules](#41-maintain-customer-settlement-rules) | Updates how D365 applies payments when transactions are allocated incorrectly or placed On Account. Improves settlement accuracy and reduces manual intervention. |
+| [4.2 Maintain Customer Parse Rules](#42-maintain-customer-parse-rules) | Updates how D365 reads the bank narrative when customer or invoice details are not identified. Improved extraction and matching accuracy. |
+| [4.3 Review Remittance Text Analysis Rules](#43-review-remittance-text-analysis-rules) | Analyses how D365 interprets bank narrative to identify why matching failed and determine the correct customer reference. |
+| [4.4 Search for Customer using Alternate name](#44-search-for-customer-using-alternate-name) | Identifies customers using alternate names or references when the standard name is not recognized. |
+| [4.5 Create or Update Customer Alternate Name](#45-create-or-update-customer-alternate-name) | Maintains alternate customer names to improve future matching and reduce repeat investigation. |
 
 #### 4.1 Maintain Customer Settlement Rules
 
@@ -1162,13 +1162,13 @@ Use this topic when a customer pays into the bank account of one legal entity fo
 
 ##### Procedure
 
-> **Being worked on.** The steps come from Maria Pabalan's session with Amy on Friday 6 November 2026. This topic will be updated; until then, ask a Receipting Officer or Maria Pabalan. `[G220-11]`
+> **ACTION: REVIEW REQUIREMENT.** Being worked on. The steps come from Maria Pabalan's session with Amy on Friday 6 November 2026. This topic will be updated; until then, ask a Receipting Officer or Maria Pabalan. `[G220-11]`
 
 ### 6. Process Direct Debit Customer Payments
 
 ##### Description
 
-Direct debit customer payments are processed in **240 Direct Debit and Credit Card Payments**, topic 2 Process a Direct Debit Run. It replaces section 5 of version 2.1 (D-053). This topic stays here as the way in from Customer Payments.
+Direct debit customer payments are processed in **240 Direct Debit and Credit Card Payments**, topic 2 Process a Direct Debit Run. <mark>It replaces section 5 of version 2.1 (D-053). This topic stays here as the way in from Customer Payments.</mark>
 
 ##### Responsibility
 
@@ -1181,6 +1181,8 @@ Direct debit customer payments are processed in **240 Direct Debit and Credit Ca
 ##### Page Overview
 
 This page contains various reports related to the Customer Payments module.
+
+> **ACTION: REVIEW REQUIREMENT.** The Description of each report is empty, and the report names and navigation paths come from version 2.1. Describe each report and check each path in current D365 before publication. `[G220-12]`
 
 ##### Open Transactions Reports
 

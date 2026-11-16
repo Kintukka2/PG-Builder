@@ -2,11 +2,12 @@
 
 | Field | Value |
 |---|---|
-| Guide (editable source) | [`220-Customer Payments PG v3.0.docx`](../01-procedure-guides/220-Customer%20Payments%20PG%20v3.0.docx) |
+| Guide (editable source) | [`CLAUDE-220-Customer Payments PG v3.0.docx`](../01-procedure-guides/CLAUDE-220-Customer%20Payments%20PG%20v3.0.docx) |
+| Review PDF | [`CLAUDE-220-Customer Payments PG v3.0.pdf`](../01-procedure-guides/CLAUDE-220-Customer%20Payments%20PG%20v3.0.pdf) |
 | Markdown preview | [`PG-220-Customer-Payments-v3.0-DRAFT.md`](../01-procedure-guides/PG-220-Customer-Payments-v3.0-DRAFT.md) |
-| Status | Working draft v3.0 (D-055): consolidates version 2.1 and 221 Customer Payment Corrections v0.1. Not shared yet; needs BPO sign-off. Version 2.1 stays published until 3.0 passes its gates. |
-| Last updated | 2026-11-10 |
-| Items | 11 guide-level items (`G220`), all open: 10 blocking, 1 non-blocking. 111 carried review comments from 221 v0.1. |
+| Status | Working draft v3.0 (D-055): consolidates version 2.1 and 221 Customer Payment Corrections v0.1. Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-062); no content or item changes. Not shared yet; needs BPO sign-off. Version 2.1 stays published until 3.0 passes its gates. |
+| Last updated | 2026-11-16 |
+| Items | 12 guide-level items (`G220`), all open: 11 blocking, 1 non-blocking. 111 carried review comments from 221 v0.1. |
 
 This file is the guide's **question log** (D-016). It holds the guide-level items, which are scoped to this guide and never renumbered. Review comments carried from 221 keep their ID, for example *CPJ-14* or *G221-07*, and their source register stays the record for them: an answer recorded there applies here (D-048). Each open item that affects the text is a Word review comment by "Validation register" (VR).
 
@@ -53,6 +54,7 @@ This file is the guide's **question log** (D-016). It holds the guide-level item
 | G220-09 | Confirm when the journal is posted. In v2.1, 4.1 (now 2.2.1) posts the journal, and 4.2 (now 2.2.2) settles it and posts it again. Confirm whether the journal is posted once, after it is settled. | 2.2.2 Settle the Customer Payment Journal | B | SME, Test | Open |
 | G220-10 | Check topics 2.3, 3.1 and 3.6 against current D365 or a recording (they come from legacy 230, reference evidence only: D-044; was G221-03), and topics 3.3 to 3.5 and the CPJL controls against the AR Training D365 Part 2 recording (SRC-01). | Topic 3 Correct Customer Payments | B | Test, Rec | Open |
 | G220-11 | Add the intercompany (ICO) payment steps from Maria Pabalan's session with Amy on Friday 6 November 2026 (recording). Confirm the example legal entities (101a and 238a). | Topic 5 Process Intercompany Customer Payments | N | Rec | Open |
+| G220-12 | Complete Part 3 Reports. The five reports carried from version 2.1 have names and navigation paths but no description, and version 2.1 highlighted the Part 3 heading for review. For each report, describe what it shows, when Collections Officers use it and the check it supports, and confirm its navigation path in current D365 (the paths mix Inquiries and Enquiries). Confirm whether all five reports belong in this guide. | Part 3 Reports | B | SME, Test | Open |
 
 ---
 
@@ -76,6 +78,7 @@ Every review comment in the Word guide, in document order. IDs not starting `G22
 | Topic 3.5 Restore a Written-Off or Overpayment Amount | `CPJ-21`, `CPJ-01`, `CPJ-01 / CPJ-02`, `CPJ-03`, `CPJ-01`, `CPJ-05`, `CPJ-06 / CPJ-07`, `CPJ-03`, `CPJ-10`, `CPJ-08`, `RO-01`, `CPJ-11`, `CPJ-12`, `CPJ-14`, `CPJ-15`, `CPJ-16 / CPJ-17`, `CPJ-18`, `CPJ-19` |
 | Topic 3.6 Write Off a Bank Fee or Small Residual | `G221-14`, `G221-15`, `G221-16`, `G221-17`, `G221-18`, `G221-19`, `G221-20` |
 | Topic 5 Process Intercompany Customer Payments | `G220-11` |
+| Part 3 Reports | `G220-12` |
 
 ---
 
@@ -115,3 +118,4 @@ From Maria's review comments on 221 v0.1 and the Teams chat of 10 November 2026 
 | Date | Change |
 |---|---|
 | 2026-11-10 | Register created with the v3.0 working draft: version 2.1 and 221 Customer Payment Corrections v0.1 consolidated, with Maria Pabalan's answers of 10 November 2026 applied (D-055). |
+| 2026-11-16 | Formatting brought in line with D-059 to D-061 (D-062): Bullet 1.2 bullets, topic numbers in link text, notes to the author in the ACTION: REVIEW REQUIREMENT style. The legacy yellow highlight on the Part 3 heading is replaced by an ACTION note and item `G220-12` (empty report descriptions). Files renamed with the `CLAUDE-` prefix (D-056). |
