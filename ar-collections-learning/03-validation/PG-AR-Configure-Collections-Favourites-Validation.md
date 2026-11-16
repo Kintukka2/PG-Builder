@@ -8,7 +8,7 @@
 | Last updated | 2026-11-10 |
 | Items | 33 total: 30 open (16 blocking, 14 non-blocking), 1 deferred, 2 withdrawn |
 
-> **Merged and frozen (D-048, D-052).** The general steps are topic 3 of the [260 O2C Getting Started v0.2](../01-procedure-guides/260-O2C%20Getting%20Started%20PG%20v0.2.docx) working draft, and the four AR Collections pages are in Part 1 (*Set up D365 for collections work*) of the [230 Collections v3.0](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.docx) working draft. Edit those guides, not this draft. Record answers here against these IDs; they apply to both.
+> **Merged and frozen (D-048, D-052).** The general steps are topic 3 of the [260 O2C Getting Started v0.2](../01-procedure-guides/CLAUDE-260-O2C%20Getting%20Started%20PG%20v0.2.docx) working draft, and the four AR Collections pages are in Part 1 (*Set up D365 for collections work*) of the [230 Collections v3.0](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.docx) working draft. Edit those guides, not this draft. Record answers here against these IDs; they apply to both.
 
 This file is the **question log** that the PG Template Authoring Guide asks for. It is kept separate from the PG. Nothing in it may appear in the PG as confirmed guidance until its status is **Closed** and the Word file has been updated.
 
