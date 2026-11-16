@@ -9,6 +9,17 @@ Every file Claude creates or rebuilds for the user starts with `CLAUDE-`: Word g
 - Markdown previews, validation registers and project notes in this repository keep their names. They are never published, and links depend on them.
 - Source files from the user (legacy guides, transcripts) keep the names they arrived with.
 
+## Deliverables: the Word file only (D-064)
+
+Claude produces the Word guide (`.docx`) and its repository companions (Markdown preview, validation register, project notes). It does not create, update, commit or send a PDF of a guide: the user makes the PDFs.
+
+- Claude may render a PDF in its own scratchpad to check the layout or refresh the Contents page numbers, but it deletes that file and never commits or sends it.
+- PDFs already in the repository stay as they are. When Claude changes a Word guide that has a PDF beside it, it says that the PDF is now out of date and leaves it for the user to replace.
+
+## Pull requests: Claude merges them (D-065)
+
+Until the user says otherwise, Claude merges every pull request it opens, once the pull request is ready: no merge conflict, every check that runs on it passed, and no review comment left open. It opens the pull request, marks it ready for review, merges it with a merge commit, and tells the user. If anything blocks the merge, Claude leaves the pull request open and says what blocks it.
+
 ## Key concepts: use the form the content needs (D-059)
 
 The master template shows each key concept as a two-column `[Heading] | [Body/ Description]` table. That table is an example, not a rule: the authoring guide says to adapt the concept table to the information. For each concept under its Heading 5, choose the form that reads best:
