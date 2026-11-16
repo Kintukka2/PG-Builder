@@ -1,6 +1,6 @@
 # D365 F&O: Customer Payment Corrections Procedure Guide
 
-> **Withdrawn (D-055).** This guide is merged into [220 Customer Payments v3.0](220-Customer%20Payments%20PG%20v3.0.docx) ([preview](PG-220-Customer-Payments-v3.0-DRAFT.md)): topic 1 is 220 topic 2.3, topic 2 is 3.1, topics 3 to 6 are 3.3 to 3.6, and Part 1 Key concepts are in 220 Part 1. Code 221 is not used. This file is kept as the record of v0.1; edit 220.
+> **Withdrawn (D-055).** This guide is merged into [220 Customer Payments v3.0](CLAUDE-220-Customer%20Payments%20PG%20v3.0.docx) ([preview](PG-220-Customer-Payments-v3.0-DRAFT.md)): topic 1 is 220 topic 2.3, topic 2 is 3.1, topics 3 to 6 are 3.3 to 3.6, and Part 1 Key concepts are in 220 Part 1. Code 221 is not used. This file is kept as the record of v0.1; edit 220.
 
 > **WORKING DRAFT. Not validated or approved.**
 >
