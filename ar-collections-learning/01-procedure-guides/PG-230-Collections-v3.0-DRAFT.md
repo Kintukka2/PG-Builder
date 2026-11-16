@@ -2,9 +2,9 @@
 
 > **WORKING DRAFT. Not validated or approved.**
 >
-> This is a Markdown preview of the Word guide [`230-Collections PG v3.0.docx`](230-Collections%20PG%20v3.0.docx). It was assembled from the topic drafts named in its version history, under D-045 and D-046. **The Word file is the editable source.**
+> This is a Markdown preview of the Word guide [`CLAUDE-230-Collections PG v3.0.docx`](CLAUDE-230-Collections%20PG%20v3.0.docx). It was assembled from the topic drafts named in its version history, under D-045 and D-046. **The Word file is the editable source.**
 >
-> Markers such as `[G230-05]` or `[Aged Balances VG-03]` show unconfirmed items. In the Word file, each one is a review comment. Guide-level items and the index of carried items are in the [validation register](../03-validation/230-Collections-v3.0-Validation.md). The markers are not part of the guide text.
+> Markers such as `[G230-05]` or `[Aged Balances VG-03]` show unconfirmed items. In the Word file, each one is a review comment. Guide-level items and the index of carried items are in the [validation register](../03-validation/230-Collections-v3.0-Validation.md). Notes marked **ACTION: REVIEW REQUIREMENT**, and <mark>highlighted</mark> phrases, are internal notes to the author (yellow in the Word file); they are removed before publication (D-060). The markers are not part of the guide text.
 
 The fixed template content is not repeated here: cover, Contents, *About this guide* and *Additional Resources*.
 
@@ -17,7 +17,7 @@ The fixed template content is not repeated here: cover, Contents, *About this gu
 | 2.2 | May 2026 | Suzanne Starr | Christoper Clarke | Content Update (CW1) |
 | 2.3 | October 2026 | Daniel Moreira | Christoper Clarke | Content Review |
 | 2.4 | November 2026 | Daniel Moreira | Christopher Clarke | Content Update, draft (ADO 16886): 6.5 to 6.8 moved to 220 v3.0; 2.4 to move to 240 |
-| 3.0 | November 2026 | Daniel Moreira | Christopher Clarke | Working draft (ADO 16886): rebuilt in the PG master template; nine AR Collections topic drafts merged; 2.8 links to 240. Not validated or approved. `[G230-05]` |
+| 3.0 | November 2026 | Daniel Moreira | Christopher Clarke | Working draft (ADO 16886): rebuilt in the PG master template; nine AR Collections topic drafts merged; 2.8 links to 240. Not validated or approved. Formatting brought in line with D-059 to D-061 (D-063): Bullet 1.2 bullets, topic numbers in link text, notes to the author in the ACTION: REVIEW REQUIREMENT style, and key concepts in the form their content needs. `[G230-05]` |
 
 ---
 
@@ -75,37 +75,37 @@ The high-level Collections process is as follows:
 
 ##### Overview
 
-The roles come from legacy 230 and the topic drafts. For 7.4, the Collections Officer requests the write-off by email to the Group Billing and Credit Manager, who creates the write-off journal once the request is approved.
+<mark>The roles come from legacy 230 and the topic drafts.</mark> For 7.4, the Collections Officer requests the write-off by email to the Group Billing and Credit Manager, who creates the write-off journal once the request is approved.
 
 | **Tasks / Business Roles** | Collections Officer | Group Billing and Credit Manager |
 |---|---|---|
-| 1 [Start the Collections Day](#1-start-the-collections-day) | R |   |
-| 1.1 [Open the Customer Credit and Collections Workspace](#11-open-the-customer-credit-and-collections-workspace) | R |   |
-| 1.2 [Locate Collection Work in the Workspace](#12-locate-collection-work-in-the-workspace) | R |   |
-| 2 [Monitor Customers](#2-monitor-customers) | R |   |
-| 2.1 [Review Customers Overdue](#21-review-customers-overdue) | R |   |
-| 2.2 [Review Customer Aged Balances](#22-review-customer-aged-balances) | R |   |
-| 2.3 [Filter Aged Balances by Customer or Currency](#23-filter-aged-balances-by-customer-or-currency) | R |   |
-| 2.4 [Investigate a Customer Account](#24-investigate-a-customer-account) | R |   |
-| 2.5 [Review Customer Notes](#25-review-customer-notes) | R |   |
-| 2.6 [Review All Customer Activities](#26-review-all-customer-activities) | R |   |
-| 2.7 [Update Customer Details](#27-update-customer-details) | R |   |
-| 2.8 [Maintain Customer Direct Debit & eBanking Details](#28-maintain-customer-direct-debit--ebanking-details) | R |   |
-| 3 [Manage Customer Pools and Collection Agents](#3-manage-customer-pools-and-collection-agents) | R | R |
-| 3.1 [Create Customer Pools for Collections](#31-create-customer-pools-for-collections) |   | R |
-| 3.2 [Add a New Collections Agent](#32-add-a-new-collections-agent) |   | R |
-| 4 [Contact the Customer](#4-contact-the-customer) | R |   |
-| 4.1 [Check an Overdue Balance Before Contact](#41-check-an-overdue-balance-before-contact) | R |   |
-| 5 [Record a Customer Collection Activity](#5-record-a-customer-collection-activity) | R |   |
-| 6 [Manage Customer Statements](#6-manage-customer-statements) | R |   |
-| 6.1 [Preview and Download a Customer Statement](#61-preview-and-download-a-customer-statement) | R |   |
-| 6.2 [Generate and Send a Customer Statement](#62-generate-and-send-a-customer-statement) | R |   |
-| 7 [Resolve the Account](#7-resolve-the-account) | R | R |
-| 7.1 [View and Download a Customer Invoice](#71-view-and-download-a-customer-invoice) | R |   |
-| 7.2 [Create and Send a Collection Letter](#72-create-and-send-a-collection-letter) | R |   |
-| 7.3 [Change Customer Status](#73-change-customer-status) | R |   |
-| 7.4 [Write Off an Uncollectible Debt](#74-write-off-an-uncollectible-debt) | R | R |
-| 8 [Update and Close a Customer Activity](#8-update-and-close-a-customer-activity) | R |   |
+| [1. Start the Collections Day](#1-start-the-collections-day) | R |   |
+| [1.1 Open the Customer Credit and Collections Workspace](#11-open-the-customer-credit-and-collections-workspace) | R |   |
+| [1.2 Locate Collection Work in the Workspace](#12-locate-collection-work-in-the-workspace) | R |   |
+| [2. Monitor Customers](#2-monitor-customers) | R |   |
+| [2.1 Review Customers Overdue](#21-review-customers-overdue) | R |   |
+| [2.2 Review Customer Aged Balances](#22-review-customer-aged-balances) | R |   |
+| [2.3 Filter Aged Balances by Customer or Currency](#23-filter-aged-balances-by-customer-or-currency) | R |   |
+| [2.4 Investigate a Customer Account](#24-investigate-a-customer-account) | R |   |
+| [2.5 Review Customer Notes](#25-review-customer-notes) | R |   |
+| [2.6 Review All Customer Activities](#26-review-all-customer-activities) | R |   |
+| [2.7 Update Customer Details](#27-update-customer-details) | R |   |
+| [2.8 Maintain Customer Direct Debit & eBanking Details](#28-maintain-customer-direct-debit--ebanking-details) | R |   |
+| [3. Manage Customer Pools and Collection Agents](#3-manage-customer-pools-and-collection-agents) | R | R |
+| [3.1 Create Customer Pools for Collections](#31-create-customer-pools-for-collections) |   | R |
+| [3.2 Add a New Collections Agent](#32-add-a-new-collections-agent) |   | R |
+| [4. Contact the Customer](#4-contact-the-customer) | R |   |
+| [4.1 Check an Overdue Balance Before Contact](#41-check-an-overdue-balance-before-contact) | R |   |
+| [5. Record a Customer Collection Activity](#5-record-a-customer-collection-activity) | R |   |
+| [6. Manage Customer Statements](#6-manage-customer-statements) | R |   |
+| [6.1 Preview and Download a Customer Statement](#61-preview-and-download-a-customer-statement) | R |   |
+| [6.2 Generate and Send a Customer Statement](#62-generate-and-send-a-customer-statement) | R |   |
+| [7. Resolve the Account](#7-resolve-the-account) | R | R |
+| [7.1 View and Download a Customer Invoice](#71-view-and-download-a-customer-invoice) | R |   |
+| [7.2 Create and Send a Collection Letter](#72-create-and-send-a-collection-letter) | R |   |
+| [7.3 Change Customer Status](#73-change-customer-status) | R |   |
+| [7.4 Write Off an Uncollectible Debt](#74-write-off-an-uncollectible-debt) | R | R |
+| [8. Update and Close a Customer Activity](#8-update-and-close-a-customer-activity) | R |   |
 
 \*R = Responsible
 
@@ -126,9 +126,7 @@ Add these pages to your Favorites, and add these columns to the views you use fo
 | **Customer payment journal** | Located in the **Credit and collections** module. Identified in AR Collections training as a key page for AR Collections users. `[Favorites VG-18]` |
 | **Open customer invoices** | Located in the **Accounts receivable** module. Used to review open customer invoices. `[Favorites VG-19]` |
 
-| Column | Notes |
-|---|---|
-| **Recommended columns** | Customer account, Customer name, Transaction date, Due date, Description, Amount, Currency, Overdue balance and Email address. `[Personalized Views VG-01]` |
+**Recommended columns**: Customer account, Customer name, Transaction date, Due date, Description, Amount, Currency, Overdue balance and Email address. `[Personalized Views VG-01]`
 
 ##### The Customer credit and collections workspace
 
@@ -136,13 +134,11 @@ Add these pages to your Favorites, and add these columns to the views you use fo
 |---|---|
 | **Workspace** | A D365 page that brings together the information and tasks for one area of work. The **Customer credit and collections** workspace is the starting point for collection work. `[Workspace VG-09]` |
 | **Sections used in AR Collections** | **Customers overdue**, **Payment journals not posted**, **Notes** and **Open payment journals**. `[Workspace VG-04 to VG-07]` |
-| **Other sections** | The workspace also shows sections such as **Open cases**, **Customers over credit limit** and **Collections letters not printed**. Which of these are used in AR Collections is pending confirmation. `[Workspace VG-08]` |
+| **Other sections** | The workspace also shows sections such as **Open cases**, **Customers over credit limit** and **Collections letters not printed**. <mark>Which of these are used in AR Collections is pending confirmation.</mark> `[Workspace VG-08]` |
 
 ##### Workspaces and modules
 
-| Term | Description |
-|---|---|
-| **Workspace or module** | The **Customer credit and collections** workspace opens from **Workspaces**. The **Credit and collections** module opens from **Modules** and lists pages such as **All customers** and **Aged balances**. `[Workspace VG-11]` |
+**Workspace or module**: The **Customer credit and collections** workspace opens from **Workspaces**. The **Credit and collections** module opens from **Modules** and lists pages such as **All customers** and **Aged balances**. `[Workspace VG-11]`
 
 ##### Collections Workflow
 
@@ -155,7 +151,7 @@ A customer’s overdue balance is subject to follow-up and activity tracking in 
 | The customer debt is deemed uncollectible. | The Collections Officer will initiate a Debt Write-off request for approval and processing. |
 | A payment has been applied incorrectly to a customer account. | The Collections Officer will transfer, settle, or unsettle transactions as required to correct the customer balance. |
 
-**Collection Activities**
+##### Collection Activities
 
 Each collection action is recorded as a Customer Activity in D365 F&O:
 
@@ -166,7 +162,7 @@ Each collection action is recorded as a Customer Activity in D365 F&O:
 | **Event** | Recording a general update or collection milestone. |
 | **Task** | Internal reminders, e.g., follow-up next week. |
 
-**Customer Activity Status**
+##### Customer Activity Status
 
 A customer account status identifies the state of a customer account:
 
@@ -177,7 +173,7 @@ A customer account status identifies the state of a customer account:
 | **Resolved** | The issue has been addressed, or payment has been received. |
 | **Closed** | The activity is complete, and no further follow-up is required. |
 
-**Invoice Due Reminder Automation**
+##### Invoice Due Reminder Automation
 
 D365 F&O includes an automated Invoice Due Reminder email as part of the updated Credit Collections strategy. The reminder is sent five (5) days before an invoice is due, helping reduce overdue balances and manual follow-up. Specifications include:
 
@@ -203,11 +199,11 @@ Specific customer accounts or individual transactions can be excluded from autom
 
 Customer or transactions excluded from credit management may not be included in automated collections follow-up or Direct Debit processing activities.
 
-**Customer Payment Management**
+##### Customer Payment Management
 
 Customer payments may require manual adjustment to ensure balances are correctly reflected. These corrections are in 220 Customer Payments (version 3.0):
 
-| Action | Timing |
+| Action | Description |
 |---|---|
 | **Settle Customer Accounts** | Match customer payments against outstanding invoices. See 220 topic 2.3. |
 | **Unsettle Customer Accounts** | Reverse an incorrect settlement. See 220 topic 3.1. |
@@ -257,9 +253,7 @@ This integration is critical to the Collections process, as it ensures:
 
 ##### Before contacting a customer
 
-| Rule | Description |
-|---|---|
-| **Check the balance first** | Investigate an overdue balance before you contact the customer. A low-value balance may represent fees or an overpayment rather than an unpaid invoice. `[Overdue Customers VG-09]` |
+**Check the balance first**: Investigate an overdue balance before you contact the customer. A low-value balance may represent fees or an overpayment rather than an unpaid invoice. `[Overdue Customers VG-09]`
 
 ##### The Aged balances page
 
@@ -271,9 +265,7 @@ This integration is critical to the Collections process, as it ensures:
 
 ##### Sharing balances with customers
 
-| Rule | Description |
-|---|---|
-| **Use PDF, not Excel** | Provide customer-facing account information as a PDF. Do not send a customer an Excel export of this page. `[Aged Balances VG-13]` |
+**Use PDF, not Excel**: Provide customer-facing account information as a PDF. Do not send a customer an Excel export of this page. `[Aged Balances VG-13]`
 
 ##### Transactions and settlements
 
@@ -285,9 +277,7 @@ This integration is critical to the Collections process, as it ensures:
 
 ##### Reviewing without changing
 
-| Rule | Description |
-|---|---|
-| **Do not undo settlements here** | This topic only reviews settlement history. Undoing a settlement changes financial records and is in 220 Customer Payments, topic 3.1 Undo a Settlement. `[Customer Account VG-13]` |
+**Do not undo settlements here**: This topic only reviews settlement history. Undoing a settlement changes financial records and is in 220 Customer Payments, topic 3.1 Undo a Settlement. `[Customer Account VG-13]`
 
 ##### Notes and activities
 
@@ -299,9 +289,7 @@ This integration is critical to the Collections process, as it ensures:
 
 ##### Recording collection history (notes and activities)
 
-| Rule | Description |
-|---|---|
-| **Record notes at customer level** | Collection notes are recorded against the customer account rather than against individual invoices, so the full history is in one place. `[Notes and Activities VG-11]` |
+**Record notes at customer level**: Collection notes are recorded against the customer account rather than against individual invoices, so the full history is in one place. `[Notes and Activities VG-11]`
 
 ##### Collection activities
 
@@ -313,9 +301,7 @@ This integration is critical to the Collections process, as it ensures:
 
 ##### Recording collection history (collection activities)
 
-| Rule | Description |
-|---|---|
-| **Record at customer level** | Record collection activities against the customer account rather than against individual invoices, so the full history is visible in the account overview. `[Collection Activities VG-14]` |
+**Record at customer level**: Record collection activities against the customer account rather than against individual invoices, so the full history is visible in the account overview. `[Collection Activities VG-14]`
 
 ##### Statements and destinations
 
@@ -357,9 +343,7 @@ This integration is critical to the Collections process, as it ensures:
 
 ##### Sending documents to customers
 
-| Rule | Description |
-|---|---|
-| **Use PDF, not Excel** | Provide customer-facing account information as a PDF. Do not send a customer an Excel export. `[Customer Invoices VG-12]` |
+**Use PDF, not Excel**: Provide customer-facing account information as a PDF. Do not send a customer an Excel export. `[Customer Invoices VG-12]`
 
 ---
 
@@ -385,8 +369,8 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [Open the Customer Credit and Collections Workspace](#11-open-the-customer-credit-and-collections-workspace) | Open the workspace from the dashboard or the Navigation Pane. |
-| [Locate Collection Work in the Workspace](#12-locate-collection-work-in-the-workspace) | Find the workspace section needed for the task. |
+| [1.1 Open the Customer Credit and Collections Workspace](#11-open-the-customer-credit-and-collections-workspace) | Open the workspace from the dashboard or the Navigation Pane. |
+| [1.2 Locate Collection Work in the Workspace](#12-locate-collection-work-in-the-workspace) | Find the workspace section needed for the task. |
 
 #### 1.1 Open the Customer Credit and Collections Workspace
 
@@ -435,7 +419,7 @@ Complete these steps to locate collection work in the workspace:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The **Customer credit and collections** workspace is open (see [Open the Customer Credit and Collections Workspace](#11-open-the-customer-credit-and-collections-workspace)).<br>*Responsibility:*<br>• Collections Officer |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The **Customer credit and collections** workspace is open (see [1.1 Open the Customer Credit and Collections Workspace](#11-open-the-customer-credit-and-collections-workspace)).<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Locate* **Customers overdue**. `[Workspace VG-04]` | Find **Customers overdue**. Use it to review customers with overdue balances. |
 | 2. *Locate* **Payment journals not posted**. `[Workspace VG-05]` | Find **Payment journals not posted**. Use it to identify customer payment journals that have not been posted. |
 | 3. *Locate* **Notes**. `[Workspace VG-06]` | Find **Notes**. Use it to review customer collection notes (see topics 2.5 and 2.6). |
@@ -469,14 +453,14 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [Review Customers Overdue](#21-review-customers-overdue) | List customers with overdue balances and open an account to follow up. |
-| [Review Customer Aged Balances](#22-review-customer-aged-balances) | Review customer balances by aging period. |
-| [Filter Aged Balances by Customer or Currency](#23-filter-aged-balances-by-customer-or-currency) | Limit Aged balances to one customer or currency. |
-| [Investigate a Customer Account](#24-investigate-a-customer-account) | Open the account and review its transactions and settlement history. |
-| [Review Customer Notes](#25-review-customer-notes) | Read the notes recorded for a customer. |
-| [Review All Customer Activities](#26-review-all-customer-activities) | Review previous collection activities for a customer. |
-| [Update Customer Details](#27-update-customer-details) | Review and update customer contact and account details. |
-| [Maintain Customer Direct Debit & eBanking Details](#28-maintain-customer-direct-debit--ebanking-details) | See 240 Direct Debit and Credit Card Payments, topic 1. |
+| [2.1 Review Customers Overdue](#21-review-customers-overdue) | List customers with overdue balances and open an account to follow up. |
+| [2.2 Review Customer Aged Balances](#22-review-customer-aged-balances) | Review customer balances by aging period. |
+| [2.3 Filter Aged Balances by Customer or Currency](#23-filter-aged-balances-by-customer-or-currency) | Limit Aged balances to one customer or currency. |
+| [2.4 Investigate a Customer Account](#24-investigate-a-customer-account) | Open the account and review its transactions and settlement history. |
+| [2.5 Review Customer Notes](#25-review-customer-notes) | Read the notes recorded for a customer. |
+| [2.6 Review All Customer Activities](#26-review-all-customer-activities) | Review previous collection activities for a customer. |
+| [2.7 Update Customer Details](#27-update-customer-details) | Review and update customer contact and account details. |
+| [2.8 Maintain Customer Direct Debit & eBanking Details](#28-maintain-customer-direct-debit--ebanking-details) | See 240 Direct Debit and Credit Card Payments, topic 1. |
 
 #### 2.1 Review Customers Overdue
 
@@ -543,7 +527,7 @@ Complete these steps to prepare the aged balances list:
 | 12. *Confirm* the list is ready to review. | Check that the list shows only non-zero balances, largest first, with each account's currency. |
 | *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• The **Aged balances** list shows only customers with a non-zero balance, sorted from largest to smallest.<br>• Each account shows its currency. |
 
-> **Note:** Legacy 230 (v2.3, 2.1 View Customer Aged Balances) also sorts **Amount due** largest first, reads the aging icons and opens the customer's Collections page by clicking the customer name. It also says aging balances refresh by a batch job every 10 minutes, so a change posted in the last 10 minutes can be missing. `[G230-08]`
+> **ACTION: REVIEW REQUIREMENT.** Note: Legacy 230 (v2.3, 2.1 View Customer Aged Balances) also sorts **Amount due** largest first, reads the aging icons and opens the customer's Collections page by clicking the customer name. It also says aging balances refresh by a batch job every 10 minutes, so a change posted in the last 10 minutes can be missing. `[G230-08]`
 
 #### 2.3 Filter Aged Balances by Customer or Currency
 
@@ -565,7 +549,7 @@ Complete these steps to filter the aged balances list:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The prepared aged balances list (see [Review Customer Aged Balances](#22-review-customer-aged-balances)).<br>*Responsibility:*<br>• Collections Officer |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The prepared aged balances list (see [2.2 Review Customer Aged Balances](#22-review-customer-aged-balances)).<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Open* the filter for the customer column. `[Aged Balances VG-07]` | To review selected customers, open the filter for the customer account column. If you only need a currency filter, go to step 5. |
 | 2. *Select* **is one of**. `[Aged Balances VG-08]` | Select the **is one of** operator so you can choose several customers. |
 | 3. *Select* each customer account. | Select each customer account you want to review. |
@@ -597,9 +581,9 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [Open the Customer Account](#241-open-the-customer-account) | Open the customer account and check the balance and overdue amount. Output: the account is open. |
-| [Review Customer Transactions](#242-review-customer-transactions) | Review open and closed transactions without currency revaluations. Output: you know what makes up the balance. |
-| [Review Settlement History](#243-review-settlement-history) | Optional. Review what a transaction was settled against. Output: you know how a payment or credit was applied. |
+| [2.4.1 Open the Customer Account](#241-open-the-customer-account) | Open the customer account and check the balance and overdue amount. Output: the account is open. |
+| [2.4.2 Review Customer Transactions](#242-review-customer-transactions) | Review open and closed transactions without currency revaluations. Output: you know what makes up the balance. |
+| [2.4.3 Review Settlement History](#243-review-settlement-history) | Optional. Review what a transaction was settled against. Output: you know how a payment or credit was applied. |
 
 #### 2.4.1 Open the Customer Account
 
@@ -615,7 +599,7 @@ Complete these steps to open the customer account:
 | 3. *Navigate* to the **All customers** page. `[Customer Account VG-01 / VG-03]` | From the **Navigation Pane**, *select*:<br>• **Credit and collections >**<br>• **All customers**<br>You can also open **All customers** from your **Favorites** (see 260 O2C Getting Started, topic 3 Add Pages to Favorites). |
 | 4. *Open* the customer account. `[Customer Account VG-02]` | Find the customer and open the account. |
 | 5. *Review* the account balance. `[Customer Account VG-04]` | Check the customer's balance and overdue amount. |
-| *STEP COMPLETE* (light blue) | • The customer account is open.<br>• Continue to [Review Customer Transactions](#242-review-customer-transactions) |
+| *STEP COMPLETE* (light blue) | • The customer account is open.<br>• Continue to [2.4.2 Review Customer Transactions](#242-review-customer-transactions) |
 
 #### 2.4.2 Review Customer Transactions
 
@@ -625,14 +609,14 @@ Complete these steps to review the customer's transactions:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The customer account is open (see [Open the Customer Account](#241-open-the-customer-account)).<br>*Responsibility:*<br>• Collections Officer |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The customer account is open (see [2.4.1 Open the Customer Account](#241-open-the-customer-account)).<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Click* **Transactions**. `[Customer Account VG-05]` | Open the customer's transactions from the customer account. |
 | 2. *Select* **Show open**. `[Customer Account VG-06]` | Show only open transactions. |
 | 3. *Hide* currency revaluations. `[Customer Account VG-07]` | Hide currency revaluation entries so only the customer's own transactions are listed. |
 | 4. *Review* the open transactions. `[Customer Account VG-09]` | For each transaction, check the due date, amount, currency and description. |
 | 5. *Select* **Show closed**. | Optional. To see settled transactions, show closed transactions. Otherwise, go to step 6. |
 | 6. *Confirm* you know what makes up the balance. `[Customer Account VG-15]` | Check that the transactions you reviewed explain the balance and overdue amount. |
-| *STEP COMPLETE* (light blue) | • You have reviewed the customer's transactions.<br>• Continue to [Review Settlement History](#243-review-settlement-history) |
+| *STEP COMPLETE* (light blue) | • You have reviewed the customer's transactions.<br>• Continue to [2.4.3 Review Settlement History](#243-review-settlement-history) |
 
 #### 2.4.3 Review Settlement History
 
@@ -644,7 +628,7 @@ Complete these steps to review a transaction's settlement history:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The customer's transactions are open (see [Review Customer Transactions](#242-review-customer-transactions)).<br>*Responsibility:*<br>• Collections Officer |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The customer's transactions are open (see [2.4.2 Review Customer Transactions](#242-review-customer-transactions)).<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Click* the transaction. `[Customer Account VG-10]` | Click the transaction so it is highlighted. Do not mark it. |
 | 2. *Click* **View settlements**. `[Customer Account VG-11]` | Open the settlement history for the highlighted transaction. |
 | 3. *Review* the settlement. `[Customer Account VG-12]` | Check which transactions it was settled against, and the amounts and dates. |
@@ -713,7 +697,7 @@ Complete these steps to review a customer's activities:
 | 7. *Review* the customer's contact history. | Read the activities to see when and how the customer was contacted. |
 | *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• You have reviewed the customer's recorded activities. |
 
-> **Note:** Legacy 230 (v2.3, 2.2 Review Customer Activity) opens activities with **All activities**, and also checks the attachments on each activity and corrects the record where needed. `[G230-09]`
+> **ACTION: REVIEW REQUIREMENT.** Note: Legacy 230 (v2.3, 2.2 Review Customer Activity) opens activities with **All activities**, and also checks the attachments on each activity and corrects the record where needed. `[G230-09]`
 
 #### 2.7 Update Customer Details
 
@@ -747,7 +731,7 @@ Complete the steps below to Update Customer Details:
 
 ##### Description
 
-Direct debit and credit card details are maintained in **240 Direct Debit and Credit Card Payments**, topic 1 Maintain a Customer's Direct Debit Details. This topic stays here as the way in from Collections (D-053).
+Direct debit and credit card details are maintained in **240 Direct Debit and Credit Card Payments**, topic 1 Maintain a Customer's Direct Debit Details. <mark>This topic stays here as the way in from Collections (D-053).</mark>
 
 Customer alternate names for payment matching are maintained by the receiving team (220 Customer Payments).
 
@@ -857,7 +841,7 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [Check an Overdue Balance Before Contact](#41-check-an-overdue-balance-before-contact) | Confirm the overdue balance before contacting the customer. |
+| [4.1 Check an Overdue Balance Before Contact](#41-check-an-overdue-balance-before-contact) | Confirm the overdue balance before contacting the customer. |
 
 #### 4.1 Check an Overdue Balance Before Contact
 
@@ -879,7 +863,7 @@ Complete these steps to check an overdue balance:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• **Customers overdue** is open (see [Review Customers Overdue](#21-review-customers-overdue)).<br>*Responsibility:*<br>• Collections Officer |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• **Customers overdue** is open (see [2.1 Review Customers Overdue](#21-review-customers-overdue)).<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Select* the customer. | In **Customers overdue**, select the customer whose balance you are checking. |
 | 2. *Open* the customer account. `[Overdue Customers VG-07]` | Open the customer account from the list. |
 | 3. *Review* the overdue balance. `[Overdue Customers VG-08]` | Check which transactions make up the overdue amount. |
@@ -920,7 +904,7 @@ Complete these steps to record a collection activity:
 | 10. *Check* the activity is listed. `[Collection Activities VG-13]` | Check that the activity appears in the customer's activities. |
 | *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• The collection activity is recorded on the customer account and is visible in the customer's activities. |
 
-> **Note:** Legacy 230 (v2.3, 5 Record New Customer Activity) also sets the activity type (**Action**, **Appointment**, **Event** or **Task**), **Purpose**, **Priority**, **Type** (for example **Phone call**) and **Description**, and makes attaching supporting documents mandatory. `[G230-11]`
+> **ACTION: REVIEW REQUIREMENT.** Note: Legacy 230 (v2.3, 5 Record New Customer Activity) also sets the activity type (**Action**, **Appointment**, **Event** or **Task**), **Purpose**, **Priority**, **Type** (for example **Phone call**) and **Description**, and makes attaching supporting documents mandatory. `[G230-11]`
 
 ### 6. Manage Customer Statements
 
@@ -942,8 +926,8 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [Preview and Download a Customer Statement](#61-preview-and-download-a-customer-statement) | Generate the statement on screen and download it as a PDF. |
-| [Generate and Send a Customer Statement](#62-generate-and-send-a-customer-statement) | Send the statement and verify delivery. |
+| [6.1 Preview and Download a Customer Statement](#61-preview-and-download-a-customer-statement) | Generate the statement on screen and download it as a PDF. |
+| [6.2 Generate and Send a Customer Statement](#62-generate-and-send-a-customer-statement) | Send the statement and verify delivery. |
 
 #### 6.1 Preview and Download a Customer Statement
 
@@ -965,8 +949,8 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [Generate the Statement Preview](#611-generate-the-statement-preview) | Set the statement options and generate it with Screen as the destination. Output: the statement is shown on screen. |
-| [Download the Statement as PDF](#612-download-the-statement-as-pdf) | Optional. Download the statement as a PDF with a meaningful file name. Output: a PDF copy of the statement. |
+| [6.1.1 Generate the Statement Preview](#611-generate-the-statement-preview) | Set the statement options and generate it with Screen as the destination. Output: the statement is shown on screen. |
+| [6.1.2 Download the Statement as PDF](#612-download-the-statement-as-pdf) | Optional. Download the statement as a PDF with a meaningful file name. Output: a PDF copy of the statement. |
 
 #### 6.1.1 Generate the Statement Preview
 
@@ -986,7 +970,7 @@ Complete these steps to generate the statement preview:
 | 7. *Select* **Screen** as the destination. `[Statement Preview VG-06]` | Set the destination to **Screen**. |
 | 8. *Generate* the statement. `[Statement Preview VG-07]` | Generate the statement. It opens on screen. |
 | 9. *Review* the statement. `[Statement Preview VG-08]` | Check that it shows the correct customer and their open transactions. |
-| *STEP COMPLETE* (light blue) | • The statement is open on screen.<br>• Continue to [Download the Statement as PDF](#612-download-the-statement-as-pdf) |
+| *STEP COMPLETE* (light blue) | • The statement is open on screen.<br>• Continue to [6.1.2 Download the Statement as PDF](#612-download-the-statement-as-pdf) |
 
 #### 6.1.2 Download the Statement as PDF
 
@@ -998,7 +982,7 @@ Complete these steps to download the statement as a PDF:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The statement is open on screen (see [Generate the Statement Preview](#611-generate-the-statement-preview)).<br>*Responsibility:*<br>• Collections Officer |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The statement is open on screen (see [6.1.1 Generate the Statement Preview](#611-generate-the-statement-preview)).<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Download* the statement as a PDF. `[Statement Preview VG-09]` | From the on-screen statement, download it as a PDF file. |
 | 2. *Enter* a meaningful file name. `[Statement Preview VG-10 / VG-12]` | Name the file so the customer and the statement date can be identified. |
 | 3. *Save* the PDF. `[Statement Preview VG-11]` | Save the PDF file. |
@@ -1025,8 +1009,8 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [Send the Statement](#621-send-the-statement) | Set the statement options and generate it with Print management destination. Output: the statement is sent. |
-| [Verify Statement Delivery](#622-verify-statement-delivery) | Check the delivery message and, where required, the Collections sent mailbox. Output: delivery is confirmed. |
+| [6.2.1 Send the Statement](#621-send-the-statement) | Set the statement options and generate it with Print management destination. Output: the statement is sent. |
+| [6.2.2 Verify Statement Delivery](#622-verify-statement-delivery) | Check the delivery message and, where required, the Collections sent mailbox. Output: delivery is confirmed. |
 
 #### 6.2.1 Send the Statement
 
@@ -1044,7 +1028,7 @@ Complete these steps to send the statement:
 | 5. *Include* the company logo. `[Statement Distribution VG-04]` | Select the option that includes the company logo. |
 | 6. *Select* **Print management destination**. `[Statement Distribution VG-05 / VG-06]` | Select this option so the statement is delivered to the customer. |
 | 7. *Generate* the statement. `[Statement Distribution VG-07]` | Generate the statement. D365 sends it to the customer. |
-| *STEP COMPLETE* (light blue) | • The statement has been generated and sent.<br>• Continue to [Verify Statement Delivery](#622-verify-statement-delivery) |
+| *STEP COMPLETE* (light blue) | • The statement has been generated and sent.<br>• Continue to [6.2.2 Verify Statement Delivery](#622-verify-statement-delivery) |
 
 #### 6.2.2 Verify Statement Delivery
 
@@ -1054,13 +1038,13 @@ Complete these steps to verify statement delivery:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The statement has been sent (see [Send the Statement](#621-send-the-statement)).<br>*Responsibility:*<br>• Collections Officer |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The statement has been sent (see [6.2.1 Send the Statement](#621-send-the-statement)).<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Check* the delivery message. `[Statement Distribution VG-08]` | Read the message D365 shows after the statement is generated, and check that it confirms the statement was sent. |
 | 2. *Check* the Collections sent mailbox. `[Statement Distribution VG-09]` | Optional. Where required, check that the statement appears in the Collections sent mailbox. Otherwise, go to step 3. |
 | 3. *Confirm* the statement was delivered. `[Statement Distribution VG-10]` | If the delivery message or mailbox shows that the statement was not sent, follow the failed-delivery process. |
 | *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• The statement has been sent to the customer and its delivery confirmed. `[Statement Distribution VG-11]` |
 
-> **Note:** Legacy 230 (v2.3, 1 Send Customer Statement (ad hoc)) sends ad hoc statements only, because monthly statements go out automatically on the 5th. It sets **Date interval** and **Balance other than zero**, and runs the send as a batch job with a future start time and **Maximum retries** set to 0, or the customer can receive several copies. It warns that a blank **Records to include** sends statements to every customer, and only email contacts with **Purpose** = **Business** receive statements. `[G230-12]`
+> **ACTION: REVIEW REQUIREMENT.** Note: Legacy 230 (v2.3, 1 Send Customer Statement (ad hoc)) sends ad hoc statements only, because monthly statements go out automatically on the 5th. It sets **Date interval** and **Balance other than zero**, and runs the send as a batch job with a future start time and **Maximum retries** set to 0, or the customer can receive several copies. It warns that a blank **Records to include** sends statements to every customer, and only email contacts with **Purpose** = **Business** receive statements. `[G230-12]`
 
 ### 7. Resolve the Account
 
@@ -1084,10 +1068,10 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [View and Download a Customer Invoice](#71-view-and-download-a-customer-invoice) | Open an invoice copy and download it as a PDF. |
-| [Create and Send a Collection Letter](#72-create-and-send-a-collection-letter) | Generate and issue a formal collection letter. Only required if automation fails. |
-| [Change Customer Status](#73-change-customer-status) | Update the customer's account status, or exclude the customer or a transaction from credit management. |
-| [Write Off an Uncollectible Debt](#74-write-off-an-uncollectible-debt) | Initiate and process the write-off once management approval has been obtained. |
+| [7.1 View and Download a Customer Invoice](#71-view-and-download-a-customer-invoice) | Open an invoice copy and download it as a PDF. |
+| [7.2 Create and Send a Collection Letter](#72-create-and-send-a-collection-letter) | Generate and issue a formal collection letter. Only required if automation fails. |
+| [7.3 Change Customer Status](#73-change-customer-status) | Update the customer's account status, or exclude the customer or a transaction from credit management. |
+| [7.4 Write Off an Uncollectible Debt](#74-write-off-an-uncollectible-debt) | Initiate and process the write-off once management approval has been obtained. |
 
 > **Note:** Settling and unsettling customer accounts, transferring open or closed payments, and writing off bank fees or small residuals are in **220 Customer Payments** (topics 2.3, 3.1, 3.3 and 3.6).
 
@@ -1111,8 +1095,8 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [Open the Invoice Preview](#711-open-the-invoice-preview) | Highlight the invoice transaction and open the invoice in Print preview. Output: the invoice is shown on screen. |
-| [Download the Invoice as PDF](#712-download-the-invoice-as-pdf) | Optional. Download the invoice as a PDF with a meaningful file name. Output: a PDF copy of the invoice. |
+| [7.1.1 Open the Invoice Preview](#711-open-the-invoice-preview) | Highlight the invoice transaction and open the invoice in Print preview. Output: the invoice is shown on screen. |
+| [7.1.2 Download the Invoice as PDF](#712-download-the-invoice-as-pdf) | Optional. Download the invoice as a PDF with a meaningful file name. Output: a PDF copy of the invoice. |
 
 #### 7.1.1 Open the Invoice Preview
 
@@ -1130,7 +1114,7 @@ Complete these steps to open the invoice in print preview:
 | 5. *Select* the invoice. `[Customer Invoices VG-04]` | Select the invoice in the list of original documents. |
 | 6. *Click* **Print preview**. `[Customer Invoices VG-05]` | The invoice opens in print preview. |
 | 7. *Confirm* it is the invoice you need. `[Customer Invoices VG-06]` | Review the invoice information in the preview and check that it is the invoice you selected. |
-| *STEP COMPLETE* (light blue) | • The invoice is open in print preview.<br>• Continue to [Download the Invoice as PDF](#712-download-the-invoice-as-pdf) |
+| *STEP COMPLETE* (light blue) | • The invoice is open in print preview.<br>• Continue to [7.1.2 Download the Invoice as PDF](#712-download-the-invoice-as-pdf) |
 
 #### 7.1.2 Download the Invoice as PDF
 
@@ -1142,14 +1126,14 @@ Complete these steps to download the invoice as a PDF:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The invoice is open in print preview (see [Open the Invoice Preview](#711-open-the-invoice-preview)).<br>*Responsibility:*<br>• Collections Officer |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• The invoice is open in print preview (see [7.1.1 Open the Invoice Preview](#711-open-the-invoice-preview)).<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Download* the invoice as a PDF. `[Customer Invoices VG-07]` | From the print preview, download the invoice as a PDF file. |
 | 2. *Enter* a meaningful file name. `[Customer Invoices VG-08 / VG-10]` | Name the file so the customer and the invoice can be identified. |
 | 3. *Save* the PDF. `[Customer Invoices VG-09]` | Save the PDF file. |
 | 4. *Confirm* the PDF shows the correct invoice. | Open the PDF and check that it shows the invoice you selected. |
 | *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• The invoice is saved as a PDF with a file name that identifies the customer and invoice. `[Customer Invoices VG-21]` |
 
-> **Note:** Legacy 230 (v2.3, 6.1 Resend Statement or Invoice) reaches the invoice copy from **Open customer invoices** or the **Tax invoice journal** > **Document** > **View** > **Copy preview**, and also covers resending the invoice to the customer. `[G230-13]`
+> **ACTION: REVIEW REQUIREMENT.** Note: Legacy 230 (v2.3, 6.1 Resend Statement or Invoice) reaches the invoice copy from **Open customer invoices** or the **Tax invoice journal** > **Document** > **View** > **Copy preview**, and also covers resending the invoice to the customer. `[G230-13]`
 
 #### 7.2 Create and Send a Collection Letter
 

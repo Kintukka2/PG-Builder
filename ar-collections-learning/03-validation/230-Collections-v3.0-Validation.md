@@ -2,10 +2,11 @@
 
 | Field | Value |
 |---|---|
-| Guide (editable source) | [`230-Collections PG v3.0.docx`](../01-procedure-guides/230-Collections%20PG%20v3.0.docx) |
+| Guide (editable source) | [`CLAUDE-230-Collections PG v3.0.docx`](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.docx) |
+| Review PDF | [`CLAUDE-230-Collections PG v3.0.pdf`](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.pdf) |
 | Markdown preview | [`PG-230-Collections-v3.0-DRAFT.md`](../01-procedure-guides/PG-230-Collections-v3.0-DRAFT.md) |
-| Status | Working draft v3.0 (D-052; ADO Task 16886). Shared with the SME for review only (SME review pack of 8 November; D-052 amendment); needs BPO sign-off. Version 2.3, then 2.4, stays published until 3.0 passes its gates. |
-| Last updated | 2026-11-03 |
+| Status | Working draft v3.0 (D-052; ADO Task 16886). Shared with the SME for review only (SME review pack of 8 November; D-052 amendment); needs BPO sign-off. Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-063); no content or item changes. Version 2.3, then 2.4, stays published until 3.0 passes its gates. |
+| Last updated | 2026-11-16 |
 | Items | 10 guide-level items (`G230`), all open: 10 blocking, 0 non-blocking. 126 carried review comments from the topic drafts. |
 
 This file is the guide's **question log** (D-016). It holds the guide-level items, which are scoped to this guide and never renumbered. Review comments carried from the topic drafts keep their ID and draft name, for example *Aged Balances VG-03*, and their source register stays the record for them: an answer recorded there applies here (D-048). Each open item that affects the text is a Word review comment by "Validation register" (VR).
@@ -149,3 +150,4 @@ Review comments in the nine topic drafts that are not review comments in this gu
 | 2026-11-08 | Guide added to the SME review pack for review only (D-052 amendment). |
 | 2026-11-09 | Topic 2.8 now links to 240 Direct Debit and Credit Card Payments, topic 1, instead of repeating the steps (D-053). `G230-04` closed: decided at the 9 November meeting. |
 | 2026-11-10 | References to 221 Customer Payment Corrections now point to 220 Customer Payments v3.0 (topics 2.3, 3.1, 3.3 and 3.6), which absorbed 221 (D-055). |
+| 2026-11-16 | Formatting brought in line with D-059 to D-061 (D-063): Bullet 1.2 bullets (nested items keep their level), topic numbers in link text, the five *Legacy 230* comparison notes and three phrases in the ACTION: REVIEW REQUIREMENT style, four bold pseudo-headings in Key concepts made Heading 5, eight one-row concept tables made paragraphs, and the *Customer Payment Management* column header corrected from Timing to Description. Files renamed with the `CLAUDE-` prefix (D-056). The SME review copy of 8 November is the earlier file: merge any comments from it into this one. |

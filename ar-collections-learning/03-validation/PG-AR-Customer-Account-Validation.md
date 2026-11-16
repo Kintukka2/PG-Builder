@@ -8,7 +8,7 @@
 | Last updated | 2026-11-03 |
 | Items | 24 total, all open: 17 blocking, 7 non-blocking |
 
-> **Merged and frozen (D-052).** This topic draft is now topic 2.4 (2.4.1 to 2.4.3) of the [230 Collections v3.0](../01-procedure-guides/230-Collections%20PG%20v3.0.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Customer Account VG-xx*.
+> **Merged and frozen (D-052).** This topic draft is now topic 2.4 (2.4.1 to 2.4.3) of the [230 Collections v3.0](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Customer Account VG-xx*.
 
 This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are scoped to this guide and never renumbered. Each open item that affects the text is also a Word review comment by "Validation register" (VR).
 
