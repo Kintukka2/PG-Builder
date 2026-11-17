@@ -1,0 +1,612 @@
+{
+  "standard": "PG numbering master register",
+  "version": "2.0",
+  "date": "2026-11-17",
+  "owner": "Daniel Moreira",
+  "status": "Current numbering baseline",
+  "evidence": "Daniel confirms numbering changes completed. November 17 screenshot verifies 300, 310, 320, 340, 350 and 361; prior screenshots confirm 398, 399 and 500. Other assignments use the established registers and chat decisions. This is not an independent live-link or content-approval audit.",
+  "families": [
+    {
+      "series": "O2C",
+      "start": 200,
+      "end": 209,
+      "family": "Customer Master Data",
+      "scope": "Customer onboarding, account maintenance and master-data controls."
+    },
+    {
+      "series": "O2C",
+      "start": 210,
+      "end": 219,
+      "family": "Billing and Invoicing",
+      "scope": "Customer invoices and subscription billing through invoice posting."
+    },
+    {
+      "series": "O2C",
+      "start": 220,
+      "end": 229,
+      "family": "Customer Payments",
+      "scope": "Receipt processing, allocation, settlement and payment corrections."
+    },
+    {
+      "series": "O2C",
+      "start": 230,
+      "end": 239,
+      "family": "Collections",
+      "scope": "Overdue receivables follow-up, collection activity and escalation."
+    },
+    {
+      "series": "O2C",
+      "start": 240,
+      "end": 249,
+      "family": "Direct Debit and Automated Collections",
+      "scope": "Mandate management and automated collection execution. Direct Debit uses 240."
+    },
+    {
+      "series": "O2C",
+      "start": 250,
+      "end": 259,
+      "family": "Unallocated",
+      "scope": "Reserved for a future O2C family."
+    },
+    {
+      "series": "O2C",
+      "start": 260,
+      "end": 269,
+      "family": "O2C Getting Started",
+      "scope": "General D365 skills shared across O2C guides; 260 is O2C Getting Started."
+    },
+    {
+      "series": "O2C",
+      "start": 270,
+      "end": 289,
+      "family": "Unallocated",
+      "scope": "Define additional families in ten-code blocks before allocating guides."
+    },
+    {
+      "series": "O2C",
+      "start": 290,
+      "end": 299,
+      "family": "Unallocated",
+      "scope": "Reserved for future O2C use."
+    },
+    {
+      "series": "Shared 300",
+      "start": 300,
+      "end": 309,
+      "family": "Vendor Master Data",
+      "scope": "Vendor onboarding and maintenance."
+    },
+    {
+      "series": "Shared 300",
+      "start": 310,
+      "end": 319,
+      "family": "Vendor Invoices",
+      "scope": "Invoice processing, credit notes and invoice exceptions."
+    },
+    {
+      "series": "Shared 300",
+      "start": 320,
+      "end": 329,
+      "family": "Vendor Payments",
+      "scope": "Payment preparation, execution, settlement and payment corrections."
+    },
+    {
+      "series": "Shared 300",
+      "start": 330,
+      "end": 339,
+      "family": "AP Reconciliation and Close",
+      "scope": "Vendor subledger reconciliation and AP period-end controls."
+    },
+    {
+      "series": "Shared 300",
+      "start": 340,
+      "end": 349,
+      "family": "Purchase Requisitions",
+      "scope": "Requisition preparation, review and approval."
+    },
+    {
+      "series": "Shared 300",
+      "start": 350,
+      "end": 359,
+      "family": "Purchase Agreements",
+      "scope": "Agreement creation, maintenance and use."
+    },
+    {
+      "series": "Shared 300",
+      "start": 360,
+      "end": 369,
+      "family": "Purchase Orders",
+      "scope": "Order processing and distinct order routes, including RLPO."
+    },
+    {
+      "series": "Shared 300",
+      "start": 370,
+      "end": 379,
+      "family": "Receipts and Returns",
+      "scope": "Product/service receipt and procurement returns."
+    },
+    {
+      "series": "Shared 300",
+      "start": 380,
+      "end": 389,
+      "family": "Shared Foundations",
+      "scope": "Cross-cutting P2P/Procurement skills only where a separate guide is justified."
+    },
+    {
+      "series": "Shared 300",
+      "start": 390,
+      "end": 397,
+      "family": "Unallocated",
+      "scope": "No process family assigned. Define one before allocating a guide."
+    },
+    {
+      "series": "Shared 300",
+      "start": 398,
+      "end": 399,
+      "family": "Existing shared guides",
+      "scope": "398 RCTI and RCI; 399 Customer and Supplier Netting. Retain existing cross-stream assignments."
+    },
+    {
+      "series": "R2R",
+      "start": 400,
+      "end": 409,
+      "family": "Core General Ledger",
+      "scope": "Shared journal processing, general ledger inquiries and ledger settlement."
+    },
+    {
+      "series": "R2R",
+      "start": 410,
+      "end": 419,
+      "family": "Cash and Bank",
+      "scope": "Bank reconciliation and future cash or bank accounting procedures."
+    },
+    {
+      "series": "R2R",
+      "start": 420,
+      "end": 429,
+      "family": "Intercompany",
+      "scope": "Intercompany accounting, reconciliation, recharge and settlement."
+    },
+    {
+      "series": "R2R",
+      "start": 430,
+      "end": 439,
+      "family": "Period-End Adjustments",
+      "scope": "Accruals, expense/revenue deferrals and currency adjustments. 430–432 cover accruals and deferrals; 433–434 cover currency."
+    },
+    {
+      "series": "R2R",
+      "start": 440,
+      "end": 449,
+      "family": "Payroll Accounting",
+      "scope": "Payroll accounting and payroll-related allocations. Manpower Recharge is covered by 421; it is not a current guide at 441."
+    },
+    {
+      "series": "R2R",
+      "start": 450,
+      "end": 459,
+      "family": "Financial Reporting",
+      "scope": "Financial statement preparation and reporting outputs. Routine ledger inquiries remain in 400–409."
+    },
+    {
+      "series": "R2R",
+      "start": 460,
+      "end": 469,
+      "family": "Asset Accounting",
+      "scope": "Tangible fixed assets, intangible fixed assets and asset leasing. 460 Tangible Fixed Assets; 461 Intangible Fixed Assets; 462 Asset Leasing. 463–469 remain available for future asset accounting guides."
+    },
+    {
+      "series": "R2R",
+      "start": 470,
+      "end": 499,
+      "family": "Unallocated",
+      "scope": "Reserved for future R2R families. Define the family before assigning a guide."
+    },
+    {
+      "series": "Tax",
+      "start": 500,
+      "end": 509,
+      "family": "Tax Foundations and General Procedures",
+      "scope": "Existing 500 remains the umbrella Tax PG with its existing scope; do not narrow its scope by renaming it."
+    },
+    {
+      "series": "Tax",
+      "start": 510,
+      "end": 519,
+      "family": "Indirect Tax",
+      "scope": "GST/VAT and other indirect-tax procedures."
+    },
+    {
+      "series": "Tax",
+      "start": 520,
+      "end": 529,
+      "family": "Withholding Tax",
+      "scope": "withholding-tax procedures."
+    },
+    {
+      "series": "Tax",
+      "start": 530,
+      "end": 539,
+      "family": "Direct / Income Tax",
+      "scope": "direct-tax procedures."
+    },
+    {
+      "series": "Tax",
+      "start": 540,
+      "end": 549,
+      "family": "Cross-Tax Reconciliation and Reporting",
+      "scope": "Only standalone processes spanning tax families. Tax-specific reports stay with their tax family."
+    },
+    {
+      "series": "Tax",
+      "start": 550,
+      "end": 599,
+      "family": "Unallocated",
+      "scope": "Reserve for future families. No specific guide or requirement is implied."
+    }
+  ],
+  "guides": [
+    {
+      "code": "200",
+      "title": "Customer Onboarding and Maintenance",
+      "area": "O2C",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "210",
+      "title": "Customer Invoices",
+      "area": "O2C",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "211",
+      "title": "Subscription Billing",
+      "area": "O2C",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "220",
+      "title": "Customer Payments",
+      "area": "O2C",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "230",
+      "title": "Collections",
+      "area": "O2C",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "240",
+      "title": "Direct Debit",
+      "area": "O2C",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "260",
+      "title": "O2C Getting Started",
+      "area": "O2C",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "300",
+      "title": "Vendor Onboarding and Maintenance",
+      "area": "P2P",
+      "numbering_status": "Assigned",
+      "note": "Hub filename confirmed in November 17 screenshot"
+    },
+    {
+      "code": "310",
+      "title": "Vendor Invoices",
+      "area": "P2P",
+      "numbering_status": "Assigned",
+      "note": "Hub filename confirmed in November 17 screenshot"
+    },
+    {
+      "code": "320",
+      "title": "Vendor Payments",
+      "area": "P2P",
+      "numbering_status": "Assigned",
+      "note": "Hub filename confirmed in November 17 screenshot"
+    },
+    {
+      "code": "340",
+      "title": "Procurement (Purchase Requisitions)",
+      "area": "Procurement",
+      "numbering_status": "Assigned",
+      "note": "Hub filename confirmed in November 17 screenshot"
+    },
+    {
+      "code": "350",
+      "title": "Procurement (Purchase Agreements)",
+      "area": "Procurement",
+      "numbering_status": "Assigned",
+      "note": "Hub filename confirmed in November 17 screenshot"
+    },
+    {
+      "code": "361",
+      "title": "RLPO (Reverse-Logic POs)",
+      "area": "Procurement",
+      "numbering_status": "Assigned",
+      "note": "Hub filename confirmed in November 17 screenshot"
+    },
+    {
+      "code": "398",
+      "title": "RCTI and RCI",
+      "area": "RCTI",
+      "numbering_status": "Assigned",
+      "note": "Shared O2C/P2P procedure; RCTI Hub category"
+    },
+    {
+      "code": "399",
+      "title": "Customer and Supplier Netting",
+      "area": "RCTI",
+      "numbering_status": "Assigned",
+      "note": "Shared O2C/P2P procedure; RCTI Hub category"
+    },
+    {
+      "code": "400",
+      "title": "General Ledger Reports",
+      "area": "R2R",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "402",
+      "title": "Daily General Journal",
+      "area": "R2R",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "406",
+      "title": "Ledger Settlement",
+      "area": "R2R",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "410",
+      "title": "Bank Reconciliation",
+      "area": "R2R",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "420",
+      "title": "Intercompany Accounting and Reconciliation",
+      "area": "R2R",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "421",
+      "title": "Intercompany Recharge",
+      "area": "R2R",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "422",
+      "title": "Intercompany Settlement",
+      "area": "R2R",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "430",
+      "title": "Month-End Accruals",
+      "area": "R2R",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "431",
+      "title": "Prepaid Expense and Deferral Process",
+      "area": "R2R",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "432",
+      "title": "Deferred Revenue Accounting",
+      "area": "R2R",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "433",
+      "title": "Foreign Currency Revaluation",
+      "area": "R2R",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "434",
+      "title": "Reporting Currency Adjustment Journal (RCAJ)",
+      "area": "R2R",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "440",
+      "title": "Payroll Accounting",
+      "area": "R2R",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "450",
+      "title": "Financial Reporting",
+      "area": "R2R",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "460",
+      "title": "Tangible Fixed Assets",
+      "area": "R2R",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "461",
+      "title": "Intangible Fixed Assets",
+      "area": "R2R",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "462",
+      "title": "Asset Leasing",
+      "area": "R2R",
+      "numbering_status": "Assigned",
+      "note": "Current numbering; publication status tracked separately"
+    },
+    {
+      "code": "500",
+      "title": "Tax",
+      "area": "Tax",
+      "numbering_status": "Assigned",
+      "note": "Existing umbrella guide; no content split implied by the family structure"
+    }
+  ],
+  "allocation_holds": [
+    {
+      "code": "221",
+      "title": "Customer Payment Corrections",
+      "status": "Consolidation into 220 agreed; release only after the active draft and references are resolved"
+    }
+  ],
+  "historical_mappings": [
+    {
+      "former_code": "201",
+      "successor_code": "210",
+      "former_title": "Customer Invoices"
+    },
+    {
+      "former_code": "205",
+      "successor_code": "211",
+      "former_title": "Subscription Billing"
+    },
+    {
+      "former_code": "202",
+      "successor_code": "220",
+      "former_title": "Customer Payments"
+    },
+    {
+      "former_code": "203",
+      "successor_code": "230",
+      "former_title": "Collections"
+    },
+    {
+      "former_code": "250",
+      "successor_code": "240",
+      "former_title": "Direct Debit"
+    },
+    {
+      "former_code": "298",
+      "successor_code": "398",
+      "former_title": "RCTI and RCI"
+    },
+    {
+      "former_code": "299",
+      "successor_code": "399",
+      "former_title": "Customer and Supplier Netting"
+    },
+    {
+      "former_code": "401",
+      "successor_code": "433",
+      "former_title": "Foreign Currency Revaluation"
+    },
+    {
+      "former_code": "403",
+      "successor_code": "434",
+      "former_title": "Reporting Currency Adjustment Journal (RCAJ)"
+    },
+    {
+      "former_code": "404",
+      "successor_code": "440",
+      "former_title": "Payroll Accounting"
+    },
+    {
+      "former_code": "409",
+      "successor_code": "450",
+      "former_title": "Financial Reporting"
+    },
+    {
+      "former_code": "301",
+      "successor_code": "310",
+      "former_title": "Vendor Invoices"
+    },
+    {
+      "former_code": "302",
+      "successor_code": "320",
+      "former_title": "Vendor Payments"
+    },
+    {
+      "former_code": "303",
+      "successor_code": "340",
+      "former_title": "Procurement (Purchase Requisitions)"
+    },
+    {
+      "former_code": "304",
+      "successor_code": "350",
+      "former_title": "Procurement (Purchase Agreements)"
+    },
+    {
+      "former_code": "305",
+      "successor_code": "361",
+      "former_title": "RLPO (Reverse-Logic POs)"
+    },
+    {
+      "former_code": "405",
+      "successor_code": "421",
+      "former_title": "Manpower Recharge via former 441"
+    },
+    {
+      "former_code": "441",
+      "successor_code": "421",
+      "former_title": "Manpower Recharge"
+    },
+    {
+      "former_code": "100",
+      "successor_code": "460 / 461",
+      "former_title": "Fixed Assets combined predecessor"
+    }
+  ],
+  "reuse_policy": "Controlled reuse after release checks; no permanent protected-code list. Use full title and version/date to interpret historical references to a reused code.",
+  "rules": [
+    {
+      "title": "Classify by process outcome",
+      "text": "Assign one code according to the primary business outcome. Use secondary business-area tags and cross-references for shared procedures. A D365 module, team, country or system alone does not determine the code."
+    },
+    {
+      "title": "Create a guide only when needed",
+      "text": "Use a separate PG for a distinct trigger and outcome or a substantial standalone procedure. Keep related scenarios, screens and reports as topics where one coherent guide serves the reader. A family allocation does not require a guide at every number."
+    },
+    {
+      "title": "Check and record allocations",
+      "text": "Check the master register, Hub library and working drafts before allocating. Record code, title, scope, owner, date, reason, status, predecessor and document links. Use an available code within the correct family; an empty-looking gap is not evidence of availability."
+    },
+    {
+      "title": "Keep code and version separate",
+      "text": "Use NNN-Guide Title PG vX.Y.docx for working Word files and NNN-Guide Title PG.pdf for published PDFs. A title correction, revision, reviewer or approval status does not change the code. Do not renumber active guides merely to close gaps."
+    },
+    {
+      "title": "Allow controlled reuse",
+      "text": "Former codes are not permanently blocked. Release a code when no active guide or draft uses it and maintained references to its former meaning are updated or explicitly resolved. Record the release date and owner, retain dated history, and allocate only within the current family. Do not reuse automatically because a file was renamed."
+    },
+    {
+      "title": "Handle growth and shared work",
+      "text": "Define an unallocated family before assigning its first guide. Review capacity before extending into another block. Splits and mergers require predecessor and successor records. Never give two active guides the same code or duplicate a shared procedure under separate stream codes."
+    }
+  ]
+}
