@@ -45,3 +45,30 @@ Any text in a draft guide that speaks to the author or reviewer rather than the 
 - Keep the note short and keep its review comment and validation item: the comment and the register stay the record of the question.
 - Remove every note in this style before publication, with its item closed. Search for the style as part of the final check.
 - Text that stays in the published guide, such as a real step whose detail is still being confirmed, keeps its normal style and carries only the review comment.
+
+## The PG board (D-068)
+
+The [PG Builder Board](https://claude.ai/artifact/5GPzzPrEYyUSAn12EBgWLf) is the single status tracker for every guide in every stream. Its page code is [`board/PG-Board.html`](board/PG-Board.html); its data lives in the board's database. The user and Claude both edit it. See [`board/README.md`](board/README.md) for the data model.
+
+- **Start of a session that touches guides:** read what changed on the board since `meta/sync.lastSyncAt`: `log` entries not written by `claude`, rounds with status `answered`, and meetings with `processed: false`. Carry them into the repository (registers, decision logs, Word guides when the change asks for it), then set `meta/sync.lastSyncAt`.
+- **Every change Claude commits to a guide updates its card in the same turn:** lane, version, next action, item counts and links, plus a `log` entry with `by: "claude"`.
+- **Lanes** (whose turn): Intake (user), Drafting (Claude), Waiting for SME (SME), Updating draft (Claude), Sign-off (approver and BPO), Ready to publish (user), Published; side lists Blocked and Withdrawn. Claude never moves a card to Sign-off, Ready to publish or Published, and never marks a round sent, unless the user says it happened. A lane Claude infers gets `confirmed: false`.
+- **Numbering** is read-only on the board. When the register in `standards/numbering/` changes, Claude refreshes `meta/register` in the same turn.
+
+## Question rounds (D-069)
+
+Questions go to the SME in rounds, one message per SME, kept on the board as `rounds` documents.
+
+- **Combine:** one question covers as many register items as one answer can close. Group by theme (approvals, roles, navigation, configuration values, scope) and by who answers.
+- **Lettered parts** keep a big question answerable; each part lists the item IDs it closes.
+- **Across guides:** when the same gap sits in several guides, one question covers all of them, in one ADO ticket, and the other cards point to it.
+- **Split only when** different people answer or the items have nothing in common.
+- **Answers:** apply them to the Word guide and the register, close the items they answer, and carry anything still open into the next round. An answer that does not close the gap leaves the item open; an explicit scope decision can close one. Never ask again for what a source already confirms.
+
+## Word review comments: open items that need an answer (D-067)
+
+A draft guide carries one review comment per item, at the place it matters most, and only for open items that still need an answer.
+
+- **One comment per item.** When an item affects several places, the comment sits at the main one and the register lists the others.
+- **No comment** for answered items, items carried over from topic drafts that the guide no longer needs answered, or non-blocking items: they stay in the validation register and on the board.
+- Every `ACTION: REVIEW REQUIREMENT` note keeps its comment (D-060).
