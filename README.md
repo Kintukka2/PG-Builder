@@ -4,7 +4,7 @@ Development workspace for **Microsoft Dynamics 365 (D365) Procedure Guides (PGs)
 
 Each D365 task and its controls is **one topic** inside a process-level PG (D-045). Guides follow the PG numbering standards in [`standards/numbering/`](standards/numbering/) (O2C codes 200 to 299, one ten-number block per process family), and sit inside a learning architecture of modules, knowledge articles, reference guides and business rules.
 
-> **Keep this README current.** Update the status tracker and conventions whenever a topic draft changes gate, a decision is made, or a new topic starts.
+> **Status lives on the [PG Builder Board](https://claude.ai/artifact/5GPzzPrEYyUSAn12EBgWLf)** (D-068): every guide in every stream, by whose turn it is, with its question rounds (D-069), weekly sync notes and the numbering register. Claude updates a guide's card in the same turn as any change to it. This README indexes the files; keep its tables and conventions current when a guide changes gate, a decision is made or a new topic starts.
 
 ---
 
@@ -31,6 +31,7 @@ Guide codes and file names follow the **PG numbering standards v2.1** in [`stand
 
 ```
 templates/                   PG master template and authoring guide (unchanged)
+board/                       The PG Builder Board page and its data model (D-068)
 standards/numbering/         PG numbering standards and the master register (D-070)
 ```
 
