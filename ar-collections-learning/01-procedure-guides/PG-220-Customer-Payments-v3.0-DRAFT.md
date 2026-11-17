@@ -4,7 +4,7 @@
 >
 > This is a Markdown preview of the Word guide [`CLAUDE-220-Customer Payments PG v3.0.docx`](CLAUDE-220-Customer%20Payments%20PG%20v3.0.docx). It consolidates version 2.1 and 221 Customer Payment Corrections v0.1 (D-055). **The Word file is the editable source.**
 >
-> Markers such as `[G220-01]` or `[CPJ-14]` show unconfirmed items. In the Word file, each one is a review comment. Guide-level items and the index of carried items are in the [validation register](../03-validation/220-Customer-Payments-v3.0-Validation.md). Notes marked **ACTION: REVIEW REQUIREMENT**, and <mark>highlighted</mark> phrases, are internal notes to the author (yellow in the Word file); they are removed before publication (D-060). The markers are not part of the guide text.
+> Markers such as `[G220-01]` or `[CPJ-14]` show unconfirmed items. In the Word file, open blocking items have one review comment each, at the place it matters most (D-067); the register lists every item and where it applies. Guide-level items and the index of carried items are in the [validation register](../03-validation/220-Customer-Payments-v3.0-Validation.md). Notes marked **ACTION: REVIEW REQUIREMENT**, and <mark>highlighted</mark> phrases, are internal notes to the author (yellow in the Word file); they are removed before publication (D-060). The markers are not part of the guide text.
 
 The fixed template content is not repeated here: cover, Contents, *About this guide* and *Additional Resources*.
 
@@ -208,7 +208,7 @@ Payments that cannot be fully resolved during settlement stay On Account, and th
 | **Offset to the correct ledger account** | Set **Offset account type** to **Ledger**. For a transfer between customer accounts, use the bank-to-bank transfer clearing account, never a bank account. For a restoration, use the Overpayment ledger. `[CPJ-08 / CPJ-09 / TF-03 / RO-01]` |
 | **Leave unsupported fields blank** | For a restoration, do not enter financial tags, an invoice number or a bank account. `[CPJ-10]` |
 | **Keep pre-populated dimensions** | For a restoration, do not change the financial dimensions that fill in automatically. `[CPJ-11]` |
-| **Complete each line before the next** | Tab through every field in a line before you start the next one, so that fields such as the voucher fill in correctly. `[CPJ-12]` |
+| **Complete each line before the next** | Tab through every field in a line before you start the next one, so that fields such as the voucher fill in correctly. |
 
 ##### Validation and posting
 
@@ -247,7 +247,7 @@ Payments that cannot be fully resolved during settlement stay On Account, and th
 |---|---|
 | **Confirm the destination first** | Confirm the correct destination account before you start. `[TF-02]` |
 | **Use the original currency** | Use the same currency as the original customer payment. `[CPJ-07]` |
-| **Describe the transfer** | Use clear descriptions on the journal and on both lines, so the transfer can be identified in each customer's history. `[CPJ-04]` |
+| **Describe the transfer** | Use clear descriptions on the journal and on both lines, so the transfer can be identified in each customer's history. |
 | **Balance the lines** | The source debit and the destination credit must be the same amount. |
 | **Simulate before posting** | Run Simulate Posting and resolve every error before you post. |
 
@@ -257,7 +257,7 @@ Payments that cannot be fully resolved during settlement stay On Account, and th
 |---|---|
 | **Confirm before processing** | Confirm the relationship and the allocation before you create the journal. |
 | **Use the original currency** | Keep every line in the currency of the original receipt. `[CPJ-07]` |
-| **Describe every line** | Use descriptions that let the transfer be identified in each customer's history. `[CPJ-04]` |
+| **Describe every line** | Use descriptions that let the transfer be identified in each customer's history. |
 | **Use the clearing account** | Use **Ledger** as the offset type and the bank-to-bank transfer clearing account as the offset. `[TF-03 / CPJ-09]` |
 | **Balance the distribution** | The child credits must add up to the amount debited from the parent account. |
 | **Simulate before posting** | Run Simulate Posting and resolve every error before you post. |
@@ -267,12 +267,12 @@ Payments that cannot be fully resolved during settlement stay On Account, and th
 | Rule | Description |
 |---|---|
 | **Use the original currency** | The currency must match the original transaction. `[CPJ-07]` |
-| **Describe the entry** | Use a clear description that includes the customer code, for example "Overpayment put back on customer account". `[CPJ-04]` |
+| **Describe the entry** | Use a clear description that includes the customer code, for example "Overpayment put back on customer account". |
 | **Leave unsupported fields blank** | Do not enter financial tags, an invoice number or a bank account. `[CPJ-10]` |
 | **Keep pre-populated dimensions** | Do not change the financial dimensions that fill in automatically. `[CPJ-11]` |
 | **Simulate before posting** | Run Simulate Posting and resolve every error before you post. |
 
-##### Posting and permissions `[CPJ-16 to CPJ-21]`
+##### Posting and permissions
 
 | Topic | Status |
 |---|---|
@@ -768,7 +768,7 @@ Complete these steps to create the journal and enter the source line:
 | 10. *Enter* the line description. `[CPJ-03]` | Use the same clear transfer description, so the transaction can be identified in the customer's history. |
 | 11. *Select* **Ledger** as the **Offset account type**. `[CPJ-08]` | Set the offset account type to **Ledger**. |
 | 12. *Select* the bank-to-bank transfer clearing account. `[TF-03]` | Select the clearing account used for transfers between customer accounts as the offset account. Do not use a bank account. |
-| 13. *Complete* the line. `[CPJ-12]` | Tab through every field in the line before you start the next one, so that fields such as the voucher fill in correctly. |
+| 13. *Complete* the line. | Tab through every field in the line before you start the next one, so that fields such as the voucher fill in correctly. |
 | *STEP COMPLETE* (light blue) | • The source line is complete.<br>• Continue to [3.3.2 Enter the Destination Line](#332-enter-the-destination-line) |
 
 #### 3.3.2 Enter the Destination Line
@@ -850,7 +850,7 @@ Complete these steps to create the journal and enter the parent line:
 | 10. *Enter* the line description. `[CPJ-03]` | Use a description that identifies the transfer in the parent account's history. |
 | 11. *Select* **Ledger** as the **Offset account type**. `[CPJ-08]` | Set the offset account type to **Ledger**. |
 | 12. *Select* the bank-to-bank transfer clearing account. `[TF-03 / PC-03]` | Select the clearing account as the offset account. |
-| 13. *Complete* the line. `[CPJ-12]` | Tab through every field in the line before you start the next one, so that fields such as the voucher fill in correctly. |
+| 13. *Complete* the line. | Tab through every field in the line before you start the next one, so that fields such as the voucher fill in correctly. |
 | *STEP COMPLETE* (light blue) | • The parent line is complete.<br>• Continue to [3.4.2 Enter the Child Lines](#342-enter-the-child-lines) |
 
 #### 3.4.2 Enter the Child Lines
@@ -935,7 +935,7 @@ Complete these steps to create the restoration line:
 | 12. *Select* **Ledger** as the **Offset account type**. `[CPJ-08]` | Set the offset account type to **Ledger**. |
 | 13. *Select* the Overpayment ledger. `[RO-01]` | Search for and select the Overpayment ledger in the main account field. |
 | 14. *Keep* the dimensions. `[CPJ-11]` | Do not change the financial dimensions that fill in automatically. |
-| 15. *Complete* the line. `[CPJ-12]` | Tab through every field, so fields such as the voucher fill in. |
+| 15. *Complete* the line. | Tab through every field, so fields such as the voucher fill in. |
 | *STEP COMPLETE* (light blue) | • The restoration line is complete.<br>• Continue to [3.5.2 Validate and Post the Journal](#352-validate-and-post-the-journal) |
 
 #### 3.5.2 Validate and Post the Journal
@@ -987,7 +987,7 @@ Complete these steps to write off a bank fee or small residual:
 | 10. *Open* the general journal. | Open the general journal D365 created, from the journal link or from **General journals**. |
 | 11. *Verify* the journal. | Check:<br>• The amount and the description.<br>• The ledger account the reason code posts to.<br>• Any required financial dimensions. |
 | 12. *Submit* the journal for approval. | On the Main Toolbar, click **Approval > Report as ready**. The approver receives a notification to review the journal, and you receive a notification when it is approved. |
-| 13. *Confirm* the write-off in **Aged balances**. `[G221-20]` | Return to **Customer aging** and click **Refresh**.<br>**Note:** A batch job updates aging balances every 10 minutes, so the write-off may not show straight away. |
+| 13. *Confirm* the write-off in **Aged balances**. | Return to **Customer aging** and click **Refresh**.<br>**Note:** A batch job updates aging balances every 10 minutes, so the write-off may not show straight away. |
 | *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• The residual is written off: the balance is cleared, or reduced for a partial write-off.<br>• The transaction shows as settled.<br>• The write-off journal is submitted for approval. |
 
 ### 4. Maintain Settlement Configuration

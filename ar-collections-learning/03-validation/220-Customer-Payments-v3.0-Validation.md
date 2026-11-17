@@ -5,9 +5,9 @@
 | Guide (editable source) | [`CLAUDE-220-Customer Payments PG v3.0.docx`](../01-procedure-guides/CLAUDE-220-Customer%20Payments%20PG%20v3.0.docx) |
 | Review PDF | [`CLAUDE-220-Customer Payments PG v3.0.pdf`](../01-procedure-guides/CLAUDE-220-Customer%20Payments%20PG%20v3.0.pdf) |
 | Markdown preview | [`PG-220-Customer-Payments-v3.0-DRAFT.md`](../01-procedure-guides/PG-220-Customer-Payments-v3.0-DRAFT.md) |
-| Status | Working draft v3.0 (D-055): consolidates version 2.1 and 221 Customer Payment Corrections v0.1. Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-062); no content or item changes. Not shared yet; needs BPO sign-off. Version 2.1 stays published until 3.0 passes its gates. |
-| Last updated | 2026-11-16 |
-| Items | 12 guide-level items (`G220`), all open: 11 blocking, 1 non-blocking. 111 carried review comments from 221 v0.1. |
+| Status | Working draft v3.0 (D-055): consolidates version 2.1 and 221 Customer Payment Corrections v0.1. Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-062); no content or item changes. Review comments cut to one per open blocking item on 2026-11-17 (D-067, D-074). Not shared yet; needs BPO sign-off. Version 2.1 stays published until 3.0 passes its gates. |
+| Last updated | 2026-11-17 |
+| Items | 12 guide-level items (`G220`), all open: 11 blocking, 1 non-blocking. **53 Word review comments** (D-067): 12 guide-level and 41 carried from 221 v0.1; 70 removed (section 4.1). |
 
 This file is the guide's **question log** (D-016). It holds the guide-level items, which are scoped to this guide and never renumbered. Review comments carried from 221 keep their ID, for example *CPJ-14* or *G221-07*, and their source register stays the record for them: an answer recorded there applies here (D-048). Each open item that affects the text is a Word review comment by "Validation register" (VR).
 
@@ -58,27 +58,104 @@ This file is the guide's **question log** (D-016). It holds the guide-level item
 
 ---
 
-## 4. Carried review comments by section
+## 4. Review comments by section
 
-Every review comment in the Word guide, in document order. IDs not starting `G220` are carried from 221 v0.1.
+Every review comment in the Word guide, in document order, after D-067 (one comment per item, open blocking items only; D-074). IDs not starting `G220` are carried from 221 v0.1 and its topic drafts.
 
 | Section | Items |
 |---|---|
 | Cover and version history | `G220-01` |
 | Part 1 High-level process | `G220-02`, `G220-03` |
-| Part 1 Key concepts | `G220-04`, `G221-06`, `CPJ-02`, `TF-03 / CPJ-09`, `CPJ-14`, `CPJ-01 / CPJ-02`, `CPJ-03 / CPJ-04`, `CPJ-05`, `CPJ-07`, `CPJ-06`, `CPJ-08 / CPJ-09 / TF-03 / RO-01`, `CPJ-10`, `CPJ-11`, `CPJ-12`, `CPJ-13`, `CPJ-14 / CPJ-15`, `CPJ-16 / CPJ-17`, `PC-04`, `PC-01`, `PC-02`, `PC-04 / PC-05`, `CPJ-06`, `RO-01 / CPJ-09`, `TF-02`, `CPJ-07`, `CPJ-04`, `CPJ-07`, `CPJ-04`, `TF-03 / CPJ-09`, `RO-03`, `CPJ-07`, `CPJ-04`, `CPJ-10`, `CPJ-11`, `CPJ-16 to CPJ-21`, `G220-05` |
+| Part 1 Key concepts | `G220-04`, `G221-06`, `TF-03 / CPJ-09`, `PC-02`, `TF-02`, `RO-03`, `CPJ-16 to CPJ-21`, `G220-05` |
 | Topic 2 Settle Customer Payments | `G220-06` |
 | Topic 2.1 Settle Bank Statement Payments | `G220-07` |
 | Topic 2.2 Record and Settle a Manual Payment Journal | `G220-08`, `G220-09` |
 | Topic 2.3 Settle Open Customer Transactions | `G221-07`, `G221-08`, `G221-09`, `G221-10`, `G221-11` |
 | Topic 3 Correct Customer Payments | `CPJ-17 / CPJ-19 / TF-05 / TF-06`, `PC-01 / CPJ-17 / CPJ-19`, `RO-02 / CPJ-17 / CPJ-19`, `G220-10` |
 | Topic 3.1 Undo a Settlement | `G221-12`, `G221-13` |
-| Topic 3.3 Transfer Funds Between Customer Accounts | `CPJ-21`, `TF-05`, `CPJ-01`, `CPJ-01 / CPJ-02`, `CPJ-03`, `CPJ-01`, `CPJ-05`, `CPJ-06`, `CPJ-03`, `CPJ-08`, `TF-03`, `CPJ-12`, `CPJ-01 / CPJ-05`, `CPJ-06`, `TF-04`, `CPJ-13`, `CPJ-14`, `CPJ-15`, `CPJ-16 / CPJ-17`, `CPJ-18`, `CPJ-19` |
-| Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | `CPJ-21`, `CPJ-01`, `CPJ-01 / CPJ-02`, `CPJ-03`, `CPJ-01`, `CPJ-05`, `CPJ-06`, `CPJ-03`, `CPJ-08`, `TF-03 / PC-03`, `CPJ-12`, `CPJ-01 / CPJ-05`, `CPJ-06`, `PC-03`, `CPJ-13`, `CPJ-14`, `CPJ-15`, `CPJ-16 / CPJ-17`, `PC-04`, `CPJ-18`, `CPJ-19` |
-| Topic 3.5 Restore a Written-Off or Overpayment Amount | `CPJ-21`, `CPJ-01`, `CPJ-01 / CPJ-02`, `CPJ-03`, `CPJ-01`, `CPJ-05`, `CPJ-06 / CPJ-07`, `CPJ-03`, `CPJ-10`, `CPJ-08`, `RO-01`, `CPJ-11`, `CPJ-12`, `CPJ-14`, `CPJ-15`, `CPJ-16 / CPJ-17`, `CPJ-18`, `CPJ-19` |
-| Topic 3.6 Write Off a Bank Fee or Small Residual | `G221-14`, `G221-15`, `G221-16`, `G221-17`, `G221-18`, `G221-19`, `G221-20` |
+| Topic 3.3 Transfer Funds Between Customer Accounts | `CPJ-21`, `CPJ-01`, `CPJ-01 / CPJ-02`, `CPJ-03`, `CPJ-05`, `CPJ-06`, `CPJ-08`, `TF-03`, `TF-04`, `CPJ-13`, `CPJ-14`, `CPJ-15`, `CPJ-18` |
+| Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | `TF-03 / PC-03`, `PC-04` |
+| Topic 3.5 Restore a Written-Off or Overpayment Amount | `CPJ-06 / CPJ-07`, `CPJ-10`, `RO-01`, `CPJ-11` |
+| Topic 3.6 Write Off a Bank Fee or Small Residual | `G221-14`, `G221-15`, `G221-16`, `G221-17`, `G221-18`, `G221-19` |
 | Topic 5 Process Intercompany Customer Payments | `G220-11` |
 | Part 3 Reports | `G220-12` |
+
+### 4.1 Comments removed under D-067 (17 November 2026)
+
+The items stay open in their registers; only the Word comment is gone. The CPJL control items (`CPJ`) were commented in Part 1 and again in each of topics 3.3, 3.4 and 3.5: they keep one comment each, at the first procedure step that needs the answer.
+
+| Item | Where the comment was | Why it was removed |
+|---|---|---|
+| `CPJ-02` | Part 1 Key concepts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-14` | Part 1 Key concepts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-01 / CPJ-02` | Part 1 Key concepts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-03 / CPJ-04` | Part 1 Key concepts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-05` | Part 1 Key concepts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-07` | Part 1 Key concepts | Duplicate: the comment in Topic 3.5 Restore a Written-Off or Overpayment Amount covers it |
+| `CPJ-06` | Part 1 Key concepts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-08 / CPJ-09 / TF-03 / RO-01` | Part 1 Key concepts | Duplicate: the comment in Part 1 Key concepts and Topic 3.3 Transfer Funds Between Customer Accounts and Topic 3.5 Restore a Written-Off or Overpayment Amount covers it |
+| `CPJ-10` | Part 1 Key concepts | Duplicate: the comment in Topic 3.5 Restore a Written-Off or Overpayment Amount covers it |
+| `CPJ-11` | Part 1 Key concepts | Duplicate: the comment in Topic 3.5 Restore a Written-Off or Overpayment Amount covers it |
+| `CPJ-12` | Part 1 Key concepts | Non-blocking: stays open in this register |
+| `CPJ-13` | Part 1 Key concepts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-14 / CPJ-15` | Part 1 Key concepts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-16 / CPJ-17` | Part 1 Key concepts | Non-blocking or closed: stays open in this register |
+| `PC-04` | Part 1 Key concepts | Duplicate: the comment in Topic 3.4 Distribute a Parent Account Payment Across Child Accounts covers it |
+| `PC-01` | Part 1 Key concepts | Duplicate: the comment in Topic 3 Correct Customer Payments covers it |
+| `PC-04 / PC-05` | Part 1 Key concepts | Duplicate: the comment in Topic 3.4 Distribute a Parent Account Payment Across Child Accounts covers it |
+| `CPJ-06` | Part 1 Key concepts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `RO-01 / CPJ-09` | Part 1 Key concepts | Duplicate: the comment in Part 1 Key concepts and Topic 3.5 Restore a Written-Off or Overpayment Amount covers it |
+| `CPJ-07` | Part 1 Key concepts | Duplicate: the comment in Topic 3.5 Restore a Written-Off or Overpayment Amount covers it |
+| `CPJ-04` | Part 1 Key concepts | Non-blocking: stays open in this register |
+| `CPJ-07` | Part 1 Key concepts | Duplicate: the comment in Topic 3.5 Restore a Written-Off or Overpayment Amount covers it |
+| `CPJ-04` | Part 1 Key concepts | Non-blocking: stays open in this register |
+| `TF-03 / CPJ-09` | Part 1 Key concepts | Duplicate: the comment in Part 1 Key concepts covers it |
+| `CPJ-07` | Part 1 Key concepts | Duplicate: the comment in Topic 3.5 Restore a Written-Off or Overpayment Amount covers it |
+| `CPJ-04` | Part 1 Key concepts | Non-blocking: stays open in this register |
+| `CPJ-10` | Part 1 Key concepts | Duplicate: the comment in Topic 3.5 Restore a Written-Off or Overpayment Amount covers it |
+| `CPJ-11` | Part 1 Key concepts | Duplicate: the comment in Topic 3.5 Restore a Written-Off or Overpayment Amount covers it |
+| `TF-05` | Topic 3.3 Transfer Funds Between Customer Accounts | Duplicate: the comment in Topic 3 Correct Customer Payments covers it |
+| `CPJ-01` | Topic 3.3 Transfer Funds Between Customer Accounts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-03` | Topic 3.3 Transfer Funds Between Customer Accounts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-12` | Topic 3.3 Transfer Funds Between Customer Accounts | Non-blocking: stays open in this register |
+| `CPJ-01 / CPJ-05` | Topic 3.3 Transfer Funds Between Customer Accounts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-06` | Topic 3.3 Transfer Funds Between Customer Accounts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-16 / CPJ-17` | Topic 3.3 Transfer Funds Between Customer Accounts | Non-blocking or closed: stays open in this register |
+| `CPJ-19` | Topic 3.3 Transfer Funds Between Customer Accounts | Duplicate: the comment in Topic 3 Correct Customer Payments covers it |
+| `CPJ-21` | Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-01` | Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-01 / CPJ-02` | Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-03` | Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-01` | Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-05` | Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-06` | Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-03` | Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-08` | Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-12` | Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | Non-blocking: stays open in this register |
+| `CPJ-01 / CPJ-05` | Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-06` | Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `PC-03` | Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | Duplicate: the comment in Topic 3.4 Distribute a Parent Account Payment Across Child Accounts covers it |
+| `CPJ-13` | Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-14` | Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-15` | Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-16 / CPJ-17` | Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | Non-blocking or closed: stays open in this register |
+| `CPJ-18` | Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-19` | Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | Duplicate: the comment in Topic 3 Correct Customer Payments covers it |
+| `CPJ-21` | Topic 3.5 Restore a Written-Off or Overpayment Amount | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-01` | Topic 3.5 Restore a Written-Off or Overpayment Amount | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-01 / CPJ-02` | Topic 3.5 Restore a Written-Off or Overpayment Amount | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-03` | Topic 3.5 Restore a Written-Off or Overpayment Amount | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-01` | Topic 3.5 Restore a Written-Off or Overpayment Amount | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-05` | Topic 3.5 Restore a Written-Off or Overpayment Amount | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-03` | Topic 3.5 Restore a Written-Off or Overpayment Amount | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-08` | Topic 3.5 Restore a Written-Off or Overpayment Amount | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-12` | Topic 3.5 Restore a Written-Off or Overpayment Amount | Non-blocking: stays open in this register |
+| `CPJ-14` | Topic 3.5 Restore a Written-Off or Overpayment Amount | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-15` | Topic 3.5 Restore a Written-Off or Overpayment Amount | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-16 / CPJ-17` | Topic 3.5 Restore a Written-Off or Overpayment Amount | Non-blocking or closed: stays open in this register |
+| `CPJ-18` | Topic 3.5 Restore a Written-Off or Overpayment Amount | Duplicate: the comment in Topic 3.3 Transfer Funds Between Customer Accounts covers it |
+| `CPJ-19` | Topic 3.5 Restore a Written-Off or Overpayment Amount | Duplicate: the comment in Topic 3 Correct Customer Payments covers it |
+| `G221-20` | Topic 3.6 Write Off a Bank Fee or Small Residual | Non-blocking: stays open in this register |
 
 ---
 
@@ -119,3 +196,4 @@ From Maria's review comments on 221 v0.1 and the Teams chat of 10 November 2026 
 |---|---|
 | 2026-11-10 | Register created with the v3.0 working draft: version 2.1 and 221 Customer Payment Corrections v0.1 consolidated, with Maria Pabalan's answers of 10 November 2026 applied (D-055). |
 | 2026-11-16 | Formatting brought in line with D-059 to D-061 (D-062): Bullet 1.2 bullets, topic numbers in link text, notes to the author in the ACTION: REVIEW REQUIREMENT style. The legacy yellow highlight on the Part 3 heading is replaced by an ACTION note and item `G220-12` (empty report descriptions). Files renamed with the `CLAUDE-` prefix (D-056). |
+| 2026-11-17 | Review comments cut under D-067 (D-074): 123 → 53, one per open blocking item at the place it matters most; the 70 removed are listed in section 4.1 and their items stay open in their registers. First question round prepared on the board (D-069). The PDF beside the Word file is out of date (D-064). |
