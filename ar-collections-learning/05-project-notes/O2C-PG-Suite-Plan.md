@@ -3,9 +3,9 @@
 | Field | Value |
 |---|---|
 | Rule | One task per topic, inside a process-level guide (D-045). The 17 AR Collections drafts are **topic drafts**: each one merges into a destination guide. |
-| Guide codes | From the O2C PG Numbering Standard v1.3 (T3). This plan proposes two new codes: **221** and **260** (D-046). **221 is withdrawn** (D-055): its content is in 220 Customer Payments v3.0. |
-| Status | Proposed. **260 is a v0.2 working draft** (D-048, D-054), shared with the SME for review only. Before it circulates further, the register owner records code 260 in `O2C_PG_Numbering_Register.json` and its companion, and the BPO confirms its scope. **221 is withdrawn**: Maria Pabalan confirmed on 10 November 2026 that Collections Officers do the tasks of both 220 and 221, so its content is merged into **220 Customer Payments v3.0**, a working draft that also rebuilds 220 in the master template (D-055). 230 Collections has a v2.4 draft (the split of 6.5 to 6.8, now pointing to 220 v3.0; D-051) and a v3.0 working draft with the nine topic drafts (D-052). 240 Direct Debit and Credit Card Payments is a v0.1 skeleton (D-053). |
-| Last updated | 2026-11-01 |
+| Guide codes | From the PG numbering standards v2.1 in [`standards/numbering/`](../../standards/numbering/) (T3, D-070). This plan proposed two new codes, **221** and **260** (D-046). **260 is assigned** in the master register (v2.0). **221 is withdrawn** (D-055, D-070): its content is in 220 Customer Payments v3.0. |
+| Status | Proposed. **260 is a v0.2 working draft** (D-048, D-054), shared with the SME for review only. Code 260 is recorded in the master register (v2.0, D-070); before the guide circulates further, the BPO confirms its scope. **221 is withdrawn**: Maria Pabalan confirmed on 10 November 2026 that Collections Officers do the tasks of both 220 and 221, so its content is merged into **220 Customer Payments v3.0**, a working draft that also rebuilds 220 in the master template (D-055). 230 Collections has a v2.4 draft (the split of 6.5 to 6.8, now pointing to 220 v3.0; D-051) and a v3.0 working draft with the nine topic drafts (D-052). 240 Direct Debit and Credit Card Payments is a v0.1 skeleton (D-053). |
+| Last updated | 2026-11-17 |
 
 ---
 
@@ -19,26 +19,28 @@
 
 ## 2. Numbering
 
-The numbering standard (T3) allocates codes 200 to 299 to O2C in ten-number families, classified by primary business outcome.
+The numbering standards (T3, v2.1 in [`standards/numbering/`](../../standards/numbering/); D-070) allocate codes 200 to 299 to O2C in ten-number families, classified by primary business outcome. The [master register](../../standards/numbering/PG_Numbering_Master_Register.json) is the single allocation authority.
 
 | Range | Family | Current guides |
 |---|---|---|
 | 200–209 | Customer Master Data | 200 Customer Onboarding and Maintenance |
 | 210–219 | Billing and Invoicing | 210 Customer Invoices; 211 Subscription Billing |
-| 220–229 | Customer Payments: receipt processing, allocation, settlement and payment corrections | 220 Customer Payments (v3.0 holds the payment corrections); **221 withdrawn** (D-055) |
+| 220–229 | Customer Payments: receipt processing, allocation, settlement and payment corrections | 220 Customer Payments (v3.0 holds the payment corrections); **221 withdrawn** (D-055, D-070) |
 | 230–239 | Collections: overdue receivables follow-up, collection activity and escalation | 230 Collections |
 | 240–249 | Direct Debit and Automated Collections | 240 Direct Debit and Credit Card Payments: v0.1 skeleton (D-053) |
-| 250–299 | Reserved for future O2C families, in ten-number blocks | **260 proposed** (new family 260–269) |
+| 250–259 | Unallocated | — |
+| 260–269 | O2C Getting Started: shared D365 skills | **260 O2C Getting Started** (assigned, v2.0) |
+| 270–299 | Unallocated | — |
 | 398, 399 | Shared guides (RCTI Hub grouping), outside the 200-series | 398 RCTI and RCI; 399 Customer and Supplier Netting |
 
-Retired codes are never reused: 201, 202, 203, 205, 250, 298 and 299.
+Former codes are **not permanently blocked** (v2.0 controlled reuse): a code is released only when no active guide or draft uses it and references to its former meaning are resolved, and the register keeps its dated history. Former O2C codes and their successors: 201 → 210, 205 → 211, 202 → 220, 203 → 230, 250 → 240, 298 → 398, 299 → 399, and 221 → 220 (withdrawn, not yet released).
 
-### 2.1 Proposed allocations
+### 2.1 Allocations this plan proposed
 
 | Code | Guide | Family | Why this code |
 |---|---|---|---|
-| ~~221~~ | Customer Payment Corrections | 220–229 Customer Payments | **Withdrawn (D-055):** the same role does the tasks of 220 and 221, so they stay in one guide, 220 v3.0. Originally proposed because settlement, transfers between customer accounts, parent payment distribution and restoration are "settlement and payment corrections", which the standard puts in 220–229, not in Collections. 221 is the next free code in the family. |
-| **260** | O2C Getting Started | New family 260–269, O2C Getting Started | A getting-started guide has no process family of its own. The standard reserves 250–299 for new O2C families in ten-number blocks. 250 is retired, so 260 is the first block that starts on a usable number ("the first number in a block is a valid guide ID"). |
+| ~~221~~ | Customer Payment Corrections | 220–229 Customer Payments | **Withdrawn (D-055; recorded in the register, D-070):** the same role does the tasks of 220 and 221, so they stay in one guide, 220 v3.0. Originally proposed because settlement, transfers between customer accounts, parent payment distribution and restoration are "settlement and payment corrections", which the standard puts in 220–229, not in Collections. 221 is the next free code in the family. |
+| **260** | O2C Getting Started | New family 260–269, O2C Getting Started | **Assigned** in the master register v2.0 (D-070). A getting-started guide has no process family of its own. The standard reserves 250–299 for new O2C families in ten-number blocks. 250 is retired, so 260 is the first block that starts on a usable number ("the first number in a block is a valid guide ID"). |
 
 If other streams later want the same Getting Started guide, it becomes one shared guide with one code, like 398 and 399 ("A shared guide needs one code").
 
@@ -267,3 +269,4 @@ A topic draft merges into its destination guide when all of these hold. 260 and 
 | 2026-11-10 | 260 v0.2: SME review by Maria Pabalan applied (D-054); section 4.1 adds topic 7 Remove a Page from Favorites. |
 | 2026-11-10 | 221 withdrawn and merged into 220 Customer Payments v3.0 (D-055): sections 2, 3, 4.3, 5, 6 and 7 updated; section 4.3 is now the 220 v3.0 outline. |
 | 2026-11-10 | Section 2: the `CLAUDE-` prefix for Claude working files (D-056). |
+| 2026-11-17 | Numbering moved to the PG numbering standards v2.1 in `standards/numbering/` (D-070): 260 assigned with its own family 260–269, 221 recorded as withdrawn with 220 as successor, and permanent code protection replaced by controlled reuse. |

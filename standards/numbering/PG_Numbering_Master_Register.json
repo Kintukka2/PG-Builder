@@ -1,9 +1,9 @@
 {
   "standard": "PG numbering master register",
-  "version": "2.0",
+  "version": "2.1",
   "date": "2026-11-17",
   "owner": "Daniel Moreira",
-  "status": "Current numbering baseline",
+  "status": "Current numbering baseline. Held in the PG-Builder repository as the single allocation authority (D-070).",
   "evidence": "Daniel confirms numbering changes completed. November 17 screenshot verifies 300, 310, 320, 340, 350 and 361; prior screenshots confirm 398, 399 and 500. Other assignments use the established registers and chat decisions. This is not an independent live-link or content-approval audit.",
   "families": [
     {
@@ -478,11 +478,16 @@
       "note": "Existing umbrella guide; no content split implied by the family structure"
     }
   ],
-  "allocation_holds": [
+  "allocation_holds": [],
+  "withdrawn_codes": [
     {
       "code": "221",
       "title": "Customer Payment Corrections",
-      "status": "Consolidation into 220 agreed; release only after the active draft and references are resolved"
+      "withdrawn": "2026-11-10",
+      "successor_code": "220",
+      "reason": "Proposed code, never published. Maria Pabalan confirmed that Collections Officers do the tasks of both 220 and 221, so the 221 content is consolidated into 220 Customer Payments v3.0 (D-055).",
+      "release": "Not released. Release for reuse under the controlled-reuse rule once 220 v3.0 is published and no maintained document refers to 221 as a current guide.",
+      "decision": "D-070"
     }
   ],
   "historical_mappings": [
@@ -580,6 +585,11 @@
       "former_code": "100",
       "successor_code": "460 / 461",
       "former_title": "Fixed Assets combined predecessor"
+    },
+    {
+      "former_code": "221",
+      "successor_code": "220",
+      "former_title": "Customer Payment Corrections (proposed; withdrawn before publication)"
     }
   ],
   "reuse_policy": "Controlled reuse after release checks; no permanent protected-code list. Use full title and version/date to interpret historical references to a reused code.",
@@ -607,6 +617,39 @@
     {
       "title": "Handle growth and shared work",
       "text": "Define an unallocated family before assigning its first guide. Review capacity before extending into another block. Splits and mergers require predecessor and successor records. Never give two active guides the same code or duplicate a shared procedure under separate stream codes."
+    }
+  ],
+  "test_series": {
+    "format": "T-NNNN",
+    "purpose": "Trial conversions of documents that are not procedure guides, used to test the PG conversion process on other kinds of documents.",
+    "rules": [
+      "Number in order from T-0001. A T-number is never reused.",
+      "T-numbers are internal. Nothing is published to the Training Hub under a T-number, and the six stream standards do not list them.",
+      "If a test document goes live, allocate a code in its real series under the common rules and record the T-number as its predecessor in historical_mappings.",
+      "Working files are named T-NNNN-Title PG vX.Y.docx, with the CLAUDE- prefix while Claude maintains them (D-056)."
+    ],
+    "allocations": [
+      {
+        "code": "T-0001",
+        "title": "CW1 to D365 Migration",
+        "source": "CW1 to D365 Migration - Go-Live Manual, version date October 2026",
+        "allocated": "2026-11-17",
+        "owner": "Daniel Moreira",
+        "status": "v0.1 working draft",
+        "decision": "D-071"
+      }
+    ]
+  },
+  "editions": [
+    {
+      "version": "2.0",
+      "date": "2026-11-17",
+      "change": "Aligned all six standards; recorded completed numbering; added 260-269 O2C Getting Started; recorded 460-462; replaced permanent code protection with controlled reuse."
+    },
+    {
+      "version": "2.1",
+      "date": "2026-11-17",
+      "change": "221 Customer Payment Corrections moved from allocation hold to withdrawn, with 220 as its successor (D-070). Test series T-NNNN added for trial conversions, with T-0001 CW1 to D365 Migration (D-071). Only the O2C standard changes (v2.1); the other five Word standards stay at v2.0."
     }
   ]
 }

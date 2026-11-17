@@ -2,7 +2,7 @@
 
 ## File names: the `CLAUDE-` prefix (D-056)
 
-Every file Claude creates or rebuilds for the user starts with `CLAUDE-`: Word guides, PDFs, Excel workbooks, review pack zips and any other file Claude sends. The rest of the name follows the O2C PG Numbering Standard, for example `CLAUDE-260-O2C Getting Started PG v0.2.docx`.
+Every file Claude creates or rebuilds for the user starts with `CLAUDE-`: Word guides, PDFs, Excel workbooks, review pack zips and any other file Claude sends. The rest of the name follows the PG numbering standards in `standards/numbering/` (D-070), for example `CLAUDE-260-O2C Getting Started PG v0.2.docx`. A test conversion of another kind of document uses its T-number in place of the code, for example `CLAUDE-T-0001-CW1 to D365 Migration PG v0.1.docx` (D-071).
 
 - The prefix marks a Claude working file. It is removed when the file is published, so a published guide never carries it.
 - When Claude rebuilds an existing file that has no prefix, it renames the file with the prefix in the same change and updates every link to it.

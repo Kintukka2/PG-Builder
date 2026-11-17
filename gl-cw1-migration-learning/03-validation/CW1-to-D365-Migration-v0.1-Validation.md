@@ -2,14 +2,14 @@
 
 | Field | Value |
 |---|---|
-| Guide (editable source) | [`CLAUDE-TBC-CW1 to D365 Migration PG v0.1.docx`](../01-procedure-guides/CLAUDE-TBC-CW1%20to%20D365%20Migration%20PG%20v0.1.docx) |
-| Review PDF | [`CLAUDE-TBC-CW1 to D365 Migration PG v0.1.pdf`](../01-procedure-guides/CLAUDE-TBC-CW1%20to%20D365%20Migration%20PG%20v0.1.pdf) |
+| Guide (editable source) | [`CLAUDE-T-0001-CW1 to D365 Migration PG v0.1.docx`](../01-procedure-guides/CLAUDE-T-0001-CW1%20to%20D365%20Migration%20PG%20v0.1.docx) |
+| Review PDF (out of date: it predates the T-0001 file name and the removal of the CM-01 comment, D-064) | [`CLAUDE-TBC-CW1 to D365 Migration PG v0.1.pdf`](../01-procedure-guides/CLAUDE-TBC-CW1%20to%20D365%20Migration%20PG%20v0.1.pdf) |
 | Markdown preview | [`PG-CW1-to-D365-Migration-v0.1-DRAFT.md`](../01-procedure-guides/PG-CW1-to-D365-Migration-v0.1-DRAFT.md) |
 | Status | Working draft v0.1 (D-058): the *CW1 to D365 Migration - Go-Live Manual* (version date October 2026) converted to the PG master template. Not shared yet; needs SME review and BPO sign-off. The manual stays the working reference until v0.1 passes its gates. |
-| Last updated | 2026-11-13 |
-| Items | 37 guide-level items (`CM`), all open: 26 blocking, 11 non-blocking. 96 Word review comments. |
+| Last updated | 2026-11-17 |
+| Items | 37 guide-level items (`CM`): 36 open (25 blocking, 11 non-blocking) and 1 closed (`CM-01`). 95 Word review comments. |
 
-This file is the guide's **question log**. Its items use the prefix `CM` (CW1 Migration), which does not depend on the guide code, so the IDs stay stable when the code is allocated (`CM-01`). Each item that affects the text is a Word review comment by "Validation register" (VR), and every item has at least one comment.
+This file is the guide's **question log**. Its items use the prefix `CM` (CW1 Migration), which does not depend on the guide code, so the IDs stay stable under any code (`CM-01`, closed: test number T-0001, D-071). Each item that affects the text is a Word review comment by "Validation register" (VR), and every item has at least one comment.
 
 ---
 
@@ -40,7 +40,7 @@ This file is the guide's **question log**. Its items use the prefix `CM` (CW1 Mi
 | C13 | Prose is in English (United States): analyze, center, organization, dialog, unrealized. Exact labels are kept, including the template tab name **D356 CoA** (`CM-16`), workbook tab and column names, and the cell text **JOURNAL IS IN BALANCE**. | T2 language rule; README *UI labels match the screen exactly*. |
 | C15 | Notes to the author are marked with the template's **ACTION: REVIEW REQUIREMENT** style (D-060): three standalone notes as yellow boxes (the OB and subledger uploads, the unmarked roles for 6.1 to 6.3, the report navigation) and eleven phrases in the linked character style (the settings owner, the OB upload in 4.3, the adjustment journal steps, checklist item 15's owner and the report navigation). Each keeps its review comment. They are removed before publication. | User request; the style is in the master template (T1). |
 | C16 | Bulleted lists in body text (Part Description, Initiation, Responsibility, Key concepts) use **Bullet 1.2**, not CW_Bullet 1 (D-061). Links that name a topic carry its number in the link text: **1. Map the CW1 Ledger to TM1**, **4.1 Complete the TB OB Tab** (role matrix, Topic Overview tables, checklist, *Continue to* links and cross-references). | User direction (D-061), departing from T2's style table for Responsibility and Initiation. |
-| C14 | File name `CLAUDE-TBC-CW1 to D365 Migration PG v0.1.docx`: `TBC` until the code is allocated (`CM-01`), and `CLAUDE-` until publication (D-056). Version 0.1, because the manual is unversioned and still has open `[Confirm]` notes (`CM-02`). | Numbering standard; D-056; T2 *Use the actual revision*. |
+| C14 | File name `CLAUDE-T-0001-CW1 to D365 Migration PG v0.1.docx` (renamed from `CLAUDE-TBC-…` on 2026-11-17): test number T-0001 (D-071; `CM-01` closed), and `CLAUDE-` until publication (D-056). Version 0.1, because the manual is unversioned and still has open `[Confirm]` notes (`CM-02`). | Numbering standard; D-056; T2 *Use the actual revision*. |
 
 ---
 
@@ -80,7 +80,7 @@ This file is the guide's **question log**. Its items use the prefix `CM` (CW1 Mi
 
 | ID | Item to confirm | Location | Priority | Method | Status |
 |---|---|---|---|---|---|
-| CM-01 | Guide code to be allocated. The source manual has no guide code. The PG authoring guide puts R2R guides in the 400-series of the R2R PG Numbering Standard, which is held outside this repository, and the register owner allocates the code. Until then the working file name uses TBC. | Cover and version history | B | Dec | Open |
+| CM-01 | Guide code to be allocated. The source manual has no guide code. | Cover and version history | B | Dec | **Closed 2026-11-17 (D-071):** this conversion is a test of the PG process on another kind of document, so it takes test number **T-0001** from the test series in the [numbering register](../../standards/numbering/README.md), not a stream code. If it goes live, it gets a code in its real series and T-0001 becomes its predecessor. Word comment removed. |
 | CM-02 | Version 0.1 is a working draft converted from the CW1 to D365 Migration - Go-Live Manual (version date October 2026). The manual has no version number and still holds six [Confirm] notes. Its content is reference evidence and is not validated: check each topic with the SME, and in CW1, TM1 and D365, before use. The manual names Maria Florencia Ruiz (Group Accounting Transformation Lead, WiseTech Global Finance) as its owner: confirm that she is the BPO. Version 0.1 needs BPO sign-off. | Version history | B | SME, Dec | Open |
 | CM-03 | Confirm the stream. The source does not name one. This draft uses Record-to-Report (R2R), because the guide migrates general ledger balances. | Part 1 Stream | B | SME | Open |
 | CM-04 | Confirm the scope and audience. The manual covers the pre go-live steps for one entity's migration, plus the post-upload journals and the post go-live check. Confirm which entities and go-live waves it applies to (its examples come from FI1, SDT, ZA8, CCES and AU Main Phase 2), and that a procedure guide is the right home for a cutover task that is done once per entity. | Part 1 Part Description | B | SME, Dec | Open |
@@ -126,7 +126,7 @@ Every review comment in the Word guide, in document order.
 
 | Section | Items |
 |---|---|
-| Version history | `CM-02`, `CM-01` |
+| Version history | `CM-02` |
 | Part 1 High-level process | `CM-04`, `CM-05`, `CM-06`, `CM-23`, `CM-24`, `CM-07`, `CM-03`, `CM-05`, `CM-06`, `CM-06`, `CM-07`, `CM-11`, `CM-30` |
 | Part 1 Roles and responsibilities | `CM-05`, `CM-30` |
 | Part 1 Key concepts | `CM-05`, `CM-24`, `CM-13`, `CM-12`, `CM-16`, `CM-19`, `CM-25`, `CM-09`, `CM-25`, `CM-29`, `CM-10` |
@@ -163,9 +163,9 @@ Every review comment in the Word guide, in document order.
 |---|---|
 | Identified | Done: the Go-Live Manual supplied for conversion (2026-11-13) |
 | Source reviewed | Done: manual content mapped (section 3) and conflicts raised as items |
-| Gap validated | Open: 37 items (26 blocking) |
+| Gap validated | Open: 36 items (25 blocking); `CM-01` closed |
 | Drafted | Done: v0.1 working draft in the master template |
 | System tested | Not started (`CM-19`, `CM-28`, `CM-31`, `CM-33`, `CM-36`, `CM-37`) |
 | SME validated | Not started |
 | Process-owner approved | Not started: BPO to confirm (`CM-02`) |
-| Published | No. Remove the `CLAUDE-` prefix and allocate the code (`CM-01`) at publication |
+| Published | No. A test conversion (T-0001) is not published under its T-number: if it goes live, it gets a code in its real series and the `CLAUDE-` prefix comes off (D-056, D-071) |

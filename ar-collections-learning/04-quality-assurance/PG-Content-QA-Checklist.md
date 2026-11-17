@@ -7,7 +7,7 @@ It combines:
 - the final checklist in [`PG_Template_Authoring_Guide_v1.docx`](../../templates/PG_Template_Authoring_Guide_v1.docx), which governs format and authoring rules;
 - the publication gate in source 1 §4 and the definition of ready for publication in source 2;
 - this project's evidence rules;
-- the O2C PG numbering standard (T3) and the [O2C PG suite plan](../05-project-notes/O2C-PG-Suite-Plan.md), which govern guide codes and where each topic belongs (D-045, D-046).
+- the PG numbering standards and master register in [`standards/numbering/`](../../standards/numbering/) (T3, D-070) and the [O2C PG suite plan](../05-project-notes/O2C-PG-Suite-Plan.md), which govern guide codes and where each topic belongs (D-045, D-046).
 
 Where they differ, the authoring guide governs format and this project's evidence rules govern content.
 
@@ -22,7 +22,7 @@ Mark each item: ✅ met · ❌ not met · N/A. For each ❌, record a `VG-xx` ID
 - [ ] `[Process Name]` is replaced everywhere, including the **Title** property (File > Info > Properties). The footer shows the title.
 - [ ] Unused template examples (standalone, parent with subtopics, off-system, report blocks) are removed.
 - [ ] Every placeholder and author instruction is replaced or removed. Search for `[`, "Process Name", "Role A" and "Fill the empty cell".
-- [ ] The file name follows `NNN-Guide Title PG vX.docx`, using the code from the O2C numbering standard (recorded in the register before the draft circulates) and the actual revision. A topic draft keeps its `TBC-` working name until it merges.
+- [ ] The file name follows `NNN-Guide Title PG vX.docx`, using the code from the [numbering register](../../standards/numbering/PG_Numbering_Master_Register.json) (recorded there before the draft circulates; D-070) and the actual revision. A topic draft keeps its `TBC-` working name until it merges.
 
 ## B. Part 1
 

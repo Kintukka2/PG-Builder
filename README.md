@@ -2,7 +2,7 @@
 
 Development workspace for **Microsoft Dynamics 365 (D365) Procedure Guides (PGs)** and supporting learning content.
 
-Each D365 task and its controls is **one topic** inside a process-level PG (D-045). Guides follow the O2C numbering standard (codes 200 to 299, one ten-number block per process family), and sit inside a learning architecture of modules, knowledge articles, reference guides and business rules.
+Each D365 task and its controls is **one topic** inside a process-level PG (D-045). Guides follow the PG numbering standards in [`standards/numbering/`](standards/numbering/) (O2C codes 200 to 299, one ten-number block per process family), and sit inside a learning architecture of modules, knowledge articles, reference guides and business rules.
 
 > **Keep this README current.** Update the status tracker and conventions whenever a topic draft changes gate, a decision is made, or a new topic starts.
 
@@ -13,7 +13,7 @@ Each D365 task and its controls is **one topic** inside a process-level PG (D-04
 | Topic | Folder | Status |
 |---|---|---|
 | **Accounts Receivable (AR) Collections** | [`ar-collections-learning/`](ar-collections-learning/) | Active. Every topic draft is merged into a working draft: **260 O2C Getting Started** (D-048, D-054), **220 Customer Payments v3.0**, which absorbed 221 Customer Payment Corrections (D-055), and **230 Collections v3.0** (D-052), with a 230 v2.4 draft for the split of 6.5 to 6.8 (D-051). **240 Direct Debit and Credit Card Payments** is a v0.1 skeleton, to be filled from the 11 November recording (D-053). |
-| **General Ledger (GL) CW1 to D365 Migration** | [`gl-cw1-migration-learning/`](gl-cw1-migration-learning/) | Active. The **CW1 to D365 Migration - Go-Live Manual** (October 2026) is converted to the master template as a **v0.1 working draft** (D-058), with 37 items open (26 blocking). Proposed R2R stream: the guide code is to be allocated. |
+| **General Ledger (GL) CW1 to D365 Migration** | [`gl-cw1-migration-learning/`](gl-cw1-migration-learning/) | Active. The **CW1 to D365 Migration - Go-Live Manual** (October 2026) is converted to the master template as a **v0.1 working draft** (D-058), with 36 items open (25 blocking). A **test conversion** of a document that is not a PG, so it has test number **T-0001** instead of a stream code (D-071). |
 | *Further D365 topics* | *To be added as sibling folders* | Planned |
 
 ## PG template (governs every PG)
@@ -25,12 +25,13 @@ All PGs are produced in the current master Word template and follow its companio
 | [`PG_Word_Template-MASTER TEMPLATE.docx`](templates/) | Master layout. Never edit it. Use **Save As** to start each PG. |
 | [`PG_Template_Authoring_Guide_v1.docx`](templates/) | Content and formatting rules, and the final checklist. |
 
-Guide codes and file names follow the **O2C PG Numbering Standard v1.3** and its register (`O2C_PG_Numbering_Register.json`), held outside this repository by the register owner (T3, D-046). Files that Claude creates or rebuilds start with `CLAUDE-` until they are published, when the prefix is removed (D-056; see [CLAUDE.md](CLAUDE.md)).
+Guide codes and file names follow the **PG numbering standards v2.1** in [`standards/numbering/`](standards/numbering/), with [`PG_Numbering_Master_Register.json`](standards/numbering/PG_Numbering_Master_Register.json) as the single allocation register (register owner Daniel Moreira; D-070). Test conversions of other kinds of documents get a T-number, starting at T-0001 (D-071). Files that Claude creates or rebuilds start with `CLAUDE-` until they are published, when the prefix is removed (D-056; see [CLAUDE.md](CLAUDE.md)).
 
 ## Repository structure
 
 ```
 templates/                   PG master template and authoring guide (unchanged)
+standards/numbering/         PG numbering standards and the master register (D-070)
 ```
 
 Each topic has its own folder with the same internal structure:
@@ -47,7 +48,7 @@ Each topic has its own folder with the same internal structure:
 
 ## AR Collections: guides
 
-The plan for these four guides went to the O2C stakeholders on 2026-11-03 (D-050): Daniel Moreira confirms each guide's scope and content with Maria Pabalan, reviews run through the ADO tickets below, and each guide needs BPO sign-off. Codes 221 and 260 are proposed (D-046). Both guides are shared with the SME for review only (SME review pack v2); neither circulates further until the register owner records its code and the BPO confirms its scope (D-048).
+The plan for these four guides went to the O2C stakeholders on 2026-11-03 (D-050): Daniel Moreira confirms each guide's scope and content with Maria Pabalan, reviews run through the ADO tickets below, and each guide needs BPO sign-off. Code 260 is recorded in the numbering register (v2.0; D-070), and 221 is withdrawn (D-055, D-070). 260 is shared with the SME for review only (SME review pack v2) and does not circulate further until the BPO confirms its scope (D-048).
 
 | Code | Guide | ADO | Gate | Topics | Files |
 |---|---|---|---|---|---|
@@ -101,11 +102,11 @@ Shared AR resources:
 
 ## GL CW1 to D365 Migration: guide
 
-The *CW1 to D365 Migration - Go-Live Manual* (version date October 2026, owner Maria Florencia Ruiz) is converted to the master template at the user's request (D-058). The manual has no version number and still holds six `[Confirm]` notes, so its content is reference evidence until the SME and a clean-session test confirm it. The stream is proposed as Record-to-Report (R2R), outside the O2C codes, so the file name uses `TBC` until the register owner allocates a code (`CM-01`).
+The *CW1 to D365 Migration - Go-Live Manual* (version date October 2026, owner Maria Florencia Ruiz) is converted to the master template at the user's request (D-058). The manual has no version number and still holds six `[Confirm]` notes, so its content is reference evidence until the SME and a clean-session test confirm it. It is a test of the PG conversion process on another kind of document, so it has test number **T-0001** instead of a stream code (D-071; `CM-01` closed). If it goes live, it gets a code in its real series (the draft proposes Record-to-Report, `CM-03`).
 
 | Code | Guide | Gate | Topics | Files |
 |---|---|---|---|---|
-| TBC | CW1 to D365 Migration | **v0.1 working draft** (D-058): the manual rebuilt in the master template; 37 guide-level items open (26 blocking), each a Word review comment (96 comments). The manual does not yet cover the OB upload, the subledger uploads, the SPE journal or the D365 steps for the adjustment journals | 1 Map the CW1 Ledger to TM1; 2 Analyze the CW1 Closing Trial Balance; 3 Prepare the Breakdown Files; 4 Prepare the Opening Balance File (4.1 to 4.3); 5 Reverse the Balances in CW1 (5.1 to 5.5); 6 Upload the SPE Balances at Historical Rates (6.1 to 6.3); 7 Book the Post-Upload Adjustment Journals; 8 Check the D365 Trial Balance After Go-Live (8.1 to 8.6); 9 Complete the Pre Go-Live Checklist; Part 3: 3 reports | [Word PG](gl-cw1-migration-learning/01-procedure-guides/CLAUDE-TBC-CW1%20to%20D365%20Migration%20PG%20v0.1.docx) · [PDF](gl-cw1-migration-learning/01-procedure-guides/CLAUDE-TBC-CW1%20to%20D365%20Migration%20PG%20v0.1.pdf) · [Preview](gl-cw1-migration-learning/01-procedure-guides/PG-CW1-to-D365-Migration-v0.1-DRAFT.md) · [Validation](gl-cw1-migration-learning/03-validation/CW1-to-D365-Migration-v0.1-Validation.md) · [Decisions](gl-cw1-migration-learning/05-project-notes/Project-Context-and-Decisions.md) |
+| T-0001 | CW1 to D365 Migration (test conversion, D-071) | **v0.1 working draft** (D-058): the manual rebuilt in the master template; 36 guide-level items open (25 blocking), each a Word review comment (95 comments); `CM-01` closed by the test number (D-071). The manual does not yet cover the OB upload, the subledger uploads, the SPE journal or the D365 steps for the adjustment journals | 1 Map the CW1 Ledger to TM1; 2 Analyze the CW1 Closing Trial Balance; 3 Prepare the Breakdown Files; 4 Prepare the Opening Balance File (4.1 to 4.3); 5 Reverse the Balances in CW1 (5.1 to 5.5); 6 Upload the SPE Balances at Historical Rates (6.1 to 6.3); 7 Book the Post-Upload Adjustment Journals; 8 Check the D365 Trial Balance After Go-Live (8.1 to 8.6); 9 Complete the Pre Go-Live Checklist; Part 3: 3 reports | [Word PG](gl-cw1-migration-learning/01-procedure-guides/CLAUDE-T-0001-CW1%20to%20D365%20Migration%20PG%20v0.1.docx) · [PDF (out of date, D-071)](gl-cw1-migration-learning/01-procedure-guides/CLAUDE-TBC-CW1%20to%20D365%20Migration%20PG%20v0.1.pdf) · [Preview](gl-cw1-migration-learning/01-procedure-guides/PG-CW1-to-D365-Migration-v0.1-DRAFT.md) · [Validation](gl-cw1-migration-learning/03-validation/CW1-to-D365-Migration-v0.1-Validation.md) · [Decisions](gl-cw1-migration-learning/05-project-notes/Project-Context-and-Decisions.md) |
 
 ## Development gates
 
@@ -144,7 +145,7 @@ Higher-risk topics (settlement, write-offs, customer maintenance, exclusions, pa
 
 **Files**
 
-- Guides are named `NNN-Guide Title PG vX.docx` (working Word file) and `NNN-Guide Title PG.pdf` (published), with `NNN` from the O2C numbering standard (D-046). Topic drafts keep their `TBC-` working names until they merge.
+- Guides are named `NNN-Guide Title PG vX.docx` (working Word file) and `NNN-Guide Title PG.pdf` (published), with `NNN` from the [numbering register](standards/numbering/PG_Numbering_Master_Register.json) (D-070). Test conversions use `T-NNNN` in place of `NNN` (D-071). Topic drafts keep their `TBC-` working names until they merge.
 - Companion Markdown files keep their `PG-<Area>-<Task-Name>` names; a guide's preview is `PG-NNN-<Guide-Title>-DRAFT.md`.
 
 **Screenshots**
