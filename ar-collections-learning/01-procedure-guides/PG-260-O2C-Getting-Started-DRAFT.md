@@ -4,7 +4,7 @@
 >
 > This is a Markdown preview of the Word guide [`CLAUDE-260-O2C Getting Started PG v0.2.docx`](CLAUDE-260-O2C%20Getting%20Started%20PG%20v0.2.docx). It was assembled from the topic drafts named in its version history, under D-045 and D-046. **The Word file is the editable source.**
 >
-> Markers such as `[G260-01]` or `[Legal Entities VG-01]` show unconfirmed items. In the Word file, each one is a review comment. Guide-level items and the index of carried items are in the [validation register](../03-validation/260-O2C-Getting-Started-Validation.md). Notes marked **ACTION: REVIEW REQUIREMENT**, and <mark>highlighted</mark> phrases, are internal notes to the author (yellow in the Word file); they are removed before publication (D-060). The markers are not part of the guide text.
+> Markers such as `[G260-01]` or `[Legal Entities VG-01]` show the open blocking items. In the Word file, each has one review comment, at the place it matters most (D-067); non-blocking items are in their registers only. Guide-level items and the index of carried items are in the [validation register](../03-validation/260-O2C-Getting-Started-Validation.md). Notes marked **ACTION: REVIEW REQUIREMENT**, and <mark>highlighted</mark> phrases, are internal notes to the author (yellow in the Word file); they are removed before publication (D-060). The markers are not part of the guide text.
 
 The fixed template content is not repeated here: cover, Contents, *About this guide* and *Additional Resources*.
 
@@ -12,8 +12,8 @@ The fixed template content is not repeated here: cover, Contents, *About this gu
 
 | ID | Date | Author/s | BPO | Description of change |
 |---|---|---|---|---|
-| 0.1 | November 2026 | Daniel Moreira | <mark>To be confirmed</mark> | Working draft assembled from the Legal Entities, Favorites, Personalized Views and Export to Excel topic drafts (D-045, D-046). Not validated or approved. |
-| 0.2 | November 2026 | Daniel Moreira | <mark>To be confirmed</mark> `[G260-02]` | SME review by Maria Pabalan (10 November 2026) applied (D-054): ledger code URL example; view selector, Save as, footer total and all-legal-entities default steps; full filter operator list; topic 7 Remove a Page from Favorites; role O2C End-user. Not validated or approved. Formatting brought in line with D-059 to D-061 (D-066): Bullet 1.2 bullets, topic numbers in link text, and notes to the author in the ACTION: REVIEW REQUIREMENT style. |
+| 0.1 | November 2026 | Daniel Moreira | Christopher Clarke | Working draft assembled from the Legal Entities, Favorites, Personalized Views and Export to Excel topic drafts (D-045, D-046). Not validated or approved. |
+| 0.2 | November 2026 | Daniel Moreira | Christopher Clarke | SME review by Maria Pabalan (10 November 2026) applied (D-054): ledger code URL example; view selector, Save as, footer total and all-legal-entities default steps; full filter operator list; topic 7 Remove a Page from Favorites; role O2C End-user. Not validated or approved. Formatting brought in line with D-059 to D-061 (D-066): Bullet 1.2 bullets, topic numbers in link text, and notes to the author in the ACTION: REVIEW REQUIREMENT style. |
 
 Guide code, title and scope: `[G260-01]`.
 
@@ -88,16 +88,16 @@ Before you start, you need to know the **Navigation Pane** options, how legal en
 
 | Term | Description |
 |---|---|
-| **Legal entity** | A company set up in D365. The pages you open show data for the active legal entity, so you must work in the legal entity that holds the customer accounts you need. `[Legal Entities VG-22]` |
+| **Legal entity** | A company set up in D365. The pages you open show data for the active legal entity, so you must work in the legal entity that holds the customer accounts you need. |
 | **Business name** | The name of the business a legal entity represents. Use the business name to identify the legal entity you need. |
-| **Ledger code** | The code D365 uses for a legal entity. D365 ledger codes differ from CargoWise ledger codes. `[Legal Entities VG-08]` |
+| **Ledger code** | The code D365 uses for a legal entity. D365 ledger codes differ from CargoWise ledger codes. |
 
 ##### Working in the correct legal entity
 
 | Rule | Description |
 |---|---|
-| **Work with business names** | Identify legal entities by their business names rather than their ledger codes. `[Legal Entities VG-09]` |
-| **Confirm before processing** | Confirm the active legal entity before you perform any transaction. `[Legal Entities VG-10]` |
+| **Work with business names** | Identify legal entities by their business names rather than their ledger codes. |
+| **Confirm before processing** | Confirm the active legal entity before you perform any transaction. |
 
 ##### What a view contains
 
@@ -105,7 +105,7 @@ Before you start, you need to know the **Navigation Pane** options, how legal en
 |---|---|
 | **View** | A saved layout for a page: the columns shown and their order, any filters and any footer totals. `[Personalized Views VG-18]` |
 | **Default view** | The view you pin as the default for a page. `[Personalized Views VG-14]` |
-| **View scope** | Views are set up separately for each page. Set up a view on each page you use. `[Personalized Views VG-02]` |
+| **View scope** | Views are set up separately for each page. Set up a view on each page you use. |
 
 ##### Filter operators
 
@@ -146,14 +146,14 @@ The operators you can select depend on the type of column you filter.
 | Term | Description |
 |---|---|
 | **Export all rows** | An option on the grid header that exports the grid's rows to an Excel file. `[Export to Excel VG-01 / VG-05]` |
-| **Configured columns** | The export contains the columns configured on the grid. Add any column you need before you export. `[Export to Excel VG-04]` |
+| **Configured columns** | The export contains the columns configured on the grid. Add any column you need before you export. |
 | **Export volume** | Limits apply to how much data can be exported. <mark>The limits for your environment are pending confirmation.</mark> `[Export to Excel VG-06]` |
 
 ##### Using exported data
 
 | Rule | Description |
 |---|---|
-| **Internal analysis only** | Use exported data for internal analysis. Customer-facing invoices and account documents use the approved PDF output. Do not send a customer an Excel export. `[Export to Excel VG-09]` |
+| **Internal analysis only** | Use exported data for internal analysis. Customer-facing invoices and account documents use the approved PDF output. Do not send a customer an Excel export. |
 | **Exported customer data** | Exported files can contain customer information. Store and share them according to the approved data handling rules. `[Export to Excel VG-08]` |
 
 ---
@@ -183,7 +183,7 @@ Complete these steps to switch legal entity with the selector:
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365 and to the required legal entity.<br>• The business name of the required legal entity.<br>*Responsibility:*<br>• O2C End-user |
 | 1. *Click* the legal entity selector. `[Legal Entities VG-01]` | In the D365 header (top-right), click the legal entity selector. It shows the active legal entity. |
 | 2. *Find* the required legal entity. `[Legal Entities VG-02]` | Find the legal entity by its business name. |
-| 3. *Select* the legal entity. `[Legal Entities VG-03]` | Select the legal entity. D365 switches to it. |
+| 3. *Select* the legal entity. | Select the legal entity. D365 switches to it. |
 | 4. *Confirm* the active legal entity. `[Legal Entities VG-04]` | Check that the selector now shows the required legal entity before you continue.<br>The ledger code after **cmp=** in the browser address bar also changes to the code of the selected legal entity (see [2. Switch Legal Entity Using the Ledger Code](#2-switch-legal-entity-using-the-ledger-code)). |
 | *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• D365 is working in the required legal entity. |
 
@@ -235,15 +235,15 @@ Complete these steps to add a page to your Favorites:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365 and to the module that contains the page. `[Favorites VG-17]`<br>• The **Navigation Pane** is visible. `[Favorites VG-12]`<br>*Responsibility:*<br>• O2C End-user |
-| 1. *Check* the **Entity**. `[Favorites VG-23 / VG-10]` | Confirm you are signed into the correct **Legal Entity** (top-right). To change it, see [1. Switch Legal Entity with the Selector](#1-switch-legal-entity-with-the-selector). |
-| 2. *Click* **Modules**. `[Favorites VG-08]` | From the left-hand **Navigation Pane**, click **Modules**. |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365 and to the module that contains the page. `[Favorites VG-17]`<br>• The **Navigation Pane** is visible.<br>*Responsibility:*<br>• O2C End-user |
+| 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). To change it, see [1. Switch Legal Entity with the Selector](#1-switch-legal-entity-with-the-selector). |
+| 2. *Click* **Modules**. | From the left-hand **Navigation Pane**, click **Modules**. |
 | 3. *Click* the module that contains the page. | From the list of modules, click the module, for example **Credit and collections** or **Accounts receivable**. The module menu opens. |
 | 4. *Click* the favorite star for the page. `[Favorites VG-02 / VG-06, Favorites VG-07]` | In the module menu, find the page and click its favorite star. The page is added to your **Favorites**.<br>To add another page, repeat steps 2 to 4. |
 | 5. *Click* **Favorites**. `[Favorites VG-09 / VG-28]` | From the left-hand **Navigation Pane**, click **Favorites**. Your favorites list is displayed. |
 | 6. *Confirm* the page is listed. `[Favorites VG-13 / VG-16]` | Confirm that the page appears in your favorites list. If a module or page is not available to you, log a request through the D365 issue form (see **Additional Resources**). |
 | 7. *Click* the page in your favorites list. | The page opens. |
-| *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• The page appears under **Favorites** in the **Navigation Pane**. `[Favorites VG-10 / VG-11]`<br>• The page opens from **Favorites**. |
+| *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• The page appears under **Favorites** in the **Navigation Pane**.<br>• The page opens from **Favorites**. |
 
 > **Note:** To remove a page from your **Favorites**, see [7. Remove a Page from Favorites](#7-remove-a-page-from-favorites).
 
@@ -281,7 +281,7 @@ Complete these steps to show the columns you need, in the order you need:
 | **Action** | **Description** |
 |---|---|
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365 and to the page you want to personalize.<br>*Responsibility:*<br>• O2C End-user |
-| 1. *Check* the **Entity**. `[Personalized Views VG-02]` | Confirm you are signed into the correct **Legal Entity** (top-right). |
+| 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Open* the page you want to personalize. `[Personalized Views VG-01]` | Open the page whose layout you want to save, for example a page in your **Favorites**. |
 | 3. *Click* **Insert columns**. `[Personalized Views VG-03]` | Use **Insert columns** to add columns that the grid does not currently show. |
 | 4. *Select* the columns to add. | Select each column you need for your work. Each process guide lists the columns recommended for its pages: for AR Collections, see 230 Collections Part 1. |
@@ -303,7 +303,7 @@ Complete these steps to show only the rows you need:
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• The grid shows the columns you need (see [4.1 Arrange the Columns](#41-arrange-the-columns)).<br>*Responsibility:*<br>• O2C End-user |
 | 1. *Open* the filter for the column. `[Personalized Views VG-07]` | Open the filter for the column whose values you want to limit. |
 | 2. *Select* the filter operator. `[Personalized Views VG-08]` | Select the operator that matches the rows you want, for example **does not equal** to exclude a value or **is one of** to include several values. The operators depend on the column type: see **Filter operators** in Key concepts for the full list. |
-| 3. *Enter* the filter value. `[Personalized Views VG-29]` | Enter the value or values for the operator. For example, to exclude zero balances, use **does not equal** with the value **0**. |
+| 3. *Enter* the filter value. | Enter the value or values for the operator. For example, to exclude zero balances, use **does not equal** with the value **0**. |
 | 4. *Confirm* only the required rows are displayed. | Check that the grid shows only the rows that match the filter. |
 | *STEP COMPLETE* (light blue) | • The grid shows only the rows you need.<br>• Continue to [4.3 Add a Footer Total](#43-add-a-footer-total) |
 
@@ -334,7 +334,7 @@ Complete these steps to save the layout as a named view and pin it as your defau
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• The grid shows the columns, and any filters and totals, you need (see [4.1 Arrange the Columns](#41-arrange-the-columns)).<br>*Responsibility:*<br>• O2C End-user |
 | 1. *Click* the view name. | At the top of the page, click the view name beside the page title to open the view selector. If you have never saved a view, the view name is **My view**.<br>An asterisk (*) after the view name shows that the page has changes you can save. |
 | 2. *Click* **Save as**. `[Personalized Views VG-11]` | In the view selector, click **Save as** to save the current layout as a new view. |
-| 3. *Enter* the view name. `[Personalized Views VG-12]` | Enter a name that identifies the page and the purpose of the view. |
+| 3. *Enter* the view name. | Enter a name that identifies the page and the purpose of the view. |
 | 4. *Save* the new view. `[Personalized Views VG-13]` | Save the view with the name you entered. |
 | 5. *Select* **Pin as default**. `[Personalized Views VG-14]` | Pin the view as your default for this page. |
 | 6. *Set* the default for all legal entities. `[G260-07]` | Optional. To make the view your default in every legal entity, not only the active one, select the option to set it as the default view across all legal entities. |
@@ -353,7 +353,7 @@ Use this procedure when a saved view needs a further change, such as an added co
 
 ##### Initiation
 
-- A saved view needs a further change. `[Personalized Views VG-28]`
+- A saved view needs a further change.
 
 ##### Procedure
 
@@ -362,7 +362,7 @@ Complete these steps to update a saved view:
 | **Action** | **Description** |
 |---|---|
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• A saved view for the page (see [4. Create a Personalized View](#4-create-a-personalized-view)).<br>*Responsibility:*<br>• O2C End-user |
-| 1. *Check* the **Entity**. `[Personalized Views VG-02]` | Confirm you are signed into the correct **Legal Entity** (top-right). |
+| 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Open* the page that has the saved view. | Open the page whose view you want to change. |
 | 3. *Select* the saved view. `[Personalized Views VG-16]` | Click the view name beside the page title to open the view selector, then select the view you want to change. |
 | 4. *Make* the change to the layout. | Change the columns, filters or totals as described in [4. Create a Personalized View](#4-create-a-personalized-view). |
@@ -392,12 +392,12 @@ Complete these steps to export all rows from a grid:
 |---|---|
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365 and to the page that holds the data.<br>*Responsibility:*<br>• O2C End-user |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
-| 2. *Open* the page that holds the data. `[Export to Excel VG-10 / VG-11]` | Open the D365 page whose grid holds the data you need, for example **Aged balances** from your **Favorites**. |
+| 2. *Open* the page that holds the data. | Open the D365 page whose grid holds the data you need, for example **Aged balances** from your **Favorites**. |
 | 3. *Confirm* the grid shows the columns you need. | The export contains the columns configured on the grid. If a column is missing, add it with **Insert columns** (see [4.1 Arrange the Columns](#41-arrange-the-columns)). |
 | 4. *Right-click* the grid header. `[Export to Excel VG-02]` | Right-click the header of any column in the grid. |
 | 5. *Select* **Export all rows**. `[Export to Excel VG-01]` | Select **Export all rows** from the menu. |
 | 6. *Download* the export. `[Export to Excel VG-03]` | Download the exported file when D365 has prepared it. |
-| 7. *Open* the exported file. `[Export to Excel VG-07]` | Open the downloaded file in Excel. |
+| 7. *Open* the exported file. | Open the downloaded file in Excel. |
 | 8. *Confirm* the required fields were exported. | Check that the file includes every field you need for your analysis. |
 | *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• The grid rows are exported to an Excel file with the configured columns.<br>• The file is used for internal analysis only. |
 
@@ -422,7 +422,7 @@ Complete these steps to remove a page from your Favorites:
 | **Action** | **Description** |
 |---|---|
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365.<br>• The page is in your **Favorites**.<br>*Responsibility:*<br>• O2C End-user |
-| 1. *Check* the **Entity**. `[Favorites VG-23 / VG-10]` | Confirm you are signed into the correct **Legal Entity** (top-right). |
+| 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Click* **Favorites**. | From the left-hand **Navigation Pane**, click **Favorites**. Your favorites list is displayed. |
 | 3. *Click* the favorite star for the page. | In your favorites list, find the page and click its filled favorite star. The page is removed from your **Favorites**.<br>You can also click the filled star next to the page in its module menu. |
 | 4. *Confirm* the page is no longer listed. | Check that the page no longer appears in your favorites list. |
