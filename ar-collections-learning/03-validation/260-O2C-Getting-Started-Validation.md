@@ -4,9 +4,9 @@
 |---|---|
 | Guide (editable source) | [`CLAUDE-260-O2C Getting Started PG v0.2.docx`](../01-procedure-guides/CLAUDE-260-O2C%20Getting%20Started%20PG%20v0.2.docx) |
 | Markdown preview | [`PG-260-O2C-Getting-Started-DRAFT.md`](../01-procedure-guides/PG-260-O2C-Getting-Started-DRAFT.md) |
-| Status | Working draft v0.2: the SME review by Maria Pabalan of 10 November 2026 is applied (D-054; section 6). Code 260 is proposed (D-046): not yet recorded in the numbering register or confirmed by the BPO. Shared with the SME for review only; do not circulate further until it is (D-048). Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-066); no content or item changes. The PDF beside the Word file predates that change: the user replaces it (D-064). |
-| Last updated | 2026-11-16 |
-| Items | 8 guide-level items (`G260`), all open: 8 blocking, 0 non-blocking. 56 carried review comments from the topic drafts. |
+| Status | Working draft v0.2: the SME review by Maria Pabalan of 10 November 2026 is applied (D-054; section 6). Code 260 is assigned in the PG numbering register v2.0 (D-070), and the BPO is recorded: Christopher Clarke (`G260-02` closed). Shared with the SME for review only; it does not circulate further until the BPO confirms its scope (D-048, `G260-01`). Review comments cut to one per open blocking item on 2026-11-17 (D-067, D-073). Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-066); no content or item changes. The PDF beside the Word file predates that change: the user replaces it (D-064). |
+| Last updated | 2026-11-17 |
+| Items | 8 guide-level items (`G260`): 7 open (all blocking), 1 closed. **39 Word review comments** (D-067): 7 guide-level and 32 carried from the topic drafts; 25 removed (section 4.1). |
 
 This file is the guide's **question log** (D-016). It holds the guide-level items, which are scoped to this guide and never renumbered. Review comments carried from the topic drafts keep their ID and draft name, for example *Legal Entities VG-01*, and their source register stays the record for them: an answer recorded there applies here (D-048). Each open item that affects the text is a Word review comment by "Validation register" (VR).
 
@@ -43,8 +43,8 @@ This file is the guide's **question log** (D-016). It holds the guide-level item
 
 | ID | Item to confirm | Location | Priority | Method | Status |
 |---|---|---|---|---|---|
-| G260-01 | Guide code 260 and the title O2C Getting Started are proposed (D-046). The register owner records the code in the O2C PG numbering register, and the BPO confirms the scope, before this guide circulates beyond the project team. | Cover | B | Dec | Open |
-| G260-02 | Confirm the business process owner (BPO) for this guide. The O2C PG numbering standard lists Christopher Clarke as BPO for the six existing O2C guides. | Version history | B | SME | Open |
+| G260-01 | Code 260 and the title O2C Getting Started are assigned in the PG numbering register v2.0 (D-070). The BPO confirms the scope before this guide circulates beyond the project team. | Cover | B | SME | Open. The code half is answered (D-070); the scope confirmation remains. |
+| G260-02 | Confirm the business process owner (BPO) for this guide. The O2C PG numbering standard lists Christopher Clarke as BPO for the six existing O2C guides. | Version history | B | SME | **Closed 2026-11-17:** the O2C PG Numbering Standard v2.0 records Christopher Clarke as BPO and Maria Pabalan as PG approver, as confirmed by Daniel Moreira (D-070). Both *To be confirmed* BPO entries in the version history now read Christopher Clarke; comment removed. |
 | G260-03 | Confirm the audience: all O2C roles now, or AR Collections first, with other streams added once they confirm the steps on their own pages. | Part 1 High-level process | B | Dec | Open |
 | G260-04 | Confirm the events that start these tasks. The SME review of 10 November 2026 kept one for the guide: initial set-up by a new O2C user. The topic drafts also gave work in another legal entity, a page that does not show the information needed, and grid data needed in Excel; each topic's own Initiation keeps its event. | Part 1 High-level process | B | SME | Open. SME edit applied in v0.2: Part 1 Initiation keeps the new-user set-up event only. |
 | G260-05 | Confirm the stream, process area and roles. The role label O2C End-user comes from the SME review of 10 November 2026. The topic drafts use Accounts Receivable, AR Collections and Collections Officer, which cover AR Collections only. | Part 1 Stream | B | SME | Open. SME edit applied in v0.2: role label O2C End-user. Stream and process area still to confirm. |
@@ -54,22 +54,54 @@ This file is the guide's **question log** (D-016). It holds the guide-level item
 
 ---
 
-## 4. Carried review comments by section
+## 4. Review comments by section
 
-Every review comment in the Word guide, in document order. IDs not starting `G260` are carried from the topic drafts.
+Every review comment in the Word guide, in document order, after D-067 (one comment per item, open blocking items only; D-073). IDs not starting `G260` are carried from the topic drafts.
 
 | Section | Items |
 |---|---|
-| Cover and version history | `G260-01`, `G260-02` |
+| Cover and version history | `G260-01` |
 | Part 1 High-level process | `G260-03`, `G260-04`, `G260-05` |
-| Part 1 Key concepts | `Legal Entities VG-22`, `Legal Entities VG-08`, `Legal Entities VG-09`, `Legal Entities VG-10`, `Personalized Views VG-18`, `Personalized Views VG-14`, `Personalized Views VG-02`, `Personalized Views VG-08`, `Export to Excel VG-01 / VG-05`, `Export to Excel VG-04`, `Export to Excel VG-06`, `Export to Excel VG-09`, `Export to Excel VG-08` |
-| Topic 1 Switch Legal Entity with the Selector | `Legal Entities VG-01`, `Legal Entities VG-02`, `Legal Entities VG-03`, `Legal Entities VG-04` |
+| Part 1 Key concepts | `Export to Excel VG-06`, `Export to Excel VG-08` |
+| Topic 1 Switch Legal Entity with the Selector | `Legal Entities VG-01`, `Legal Entities VG-02`, `Legal Entities VG-04` |
 | Topic 2 Switch Legal Entity Using the Ledger Code | `Legal Entities VG-07`, `Legal Entities VG-05`, `Legal Entities VG-06` |
-| Topic 3 Add Pages to Favorites | `G260-06`, `Favorites VG-17`, `Favorites VG-12`, `Favorites VG-23 / VG-10`, `Favorites VG-08`, `Favorites VG-07`, `Favorites VG-02 / VG-06`, `Favorites VG-09 / VG-28`, `Favorites VG-13 / VG-16`, `Favorites VG-10 / VG-11` |
-| Topic 4 Create a Personalized View | `Personalized Views VG-02`, `Personalized Views VG-01`, `Personalized Views VG-03`, `Personalized Views VG-04`, `Personalized Views VG-05`, `Personalized Views VG-06`, `Personalized Views VG-07`, `Personalized Views VG-08`, `Personalized Views VG-29`, `Personalized Views VG-09`, `Personalized Views VG-10`, `Personalized Views VG-11`, `Personalized Views VG-12`, `Personalized Views VG-13`, `Personalized Views VG-14`, `G260-07`, `Personalized Views VG-15`, `Personalized Views VG-18 / VG-19` |
-| Topic 5 Update a Saved View | `Personalized Views VG-28`, `Personalized Views VG-02`, `Personalized Views VG-16`, `Personalized Views VG-17` |
-| Topic 6 Export All Rows from a Grid | `Export to Excel VG-10 / VG-11`, `Export to Excel VG-02`, `Export to Excel VG-01`, `Export to Excel VG-03`, `Export to Excel VG-07` |
-| Topic 7 Remove a Page from Favorites | `G260-08`, `Favorites VG-23 / VG-10` |
+| Topic 3 Add Pages to Favorites | `G260-06`, `Favorites VG-17`, `Favorites VG-07`, `Favorites VG-02 / VG-06`, `Favorites VG-09 / VG-28`, `Favorites VG-13 / VG-16` |
+| Topic 4 Create a Personalized View | `Personalized Views VG-01`, `Personalized Views VG-03`, `Personalized Views VG-04`, `Personalized Views VG-05`, `Personalized Views VG-06`, `Personalized Views VG-07`, `Personalized Views VG-08`, `Personalized Views VG-09`, `Personalized Views VG-10`, `Personalized Views VG-11`, `Personalized Views VG-13`, `Personalized Views VG-14`, `G260-07`, `Personalized Views VG-15`, `Personalized Views VG-18 / VG-19` |
+| Topic 5 Update a Saved View | `Personalized Views VG-16`, `Personalized Views VG-17` |
+| Topic 6 Export All Rows from a Grid | `Export to Excel VG-02`, `Export to Excel VG-01`, `Export to Excel VG-03` |
+| Topic 7 Remove a Page from Favorites | `G260-08` |
+
+### 4.1 Comments removed under D-067 (17 November 2026)
+
+The items stay open in their registers; only the Word comment is gone. An item commented in several places keeps one comment, at the place it matters most.
+
+| Item | Where the comment was | Why it was removed |
+|---|---|---|
+| `G260-02` | Cover and version history | Closed 2026-11-17: the BPO is recorded (`G260-02`) |
+| `Legal Entities VG-22` | Part 1 Key concepts | Non-blocking: stays open in the [Legal Entities register](PG-AR-Legal-Entities-Validation.md) |
+| `Legal Entities VG-08` | Part 1 Key concepts | Non-blocking: stays open in the [Legal Entities register](PG-AR-Legal-Entities-Validation.md) |
+| `Legal Entities VG-09` | Part 1 Key concepts | Non-blocking: stays open in the [Legal Entities register](PG-AR-Legal-Entities-Validation.md) |
+| `Legal Entities VG-10` | Part 1 Key concepts | Non-blocking: stays open in the [Legal Entities register](PG-AR-Legal-Entities-Validation.md) |
+| `Personalized Views VG-18` | Part 1 Key concepts | Duplicate: the comment in Topic 4 Create a Personalized View covers it |
+| `Personalized Views VG-14` | Part 1 Key concepts | Duplicate: the comment in Topic 4 Create a Personalized View covers it |
+| `Personalized Views VG-02` | Part 1 Key concepts | Non-blocking: stays open in the [Personalized Views register](PG-AR-Personalized-Views-Validation.md) |
+| `Personalized Views VG-08` | Part 1 Key concepts | Duplicate: the comment in Topic 4 Create a Personalized View covers it |
+| `Export to Excel VG-01 / VG-05` | Part 1 Key concepts | Duplicate: the comment in Topic 6 Export All Rows from a Grid covers it |
+| `Export to Excel VG-04` | Part 1 Key concepts | Non-blocking: stays open in the [Export to Excel register](PG-AR-Export-to-Excel-Validation.md) |
+| `Export to Excel VG-09` | Part 1 Key concepts | Non-blocking: stays open in the [Export to Excel register](PG-AR-Export-to-Excel-Validation.md) |
+| `Legal Entities VG-03` | Topic 1 Switch Legal Entity with the Selector | Non-blocking: stays open in the [Legal Entities register](PG-AR-Legal-Entities-Validation.md) |
+| `Favorites VG-12` | Topic 3 Add Pages to Favorites | Non-blocking: stays open in the [Favorites register](PG-AR-Configure-Collections-Favourites-Validation.md) |
+| `Favorites VG-23 / VG-10` | Topic 3 Add Pages to Favorites | Non-blocking: stays open in the [Favorites register](PG-AR-Configure-Collections-Favourites-Validation.md) |
+| `Favorites VG-08` | Topic 3 Add Pages to Favorites | Non-blocking: stays open in the [Favorites register](PG-AR-Configure-Collections-Favourites-Validation.md) |
+| `Favorites VG-10 / VG-11` | Topic 3 Add Pages to Favorites | Non-blocking: stays open in the [Favorites register](PG-AR-Configure-Collections-Favourites-Validation.md) |
+| `Personalized Views VG-02` | Topic 4 Create a Personalized View | Non-blocking: stays open in the [Personalized Views register](PG-AR-Personalized-Views-Validation.md) |
+| `Personalized Views VG-29` | Topic 4 Create a Personalized View | Non-blocking: stays open in the [Personalized Views register](PG-AR-Personalized-Views-Validation.md) |
+| `Personalized Views VG-12` | Topic 4 Create a Personalized View | Non-blocking: stays open in the [Personalized Views register](PG-AR-Personalized-Views-Validation.md) |
+| `Personalized Views VG-28` | Topic 5 Update a Saved View | Non-blocking: stays open in the [Personalized Views register](PG-AR-Personalized-Views-Validation.md) |
+| `Personalized Views VG-02` | Topic 5 Update a Saved View | Non-blocking: stays open in the [Personalized Views register](PG-AR-Personalized-Views-Validation.md) |
+| `Export to Excel VG-10 / VG-11` | Topic 6 Export All Rows from a Grid | Non-blocking: stays open in the [Export to Excel register](PG-AR-Export-to-Excel-Validation.md) |
+| `Export to Excel VG-07` | Topic 6 Export All Rows from a Grid | Non-blocking: stays open in the [Export to Excel register](PG-AR-Export-to-Excel-Validation.md) |
+| `Favorites VG-23 / VG-10` | Topic 7 Remove a Page from Favorites | Non-blocking: stays open in the [Favorites register](PG-AR-Configure-Collections-Favourites-Validation.md) |
 
 ---
 
@@ -135,3 +167,4 @@ Maria Pabalan reviewed v0.1 in Word (seven comments, and three direct edits made
 | 2026-11-03 | Section 5: the Favorites page-list items now point to 230 Collections v3.0 Part 1 (D-052). |
 | 2026-11-10 | v0.2: SME review by Maria Pabalan applied (D-054; section 6). New items `G260-07` and `G260-08`; `G260-04` and `G260-05` updated with the SME edits; decision A7 added; role label O2C End-user. |
 | 2026-11-16 | Formatting brought in line with D-059 to D-061 (D-066): Bullet 1.2 bullets (the 15 Initiation and Responsibility bullets, which used CW_Bullet 1), topic numbers in link text (25 links), and the two *To be confirmed* BPO entries in the version history and the pending export limits in the ACTION: REVIEW REQUIREMENT style. The version history table no longer splits a row across pages. Word file renamed with the `CLAUDE-` prefix (D-056); the PDF is now out of date (D-064). |
+| 2026-11-17 | Review comments cut under D-067 (D-073): 64 → 39, one per open blocking item at the place it matters most; the 25 removed are listed in section 4.1 and their items stay open in their registers. `G260-02` closed from the O2C numbering standard v2.0 (BPO Christopher Clarke, D-070), and the version history updated; `G260-01` updated (code assigned, D-070). First question round prepared on the board (D-069). The PDF beside the Word file is out of date (D-064). |
