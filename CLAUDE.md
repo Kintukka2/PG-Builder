@@ -2,7 +2,7 @@
 
 ## File names: the `CLAUDE-` prefix (D-056)
 
-Every file Claude creates or rebuilds for the user starts with `CLAUDE-`: Word guides, PDFs, Excel workbooks, review pack zips and any other file Claude sends. The rest of the name follows the PG numbering standards in `standards/numbering/` (D-070), for example `CLAUDE-260-O2C Getting Started PG v0.2.docx`. A test conversion of another kind of document uses its T-number in place of the code, for example `CLAUDE-T-0001-CW1 to D365 Migration PG v0.1.docx` (D-071).
+Every file Claude creates or rebuilds for the user starts with `CLAUDE-`: Word guides, PDFs, Excel workbooks, review pack zips and any other file Claude sends. The rest of the name follows the PG numbering standards in `standards/numbering/` (D-070), for example `CLAUDE-260-O2C Getting Started PG v0.2.docx`. A document that is not a procedure guide uses its O-number from the Other series in place of the code, for example `CLAUDE-O-0001-CW1 to D365 Migration PG v0.1.docx` (D-071, D-076).
 
 - The prefix marks a Claude working file. It is removed when the file is published, so a published guide never carries it.
 - When Claude rebuilds an existing file that has no prefix, it renames the file with the prefix in the same change and updates every link to it.
@@ -52,12 +52,12 @@ The [PG Builder Board](https://claude.ai/artifact/5GPzzPrEYyUSAn12EBgWLf) is the
 
 - **Start of a session that touches guides:** read what changed on the board since `meta/sync.lastSyncAt`: `log` entries not written by `claude`, rounds with status `answered`, and meetings with `processed: false`. Carry them into the repository (registers, decision logs, Word guides when the change asks for it), then set `meta/sync.lastSyncAt`.
 - **Every change Claude commits to a guide updates its card in the same turn:** lane, version, next action, item counts and links, plus a `log` entry with `by: "claude"`.
-- **Lanes** (whose turn): Intake (user), Drafting (Claude), Waiting for SME (SME), Updating draft (Claude), Sign-off (approver and BPO), Ready to publish (user), Published; side lists Blocked and Withdrawn. Claude never moves a card to Sign-off, Ready to publish or Published, and never marks a round sent, unless the user says it happened. A lane Claude infers gets `confirmed: false`.
+- **Lanes** (whose turn): Initial Ticket Created (user), Drafting (Claude), Waiting for SME feedback (SME), Updating draft (Claude), Sent for sign-off (approver and BPO), Ready to publish (user), Published; Blocked and Withdrawn open from pills above the board. Claude never moves a card to Sign-off, Ready to publish or Published, and never marks a round sent, unless the user says it happened. A lane Claude infers gets `confirmed: false`.
 - **Numbering** is read-only on the board. When the register in `standards/numbering/` changes, Claude refreshes `meta/register` in the same turn.
 
 ## Question rounds (D-069)
 
-Questions go to the SME in rounds, one message per SME, kept on the board as `rounds` documents.
+Questions go to the SME in rounds, one message per SME, kept on the board as `rounds` documents and opened from the questions link on each card (D-077).
 
 - **Combine:** one question covers as many register items as one answer can close. Group by theme (approvals, roles, navigation, configuration values, scope) and by who answers.
 - **Lettered parts** keep a big question answerable; each part lists the item IDs it closes.

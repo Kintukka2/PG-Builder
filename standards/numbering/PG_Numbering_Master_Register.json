@@ -1,6 +1,6 @@
 {
   "standard": "PG numbering master register",
-  "version": "2.1",
+  "version": "2.2",
   "date": "2026-11-17",
   "owner": "Daniel Moreira",
   "status": "Current numbering baseline. Held in the PG-Builder repository as the single allocation authority (D-070).",
@@ -590,6 +590,11 @@
       "former_code": "221",
       "successor_code": "220",
       "former_title": "Customer Payment Corrections (proposed; withdrawn before publication)"
+    },
+    {
+      "former_code": "T-0001",
+      "successor_code": "O-0001",
+      "former_title": "CW1 to D365 Migration (test series, renamed Other)"
     }
   ],
   "reuse_policy": "Controlled reuse after release checks; no permanent protected-code list. Use full title and version/date to interpret historical references to a reused code.",
@@ -619,24 +624,25 @@
       "text": "Define an unallocated family before assigning its first guide. Review capacity before extending into another block. Splits and mergers require predecessor and successor records. Never give two active guides the same code or duplicate a shared procedure under separate stream codes."
     }
   ],
-  "test_series": {
-    "format": "T-NNNN",
-    "purpose": "Trial conversions of documents that are not procedure guides, used to test the PG conversion process on other kinds of documents.",
+  "other_series": {
+    "format": "O-NNNN",
+    "purpose": "Documents that are not procedure guides, such as go-live manuals and cutover runbooks, converted to the PG master template.",
     "rules": [
-      "Number in order from T-0001. A T-number is never reused.",
-      "T-numbers are internal. Nothing is published to the Training Hub under a T-number, and the six stream standards do not list them.",
-      "If a test document goes live, allocate a code in its real series under the common rules and record the T-number as its predecessor in historical_mappings.",
-      "Working files are named T-NNNN-Title PG vX.Y.docx, with the CLAUDE- prefix while Claude maintains them (D-056)."
+      "Number in order from O-0001. An O-number is never reused.",
+      "O-numbers belong to the PG builder, not to a stream: the six stream standards do not list them.",
+      "Where an O-series document is published is decided for each document. If one becomes a procedure guide in a stream, allocate a code in that series under the common rules and record the O-number as its predecessor in historical_mappings.",
+      "Working files are named O-NNNN-Title PG vX.Y.docx, with the CLAUDE- prefix while Claude maintains them (D-056)."
     ],
     "allocations": [
       {
-        "code": "T-0001",
+        "code": "O-0001",
         "title": "CW1 to D365 Migration",
         "source": "CW1 to D365 Migration - Go-Live Manual, version date October 2026",
         "allocated": "2026-11-17",
         "owner": "Daniel Moreira",
         "status": "v0.1 working draft",
-        "decision": "D-071"
+        "decision": "D-071, D-076",
+        "note": "Allocated as T-0001 in the test series and renumbered O-0001 the same day, when the series was renamed Other (D-076)."
       }
     ]
   },
@@ -650,6 +656,11 @@
       "version": "2.1",
       "date": "2026-11-17",
       "change": "221 Customer Payment Corrections moved from allocation hold to withdrawn, with 220 as its successor (D-070). Test series T-NNNN added for trial conversions, with T-0001 CW1 to D365 Migration (D-071). Only the O2C standard changes (v2.1); the other five Word standards stay at v2.0."
+    },
+    {
+      "version": "2.2",
+      "date": "2026-11-17",
+      "change": "The test series (T-NNNN) is renamed the Other series (O-NNNN) for documents that are not procedure guides, and T-0001 becomes O-0001 (D-076). No Word standard changes."
     }
   ]
 }

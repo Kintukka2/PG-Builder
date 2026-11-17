@@ -10,24 +10,30 @@ It is private to its owner. Anyone the owner shares it with can view it; only th
 
 | Tab | What it shows |
 |---|---|
-| Board | One card per guide, in the lane for whose turn it is. Blocked and Withdrawn sit below the lanes. |
-| Questions | The question rounds (D-069): to send, with the SME, answers to apply, closed. Copy a round into the ADO ticket, mark it sent, paste the answers. |
-| Weekly Sync | Meeting notes. Claude turns new notes into decisions, actions and proposed card changes. |
-| Numbering | A read-only view of the master register in [`standards/numbering/`](../standards/numbering/). |
-| How we work | The process, the lanes, the question-round and comment rules, roles, and where things live. |
+| PG Board | One card per guide, in the lane for whose turn it is. Each card shows its streams, its ticket, shared draft and Training Hub links (a red **Draft?** or **Hub?** means the link is missing), its SME questions, the next action and the repository files. Blocked and Withdrawn guides open from the pills above the board. Any column can be hidden with its eye icon. |
+| PG Weekly Sync | Meeting notes. Claude turns new notes into decisions, actions and proposed card changes. |
+| PG Numbering | A read-only view of the master register in [`standards/numbering/`](../standards/numbering/). |
+| How we work | The process, the lanes, the question and comment rules, roles, and where things live. |
+
+**Questions live on each card** (D-077). The card's questions link (for example *6 open questions*, with *Not sent yet*, *Sent · awaiting SME*, *Answers to apply* or *On hold*) opens a popup for that ticket: copy the questions, edit them, mark them sent, or paste the SME's answers. A card with no questions can have them added the same way.
+
+**Edit** on a card opens every detail: stage, streams, people, ticket, version, next action, notes, the shared draft and Hub links, the repository files, the reference links (editable, with a *needs checking* flag that shows an amber **Links !** pill on the card) and the card's recent updates.
+
+**Settings** holds the ADO work item link pattern; with it set, every ticket number on the cards opens its work item.
 
 ## Data model
 
 | Collection | Document | Fields |
 |---|---|---|
-| `guides` | `g-<code>` (for example `g-220`, `g-t-0001`), or `g-<name>` for a guide with no code | `title`, `code`, `streams[]`, `stage`, `confirmed`, `assignedTo`, `source`, `approver`, `bpo`, `ticket`, `version`, `next`, `notes`, `links{word, preview, register, decisions, draft, hub}`, `items{open, blocking, carried, comments}`, `references[]`, `history[]` (imported entries), `updatedAt`, `updatedBy` |
+| `guides` | `g-<code>` (for example `g-220`, `g-o-0001`), or `g-<name>` for a guide with no code | `title`, `code`, `streams[]`, `stage`, `confirmed`, `assignedTo`, `source`, `approver`, `bpo`, `ticket`, `version`, `next`, `notes`, `links{word, preview, register, decisions, draft, hub}`, `items{open, blocking, carried, comments}`, `references[{id, title, url, location, needsReview}]`, `history[]` (imported entries), `updatedAt`, `updatedBy` |
 | `rounds` | `r-<code>-<n>` | `title`, `guideIds[]`, `askTo`, `ticket`, `status` (`draft`, `ready`, `sent`, `answered`, `closed`), `intro`, `outro`, `questions[{n, theme, text, parts[{label, text, items[]}], items[]}]`, `customText`, `answer`, `sentAt`, `answeredAt`, `statusNote` |
 | `meetings` | any id | `date`, `title`, `notes`, `decisions`, `actions`, `guideIds[]`, `processed` |
 | `log` | any id | `at`, `by` (a viewer id, `claude` or `chatgpt`), `guideId`, `kind` (`edit`, `note`, `round`, `create`), `text` |
 | `meta` | `register` | A copy of `PG_Numbering_Master_Register.json` |
 | `meta` | `sync` | `lastSyncAt`, `by`, `note` |
+| `meta` | `settings` | `adoPattern` (the ADO work item link, with `{id}` for the ticket number) |
 
-`stage` is one of `intake`, `drafting`, `sme`, `updating`, `signoff`, `ready`, `published`, `blocked` or `withdrawn`. `confirmed: false` marks a lane Claude inferred and the user has not confirmed.
+`stage` is one of `intake` (Initial Ticket Created), `drafting`, `sme` (Waiting for SME feedback), `updating`, `signoff` (Sent for sign-off), `ready`, `published`, `blocked` or `withdrawn`. `confirmed: false` marks a lane Claude inferred and the user has not confirmed.
 
 ## Claude's routine
 
@@ -39,4 +45,4 @@ Claude never moves a card to Sign-off, Ready to publish or Published, and never 
 
 ## Origin
 
-Seeded on 2026-11-17 from the board kept in ChatGPT (23 cards, one meeting, the 240 questions), brought in line with this repository, plus T-0001. The ChatGPT board is no longer updated. Each imported card keeps its ChatGPT history.
+Seeded on 2026-11-17 from the board kept in ChatGPT (23 cards, one meeting, the 240 questions), brought in line with this repository, plus the CW1 manual (now O-0001). The ChatGPT board is no longer updated. Each imported card keeps its ChatGPT history.

@@ -1,236 +1,208 @@
 <title>PG Builder Board</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;500;600&display=swap">
 <style>
-/* Layout: a working wall. Lanes run left to right in the order a guide moves, each lane names whose turn it is;
-   the navy band and the yellow-and-red flag come from the PG master template (table header, ACTION: REVIEW REQUIREMENT). */
+/* Layout: a working wall in light mode. An indigo band, then lanes left to right in the order a guide moves.
+   Each card carries its ticket, shared draft and Training Hub links, its questions link and an Edit action. */
 :root{
-  --bg:#f2f4f8; --surface:#ffffff; --sunk:#e8ecf3; --line:#d5dbe6; --line-strong:#b9c2d3;
-  --ink:#152039; --muted:#556078; --faint:#7a849b;
-  --band:#1d3461; --band-ink:#ffffff; --band-muted:#b8c6e3; --band-chip:#2b4677;
-  --accent:#2457a6; --accent-ink:#ffffff; --focus:#c98a00;
-  --flag-bg:#fff2a8; --flag-ink:#b3261e;
-  --wait-bg:#fdebd3; --wait-ink:#8a4b00;
-  --apply-bg:#dcebfc; --apply-ink:#1b4f8f;
-  --done-bg:#def2e5; --done-ink:#22643f;
-  --stop-bg:#f8e0e0; --stop-ink:#9b2c2c;
-  --shadow:0 1px 2px rgba(21,32,57,.06),0 2px 8px rgba(21,32,57,.05);
-  --font-display:'Archivo','Segoe UI',system-ui,sans-serif;
-  --font-body:'Public Sans','Segoe UI',system-ui,sans-serif;
-  --font-mono:'IBM Plex Mono',ui-monospace,'Cascadia Mono',Consolas,monospace;
-}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0e1421; --surface:#161f31; --sunk:#1b2639; --line:#2a3852; --line-strong:#3b4c6c;
-  --ink:#e5eaf4; --muted:#a0abc2; --faint:#7d89a3;
-  --band:#111a2c; --band-ink:#e9eefa; --band-muted:#94a6c9; --band-chip:#22304b;
-  --accent:#7fa8ec; --accent-ink:#0e1421; --focus:#f0b429;
-  --flag-bg:#4a400b; --flag-ink:#ffb3a7;
-  --wait-bg:#47300f; --wait-ink:#f5c98d;
-  --apply-bg:#16335a; --apply-ink:#acccf5;
-  --done-bg:#173a28; --done-ink:#9dd9b2;
-  --stop-bg:#4a1d1d; --stop-ink:#f3a9a9;
-  --shadow:0 1px 2px rgba(0,0,0,.3);
-  color-scheme:dark;
-}}
-:root[data-theme="dark"]{
-  --bg:#0e1421; --surface:#161f31; --sunk:#1b2639; --line:#2a3852; --line-strong:#3b4c6c;
-  --ink:#e5eaf4; --muted:#a0abc2; --faint:#7d89a3;
-  --band:#111a2c; --band-ink:#e9eefa; --band-muted:#94a6c9; --band-chip:#22304b;
-  --accent:#7fa8ec; --accent-ink:#0e1421; --focus:#f0b429;
-  --flag-bg:#4a400b; --flag-ink:#ffb3a7;
-  --wait-bg:#47300f; --wait-ink:#f5c98d;
-  --apply-bg:#16335a; --apply-ink:#acccf5;
-  --done-bg:#173a28; --done-ink:#9dd9b2;
-  --stop-bg:#4a1d1d; --stop-ink:#f3a9a9;
-  --shadow:0 1px 2px rgba(0,0,0,.3);
-  color-scheme:dark;
+  color-scheme:light;
+  --bg:#f5f6fa; --surface:#ffffff; --lane:#ebeef4; --lane-line:#e4e7ee; --line:#e0e2eb; --line-strong:#cfd3e0;
+  --ink:#20243c; --muted:#61657a; --faint:#8a8fa3;
+  --band:#211957; --band-ink:#ffffff; --band-muted:#d1cce7; --tab:#342c66; --tab-ink:#dedaf2;
+  --purple:#6551bb; --purple-ink:#5844aa; --purple-soft:#f0edff; --focus:#b67b14;
+  --red-bg:#fde9eb; --red:#a03142; --amber-bg:#fff2d6; --amber:#895b09; --green-bg:#e8f5ed; --green:#2d7450;
+  --blue-bg:#e3effa; --blue:#1f5f99; --gray-bg:#f1f3f8; --gray:#596078; --teal-bg:#e2f4f2; --teal:#1d6b63; --orange-bg:#fff0dd; --orange:#92570c;
+  --shadow:0 3px 7px rgba(36,36,66,.04);
+  --font:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+  --mono:ui-monospace,'Cascadia Mono',Consolas,'SF Mono',monospace;
 }
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--font-body)}
+body{background:var(--bg);color:var(--ink);font:14px/1.5 var(--font)}
 button,input,select,textarea{font:inherit;color:inherit}
 button{cursor:pointer}
-a{color:var(--accent);text-underline-offset:3px}
+a{color:var(--purple-ink);text-underline-offset:3px}
 :focus-visible{outline:3px solid var(--focus);outline-offset:2px}
-h1,h2,h3,h4{font-family:var(--font-display);text-wrap:balance;margin:0;line-height:1.2}
+h1,h2,h3{margin:0;line-height:1.25;text-wrap:balance}
 .wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.mono{font-family:var(--font-mono);font-size:.86em;letter-spacing:.01em}
-.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.hint{font-size:12px;color:var(--muted);font-weight:400;margin:0}
 
 /* Band */
 .band{background:var(--band);color:var(--band-ink)}
-.band-inner{padding-block:22px 0;display:flex;flex-direction:column;gap:16px}
-.band-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px}
-.band .eyebrow{color:var(--band-muted)}
-.band h1{font-size:28px;margin-top:4px}
-.band-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.sync-chip{display:flex;align-items:center;gap:8px;background:var(--band-chip);border-radius:999px;padding:6px 12px;font-size:13px;color:var(--band-muted)}
-.sync-chip b{color:var(--band-ink);font-weight:600}
-.sync-dot{width:8px;height:8px;border-radius:50%;background:var(--band-muted);flex:none}
-.sync-dot.live{background:#4cc38a}
-.sync-dot.waiting{background:#f0b429}
-.tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
-.tabs a{color:var(--band-muted);text-decoration:none;padding:10px 14px;border-radius:8px 8px 0 0;font-weight:600;font-size:14px;white-space:nowrap}
-.tabs a:hover{color:var(--band-ink)}
-.tabs a[aria-current="page"]{background:var(--bg);color:var(--ink)}
+.band-inner{padding-block:26px 0;display:flex;flex-direction:column;gap:22px}
+.band-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
+.band .eyebrow{color:#c9c0ff}
+.band h1{font-size:28px;font-weight:600;margin:8px 0 4px}
+.band p{margin:0;color:var(--band-muted);font-size:14px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.sync{display:flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.25);border-radius:8px;padding:7px 12px;font-size:12px;color:var(--band-muted)}
+.sync b{color:var(--band-ink);font-weight:600}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--band-muted);flex:none}
+.dot.live{background:#58c08a}.dot.waiting{background:#f0b429}
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.tabs a{background:var(--tab);color:var(--tab-ink);text-decoration:none;padding:12px 20px;border-radius:9px 9px 0 0;font-weight:600;white-space:nowrap}
+.tabs a:hover{color:#fff}
+.tabs a[aria-current="page"]{background:var(--bg);color:var(--band)}
 
 /* Buttons and chips */
-.btn{border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);border-radius:8px;padding:7px 12px;font-size:13px;font-weight:600;line-height:1.3}
-.btn:hover{border-color:var(--accent)}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.band .btn{background:transparent;color:var(--band-ink);border-color:rgba(255,255,255,.35)}
-.band .btn.primary{background:var(--band-ink);color:var(--band);border-color:var(--band-ink)}
-.btn[disabled]{opacity:.5;cursor:not-allowed}
+.btn{border:1px solid var(--line);background:var(--surface);color:var(--band);border-radius:8px;padding:8px 13px;font-size:13px;font-weight:600;line-height:1.3}
+.btn:hover{border-color:var(--purple)}
+.btn.primary{background:var(--purple);border-color:var(--purple);color:#fff}
+.band .btn{background:rgba(255,255,255,.07);color:#fff;border-color:rgba(255,255,255,.3)}
+.band .btn.primary{background:#fff;color:var(--band);border-color:#fff}
 .btn.small{padding:4px 9px;font-size:12px}
-.linkish{background:none;border:0;padding:0;color:var(--accent);font-weight:600;font-size:13px}
-.pill{display:inline-flex;align-items:center;gap:5px;border-radius:6px;padding:2px 7px;font-size:12px;font-weight:600;line-height:1.5;background:var(--sunk);color:var(--muted);white-space:nowrap}
-.pill.flag{background:var(--flag-bg);color:var(--flag-ink)}
-.pill.wait{background:var(--wait-bg);color:var(--wait-ink)}
-.pill.apply{background:var(--apply-bg);color:var(--apply-ink)}
-.pill.done{background:var(--done-bg);color:var(--done-ink)}
-.pill.stop{background:var(--stop-bg);color:var(--stop-ink)}
-.pill.ghost{background:transparent;border:1px dashed var(--line-strong);color:var(--muted)}
-button.pill{border:0;cursor:pointer}
-button.pill.ghost{border:1px dashed var(--line-strong)}
-.code{font-family:var(--font-mono);font-size:12px;font-weight:500;background:var(--band);color:var(--band-ink);border-radius:4px;padding:1px 6px}
-.code.none{background:var(--sunk);color:var(--faint)}
-.stream{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.btn[hidden]{display:none}
+.linkish{background:none;border:0;padding:4px 2px;color:var(--purple-ink);font-weight:600;font-size:12px}
+.linkish:hover{text-decoration:underline}
+.pill{display:inline-flex;align-items:center;gap:4px;font-size:11px;line-height:1.4;border-radius:5px;padding:4px 7px;background:var(--gray-bg);color:var(--gray);white-space:nowrap;border:0}
+.pill.red{background:var(--red-bg);color:var(--red)}.pill.amber{background:var(--amber-bg);color:var(--amber)}
+.pill.green{background:var(--green-bg);color:var(--green)}.pill.blue{background:var(--blue-bg);color:var(--blue)}
+.pill.purple{background:var(--purple-soft);color:var(--purple-ink)}
+.pill.dashed{background:transparent;border:1px dashed var(--line-strong);color:var(--muted)}
+button.pill{cursor:pointer}
+.qlink{background:var(--gray-bg);border:1px solid var(--line);color:var(--ink);text-decoration:underline;text-underline-offset:2px}
+.qlink:hover{border-color:var(--purple);color:var(--purple-ink)}
+.stream{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:4px;padding:3px 6px;background:var(--gray-bg);color:var(--gray);border:0}
+.s-o2c{background:var(--green-bg);color:var(--green)}.s-r2r{background:var(--purple-soft);color:#65539d}
+.s-p2p{background:var(--orange-bg);color:var(--orange)}.s-tax{background:var(--red-bg);color:var(--red)}
+.s-rcti{background:var(--blue-bg);color:var(--blue)}.s-procurement{background:var(--teal-bg);color:var(--teal)}
+.s-links{background:var(--purple-soft);color:var(--purple-ink);cursor:pointer}
+.s-links.warn{background:var(--amber-bg);color:var(--amber)}
 
 /* Page */
-main{padding-block:20px 48px}
+main{padding-block:22px 48px}
 .panel{display:flex;flex-direction:column;gap:16px}
-.toolbar{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between}
-.summary{font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 14px}
-.summary b{color:var(--ink);font-variant-numeric:tabular-nums}
-.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.search{width:260px;max-width:100%;padding:8px 12px;border:1px solid var(--line-strong);border-radius:8px;background:var(--surface)}
-.chipset{display:flex;flex-wrap:wrap;gap:4px}
-.chipset button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:3px 10px;font-size:12px;font-weight:600;color:var(--muted)}
-.chipset button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
-.notice{border-radius:8px;padding:10px 14px;background:var(--sunk);color:var(--muted);font-size:14px}
-.notice.flag{background:var(--flag-bg);color:var(--flag-ink)}
+.bar{display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center;justify-content:space-between}
+.summary{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:14px;color:var(--muted)}
+.summary b{color:var(--band);font-variant-numeric:tabular-nums}
+.find{display:flex;gap:8px;align-items:center}
+.search{width:300px;max-width:62vw;padding:10px 14px;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+.filter-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;padding:0}
+.filter-btn svg{width:18px;height:18px}
+.badge{position:absolute;top:-6px;right:-6px;background:var(--purple);color:#fff;border-radius:10px;font-size:10px;font-weight:700;padding:1px 6px}
+.notice{border-radius:8px;padding:10px 14px;background:var(--gray-bg);color:var(--muted);font-size:14px}
 
 /* Lanes */
-.lanes-scroll{overflow-x:auto;padding-bottom:6px}
-.lanes{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(222px,1fr);gap:12px;align-items:start;min-width:min-content}
-.lane-cards{display:flex;flex-direction:column;gap:10px}
-.lane.grid{min-height:0}
-.lane.grid .lane-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px}
-.lane{background:var(--sunk);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:10px;min-height:220px;min-width:0}
-.lane.over{outline:2px dashed var(--accent);outline-offset:-2px}
-.lane-head{display:flex;flex-direction:column;gap:4px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.board-scroll{overflow-x:auto;padding-bottom:8px}
+.board{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(262px,1fr);gap:14px;align-items:start;min-width:min-content}
+.lane{background:var(--lane);border:1px solid var(--lane-line);border-radius:12px;padding:14px;min-height:300px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.lane.over{outline:2px dashed var(--purple);outline-offset:-2px;background:#eeebff}
+.lane-head{border-top:3px solid var(--lane-color,#9299b9);padding-top:12px;min-height:88px}
 .lane-title{display:flex;justify-content:space-between;align-items:center;gap:8px}
-.lane-title h2{font-size:15px}
-.count{font-variant-numeric:tabular-nums;font-size:12px;font-weight:600;color:var(--muted);background:var(--surface);border-radius:6px;padding:1px 7px}
-.turn{font-size:12px;color:var(--muted)}
-.turn b{color:var(--ink);font-weight:600}
-.lane-empty{font-size:13px;color:var(--faint);padding:6px 2px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:8px;box-shadow:var(--shadow);min-width:0}
+.lane-title h2{font-size:14px;font-weight:700}
+.lane-tools{display:flex;align-items:center;gap:4px}
+.count{background:#fff;border-radius:6px;padding:2px 7px;font-size:12px;color:#545971;font-variant-numeric:tabular-nums}
+.eye{background:none;border:0;padding:4px;color:var(--faint);border-radius:6px;display:inline-flex}
+.eye:hover{color:var(--ink);background:#fff}
+.eye svg{width:16px;height:16px}
+.lane-desc{font-size:12px;color:#6a6e80;margin:8px 0 0}
+.turn{font-size:11px;color:var(--muted);margin-top:4px}
+.turn b{color:var(--ink)}
+.lane-cards{display:flex;flex-direction:column;gap:12px}
+.lane-empty{font-size:12px;color:var(--faint)}
+.card{background:var(--surface);border:1px solid #dfe2ec;border-radius:9px;padding:14px 15px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px;min-width:0}
 .card[draggable="true"]{cursor:grab}
+.card:hover{border-color:#aea1de;box-shadow:0 4px 12px rgba(36,36,66,.07)}
 .card.dragging{opacity:.5}
-.card-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.card-top .stream{margin-left:auto}
-.card-title{background:none;border:0;padding:0;text-align:left;font-family:var(--font-display);font-weight:600;font-size:16px;line-height:1.3;color:var(--ink)}
-.card-title:hover{text-decoration:underline;text-underline-offset:3px}
-.people{font-size:12px;color:var(--muted)}
-.pills{display:flex;flex-wrap:wrap;gap:4px}
-.next{font-size:13px;color:var(--ink);margin:0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.card-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;color:var(--faint);border-top:1px solid var(--line);padding-top:8px}
-.links{display:flex;flex-wrap:wrap;gap:8px}
-.links a{font-size:12px;font-weight:600}
-.card.compact{padding:9px 12px;gap:4px}
-.card.compact .card-title{font-size:14px}
-.side{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
-.side .lane{min-height:0}
-@media (max-width:720px){
-  .lanes{grid-auto-flow:row;grid-auto-columns:auto;min-width:0}
-  .lanes-scroll{overflow-x:visible}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.chips{display:flex;flex-wrap:wrap;gap:4px}
+.tlinks{display:flex;flex-direction:column;align-items:flex-end;gap:1px;font-size:11px;line-height:1.5;text-align:right;flex:none}
+.tlinks a{color:var(--purple-ink)}
+.tlinks .ticket{color:var(--muted);font-variant-numeric:tabular-nums}
+.tlinks .missing{color:var(--red);font-weight:700}
+.title{background:none;border:0;padding:0;text-align:left;font-weight:650;font-size:16px;line-height:1.35;color:#24213e;margin-top:4px}
+.title:hover{text-decoration:underline;text-underline-offset:3px}
+.people{font-size:12px;color:#666b80}
+.pills{display:flex;flex-wrap:wrap;gap:5px}
+.divider{border:0;border-top:1px solid var(--line);margin:4px 0 2px}
+.next-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+.assigned{align-self:flex-start}
+.next{font-size:12.5px;color:var(--ink);margin:0;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.files{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:12px}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:2px}
+.meta{font-size:11px;color:var(--faint);min-width:0;overflow-wrap:anywhere}
+.foot-actions{display:flex;gap:6px;align-items:center;flex:none}
+.hidden-lanes{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px;color:var(--muted)}
+@media (max-width:760px){
+  .board{grid-auto-flow:row;grid-auto-columns:auto;min-width:0}
+  .board-scroll{overflow-x:visible}
   .lane{min-height:0}
+  .lane-head{min-height:0}
 }
 
-/* Questions */
-.group{display:flex;flex-direction:column;gap:10px}
-.group > h2{font-size:18px;display:flex;gap:10px;align-items:baseline}
-.group > p{margin:0;color:var(--muted);font-size:14px;max-width:70ch}
-.round{background:var(--surface);border:1px solid var(--line);border-radius:12px;display:flex;flex-direction:column;min-width:0}
-.round-head{display:flex;flex-wrap:wrap;gap:10px 16px;justify-content:space-between;align-items:flex-start;padding:14px 16px}
-.round-head h3{font-size:16px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-.round-meta{font-size:13px;color:var(--muted);margin-top:4px}
-.round-actions{display:flex;flex-wrap:wrap;gap:6px}
-.round details{border-top:1px solid var(--line)}
-.round summary{padding:10px 16px;font-weight:600;font-size:13px;cursor:pointer;color:var(--accent)}
-.qlist{list-style:none;margin:0;padding:0 16px 14px;display:flex;flex-direction:column;gap:12px}
-.q{display:grid;grid-template-columns:auto 1fr;gap:4px 12px}
-.q-n{font-family:var(--font-mono);font-size:13px;font-weight:500;color:var(--muted);padding-top:2px}
-.q-body{min-width:0}
-.q-theme{font-weight:600}
-.q-text{margin:2px 0 0;max-width:75ch}
-.parts{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
-.parts li{display:grid;grid-template-columns:1.6em 1fr;gap:6px}
-.items{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
-.item{font-family:var(--font-mono);font-size:11px;background:var(--sunk);color:var(--muted);border-radius:4px;padding:1px 5px}
-.inline-form{display:flex;flex-direction:column;gap:8px;padding:12px 16px;border-top:1px solid var(--line);background:var(--sunk);border-radius:0 0 12px 12px}
-.inline-form .row{display:flex;flex-wrap:wrap;gap:8px;align-items:flex-end}
-.answer{margin:0 16px 14px;padding:10px 12px;border-left:3px solid var(--apply-ink);background:var(--apply-bg);color:var(--ink);white-space:pre-wrap;font-size:14px;border-radius:0 8px 8px 0}
-
-/* Forms and dialogs */
-label{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:600;color:var(--muted)}
-input[type=text],input[type=url],input[type=date],input:not([type]),select,textarea{border:1px solid var(--line-strong);border-radius:8px;padding:7px 10px;background:var(--surface);font-weight:400;font-size:14px;min-width:0}
-textarea{min-height:84px;resize:vertical;line-height:1.5}
-.check{flex-direction:row;align-items:center;gap:8px;font-weight:500;color:var(--ink)}
-fieldset{border:1px solid var(--line);border-radius:8px;padding:8px 12px 10px;margin:0;min-width:0}
-legend{font-size:13px;font-weight:600;color:var(--muted);padding:0 4px}
-dialog{border:0;border-radius:14px;padding:0;width:min(760px,calc(100vw - 32px));max-height:calc(100vh - 48px);background:var(--surface);color:var(--ink);box-shadow:0 20px 60px rgba(0,0,0,.3)}
-dialog::backdrop{background:rgba(10,16,30,.5)}
+/* Dialogs and forms */
+dialog{border:0;border-radius:14px;padding:0;width:min(760px,calc(100vw - 32px));max-height:calc(100vh - 48px);background:var(--surface);color:var(--ink);box-shadow:0 24px 70px rgba(20,16,60,.3)}
+dialog::backdrop{background:rgba(32,36,60,.45)}
 .dlg{display:flex;flex-direction:column;max-height:calc(100vh - 48px)}
-.dlg-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:18px 20px 12px;border-bottom:1px solid var(--line)}
-.dlg-head h2{font-size:20px}
-.dlg-body{padding:16px 20px;overflow-y:auto;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dlg-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:22px 24px 14px;border-bottom:1px solid var(--line)}
+.dlg-head h2{font-size:20px;font-weight:650;color:var(--band)}
+.dlg-head .eyebrow{color:#76699f;margin-bottom:4px}
+.close{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:18px;line-height:1;color:var(--muted);flex:none}
+.close:hover{border-color:var(--purple);color:var(--purple-ink)}
+.dlg-body{padding:18px 24px;overflow-y:auto;display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .dlg-body .full{grid-column:1/-1}
-.dlg-foot{display:flex;justify-content:flex-end;gap:8px;padding:12px 20px;border-top:1px solid var(--line)}
-.close{background:none;border:0;font-size:22px;line-height:1;color:var(--muted);padding:2px 6px}
-.hint{font-size:12px;color:var(--faint);font-weight:400;margin:0}
-.opts{display:flex;flex-wrap:wrap;gap:4px 14px}
-.history{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;max-height:280px;overflow-y:auto}
+.dlg-foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:14px 24px;border-top:1px solid var(--line)}
+.dlg-foot .right,.dlg-foot .left{display:flex;gap:8px;flex-wrap:wrap}
+label{display:flex;flex-direction:column;gap:5px;font-size:12px;font-weight:600;color:var(--ink)}
+input[type=text],input[type=url],input[type=date],input:not([type]),input[type=search],select,textarea{border:1px solid var(--line);border-radius:8px;padding:9px 11px;background:#fff;font-weight:400;font-size:13px;min-width:0;width:100%}
+input[readonly],textarea[readonly]{background:#fafbfd}
+textarea{min-height:90px;resize:vertical;line-height:1.55}
+.check{flex-direction:row;align-items:center;gap:8px;font-weight:500}
+.check input{accent-color:var(--purple);width:auto}
+fieldset{border:1px solid var(--line);border-radius:8px;padding:8px 12px 12px;margin:0;min-width:0}
+legend{font-size:12px;font-weight:600;padding:0 4px}
+.opts{display:flex;flex-direction:column;gap:6px}
+.addrow{display:flex;gap:6px;margin-top:8px}
+.addrow input{flex:1}
+.section-title{font-size:15px;font-weight:650;color:var(--band);margin:6px 0 0}
+.refs{display:flex;flex-direction:column;gap:10px}
+.ref{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;align-items:end;padding:10px;border:1px solid var(--line);border-radius:8px;background:#fafbfd}
+.ref .wide{grid-column:1/3}
+.ref .rm{align-self:center}
+.history{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;max-height:300px;overflow-y:auto}
 .history li{font-size:13px;border-left:2px solid var(--line-strong);padding-left:10px}
-.history .who{color:var(--faint);font-size:12px}
-.refs{margin:0;padding-left:18px;font-size:13px}
-@media (max-width:620px){.dlg-body{grid-template-columns:1fr}}
+.history .who{color:var(--faint);font-size:11px}
+.pre{white-space:pre-wrap;margin:0}
+.qtext{min-height:330px;font-size:13.5px}
+.qmeta{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:12px;color:var(--muted)}
+.qlist{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.q{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;font-size:13px}
+.q-n{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:1px}
+.parts{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-direction:column;gap:4px}
+.item{font-family:var(--mono);font-size:10.5px;background:var(--gray-bg);color:var(--gray);border-radius:4px;padding:1px 5px;margin-right:3px}
+.answer{padding:10px 12px;border-left:3px solid var(--blue);background:var(--blue-bg);white-space:pre-wrap;font-size:13px;border-radius:0 8px 8px 0}
+.inline-form{display:flex;flex-direction:column;gap:10px;padding:12px;border:1px solid var(--line);border-radius:10px;background:#fafbfd}
+.inline-form .row{display:flex;flex-wrap:wrap;gap:8px;align-items:flex-end}
+.inline-form .row label{flex:1;min-width:150px}
+details summary{cursor:pointer;font-weight:600;font-size:13px;color:var(--purple-ink)}
+@media (max-width:620px){.dlg-body{grid-template-columns:1fr}.ref{grid-template-columns:1fr}.ref .wide{grid-column:auto}}
 
-/* Sync and numbering */
-.meeting{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+/* Weekly sync, numbering, how we work */
+.meeting{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:8px;min-width:0}
 .meeting h3{font-size:16px}
-.meeting pre,.pre{white-space:pre-wrap;font:inherit;font-size:14px;margin:0}
-.meeting details summary{cursor:pointer;font-weight:600;font-size:13px;color:var(--accent)}
 .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
-table{border-collapse:collapse;width:100%;font-size:14px}
-th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
-th{background:var(--band);color:var(--band-ink);font-weight:600;font-size:13px}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{text-align:left;vertical-align:top;padding:10px 14px;border-bottom:1px solid var(--line)}
+th{background:#eeecf8;color:var(--band);font-weight:600}
 tr:last-child td{border-bottom:0}
-td .codes{display:flex;flex-direction:column;gap:3px}
-.range{font-family:var(--font-mono);font-size:13px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.codes{display:flex;flex-direction:column;gap:4px}
+.code{font-family:var(--mono);font-size:12px;background:var(--purple-soft);color:var(--purple-ink);border-radius:4px;padding:1px 6px}
+.range{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
 .series{display:flex;flex-direction:column;gap:8px}
-.series h3{font-size:16px}
-
-/* How we work */
-.prose{max-width:76ch;display:flex;flex-direction:column;gap:12px}
+.series h3{font-size:16px;color:var(--band)}
+.prose{max-width:78ch;display:flex;flex-direction:column;gap:12px}
 .prose p{margin:0}
-.prose h2{font-size:22px;margin-top:12px}
-.prose h3{font-size:17px;margin-top:6px}
-.prose ul,.prose ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
-.milestones{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-weight:600}
-.milestones span.sep{color:var(--faint);font-weight:400}
-.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;max-width:none}
-.flow li{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
-.flow h3{font-size:15px;margin:0;display:flex;gap:8px;align-items:baseline}
-.flow .n{font-family:var(--font-mono);font-size:12px;color:var(--faint)}
-.flow p{font-size:13px;color:var(--muted)}
-.flow .exit{font-size:13px;color:var(--ink)}
-.flag-sample{background:var(--flag-bg);color:var(--flag-ink);padding:0 4px;border-radius:3px;font-weight:600}
-
-/* Toast */
-#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:8px;font-size:14px;font-weight:600;box-shadow:var(--shadow);max-width:calc(100vw - 32px)}
+.prose h2{font-size:22px;color:var(--band);margin-top:10px}
+.prose ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:5px}
+.milestones{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-weight:600;color:var(--band)}
+.milestones .sep{color:var(--faint);font-weight:400}
+.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.flow li{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--lane-color,#9299b9);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:6px}
+.flow h3{font-size:15px;color:var(--band)}
+.flow p{margin:0;font-size:13px;color:var(--muted)}
+.flow .exit{color:var(--ink)}
+.flag-sample{background:#fff2a8;color:#b3261e;padding:0 4px;border-radius:3px;font-weight:600}
+.mono{font-family:var(--mono);font-size:.9em}
+#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--band);color:#fff;padding:10px 16px;border-radius:8px;font-size:13px;font-weight:600;max-width:calc(100vw - 32px);z-index:5}
 @media (prefers-reduced-motion:no-preference){.card,.btn{transition:border-color .15s,box-shadow .15s}}
 </style>
 
@@ -238,19 +210,20 @@ td .codes{display:flex;flex-direction:column;gap:3px}
   <div class="wrap band-inner">
     <div class="band-top">
       <div>
-        <div class="eyebrow">D365 procedure guides · O2C · P2P · R2R · RCTI · Tax</div>
+        <div class="eyebrow">D365 Procedure Guides</div>
         <h1>PG Builder Board</h1>
+        <p>From initial ticket to the Training Hub.</p>
       </div>
-      <div class="band-tools">
-        <div class="sync-chip" id="syncChip"><span class="sync-dot" id="syncDot"></span><span id="syncText">Connecting to the board…</span></div>
+      <div class="tools">
+        <div class="sync" id="syncChip"><span class="dot" id="syncDot"></span><span id="syncText">Connecting to the board…</span></div>
+        <button class="btn" id="settingsBtn" type="button">Settings</button>
         <button class="btn primary" id="addGuide" type="button">+ Add guide</button>
       </div>
     </div>
     <nav class="tabs" aria-label="Board views">
-      <a href="#board" data-tab="board">Board</a>
-      <a href="#questions" data-tab="questions">Questions</a>
-      <a href="#weekly-sync" data-tab="weekly-sync">Weekly Sync</a>
-      <a href="#numbering" data-tab="numbering">Numbering</a>
+      <a href="#board" data-tab="board">PG Board</a>
+      <a href="#weekly-sync" data-tab="weekly-sync">PG Weekly Sync</a>
+      <a href="#numbering" data-tab="numbering">PG Numbering</a>
       <a href="#how-we-work" data-tab="how-we-work">How we work</a>
     </nav>
   </div>
@@ -259,37 +232,28 @@ td .codes{display:flex;flex-direction:column;gap:3px}
 <main class="wrap">
   <div id="statusNote" class="notice" hidden></div>
 
-  <section class="panel" id="panel-board" aria-labelledby="boardHeading">
-    <h2 id="boardHeading" hidden>Board</h2>
-    <div class="toolbar">
+  <section class="panel" id="panel-board">
+    <div class="bar">
       <div class="summary" id="summary"></div>
-      <div class="filters">
-        <div class="chipset" id="streamChips" role="group" aria-label="Filter by stream"></div>
-        <input class="search" id="search" type="search" placeholder="Find a guide or person" aria-label="Find a guide">
+      <div class="find">
+        <button class="btn filter-btn" id="filterBtn" type="button" aria-label="Filter guides by stream" title="Filter guides">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg>
+          <span class="badge" id="filterBadge" hidden></span>
+        </button>
+        <input class="search" id="search" type="search" placeholder="Find a guide, SME or ticket…" aria-label="Find a guide, SME or ticket">
       </div>
     </div>
-    <div class="lanes-scroll" id="lanesScroll"><div class="lanes" id="lanes"></div></div>
-    <div id="published"></div>
-    <div class="side" id="side"></div>
-  </section>
-
-  <section class="panel" id="panel-questions" hidden>
-    <div class="toolbar">
-      <div>
-        <h2 style="font-size:22px">Question rounds</h2>
-        <p class="hint" style="font-size:14px;margin-top:4px;max-width:72ch">Each round is one message to one SME. A question covers as many register items as one answer can close; lettered parts keep a big question answerable. Copy a round into the ADO ticket, mark it sent, then paste the answers here. Claude applies them at the next session.</p>
-      </div>
-    </div>
-    <div id="rounds" class="panel"></div>
+    <div class="hidden-lanes" id="hiddenLanes" hidden></div>
+    <div class="board-scroll" id="boardScroll"><div class="board" id="board"></div></div>
   </section>
 
   <section class="panel" id="panel-weekly-sync" hidden>
-    <div class="toolbar">
+    <div class="bar">
       <div>
-        <h2 style="font-size:22px">PG Prioritisation &amp; Weekly Sync</h2>
-        <p class="hint" style="font-size:14px;margin-top:4px;max-width:72ch">Paste the Teams meeting notes here, or in chat. Claude pulls out the decisions, actions and guide updates at the next session and proposes the card changes. Saving notes never moves a card by itself.</p>
+        <h2 style="font-size:22px;color:var(--band)">PG Prioritisation &amp; Weekly Sync</h2>
+        <p class="hint" style="font-size:14px;margin-top:4px;max-width:72ch">Paste the Teams meeting notes here, or in chat. At the next session Claude pulls out the decisions, actions and guide updates and proposes the card changes. Saving notes never moves a card by itself.</p>
       </div>
-      <button class="btn primary" id="addMeeting" type="button">+ Add meeting notes</button>
+      <button class="btn primary" id="addMeeting" type="button">+ Add meeting</button>
     </div>
     <div id="meetings" class="panel"></div>
   </section>
@@ -304,22 +268,21 @@ td .codes{display:flex;flex-direction:column;gap:3px}
       <h2 style="margin-top:0;font-size:28px">From a source document to the Training Hub</h2>
       <p>You bring the source and the business decisions. Claude drafts the guide in the master template, keeps the validation register and this board up to date, and merges its pull requests. SMEs confirm the process facts, the approving SME and BPO sign off, and you publish. Four milestones stay separate, each with its own evidence:</p>
       <p class="milestones"><span>Draft complete</span><span class="sep">≠</span><span>Questions closed</span><span class="sep">≠</span><span>Approved</span><span class="sep">≠</span><span>Published</span></p>
-
       <h2>The lanes</h2>
-      <p>A card sits in one lane at a time. The lane says whose turn it is. A card goes back and forth between <b>Waiting for SME</b> and <b>Updating draft</b> once for each question round. Blocked and Withdrawn sit below the lanes.</p>
+      <p>A card sits in one lane at a time, and the lane says whose turn it is. A card goes back and forth between <b>Waiting for SME</b> and <b>Updating draft</b> once for each question round. Blocked and Withdrawn guides open from the pills above the board.</p>
     </div>
     <ol class="flow">
-      <li><h3><span class="n">1</span>Intake</h3><p><b>Your turn.</b> The ADO ticket is raised and the source is on its way: an SME draft, a legacy guide, a recording or meeting notes.</p><p class="exit"><b>Moves on when</b> the source is in hand, the destination is agreed (one task is one topic in one guide, D-045) and the code is checked in the numbering register, or a T-number is given for a test (D-070, D-071).</p></li>
-      <li><h3><span class="n">2</span>Drafting</h3><p><b>Claude's turn.</b> A Save As copy of the master template, completed to the authoring guide. Every gap gets a stable ID in the validation register. Notes to the author use <span class="flag-sample">ACTION: REVIEW REQUIREMENT</span> (D-060).</p><p class="exit"><b>Moves on when</b> the Word guide, Markdown preview and register are committed and the first question round is drafted.</p></li>
-      <li><h3><span class="n">3</span>Waiting for SME</h3><p><b>The SME's turn.</b> A question round is in the ADO ticket, or a review pack is with the SME.</p><p class="exit"><b>Moves on when</b> the answers or the SME's Word comments come back.</p></li>
-      <li><h3><span class="n">4</span>Updating draft</h3><p><b>Claude's turn.</b> The answers go into the Word guide and the register. Items they close are closed; anything still open goes into the next round.</p><p class="exit"><b>Moves on when</b> no blocking item is open, or the only open items are for the approver.</p></li>
-      <li><h3><span class="n">5</span>Sign-off</h3><p><b>The approver's and BPO's turn.</b> A clean draft: no review notes, no resolved comments, no placeholders. O2C: Maria Pabalan approves, Christopher Clarke is BPO. R2R: Ken Lee approves.</p><p class="exit"><b>Moves on when</b> the approval is recorded on the card.</p></li>
-      <li><h3><span class="n">6</span>Ready to publish</h3><p><b>Your turn.</b> You make the PDF (Claude delivers the Word file only, D-064), remove the <span class="mono">CLAUDE-</span> prefix (D-056) and publish to the Training Hub.</p><p class="exit"><b>Moves on when</b> the Hub link is on the card and the ticket is closed.</p></li>
-      <li><h3><span class="n">7</span>Published</h3><p>On the Training Hub. A later change starts a new card cycle from Drafting, and the published version stays live until the new one passes its gates.</p></li>
+      <li style="--lane-color:#9299b9"><h3>1 · Intake</h3><p><b>Your turn.</b> The ADO ticket is raised and the source is on its way: an SME draft, a legacy guide, a recording or meeting notes.</p><p class="exit"><b>Moves on when</b> the source is in hand, the destination is agreed (one task is one topic in one guide, D-045) and the code is checked in the numbering register, or an O-number is given for a document that is not a procedure guide (D-070, D-076).</p></li>
+      <li style="--lane-color:#8873d3"><h3>2 · Drafting</h3><p><b>Claude's turn.</b> A Save As copy of the master template, completed to the authoring guide. Every gap gets a stable ID in the validation register. Notes to the author use <span class="flag-sample">ACTION: REVIEW REQUIREMENT</span> (D-060).</p><p class="exit"><b>Moves on when</b> the Word guide, Markdown preview and register are committed and the first question round is on the card.</p></li>
+      <li style="--lane-color:#d2a54b"><h3>3 · Waiting for SME</h3><p><b>The SME's turn.</b> The card's questions are in the ADO ticket, or a review pack is with the SME.</p><p class="exit"><b>Moves on when</b> the answers or the SME's Word comments come back.</p></li>
+      <li style="--lane-color:#6f8fd6"><h3>4 · Updating draft</h3><p><b>Claude's turn.</b> The answers go into the Word guide and the register. Items they close are closed; anything still open goes into the next round.</p><p class="exit"><b>Moves on when</b> no blocking item is open, or the only open items are for the approver.</p></li>
+      <li style="--lane-color:#5096bf"><h3>5 · Sign-off</h3><p><b>The approver's and BPO's turn.</b> A clean draft: no review notes, no resolved comments, no placeholders. O2C: Maria Pabalan approves, Christopher Clarke is BPO. R2R: Ken Lee approves.</p><p class="exit"><b>Moves on when</b> the approval is recorded on the card.</p></li>
+      <li style="--lane-color:#3d9a8b"><h3>6 · Ready to publish</h3><p><b>Your turn.</b> You make the PDF (Claude delivers the Word file only, D-064), remove the <span class="mono">CLAUDE-</span> prefix (D-056) and publish to the Training Hub.</p><p class="exit"><b>Moves on when</b> the Hub link is on the card and the ticket is closed.</p></li>
+      <li style="--lane-color:#58a984"><h3>7 · Published</h3><p>On the Training Hub. A later change starts a new cycle from Drafting, and the published version stays live until the new one passes its gates.</p></li>
     </ol>
     <div class="prose">
-      <h2>Question rounds</h2>
-      <p>Questions go to the SME in rounds, never as a pile of Word comments (D-069).</p>
+      <h2>Questions on each card</h2>
+      <p>Each card's questions link opens that ticket's questions in a popup: copy them into the ADO ticket, edit them, mark them sent, and paste the SME's answers back. Claude applies the answers at the next session (D-069).</p>
       <ul>
         <li><b>Group by theme and by who answers.</b> Approvals, roles, navigation, configuration values, scope: one question per theme for each person.</li>
         <li><b>Lettered parts keep a big question answerable.</b> Each part lists the register items it closes. The SME answers one question; each item still closes on its own.</li>
@@ -327,18 +290,16 @@ td .codes{display:flex;flex-direction:column;gap:3px}
         <li><b>Split only when</b> different people answer, or the items have nothing in common.</li>
         <li><b>An answer that does not close the gap leaves the item open</b> for the next round. An explicit scope decision can close an item. Nothing a source already confirms is asked again.</li>
       </ul>
-
       <h2>Comments in the Word guide</h2>
       <p>One review comment per item, at the place it matters most, and only for open items that still need an answer (D-067). Answered items, items carried over from topic drafts and non-blocking items live in the validation register and on this board. Every ACTION: REVIEW REQUIREMENT note keeps its comment (D-060), and every note and comment is gone before publication.</p>
-
       <h2>Who does what</h2>
     </div>
     <div class="table-wrap" style="max-width:980px">
       <table>
         <thead><tr><th>Role</th><th>Who</th><th>What they control</th></tr></thead>
         <tbody>
-          <tr><td>Author and coordinator</td><td>Daniel Moreira</td><td>Scope, destination guides, sending question rounds and review packs, sign-off requests, publishing.</td></tr>
-          <tr><td>Claude</td><td>This project</td><td>Drafts and converts guides, keeps the validation registers, previews and this board, writes the question rounds, merges its pull requests (D-065).</td></tr>
+          <tr><td>Author and coordinator</td><td>Daniel Moreira</td><td>Scope, destination guides, sending questions and review packs, sign-off requests, publishing.</td></tr>
+          <tr><td>Claude</td><td>This project</td><td>Drafts and converts guides, keeps the validation registers, previews and this board, writes the questions, merges its pull requests (D-065).</td></tr>
           <tr><td>Source contributor</td><td>Per guide (often Robie Cochon for R2R; Maria Pabalan for O2C)</td><td>Supplies the process draft or recording and answers factual questions. Not automatically the approver.</td></tr>
           <tr><td>Approving SME</td><td>O2C: Maria Pabalan. R2R: Ken Lee</td><td>Confirms the guide is fit for release.</td></tr>
           <tr><td>Business process owner (BPO)</td><td>O2C: Christopher Clarke</td><td>Owns the business process; signs off alongside the approver.</td></tr>
@@ -351,15 +312,14 @@ td .codes{display:flex;flex-direction:column;gap:3px}
       <h2>Where things live</h2>
       <ul>
         <li><b>The repository</b> holds the documents: Word guides, Markdown previews, validation registers, decision logs and the numbering register. The validation register is the record of every question and answer.</li>
-        <li><b>This board</b> holds the status: lane, people, next action, question rounds, weekly sync notes. Every change Claude commits to a guide updates its card in the same turn (D-068).</li>
-        <li><b>Changes made here</b> are logged with who and when. At the start of each session Claude reads what changed on the board since its last sync, applies recorded answers and meeting notes to the repository, and updates the sync time in the header.</li>
+        <li><b>This board</b> holds the status: lane, people, links, next action, questions, weekly sync notes. Every change Claude commits to a guide updates its card in the same turn (D-068).</li>
+        <li><b>Changes made here</b> are logged with who and when. At the start of each session Claude reads what changed since its last sync, applies recorded answers and meeting notes to the repository, and updates the sync time in the header.</li>
         <li><b>Numbering</b> is read-only here. The register in the repository is the authority; ask in chat to allocate or change a code.</li>
       </ul>
-
       <h2>File names</h2>
       <ul>
         <li>Working Word guide: <span class="mono">CLAUDE-NNN-Guide Title PG vX.Y.docx</span>. Published: <span class="mono">NNN-Guide Title PG.pdf</span>, without the prefix (D-056).</li>
-        <li>Test conversion: <span class="mono">CLAUDE-T-0001-Title PG v0.1.docx</span>. Nothing is published under a T-number (D-071).</li>
+        <li>A document that is not a procedure guide takes the next number in the Other series: <span class="mono">CLAUDE-O-0001-Title PG v0.1.docx</span> (D-076).</li>
       </ul>
     </div>
   </section>
@@ -368,63 +328,126 @@ td .codes{display:flex;flex-direction:column;gap:3px}
 <dialog id="guideDlg" aria-labelledby="guideDlgTitle">
   <form class="dlg" id="guideForm" method="dialog">
     <div class="dlg-head">
-      <div><div class="eyebrow" style="color:var(--muted)" id="guideDlgEyebrow">Guide</div><h2 id="guideDlgTitle">Guide</h2></div>
+      <div><div class="eyebrow" id="guideDlgEyebrow">Guide details</div><h2 id="guideDlgTitle">Guide</h2></div>
       <button class="close" type="button" data-close aria-label="Close">×</button>
     </div>
     <div class="dlg-body">
-      <label class="full">Guide title<input id="f-title" type="text" required maxlength="160"></label>
-      <label>Code<input id="f-code" type="text" maxlength="12" placeholder="220, T-0001, or blank"></label>
-      <label>Lane<select id="f-stage"></select></label>
-      <label class="check full"><input id="f-confirmed" type="checkbox"> Lane confirmed by Daniel</label>
-      <fieldset class="full"><legend>Streams</legend><div class="opts" id="f-streams"></div></fieldset>
-      <label>Assigned to<input id="f-assignedTo" type="text"></label>
+      <label class="full">Guide name<input id="f-title" type="text" required maxlength="160"></label>
+      <label>Stage<select id="f-stage"></select></label>
+      <fieldset><legend>Streams</legend><div class="opts" id="f-streams"></div>
+        <div class="addrow"><input id="f-newstream" type="text" placeholder="Add another stream" aria-label="Add another stream"><button class="btn small" type="button" id="f-addstream">Add</button></div>
+      </fieldset>
       <label>Source contributor<input id="f-source" type="text"></label>
       <label>Approving SME<input id="f-approver" type="text"></label>
       <label>BPO<input id="f-bpo" type="text"></label>
-      <label>ADO ticket<input id="f-ticket" type="text" inputmode="numeric"></label>
-      <label>Version<input id="f-version" type="text"></label>
+      <label>Ticket number<input id="f-ticket" type="text" inputmode="numeric"></label>
+      <label>Guide code<input id="f-code" type="text" maxlength="12" placeholder="220, O-0001 or blank"></label>
+      <label>Latest version<input id="f-version" type="text"></label>
+      <label class="check full"><input id="f-confirmed" type="checkbox"> Current stage confirmed</label>
+      <label class="full">Assigned to<input id="f-assignedTo" type="text" placeholder="Name of the current owner"></label>
       <label class="full">Next action<input id="f-next" type="text" maxlength="400"></label>
       <label class="full">Notes<textarea id="f-notes"></textarea></label>
-      <fieldset class="full"><legend>Links</legend>
-        <div class="dlg-body" style="padding:0;overflow:visible">
-          <label>Word guide<input id="f-l-word" type="url" placeholder="https://"></label>
-          <label>Markdown preview<input id="f-l-preview" type="url" placeholder="https://"></label>
-          <label>Validation register<input id="f-l-register" type="url" placeholder="https://"></label>
-          <label>Decisions log<input id="f-l-decisions" type="url" placeholder="https://"></label>
-          <label>Shared Word draft<input id="f-l-draft" type="url" placeholder="https://"></label>
-          <label>Training Hub<input id="f-l-hub" type="url" placeholder="https://"></label>
+      <div class="full" id="f-questions"></div>
+      <label class="full">Shared Word draft link<input id="f-l-draft" type="url" placeholder="https://…"></label>
+      <label class="full">Published Training Hub link<input id="f-l-hub" type="url" placeholder="https://…"></label>
+      <details class="full"><summary>Repository files</summary>
+        <div class="dlg-body" style="padding:12px 0 0;overflow:visible">
+          <label>Word guide<input id="f-l-word" type="url" placeholder="https://github.com/…"></label>
+          <label>Markdown preview<input id="f-l-preview" type="url" placeholder="https://github.com/…"></label>
+          <label>Validation register<input id="f-l-register" type="url" placeholder="https://github.com/…"></label>
+          <label>Decisions log<input id="f-l-decisions" type="url" placeholder="https://github.com/…"></label>
         </div>
-      </fieldset>
+      </details>
       <div class="full" id="f-items"></div>
-      <div class="full" id="f-refs"></div>
-      <div class="full"><div class="eyebrow" style="color:var(--muted);margin-bottom:6px">History</div><ul class="history" id="f-history"></ul></div>
+      <div class="full" id="refSection">
+        <h3 class="section-title">Reference links</h3>
+        <p class="hint" style="margin:4px 0 10px">Documents this guide links to, and where each is used. A link marked for checking shows an amber Links pill on the card until the document is checked.</p>
+        <div class="refs" id="f-refs"></div>
+        <button class="btn small" type="button" id="f-addref" style="margin-top:10px">+ Add reference</button>
+      </div>
+      <div class="full"><h3 class="section-title" style="margin-bottom:8px">Recent updates</h3><ul class="history" id="f-history"></ul></div>
     </div>
     <div class="dlg-foot">
-      <button class="btn" type="button" data-close>Cancel</button>
-      <button class="btn primary" type="submit" id="guideSave">Save changes</button>
+      <div class="left"></div>
+      <div class="right"><button class="btn" type="button" data-close>Cancel</button><button class="btn primary" type="submit" id="guideSave">Save changes</button></div>
     </div>
   </form>
 </dialog>
 
+<dialog id="qDlg" aria-labelledby="qDlgTitle">
+  <div class="dlg">
+    <div class="dlg-head">
+      <div><h2 id="qDlgTitle">SME questions</h2><p class="hint" style="margin-top:4px">Copy and paste into the ticket. Copying does not mark questions as sent.</p></div>
+      <button class="close" type="button" data-close aria-label="Close">×</button>
+    </div>
+    <div class="dlg-body" style="grid-template-columns:1fr">
+      <div class="qmeta" id="qMeta"></div>
+      <div id="qAsk" hidden>
+        <label>Questions for<input id="qAskTo" type="text" placeholder="SME name"></label>
+      </div>
+      <textarea class="qtext" id="qText" aria-label="Questions to copy" readonly></textarea>
+      <div id="qForm"></div>
+      <div id="qAnswer"></div>
+      <div id="qItems"></div>
+      <div id="qEarlier"></div>
+    </div>
+    <div class="dlg-foot">
+      <div class="left" id="qStatusActions"></div>
+      <div class="right">
+        <button class="btn" type="button" id="qEdit">Edit questions</button>
+        <button class="btn" type="button" id="qCancel" hidden>Cancel</button>
+        <button class="btn primary" type="button" id="qSave" hidden>Save questions</button>
+        <button class="btn primary" type="button" id="qCopy">Copy questions</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
 <dialog id="noteDlg" aria-labelledby="noteDlgTitle">
   <form class="dlg" id="noteForm" method="dialog">
-    <div class="dlg-head"><div><h2 id="noteDlgTitle">Add a note</h2><p class="hint" id="noteGuide"></p></div><button class="close" type="button" data-close aria-label="Close">×</button></div>
-    <div class="dlg-body"><label class="full">Note<textarea id="noteText" required maxlength="3000" placeholder="What happened, or what should Claude know?"></textarea></label><p class="hint full">Adds a dated entry to the card's history. Claude reads new notes at the next session.</p></div>
-    <div class="dlg-foot"><button class="btn" type="button" data-close>Cancel</button><button class="btn primary" type="submit">Add note</button></div>
+    <div class="dlg-head"><div><h2 id="noteDlgTitle">Add a quick note</h2><p class="hint" id="noteGuide"></p></div><button class="close" type="button" data-close aria-label="Close">×</button></div>
+    <div class="dlg-body"><label class="full">Note<textarea id="noteText" required maxlength="3000" placeholder="What would you like to record?"></textarea></label><p class="hint full">Adds a dated entry to this guide's Recent updates. Claude reads new notes at the next session.</p></div>
+    <div class="dlg-foot"><div class="left"></div><div class="right"><button class="btn" type="button" data-close>Cancel</button><button class="btn primary" type="submit">Add note</button></div></div>
   </form>
 </dialog>
 
 <dialog id="meetingDlg" aria-labelledby="meetingDlgTitle">
   <form class="dlg" id="meetingForm" method="dialog">
-    <div class="dlg-head"><div><div class="eyebrow" style="color:var(--muted)">Weekly sync</div><h2 id="meetingDlgTitle">Add meeting notes</h2></div><button class="close" type="button" data-close aria-label="Close">×</button></div>
+    <div class="dlg-head"><div><div class="eyebrow">Weekly meeting</div><h2 id="meetingDlgTitle">Add meeting notes</h2></div><button class="close" type="button" data-close aria-label="Close">×</button></div>
     <div class="dlg-body">
       <label>Meeting date<input id="m-date" type="date" required></label>
       <label>Meeting title<input id="m-title" type="text" required value="PG Prioritisation &amp; Weekly Sync"></label>
-      <label class="full">Meeting notes<textarea id="m-notes" required style="min-height:180px" placeholder="Paste the Teams meeting notes and follow-up tasks"></textarea></label>
+      <label class="full">Meeting notes<textarea id="m-notes" required style="min-height:200px" placeholder="Paste the Teams meeting notes and follow-up tasks here…"></textarea></label>
       <fieldset class="full"><legend>Related guides</legend><div class="opts" id="m-guides"></div></fieldset>
-      <p class="hint full">Claude turns the notes into decisions, actions and proposed card updates at the next session.</p>
+      <p class="hint full">Saving notes does not change any guide. Claude turns them into decisions, actions and proposed card updates at the next session.</p>
     </div>
-    <div class="dlg-foot"><button class="btn" type="button" data-close>Cancel</button><button class="btn primary" type="submit">Save meeting notes</button></div>
+    <div class="dlg-foot"><div class="left"></div><div class="right"><button class="btn" type="button" data-close>Cancel</button><button class="btn primary" type="submit">Save meeting notes</button></div></div>
+  </form>
+</dialog>
+
+<dialog id="filterDlg" aria-labelledby="filterDlgTitle">
+  <form class="dlg" id="filterForm" method="dialog">
+    <div class="dlg-head"><div><h2 id="filterDlgTitle">Filter guides</h2><p class="hint" style="margin-top:4px">Choose any streams. Leave all clear to show every guide.</p></div><button class="close" type="button" data-close aria-label="Close">×</button></div>
+    <div class="dlg-body"><fieldset class="full"><legend>Streams</legend><div class="opts" id="filterStreams"></div></fieldset></div>
+    <div class="dlg-foot"><div class="left"><button class="btn" type="button" id="filterClear">Clear selections</button></div><div class="right"><button class="btn" type="button" data-close>Cancel</button><button class="btn primary" type="submit">Apply filters</button></div></div>
+  </form>
+</dialog>
+
+<dialog id="sideDlg" aria-labelledby="sideDlgTitle">
+  <div class="dlg">
+    <div class="dlg-head"><div><h2 id="sideDlgTitle">Blocked guides</h2><p class="hint" id="sideDlgHint" style="margin-top:4px"></p></div><button class="close" type="button" data-close aria-label="Close">×</button></div>
+    <div class="dlg-body" style="grid-template-columns:1fr"><div class="lane-cards" id="sideList"></div></div>
+  </div>
+</dialog>
+
+<dialog id="settingsDlg" aria-labelledby="settingsDlgTitle">
+  <form class="dlg" id="settingsForm" method="dialog">
+    <div class="dlg-head"><div><h2 id="settingsDlgTitle">Board settings</h2></div><button class="close" type="button" data-close aria-label="Close">×</button></div>
+    <div class="dlg-body">
+      <label class="full">ADO work item link<input id="s-ado" type="url" placeholder="https://dev.azure.com/organisation/project/_workitems/edit/{id}"></label>
+      <p class="hint full">Write <span class="mono">{id}</span> where the ticket number goes. Every ticket number on the cards then opens its work item in ADO.</p>
+    </div>
+    <div class="dlg-foot"><div class="left"></div><div class="right"><button class="btn" type="button" data-close>Cancel</button><button class="btn primary" type="submit">Save settings</button></div></div>
   </form>
 </dialog>
 
@@ -434,36 +457,36 @@ td .codes{display:flex;flex-direction:column;gap:3px}
 (function(){
 'use strict';
 const STAGES=[
-  {id:'intake',name:'Intake',turn:'You',desc:'Ticket raised; the source or scope is still coming.'},
-  {id:'drafting',name:'Drafting',turn:'Claude',desc:'Being built or converted in the master template.'},
-  {id:'sme',name:'Waiting for SME',turn:'SME',desc:'A question round or review pack is with the SME.'},
-  {id:'updating',name:'Updating draft',turn:'Claude',desc:'Answers are back and going into the draft.'},
-  {id:'signoff',name:'Sign-off',turn:'Approver and BPO',desc:'The clean draft is with the approver and BPO.'},
-  {id:'ready',name:'Ready to publish',turn:'You',desc:'Approved. Make the PDF, remove CLAUDE- and publish.'},
-  {id:'published',name:'Published',turn:'',desc:'On the Training Hub.'}
+  {id:'intake',name:'Initial Ticket Created',turn:'You',desc:'Ticket raised; the source or scope is still coming.',color:'#9299b9'},
+  {id:'drafting',name:'Drafting',turn:'Claude',desc:'Being built or converted in the master template.',color:'#8873d3'},
+  {id:'sme',name:'Waiting for SME feedback',turn:'SME',desc:'Questions or a review pack are with the SME; answers outstanding.',color:'#d2a54b'},
+  {id:'updating',name:'Updating draft',turn:'Claude',desc:'Answers are back and going into the draft.',color:'#6f8fd6'},
+  {id:'signoff',name:'Sent for sign-off',turn:'Approver and BPO',desc:'Clean draft sent to the approver and BPO.',color:'#5096bf'},
+  {id:'ready',name:'Ready to publish',turn:'You',desc:'Approved. Make the PDF, remove CLAUDE- and publish.',color:'#3d9a8b'},
+  {id:'published',name:'Published',turn:'',desc:'Approved and published to the Training Hub.',color:'#58a984'}
 ];
-const SIDE=[
-  {id:'blocked',name:'Blocked',desc:'Waiting on something outside the PG work.'},
-  {id:'withdrawn',name:'Withdrawn',desc:'Not going ahead as a separate guide.'}
-];
-const ALL_STAGES=[...STAGES,...SIDE];
-const STAGE_NAME=Object.fromEntries(ALL_STAGES.map(s=>[s.id,s.name]));
-const STREAMS=['O2C','P2P','Procurement','RCTI','R2R','Tax','Test'];
-const LINKS=[['word','Word'],['preview','Preview'],['register','Register'],['decisions','Decisions'],['draft','Shared draft'],['hub','Hub']];
-const FIELDS=['title','code','stage','confirmed','streams','assignedTo','source','approver','bpo','ticket','version','next','notes','links'];
-const FIELD_LABEL={title:'Title',code:'Code',stage:'Lane',confirmed:'Lane confirmed',streams:'Streams',assignedTo:'Assigned to',source:'Source contributor',approver:'Approving SME',bpo:'BPO',ticket:'ADO ticket',version:'Version',next:'Next action',notes:'Notes',links:'Links'};
+const SIDE=[{id:'blocked',name:'Blocked',desc:'Waiting on something outside the PG work.'},{id:'withdrawn',name:'Withdrawn',desc:'Not going ahead as a separate guide.'}];
+const ALL=[...STAGES,...SIDE];
+const STAGE_NAME=Object.fromEntries(ALL.map(s=>[s.id,s.name]));
+const STREAMS=['O2C','P2P','Procurement','RCTI','R2R','Tax','Other'];
+const REPO_LINKS=[['word','Word'],['preview','Preview'],['register','Register'],['decisions','Decisions']];
+const LINK_KEYS=['word','preview','register','decisions','draft','hub'];
+const TEXT_FIELDS=['title','code','source','approver','bpo','ticket','version','assignedTo','next','notes'];
+const LABEL={title:'Guide name',code:'Guide code',stage:'Stage',confirmed:'Stage confirmed',streams:'Streams',source:'Source contributor',approver:'Approving SME',bpo:'BPO',ticket:'Ticket number',version:'Latest version',assignedTo:'Assigned to',next:'Next action',notes:'Notes',links:'Links',references:'Reference links'};
+const HIDE_KEY='pg-board-hidden-lanes';
 
-const S={guides:new Map(),rounds:new Map(),meetings:new Map(),log:[],register:null,sync:null,
-  loaded:false,db:null,user:null,me:null,canWrite:true,tab:'board',editing:null,noteFor:null,
-  filter:{q:'',streams:new Set()},profiles:{},openForms:{}};
+const S={guides:new Map(),rounds:new Map(),meetings:new Map(),log:[],register:null,sync:null,settings:{},
+  loaded:false,db:null,user:null,me:null,canWrite:true,tab:'board',editing:null,noteFor:null,q:null,
+  filter:{q:'',streams:new Set()},profiles:{},hidden:new Set()};
 const $=id=>document.getElementById(id);
+try{ const h=JSON.parse(localStorage.getItem(HIDE_KEY)||'[]'); if(Array.isArray(h)) h.forEach(x=>S.hidden.add(x)); }catch(_){}
+function saveHidden(){ try{ localStorage.setItem(HIDE_KEY,JSON.stringify([...S.hidden])); }catch(_){} }
 
 function el(tag,attrs,...kids){
   const n=document.createElement(tag);
   if(attrs) for(const [k,v] of Object.entries(attrs)){
     if(v==null||v===false) continue;
-    if(k==='class') n.className=v;
-    else if(k==='text') n.textContent=v;
+    if(k==='class') n.className=v; else if(k==='text') n.textContent=v;
     else if(k.startsWith('on')&&typeof v==='function') n.addEventListener(k.slice(2),v);
     else n.setAttribute(k,v===true?'':String(v));
   }
@@ -472,25 +495,29 @@ function el(tag,attrs,...kids){
 }
 const nowISO=()=>new Date().toISOString();
 const todayISO=()=>{const d=new Date();return new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10)};
-function fmtDate(s,withYear=true){ if(!s) return ''; const d=new Date(s.length===10?s+'T00:00:00':s); if(isNaN(d)) return String(s); return d.toLocaleDateString('en-AU',withYear?{day:'numeric',month:'short',year:'numeric'}:{day:'numeric',month:'short'}); }
-function fmtDT(s){ const d=new Date(s); if(isNaN(d)) return ''; return d.toLocaleDateString('en-AU',{day:'numeric',month:'short'})+', '+d.toLocaleTimeString('en-AU',{hour:'numeric',minute:'2-digit'}); }
+function fmtDate(s,y=true){ if(!s) return ''; const d=new Date(String(s).length===10?s+'T00:00:00':s); if(isNaN(d)) return String(s); return d.toLocaleDateString('en-AU',y?{day:'numeric',month:'short',year:'numeric'}:{day:'numeric',month:'short'}); }
+function fmtDT(s){ const d=new Date(s); if(isNaN(d)) return ''; return d.toLocaleDateString('en-AU',{day:'numeric',month:'short',year:'numeric'})+', '+d.toLocaleTimeString('en-AU',{hour:'numeric',minute:'2-digit'}); }
 const firstName=n=>(n||'').trim().split(/\s+/)[0]||'the SME';
 const plural=(n,w)=>n+' '+w+(n===1?'':'s');
-let toastTimer=null;
-function toast(msg){ const t=$('toast'); t.textContent=msg; t.hidden=false; clearTimeout(toastTimer); toastTimer=setTimeout(()=>{t.hidden=true},3200); }
-function note(msg,kind){ const n=$('statusNote'); if(!msg){n.hidden=true;return;} n.textContent=msg; n.className='notice'+(kind?' '+kind:''); n.hidden=false; }
+const slug=s=>String(s).toLowerCase().replace(/[^a-z0-9]+/g,'-');
+const codeNum=c=>{const m=String(c||'').match(/\d+/);return m?parseInt(m[0],10):9999;};
+let toastT=null;
+function toast(m){ const t=$('toast'); t.textContent=m; t.hidden=false; clearTimeout(toastT); toastT=setTimeout(()=>{t.hidden=true},3200); }
+function note(m){ const n=$('statusNote'); if(!m){n.hidden=true;return;} n.textContent=m; n.hidden=false; }
+const icon=(d)=>{const s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('viewBox','0 0 24 24');s.setAttribute('fill','none');s.setAttribute('stroke','currentColor');s.setAttribute('stroke-width','1.8');s.setAttribute('aria-hidden','true');const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',d);s.append(p);return s;};
+const EYE_OFF='M3 3l18 18M10.6 10.6a2 2 0 002.8 2.8M9.9 5.1A9.8 9.8 0 0112 5c5 0 9 4.5 10 7-.4 1-1.3 2.4-2.6 3.7M6.1 6.1C4.2 7.4 2.8 9.4 2 12c1 2.5 5 7 10 7 1.6 0 3.1-.4 4.4-1.1';
 
 /* ---------- writes ---------- */
 let queue=Promise.resolve();
 function enqueue(fn){ queue=queue.then(fn).catch(onWriteError); return queue; }
 function onWriteError(e){
-  const code=e&&e.code;
-  if(code==='invalid_argument'){ S.canWrite=false; render(); toast('You can view this board but not change it.'); }
-  else if(code==='quota_exceeded'){ toast('The board is full. Ask Claude to archive old history.'); }
-  else if(code==='resource_exhausted'){ toast('Too many changes at once. Wait a moment and try again.'); }
-  else { toast('That change did not save. Check the connection and try again.'); }
+  const c=e&&e.code;
+  if(c==='invalid_argument'){ S.canWrite=false; render(); toast('You can view this board but not change it.'); }
+  else if(c==='quota_exceeded') toast('The board is full. Ask Claude to archive old history.');
+  else if(c==='resource_exhausted') toast('Too many changes at once. Wait a moment and try again.');
+  else toast('That change did not save. Check the connection and try again.');
 }
-function logAdd(entry){ return S.db.collection('log').add({at:nowISO(),by:S.me||'board',...entry}); }
+const logAdd=e=>S.db.collection('log').add({at:nowISO(),by:S.me||'board',...e});
 function saveGuide(id,changes,text){
   if(!S.db||!S.canWrite) return;
   return enqueue(async()=>{
@@ -500,21 +527,23 @@ function saveGuide(id,changes,text){
     toast('Saved');
   });
 }
-function moveTo(id,stage){
-  const g=S.guides.get(id); if(!g||g.stage===stage) return;
-  saveGuide(id,{stage,confirmed:true},'Moved from '+(STAGE_NAME[g.stage]||g.stage)+' to '+STAGE_NAME[stage]);
-}
+function moveTo(id,stage){ const g=S.guides.get(id); if(!g||g.stage===stage) return; saveGuide(id,{stage,confirmed:true},'Moved from '+(STAGE_NAME[g.stage]||g.stage)+' to '+STAGE_NAME[stage]); }
 
-/* ---------- derived ---------- */
-function roundsFor(id){ return [...S.rounds.values()].filter(r=>(r.guideIds||[]).includes(id)); }
+/* ---------- questions data ---------- */
+const roundsFor=id=>[...S.rounds.values()].filter(r=>(r.guideIds||[]).includes(id)).sort((a,b)=>String(a.createdAt||'').localeCompare(String(b.createdAt||'')));
 function activeRound(id){ const rank={answered:0,ready:1,sent:2,draft:3}; return roundsFor(id).filter(r=>r.status!=='closed').sort((a,b)=>(rank[a.status]??9)-(rank[b.status]??9))[0]; }
-function roundItems(r){ const s=new Set(); for(const q of r.questions||[]){ (q.items||[]).forEach(i=>s.add(i)); for(const p of q.parts||[]) (p.items||[]).forEach(i=>s.add(i)); } return s.size; }
-function visible(g){
-  if(S.filter.streams.size&&!(g.streams||[]).some(s=>S.filter.streams.has(s))) return false;
-  const q=S.filter.q.trim().toLowerCase(); if(!q) return true;
-  return [g.title,g.code,g.approver,g.assignedTo,g.source,g.bpo,g.ticket,g.next,g.notes,g.version,(g.streams||[]).join(' ')].join(' ').toLowerCase().includes(q);
+function qCount(r){ if((r.questions||[]).length) return r.questions.length; const m=String(r.customText||'').match(/^\s*Q\d+/gm); return m?m.length:0; }
+function itemCount(r){ const s=new Set(); for(const q of r.questions||[]){ (q.items||[]).forEach(i=>s.add(i)); for(const p of q.parts||[]) (p.items||[]).forEach(i=>s.add(i)); } return s.size; }
+function adoText(r){
+  if(r.customText) return r.customText;
+  const L=[r.intro||('Hi '+firstName(r.askTo)+','),''];
+  for(const q of r.questions||[]){ L.push(q.n+(q.theme?' — '+q.theme:'')); if(q.text) L.push(q.text); for(const p of q.parts||[]) L.push('('+p.label+') '+p.text); L.push(''); }
+  L.push(r.outro||'Please reply against each question number. If a question does not apply, say so and I will close it.');
+  return L.join('\n');
 }
-function codeNum(c){ const m=String(c||'').match(/\d+/); return m?parseInt(m[0],10):9999; }
+const STATUS={ready:['red','Not sent yet'],draft:['dashed','On hold'],sent:['amber','Sent · awaiting SME'],answered:['blue','Answers to apply'],closed:['green','Questions closed']};
+
+/* ---------- header ---------- */
 function changesWaiting(){
   const last=S.sync&&S.sync.lastSyncAt;
   const edits=S.log.filter(l=>l.by!=='claude'&&l.by!=='chatgpt'&&(!last||l.at>last)).length;
@@ -522,270 +551,315 @@ function changesWaiting(){
   const meetings=[...S.meetings.values()].filter(m=>!m.processed).length;
   return {edits,answers,meetings,total:edits+answers+meetings};
 }
-
-/* ---------- header ---------- */
 function renderSync(){
   const dot=$('syncDot'),txt=$('syncText');
-  if(!S.db){ dot.className='sync-dot'; txt.textContent=S.loaded?'Board data unavailable here':'Connecting to the board…'; return; }
-  const w=changesWaiting(); const last=S.sync&&S.sync.lastSyncAt;
-  txt.replaceChildren();
-  if(last) txt.append('Claude synced ',el('b',{text:fmtDT(last)})); else txt.append('Claude has not synced yet');
-  if(w.total){ txt.append(' · ',el('b',{text:plural(w.total,'change')}),' waiting'); dot.className='sync-dot waiting'; }
-  else dot.className='sync-dot live';
-  $('syncChip').title=w.total?[w.edits&&plural(w.edits,'board edit'),w.answers&&plural(w.answers,'answered round'),w.meetings&&plural(w.meetings,'new meeting')].filter(Boolean).join(', ')+' for Claude to pick up':'Nothing waiting for Claude';
-  $('addGuide').hidden=!S.canWrite;
+  $('addGuide').hidden=!S.canWrite; $('settingsBtn').hidden=!S.canWrite;
+  if(!S.db){ dot.className='dot'; txt.textContent=S.loaded?'Board data unavailable here':'Connecting to the board…'; return; }
+  const w=changesWaiting(), last=S.sync&&S.sync.lastSyncAt; txt.replaceChildren();
+  if(last) txt.append('Claude synced ',el('b',null,fmtDT(last))); else txt.append('Claude has not synced yet');
+  if(w.total){ txt.append(' · ',el('b',null,plural(w.total,'change')),' waiting'); dot.className='dot waiting'; } else dot.className='dot live';
+  $('syncChip').title=w.total?[w.edits&&plural(w.edits,'board edit'),w.answers&&plural(w.answers,'set of answers'),w.meetings&&plural(w.meetings,'new meeting')].filter(Boolean).join(', ')+' for Claude to pick up':'Nothing waiting for Claude';
+}
+
+/* ---------- cards ---------- */
+function adoUrl(t){ const p=S.settings&&S.settings.adoPattern; return p&&t?p.split('{id}').join(encodeURIComponent(t)):null; }
+function topLinks(g){
+  const L=g.links||{}, url=adoUrl(g.ticket);
+  const ticket=g.ticket?(url?el('a',{href:url,target:'_blank',rel:'noopener',title:'Open the ADO work item'},'#'+g.ticket):el('span',{class:'ticket',title:'Set the ADO work item link in Settings to open tickets from here'},'#'+g.ticket)):el('span',{class:'missing',title:'No ticket number recorded'},'TICKET?');
+  const lk=(k,n)=>L[k]?el('a',{href:L[k],target:'_blank',rel:'noopener'},n):el('span',{class:'missing',title:'No '+(k==='hub'?'Training Hub':'shared draft')+' link recorded'},n+'?');
+  return el('div',{class:'tlinks'},ticket,lk('draft','Draft'),lk('hub','Hub'));
+}
+function questionPills(g){
+  const r=activeRound(g.id), all=roundsFor(g.id), out=[];
+  if(r){
+    const n=qCount(r);
+    out.push(el('button',{class:'pill qlink',type:'button',onclick:()=>openQuestions(g.id)},n?plural(n,'open question'):'Open questions'));
+    const st=STATUS[r.status]||['',''];
+    out.push(el('span',{class:'pill '+st[0]},st[1]));
+  } else if(all.length){
+    out.push(el('button',{class:'pill green',type:'button',onclick:()=>openQuestions(g.id),title:'View the closed questions'},'Questions closed'));
+  } else if(g.stage==='published'){
+    out.push(el('span',{class:'pill green'},'Questions closed'));
+  } else {
+    out.push(S.canWrite?el('button',{class:'pill qlink',type:'button',onclick:()=>openQuestions(g.id),title:'Add questions for this ticket'},'No open questions recorded'):el('span',{class:'pill'},'No open questions recorded'));
+  }
+  return out;
+}
+function card(g){
+  const drag=S.canWrite;
+  const c=el('article',{class:'card','data-id':g.id,draggable:drag?'true':'false'});
+  if(drag){ c.addEventListener('dragstart',e=>{e.dataTransfer.setData('text/plain',g.id);e.dataTransfer.effectAllowed='move';c.classList.add('dragging');}); c.addEventListener('dragend',()=>c.classList.remove('dragging')); }
+  const refs=g.references||[], warn=refs.some(r=>r.needsReview);
+  c.append(el('div',{class:'card-top'},
+    el('div',{class:'chips'},(g.streams||[]).map(s=>el('span',{class:'stream s-'+slug(s)},s)),
+      refs.length?el('button',{class:'stream s-links'+(warn?' warn':''),type:'button',onclick:()=>openGuide(g.id,'refs'),title:warn?'A linked document needs checking':'Reference links'},warn?'Links !':'Links'):null),
+    topLinks(g)));
+  c.append(el('button',{class:'title',type:'button',onclick:()=>openGuide(g.id)},g.title||'Untitled guide'));
+  c.append(el('div',{class:'people'},'Approver · '+(g.approver||'not set')));
+  const it=g.items;
+  const pills=[...questionPills(g),
+    it&&it.open?el('span',{class:'pill',title:'Open items in the validation register'},plural(it.open,'item')+' open'+(it.blocking?' · '+it.blocking+' blocking':'')):null,
+    g.confirmed===false?el('span',{class:'pill dashed',title:'Daniel has not confirmed this stage yet'},'Stage to confirm'):null].filter(Boolean);
+  c.append(el('div',{class:'pills'},pills));
+  c.append(el('hr',{class:'divider'}));
+  c.append(el('div',{class:'next-label'},'Next action'));
+  c.append(el('span',{class:'pill purple assigned'},'Assigned to · '+(g.assignedTo||'Unassigned')));
+  if(g.next) c.append(el('p',{class:'next'},g.next));
+  const L=g.links||{}, files=REPO_LINKS.filter(([k])=>L[k]).map(([k,n])=>el('a',{href:L[k],target:'_blank',rel:'noopener'},n));
+  if(files.length) c.append(el('div',{class:'files'},files));
+  c.append(el('div',{class:'foot'},
+    el('span',{class:'meta'},(g.code&&!String(g.version||'').startsWith(g.code)?[g.code,g.version]:[g.version||g.code]).filter(Boolean).join(' · ')),
+    el('div',{class:'foot-actions'},
+      S.canWrite?el('button',{class:'btn small',type:'button',onclick:()=>openNote(g.id)},'+ Note'):null,
+      el('button',{class:'linkish',type:'button',onclick:()=>openGuide(g.id)},S.canWrite?'Edit →':'Details →'))));
+  return c;
 }
 
 /* ---------- board ---------- */
-function linkRow(g){
-  const L=g.links||{}; const kids=LINKS.filter(([k])=>L[k]).map(([k,n])=>el('a',{href:L[k],target:'_blank',rel:'noopener'},n));
-  return kids.length?el('div',{class:'links'},kids):null;
+function visible(g){
+  if(S.filter.streams.size&&!(g.streams||[]).some(s=>S.filter.streams.has(s))) return false;
+  const q=S.filter.q.trim().toLowerCase(); if(!q) return true;
+  return [g.title,g.code,g.approver,g.assignedTo,g.source,g.bpo,g.ticket,g.next,g.notes,g.version,(g.streams||[]).join(' ')].join(' ').toLowerCase().includes(q);
 }
-function roundPill(g){
-  const r=activeRound(g.id); if(!r) return null;
-  const n=(r.questions||[]).length; let cls='pill',txt='';
-  if(r.status==='ready'){cls+=' flag';txt=plural(n,'question')+' to send';}
-  else if(r.status==='sent'){cls+=' wait';txt='With '+firstName(r.askTo)+(r.sentAt?' since '+fmtDate(r.sentAt,false):'');}
-  else if(r.status==='answered'){cls+=' apply';txt='Answers to apply';}
-  else {cls+=' ghost';txt='Round being drafted';}
-  return el('button',{class:cls,type:'button',title:'Open the question round',onclick:()=>goRound(r.id)},txt);
-}
-function itemsPill(g){
-  const it=g.items; if(!it||it.open==null) return null;
-  if(!it.open) return el('span',{class:'pill done'},'Items closed');
-  return el('span',{class:'pill'+(it.blocking?' stop':''),title:'Open items in the validation register'},it.open+' open'+(it.blocking?' · '+it.blocking+' blocking':''));
-}
-function card(g,compact){
-  const drag=S.canWrite;
-  const c=el('article',{class:'card'+(compact?' compact':''),draggable:drag?'true':'false','data-id':g.id});
-  if(drag){
-    c.addEventListener('dragstart',e=>{e.dataTransfer.setData('text/plain',g.id);e.dataTransfer.effectAllowed='move';c.classList.add('dragging');});
-    c.addEventListener('dragend',()=>c.classList.remove('dragging'));
-  }
-  c.append(el('div',{class:'card-top'},
-    el('span',{class:'code'+(g.code?'':' none')},g.code||'No code'),
-    el('span',{class:'stream'},(g.streams||[]).join(' · '))));
-  c.append(el('button',{class:'card-title',type:'button',onclick:()=>openGuide(g.id)},g.title||'Untitled guide'));
-  if(compact){ const l=linkRow(g); if(l) c.append(l); return c; }
-  const ppl=[g.approver&&('Approver: '+g.approver),g.assignedTo&&('With: '+g.assignedTo)].filter(Boolean).join(' · ');
-  if(ppl) c.append(el('div',{class:'people'},ppl));
-  const pills=[roundPill(g),itemsPill(g),g.confirmed===false?el('span',{class:'pill ghost',title:'Daniel has not confirmed this lane yet'},'Lane to confirm'):null].filter(Boolean);
-  if(pills.length) c.append(el('div',{class:'pills'},pills));
-  if(g.next) c.append(el('p',{class:'next'},g.next));
-  const lr=linkRow(g); if(lr) c.append(lr);
-  c.append(el('div',{class:'card-foot'},
-    el('span',null,g.updatedAt?'Updated '+fmtDate(g.updatedAt,false):''),
-    S.canWrite?el('button',{class:'linkish',type:'button',onclick:()=>openNote(g.id)},'+ Note'):null));
-  return c;
-}
-function lane(stage,list,compact,grid){
-  const sec=el('section',{class:'lane'+(grid?' grid':''),'data-stage':stage.id,'aria-label':stage.name});
-  const head=el('div',{class:'lane-head'},
-    el('div',{class:'lane-title'},el('h2',null,stage.name),el('span',{class:'count'},String(list.length))),
-    stage.turn?el('div',{class:'turn'},'Turn: ',el('b',null,stage.turn)):null,
-    el('div',{class:'hint'},stage.desc));
-  sec.append(head);
-  if(!list.length) sec.append(el('div',{class:'lane-empty'},S.loaded?'Nothing here':''));
-  else sec.append(el('div',{class:'lane-cards'},list.map(g=>card(g,compact))));
+function lane(st,list){
+  const sec=el('section',{class:'lane','data-stage':st.id,'aria-label':st.name,style:'--lane-color:'+st.color});
+  sec.append(el('div',{class:'lane-head'},
+    el('div',{class:'lane-title'},el('h2',null,st.name),el('div',{class:'lane-tools'},el('span',{class:'count'},String(list.length)),
+      el('button',{class:'eye',type:'button','aria-label':'Hide the '+st.name+' column',title:'Hide this column',onclick:()=>{S.hidden.add(st.id);saveHidden();renderBoard();}},icon(EYE_OFF)))),
+    el('p',{class:'lane-desc'},st.desc),
+    st.turn?el('div',{class:'turn'},'Turn: ',el('b',null,st.turn)):null));
+  sec.append(list.length?el('div',{class:'lane-cards'},list.map(card)):el('div',{class:'lane-empty'},S.loaded?'Nothing here':''));
   if(S.canWrite){
     sec.addEventListener('dragover',e=>{e.preventDefault();e.dataTransfer.dropEffect='move';sec.classList.add('over');});
     sec.addEventListener('dragleave',e=>{if(!sec.contains(e.relatedTarget)) sec.classList.remove('over');});
-    sec.addEventListener('drop',e=>{e.preventDefault();sec.classList.remove('over');const id=e.dataTransfer.getData('text/plain');if(id) moveTo(id,stage.id);});
+    sec.addEventListener('drop',e=>{e.preventDefault();sec.classList.remove('over');const id=e.dataTransfer.getData('text/plain');if(id) moveTo(id,st.id);});
   }
   return sec;
 }
 function renderBoard(){
-  const all=[...S.guides.values()]; const vis=all.filter(visible);
+  const all=[...S.guides.values()], vis=all.filter(visible);
   const by=id=>vis.filter(g=>g.stage===id);
   const sortActive=(a,b)=>String(b.updatedAt||'').localeCompare(String(a.updatedAt||''));
   const sortCode=(a,b)=>codeNum(a.code)-codeNum(b.code)||String(a.title).localeCompare(String(b.title));
-  const sc=$('lanesScroll'); const left=sc.scrollLeft;
-  $('lanes').replaceChildren(...STAGES.filter(s=>s.id!=='published').map(s=>lane(s,by(s.id).sort(sortActive),false)));
+  const sc=$('boardScroll'), left=sc.scrollLeft;
+  $('board').replaceChildren(...STAGES.filter(s=>!S.hidden.has(s.id)).map(s=>lane(s,by(s.id).sort(s.id==='published'?sortCode:sortActive))));
   sc.scrollLeft=left;
-  const pub=STAGES.find(s=>s.id==='published');
-  $('published').replaceChildren(lane(pub,by('published').sort(sortCode),true,true));
-  $('side').replaceChildren(...SIDE.map(s=>lane(s,by(s.id).sort(sortCode),s.id==='withdrawn')));
-  const inProgress=all.filter(g=>['intake','drafting','sme','updating','signoff','ready'].includes(g.stage)).length;
-  const toSend=[...S.rounds.values()].filter(r=>r.status==='ready').length;
-  const withSme=[...S.rounds.values()].filter(r=>r.status==='sent').length;
+  const hl=$('hiddenLanes'), hid=STAGES.filter(s=>S.hidden.has(s.id));
+  hl.hidden=!hid.length; hl.replaceChildren(...(hid.length?['Hidden columns:',...hid.map(s=>el('button',{class:'pill purple',type:'button',title:'Show this column again',onclick:()=>{S.hidden.delete(s.id);saveHidden();renderBoard();}},s.name+' ('+by(s.id).length+') · Show'))]:[]));
   const sum=$('summary'); sum.replaceChildren();
   if(!S.loaded){ sum.append('Loading the board…'); return; }
   if(!all.length){ sum.append(S.canWrite?'No guides yet. Add the first with + Add guide, or ask Claude in chat.':'No guides on the board yet.'); return; }
-  sum.append(...[el('span',null,el('b',null,String(all.length)),' guides'),el('span',null,el('b',null,String(inProgress)),' in progress'),
-    el('span',null,el('b',null,String(all.filter(g=>g.stage==='published').length)),' published'),
-    toSend?el('span',null,el('b',null,String(toSend)),' '+(toSend===1?'round':'rounds')+' to send'):null,
-    withSme?el('span',null,el('b',null,String(withSme)),' with the SME'):null,
-    vis.length!==all.length?el('span',null,'Showing ',el('b',null,String(vis.length))):null].filter(Boolean));
+  const toConfirm=all.filter(g=>g.confirmed===false&&!['published','withdrawn'].includes(g.stage)).length;
+  const blocked=all.filter(g=>g.stage==='blocked').length, withdrawn=all.filter(g=>g.stage==='withdrawn').length;
+  sum.append(...[el('span',null,el('b',null,plural(all.length,'guide'))),'·',
+    el('span',null,toConfirm+' need stage confirmation'),'·',
+    el('span',null,all.filter(g=>g.stage==='published').length+' published'),
+    blocked?el('button',{class:'pill red',type:'button',onclick:()=>openSide('blocked')},blocked+' blocked'):null,
+    withdrawn?el('button',{class:'pill',type:'button',onclick:()=>openSide('withdrawn')},withdrawn+' withdrawn'):null,
+    vis.length!==all.length?el('span',{class:'hint'},'Showing '+vis.length):null].filter(Boolean));
+  const fb=$('filterBadge'); fb.hidden=!S.filter.streams.size; fb.textContent=String(S.filter.streams.size);
 }
-function renderChips(){
-  const used=new Set(); S.guides.forEach(g=>(g.streams||[]).forEach(s=>used.add(s)));
-  const list=STREAMS.filter(s=>used.has(s)).concat([...used].filter(s=>!STREAMS.includes(s)));
-  $('streamChips').replaceChildren(...list.map(s=>el('button',{type:'button','aria-pressed':S.filter.streams.has(s)?'true':'false',onclick:()=>{S.filter.streams.has(s)?S.filter.streams.delete(s):S.filter.streams.add(s);renderChips();renderBoard();}},s)));
+function openSide(stage){
+  const s=SIDE.find(x=>x.id===stage); $('sideDlgTitle').textContent=s.name+' guides'; $('sideDlgHint').textContent=s.desc+' Drag is not available here: change the stage under Edit.';
+  const list=[...S.guides.values()].filter(g=>g.stage===stage).sort((a,b)=>String(a.title).localeCompare(String(b.title)));
+  $('sideList').replaceChildren(...(list.length?list.map(card):[el('p',{class:'hint'},'None.')]));
+  $('sideList').querySelectorAll('.card').forEach(c=>c.setAttribute('draggable','false'));
+  $('sideDlg').showModal();
 }
 
+/* ---------- filter ---------- */
+$('filterBtn').addEventListener('click',()=>{
+  const used=new Set(STREAMS); S.guides.forEach(g=>(g.streams||[]).forEach(s=>used.add(s)));
+  $('filterStreams').replaceChildren(...[...used].map(s=>el('label',{class:'check'},el('input',{type:'checkbox',value:s,checked:S.filter.streams.has(s)}),s)));
+  $('filterDlg').showModal();
+});
+$('filterClear').addEventListener('click',()=>$('filterStreams').querySelectorAll('input').forEach(i=>i.checked=false));
+$('filterForm').addEventListener('submit',e=>{ e.preventDefault(); S.filter.streams=new Set([...$('filterStreams').querySelectorAll('input:checked')].map(i=>i.value)); $('filterDlg').close(); renderBoard(); });
+
 /* ---------- guide dialog ---------- */
-function streamOptions(container,selected,name){
-  const extra=[...selected].filter(s=>!STREAMS.includes(s));
-  container.replaceChildren(...STREAMS.concat(extra).map(s=>el('label',{class:'check'},el('input',{type:'checkbox',name,value:s,checked:selected.has(s)}),s)));
+function streamBoxes(sel){
+  const extra=[...sel].filter(s=>!STREAMS.includes(s));
+  $('f-streams').replaceChildren(...STREAMS.concat(extra).map(s=>el('label',{class:'check'},el('input',{type:'checkbox',value:s,checked:sel.has(s)}),s)));
 }
+$('f-addstream').addEventListener('click',()=>{
+  const v=$('f-newstream').value.trim(); if(!v) return;
+  const ex=[...$('f-streams').querySelectorAll('input')].find(i=>i.value.toLowerCase()===v.toLowerCase());
+  if(ex) ex.checked=true; else $('f-streams').append(el('label',{class:'check'},el('input',{type:'checkbox',value:v,checked:true}),v));
+  $('f-newstream').value='';
+});
+let refSeq=0;
+function refRow(r){
+  r=r||{}; const id=r.id||('ref-'+Date.now().toString(36)+(refSeq++));
+  const row=el('div',{class:'ref','data-id':id},
+    el('label',null,'Document title',el('input',{type:'text',class:'r-title',value:r.title||''})),
+    el('label',null,'Document link',el('input',{type:'url',class:'r-url',value:r.url||'',placeholder:'https://…'})),
+    el('button',{class:'close rm',type:'button','aria-label':'Remove this reference',title:'Remove',onclick:()=>row.remove()},'×'),
+    el('label',{class:'wide'},'Where it is used in this guide',el('input',{type:'text',class:'r-loc',value:r.location||''})),
+    el('label',{class:'check'},el('input',{type:'checkbox',class:'r-check',checked:!!r.needsReview}),'Needs checking'));
+  row._orig=r; return row;
+}
+$('f-addref').addEventListener('click',()=>{ const r=refRow(); $('f-refs').append(r); r.querySelector('.r-title').focus(); });
 async function renderHistory(g){
-  const list=$('f-history'); list.replaceChildren();
+  const list=$('f-history');
   const entries=(g.history||[]).map(h=>({at:h.at,by:h.by||'chatgpt',text:h.text})).concat(S.log.filter(l=>l.guideId===g.id).map(l=>({at:l.at,by:l.by,text:l.text})));
   entries.sort((a,b)=>String(b.at).localeCompare(String(a.at)));
-  if(!entries.length){ list.append(el('li',null,'No history yet.')); return; }
-  const ids=[...new Set(entries.map(e=>e.by).filter(b=>b&&b!=='claude'&&b!=='chatgpt'&&b!=='board'))];
+  if(!entries.length){ list.replaceChildren(el('li',null,'No updates yet.')); return; }
+  const ids=[...new Set(entries.map(e=>e.by).filter(b=>b&&!['claude','chatgpt','board'].includes(b)))];
   if(ids.length&&S.user){ try{ Object.assign(S.profiles,await S.user.profiles(ids)); }catch(_){} }
   const who=b=>b==='claude'?'Claude':b==='chatgpt'?'ChatGPT board':b==='board'?'Board':((S.profiles[b]&&S.profiles[b].name)||'Someone');
-  list.replaceChildren(...entries.slice(0,80).map(e=>el('li',null,el('div',{class:'who'},fmtDT(e.at)+' · '+who(e.by)),el('div',{class:'pre'},e.text||''))));
+  list.replaceChildren(...entries.slice(0,100).map(e=>el('li',null,el('div',{class:'who'},fmtDT(e.at)+' · '+who(e.by)),el('div',{class:'pre'},e.text||''))));
 }
-function openGuide(id){
-  const g=id?S.guides.get(id):{title:'',code:'',stage:'intake',confirmed:true,streams:[],links:{}};
-  if(id&&!g) return;
-  S.editing=id||null;
-  $('guideDlgEyebrow').textContent=id?(g.code||'No code')+' · '+(STAGE_NAME[g.stage]||''):'New guide';
+function openGuide(id,focus){
+  const g=id?S.guides.get(id):{title:'',stage:'intake',confirmed:true,streams:[],links:{},references:[]};
+  if(id&&!g) return; S.editing=id||null;
+  $('guideDlgEyebrow').textContent=id?'Guide details':'New guide';
   $('guideDlgTitle').textContent=id?g.title:'Add a guide';
-  $('f-stage').replaceChildren(...ALL_STAGES.map(s=>el('option',{value:s.id,selected:s.id===g.stage},s.name)));
-  for(const k of ['title','code','assignedTo','source','approver','bpo','ticket','version','next','notes']) $('f-'+k).value=g[k]||'';
+  $('f-stage').replaceChildren(...ALL.map(s=>el('option',{value:s.id,selected:s.id===g.stage},s.name)));
+  for(const k of TEXT_FIELDS) $('f-'+k).value=g[k]||'';
   $('f-confirmed').checked=g.confirmed!==false;
-  streamOptions($('f-streams'),new Set(g.streams||[]),'stream');
-  const L=g.links||{}; for(const [k] of LINKS) $('f-l-'+k).value=L[k]||'';
+  streamBoxes(new Set(g.streams||[])); $('f-newstream').value='';
+  const L=g.links||{}; for(const k of LINK_KEYS) $('f-l-'+k).value=L[k]||'';
   const it=g.items; $('f-items').replaceChildren();
-  if(it&&it.open!=null) $('f-items').append(el('p',{class:'hint',style:'font-size:13px'},'Validation register: '+it.open+' open'+(it.blocking!=null?' ('+it.blocking+' blocking)':'')+(it.carried?', plus '+it.carried+' carried from topic drafts':'')+(it.comments!=null?'; '+it.comments+' Word review comments':'')+'. Claude keeps these counts in step with the register.'));
-  const refs=g.references||[]; $('f-refs').replaceChildren();
-  if(refs.length) $('f-refs').append(el('div',{class:'eyebrow',style:'color:var(--muted);margin-bottom:4px'},'Documents this guide links to'),el('ul',{class:'refs'},refs.map(r=>el('li',null,r.url?el('a',{href:r.url,target:'_blank',rel:'noopener'},r.title||r.url):(r.title||''),r.needsReview?el('span',{class:'pill flag',style:'margin-left:6px'},'Check link'):null))));
-  renderHistory(g);
-  const ro=!S.canWrite; $('guideForm').querySelectorAll('input,select,textarea').forEach(i=>i.disabled=ro); $('guideSave').hidden=ro;
+  if(it&&it.open!=null) $('f-items').append(el('p',{class:'hint',style:'font-size:13px'},'Validation register: '+it.open+' guide-level items open'+(it.blocking!=null?' ('+it.blocking+' blocking)':'')+(it.comments!=null?'; '+it.comments+' Word review comments':'')+'. Claude keeps these counts in step with the register.'));
+  const qbox=$('f-questions'); qbox.replaceChildren();
+  if(id){ const r=activeRound(id); qbox.append(el('div',{class:'pills'},el('span',{class:'hint',style:'font-size:12px;font-weight:600;color:var(--ink);margin-right:4px'},'SME questions'),questionPills(g))); if(r&&r.statusNote) qbox.append(el('p',{class:'hint',style:'margin-top:6px'},r.statusNote)); }
+  $('f-refs').replaceChildren(...(g.references||[]).map(refRow));
+  if(!(g.references||[]).length) $('f-refs').append(el('p',{class:'hint',id:'refEmpty'},'No reference links recorded yet. This does not mean the guide contains no links.'));
+  if(id) renderHistory(g); else $('f-history').replaceChildren(el('li',null,'Updates appear here once the guide is saved.'));
+  const ro=!S.canWrite;
+  $('guideForm').querySelectorAll('input,select,textarea').forEach(i=>i.disabled=ro);
+  ['guideSave','f-addref','f-addstream'].forEach(b=>$(b).hidden=ro);
   $('guideDlg').showModal();
+  if(focus==='refs') setTimeout(()=>$('refSection').scrollIntoView({block:'start'}),60);
 }
 function formValues(){
-  const v={}; for(const k of ['title','code','assignedTo','source','approver','bpo','ticket','version','next','notes']) v[k]=$('f-'+k).value.trim();
+  const v={}; for(const k of TEXT_FIELDS) v[k]=$('f-'+k).value.trim();
   v.stage=$('f-stage').value; v.confirmed=$('f-confirmed').checked;
   v.streams=[...$('f-streams').querySelectorAll('input:checked')].map(i=>i.value);
-  v.links={}; for(const [k] of LINKS){ const x=$('f-l-'+k).value.trim(); if(x) v.links[k]=x; }
+  v.links={}; for(const k of LINK_KEYS){ const x=$('f-l-'+k).value.trim(); if(x) v.links[k]=x; }
+  v.references=[...$('f-refs').querySelectorAll('.ref')].map(row=>{
+    const o=row._orig||{}; const r={...o,id:row.dataset.id,title:row.querySelector('.r-title').value.trim(),url:row.querySelector('.r-url').value.trim(),location:row.querySelector('.r-loc').value.trim(),needsReview:row.querySelector('.r-check').checked};
+    return r;
+  }).filter(r=>r.title||r.url);
   return v;
 }
-const norm=x=>JSON.stringify(x??'');
+const same=(a,b)=>JSON.stringify(a??'')===JSON.stringify(b??'');
 $('guideForm').addEventListener('submit',e=>{
   e.preventDefault(); if(!S.canWrite||!S.db) return;
   const v=formValues(); if(!v.title){ $('f-title').focus(); return; }
   if(!S.editing){
     const base=('g-'+(v.code||v.title)).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,60)||'g-guide';
     let id=base,i=2; while(S.guides.has(id)) id=base+'-'+(i++);
-    enqueue(async()=>{
-      await S.db.collection('guides').doc(id).set({...v,createdAt:nowISO(),updatedAt:nowISO(),updatedBy:S.me||'board'});
-      await logAdd({guideId:id,kind:'create',text:'Added to the board in '+STAGE_NAME[v.stage]});
-      toast('Guide added');
-    });
-    $('guideDlg').close(); return;
+    $('guideDlg').close();
+    enqueue(async()=>{ await S.db.collection('guides').doc(id).set({...v,createdAt:nowISO(),updatedAt:nowISO(),updatedBy:S.me||'board'}); await logAdd({guideId:id,kind:'create',text:'Added to the board in '+STAGE_NAME[v.stage]}); toast('Guide added'); });
+    return;
   }
-  const g=S.guides.get(S.editing); const ch={};
-  for(const k of FIELDS){ const cur=k==='links'?(g.links||{}):k==='streams'?(g.streams||[]):k==='confirmed'?(g.confirmed!==false):(g[k]||''); if(norm(cur)!==norm(v[k])) ch[k]=v[k]; }
+  const g=S.guides.get(S.editing), ch={};
+  const cur={...Object.fromEntries(TEXT_FIELDS.map(k=>[k,g[k]||''])),stage:g.stage,confirmed:g.confirmed!==false,streams:g.streams||[],links:g.links||{},references:g.references||[]};
+  for(const k of Object.keys(cur)) if(!same(cur[k],v[k])) ch[k]=v[k];
   $('guideDlg').close();
   if(!Object.keys(ch).length) return;
-  const text=ch.stage?'Moved from '+(STAGE_NAME[g.stage]||g.stage)+' to '+STAGE_NAME[ch.stage]+(Object.keys(ch).length>1?'; changed '+Object.keys(ch).filter(k=>k!=='stage').map(k=>FIELD_LABEL[k]).join(', '):''):'Changed '+Object.keys(ch).map(k=>FIELD_LABEL[k]).join(', ');
+  const keys=Object.keys(ch).filter(k=>k!=='stage');
+  const text=ch.stage?'Moved from '+(STAGE_NAME[g.stage]||g.stage)+' to '+STAGE_NAME[ch.stage]+(keys.length?'; changed '+keys.map(k=>LABEL[k]).join(', '):''):'Changed '+keys.map(k=>LABEL[k]).join(', ');
   saveGuide(S.editing,ch,text);
 });
 
-/* ---------- notes ---------- */
-function openNote(id){ const g=S.guides.get(id); if(!g) return; S.noteFor=id; $('noteGuide').textContent=(g.code?g.code+' · ':'')+g.title; $('noteText').value=''; $('noteDlg').showModal(); }
-$('noteForm').addEventListener('submit',e=>{
-  e.preventDefault(); const t=$('noteText').value.trim(); if(!t||!S.noteFor) return; const id=S.noteFor;
-  $('noteDlg').close();
-  enqueue(async()=>{ await logAdd({guideId:id,kind:'note',text:t}); toast('Note added'); });
-});
-
-/* ---------- questions ---------- */
-function adoText(r){
-  if(r.customText) return r.customText;
-  const lines=[r.intro||('Hi '+firstName(r.askTo)+',')];
-  lines.push('');
-  for(const q of r.questions||[]){
-    lines.push(q.n+(q.theme?' — '+q.theme:''));
-    if(q.text) lines.push(q.text);
-    for(const p of q.parts||[]) lines.push('('+p.label+') '+p.text);
-    lines.push('');
+/* ---------- questions popup ---------- */
+function setQEditing(on){
+  const t=$('qText'); t.readOnly=!on;
+  $('qEdit').hidden=on||!S.canWrite; $('qSave').hidden=!on; $('qCancel').hidden=!on||!S.q.round; $('qCopy').hidden=on;
+  $('qAsk').hidden=!(on&&!S.q.round);
+  if(on){ t.focus(); }
+}
+function openQuestions(gid,roundId){
+  const g=S.guides.get(gid); if(!g) return;
+  const rs=roundsFor(gid), r=roundId?S.rounds.get(roundId):(activeRound(gid)||rs[rs.length-1]);
+  S.q={gid,round:r||null,form:null};
+  $('qDlgTitle').textContent=g.title+' · SME questions';
+  renderQ();
+  $('qDlg').showModal();
+  if(!r&&S.canWrite) setQEditing(true); else setQEditing(false);
+}
+function renderQ(){
+  const g=S.guides.get(S.q.gid), r=S.q.round;
+  const meta=$('qMeta'); meta.replaceChildren();
+  if(r){
+    const st=STATUS[r.status]||['',''], n=qCount(r), items=itemCount(r);
+    meta.append(el('span',{class:'pill '+st[0]},st[1]),
+      el('span',null,[r.title,r.askTo&&('for '+r.askTo),(r.ticket||g.ticket)&&('ticket #'+(r.ticket||g.ticket)),n&&(plural(n,'question')+(items?' covering '+plural(items,'register item'):'')),r.sentAt&&('sent '+fmtDate(r.sentAt)),r.answeredAt&&('answered '+fmtDate(r.answeredAt))].filter(Boolean).join(' · ')));
+    if(r.statusNote) meta.append(el('span',{class:'pill dashed'},r.statusNote));
+  } else meta.append(el('span',{class:'pill'},'No questions recorded for this ticket yet'));
+  $('qAskTo').value=(r&&r.askTo)||g.approver||'';
+  const t=$('qText'); t.value=r?adoText(r):''; t.placeholder='Paste or write the questions for this ticket, for example Q01 — Topic, then the question.';
+  const form=$('qForm'); form.replaceChildren();
+  if(S.q.form==='sent'){
+    const d=el('input',{type:'date',id:'qSentDate',value:todayISO()}), tk=el('input',{type:'text',id:'qSentTicket',value:r.ticket||g.ticket||'',inputmode:'numeric'});
+    form.append(el('div',{class:'inline-form'},el('div',{class:'row'},el('label',null,'Sent on',d),el('label',null,'Ticket number',tk)),
+      el('div',{class:'row'},el('button',{class:'btn primary',type:'button',onclick:()=>{const tick=tk.value.trim();updateRound(r,{status:'sent',sentAt:d.value||todayISO(),ticket:tick},'Questions sent to '+(r.askTo||'the SME')+(tick?' in ticket #'+tick:''));S.q.form=null;}},'Save'),el('button',{class:'btn',type:'button',onclick:()=>{S.q.form=null;renderQ();}},'Cancel'))));
+  } else if(S.q.form==='answer'){
+    const ta=el('textarea',{id:'qAnswerText',style:'min-height:150px',placeholder:'Paste the SME reply, keeping the question numbers'});
+    form.append(el('div',{class:'inline-form'},el('label',null,'The SME’s answers',ta),
+      el('div',{class:'row'},el('button',{class:'btn primary',type:'button',onclick:()=>{const a=ta.value.trim();if(!a){ta.focus();return;}updateRound(r,{status:'answered',answer:a,answeredAt:todayISO()},'Answers recorded for '+(r.title||'the questions'));S.q.form=null;}},'Save answers'),el('button',{class:'btn',type:'button',onclick:()=>{S.q.form=null;renderQ();}},'Cancel')),
+      el('p',{class:'hint'},'Claude applies the answers to the Word guide and the register at the next session, then closes the items they answer.')));
+    setTimeout(()=>ta.focus(),0);
   }
-  lines.push(r.outro||'Please reply against each question number. If a question does not apply, say so and I will close it.');
-  return lines.join('\n');
+  $('qAnswer').replaceChildren(...(r&&r.answer?[el('div',{class:'hint',style:'font-weight:600;color:var(--ink);margin-bottom:4px'},'SME answers'),el('div',{class:'answer'},r.answer)]:[]));
+  const qi=$('qItems'); qi.replaceChildren();
+  if(r&&(r.questions||[]).length){
+    qi.append(el('details',null,el('summary',null,'What each question closes in the register'),el('ul',{class:'qlist'},r.questions.map(q=>el('li',{class:'q'},el('span',{class:'q-n'},q.n),
+      el('div',null,el('b',null,q.theme||''),(q.parts||[]).length?el('ul',{class:'parts'},q.parts.map(p=>el('li',null,'('+p.label+') ',(p.items||[]).map(i=>el('span',{class:'item'},i))))):el('div',null,(q.items||[]).map(i=>el('span',{class:'item'},i)))))))));
+    if(r.customText) qi.append(el('p',{class:'hint',style:'margin-top:6px'},'The text above was edited on the board; the list keeps the items each original question closes.'));
+  }
+  const others=roundsFor(S.q.gid).filter(x=>!r||x.id!==r.id);
+  $('qEarlier').replaceChildren(...(others.length?[el('div',{class:'pills'},el('span',{class:'hint',style:'margin-right:4px'},'Other rounds:'),others.map(x=>el('button',{class:'pill '+((STATUS[x.status]||[''])[0]),type:'button',onclick:()=>{S.q.round=x;S.q.form=null;renderQ();setQEditing(false);}},(x.title||'Round')+' · '+(STATUS[x.status]||['',''])[1])))]:[]));
+  const acts=$('qStatusActions'); acts.replaceChildren();
+  if(r&&S.canWrite&&!S.q.form){
+    if(r.status==='ready') acts.append(el('button',{class:'btn',type:'button',onclick:()=>{S.q.form='sent';renderQ();}},'Mark as sent'));
+    if(r.status==='draft') acts.append(el('button',{class:'btn',type:'button',onclick:()=>updateRound(r,{status:'ready',statusNote:''},'Questions marked ready to send')},'Mark ready to send'));
+    if(r.status==='sent') acts.append(el('button',{class:'btn',type:'button',onclick:()=>{S.q.form='answer';renderQ();}},'Record answers'));
+  }
 }
-async function copyRound(r,btn){
-  const text=adoText(r);
-  try{ await navigator.clipboard.writeText(text); toast('Copied for the ADO ticket'); }
-  catch(_){ S.openForms[r.id]='copy'; renderQuestions(); toast('Select the text and copy it'); }
-}
-function updateRound(r,changes,logText){
+function updateRound(r,changes,text){
   if(!S.db||!S.canWrite) return;
   return enqueue(async()=>{
     await S.db.collection('rounds').doc(r.id).update({...changes,updatedAt:nowISO(),updatedBy:S.me||'board'});
-    for(const gid of r.guideIds||[]) await logAdd({guideId:gid,kind:'round',roundId:r.id,text:logText});
+    for(const gid of r.guideIds||[]) await logAdd({guideId:gid,kind:'round',roundId:r.id,text});
     toast('Saved');
   });
 }
-function roundBlock(r){
-  const n=(r.questions||[]).length, items=roundItems(r);
-  const codes=(r.guideIds||[]).map(id=>{const g=S.guides.get(id);return el('span',{class:'code'+(g&&g.code?'':' none')},g?(g.code||g.title):id);});
-  const statusPill={ready:['flag','To send'],sent:['wait','With '+firstName(r.askTo)],answered:['apply','Answers to apply'],closed:['done','Closed'],draft:['ghost','Being drafted']}[r.status]||['','Unknown'];
-  const meta=[r.askTo&&('For '+r.askTo),r.ticket&&('ADO '+r.ticket),plural(n,'question')+(items?' covering '+plural(items,'item'):''),r.sentAt&&('sent '+fmtDate(r.sentAt)),r.answeredAt&&('answered '+fmtDate(r.answeredAt))].filter(Boolean).join(' · ');
-  const actions=[];
-  if(r.status!=='closed') actions.push(el('button',{class:'btn small',type:'button',onclick:e=>copyRound(r,e.currentTarget)},'Copy for ADO'));
-  if(S.canWrite){
-    if(r.status==='ready') actions.push(el('button',{class:'btn small primary',type:'button',onclick:()=>{S.openForms[r.id]='sent';renderQuestions();}},'Mark as sent'));
-    if(r.status==='sent') actions.push(el('button',{class:'btn small primary',type:'button',onclick:()=>{S.openForms[r.id]='answer';renderQuestions();}},'Record the answers'));
-    if(r.status!=='closed') actions.push(el('button',{class:'btn small',type:'button',onclick:()=>{S.openForms[r.id]='edit';renderQuestions();}},'Edit text'));
-  }
-  const box=el('article',{class:'round',id:'round-'+r.id},
-    el('div',{class:'round-head'},
-      el('div',{style:'min-width:0'},el('h3',null,codes,r.title||'Question round',el('span',{class:'pill '+statusPill[0]},statusPill[1])),el('div',{class:'round-meta'},meta),r.statusNote?el('div',{class:'round-meta'},el('span',{class:'pill ghost'},r.statusNote)):null),
-      el('div',{class:'round-actions'},actions)));
-  if(r.answer) box.append(el('div',{class:'answer'},r.answer));
-  const qs=el('ol',{class:'qlist'},(r.questions||[]).map(q=>el('li',{class:'q'},
-    el('span',{class:'q-n'},q.n),
-    el('div',{class:'q-body'},el('div',{class:'q-theme'},q.theme||''),q.text?el('p',{class:'q-text'},q.text):null,
-      (q.parts||[]).length?el('ul',{class:'parts'},q.parts.map(p=>el('li',null,el('span',{class:'q-n'},'('+p.label+')'),el('div',null,p.text,(p.items||[]).length?el('div',{class:'items'},p.items.map(i=>el('span',{class:'item'},i))):null)))):null,
-      (q.items||[]).length?el('div',{class:'items'},q.items.map(i=>el('span',{class:'item'},i))):null))));
-  box.append(el('details',{open:r.status==='ready'||r.status==='draft'?true:null},el('summary',null,'Questions and the items they close'),qs));
-  const f=S.openForms[r.id];
-  if(f==='sent'){
-    const d=el('input',{type:'date',id:'sent-'+r.id,value:todayISO()}), t=el('input',{type:'text',id:'tk-'+r.id,value:r.ticket||'',inputmode:'numeric'});
-    box.append(el('div',{class:'inline-form'},el('div',{class:'row'},el('label',null,'Sent on',d),el('label',null,'ADO ticket',t),
-      el('button',{class:'btn primary',type:'button',onclick:()=>{delete S.openForms[r.id];updateRound(r,{status:'sent',sentAt:d.value||todayISO(),ticket:t.value.trim()},(r.title||'Question round')+' sent to '+(r.askTo||'the SME'));}},'Save'),
-      el('button',{class:'btn',type:'button',onclick:()=>{delete S.openForms[r.id];renderQuestions();}},'Cancel'))));
-  } else if(f==='answer'){
-    const ta=el('textarea',{id:'ans-'+r.id,style:'min-height:160px',placeholder:'Paste the SME reply, keeping their question numbers'});
-    box.append(el('div',{class:'inline-form'},el('label',null,'The SME’s answers',ta),el('div',{class:'row'},
-      el('button',{class:'btn primary',type:'button',onclick:()=>{const a=ta.value.trim();if(!a){ta.focus();return;}delete S.openForms[r.id];updateRound(r,{status:'answered',answer:a,answeredAt:todayISO()},'Answers recorded for '+(r.title||'the question round'));}},'Save answers'),
-      el('button',{class:'btn',type:'button',onclick:()=>{delete S.openForms[r.id];renderQuestions();}},'Cancel')),el('p',{class:'hint'},'Claude applies the answers to the Word guide and the register at the next session, then closes the items they answer.')));
-  } else if(f==='edit'||f==='copy'){
-    const ta=el('textarea',{id:'txt-'+r.id,style:'min-height:240px'}); ta.value=adoText(r);
-    const row=el('div',{class:'row'});
-    if(f==='edit'&&S.canWrite) row.append(el('button',{class:'btn primary',type:'button',onclick:()=>{delete S.openForms[r.id];updateRound(r,{customText:ta.value},'Edited the text of '+(r.title||'the question round'));}},'Save text'));
-    row.append(el('button',{class:'btn',type:'button',onclick:()=>{delete S.openForms[r.id];renderQuestions();}},f==='copy'?'Done':'Cancel'));
-    box.append(el('div',{class:'inline-form'},el('label',null,f==='copy'?'Select all and copy':'Text sent to the SME',ta),row,f==='edit'?el('p',{class:'hint'},'Your edit replaces the generated text when you copy. The question list above stays as the record of which items each question closes.'):null));
-    if(f==='copy') setTimeout(()=>{ta.focus();ta.select();},0);
-  }
-  return box;
-}
-function renderQuestions(){
-  const host=$('rounds'); const rs=[...S.rounds.values()];
-  const groups=[
-    ['answered','Answers to apply','Claude’s turn: the SME has replied.'],
-    ['ready','To send','Your turn: copy each round into its ADO ticket and mark it sent.'],
-    ['sent','With the SME','Waiting for replies.'],
-    ['draft','Being drafted','Claude is still putting these together.'],
-    ['closed','Closed','Answered and applied.']];
-  host.replaceChildren();
-  if(!S.loaded){ host.append(el('div',{class:'notice'},'Loading the question rounds…')); return; }
-  if(!rs.length){ host.append(el('div',{class:'notice'},'No question rounds yet. Claude drafts one for each guide from its open register items.')); return; }
-  for(const [st,title,sub] of groups){
-    const list=rs.filter(r=>r.status===st).sort((a,b)=>String(b.updatedAt||'').localeCompare(String(a.updatedAt||'')));
-    if(!list.length) continue;
-    const g=el('section',{class:'group'},el('h2',null,title,el('span',{class:'count'},String(list.length))),el('p',null,sub));
-    if(st==='closed'){ const d=el('details',null,el('summary',{style:'cursor:pointer;font-weight:600;color:var(--accent)'},'Show closed rounds')); list.forEach(r=>d.append(roundBlock(r))); g.append(d); }
-    else list.forEach(r=>g.append(roundBlock(r)));
-    host.append(g);
-  }
-}
-function goRound(id){ location.hash='questions'; setTimeout(()=>{const n=$('round-'+id); if(n) n.scrollIntoView({block:'start'});},50); }
+$('qEdit').addEventListener('click',()=>setQEditing(true));
+$('qCancel').addEventListener('click',()=>{ renderQ(); setQEditing(false); });
+$('qSave').addEventListener('click',()=>{
+  if(!S.db||!S.canWrite) return;
+  const text=$('qText').value.trim(), g=S.guides.get(S.q.gid), r=S.q.round;
+  if(!text){ $('qText').focus(); return; }
+  if(r){ if(text!==adoText(r).trim()) updateRound(r,{customText:text},'Edited the questions'); setQEditing(false); return; }
+  const base='r-'+(g.code||g.id.replace(/^g-/,'')).toLowerCase().replace(/[^a-z0-9]+/g,'-');
+  let n=1; while(S.rounds.has(base+'-'+n)) n++;
+  const id=base+'-'+n;
+  const doc={title:(g.code||g.title)+' Round '+n,guideIds:[g.id],askTo:$('qAskTo').value.trim()||g.approver||'',ticket:g.ticket||'',status:'ready',customText:text,questions:[],createdAt:nowISO(),updatedAt:nowISO(),updatedBy:S.me||'board'};
+  enqueue(async()=>{ await S.db.collection('rounds').doc(id).set(doc); await logAdd({guideId:g.id,kind:'round',roundId:id,text:'Questions added for '+(doc.askTo||'the SME')}); toast('Questions saved'); });
+  S.q.round={id,...doc}; renderQ(); setQEditing(false);
+});
+$('qCopy').addEventListener('click',async()=>{
+  const t=$('qText'); if(!t.value.trim()) return;
+  try{ await navigator.clipboard.writeText(t.value); toast('Copied. Paste it into the ticket.'); }
+  catch(_){ t.focus(); t.select(); toast('Press Ctrl+C to copy the selected text'); }
+});
+
+/* ---------- notes ---------- */
+function openNote(id){ const g=S.guides.get(id); if(!g) return; S.noteFor=id; $('noteGuide').textContent=g.title; $('noteText').value=''; $('noteDlg').showModal(); }
+$('noteForm').addEventListener('submit',e=>{ e.preventDefault(); const t=$('noteText').value.trim(); if(!t||!S.noteFor) return; const id=S.noteFor; $('noteDlg').close(); enqueue(async()=>{ await logAdd({guideId:id,kind:'note',text:t}); toast('Note added'); }); });
+
+/* ---------- settings ---------- */
+$('settingsBtn').addEventListener('click',()=>{ $('s-ado').value=(S.settings&&S.settings.adoPattern)||''; $('settingsDlg').showModal(); });
+$('settingsForm').addEventListener('submit',e=>{
+  e.preventDefault(); if(!S.db||!S.canWrite) return;
+  const v=$('s-ado').value.trim();
+  if(v&&(!/^https:\/\//.test(v)||!v.includes('{id}'))){ toast('Use an https:// link with {id} where the ticket number goes.'); $('s-ado').focus(); return; }
+  $('settingsDlg').close();
+  enqueue(async()=>{ await S.db.collection('meta').doc('settings').set({...(S.settings||{}),adoPattern:v,updatedAt:nowISO(),updatedBy:S.me||'board'}); toast('Settings saved'); });
+});
 
 /* ---------- weekly sync ---------- */
 function renderMeetings(){
@@ -794,73 +868,65 @@ function renderMeetings(){
   const ms=[...S.meetings.values()].sort((a,b)=>String(b.date).localeCompare(String(a.date)));
   if(!ms.length){ host.append(el('div',{class:'notice'},'No meetings recorded yet. Add the notes from the next weekly sync.')); return; }
   for(const m of ms){
-    const guides=(m.guideIds||[]).map(id=>S.guides.get(id)).filter(Boolean);
+    const gs=(m.guideIds||[]).map(id=>S.guides.get(id)).filter(Boolean);
     host.append(el('article',{class:'meeting'},
-      el('div',{class:'toolbar'},el('div',null,el('div',{class:'hint'},fmtDate(m.date)),el('h3',null,m.title||'Meeting')),
-        el('span',{class:'pill '+(m.processed?'done':'flag')},m.processed?'Processed by Claude':'New: Claude reads it next session')),
-      guides.length?el('div',{class:'pills'},guides.map(g=>el('button',{class:'pill',type:'button',onclick:()=>openGuide(g.id)},(g.code?g.code+' ':'')+g.title))):null,
-      m.decisions?el('div',null,el('div',{class:'eyebrow',style:'color:var(--muted)'},'Decisions and priorities'),el('pre',null,m.decisions)):null,
-      m.actions?el('div',null,el('div',{class:'eyebrow',style:'color:var(--muted)'},'Actions and owners'),el('pre',null,m.actions)):null,
-      m.notes?el('details',null,el('summary',null,'Meeting notes'),el('pre',{style:'margin-top:8px'},m.notes)):null));
+      el('div',{class:'bar'},el('div',null,el('div',{class:'hint'},fmtDate(m.date)),el('h3',null,m.title||'Meeting')),el('span',{class:'pill '+(m.processed?'green':'red')},m.processed?'Processed by Claude':'New: Claude reads it next session')),
+      gs.length?el('div',{class:'pills'},gs.map(g=>el('button',{class:'pill purple',type:'button',onclick:()=>openGuide(g.id)},g.title))):null,
+      m.decisions?el('div',null,el('div',{class:'next-label',style:'margin-bottom:4px'},'Decisions and priorities'),el('p',{class:'pre'},m.decisions)):null,
+      m.actions?el('div',null,el('div',{class:'next-label',style:'margin-bottom:4px'},'Actions and owners'),el('p',{class:'pre'},m.actions)):null,
+      m.notes?el('details',null,el('summary',null,'Meeting notes'),el('p',{class:'pre',style:'margin-top:8px'},m.notes)):null));
   }
 }
 $('addMeeting').addEventListener('click',()=>{
   $('m-date').value=todayISO(); $('m-title').value='PG Prioritisation & Weekly Sync'; $('m-notes').value='';
-  const gs=[...S.guides.values()].filter(g=>!['published','withdrawn'].includes(g.stage)).sort((a,b)=>codeNum(a.code)-codeNum(b.code));
-  $('m-guides').replaceChildren(...gs.map(g=>el('label',{class:'check'},el('input',{type:'checkbox',value:g.id}),(g.code?g.code+' ':'')+g.title)));
+  const gs=[...S.guides.values()].filter(g=>!['published','withdrawn'].includes(g.stage)).sort((a,b)=>String(a.title).localeCompare(String(b.title)));
+  $('m-guides').replaceChildren(...gs.map(g=>el('label',{class:'check'},el('input',{type:'checkbox',value:g.id}),g.title)));
   $('meetingDlg').showModal();
 });
 $('meetingForm').addEventListener('submit',e=>{
   e.preventDefault(); if(!S.db||!S.canWrite) return;
   const m={date:$('m-date').value,title:$('m-title').value.trim()||'Meeting',notes:$('m-notes').value.trim(),guideIds:[...$('m-guides').querySelectorAll('input:checked')].map(i=>i.value),processed:false,createdAt:nowISO(),by:S.me||'board'};
   if(!m.notes){ $('m-notes').focus(); return; }
-  $('meetingDlg').close();
-  enqueue(async()=>{ await S.db.collection('meetings').add(m); toast('Meeting notes saved'); });
+  $('meetingDlg').close(); enqueue(async()=>{ await S.db.collection('meetings').add(m); toast('Meeting notes saved'); });
 });
 
 /* ---------- numbering ---------- */
 function renderNumbering(){
-  const host=$('numbering'); host.replaceChildren(); const R=S.register;
-  host.append(el('div',{class:'toolbar'},el('div',null,el('h2',{style:'font-size:22px'},'PG Numbering'),
-    el('p',{class:'hint',style:'font-size:14px;margin-top:4px;max-width:72ch'},'A read-only view of the master register'+(R&&R.version?' v'+R.version:'')+'. The register in the repository (standards/numbering) is the authority: ask in chat to allocate, withdraw or release a code. A code marked “On the board” has a card.'))));
+  const host=$('numbering'), R=S.register; host.replaceChildren();
+  host.append(el('div',null,el('h2',{style:'font-size:22px;color:var(--band)'},'PG Numbering'),
+    el('p',{class:'hint',style:'font-size:14px;margin-top:4px;max-width:74ch'},'A read-only view of the master register'+(R&&R.version?' v'+R.version:'')+'. The register in the repository (standards/numbering) is the authority: ask in chat to allocate, withdraw or release a code. “On the board” means the guide has a card.')));
   if(!R){ host.append(el('div',{class:'notice'},S.loaded?'The register has not been loaded onto the board yet.':'Loading the register…')); return; }
   const onBoard=new Map(); S.guides.forEach(g=>{ if(g.code) onBoard.set(String(g.code),g); });
   const bySeries={}; (R.families||[]).forEach(f=>{(bySeries[f.series]=bySeries[f.series]||[]).push(f);});
-  const codeCell=f=>{
-    const list=(R.guides||[]).filter(g=>{const n=parseInt(g.code,10);return n>=f.start&&n<=f.end;});
-    if(!list.length) return el('span',{class:'hint'},'—');
-    return el('div',{class:'codes'},list.map(g=>{const b=onBoard.get(String(g.code)); return el('div',null,el('span',{class:'code'},g.code),' ',g.title,' ',b?el('button',{class:'pill done',type:'button',onclick:()=>openGuide(b.id)},'On the board'):el('span',{class:'pill ghost'},'No card'));}));
-  };
-  for(const [series,fams] of Object.entries(bySeries)){
-    host.append(el('section',{class:'series'},el('h3',null,series),el('div',{class:'table-wrap'},el('table',null,
-      el('thead',null,el('tr',null,el('th',null,'Range'),el('th',null,'Family'),el('th',null,'Assigned codes'))),
-      el('tbody',null,fams.map(f=>el('tr',null,el('td',{class:'range'},f.start+'–'+f.end),el('td',null,el('div',null,f.family),f.scope?el('div',{class:'hint'},f.scope):null),el('td',null,codeCell(f)))))))));
-  }
+  const boardBtn=code=>{const b=onBoard.get(String(code)); return b?el('button',{class:'pill green',type:'button',onclick:()=>openGuide(b.id)},'On the board'):el('span',{class:'pill'},'No card');};
+  const cell=f=>{ const list=(R.guides||[]).filter(g=>{const n=parseInt(g.code,10);return n>=f.start&&n<=f.end;}); return list.length?el('div',{class:'codes'},list.map(g=>el('div',null,el('span',{class:'code'},g.code),' ',g.title,' ',boardBtn(g.code)))):el('span',{class:'hint'},'—'); };
+  for(const [series,fams] of Object.entries(bySeries)) host.append(el('section',{class:'series'},el('h3',null,series),el('div',{class:'table-wrap'},el('table',null,
+    el('thead',null,el('tr',null,el('th',null,'Range'),el('th',null,'Family'),el('th',null,'Assigned codes'))),
+    el('tbody',null,fams.map(f=>el('tr',null,el('td',{class:'range'},f.start+'–'+f.end),el('td',null,el('div',null,f.family),f.scope?el('div',{class:'hint'},f.scope):null),el('td',null,cell(f)))))))));
   const W=R.withdrawn_codes||[];
   if(W.length) host.append(el('section',{class:'series'},el('h3',null,'Withdrawn codes'),el('div',{class:'table-wrap'},el('table',null,el('thead',null,el('tr',null,el('th',null,'Code'),el('th',null,'Guide'),el('th',null,'Successor'),el('th',null,'Release'))),el('tbody',null,W.map(w=>el('tr',null,el('td',null,el('span',{class:'code'},w.code)),el('td',null,w.title,el('div',{class:'hint'},'Withdrawn '+fmtDate(w.withdrawn)+(w.decision?' ('+w.decision+')':''))),el('td',null,w.successor_code||''),el('td',null,w.release||''))))))));
-  const T=R.test_series;
-  if(T) host.append(el('section',{class:'series'},el('h3',null,'Test series ('+(T.format||'T-NNNN')+')'),el('p',{class:'hint',style:'font-size:14px;max-width:72ch'},T.purpose||''),el('div',{class:'table-wrap'},el('table',null,el('thead',null,el('tr',null,el('th',null,'T-number'),el('th',null,'Document'),el('th',null,'Allocated'),el('th',null,'Status'))),el('tbody',null,(T.allocations||[]).map(a=>{const b=onBoard.get(a.code);return el('tr',null,el('td',null,el('span',{class:'code'},a.code)),el('td',null,a.title,' ',b?el('button',{class:'pill done',type:'button',onclick:()=>openGuide(b.id)},'On the board'):null),el('td',null,fmtDate(a.allocated)),el('td',null,a.status||''));}))))));
+  const O=R.other_series||R.test_series;
+  if(O) host.append(el('section',{class:'series'},el('h3',null,'Other series ('+(O.format||'O-NNNN')+')'),el('p',{class:'hint',style:'font-size:14px;max-width:74ch'},O.purpose||''),
+    O.rules?el('ul',{class:'prose',style:'padding-left:20px;font-size:13.5px'},O.rules.map(t=>el('li',null,t))):null,
+    el('div',{class:'table-wrap'},el('table',null,el('thead',null,el('tr',null,el('th',null,'Number'),el('th',null,'Document'),el('th',null,'Allocated'),el('th',null,'Status'))),el('tbody',null,(O.allocations||[]).map(a=>el('tr',null,el('td',null,el('span',{class:'code'},a.code)),el('td',null,a.title,' ',boardBtn(a.code)),el('td',null,fmtDate(a.allocated)),el('td',null,a.status||''))))))));
   const H=R.historical_mappings||[];
-  if(H.length) host.append(el('details',{class:'series'},el('summary',{style:'cursor:pointer;font-weight:600;color:var(--accent)'},'Former codes and their successors ('+H.length+')'),el('div',{class:'table-wrap',style:'margin-top:8px'},el('table',null,el('thead',null,el('tr',null,el('th',null,'Former'),el('th',null,'Successor'),el('th',null,'Former title'))),el('tbody',null,H.map(h=>el('tr',null,el('td',{class:'range'},h.former_code),el('td',{class:'range'},h.successor_code),el('td',null,h.former_title))))))));
+  if(H.length) host.append(el('details',{class:'series'},el('summary',null,'Former codes and their successors ('+H.length+')'),el('div',{class:'table-wrap',style:'margin-top:8px'},el('table',null,el('thead',null,el('tr',null,el('th',null,'Former'),el('th',null,'Successor'),el('th',null,'Former title'))),el('tbody',null,H.map(h=>el('tr',null,el('td',{class:'range'},h.former_code),el('td',{class:'range'},h.successor_code),el('td',null,h.former_title))))))));
   const RU=R.rules||[];
-  if(RU.length) host.append(el('section',{class:'series'},el('h3',null,'Rules for every guide'),el('ul',{class:'prose',style:'padding-left:20px'},RU.map(r=>el('li',null,el('b',null,r.title+'. '),r.text)))));
+  if(RU.length) host.append(el('section',{class:'series'},el('h3',null,'Rules for every guide'),el('ul',{class:'prose',style:'padding-left:20px;font-size:13.5px'},RU.map(r=>el('li',null,el('b',null,r.title+'. '),r.text)))));
 }
 
-/* ---------- routing and render ---------- */
-const TABS=['board','questions','weekly-sync','numbering','how-we-work'];
+/* ---------- routing ---------- */
+const TABS=['board','weekly-sync','numbering','how-we-work'];
 function route(){
-  const t=(location.hash||'').replace('#','');
-  S.tab=TABS.includes(t)?t:'board';
-  TABS.forEach(x=>{ $('panel-'+x).hidden=x!==S.tab; });
+  const t=(location.hash||'').replace('#',''); S.tab=TABS.includes(t)?t:'board';
+  TABS.forEach(x=>$('panel-'+x).hidden=x!==S.tab);
   document.querySelectorAll('.tabs a').forEach(a=>{ if(a.dataset.tab===S.tab) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
   render();
 }
 function render(){
   renderSync();
-  if(S.tab==='board'){ renderChips(); renderBoard(); }
-  else if(S.tab==='questions') renderQuestions();
-  else if(S.tab==='weekly-sync') renderMeetings();
-  else if(S.tab==='numbering') renderNumbering();
+  if(S.tab==='board') renderBoard(); else if(S.tab==='weekly-sync') renderMeetings(); else if(S.tab==='numbering') renderNumbering();
+  if($('qDlg').open&&S.q&&!S.q.form&&$('qText').readOnly){ if(S.q.round&&S.rounds.has(S.q.round.id)) S.q.round=S.rounds.get(S.q.round.id); renderQ(); }
 }
 window.addEventListener('hashchange',route);
 $('search').addEventListener('input',e=>{ S.filter.q=e.target.value; renderBoard(); });
@@ -869,6 +935,7 @@ document.querySelectorAll('dialog').forEach(d=>{
   d.addEventListener('click',e=>{ if(e.target===d) d.close(); });
   d.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',()=>d.close()));
 });
+$('qDlg').addEventListener('close',()=>{ S.q=null; });
 
 /* ---------- boot ---------- */
 async function boot(){
@@ -882,12 +949,12 @@ async function boot(){
   if(!db){ clearTimeout(timer); S.loaded=true; S.canWrite=false; note('This view cannot reach the board’s data. Open the board on claude.ai to see the guides.'); render(); return; }
   S.db=db;
   const done={guides:false,rounds:false,meetings:false,meta:false};
-  const mark=(k,snap)=>{ done[k]=true; if(!snap.metadata.fromCache&&Object.values(done).every(Boolean)){ clearTimeout(timer); note(''); } if(!S.loaded&&done.guides){ S.loaded=true; } render(); };
+  const mark=(k,snap)=>{ done[k]=true; if(!snap.metadata.fromCache&&Object.values(done).every(Boolean)){ clearTimeout(timer); note(''); } if(done.guides) S.loaded=true; render(); };
   const fail=e=>{ clearTimeout(timer); S.loaded=true; if(e&&e.code==='revoked'){ S.canWrite=false; note('Access to this board changed. Reload the page to see what you can do now.'); } else note('The board stopped updating. Reload the page to reconnect.'); render(); };
   db.collection('guides').onSnapshot(s=>{ S.guides=new Map(s.docs.map(d=>[d.id,{id:d.id,...d.data()}])); mark('guides',s); },fail);
   db.collection('rounds').onSnapshot(s=>{ S.rounds=new Map(s.docs.map(d=>[d.id,{id:d.id,...d.data()}])); mark('rounds',s); },fail);
   db.collection('meetings').onSnapshot(s=>{ S.meetings=new Map(s.docs.map(d=>[d.id,{id:d.id,...d.data()}])); mark('meetings',s); },fail);
-  db.collection('meta').onSnapshot(s=>{ S.register=null; S.sync=null; s.docs.forEach(d=>{ if(d.id==='register') S.register=d.data(); if(d.id==='sync') S.sync=d.data(); }); mark('meta',s); },fail);
+  db.collection('meta').onSnapshot(s=>{ S.register=null; S.sync=null; S.settings={}; s.docs.forEach(d=>{ if(d.id==='register') S.register=d.data(); if(d.id==='sync') S.sync=d.data(); if(d.id==='settings') S.settings=d.data()||{}; }); mark('meta',s); },fail);
   db.collection('log').orderBy('at','desc').limit(500).onSnapshot(s=>{ S.log=s.docs.map(d=>({id:d.id,...d.data()})); render(); },fail);
 }
 boot();
