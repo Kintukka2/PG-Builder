@@ -5,9 +5,9 @@
 | Guide (editable source) | [`CLAUDE-230-Collections PG v3.0.docx`](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.docx) |
 | Review PDF | [`CLAUDE-230-Collections PG v3.0.pdf`](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.pdf) |
 | Markdown preview | [`PG-230-Collections-v3.0-DRAFT.md`](../01-procedure-guides/PG-230-Collections-v3.0-DRAFT.md) |
-| Status | Working draft v3.0 (D-052; ADO Task 16886). Shared with the SME for review only (SME review pack of 8 November; D-052 amendment); needs BPO sign-off. Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-063); no content or item changes. Version 2.3, then 2.4, stays published until 3.0 passes its gates. |
-| Last updated | 2026-11-16 |
-| Items | 10 guide-level items (`G230`), all open: 10 blocking, 0 non-blocking. 126 carried review comments from the topic drafts. |
+| Status | Working draft v3.0 (D-052; ADO Task 16886). Shared with the SME for review only (SME review pack of 8 November; D-052 amendment); needs BPO sign-off. Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-063); no content or item changes. Review comments cut to one per open blocking item on 2026-11-17 (D-067, D-075). Version 2.3, then 2.4, stays published until 3.0 passes its gates. |
+| Last updated | 2026-11-17 |
+| Items | 10 guide-level items (`G230`), all open: 10 blocking, 0 non-blocking. **93 Word review comments** (D-067): 11 guide-level and 82 carried from the topic drafts; 43 removed (section 4.1). |
 
 This file is the guide's **question log** (D-016). It holds the guide-level items, which are scoped to this guide and never renumbered. Review comments carried from the topic drafts keep their ID and draft name, for example *Aged Balances VG-03*, and their source register stays the record for them: an answer recorded there applies here (D-048). Each open item that affects the text is a Word review comment by "Validation register" (VR).
 
@@ -64,31 +64,81 @@ This file is the guide's **question log** (D-016). It holds the guide-level item
 
 ---
 
-## 4. Carried review comments by section
+## 4. Review comments by section
 
-Every review comment in the Word guide, in document order. IDs not starting `G230` are carried from the topic drafts.
+Every review comment in the Word guide, in document order, after D-067 (one comment per item, open blocking items only; D-075). IDs not starting `G230` are carried from the topic drafts.
 
 | Section | Items |
 |---|---|
 | Cover and version history | `G230-05` |
 | Part 1 High-level process | `G230-06`, `G230-07` |
-| Part 1 Key concepts | `Favorites VG-01`, `Favorites VG-18`, `Favorites VG-19`, `Personalized Views VG-01`, `Workspace VG-09`, `Workspace VG-04 to VG-07`, `Workspace VG-08`, `Workspace VG-11`, `Overdue Customers VG-01`, `Overdue Customers VG-02 / VG-03`, `Overdue Customers VG-04`, `Overdue Customers VG-09`, `Aged Balances VG-01`, `Aged Balances VG-09`, `Aged Balances VG-13`, `Customer Account VG-06`, `Customer Account VG-07 / VG-08`, `Customer Account VG-12`, `Customer Account VG-13`, `Notes and Activities VG-01 / VG-02`, `Notes and Activities VG-05 / VG-06`, `Notes and Activities VG-12`, `Notes and Activities VG-11`, `Collection Activities VG-05 / VG-06`, `Collection Activities VG-09 / VG-10`, `Collection Activities VG-14`, `Statement Preview VG-03`, `Statement Preview VG-05`, `Statement Preview VG-06`, `Statement Preview VG-05`, `Statement Preview VG-15`, `Statement Distribution VG-05 / VG-06`, `Statement Distribution VG-08`, `Statement Distribution VG-09`, `Statement Distribution VG-12 / VG-13`, `Statement Distribution VG-17`, `Customer Invoices VG-03 / VG-04`, `Customer Invoices VG-02`, `Customer Invoices VG-12` |
-| Topic 1.1 Open the Customer Credit and Collections Workspace | `Workspace VG-01`, `Workspace VG-02`, `Workspace VG-03 / VG-10` |
+| Part 1 Key concepts | `Favorites VG-01`, `Personalized Views VG-01`, `Workspace VG-08`, `Overdue Customers VG-09`, `Aged Balances VG-01`, `Collection Activities VG-09 / VG-10`, `Statement Distribution VG-12 / VG-13`, `Statement Distribution VG-17` |
+| Topic 1.1 Open the Customer Credit and Collections Workspace | `Workspace VG-01`, `Workspace VG-02` |
 | Topic 1.2 Locate Collection Work in the Workspace | `Workspace VG-14`, `Workspace VG-04`, `Workspace VG-05`, `Workspace VG-06`, `Workspace VG-07` |
 | Topic 2.1 Review Customers Overdue | `Overdue Customers VG-01`, `Overdue Customers VG-02`, `Overdue Customers VG-05`, `Overdue Customers VG-06`, `Overdue Customers VG-04` |
-| Topic 2.2 Review Customer Aged Balances | `Aged Balances VG-02`, `Aged Balances VG-04 / VG-12`, `Aged Balances VG-03 / VG-05`, `Aged Balances VG-05`, `Aged Balances VG-06`, `G230-08` |
+| Topic 2.2 Review Customer Aged Balances | `Aged Balances VG-02`, `Aged Balances VG-04 / VG-12`, `Aged Balances VG-03 / VG-05`, `Aged Balances VG-06`, `G230-08` |
 | Topic 2.3 Filter Aged Balances by Customer or Currency | `Aged Balances VG-14`, `Aged Balances VG-07`, `Aged Balances VG-08` |
-| Topic 2.4 Investigate a Customer Account | `Customer Account VG-01 / VG-03`, `Customer Account VG-02`, `Customer Account VG-04`, `Customer Account VG-05`, `Customer Account VG-06`, `Customer Account VG-07`, `Customer Account VG-09`, `Customer Account VG-15`, `Customer Account VG-10`, `Customer Account VG-11`, `Customer Account VG-12` |
-| Topic 2.5 Review Customer Notes | `Notes and Activities VG-01 / VG-02`, `Notes and Activities VG-03`, `Notes and Activities VG-04`, `Notes and Activities VG-06`, `Notes and Activities VG-13` |
-| Topic 2.6 Review All Customer Activities | `Notes and Activities VG-14`, `Notes and Activities VG-07`, `Notes and Activities VG-08`, `Notes and Activities VG-09`, `Notes and Activities VG-10`, `G230-09` |
+| Topic 2.4 Investigate a Customer Account | `Customer Account VG-01 / VG-03`, `Customer Account VG-02`, `Customer Account VG-04`, `Customer Account VG-05`, `Customer Account VG-06`, `Customer Account VG-07`, `Customer Account VG-09`, `Customer Account VG-10`, `Customer Account VG-11`, `Customer Account VG-12` |
+| Topic 2.5 Review Customer Notes | `Notes and Activities VG-01 / VG-02`, `Notes and Activities VG-03`, `Notes and Activities VG-04`, `Notes and Activities VG-06` |
+| Topic 2.6 Review All Customer Activities | `Notes and Activities VG-14`, `Notes and Activities VG-07`, `Notes and Activities VG-08`, `Notes and Activities VG-09`, `G230-09` |
 | Topic 2.7 Update Customer Details | `G230-10` |
 | Topic 4.1 Check an Overdue Balance Before Contact | `Overdue Customers VG-14`, `Overdue Customers VG-07`, `Overdue Customers VG-08`, `Overdue Customers VG-10` |
 | Topic 5 Record a Customer Collection Activity | `Collection Activities VG-01 / VG-03`, `Collection Activities VG-02`, `Collection Activities VG-04`, `Collection Activities VG-05`, `Collection Activities VG-07`, `Collection Activities VG-08 / VG-09`, `Collection Activities VG-12`, `Collection Activities VG-13`, `G230-11` |
-| Topic 6.1 Preview and Download a Customer Statement | `Statement Preview VG-01`, `Statement Preview VG-02`, `Statement Preview VG-03`, `Statement Preview VG-04`, `Statement Preview VG-05`, `Statement Preview VG-06`, `Statement Preview VG-07`, `Statement Preview VG-08`, `Statement Preview VG-09`, `Statement Preview VG-10 / VG-12`, `Statement Preview VG-11`, `Statement Preview VG-24` |
-| Topic 6.2 Generate and Send a Customer Statement | `Statement Distribution VG-01`, `Statement Distribution VG-02`, `Statement Distribution VG-03`, `Statement Distribution VG-04`, `Statement Distribution VG-05 / VG-06`, `Statement Distribution VG-07`, `Statement Distribution VG-08`, `Statement Distribution VG-09`, `Statement Distribution VG-10`, `Statement Distribution VG-11`, `G230-12` |
-| Topic 7.1 View and Download a Customer Invoice | `Customer Invoices VG-01`, `Customer Invoices VG-02`, `Customer Invoices VG-03`, `Customer Invoices VG-04`, `Customer Invoices VG-05`, `Customer Invoices VG-06`, `Customer Invoices VG-07`, `Customer Invoices VG-08 / VG-10`, `Customer Invoices VG-09`, `Customer Invoices VG-21`, `G230-13` |
+| Topic 6.1 Preview and Download a Customer Statement | `Statement Preview VG-01`, `Statement Preview VG-02`, `Statement Preview VG-03`, `Statement Preview VG-04`, `Statement Preview VG-05`, `Statement Preview VG-06`, `Statement Preview VG-07`, `Statement Preview VG-09`, `Statement Preview VG-10 / VG-12` |
+| Topic 6.2 Generate and Send a Customer Statement | `Statement Distribution VG-01`, `Statement Distribution VG-02`, `Statement Distribution VG-03`, `Statement Distribution VG-04`, `Statement Distribution VG-05 / VG-06`, `Statement Distribution VG-07`, `Statement Distribution VG-08`, `Statement Distribution VG-09`, `Statement Distribution VG-10`, `G230-12` |
+| Topic 7.1 View and Download a Customer Invoice | `Customer Invoices VG-01`, `Customer Invoices VG-02`, `Customer Invoices VG-03`, `Customer Invoices VG-04`, `Customer Invoices VG-05`, `Customer Invoices VG-07`, `Customer Invoices VG-08 / VG-10`, `G230-13` |
 | Topic 7.3 Change Customer Status | `G230-03` |
 | Part 3: Reports | `G230-14` |
+
+### 4.1 Comments removed under D-067 (17 November 2026)
+
+The items stay open in their registers; only the Word comment is gone. Items commented in Part 1 Key concepts and again in a procedure keep the procedure comment.
+
+| Item | Where the comment was | Why it was removed |
+|---|---|---|
+| `Favorites VG-18` | Part 1 Key concepts | Non-blocking: stays open in the [Favorites register](PG-AR-Configure-Collections-Favourites-Validation.md) |
+| `Favorites VG-19` | Part 1 Key concepts | Non-blocking: stays open in the [Favorites register](PG-AR-Configure-Collections-Favourites-Validation.md) |
+| `Workspace VG-09` | Part 1 Key concepts | Non-blocking: stays open in the [Workspace register](PG-AR-Workspace-Validation.md) |
+| `Workspace VG-04 to VG-07` | Part 1 Key concepts | Duplicate: the four items have their own comments in 1.2 |
+| `Workspace VG-11` | Part 1 Key concepts | Non-blocking: stays open in the [Workspace register](PG-AR-Workspace-Validation.md) |
+| `Overdue Customers VG-01` | Part 1 Key concepts | Duplicate: the comment in Topic 2.1 Review Customers Overdue covers it |
+| `Overdue Customers VG-02 / VG-03` | Part 1 Key concepts | Duplicate: the comment in Topic 2.1 Review Customers Overdue covers it |
+| `Overdue Customers VG-04` | Part 1 Key concepts | Duplicate: the comment in Topic 2.1 Review Customers Overdue covers it |
+| `Aged Balances VG-09` | Part 1 Key concepts | Non-blocking: stays open in the [Aged Balances register](PG-AR-Aged-Balances-Validation.md) |
+| `Aged Balances VG-13` | Part 1 Key concepts | Non-blocking: stays open in the [Aged Balances register](PG-AR-Aged-Balances-Validation.md) |
+| `Customer Account VG-06` | Part 1 Key concepts | Duplicate: the comment in Topic 2.4 Investigate a Customer Account covers it |
+| `Customer Account VG-07 / VG-08` | Part 1 Key concepts | Duplicate: the comment in Topic 2.4 Investigate a Customer Account covers it |
+| `Customer Account VG-12` | Part 1 Key concepts | Duplicate: the comment in Topic 2.4 Investigate a Customer Account covers it |
+| `Customer Account VG-13` | Part 1 Key concepts | Non-blocking: stays open in the [Customer Account register](PG-AR-Customer-Account-Validation.md) |
+| `Notes and Activities VG-01 / VG-02` | Part 1 Key concepts | Duplicate: the comment in Topic 2.5 Review Customer Notes covers it |
+| `Notes and Activities VG-05 / VG-06` | Part 1 Key concepts | Duplicate: the comment in Topic 2.5 Review Customer Notes covers it |
+| `Notes and Activities VG-12` | Part 1 Key concepts | Non-blocking: stays open in the [Notes and Activities register](PG-AR-Notes-and-Activities-Validation.md) |
+| `Notes and Activities VG-11` | Part 1 Key concepts | Non-blocking: stays open in the [Notes and Activities register](PG-AR-Notes-and-Activities-Validation.md) |
+| `Collection Activities VG-05 / VG-06` | Part 1 Key concepts | Duplicate: the comment in Topic 5 Record a Customer Collection Activity covers it |
+| `Collection Activities VG-14` | Part 1 Key concepts | Non-blocking: stays open in the [Collection Activities register](PG-AR-Collection-Activities-Validation.md) |
+| `Statement Preview VG-03` | Part 1 Key concepts | Duplicate: the comment in Topic 6.1 Preview and Download a Customer Statement covers it |
+| `Statement Preview VG-05` | Part 1 Key concepts | Duplicate: the comment in Topic 6.1 Preview and Download a Customer Statement covers it |
+| `Statement Preview VG-06` | Part 1 Key concepts | Duplicate: the comment in Topic 6.1 Preview and Download a Customer Statement covers it |
+| `Statement Preview VG-05` | Part 1 Key concepts | Duplicate: the comment in Topic 6.1 Preview and Download a Customer Statement covers it |
+| `Statement Preview VG-15` | Part 1 Key concepts | Non-blocking: stays open in the [Statement Preview register](PG-AR-Statement-Preview-Validation.md) |
+| `Statement Distribution VG-05 / VG-06` | Part 1 Key concepts | Duplicate: the comment in Topic 6.2 Generate and Send a Customer Statement covers it |
+| `Statement Distribution VG-08` | Part 1 Key concepts | Duplicate: the comment in Topic 6.2 Generate and Send a Customer Statement covers it |
+| `Statement Distribution VG-09` | Part 1 Key concepts | Duplicate: the comment in Topic 6.2 Generate and Send a Customer Statement covers it |
+| `Customer Invoices VG-03 / VG-04` | Part 1 Key concepts | Duplicate: the comment in Topic 7.1 View and Download a Customer Invoice covers it |
+| `Customer Invoices VG-02` | Part 1 Key concepts | Duplicate: the comment in Topic 7.1 View and Download a Customer Invoice covers it |
+| `Customer Invoices VG-12` | Part 1 Key concepts | Non-blocking: stays open in the [Customer Invoices register](PG-AR-Customer-Invoices-Validation.md) |
+| `Workspace VG-03 / VG-10` | Topic 1.1 Open the Customer Credit and Collections Workspace | Non-blocking: stays open in the [Workspace register](PG-AR-Workspace-Validation.md) |
+| `Aged Balances VG-05` | Topic 2.2 Review Customer Aged Balances | Duplicate: the comment in Topic 2.2 Review Customer Aged Balances covers it |
+| `Customer Account VG-15` | Topic 2.4 Investigate a Customer Account | Non-blocking: stays open in the [Customer Account register](PG-AR-Customer-Account-Validation.md) |
+| `Notes and Activities VG-13` | Topic 2.5 Review Customer Notes | Non-blocking: stays open in the [Notes and Activities register](PG-AR-Notes-and-Activities-Validation.md) |
+| `Notes and Activities VG-10` | Topic 2.6 Review All Customer Activities | Non-blocking: stays open in the [Notes and Activities register](PG-AR-Notes-and-Activities-Validation.md) |
+| `Statement Preview VG-08` | Topic 6.1 Preview and Download a Customer Statement | Non-blocking: stays open in the [Statement Preview register](PG-AR-Statement-Preview-Validation.md) |
+| `Statement Preview VG-11` | Topic 6.1 Preview and Download a Customer Statement | Non-blocking: stays open in the [Statement Preview register](PG-AR-Statement-Preview-Validation.md) |
+| `Statement Preview VG-24` | Topic 6.1 Preview and Download a Customer Statement | Non-blocking: stays open in the [Statement Preview register](PG-AR-Statement-Preview-Validation.md) |
+| `Statement Distribution VG-11` | Topic 6.2 Generate and Send a Customer Statement | Non-blocking: stays open in the [Statement Distribution register](PG-AR-Statement-Distribution-Validation.md) |
+| `Customer Invoices VG-06` | Topic 7.1 View and Download a Customer Invoice | Non-blocking: stays open in the [Customer Invoices register](PG-AR-Customer-Invoices-Validation.md) |
+| `Customer Invoices VG-09` | Topic 7.1 View and Download a Customer Invoice | Non-blocking: stays open in the [Customer Invoices register](PG-AR-Customer-Invoices-Validation.md) |
+| `Customer Invoices VG-21` | Topic 7.1 View and Download a Customer Invoice | Non-blocking: stays open in the [Customer Invoices register](PG-AR-Customer-Invoices-Validation.md) |
 
 ---
 
@@ -151,3 +201,4 @@ Review comments in the nine topic drafts that are not review comments in this gu
 | 2026-11-09 | Topic 2.8 now links to 240 Direct Debit and Credit Card Payments, topic 1, instead of repeating the steps (D-053). `G230-04` closed: decided at the 9 November meeting. |
 | 2026-11-10 | References to 221 Customer Payment Corrections now point to 220 Customer Payments v3.0 (topics 2.3, 3.1, 3.3 and 3.6), which absorbed 221 (D-055). |
 | 2026-11-16 | Formatting brought in line with D-059 to D-061 (D-063): Bullet 1.2 bullets (nested items keep their level), topic numbers in link text, the five *Legacy 230* comparison notes and three phrases in the ACTION: REVIEW REQUIREMENT style, four bold pseudo-headings in Key concepts made Heading 5, eight one-row concept tables made paragraphs, and the *Customer Payment Management* column header corrected from Timing to Description. Files renamed with the `CLAUDE-` prefix (D-056). The SME review copy of 8 November is the earlier file: merge any comments from it into this one. |
+| 2026-11-17 | Review comments cut under D-067 (D-075): 136 → 93, one per open blocking item at the place it matters most; the 43 removed are listed in section 4.1 and their items stay open in their registers. First question round drafted on the board (D-069), on hold until the SME review of the 8 November pack comes back. The PDF beside the Word file is out of date (D-064). |
