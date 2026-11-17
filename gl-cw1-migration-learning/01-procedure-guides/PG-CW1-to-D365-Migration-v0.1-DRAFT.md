@@ -2,7 +2,7 @@
 
 > **WORKING DRAFT. Not validated or approved.**
 >
-> This is a Markdown preview of the Word guide [`CLAUDE-T-0001-CW1 to D365 Migration PG v0.1.docx`](CLAUDE-T-0001-CW1%20to%20D365%20Migration%20PG%20v0.1.docx). It converts the *CW1 to D365 Migration - Go-Live Manual* (version date October 2026) to the PG master template (D-058). **The Word file is the editable source.**
+> This is a Markdown preview of the Word guide [`CLAUDE-O-0001-CW1 to D365 Migration PG v0.1.docx`](CLAUDE-O-0001-CW1%20to%20D365%20Migration%20PG%20v0.1.docx). It converts the *CW1 to D365 Migration - Go-Live Manual* (version date October 2026) to the PG master template (D-058). **The Word file is the editable source.**
 >
 > Markers such as `[CM-05]` show unconfirmed items. In the Word file, each one is a review comment. The items are in the [validation register](../03-validation/CW1-to-D365-Migration-v0.1-Validation.md). The markers are not part of the guide text. Rows of a procedure that happen outside D365 (in Excel, TM1 or CW1) are shaded gray in the Word file.
 >
