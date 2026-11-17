@@ -272,7 +272,7 @@ Payments that cannot be fully resolved during settlement stay On Account, and th
 | **Keep pre-populated dimensions** | Do not change the financial dimensions that fill in automatically. `[CPJ-11]` |
 | **Simulate before posting** | Run Simulate Posting and resolve every error before you post. |
 
-##### Posting and permissions
+##### Posting and permissions `[CPJ-16 to CPJ-21]`
 
 | Topic | Status |
 |---|---|

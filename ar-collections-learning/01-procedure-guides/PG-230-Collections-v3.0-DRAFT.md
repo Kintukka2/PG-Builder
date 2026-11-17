@@ -4,7 +4,7 @@
 >
 > This is a Markdown preview of the Word guide [`CLAUDE-230-Collections PG v3.0.docx`](CLAUDE-230-Collections%20PG%20v3.0.docx). It was assembled from the topic drafts named in its version history, under D-045 and D-046. **The Word file is the editable source.**
 >
-> Markers such as `[G230-05]` or `[Aged Balances VG-03]` show unconfirmed items. In the Word file, each one is a review comment. Guide-level items and the index of carried items are in the [validation register](../03-validation/230-Collections-v3.0-Validation.md). Notes marked **ACTION: REVIEW REQUIREMENT**, and <mark>highlighted</mark> phrases, are internal notes to the author (yellow in the Word file); they are removed before publication (D-060). The markers are not part of the guide text.
+> Markers such as `[G230-05]` or `[Aged Balances VG-03]` show unconfirmed items. In the Word file, open blocking items have one review comment each, at the place it matters most (D-067); the register lists every item and where it applies. Guide-level items and the index of carried items are in the [validation register](../03-validation/230-Collections-v3.0-Validation.md). Notes marked **ACTION: REVIEW REQUIREMENT**, and <mark>highlighted</mark> phrases, are internal notes to the author (yellow in the Word file); they are removed before publication (D-060). The markers are not part of the guide text.
 
 The fixed template content is not repeated here: cover, Contents, *About this guide* and *Additional Resources*.
 
@@ -123,8 +123,8 @@ Add these pages to your Favorites, and add these columns to the views you use fo
 |---|---|
 | **All customers** | Located in the **Credit and collections** module. Used to open customer accounts and customer master details. |
 | **Aged balances** | Located in the **Credit and collections** module. Used to review customer balances by aging period. `[Favorites VG-01]` |
-| **Customer payment journal** | Located in the **Credit and collections** module. Identified in AR Collections training as a key page for AR Collections users. `[Favorites VG-18]` |
-| **Open customer invoices** | Located in the **Accounts receivable** module. Used to review open customer invoices. `[Favorites VG-19]` |
+| **Customer payment journal** | Located in the **Credit and collections** module. Identified in AR Collections training as a key page for AR Collections users. |
+| **Open customer invoices** | Located in the **Accounts receivable** module. Used to review open customer invoices. |
 
 **Recommended columns**: Customer account, Customer name, Transaction date, Due date, Description, Amount, Currency, Overdue balance and Email address. `[Personalized Views VG-01]`
 
@@ -132,13 +132,13 @@ Add these pages to your Favorites, and add these columns to the views you use fo
 
 | Term | Description |
 |---|---|
-| **Workspace** | A D365 page that brings together the information and tasks for one area of work. The **Customer credit and collections** workspace is the starting point for collection work. `[Workspace VG-09]` |
-| **Sections used in AR Collections** | **Customers overdue**, **Payment journals not posted**, **Notes** and **Open payment journals**. `[Workspace VG-04 to VG-07]` |
+| **Workspace** | A D365 page that brings together the information and tasks for one area of work. The **Customer credit and collections** workspace is the starting point for collection work. |
+| **Sections used in AR Collections** | **Customers overdue**, **Payment journals not posted**, **Notes** and **Open payment journals**. |
 | **Other sections** | The workspace also shows sections such as **Open cases**, **Customers over credit limit** and **Collections letters not printed**. <mark>Which of these are used in AR Collections is pending confirmation.</mark> `[Workspace VG-08]` |
 
 ##### Workspaces and modules
 
-**Workspace or module**: The **Customer credit and collections** workspace opens from **Workspaces**. The **Credit and collections** module opens from **Modules** and lists pages such as **All customers** and **Aged balances**. `[Workspace VG-11]`
+**Workspace or module**: The **Customer credit and collections** workspace opens from **Workspaces**. The **Credit and collections** module opens from **Modules** and lists pages such as **All customers** and **Aged balances**.
 
 ##### Collections Workflow
 
@@ -260,12 +260,12 @@ This integration is critical to the Collections process, as it ensures:
 | Term | Description |
 |---|---|
 | **Aged balances** | A page in the **Credit and collections** module that shows customer balances by aging period. `[Aged Balances VG-01]` |
-| **Reporting currency** | The page can show amounts in the ledger's reporting currency, which can differ from the currency of the customer's transactions. Add the **Currency** column so each account's currency is visible. `[Aged Balances VG-09]` |
+| **Reporting currency** | The page can show amounts in the ledger's reporting currency, which can differ from the currency of the customer's transactions. Add the **Currency** column so each account's currency is visible. |
 | **Zero balances** | Accounts with a zero balance are listed unless you filter them out. Filtering the balance column to **not equal to** **0** removes them. |
 
 ##### Sharing balances with customers
 
-**Use PDF, not Excel**: Provide customer-facing account information as a PDF. Do not send a customer an Excel export of this page. `[Aged Balances VG-13]`
+**Use PDF, not Excel**: Provide customer-facing account information as a PDF. Do not send a customer an Excel export of this page.
 
 ##### Transactions and settlements
 
@@ -277,7 +277,7 @@ This integration is critical to the Collections process, as it ensures:
 
 ##### Reviewing without changing
 
-**Do not undo settlements here**: This topic only reviews settlement history. Undoing a settlement changes financial records and is in 220 Customer Payments, topic 3.1 Undo a Settlement. `[Customer Account VG-13]`
+**Do not undo settlements here**: This topic only reviews settlement history. Undoing a settlement changes financial records and is in 220 Customer Payments, topic 3.1 Undo a Settlement.
 
 ##### Notes and activities
 
@@ -285,11 +285,11 @@ This integration is critical to the Collections process, as it ensures:
 |---|---|
 | **Notes** | A page in the **Customer credit and collections** workspace that lists notes recorded against customer accounts. You filter it to see one customer's collection history. `[Notes and Activities VG-01 / VG-02]` |
 | **System-generated entries** | The Notes page lists entries created by D365, such as statements and collection letters, alongside notes entered by users. `[Notes and Activities VG-05 / VG-06]` |
-| **Customer activities** | Records of collection contact with a customer, such as an email or phone activity. **View all activities** on the customer account lists them. `[Notes and Activities VG-12]` |
+| **Customer activities** | Records of collection contact with a customer, such as an email or phone activity. **View all activities** on the customer account lists them. |
 
 ##### Recording collection history (notes and activities)
 
-**Record notes at customer level**: Collection notes are recorded against the customer account rather than against individual invoices, so the full history is in one place. `[Notes and Activities VG-11]`
+**Record notes at customer level**: Collection notes are recorded against the customer account rather than against individual invoices, so the full history is in one place.
 
 ##### Collection activities
 
@@ -301,7 +301,7 @@ This integration is critical to the Collections process, as it ensures:
 
 ##### Recording collection history (collection activities)
 
-**Record at customer level**: Record collection activities against the customer account rather than against individual invoices, so the full history is visible in the account overview. `[Collection Activities VG-14]`
+**Record at customer level**: Record collection activities against the customer account rather than against individual invoices, so the full history is visible in the account overview.
 
 ##### Statements and destinations
 
@@ -316,7 +316,7 @@ This integration is critical to the Collections process, as it ensures:
 | Rule | Description |
 |---|---|
 | **Check the destination first** | Before you generate a preview, check that **Print management destination** is cleared and **Screen** is selected. `[Statement Preview VG-05]` |
-| **Use PDF, not Excel** | Provide customer-facing account information as a PDF. Do not send a customer an Excel export. `[Statement Preview VG-15]` |
+| **Use PDF, not Excel** | Provide customer-facing account information as a PDF. Do not send a customer an Excel export. |
 
 ##### Statement distribution
 
@@ -343,7 +343,7 @@ This integration is critical to the Collections process, as it ensures:
 
 ##### Sending documents to customers
 
-**Use PDF, not Excel**: Provide customer-facing account information as a PDF. Do not send a customer an Excel export. `[Customer Invoices VG-12]`
+**Use PDF, not Excel**: Provide customer-facing account information as a PDF. Do not send a customer an Excel export.
 
 ---
 
@@ -396,7 +396,7 @@ Complete these steps to open the workspace:
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Click* **Workspaces**. `[Workspace VG-01]` | From the left-hand **Navigation Pane**, click **Workspaces**. |
 | 3. *Select* **Customer credit and collections**. `[Workspace VG-02]` | Select the **Customer credit and collections** workspace from the list. |
-| 4. *Confirm* the workspace is open. `[Workspace VG-03 / VG-10]` | Check that the **Customer credit and collections** workspace is displayed for the legal entity you selected in step 1. |
+| 4. *Confirm* the workspace is open. | Check that the **Customer credit and collections** workspace is displayed for the legal entity you selected in step 1. |
 | *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• The **Customer credit and collections** workspace is open. |
 
 #### 1.2 Locate Collection Work in the Workspace
@@ -615,7 +615,7 @@ Complete these steps to review the customer's transactions:
 | 3. *Hide* currency revaluations. `[Customer Account VG-07]` | Hide currency revaluation entries so only the customer's own transactions are listed. |
 | 4. *Review* the open transactions. `[Customer Account VG-09]` | For each transaction, check the due date, amount, currency and description. |
 | 5. *Select* **Show closed**. | Optional. To see settled transactions, show closed transactions. Otherwise, go to step 6. |
-| 6. *Confirm* you know what makes up the balance. `[Customer Account VG-15]` | Check that the transactions you reviewed explain the balance and overdue amount. |
+| 6. *Confirm* you know what makes up the balance. | Check that the transactions you reviewed explain the balance and overdue amount. |
 | *STEP COMPLETE* (light blue) | • You have reviewed the customer's transactions.<br>• Continue to [2.4.3 Review Settlement History](#243-review-settlement-history) |
 
 #### 2.4.3 Review Settlement History
@@ -664,7 +664,7 @@ Complete these steps to review a customer's notes:
 | 5. *Apply* the filter. | Apply the filter. Only notes for that customer are listed. |
 | 6. *Filter* by creator, date or note type. `[Notes and Activities VG-04]` | Optional. Filter the creator, date or note type column in the same way. Otherwise, go to step 7. |
 | 7. *Review* the notes. `[Notes and Activities VG-06]` | Read the notes. Check which entries were entered by users and which were created by D365. |
-| 8. *Confirm* you have the customer's collection history. `[Notes and Activities VG-13]` | Check that the list shows only the customer you selected and covers the period you need. |
+| 8. *Confirm* you have the customer's collection history. | Check that the list shows only the customer you selected and covers the period you need. |
 | *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• You have reviewed the customer's collection notes. |
 
 #### 2.6 Review All Customer Activities
@@ -693,7 +693,7 @@ Complete these steps to review a customer's activities:
 | 3. *Navigate* to the **All customers** page. `[Notes and Activities VG-07]` | From the **Navigation Pane**, *select*:<br>• **Credit and collections >**<br>• **All customers**<br>If **All customers** is in your **Favorites** (see 260 O2C Getting Started, topic 3 Add Pages to Favorites), you can open it from **Favorites** instead. |
 | 4. *Open* the customer account. `[Notes and Activities VG-08]` | Find the customer and open the account. |
 | 5. *Click* **View all activities**. `[Notes and Activities VG-09]` | Open the list of activities recorded for the customer. |
-| 6. *Filter* the activities. `[Notes and Activities VG-10]` | Optional. Filter the list to the activities you need. If you don't need to filter, go to step 7. |
+| 6. *Filter* the activities. | Optional. Filter the list to the activities you need. If you don't need to filter, go to step 7. |
 | 7. *Review* the customer's contact history. | Read the activities to see when and how the customer was contacted. |
 | *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• You have reviewed the customer's recorded activities. |
 
@@ -969,7 +969,7 @@ Complete these steps to generate the statement preview:
 | 6. *Clear* **Print management destination**. `[Statement Preview VG-05]` | Clear this option so the statement is not delivered to the customer. |
 | 7. *Select* **Screen** as the destination. `[Statement Preview VG-06]` | Set the destination to **Screen**. |
 | 8. *Generate* the statement. `[Statement Preview VG-07]` | Generate the statement. It opens on screen. |
-| 9. *Review* the statement. `[Statement Preview VG-08]` | Check that it shows the correct customer and their open transactions. |
+| 9. *Review* the statement. | Check that it shows the correct customer and their open transactions. |
 | *STEP COMPLETE* (light blue) | • The statement is open on screen.<br>• Continue to [6.1.2 Download the Statement as PDF](#612-download-the-statement-as-pdf) |
 
 #### 6.1.2 Download the Statement as PDF
@@ -985,9 +985,9 @@ Complete these steps to download the statement as a PDF:
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• The statement is open on screen (see [6.1.1 Generate the Statement Preview](#611-generate-the-statement-preview)).<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Download* the statement as a PDF. `[Statement Preview VG-09]` | From the on-screen statement, download it as a PDF file. |
 | 2. *Enter* a meaningful file name. `[Statement Preview VG-10 / VG-12]` | Name the file so the customer and the statement date can be identified. |
-| 3. *Save* the PDF. `[Statement Preview VG-11]` | Save the PDF file. |
+| 3. *Save* the PDF. | Save the PDF file. |
 | 4. *Confirm* the PDF shows the correct statement. | Open the PDF and check that it shows the statement you reviewed. |
-| *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• The statement is saved as a PDF and has not been sent to the customer. `[Statement Preview VG-24]` |
+| *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• The statement is saved as a PDF and has not been sent to the customer. |
 
 #### 6.2 Generate and Send a Customer Statement
 
@@ -1042,7 +1042,7 @@ Complete these steps to verify statement delivery:
 | 1. *Check* the delivery message. `[Statement Distribution VG-08]` | Read the message D365 shows after the statement is generated, and check that it confirms the statement was sent. |
 | 2. *Check* the Collections sent mailbox. `[Statement Distribution VG-09]` | Optional. Where required, check that the statement appears in the Collections sent mailbox. Otherwise, go to step 3. |
 | 3. *Confirm* the statement was delivered. `[Statement Distribution VG-10]` | If the delivery message or mailbox shows that the statement was not sent, follow the failed-delivery process. |
-| *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• The statement has been sent to the customer and its delivery confirmed. `[Statement Distribution VG-11]` |
+| *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• The statement has been sent to the customer and its delivery confirmed. |
 
 > **ACTION: REVIEW REQUIREMENT.** Note: Legacy 230 (v2.3, 1 Send Customer Statement (ad hoc)) sends ad hoc statements only, because monthly statements go out automatically on the 5th. It sets **Date interval** and **Balance other than zero**, and runs the send as a batch job with a future start time and **Maximum retries** set to 0, or the customer can receive several copies. It warns that a blank **Records to include** sends statements to every customer, and only email contacts with **Purpose** = **Business** receive statements. `[G230-12]`
 
@@ -1113,7 +1113,7 @@ Complete these steps to open the invoice in print preview:
 | 4. *Click* **Original document**. `[Customer Invoices VG-03]` | Open the original document for the highlighted transaction. |
 | 5. *Select* the invoice. `[Customer Invoices VG-04]` | Select the invoice in the list of original documents. |
 | 6. *Click* **Print preview**. `[Customer Invoices VG-05]` | The invoice opens in print preview. |
-| 7. *Confirm* it is the invoice you need. `[Customer Invoices VG-06]` | Review the invoice information in the preview and check that it is the invoice you selected. |
+| 7. *Confirm* it is the invoice you need. | Review the invoice information in the preview and check that it is the invoice you selected. |
 | *STEP COMPLETE* (light blue) | • The invoice is open in print preview.<br>• Continue to [7.1.2 Download the Invoice as PDF](#712-download-the-invoice-as-pdf) |
 
 #### 7.1.2 Download the Invoice as PDF
@@ -1129,9 +1129,9 @@ Complete these steps to download the invoice as a PDF:
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• The invoice is open in print preview (see [7.1.1 Open the Invoice Preview](#711-open-the-invoice-preview)).<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Download* the invoice as a PDF. `[Customer Invoices VG-07]` | From the print preview, download the invoice as a PDF file. |
 | 2. *Enter* a meaningful file name. `[Customer Invoices VG-08 / VG-10]` | Name the file so the customer and the invoice can be identified. |
-| 3. *Save* the PDF. `[Customer Invoices VG-09]` | Save the PDF file. |
+| 3. *Save* the PDF. | Save the PDF file. |
 | 4. *Confirm* the PDF shows the correct invoice. | Open the PDF and check that it shows the invoice you selected. |
-| *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• The invoice is saved as a PDF with a file name that identifies the customer and invoice. `[Customer Invoices VG-21]` |
+| *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• The invoice is saved as a PDF with a file name that identifies the customer and invoice. |
 
 > **ACTION: REVIEW REQUIREMENT.** Note: Legacy 230 (v2.3, 6.1 Resend Statement or Invoice) reaches the invoice copy from **Open customer invoices** or the **Tax invoice journal** > **Document** > **View** > **Copy preview**, and also covers resending the invoice to the customer. `[G230-13]`
 
