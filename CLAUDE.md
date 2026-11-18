@@ -61,7 +61,7 @@ Questions go to the SME in rounds, one message per SME, kept on the board as `ro
 
 - **Combine:** one question covers as many register items as one answer can close. Group by theme (approvals, roles, navigation, configuration values, scope) and by who answers.
 - **Lettered parts** keep a big question answerable; each part lists the item IDs it closes.
-- **Where to look:** each part ends with a *See:* line that names where its items sit in the guide: topic or procedure number and step, or the Part 1 section. Use numbers, not pages, which move when Word reflows (D-079).
+- **Where to look:** each part ends with the pages to look at, for example *(see p. 16-37)* (D-080). Pages come from where the part's items sit in the guide and from the page numbers in its Contents; a whole section gets its page range. Recalculate them with [`tools/question_pages.py`](tools/question_pages.py) whenever the guide changes.
 - **Send the guide with the questions:** a review copy of the Word guide with the review comments taken out (the questions replace them). Notes to the author stay. The review copy is a send file, not committed (D-079).
 - **Across guides:** when the same gap sits in several guides, one question covers all of them, in one ADO ticket, and the other cards point to it.
 - **Split only when** different people answer or the items have nothing in common.
