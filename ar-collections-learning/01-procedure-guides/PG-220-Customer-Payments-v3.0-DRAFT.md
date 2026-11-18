@@ -62,7 +62,7 @@ Writing off an uncollectible debt is in 230 Collections. General D365 tasks (swi
 
 | Stream | Process Area | Key Roles |
 |---|---|---|
-| Order to Cash (O2C) | Customer Payments | • Collections Officer `[G220-03]`<br>• Receipting Officer (intercompany payments) |
+| Order to Cash (O2C) | Customer Payments | • Collections Officer<br>• Receipting Officer (intercompany payments) |
 
 ##### Process
 
@@ -1181,8 +1181,6 @@ Direct debit customer payments are processed in **240 Direct Debit and Credit Ca
 ##### Page Overview
 
 This page contains various reports related to the Customer Payments module.
-
-> **ACTION: REVIEW REQUIREMENT.** The Description of each report is empty, and the report names and navigation paths come from version 2.1. Describe each report and check each path in current D365 before publication. `[G220-12]`
 
 ##### Open Transactions Reports
 

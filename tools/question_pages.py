@@ -142,6 +142,105 @@ def fmt(ps):
         while j+1<len(ps) and ps[j+1]==ps[j]+1: j+=1
         out.append(str(ps[i]) if i==j else f'{ps[i]}-{ps[j]}'); i=j+1
     return 'p. '+', '.join(out) if out else ''
-def context(docx,work):
-    pages=render(docx,work); toc,secs,kc=structure(docx); rng=ranges(toc,pages)
+def word_pages(docx):
+    """Pages as Word last laid them out, from the page breaks Word records when it saves (w:lastRenderedPageBreak).
+    Returns (page texts, [(style, text, page)] for headings), or None when the file was not saved by Word or its
+    breaks are stale (they must add up to the page count Word saved in docProps/app.xml)."""
+    z=zipfile.ZipFile(docx)
+    app=z.read('docProps/app.xml').decode('utf8') if 'docProps/app.xml' in z.namelist() else ''
+    if 'Microsoft' not in app: return None
+    m=re.search(r'<Pages>(\d+)</Pages>',app); saved=int(m.group(1)) if m else None
+    body=etree.fromstring(z.read('word/document.xml')).find(q('body'))
+    texts=[[]]; heads=[]; pending=False; seen_text=True; cur_p=None
+    for el in body.iter(q('p'),q('lastRenderedPageBreak'),q('br'),q('pageBreakBefore'),q('t')):
+        tag=etree.QName(el).localname
+        if tag=='p':
+            cur_p=el; s=style(el)
+            if (s.startswith('Heading') or s=='PGFurtherSubdivision') and ptext(el): heads.append([s,ptext(el),None,el])
+        elif tag=='pageBreakBefore' and el.get(q('val')) not in ('0','false'):
+            texts.append([]); pending=True; seen_text=False
+        elif tag=='br' and el.get(q('type'))=='page':
+            texts.append([]); pending=True; seen_text=False
+        elif tag=='lastRenderedPageBreak':
+            if not (pending and not seen_text): texts.append([])
+            pending=False
+        elif tag=='t' and el.text:
+            texts[-1].append(el.text)
+            if el.text.strip(): seen_text=True
+            if heads and heads[-1][3] is cur_p and heads[-1][2] is None: heads[-1][2]=len(texts)
+    if saved is not None and len(texts)!=saved: return None
+    return [norm(' '.join(t)) for t in texts],{id(e):pg for s,t,pg,e in heads},heads
+def heading_list(docx):
+    """Headings in document order: (style, text, text of the next paragraph)."""
+    body=etree.fromstring(zipfile.ZipFile(docx).read('word/document.xml')).find(q('body'))
+    ps=[p for p in body.iter(q('p')) if ptext(p)]; out=[]
+    for i,p in enumerate(ps):
+        s=style(p)
+        if (s.startswith('Heading') or s=='PGFurtherSubdivision') and not re.match(r'TOC',s):
+            out.append((s,ptext(p),ptext(ps[i+1]) if i+1<len(ps) else ''))
+    return out
+def relocate(toc,pages,heads):
+    """Page of each Contents entry as the pages fall now, not as the Contents last recorded them.
+    heads: [(style, text, next text, page or None)]; with no page, the heading is found in the page texts
+    by its title and the words that follow it, so a link to it in an overview table does not count."""
+    out=[]; hi=0; lo=1
+    for lv,t,pg in toc:
+        core=norm(re.sub(r'^\d+(?:\.\d+)*\.?\s+','',t)); full=norm(t); found=None
+        for i in range(hi,len(heads)):
+            h=norm(heads[i][1])
+            if h==core or h==full or h.endswith(core):
+                hi=i+1; found=heads[i][3]
+                if found is None:
+                    key=(norm(heads[i][1])+' '+norm(heads[i][2])[:30]).strip()
+                    for j in range(lo,len(pages)+1):
+                        if key in pages[j-1]: found=j; break
+                break
+        pg2=found or pg; lo=pg2; out.append((lv,t,pg2))
+    return out
+def context(docx,work=None,word=False):
+    """word=True: use the page breaks of a copy saved in Word (exact). Otherwise render with LibreOffice
+    (an estimate: install DM Sans first with tools/install_fonts.sh)."""
+    toc,secs,kc=structure(docx)
+    if word:
+        wp=word_pages(docx)
+        if wp is None: raise SystemExit('Not a fresh Word save: its page breaks do not add up to its page count.')
+        pages,_,wh=wp; toc=relocate(toc,pages,[(s_,t_,'',pg_) for s_,t_,pg_,_ in wh])
+    else:
+        if 'DM Sans' not in subprocess.run(['fc-list'],capture_output=True,text=True).stdout:
+            print('warning: DM Sans is not installed (tools/install_fonts.sh); pages will be further off',file=sys.stderr)
+        pages=render(docx,work or tempfile.mkdtemp()); toc=relocate(toc,pages,[h+(None,) for h in heading_list(docx)])
+    rng=ranges(toc,pages)
     return (toc,secs,kc,pages,rng)
+def write_contents(docx,toc,out=None):
+    """Write the page numbers of toc (level, title, page) into the cached results of the guide's Contents."""
+    import shutil
+    z=zipfile.ZipFile(docx); d=z.read('word/document.xml').decode('utf8')
+    want=[pg for _,_,pg in toc]; i=0
+    def fix(m):
+        nonlocal i
+        p=m.group(0)
+        if not re.search(r'<w:pStyle w:val="TOC\d"',p): return p
+        txt=''.join(re.findall(r'<w:t(?: [^>]*)?>([^<]*)</w:t>',p)).strip()
+        if not re.match(r'^(.*?)(\d+)$',txt): return p
+        ts=list(re.finditer(r'(<w:t(?: [^>]*)?>)(\d+)(</w:t>)',p))
+        if not ts or i>=len(want): return p
+        t=ts[-1]; new=p[:t.start()]+t.group(1)+str(want[i])+t.group(3)+p[t.end():]; i+=1
+        return new
+    d2=re.sub(r'<w:p[ >](?:(?!</w:p>).)*?</w:p>',fix,d,flags=re.S)
+    assert i==len(want),(i,len(want))
+    out=out or docx; tmp=out+'.tmp'; zo=zipfile.ZipFile(tmp,'w',zipfile.ZIP_DEFLATED)
+    for it in z.infolist(): zo.writestr(it,d2.encode('utf8') if it.filename=='word/document.xml' else z.read(it.filename))
+    zo.close(); z.close(); os.replace(tmp,out)
+    assert [pg for _,_,pg in structure(out)[0]]==want
+if __name__=='__main__':
+    import argparse
+    ap=argparse.ArgumentParser(description='Pages for question references in a PG Word guide.')
+    ap.add_argument('docx'); ap.add_argument('refs',nargs='*',help='for example "3.6 step 9" or "Part 1, Key concepts (Settlement)"')
+    ap.add_argument('--word',action='store_true',help='the file is a fresh Word save: use its own page breaks (exact)')
+    ap.add_argument('--contents',action='store_true',help='print where each Contents entry falls')
+    ap.add_argument('--write-contents',action='store_true',help='write those page numbers into the Contents of the file')
+    a=ap.parse_args(); ctx=context(a.docx,word=a.word)
+    if a.contents:
+        for lv,t,pg in ctx[0]: print(pg,t)
+    if a.write_contents: write_contents(a.docx,ctx[0]); print('Contents page numbers written')
+    for r in a.refs: print(fmt(pages_for(r,ctx)),'<-',r)
