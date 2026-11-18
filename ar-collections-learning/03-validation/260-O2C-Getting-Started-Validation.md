@@ -4,8 +4,8 @@
 |---|---|
 | Guide (editable source) | [`CLAUDE-260-O2C Getting Started PG v0.2.docx`](../01-procedure-guides/CLAUDE-260-O2C%20Getting%20Started%20PG%20v0.2.docx) |
 | Markdown preview | [`PG-260-O2C-Getting-Started-DRAFT.md`](../01-procedure-guides/PG-260-O2C-Getting-Started-DRAFT.md) |
-| Status | Working draft v0.2: the SME review by Maria Pabalan of 10 November 2026 is applied (D-054; section 6). Code 260 is assigned in the PG numbering register v2.0 (D-070), and the BPO is recorded: Christopher Clarke (`G260-02` closed). Shared with the SME for review only; it does not circulate further until the BPO confirms its scope (D-048, `G260-01`). Review comments cut to one per open blocking item on 2026-11-17 (D-067, D-073). Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-066); no content or item changes. The PDF beside the Word file predates that change: the user replaces it (D-064). |
-| Last updated | 2026-11-17 |
+| Status | Working draft v0.2, **with Maria Pabalan for final approval**. The master copy is Daniel Moreira’s v0.2 of 12 November 2026, built from Maria Pabalan’s Word review of v0.1 (D-054; section 6) and made the master on 2026-11-18 (D-078; section 6.1). The repository copy adds to it: O2C End-user throughout, the topic bookmarks its links need, topic numbers in link text and the template step format (D-061), the note to the author for export limits (D-060), and one review comment per open blocking item (D-067). Code 260 is assigned in the PG numbering register v2.0 (D-070), and the BPO is recorded: Christopher Clarke (`G260-02` closed). It does not circulate beyond the project team until the BPO confirms its scope (D-048, `G260-01`). The PDF beside the Word file is out of date (D-064). |
+| Last updated | 2026-11-18 |
 | Items | 8 guide-level items (`G260`): 7 open (all blocking), 1 closed. **39 Word review comments** (D-067): 7 guide-level and 32 carried from the topic drafts; 25 removed (section 4.1). |
 
 This file is the guide's **question log** (D-016). It holds the guide-level items, which are scoped to this guide and never renumbered. Review comments carried from the topic drafts keep their ID and draft name, for example *Legal Entities VG-01*, and their source register stays the record for them: an answer recorded there applies here (D-048). Each open item that affects the text is a Word review comment by "Validation register" (VR).
@@ -27,13 +27,13 @@ This file is the guide's **question log** (D-016). It holds the guide-level item
 
 | # | Decision | Reason |
 |---|---|---|
-| A1 | Seven topics, one task each: the two legal entity methods stay separate topics (1 and 2), as in the topic draft. | D-045; Legal Entities decision L1: each method is complete on its own. |
+| A1 | One task per topic: the two legal entity methods stay separate topics (1 and 2), as in the topic draft. Six topics since D-078; the repository build of 10 November had seven. | D-045; Legal Entities decision L1: each method is complete on its own. |
 | A2 | The role is **O2C End-user** throughout (v0.1 used *O2C user*), and the stream is Order to Cash (O2C). | The guide serves every O2C role. The drafts' Collections Officer label covers AR Collections only. The SME set the label in the review of 10 November 2026 (D-054; `G260-05`). |
-| A3 | Topic 3 *Add Pages to Favorites* gives the general steps for any page. The AR Collections page list is not in this guide. | General skills go in a Getting Started guide; role-specific content stays in the role's guide (suite plan, section 1). |
+| A3 | Topic 3 *Add/Remove Pages to Favorites* gives the general steps for any page. The AR Collections page list is not in this guide. | General skills go in a Getting Started guide; role-specific content stays in the role's guide (suite plan, section 1). |
 | A4 | Personalized Views and Export to Excel point to 230 Collections Part 1 for the AR Collections columns and pages. | Same rule as A3. |
 | A5 | Part 3 says no reports apply. | A Getting Started guide has no process of its own to report on. |
 | A6 | Carried review comments keep their draft name and ID, for example *Legal Entities VG-01*. | Suite plan section 1: item IDs stay stable after a merge. |
-| A7 | *Remove a Page from Favorites* is topic 7, with a note at the end of topic 3 pointing to it. | Topics 1 to 6 keep the numbers used in the SME review pack and in the 221 and 230 cross-references (D-054). |
+| A7 | **Superseded by D-078:** removing a page from Favorites is a second procedure inside topic 3 *Add/Remove Pages to Favorites*, as in Daniel Moreira’s v0.2, not a topic 7. | The master v0.2 (D-078). Topics 1 to 6 keep the numbers used in the SME review pack and in the 221 and 230 cross-references. |
 
 ---
 
@@ -48,15 +48,15 @@ This file is the guide's **question log** (D-016). It holds the guide-level item
 | G260-03 | Confirm the audience: all O2C roles now, or AR Collections first, with other streams added once they confirm the steps on their own pages. | Part 1 High-level process | B | Dec | Open |
 | G260-04 | Confirm the events that start these tasks. The SME review of 10 November 2026 kept one for the guide: initial set-up by a new O2C user. The topic drafts also gave work in another legal entity, a page that does not show the information needed, and grid data needed in Excel; each topic's own Initiation keeps its event. | Part 1 High-level process | B | SME | Open. SME edit applied in v0.2: Part 1 Initiation keeps the new-user set-up event only. |
 | G260-05 | Confirm the stream, process area and roles. The role label O2C End-user comes from the SME review of 10 November 2026. The topic drafts use Accounts Receivable, AR Collections and Collections Officer, which cover AR Collections only. | Part 1 Stream | B | SME | Open. SME edit applied in v0.2: role label O2C End-user. Stream and process area still to confirm. |
-| G260-06 | Confirm the general steps. The recording demonstrates them on four AR Collections pages (Favorites topic draft); that page list moves to 230 Collections Part 1. | Topic 3 Add Pages to Favorites | B | Test | Open |
+| G260-06 | Confirm the general steps. The recording demonstrates them on four AR Collections pages (Favorites topic draft); that page list moves to 230 Collections Part 1. | Topic 3 Add/Remove Pages to Favorites | B | Test | Open |
 | G260-07 | Confirm the exact label and location of the option that sets a view as the default across all legal entities, and whether it is in the Save as dialog or the view selector. Added at the SME's request in the 10 November 2026 review (Personalized Views VG-14). | Topic 4.4 Save and Pin the View | B | Test | Open |
-| G260-08 | Test the steps to remove a page from Favorites. They were added at the SME's request in the 10 November 2026 review (Favorites VG-14, deferred until then) and are not demonstrated in the recording. Confirm that clicking a filled favorite star removes the favorite (Favorites VG-07). | Topic 7 Remove a Page from Favorites | B | Test | Open |
+| G260-08 | Test the steps to remove a page from Favorites. They were added at the SME's request in the 10 November 2026 review (Favorites VG-14, deferred until then) and are not demonstrated in the recording. Confirm that clicking a filled favorite star removes the favorite (Favorites VG-07). Since D-078 the steps are the second procedure in topic 3; its step 2 action reads *Confirm the page is listed* while its description removes the page, so confirm the action in the same test. | Topic 3, procedure *Remove a Page from Favorites* | B | Test | Open |
 
 ---
 
 ## 4. Review comments by section
 
-Every review comment in the Word guide, in document order, after D-067 (one comment per item, open blocking items only; D-073). IDs not starting `G260` are carried from the topic drafts.
+Every review comment in the master Word guide (D-078), in document order: one comment per open blocking item (D-067, D-073). IDs not starting `G260` are carried from the topic drafts.
 
 | Section | Items |
 |---|---|
@@ -65,15 +65,17 @@ Every review comment in the Word guide, in document order, after D-067 (one comm
 | Part 1 Key concepts | `Export to Excel VG-06`, `Export to Excel VG-08` |
 | Topic 1 Switch Legal Entity with the Selector | `Legal Entities VG-01`, `Legal Entities VG-02`, `Legal Entities VG-04` |
 | Topic 2 Switch Legal Entity Using the Ledger Code | `Legal Entities VG-07`, `Legal Entities VG-05`, `Legal Entities VG-06` |
-| Topic 3 Add Pages to Favorites | `G260-06`, `Favorites VG-17`, `Favorites VG-07`, `Favorites VG-02 / VG-06`, `Favorites VG-09 / VG-28`, `Favorites VG-13 / VG-16` |
-| Topic 4 Create a Personalized View | `Personalized Views VG-01`, `Personalized Views VG-03`, `Personalized Views VG-04`, `Personalized Views VG-05`, `Personalized Views VG-06`, `Personalized Views VG-07`, `Personalized Views VG-08`, `Personalized Views VG-09`, `Personalized Views VG-10`, `Personalized Views VG-11`, `Personalized Views VG-13`, `Personalized Views VG-14`, `G260-07`, `Personalized Views VG-15`, `Personalized Views VG-18 / VG-19` |
+| Topic 3 Add/Remove Pages to Favorites | `G260-06`, `Favorites VG-17`, `Favorites VG-07`, `Favorites VG-02 / VG-06`, `Favorites VG-09 / VG-28`, `Favorites VG-13 / VG-16`, `G260-08` |
+| 4.1 Arrange the Columns | `Personalized Views VG-01`, `Personalized Views VG-03`, `Personalized Views VG-04`, `Personalized Views VG-05`, `Personalized Views VG-06` |
+| 4.2 Filter the List | `Personalized Views VG-07`, `Personalized Views VG-08` |
+| 4.3 Add a Footer Total | `Personalized Views VG-09`, `Personalized Views VG-10` |
+| 4.4 Save and Pin the View | `Personalized Views VG-11`, `Personalized Views VG-13`, `Personalized Views VG-14`, `G260-07`, `Personalized Views VG-15`, `Personalized Views VG-18 / VG-19` |
 | Topic 5 Update a Saved View | `Personalized Views VG-16`, `Personalized Views VG-17` |
 | Topic 6 Export All Rows from a Grid | `Export to Excel VG-02`, `Export to Excel VG-01`, `Export to Excel VG-03` |
-| Topic 7 Remove a Page from Favorites | `G260-08` |
 
 ### 4.1 Comments removed under D-067 (17 November 2026)
 
-The items stay open in their registers; only the Word comment is gone. An item commented in several places keeps one comment, at the place it matters most.
+The items stay open in their registers; only the Word comment is gone. The section names are those of the repository build of 10 November, which had a topic 7. An item commented in several places keeps one comment, at the place it matters most.
 
 | Item | Where the comment was | Why it was removed |
 |---|---|---|
@@ -158,6 +160,24 @@ Maria Pabalan reviewed v0.1 in Word (seven comments, and three direct edits made
 
 ---
 
+### 6.1 The master v0.2 (D-078)
+
+Daniel Moreira applied the same review in his own v0.2 of 12 November 2026, outside the repository, and sent it to Maria Pabalan for final approval. On 2026-11-18 it became the master copy (D-078). It differs from the repository build of 10 November in these ways, all kept:
+
+| Area | Daniel Moreira’s v0.2 |
+|---|---|
+| Structure | Six topics: removing a page from Favorites is a second procedure in topic 3, renamed *Add/Remove Pages to Favorites* (decision A7 superseded). |
+| Version history | One row: authors Maria Pabalan and Daniel Moreira, BPO Christopher Clarke, "Updated following Maria Pabalan’s review comments. Pending final approval." |
+| Key concepts | *View scope* says to choose whether a default applies to the current legal entity or all legal entities. *Filter operators* is one table: Filter Type, Filter Operator, What it does. |
+| Topic 1 | Step 4 adds a note with the example URL, showing that the URL also shows the active legal entity. |
+| Topic 2 | Steps 2 and 3 reworded: find the value after **cmp=**, and replace only that value. |
+| Topic 4 | Topic Overview links carry the subtopic numbers. 4.2 points to the operator table in a note. 4.3 splits the total into steps: hover over the footer, click **+**, select **Sum**. 4.4 opens the view selector above the grid, and pin and all-legal-entities default are one step. |
+| Topic 5 | Steps reworded to use the view selector above the grid. |
+
+What the repository copy adds to it (D-078): **O2C End-user** in every role label (Daniel’s copy kept *O2C user* inside the topics; decision A2); the ten topic bookmarks its internal links point to, which were missing; topic numbers in the roles matrix and *Continue to* links, and the topic 3 title in the Process table (D-061); the italic verb and bold labels on the new steps in 4.3 and 4.4; the *Responsibility* label in the removal procedure as a label, not a bullet; three typos (a stray quote before **contains**, a space before **after**, "Find the and click"); the export-limits sentence as a note to the author (D-060); and the 39 review comments, one per open blocking item (D-067).
+
+---
+
 ## 7. Change log
 
 | Date | Change |
@@ -168,3 +188,4 @@ Maria Pabalan reviewed v0.1 in Word (seven comments, and three direct edits made
 | 2026-11-10 | v0.2: SME review by Maria Pabalan applied (D-054; section 6). New items `G260-07` and `G260-08`; `G260-04` and `G260-05` updated with the SME edits; decision A7 added; role label O2C End-user. |
 | 2026-11-16 | Formatting brought in line with D-059 to D-061 (D-066): Bullet 1.2 bullets (the 15 Initiation and Responsibility bullets, which used CW_Bullet 1), topic numbers in link text (25 links), and the two *To be confirmed* BPO entries in the version history and the pending export limits in the ACTION: REVIEW REQUIREMENT style. The version history table no longer splits a row across pages. Word file renamed with the `CLAUDE-` prefix (D-056); the PDF is now out of date (D-064). |
 | 2026-11-17 | Review comments cut under D-067 (D-073): 64 → 39, one per open blocking item at the place it matters most; the 25 removed are listed in section 4.1 and their items stay open in their registers. `G260-02` closed from the O2C numbering standard v2.0 (BPO Christopher Clarke, D-070), and the version history updated; `G260-01` updated (code assigned, D-070). First question round prepared on the board (D-069). The PDF beside the Word file is out of date (D-064). |
+| 2026-11-18 | **Daniel Moreira’s v0.2 of 12 November becomes the master** (D-078; section 6.1): it replaces the repository build of 10 November, with the formatting rules, O2C End-user throughout, the missing topic bookmarks, three typo fixes, the export-limits note and the 39 review comments added; six topics, with removal as a procedure in topic 3. Section 4 regenerated; A1, A3, A7, `G260-06` and `G260-08` updated. The guide is with Maria Pabalan for final approval. The Markdown preview is regenerated from the Word file. |
