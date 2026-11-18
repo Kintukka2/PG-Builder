@@ -229,3 +229,4 @@ Round 1 asks Maria Pabalan only what the sources cannot answer and what changes 
 | 2026-11-18 | Page breaks (D-086): topics 2, 3, 5, 6 and 7 and the Part 2 heading now start on a new page; the Contents page numbers are refreshed. No item changes. |
 | 2026-11-18 | Page breaks (D-087): ten subtopics now start on a new page; the Contents page numbers are refreshed. No item changes. |
 | 2026-11-18 | Round 1 (three questions, section 6) sent to Maria Pabalan in ADO 16886 by Daniel Moreira, with the review copy. Its pages came from the review copy's layout (D-088); Word's Contents may put the later topics one page further on (D-089). |
+| 2026-11-18 | Round 1 page references corrected from Word's Contents (D-089): Q01 p. 30-32, Q02 p. 13, 40, Q03 p. 14, 47-48. From topic 2.4 on, Word lays the guide out one page earlier than the LibreOffice layout (topic 2.3 is one page in Word). The Contents now carries Word's numbers. |
