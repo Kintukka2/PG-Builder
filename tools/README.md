@@ -11,7 +11,7 @@ Scripts Claude uses to keep the board's question rounds pointing at the right pl
 
 ## Where the pages come from
 
-Questions carry the pages of the review copy that goes with them (D-088): run the script on that copy and write the same pages into its Contents with `--write-contents`. A copy saved in Word or a PDF exported from it replaces them with Word's own pages.
+Word's Contents is the authority for page numbers (D-089). The pages this script finds from the review copy's layout are a first estimate (in 220 they ran one page short of Word from topic 2.2). Once the user updates the Contents in Word, take each heading's page from it, or read every page from the saved copy with `--word`.
 
 - **A copy saved in Word (exact).** Word records its page breaks in the file when it saves. With `--word`, the script reads them. It refuses a file whose breaks do not add up to the page count Word saved with it (a file edited after Word saved it).
 - **A PDF exported from Word (exact).** With `--pdf`, the script reads the pages of that PDF and the structure of the Word file.
