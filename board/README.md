@@ -26,7 +26,7 @@ It is private to its owner. Anyone the owner shares it with can view it; only th
 | Collection | Document | Fields |
 |---|---|---|
 | `guides` | `g-<code>` (for example `g-220`, `g-o-0001`), or `g-<name>` for a guide with no code | `title`, `code`, `streams[]`, `stage`, `confirmed`, `assignedTo`, `source`, `approver`, `bpo`, `ticket`, `version`, `next`, `notes`, `links{word, preview, register, decisions, draft, hub}`, `items{open, blocking, carried, comments}`, `references[{id, title, url, location, needsReview}]`, `history[]` (imported entries), `updatedAt`, `updatedBy` |
-| `rounds` | `r-<code>-<n>` | `title`, `guideIds[]`, `askTo`, `ticket`, `status` (`draft`, `ready`, `sent`, `answered`, `closed`), `intro`, `outro`, `questions[{n, theme, text, parts[{label, text, items[]}], items[]}]`, `customText`, `answer`, `sentAt`, `answeredAt`, `statusNote` |
+| `rounds` | `r-<code>-<n>` | `title`, `guideIds[]`, `askTo`, `ticket`, `status` (`draft`, `ready`, `sent`, `answered`, `closed`), `intro`, `outro`, `questions[{n, theme, text, ref, parts[{label, text, ref, items[]}], items[]}]` (`ref`: where the items sit in the guide, D-079), `customText`, `answer`, `sentAt`, `answeredAt`, `statusNote` |
 | `meetings` | any id | `date`, `title`, `notes`, `decisions`, `actions`, `guideIds[]`, `processed` |
 | `log` | any id | `at`, `by` (a viewer id, `claude` or `chatgpt`), `guideId`, `kind` (`edit`, `note`, `round`, `create`), `text` |
 | `meta` | `register` | A copy of `PG_Numbering_Master_Register.json` |

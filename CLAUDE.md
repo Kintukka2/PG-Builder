@@ -61,6 +61,8 @@ Questions go to the SME in rounds, one message per SME, kept on the board as `ro
 
 - **Combine:** one question covers as many register items as one answer can close. Group by theme (approvals, roles, navigation, configuration values, scope) and by who answers.
 - **Lettered parts** keep a big question answerable; each part lists the item IDs it closes.
+- **Where to look:** each part ends with a *See:* line that names where its items sit in the guide: topic or procedure number and step, or the Part 1 section. Use numbers, not pages, which move when Word reflows (D-079).
+- **Send the guide with the questions:** a review copy of the Word guide with the review comments taken out (the questions replace them). Notes to the author stay. The review copy is a send file, not committed (D-079).
 - **Across guides:** when the same gap sits in several guides, one question covers all of them, in one ADO ticket, and the other cards point to it.
 - **Split only when** different people answer or the items have nothing in common.
 - **Answers:** apply them to the Word guide and the register, close the items they answer, and carry anything still open into the next round. An answer that does not close the gap leaves the item open; an explicit scope decision can close one. Never ask again for what a source already confirms.
