@@ -10,11 +10,11 @@ Scripts Claude uses to keep the board's question rounds pointing at the right pl
 
 ## Where the pages come from
 
-Only pages verified in Word are shown to an SME (D-082, D-085). Until then a question names the topic and step only.
+Questions carry the pages of the review copy that goes with them (D-088): run the script on that copy and write the same pages into its Contents with `--write-contents`. A copy saved in Word or a PDF exported from it replaces them with Word's own pages.
 
 - **A copy saved in Word (exact).** Word records its page breaks in the file when it saves. With `--word`, the script reads them. It refuses a file whose breaks do not add up to the page count Word saved with it (a file edited after Word saved it).
 - **A PDF exported from Word (exact).** With `--pdf`, the script reads the pages of that PDF and the structure of the Word file.
-- **A LibreOffice render (estimate, for Claude only).** Without either, the script renders the guide. With DM Sans installed, short guides match Word (260: 237 of 238 paragraphs on the same page), but long tables fall differently (220 runs 2 pages short from topic 3). Use it to check a layout, never as a reference for the SME.
+- **A LibreOffice render.** Without either, the script renders the guide with DM Sans. Every topic and subtopic starts on its own page (D-087), so the render and Word can differ only inside a long subtopic.
 
 `--write-contents` writes the page numbers found into the guide's Contents. A heading is placed on the first page where its title stands on a line of its own, so a Contents line or an overview-table entry does not count. If any heading cannot be placed, nothing is written.
 
