@@ -5,8 +5,8 @@
 | Related PG (editable source) | [`../01-procedure-guides/TBC-AR Collections Collection Activities PG v0.1.docx`](../01-procedure-guides/TBC-AR%20Collections%20Collection%20Activities%20PG%20v0.1.docx) |
 | Markdown preview | [`../01-procedure-guides/PG-AR-Collection-Activities-DRAFT.md`](../01-procedure-guides/PG-AR-Collection-Activities-DRAFT.md) |
 | Screenshot register | [`../02-screenshot-registers/PG-AR-Collection-Activities-Screenshots.md`](../02-screenshot-registers/PG-AR-Collection-Activities-Screenshots.md) |
-| Last updated | 2026-11-03 |
-| Items | 24 total, all open: 17 blocking, 7 non-blocking |
+| Last updated | 2026-11-18 |
+| Items | 24 total: 23 open (16 blocking, 7 non-blocking), 1 closed |
 
 > **Merged and frozen (D-052).** This topic draft is now topic 5 of the [230 Collections v3.0](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Collection Activities VG-xx*.
 
@@ -69,7 +69,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-18 | Business process owner (BPO). | Version history | 1 | B | SME | Open |
 | VG-19 | Destination guide and topic (D-045). Proposed: 230 Collections, topic 5 Record a Customer Collection Activity, merged with legacy topic 5. Merged into the 230 v3.0 working draft (D-052). | Cover; file name; destination guide | 0 | B | Dec | Open |
 | VG-20 | Whether any reports or inquiries apply. If none, "No applicable reports". | Part 3 | 15 | B | SME | Open |
-| VG-21 | The security role needed to create activities, and a test with it. | PROCESS START | — | B | Test, SME | Open |
+| VG-21 | The security role needed to create activities, and a test with it. | PROCESS START | — | B | Test, SME | Closed 2026-11-18 (D-083): guides do not name security roles. Your manager requests your D365 profile, which gives you the access you need; for any access or security role issue, contact the BAU Support team. |
 | VG-22 | SME factual review, a test by someone other than the author, and approval. | Whole guide | — | B | SME | Open |
 | VG-23 | Recording timestamps for the activity demonstration. | Screenshot register | — | N | Rec | Open |
 | VG-24 | The AR collection-note writing standard and example notes (source 1 supporting references), to link from this guide when written. | Not in guide | — | N | SME | Open |
@@ -102,3 +102,4 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 |---|---|
 | 2026-10-14 | Register created with the v0.1 SME review draft. |
 | 2026-11-03 | Merged into 230 Collections v3.0 (D-052); D1 destination updated to the v3.0 topic numbers. |
+| 2026-11-18 | `VG-21` closed (D-083): the guides do not name security roles; users contact the BAU Support team for access issues. |

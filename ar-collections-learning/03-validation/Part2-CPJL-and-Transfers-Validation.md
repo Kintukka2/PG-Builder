@@ -113,7 +113,7 @@ Customer Pools has its own register: [Customer-Pools-Validation.md](Customer-Poo
 | CPJ-18 | How to confirm the result after posting, for example in the customer's transactions (see the Customer Account guide). | TF step 1.3.5, PC step 1.3.6, RO step 1.2.4 | B | Test, SME | Open |
 | CPJ-19 | How a posted journal is corrected or reversed. | PROCESS COMPLETE (all); REF "Not covered" | B | SME | Open |
 | CPJ-20 | What to do with an unposted journal that is no longer needed. It would appear under **Payment journals not posted** in the workspace (Workspace `VG-05`). | REF "Not covered" | N | SME, Test | Answered. SME answer (Maria Pabalan, 221 review comment of 10 Nov 2026; D-055): a Collections Officer can delete an unposted journal that is no longer needed. Applied in 220 v3.0 Part 1; the steps are still to confirm. |
-| CPJ-21 | The security role needed to open and create a CPJL, and a test with it. A missing page or control may have a security cause; that is a possible cause, not a diagnosis. | PROCESS START (all) | B | Test, SME | Open. Maria Pabalan (10 Nov 2026) is not sure of the role and suggests checking with Tony Chen (`G220-05`). |
+| CPJ-21 | The security role needed to open and create a CPJL, and a test with it. A missing page or control may have a security cause; that is a possible cause, not a diagnosis. | PROCESS START (all) | B | Test, SME | Closed 2026-11-18 (D-083): guides do not name security roles. Your manager requests your D365 profile, which gives you the access you need; for any access or security role issue, contact the BAU Support team. Applied in 220 v3.0 Part 1 (`G220-05`). |
 
 ### 3.4 Transfer Funds Between Customer Accounts (`TF`)
 
@@ -197,3 +197,4 @@ The gaps the three source drafts list are also covered: verification after posti
 | 2026-10-25 | The three guides and the reference are built in the PG master template as v0.1 SME review drafts (D-041), with every open item that affects the text as a Word comment. Step locations updated for the added *Click* **Modules** step. `SRC-03` notes the template's AVA entry. |
 | 2026-11-01 | Merged into 221 v0.1 (D-048): the four drafts are frozen and this register stays the record for their items. `GOV-03` notes the merge. |
 | 2026-11-10 | 221 is merged into 220 Customer Payments v3.0 (D-055). SME answers from Maria Pabalan's 221 review comments recorded against `GOV-01`, `CPJ-16`, `CPJ-17` and `CPJ-20`; `CPJ-21` noted; `GOV-03` superseded. |
+| 2026-11-18 | `CPJ-21` closed (D-083): the guides do not name security roles; users contact the BAU Support team for access issues. |

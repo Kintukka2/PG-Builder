@@ -5,8 +5,8 @@
 | Related PG (editable source) | [`../01-procedure-guides/TBC-AR Collections Favorites PG v0.2.docx`](../01-procedure-guides/TBC-AR%20Collections%20Favorites%20PG%20v0.2.docx) |
 | Markdown preview | [`../01-procedure-guides/PG-AR-Configure-Collections-Favourites-DRAFT.md`](../01-procedure-guides/PG-AR-Configure-Collections-Favourites-DRAFT.md) |
 | Related screenshot register | [`../02-screenshot-registers/PG-AR-Configure-Collections-Favourites-Screenshots.md`](../02-screenshot-registers/PG-AR-Configure-Collections-Favourites-Screenshots.md) |
-| Last updated | 2026-11-10 |
-| Items | 33 total: 30 open (16 blocking, 14 non-blocking), 1 deferred, 2 withdrawn |
+| Last updated | 2026-11-18 |
+| Items | 33 total: 28 open (14 blocking, 14 non-blocking), 2 closed, 1 deferred, 2 withdrawn |
 
 > **Merged and frozen (D-048, D-052).** The general steps are topic 3 of the [260 O2C Getting Started v0.2](../01-procedure-guides/CLAUDE-260-O2C%20Getting%20Started%20PG%20v0.2.docx) working draft, and the four AR Collections pages are in Part 1 (*Set up D365 for collections work*) of the [230 Collections v3.0](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.docx) working draft. Edit those guides, not this draft. Record answers here against these IDs; they apply to both.
 
@@ -111,8 +111,8 @@ Changes made to follow `PG_Template_Authoring_Guide_v1.docx`:
 | VG-13 | Order in which favorites are listed. | Step 11 | 17 | N | Test | Open |
 | VG-14 | How to remove a favorite. | Not in guide | — | N | Test | **Reopened** (SME request, Maria Pabalan, 260 review of 10 Nov 2026; D-054). Removal steps are 260 v0.2 topic 7 *Remove a Page from Favorites*; the test is `G260-08`. |
 | VG-15 | Whether the module menu has a search or filter. | — | — | — | — | **Withdrawn.** Only needed for the removed Troubleshooting section (T7). |
-| VG-16 | Whether the D365 issue form is the correct route when a module or page is not available. | Step 11 | 17 | B | SME | Open. Candidate route identified from the template's User Support block. |
-| VG-17 | The security role that grants access to these modules and pages, and a test with it. | PROCESS START | 7 | B | Test, SME | Open |
+| VG-16 | Whether the D365 issue form is the correct route when a module or page is not available. | Step 11 | 17 | B | SME | Closed 2026-11-18 (D-083): guides do not name security roles. Your manager requests your D365 profile, which gives you the access you need; for any access or security role issue, contact the BAU Support team. The route is applied in 260 topic 3 step 6. |
+| VG-17 | The security role that grants access to these modules and pages, and a test with it. | PROCESS START | 7 | B | Test, SME | Closed 2026-11-18 (D-083): guides do not name security roles. Your manager requests your D365 profile, which gives you the access you need; for any access or security role issue, contact the BAU Support team. |
 | VG-18 | What AR Collections users use **Customer payment journal** for. | Key concepts (pages table) | 5 | N | SME, Rec | Open. Part 2 notes (source 4.0) give evidence: transferring funds between customer accounts and restoring written-off or overpayment amounts. Close after the recording check (`SRC-01` in the [Part 2 register](Part2-CPJL-and-Transfers-Validation.md)). |
 | VG-19 | Wording for **Open customer invoices**, checked against the recording. | Key concepts (pages table) | 6 | N | Rec | Open |
 | VG-20 | Baseline claim that **Aged balances** gives access to collection activities. | Not in guide (removed) | — | N | Rec, SME | Open |
@@ -164,7 +164,7 @@ This combines the source 1 §4 gate with the authoring guide's final checklist.
 | Expected outcomes are confirmed | Partial (`VG-07`, `VG-13`) |
 | Each report has its own heading, or "No applicable reports" is confirmed | Open (`VG-32`) |
 | Roles and BPO reflect confirmed evidence | Open (`VG-31`, `VG-33`) |
-| Access and escalation route are confirmed | Open (`VG-16`, `VG-17`) |
+| Access and escalation route are confirmed | Met (D-083): the BAU Support team |
 | Contents, footer title, page numbers and links are updated and tested | Met in the rendered review copy. Recheck in Word: accept the update-fields prompt, then Ctrl+click each link. |
 | Tested by someone other than the author | Open (`VG-25`) |
 | SME review, designated reviewer and process-owner approval | Open (`VG-25`) |
@@ -182,3 +182,4 @@ This combines the source 1 §4 gate with the authoring guide's final checklist.
 | 2026-11-01 | Merged into 260 v0.1 (D-048); D1 destination renumbered (D-048). |
 | 2026-11-03 | AR Collections content merged into 230 Collections v3.0 Part 1 (D-052); the draft is now frozen. |
 | 2026-11-10 | `VG-14` reopened at the SME's request: removal steps are 260 v0.2 topic 7 (D-054). `VG-07` noted. |
+| 2026-11-18 | `VG-17`, `VG-16` closed (D-083): the guides do not name security roles; users contact the BAU Support team for access issues. |
