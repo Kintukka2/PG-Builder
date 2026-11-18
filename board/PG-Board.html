@@ -537,7 +537,7 @@ function itemCount(r){ const s=new Set(); for(const q of r.questions||[]){ (q.it
 function adoText(r){
   if(r.customText) return r.customText;
   const L=[r.intro||('Hi '+firstName(r.askTo)+','),''];
-  for(const q of r.questions||[]){ L.push(q.n+(q.theme?' — '+q.theme:'')); if(q.text) L.push(q.text); if(q.ref) L.push('See: '+q.ref); for(const p of q.parts||[]){ L.push('('+p.label+') '+p.text); if(p.ref) L.push('     See: '+p.ref); } L.push(''); }
+  for(const q of r.questions||[]){ L.push(q.n+(q.theme?' — '+q.theme:'')); const qp=q.page?' (see '+q.page+')':q.ref?' (see '+q.ref+')':''; const hasParts=(q.parts||[]).length>0; if(q.text) L.push(q.text+(hasParts?'':qp)); else if(qp&&!hasParts) L[L.length-1]+=qp; for(const p of q.parts||[]) L.push('('+p.label+') '+p.text+(p.page?' (see '+p.page+')':p.ref?' (see '+p.ref+')':'')); L.push(''); }
   L.push(r.outro||'Please reply against each question number. If a question does not apply, say so and I will close it.');
   return L.join('\n');
 }
@@ -788,6 +788,7 @@ function renderQ(){
     meta.append(el('span',{class:'pill '+st[0]},st[1]),
       el('span',null,[r.title,r.askTo&&('for '+r.askTo),(r.ticket||g.ticket)&&('ticket #'+(r.ticket||g.ticket)),n&&(plural(n,'question')+(items?' covering '+plural(items,'register item'):'')),r.sentAt&&('sent '+fmtDate(r.sentAt)),r.answeredAt&&('answered '+fmtDate(r.answeredAt))].filter(Boolean).join(' · ')));
     if(r.statusNote) meta.append(el('span',{class:'pill dashed'},r.statusNote));
+    if(r.pagesFrom) meta.append(el('span',{class:'hint'},'Page numbers from '+r.pagesFrom+'. Recalculated when the guide changes.'));
   } else meta.append(el('span',{class:'pill'},'No questions recorded for this ticket yet'));
   $('qAskTo').value=(r&&r.askTo)||g.approver||'';
   const t=$('qText'); t.value=r?adoText(r):''; t.placeholder='Paste or write the questions for this ticket, for example Q01 — Topic, then the question.';
@@ -807,7 +808,7 @@ function renderQ(){
   const qi=$('qItems'); qi.replaceChildren();
   if(r&&(r.questions||[]).length){
     qi.append(el('details',null,el('summary',null,'What each question closes in the register'),el('ul',{class:'qlist'},r.questions.map(q=>el('li',{class:'q'},el('span',{class:'q-n'},q.n),
-      el('div',null,el('b',null,q.theme||''),(q.parts||[]).length?el('ul',{class:'parts'},q.parts.map(p=>el('li',null,'('+p.label+') ',p.ref?el('span',{class:'hint'},p.ref+' · '):null,(p.items||[]).map(i=>el('span',{class:'item'},i))))):el('div',null,(q.items||[]).map(i=>el('span',{class:'item'},i)))))))));
+      el('div',null,el('b',null,q.theme||''),(q.parts||[]).length?el('ul',{class:'parts'},q.parts.map(p=>el('li',null,'('+p.label+') ',(p.page||p.ref)?el('span',{class:'hint'},[p.page,p.ref&&('('+p.ref+')')].filter(Boolean).join(' ')+' · '):null,(p.items||[]).map(i=>el('span',{class:'item'},i))))):el('div',null,(q.items||[]).map(i=>el('span',{class:'item'},i)))))))));
     if(r.customText) qi.append(el('p',{class:'hint',style:'margin-top:6px'},'The text above was edited on the board; the list keeps the items each original question closes.'));
   }
   const others=roundsFor(S.q.gid).filter(x=>!r||x.id!==r.id);
