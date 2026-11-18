@@ -51,12 +51,12 @@ Users do not know their security roles, so a guide never names one or asks about
 - This applies to every guide Claude drafts, converts or rebuilds from now on, and to legacy or SME content brought into a guide.
 - Before committing or sending a guide, search it for "Favorites" and remove any line that only tells the user they can open a page from Favorites.
 
-## Page breaks (D-086)
+## Page breaks (D-086, D-087)
 
-Part 1, Part 2 and Part 3 each start on a new page, as the master template does, and so does every Part 2 topic (a Heading 3 such as **2. Monitor Customers**). The first topic stays on the page of the Part 2 heading. Use **Page break before** on the heading's paragraph rather than an empty paragraph with a manual break.
+Part 1, Part 2 and Part 3 each start on a new page, as the master template does, and so does every topic and subtopic in Part 2: Heading 3 (**2. Monitor Customers**), Heading 4 (**6.1 Preview and Download a Customer Statement**) and PG Further Subdivision (**6.1.1 Generate the Statement Preview**) (D-086, D-087). A heading that directly follows its parent heading, with nothing in between, stays on that page, as the first topic does under the Part 2 heading. Use **Page break before** on the heading's paragraph rather than an empty paragraph with a manual break.
 
 - This applies to every guide Claude drafts, converts or rebuilds from now on.
-- Before committing or sending a guide, check that no topic or Part heading follows on from the previous page, then refresh the Contents page numbers.
+- Before committing or sending a guide, check that no Part, topic or subtopic heading follows on from the previous page, then refresh the Contents page numbers.
 
 ## Internal notes to the author: `ACTION: REVIEW REQUIREMENT` (D-060)
 
