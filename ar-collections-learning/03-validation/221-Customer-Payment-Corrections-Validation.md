@@ -49,12 +49,12 @@ This file is the guide's **question log** (D-016). It holds the guide-level item
 | G221-03 | Check topics 1, 2 and 6 against current D365 or a recording. They come from legacy 230 v2.3, which is reference evidence only (D-044). | Part 1 High-level process | B | Test, Rec | Open |
 | G221-04 | Confirm the events that start topics 1, 2 and 6. They come from legacy 230. | Part 1 High-level process | B | SME | Open |
 | G221-05 | Confirm the roles. Legacy 230 assigns settling, undoing a settlement and the bank fee write-off to the Collections Officer, with the Group Billing and Credit Manager also named for write-off journals. The roles for topics 3 to 5 are not confirmed (GOV-01, CPJ-16). | Part 1 Stream | B | SME | Open |
-| G221-06 | Confirm the settlement terms. They come from legacy 230 (Key concepts, Customer Payment Management, and sections 6.5, 6.6 and 6.8). | Part 1 Key concepts | B | SME | Open |
+| G221-06 | Confirm the settlement terms. They come from legacy 230 (Key concepts, Customer Payment Management, and sections 6.5, 6.6 and 6.8). | Part 1 Key concepts | B | SME | Closed 2026-11-18 (D-085): the settlement terms come from legacy 230 Key concepts and are not asked again (220 v3.0). |
 | G221-07 | Confirm the pre-requisites for topics 1 and 2. Legacy 230 gives the same pre-requisite for every procedure in its section 6 ("the required account status and reason for the change must be confirmed"), which does not fit settlement. | Topics 1 and 2 Procedure | B | SME | Open |
 | G221-08 | Confirm the menu path to All customers. Legacy 230 uses Accounts receivable > Customers > All customers; the Favorites topic draft places All customers in the Credit and collections module. | Topics 1 and 2 Procedure | B | Test | Open |
 | G221-09 | Confirm the labels and location of Settlements and Settle transactions. | Topic 1 Procedure | B | Test | Open |
 | G221-10 | Confirm the Amount to settle label and how a partial settlement is entered. | Topic 1 Procedure | B | Test | Open |
-| G221-11 | Confirm that the total must be 0.00 before posting, and what to do when the payment and the invoices differ by a small amount (a residual: see topic 6). | Topic 1 Procedure | B | SME, Test | Open |
+| G221-11 | Confirm that the total must be 0.00 before posting, and what to do when the payment and the invoices differ by a small amount (a residual: see topic 6). | Topic 1 Procedure | B | SME, Test | Closed 2026-11-18 (D-085): legacy 230 §6.5 says the total settlement amount must be 0.00; a residual is written off in 220 v3.0 topic 3.6. |
 | G221-12 | Confirm the labels and location of the Voucher link, Settlements and Undo settlement. | Topic 2 Procedure | B | Test | Open |
 | G221-13 | Confirm the Reverse control, and whether undoing a settlement needs approval or a recorded reason. | Topic 2 Procedure | B | Test, SME | Open |
 | G221-14 | Confirm who approves the write-off journal. Legacy 230 names the Group Billing and Credit Manager as responsible for creating write-off journals once a request is approved, while its procedure has the Collections Officer create the journal and submit it for approval. | Topic 6 Responsibility | B | SME | Open |
@@ -110,3 +110,4 @@ Part 2 register items that are not anchored as a review comment in this guide. T
 | 2026-11-01 | Guide added to the SME review pack (v2) for review only (D-048 amendment). |
 | 2026-11-03 | Part 1 *Not yet confirmed* points to 230 topic 2.4 Investigate a Customer Account, its number in 230 v3.0 (D-052). |
 | 2026-11-10 | Withdrawn: merged into 220 Customer Payments v3.0 after Maria Pabalan confirmed that Collections Officers do the tasks of both guides (D-055). |
+| 2026-11-18 | `G221-06` and `G221-11` closed in 220 v3.0 from the legacy sources (D-085). |

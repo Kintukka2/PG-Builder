@@ -197,11 +197,16 @@ def relocate(toc,pages,heads):
                 break
         pg2=found or pg; lo=pg2; out.append((lv,t,pg2))
     return out
-def context(docx,work=None,word=False):
-    """word=True: use the page breaks of a copy saved in Word (exact). Otherwise render with LibreOffice
-    (an estimate: install DM Sans first with tools/install_fonts.sh)."""
+def pdf_pages(pdf):
+    t=subprocess.run(['pdftotext',pdf,'-'],capture_output=True,text=True).stdout
+    return [norm(p) for p in t.split('\f')]
+def context(docx,work=None,word=False,pdf=None):
+    """word=True: use the page breaks of a copy saved in Word (exact). pdf: a PDF the user exported from Word
+    (exact). Otherwise render with LibreOffice (an estimate: install DM Sans first with tools/install_fonts.sh)."""
     toc,secs,kc=structure(docx)
-    if word:
+    if pdf:
+        pages=pdf_pages(pdf); toc=relocate(toc,pages,[h+(None,) for h in heading_list(docx)])
+    elif word:
         wp=word_pages(docx)
         if wp is None: raise SystemExit('Not a fresh Word save: its page breaks do not add up to its page count.')
         pages,_,wh=wp; toc=relocate(toc,pages,[(s_,t_,'',pg_) for s_,t_,pg_,_ in wh])
@@ -237,9 +242,10 @@ if __name__=='__main__':
     ap=argparse.ArgumentParser(description='Pages for question references in a PG Word guide.')
     ap.add_argument('docx'); ap.add_argument('refs',nargs='*',help='for example "3.6 step 9" or "Part 1, Key concepts (Settlement)"')
     ap.add_argument('--word',action='store_true',help='the file is a fresh Word save: use its own page breaks (exact)')
+    ap.add_argument('--pdf',help='a PDF of the same guide exported from Word: take the pages from it (exact)')
     ap.add_argument('--contents',action='store_true',help='print where each Contents entry falls')
     ap.add_argument('--write-contents',action='store_true',help='write those page numbers into the Contents of the file')
-    a=ap.parse_args(); ctx=context(a.docx,word=a.word)
+    a=ap.parse_args(); ctx=context(a.docx,word=a.word,pdf=a.pdf)
     if a.contents:
         for lv,t,pg in ctx[0]: print(pg,t)
     if a.write_contents: write_contents(a.docx,ctx[0]); print('Contents page numbers written')
