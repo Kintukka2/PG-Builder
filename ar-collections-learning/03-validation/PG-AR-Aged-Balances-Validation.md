@@ -6,7 +6,7 @@
 | Markdown preview | [`../01-procedure-guides/PG-AR-Aged-Balances-DRAFT.md`](../01-procedure-guides/PG-AR-Aged-Balances-DRAFT.md) |
 | Screenshot register | [`../02-screenshot-registers/PG-AR-Aged-Balances-Screenshots.md`](../02-screenshot-registers/PG-AR-Aged-Balances-Screenshots.md) |
 | Last updated | 2026-11-18 |
-| Items | 23 total: 21 open (14 blocking, 7 non-blocking), 1 closed, 1 deferred |
+| Items | 23 total: 20 open (13 blocking, 7 non-blocking), 2 closed, 1 deferred |
 
 > **Merged and frozen (D-052).** This topic draft is now topics 2.2 and 2.3 of the [230 Collections v3.0](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Aged Balances VG-xx*.
 
@@ -65,7 +65,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-11 | Whether this page has an aging period or band selector that the guide should cover (source 1, sequence 3.5). | Not in guide | — | N | Test, Rec | Open |
 | VG-12 | Whether the **Currency** column is shown by default. | Topic 1 Step 4 | 8 | N | Test | Open |
 | VG-13 | Wording and owner of the PDF-not-Excel rule for customer-facing information. | Key concepts | 6 | N | SME | Open |
-| VG-14 | Initiation events, for example a daily or weekly review. | Part 1 Initiation; topic Initiations; Process table *When* | 2, 12 | B | SME | Open |
+| VG-14 | Initiation events, for example a daily or weekly review. | Part 1 Initiation; topic Initiations; Process table *When* | 2, 12 | B | SME | Closed 2026-11-18 (D-085): the start events come from legacy 230 Part 1 (cross-comparison: strong) and the training, and are not asked; the SME's final review is the check. |
 | VG-15 | Stream, process area and business role name. Shared with the other AR Collections guides. | Stream table; Process table; Roles matrix | 3 | B | SME | Open |
 | VG-16 | Business process owner (BPO). | Version history | 1 | B | SME | Open |
 | VG-17 | Destination guide and topic (D-045). Proposed: 230 Collections, topics 2.2 Review Customer Aged Balances, merged with legacy topic 2.1, and 2.3 Filter Aged Balances by Customer or Currency. Merged into the 230 v3.0 working draft (D-052). | Cover; file name; destination guide | 0 | B | Dec | Open |
@@ -104,3 +104,4 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | 2026-10-14 | Register created with the v0.1 SME review draft. |
 | 2026-11-03 | Merged into 230 Collections v3.0 (D-052); D1 destination updated to the v3.0 topic numbers. |
 | 2026-11-18 | `VG-19` closed (D-083): the guides do not name security roles; users contact the BAU Support team for access issues. |
+| 2026-11-18 | `VG-14` closed from legacy 230 when 230 round 1 was rebuilt (D-085). |
