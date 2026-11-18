@@ -5,9 +5,9 @@
 | Guide (editable source) | [`CLAUDE-220-Customer Payments PG v3.0.docx`](../01-procedure-guides/CLAUDE-220-Customer%20Payments%20PG%20v3.0.docx) |
 | Review PDF | [`CLAUDE-220-Customer Payments PG v3.0.pdf`](../01-procedure-guides/CLAUDE-220-Customer%20Payments%20PG%20v3.0.pdf) |
 | Markdown preview | [`PG-220-Customer-Payments-v3.0-DRAFT.md`](../01-procedure-guides/PG-220-Customer-Payments-v3.0-DRAFT.md) |
-| Status | Working draft v3.0 (D-055): consolidates version 2.1 and 221 Customer Payment Corrections v0.1. Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-062); no content or item changes. Review comments cut to one per open blocking item on 2026-11-17 (D-067, D-074). Not shared yet; needs BPO sign-off. Version 2.1 stays published until 3.0 passes its gates. |
+| Status | Working draft v3.0 (D-055): consolidates version 2.1 and 221 Customer Payment Corrections v0.1. Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-062); no content or item changes. Review comments cut to one per open blocking item on 2026-11-17 (D-067, D-074). Two items closed on 2026-11-18 (roles confirmed; Part 3 kept as a quick-access summary, D-081). Not shared yet; needs BPO sign-off. Version 2.1 stays published until 3.0 passes its gates. |
 | Last updated | 2026-11-18 |
-| Items | 12 guide-level items (`G220`), all open: 11 blocking, 1 non-blocking. **53 Word review comments** (D-067): 12 guide-level and 41 carried from 221 v0.1; 70 removed (section 4.1). |
+| Items | 13 guide-level items (`G220`): 11 open (9 blocking, 2 non-blocking) and 2 closed (`G220-03`, `G220-12`). **51 Word review comments** (D-067): 10 guide-level and 41 carried from 221 v0.1; 70 removed under D-067 (section 4.1) and 2 removed when their items closed (section 6.1). |
 
 This file is the guide's **question log** (D-016). It holds the guide-level items, which are scoped to this guide and never renumbered. Review comments carried from 221 keep their ID, for example *CPJ-14* or *G221-07*, and their source register stays the record for them: an answer recorded there applies here (D-048). Each open item that affects the text is a Word review comment by "Validation register" (VR).
 
@@ -45,7 +45,7 @@ This file is the guide's **question log** (D-016). It holds the guide-level item
 |---|---|---|---|---|---|
 | G220-01 | Version 3.0 consolidates 221 Customer Payment Corrections into this guide (D-055). Maria Pabalan confirmed on 10 November 2026 that Collections Officers do the tasks of both guides, so the split by role that 221 was proposed for (D-046) does not apply. Version 3.0 needs BPO sign-off; version 2.1 stays the published guide until 3.0 passes its gates. | Version history | B | Dec | Open |
 | G220-02 | Confirm the events that start these tasks. They come from v2.1 (Part 1 Initiation) and from 221 (G221-04, TF-01, PC-06 and RO-04). | Part 1 High-level process | B | SME | Open |
-| G220-03 | Confirm the roles. Maria Pabalan (10 November 2026): Collections Officers do the tasks of v2.1, which Receipting Officers did before the April go-live, and Receipting Officers process intercompany (ICO) payments only. The 9 November direct debit meeting (D-053) gave direct debit processing, adding new customers to eBanking and maintaining alternate names to the receiving team. Confirm topics 4.4, 4.5 and 6. | Part 1 Stream | B | SME | Open |
+| G220-03 | Confirm the roles. Maria Pabalan (10 November 2026): Collections Officers do the tasks of v2.1, which Receipting Officers did before the April go-live, and Receipting Officers process intercompany (ICO) payments only. The 9 November direct debit meeting (D-053) gave direct debit processing, adding new customers to eBanking and maintaining alternate names to the receiving team. Confirm topics 4.4, 4.5 and 6. | Part 1 Stream | B | SME | Closed 2026-11-18: Maria Pabalan's reply of 10 November (*Collection officers only*) covers every v2.1 task in the Contents she was shown, the alternate name topics (now 4.4 and 4.5) included. Daniel Moreira confirmed on 18 November that **Collections Officer** is the role name. Receipting Officers process intercompany payments only. Topic 6 links to 240, where the direct debit roles are set (D-053). |
 | G220-04 | Confirm this wording. In v2.1, payments that the receipting team could not resolve were referred to the Collections team; Collections Officers now process the payments themselves. | Part 1 Key concepts | B | SME | Open |
 | G220-05 | Confirm the security role needed to post a CPJL. Maria Pabalan (10 November 2026) is not sure of it and suggests checking with Tony Chen (CPJ-21). | Part 1 Key concepts | B | SME | Open |
 | G220-06 | Confirm the settlement methods that Collections Officers use and when each one is used. Maria Pabalan shows them several ways (10 November 2026); this guide documents three (2.1 to 2.3). Add a subtopic for any other method. | Topic 2 Settle Customer Payments | B | SME | Open |
@@ -54,7 +54,8 @@ This file is the guide's **question log** (D-016). It holds the guide-level item
 | G220-09 | Confirm when the journal is posted. In v2.1, 4.1 (now 2.2.1) posts the journal, and 4.2 (now 2.2.2) settles it and posts it again. Confirm whether the journal is posted once, after it is settled. | 2.2.2 Settle the Customer Payment Journal | B | SME, Test | Open |
 | G220-10 | Check topics 2.3, 3.1 and 3.6 against current D365 or a recording (they come from legacy 230, reference evidence only: D-044; was G221-03), and topics 3.3 to 3.5 and the CPJL controls against the AR Training D365 Part 2 recording (SRC-01). | Topic 3 Correct Customer Payments | B | Test, Rec | Open |
 | G220-11 | Add the intercompany (ICO) payment steps from Maria Pabalan's session with Amy on Friday 6 November 2026 (recording). Confirm the example legal entities (101a and 238a). | Topic 5 Process Intercompany Customer Payments | N | Rec | Open |
-| G220-12 | Complete Part 3 Reports. The five reports carried from version 2.1 have names and navigation paths but no description, and version 2.1 highlighted the Part 3 heading for review. For each report, describe what it shows, when Collections Officers use it and the check it supports, and confirm its navigation path in current D365 (the paths mix Inquiries and Enquiries). Confirm whether all five reports belong in this guide. | Part 3 Reports | B | SME, Test | Open |
+| G220-12 | Complete Part 3 Reports. The five reports carried from version 2.1 have names and navigation paths but no description, and version 2.1 highlighted the Part 3 heading for review. For each report, describe what it shows, when Collections Officers use it and the check it supports, and confirm its navigation path in current D365 (the paths mix Inquiries and Enquiries). Confirm whether all five reports belong in this guide. | Part 3 Reports | B | SME, Test | Closed 2026-11-18 (scope decision, Daniel Moreira; D-081): Part 3 is a quick-access summary so Collections Officers can run the reports easily. How and when each report is used is up to the officer, so the guide does not describe it. The path check moves to `G220-13`. |
+| G220-13 | Check the five report paths in Part 3 in current D365: they mix *Inquiries and Reports* and *Enquiries and Reports*. | Part 3 Reports | N | Test | Open |
 
 ---
 
@@ -65,7 +66,7 @@ Every review comment in the Word guide, in document order, after D-067 (one comm
 | Section | Items |
 |---|---|
 | Cover and version history | `G220-01` |
-| Part 1 High-level process | `G220-02`, `G220-03` |
+| Part 1 High-level process | `G220-02` |
 | Part 1 Key concepts | `G220-04`, `G221-06`, `TF-03 / CPJ-09`, `PC-02`, `TF-02`, `RO-03`, `CPJ-16 to CPJ-21`, `G220-05` |
 | Topic 2 Settle Customer Payments | `G220-06` |
 | Topic 2.1 Settle Bank Statement Payments | `G220-07` |
@@ -78,7 +79,6 @@ Every review comment in the Word guide, in document order, after D-067 (one comm
 | Topic 3.5 Restore a Written-Off or Overpayment Amount | `CPJ-06 / CPJ-07`, `CPJ-10`, `RO-01`, `CPJ-11` |
 | Topic 3.6 Write Off a Bank Fee or Small Residual | `G221-14`, `G221-15`, `G221-16`, `G221-17`, `G221-18`, `G221-19` |
 | Topic 5 Process Intercompany Customer Payments | `G220-11` |
-| Part 3 Reports | `G220-12` |
 
 ### 4.1 Comments removed under D-067 (17 November 2026)
 
@@ -179,7 +179,7 @@ From Maria's review comments on 221 v0.1 and the Teams chat of 10 November 2026 
 
 | # | Source | Answer | Applied in v3.0 | Items |
 |---|---|---|---|---|
-| 1 | Chat | Collections Officers do the tasks of 220 v2.1 (*Collection officers only*). They were given the ability after the April go-live; Receipting Officers did it before. | Every v2.1 task is the Collections Officer's; Part 1 roles and a note on the change. | `G220-03` (conflict with D-053 to confirm) |
+| 1 | Chat | Collections Officers do the tasks of 220 v2.1 (*Collection officers only*). They were given the ability after the April go-live; Receipting Officers did it before. | Every v2.1 task is the Collections Officer's; Part 1 roles and a note on the change. | `G220-03` (closed 2026-11-18: section 6.1) |
 | 2 | Chat | Intercompany (ICO) payments are done by Receipting Officers only, for example a customer paying into a bank account in 101a for an invoice in 238a. Covered with Amy on Friday 6 November. | Topic 5 placeholder. | `G220-11` |
 | 3 | Chat | Collections Officers settle in more than one way. | Topic 2 with three methods and *Which method to use*. | `G220-06` |
 | 4 | 221 comments (topics 3 to 5) | *Collection Officer* prepares transfers, distributions and restorations. | Process, roles and Responsibility in 3.3 to 3.5. | `GOV-01`, `G221-05` |
@@ -187,6 +187,15 @@ From Maria's review comments on 221 v0.1 and the Teams chat of 10 November 2026 
 | 6 | 221 comment (Key concepts) | No approvals are required for a CPJL. | *Posting and permissions* table; roles overview. | `CPJ-17`; `G220-08` (v2.1 approval steps) |
 | 7 | 221 comment (Key concepts) | A Collections Officer can delete an unposted journal that is no longer needed. | *Posting and permissions* table. | `CPJ-20` (steps still to confirm) |
 | 8 | 221 comment (Key concepts) | Not sure of the security role needed to post a CPJL: check with Tony Chen. | *Posting and permissions* table. | `CPJ-21`; `G220-05` |
+
+### 6.1 Answers applied, 18 November 2026
+
+From Daniel Moreira, reviewing round 1 on the board before it is sent.
+
+| # | Source | Answer | Applied in v3.0 | Items |
+|---|---|---|---|---|
+| 1 | Teams chat, 10 November 2026 (Maria Pabalan), confirmed by Daniel Moreira | Collections Officers only do the tasks in the v2.1 Contents, and **Collections Officer** is the role name. Receipting Officers process intercompany payments only. | Part 1 roles already say this. The review comment on the *Stream* table is removed; round 1 question 1 (a) is dropped. | `G220-03` closed |
+| 2 | Daniel Moreira (scope decision, D-081) | Part 3 is a quick-access summary of the reports. How and when they are used is up to the officer; what matters is easy access to run them. | The ACTION note and the review comment in Part 3 are removed; the empty Description cells stay as they are. Round 1 question 7 (c) is dropped. | `G220-12` closed; `G220-13` opened for the paths |
 
 ---
 
@@ -198,3 +207,4 @@ From Maria's review comments on 221 v0.1 and the Teams chat of 10 November 2026 
 | 2026-11-16 | Formatting brought in line with D-059 to D-061 (D-062): Bullet 1.2 bullets, topic numbers in link text, notes to the author in the ACTION: REVIEW REQUIREMENT style. The legacy yellow highlight on the Part 3 heading is replaced by an ACTION note and item `G220-12` (empty report descriptions). Files renamed with the `CLAUDE-` prefix (D-056). |
 | 2026-11-17 | Review comments cut under D-067 (D-074): 123 → 53, one per open blocking item at the place it matters most; the 70 removed are listed in section 4.1 and their items stay open in their registers. First question round prepared on the board (D-069). The PDF beside the Word file is out of date (D-064). |
 | 2026-11-18 | Version history dates for 1.0, 2.0 and 2.1 shortened to month and year (February 2025, November 2025, January 2026), as in Daniel Moreira’s Word copy of the 16 November build; no other change. His copy predates the comment cut of D-074, so the repository copy stays the current one. |
+| 2026-11-18 | Round 1 review: `G220-03` closed (roles confirmed by Maria Pabalan's reply of 10 November and Daniel Moreira) and `G220-12` closed by a scope decision (D-081); `G220-13` added (non-blocking, the Part 3 paths). Their two review comments and the Part 3 ACTION note are removed: 53 → 51 comments. The PDF beside the Word file is out of date (D-064). |
