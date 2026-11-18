@@ -16,6 +16,6 @@ Only pages verified in Word are shown to an SME (D-082, D-085). Until then a que
 - **A PDF exported from Word (exact).** With `--pdf`, the script reads the pages of that PDF and the structure of the Word file.
 - **A LibreOffice render (estimate, for Claude only).** Without either, the script renders the guide. With DM Sans installed, short guides match Word (260: 237 of 238 paragraphs on the same page), but long tables fall differently (220 runs 2 pages short from topic 3). Use it to check a layout, never as a reference for the SME.
 
-`--write-contents` writes the page numbers found into the guide's Contents, so the Contents agrees with the pages the questions give.
+`--write-contents` writes the page numbers found into the guide's Contents. A heading is placed on the first page where its title stands on a line of its own, so a Contents line or an overview-table entry does not count. If any heading cannot be placed, nothing is written.
 
 Page numbers follow the guide as it is laid out now. When a guide changes, Claude recalculates the pages for its open rounds in the same turn.

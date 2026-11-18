@@ -51,6 +51,13 @@ Users do not know their security roles, so a guide never names one or asks about
 - This applies to every guide Claude drafts, converts or rebuilds from now on, and to legacy or SME content brought into a guide.
 - Before committing or sending a guide, search it for "Favorites" and remove any line that only tells the user they can open a page from Favorites.
 
+## Page breaks (D-086)
+
+Part 1, Part 2 and Part 3 each start on a new page, as the master template does, and so does every Part 2 topic (a Heading 3 such as **2. Monitor Customers**). The first topic stays on the page of the Part 2 heading. Use **Page break before** on the heading's paragraph rather than an empty paragraph with a manual break.
+
+- This applies to every guide Claude drafts, converts or rebuilds from now on.
+- Before committing or sending a guide, check that no topic or Part heading follows on from the previous page, then refresh the Contents page numbers.
+
 ## Internal notes to the author: `ACTION: REVIEW REQUIREMENT` (D-060)
 
 Any text in a draft guide that speaks to the author or reviewer rather than the reader uses the template's **ACTION: REVIEW REQUIREMENT** style (yellow fill, red text), so it stands out as a note to resolve, not guide content. Examples: "This guide does not yet describe…", "to be confirmed", "Navigation to be confirmed", "No role is marked until…".
