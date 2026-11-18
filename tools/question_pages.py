@@ -12,6 +12,10 @@ def render(docx,work):
     subprocess.run(['soffice','--headless','--convert-to','pdf','--outdir',work,dst],capture_output=True,timeout=400)
     t=subprocess.run(['pdftotext',os.path.join(work,'g.pdf'),'-'],capture_output=True,text=True).stdout
     return [norm(p) for p in t.split('\f')]
+def layout_lines(pdf):
+    """Each page as a list of normalized lines (pdftotext -layout), for finding headings that stand on their own line."""
+    t=subprocess.run(['pdftotext','-layout',pdf,'-'],capture_output=True,text=True).stdout
+    return [[norm(l) for l in p.split('\n') if l.strip()] for p in t.split('\f')]
 def structure(docx):
     root=etree.fromstring(zipfile.ZipFile(docx).read('word/document.xml')); body=root.find(q('body'))
     toc=[]
@@ -19,8 +23,13 @@ def structure(docx):
         s=style(p)
         m=re.match(r'TOC(\d)',s)
         if m:
-            t=ptext(p); mm=re.match(r'^(.*?)(\d+)$',t)
-            if mm: toc.append((int(m.group(1)),mm.group(1).strip(),int(mm.group(2))))
+            # the page number is the last run that holds only digits (the PAGEREF result), so a title
+            # that ends in a digit, such as "to TM1", is not run into its page number
+            ts=[t.text or '' for t in p.iter(q('t'))]
+            k=max((i for i,x in enumerate(ts) if x.strip().isdigit()),default=None)
+            if k is not None:
+                title=''.join(ts[:k]).strip()
+                if title: toc.append((int(m.group(1)),title,int(ts[k].strip())))
     # section labels as used by locate.py, with their steps
     st={'part':0,'t':0,'s':0,'k':0,'sec':'','h5':''}; secs={}; kc=[]
     def lab():
@@ -179,33 +188,36 @@ def heading_list(docx):
         if (s.startswith('Heading') or s=='PGFurtherSubdivision') and not re.match(r'TOC',s):
             out.append((s,ptext(p),ptext(ps[i+1]) if i+1<len(ps) else ''))
     return out
-def relocate(toc,pages,heads):
+UNFOUND=[]
+def relocate(toc,pages,heads,lines=None):
     """Page of each Contents entry as the pages fall now, not as the Contents last recorded them.
-    heads: [(style, text, next text, page or None)]; with no page, the heading is found in the page texts
-    by its title and the words that follow it, so a link to it in an overview table does not count."""
+    heads: [(style, text, next text, page or None)] in document order. With a page (Word mode) it is used as is.
+    Without one, the heading is found on the first page, from the previous entry's page on, where its title
+    stands on a line of its own (lines from pdftotext -layout), with or without its number, or wrapped over
+    two lines; a link in the Contents or an overview table shares its line with other text, so it does not count."""
     out=[]; hi=0; lo=1
     for lv,t,pg in toc:
         core=norm(re.sub(r'^\d+(?:\.\d+)*\.?\s+','',t)); full=norm(t); found=None
         for i in range(hi,len(heads)):
             h=norm(heads[i][1])
             if h==core or h==full or h.endswith(core):
-                hi=i+1; found=heads[i][3]
-                if found is None:
-                    key=(norm(heads[i][1])+' '+norm(heads[i][2])[:30]).strip()
-                    for j in range(lo,len(pages)+1):
-                        if key in pages[j-1]: found=j; break
-                break
-        pg2=found or pg; lo=pg2; out.append((lv,t,pg2))
+                hi=i+1; found=heads[i][3]; break
+        if found is None and lines is not None:
+            want={core,full}
+            for j in range(max(lo,1),len(lines)+1):
+                L=lines[j-1]
+                if any(L[k] in want or re.sub(r'^\d+(?:\.\d+)*\.?\s+','',L[k]) in want or
+                       (k+1<len(L) and (L[k]+' '+L[k+1]) in want) for k in range(len(L))):
+                    found=j; break
+        if found is None: UNFOUND.append(t)
+        pg2=found or max(pg,lo); lo=pg2; out.append((lv,t,pg2))
     return out
-def pdf_pages(pdf):
-    t=subprocess.run(['pdftotext',pdf,'-'],capture_output=True,text=True).stdout
-    return [norm(p) for p in t.split('\f')]
 def context(docx,work=None,word=False,pdf=None):
     """word=True: use the page breaks of a copy saved in Word (exact). pdf: a PDF the user exported from Word
     (exact). Otherwise render with LibreOffice (an estimate: install DM Sans first with tools/install_fonts.sh)."""
     toc,secs,kc=structure(docx)
     if pdf:
-        pages=pdf_pages(pdf); toc=relocate(toc,pages,[h+(None,) for h in heading_list(docx)])
+        pages=pdf_pages(pdf); toc=relocate(toc,pages,[h+(None,) for h in heading_list(docx)],layout_lines(pdf))
     elif word:
         wp=word_pages(docx)
         if wp is None: raise SystemExit('Not a fresh Word save: its page breaks do not add up to its page count.')
@@ -213,7 +225,8 @@ def context(docx,work=None,word=False,pdf=None):
     else:
         if 'DM Sans' not in subprocess.run(['fc-list'],capture_output=True,text=True).stdout:
             print('warning: DM Sans is not installed (tools/install_fonts.sh); pages will be further off',file=sys.stderr)
-        pages=render(docx,work or tempfile.mkdtemp()); toc=relocate(toc,pages,[h+(None,) for h in heading_list(docx)])
+        work=work or tempfile.mkdtemp(); pages=render(docx,work)
+        toc=relocate(toc,pages,[h+(None,) for h in heading_list(docx)],layout_lines(os.path.join(work,'g.pdf')))
     rng=ranges(toc,pages)
     return (toc,secs,kc,pages,rng)
 def write_contents(docx,toc,out=None):
@@ -225,9 +238,8 @@ def write_contents(docx,toc,out=None):
         nonlocal i
         p=m.group(0)
         if not re.search(r'<w:pStyle w:val="TOC\d"',p): return p
-        txt=''.join(re.findall(r'<w:t(?: [^>]*)?>([^<]*)</w:t>',p)).strip()
-        if not re.match(r'^(.*?)(\d+)$',txt): return p
-        ts=list(re.finditer(r'(<w:t(?: [^>]*)?>)(\d+)(</w:t>)',p))
+        ts=list(re.finditer(r'(<w:t(?: [^>]*)?>)\s*(\d+)\s*(</w:t>)',p))
+        if not ts or not ''.join(re.findall(r'<w:t(?: [^>]*)?>([^<]*)</w:t>',p[:ts[-1].start()])).strip(): return p
         if not ts or i>=len(want): return p
         t=ts[-1]; new=p[:t.start()]+t.group(1)+str(want[i])+t.group(3)+p[t.end():]; i+=1
         return new
@@ -235,8 +247,10 @@ def write_contents(docx,toc,out=None):
     assert i==len(want),(i,len(want))
     out=out or docx; tmp=out+'.tmp'; zo=zipfile.ZipFile(tmp,'w',zipfile.ZIP_DEFLATED)
     for it in z.infolist(): zo.writestr(it,d2.encode('utf8') if it.filename=='word/document.xml' else z.read(it.filename))
-    zo.close(); z.close(); os.replace(tmp,out)
-    assert [pg for _,_,pg in structure(out)[0]]==want
+    zo.close(); z.close()
+    if [pg for _,_,pg in structure(tmp)[0]]!=want:
+        os.remove(tmp); raise SystemExit('Contents not written: the page numbers did not read back as expected.')
+    os.replace(tmp,out)
 if __name__=='__main__':
     import argparse
     ap=argparse.ArgumentParser(description='Pages for question references in a PG Word guide.')
@@ -247,6 +261,8 @@ if __name__=='__main__':
     ap.add_argument('--write-contents',action='store_true',help='write those page numbers into the Contents of the file')
     a=ap.parse_args(); ctx=context(a.docx,word=a.word,pdf=a.pdf)
     if a.contents:
-        for lv,t,pg in ctx[0]: print(pg,t)
+        for lv,t,pg in ctx[0]: print(pg,t,'(not found: Contents value kept)' if t in UNFOUND else '')
+    if a.write_contents and UNFOUND:
+        raise SystemExit('Contents not written: these headings were not found: '+'; '.join(UNFOUND))
     if a.write_contents: write_contents(a.docx,ctx[0]); print('Contents page numbers written')
     for r in a.refs: print(fmt(pages_for(r,ctx)),'<-',r)
