@@ -6,7 +6,7 @@
 | Markdown preview | [`../01-procedure-guides/PG-AR-Notes-and-Activities-DRAFT.md`](../01-procedure-guides/PG-AR-Notes-and-Activities-DRAFT.md) |
 | Screenshot register | [`../02-screenshot-registers/PG-AR-Notes-and-Activities-Screenshots.md`](../02-screenshot-registers/PG-AR-Notes-and-Activities-Screenshots.md) |
 | Last updated | 2026-11-18 |
-| Items | 22 total: 21 open (14 blocking, 7 non-blocking), 1 closed |
+| Items | 22 total: 20 open (13 blocking, 7 non-blocking), 2 closed |
 
 > **Merged and frozen (D-052).** This topic draft is now topics 2.5 and 2.6 of the [230 Collections v3.0](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Notes and Activities VG-xx*.
 
@@ -67,7 +67,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-11 | Wording and owner of the customer-level rule, and when a note should be recorded against a specific transaction instead. | Key concepts | 7 | N | SME | Open |
 | VG-12 | How activities relate to the entries on the Notes page. | Key concepts | 6 | N | Test, SME | Open |
 | VG-13 | Whether the Notes page shows notes from other legal entities. | Topic 1 Step 8 | 12 | N | Test | Open |
-| VG-14 | Initiation events for this task. | Part 1 Initiation; topic Initiations; Process table *When* | 2, 13 | B | SME | Open |
+| VG-14 | Initiation events for this task. | Part 1 Initiation; topic Initiations; Process table *When* | 2, 13 | B | SME | Closed 2026-11-18 (D-085): the start events come from legacy 230 Part 1 (cross-comparison: strong) and the training, and are not asked; the SME's final review is the check. |
 | VG-15 | Stream, process area and business role name. Shared with the other AR Collections guides. | Stream table; Process table; Roles matrix | 3 | B | SME | Open |
 | VG-16 | Business process owner (BPO). | Version history | 1 | B | SME | Open |
 | VG-17 | Destination guide and topic (D-045). Proposed: 230 Collections, topics 2.5 Review Customer Notes and 2.6 Review All Customer Activities, merged with legacy topic 2.2. Merged into the 230 v3.0 working draft (D-052). | Cover; file name; destination guide | 0 | B | Dec | Open |
@@ -105,3 +105,4 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | 2026-10-14 | Register created with the v0.1 SME review draft. |
 | 2026-11-03 | Merged into 230 Collections v3.0 (D-052); D1 destination updated to the v3.0 topic numbers. |
 | 2026-11-18 | `VG-19` closed (D-083): the guides do not name security roles; users contact the BAU Support team for access issues. |
+| 2026-11-18 | `VG-14` closed from legacy 230 when 230 round 1 was rebuilt (D-085). |

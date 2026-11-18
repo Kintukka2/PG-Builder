@@ -5,9 +5,9 @@
 | Guide (editable source) | [`CLAUDE-230-Collections PG v3.0.docx`](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.docx) |
 | Review PDF | [`CLAUDE-230-Collections PG v3.0.pdf`](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.pdf) |
 | Markdown preview | [`PG-230-Collections-v3.0-DRAFT.md`](../01-procedure-guides/PG-230-Collections-v3.0-DRAFT.md) |
-| Status | Working draft v3.0 (D-052; ADO Task 16886). Shared with the SME for review only (SME review pack of 8 November; D-052 amendment); needs BPO sign-off. Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-063); no content or item changes. Review comments cut to one per open blocking item on 2026-11-17 (D-067, D-075). Version 2.3, then 2.4, stays published until 3.0 passes its gates. |
-| Last updated | 2026-11-17 |
-| Items | 10 guide-level items (`G230`), all open: 10 blocking, 0 non-blocking. **93 Word review comments** (D-067): 11 guide-level and 82 carried from the topic drafts; 43 removed (section 4.1). |
+| Status | Working draft v3.0 (D-052; ADO Task 16886). Shared with the SME for review only (SME review pack of 8 November; D-052 amendment); needs BPO sign-off. Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-063); no content or item changes. Review comments cut to one per open blocking item on 2026-11-17 (D-067, D-075). Round 1 rebuilt as three questions (D-085, section 6). Version 2.3, then 2.4, stays published until 3.0 passes its gates. |
+| Last updated | 2026-11-18 |
+| Items | 10 guide-level items (`G230`): 7 open (all blocking) and 3 closed (`G230-06`, `G230-07`, `G230-14`). **82 Word review comments** (D-067): 8 guide-level and 74 carried from the topic drafts; 43 removed under D-067 (section 4.1) and 11 removed when round 1 was rebuilt (section 6). Comments for items asked in round 1 start with the question number, for example *[Q03]*. |
 
 This file is the guide's **question log** (D-016). It holds the guide-level items, which are scoped to this guide and never renumbered. Review comments carried from the topic drafts keep their ID and draft name, for example *Aged Balances VG-03*, and their source register stays the record for them: an answer recorded there applies here (D-048). Each open item that affects the text is a Word review comment by "Validation register" (VR).
 
@@ -52,15 +52,15 @@ This file is the guide's **question log** (D-016). It holds the guide-level item
 | ID | Item to confirm | Location | Priority | Method | Status |
 |---|---|---|---|---|---|
 | G230-05 | Version 3.0 is a working draft for ADO Task 16886, assembled from v2.4 and the nine AR Collections topic drafts (D-052). It stays inside the project team until it is reviewed with Maria Pabalan, and it needs BPO sign-off. Version 2.3, then 2.4, stays the published guide until 3.0 passes its gates. | Version history | B | SME | Open |
-| G230-06 | Confirm the events that start the Collections process. These come from legacy 230; the topic drafts add the start of each working day (Workspace) and customer requests for statements and invoices. | Part 1 High-level process | B | SME | Open |
-| G230-07 | Confirm the stream and process area. Legacy 230 uses O2C and Collections; the topic drafts use Accounts Receivable and AR Collections (cross-comparison conflict 11; SME question A2). | Part 1 Stream | B | SME | Open |
+| G230-06 | Confirm the events that start the Collections process. These come from legacy 230; the topic drafts add the start of each working day (Workspace) and customer requests for statements and invoices. | Part 1 High-level process | B | SME | Closed 2026-11-18 (D-085): the events come from legacy 230 Part 1 and the training; not asked. |
+| G230-07 | Confirm the stream and process area. Legacy 230 uses O2C and Collections; the topic drafts use Accounts Receivable and AR Collections (cross-comparison conflict 11; SME question A2). | Part 1 Stream | B | SME | Closed 2026-11-18 (D-085): O2C and Collections, as in legacy 230 and the O2C numbering standard (D-070); the guide already shows them. |
 | G230-08 | Confirm which legacy Aged balances content belongs in this topic: sorting by amount due, the aging icon legend, opening the customer's Collections page (cross-comparison conflict 12) and the 10-minute refresh (legacy control 9). | 2.2 Review Customer Aged Balances | B | SME, Test | Open |
 | G230-09 | Confirm the activity control label (cross-comparison conflict 2) and whether reviewing attachments and correcting the record belong in this topic. | 2.6 Review All Customer Activities | B | SME, Test | Open |
 | G230-10 | Decide whether to keep this topic or replace it with a link to 200 Customer Onboarding and Maintenance §3.4, which covers the same task. | 2.7 Update Customer Details | B | Dec | Open |
 | G230-11 | Confirm the activity fields and types, and whether supporting documents are mandatory (cross-comparison conflicts 2 and 3; legacy control 7; SME question B3.1). | 5 Record a Customer Collection Activity | B | SME, Test | Open |
 | G230-12 | Confirm these statement controls before anyone sends a statement with this topic (legacy controls 1 to 4; cross-comparison conflicts 4 and 5; SME questions B5.1 to B5.4; test station S13). | 6.2 Generate and Send a Customer Statement | B | SME, Test | Open |
 | G230-13 | Confirm the invoice copy route (cross-comparison conflict 10; test station S10.1) and whether resending an invoice belongs in this topic (answers Customer Invoices VG-21). | 7.1 View and Download a Customer Invoice | B | Test, SME | Open |
-| G230-14 | Confirm the reports. Legacy 230 lists these four; the topic drafts each asked whether any reports apply. | Part 3 | B | SME | Open |
+| G230-14 | Confirm the reports. Legacy 230 lists these four; the topic drafts each asked whether any reports apply. | Part 3 | B | SME | Closed 2026-11-18 (D-081, D-085): Part 3 is a quick-access summary for running the reports, so the four legacy 230 reports stand and how they are used is not described. |
 
 ---
 
@@ -71,24 +71,22 @@ Every review comment in the Word guide, in document order, after D-067 (one comm
 | Section | Items |
 |---|---|
 | Cover and version history | `G230-05` |
-| Part 1 High-level process | `G230-06`, `G230-07` |
 | Part 1 Key concepts | `Favorites VG-01`, `Personalized Views VG-01`, `Workspace VG-08`, `Overdue Customers VG-09`, `Aged Balances VG-01`, `Collection Activities VG-09 / VG-10`, `Statement Distribution VG-12 / VG-13`, `Statement Distribution VG-17` |
 | Topic 1.1 Open the Customer Credit and Collections Workspace | `Workspace VG-01`, `Workspace VG-02` |
-| Topic 1.2 Locate Collection Work in the Workspace | `Workspace VG-14`, `Workspace VG-04`, `Workspace VG-05`, `Workspace VG-06`, `Workspace VG-07` |
+| Topic 1.2 Locate Collection Work in the Workspace | `Workspace VG-04`, `Workspace VG-05`, `Workspace VG-06`, `Workspace VG-07` |
 | Topic 2.1 Review Customers Overdue | `Overdue Customers VG-01`, `Overdue Customers VG-02`, `Overdue Customers VG-05`, `Overdue Customers VG-06`, `Overdue Customers VG-04` |
 | Topic 2.2 Review Customer Aged Balances | `Aged Balances VG-02`, `Aged Balances VG-04 / VG-12`, `Aged Balances VG-03 / VG-05`, `Aged Balances VG-06`, `G230-08` |
-| Topic 2.3 Filter Aged Balances by Customer or Currency | `Aged Balances VG-14`, `Aged Balances VG-07`, `Aged Balances VG-08` |
+| Topic 2.3 Filter Aged Balances by Customer or Currency | `Aged Balances VG-07`, `Aged Balances VG-08` |
 | Topic 2.4 Investigate a Customer Account | `Customer Account VG-01 / VG-03`, `Customer Account VG-02`, `Customer Account VG-04`, `Customer Account VG-05`, `Customer Account VG-06`, `Customer Account VG-07`, `Customer Account VG-09`, `Customer Account VG-10`, `Customer Account VG-11`, `Customer Account VG-12` |
 | Topic 2.5 Review Customer Notes | `Notes and Activities VG-01 / VG-02`, `Notes and Activities VG-03`, `Notes and Activities VG-04`, `Notes and Activities VG-06` |
-| Topic 2.6 Review All Customer Activities | `Notes and Activities VG-14`, `Notes and Activities VG-07`, `Notes and Activities VG-08`, `Notes and Activities VG-09`, `G230-09` |
+| Topic 2.6 Review All Customer Activities | `Notes and Activities VG-07`, `Notes and Activities VG-08`, `Notes and Activities VG-09`, `G230-09` |
 | Topic 2.7 Update Customer Details | `G230-10` |
-| Topic 4.1 Check an Overdue Balance Before Contact | `Overdue Customers VG-14`, `Overdue Customers VG-07`, `Overdue Customers VG-08`, `Overdue Customers VG-10` |
+| Topic 4.1 Check an Overdue Balance Before Contact | `Overdue Customers VG-07`, `Overdue Customers VG-08`, `Overdue Customers VG-10` |
 | Topic 5 Record a Customer Collection Activity | `Collection Activities VG-01 / VG-03`, `Collection Activities VG-02`, `Collection Activities VG-04`, `Collection Activities VG-05`, `Collection Activities VG-07`, `Collection Activities VG-08 / VG-09`, `Collection Activities VG-12`, `Collection Activities VG-13`, `G230-11` |
-| Topic 6.1 Preview and Download a Customer Statement | `Statement Preview VG-01`, `Statement Preview VG-02`, `Statement Preview VG-03`, `Statement Preview VG-04`, `Statement Preview VG-05`, `Statement Preview VG-06`, `Statement Preview VG-07`, `Statement Preview VG-09`, `Statement Preview VG-10 / VG-12` |
-| Topic 6.2 Generate and Send a Customer Statement | `Statement Distribution VG-01`, `Statement Distribution VG-02`, `Statement Distribution VG-03`, `Statement Distribution VG-04`, `Statement Distribution VG-05 / VG-06`, `Statement Distribution VG-07`, `Statement Distribution VG-08`, `Statement Distribution VG-09`, `Statement Distribution VG-10`, `G230-12` |
+| Topic 6.1 Preview and Download a Customer Statement | `Statement Preview VG-01`, `Statement Preview VG-02`, `Statement Preview VG-05`, `Statement Preview VG-06`, `Statement Preview VG-07`, `Statement Preview VG-09`, `Statement Preview VG-10 / VG-12` |
+| Topic 6.2 Generate and Send a Customer Statement | `Statement Distribution VG-01`, `Statement Distribution VG-02`, `Statement Distribution VG-05 / VG-06`, `Statement Distribution VG-07`, `Statement Distribution VG-08`, `Statement Distribution VG-09`, `Statement Distribution VG-10`, `G230-12` |
 | Topic 7.1 View and Download a Customer Invoice | `Customer Invoices VG-01`, `Customer Invoices VG-02`, `Customer Invoices VG-03`, `Customer Invoices VG-04`, `Customer Invoices VG-05`, `Customer Invoices VG-07`, `Customer Invoices VG-08 / VG-10`, `G230-13` |
 | Topic 7.3 Change Customer Status | `G230-03` |
-| Part 3: Reports | `G230-14` |
 
 ### 4.1 Comments removed under D-067 (17 November 2026)
 
@@ -192,7 +190,31 @@ Review comments in the nine topic drafts that are not review comments in this gu
 
 ---
 
-## 6. Change log
+## 6. Round 1 plan (D-085)
+
+Round 1 asks Maria Pabalan only what the sources cannot answer and what changes what a Collections Officer does: three questions, with the topic and step to look at. Every other item from the earlier round has a route that does not need her. The board holds the question text.
+
+### 6.1 Asked in round 1
+
+| Question | Items | Where |
+|---|---|---|
+| Q01 Update Customer Details | `G230-10` | Topic 2.7 |
+| Q02 Recording a collection activity | `G230-11`, `Collection Activities VG-05`, `Collection Activities VG-09`, `Collection Activities VG-10` | Topic 5 steps 6 and 8; Part 1 *Collection activities* |
+| Q03 Sending a statement | `G230-12`, `Statement Distribution VG-17`, `Statement Distribution VG-05`, `Statement Preview VG-05`, `Statement Distribution VG-12`, `Statement Distribution VG-09`, `Statement Distribution VG-10` | Part 1 *Before sending*; 6.2.1 steps 4 to 6; 6.2.2 steps 2 and 3 |
+
+### 6.2 Not asked
+
+| Route | Items | What happens |
+|---|---|---|
+| Answered by a source: closed | `G230-06`, `Workspace VG-14`, `Aged Balances VG-14`, `Notes and Activities VG-14`, `Overdue Customers VG-14`, `G230-07`, `G230-14`, `Statement Distribution VG-03`, `Statement Distribution VG-04`, `Statement Preview VG-03`, `Statement Preview VG-04` | Start events from legacy 230 Part 1 and the training; stream and process area as shown (O2C, Collections); Part 3 under D-081; **Only open** and **Include company logo** set to Yes, from legacy 230 §1 step 4. Their review comments are removed. |
+| Asked in another guide's round | `Overdue Customers VG-09` (220 round 1 Q04, the write-off limit); `Personalized Views VG-01` (260 round 1 Q05, the training page; the recommended columns come from legacy 230 §6.3: **Account status** and **Account status reason**) | One question covers both guides (D-069). |
+| Write in from legacy 230 while drafting | `G230-08` (sort by amount due, the aging icon legend, the 10-minute refresh), `G230-09` (whether reviewing attachments belongs in 2.6), `G230-13` (resending an invoice: legacy 230 §6.1), `Statement Distribution VG-06` (recipients are contacts with Purpose = Business), `Overdue Customers VG-08`, `Overdue Customers VG-10` (the legacy Collections workflow: check, contact and record, escalate to the Group Billing and Credit Manager, raise a write-off request), `Workspace VG-08` (describe the sections the procedures use) | Drafting changes, made without the SME. |
+| Check in D365 (clean-session test) | 64 items: the screen labels and navigation of topics 1, 2, 5, 6 and 7, plus `G230-03` (the 7.3 exclusion steps and whether the checkbox saves on its own), `Customer Account VG-12`, `Overdue Customers VG-04` and `Notes and Activities VG-06` | The [clean-session test](Clean-Session-Test-Plan.md) confirms them. |
+| Sign-off | `G230-05` | BPO sign-off of v3.0. |
+
+---
+
+## 7. Change log
 
 | Date | Change |
 |---|---|
@@ -203,3 +225,4 @@ Review comments in the nine topic drafts that are not review comments in this gu
 | 2026-11-16 | Formatting brought in line with D-059 to D-061 (D-063): Bullet 1.2 bullets (nested items keep their level), topic numbers in link text, the five *Legacy 230* comparison notes and three phrases in the ACTION: REVIEW REQUIREMENT style, four bold pseudo-headings in Key concepts made Heading 5, eight one-row concept tables made paragraphs, and the *Customer Payment Management* column header corrected from Timing to Description. Files renamed with the `CLAUDE-` prefix (D-056). The SME review copy of 8 November is the earlier file: merge any comments from it into this one. |
 | 2026-11-17 | Review comments cut under D-067 (D-075): 136 → 93, one per open blocking item at the place it matters most; the 43 removed are listed in section 4.1 and their items stay open in their registers. First question round drafted on the board (D-069), on hold until the SME review of the 8 November pack comes back. The PDF beside the Word file is out of date (D-064). |
 | 2026-11-18 | Favorites reminders removed from three navigation steps and one step description (D-084): 260 O2C Getting Started covers Favorites. The Part 1 list of pages to add to Favorites stays. The PDF beside the Word file is out of date (D-064). |
+| 2026-11-18 | Round 1 rebuilt under D-085 as three questions (section 6): 12 items asked; `G230-06`, `G230-07`, `G230-14` and eight topic-draft items closed from the sources; two items covered by the 220 and 260 rounds; seven go to drafting and 64 to the D365 test. Review comments 93 → 82; comments for asked items carry the question number. |

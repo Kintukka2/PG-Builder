@@ -44,7 +44,7 @@ General D365 tasks (switching legal entity, Favorites, personalized views and ex
 
 ##### Initiation
 
-- Customer balances remain unpaid beyond agreed payment terms. `[G230-06]`
+- Customer balances remain unpaid beyond agreed payment terms.
 - System reports or automated reminders identify accounts for follow-up, or the Group Billing & Credit Manager requests it.
 - New customer groups, legal entities or team members need collections ownership, or existing pool criteria or assignments change.
 
@@ -52,7 +52,7 @@ General D365 tasks (switching legal entity, Favorites, personalized views and ex
 
 | Stream | Process Area | Key Roles |
 |---|---|---|
-| Order to Cash (O2C) `[G230-07]` | Collections | • Collections Officer<br>• Group Billing and Credit Manager |
+| Order to Cash (O2C) | Collections | • Collections Officer<br>• Group Billing and Credit Manager |
 
 ##### Process
 
@@ -307,7 +307,7 @@ This integration is critical to the Collections process, as it ensures:
 
 | Term | Description |
 |---|---|
-| **Customer statement** | A document that lists a customer's transactions. With **Only open** selected, it lists only open transactions. `[Statement Preview VG-03]` |
+| **Customer statement** | A document that lists a customer's transactions. With **Only open** selected, it lists only open transactions. |
 | **Print management destination** | The destination used to deliver a statement to the customer. Clear it when you only want to preview the statement. `[Statement Preview VG-05]` |
 | **Screen destination** | Displays the statement on screen so you can review it and download it, without sending it. `[Statement Preview VG-06]` |
 
@@ -411,7 +411,7 @@ Use this procedure to find the workspace sections used in normal collection work
 
 ##### Initiation
 
-- A Collections Officer needs to find where a collection task starts in the workspace. `[Workspace VG-14]`
+- A Collections Officer needs to find where a collection task starts in the workspace.
 
 ##### Procedure
 
@@ -541,7 +541,7 @@ Use this procedure when you need the aged balances for selected customers or for
 
 ##### Initiation
 
-- Only selected customers or currencies need review. `[Aged Balances VG-14]`
+- Only selected customers or currencies need review.
 
 ##### Procedure
 
@@ -679,7 +679,7 @@ Use this procedure to review all recorded activities for a customer. You open th
 
 ##### Initiation
 
-- A Collections Officer needs to review previous contact with a customer before contacting them. `[Notes and Activities VG-14]`
+- A Collections Officer needs to review previous contact with a customer before contacting them.
 
 ##### Procedure
 
@@ -855,7 +855,7 @@ Use this procedure to check that a customer's overdue balance is valid before yo
 
 ##### Initiation
 
-- A Collections Officer is about to contact a customer about an overdue balance. `[Overdue Customers VG-14]`
+- A Collections Officer is about to contact a customer about an overdue balance.
 
 ##### Procedure
 
@@ -964,8 +964,8 @@ Complete these steps to generate the statement preview:
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Open* the **Statements** page. `[Statement Preview VG-01]` | Open the customer statement page. |
 | 3. *Select* the customer. `[Statement Preview VG-02]` | Select the customer account the statement is for. |
-| 4. *Select* **Only open**. `[Statement Preview VG-03]` | Include only open transactions. |
-| 5. *Include* the company logo. `[Statement Preview VG-04]` | Select the option that includes the company logo. |
+| 4. *Select* **Only open**. | Include only open transactions. |
+| 5. *Include* the company logo. | Select the option that includes the company logo. |
 | 6. *Clear* **Print management destination**. `[Statement Preview VG-05]` | Clear this option so the statement is not delivered to the customer. |
 | 7. *Select* **Screen** as the destination. `[Statement Preview VG-06]` | Set the destination to **Screen**. |
 | 8. *Generate* the statement. `[Statement Preview VG-07]` | Generate the statement. It opens on screen. |
@@ -1024,8 +1024,8 @@ Complete these steps to send the statement:
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Open* the **Statements** page. `[Statement Distribution VG-01]` | Open the customer statement page. |
 | 3. *Select* the customer. `[Statement Distribution VG-02]` | Select the customer account the statement is for. |
-| 4. *Select* **Only open**. `[Statement Distribution VG-03]` | Include only open transactions. |
-| 5. *Include* the company logo. `[Statement Distribution VG-04]` | Select the option that includes the company logo. |
+| 4. *Select* **Only open**. | Include only open transactions. |
+| 5. *Include* the company logo. | Select the option that includes the company logo. |
 | 6. *Select* **Print management destination**. `[Statement Distribution VG-05 / VG-06]` | Select this option so the statement is delivered to the customer. |
 | 7. *Generate* the statement. `[Statement Distribution VG-07]` | Generate the statement. D365 sends it to the customer. |
 | *STEP COMPLETE* (light blue) | • The statement has been generated and sent.<br>• Continue to [6.2.2 Verify Statement Delivery](#622-verify-statement-delivery) |
@@ -1269,7 +1269,7 @@ Complete the steps below to Update & Close Customer Activity:
 
 ##### Page Overview
 
-This page contains various reports related to the **Credit Collections process**. `[G230-14]`
+This page contains various reports related to the **Credit Collections process**.
 
 ##### Customer Ageing Report
 

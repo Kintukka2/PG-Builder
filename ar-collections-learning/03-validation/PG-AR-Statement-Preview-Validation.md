@@ -6,7 +6,7 @@
 | Markdown preview | [`../01-procedure-guides/PG-AR-Statement-Preview-DRAFT.md`](../01-procedure-guides/PG-AR-Statement-Preview-DRAFT.md) |
 | Screenshot register | [`../02-screenshot-registers/PG-AR-Statement-Preview-Screenshots.md`](../02-screenshot-registers/PG-AR-Statement-Preview-Screenshots.md) |
 | Last updated | 2026-11-18 |
-| Items | 24 total: 23 open (15 blocking, 8 non-blocking), 1 closed |
+| Items | 24 total: 21 open (13 blocking, 8 non-blocking), 3 closed |
 
 > **Merged and frozen (D-052).** This topic draft is now topic 6.1 of the [230 Collections v3.0](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Statement Preview VG-xx*.
 
@@ -52,8 +52,8 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 |---|---|---|---|---|---|---|
 | VG-01 | Exact label of the **Statements** page and its navigation path. | 1.1 Step 2 | 9 | B | Test, Rec | Open |
 | VG-02 | How the customer is selected, for example through the records to include filter. | 1.1 Step 3 | 10 | B | Test, Rec | Open |
-| VG-03 | Exact label of **Only open** and whether it must always be selected. | Key concepts; 1.1 Step 4 | 4, 11 | B | Test, SME | Open |
-| VG-04 | Exact label of the company logo option and when it must be included. | 1.1 Step 5 | 12 | B | Test, SME | Open |
+| VG-03 | Exact label of **Only open** and whether it must always be selected. | Key concepts; 1.1 Step 4 | 4, 11 | B | Test, SME | Closed 2026-11-18 (D-085): legacy 230 §1 step 4 gives the label and sets it to Yes for every ad hoc statement (cross-comparison: strong, confirms the draft); not asked. |
+| VG-04 | Exact label of the company logo option and when it must be included. | 1.1 Step 5 | 12 | B | Test, SME | Closed 2026-11-18 (D-085): legacy 230 §1 step 4 gives the label and sets it to Yes for every ad hoc statement (cross-comparison: strong, confirms the draft); not asked. |
 | VG-05 | Meaning and effect of **Print management destination**, how it is cleared, and what happens if it is left set. | Key concepts (term and rule); 1.1 Step 6 | 5, 7, 13 | B | Test, SME | Open |
 | VG-06 | Exact label and location of the **Screen** destination. | Key concepts; 1.1 Step 7 | 6, 14 | B | Test | Open |
 | VG-07 | The control that generates the statement, for example **OK**. | 1.1 Step 8 | 15 | B | Test | Open |
@@ -105,3 +105,4 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | 2026-10-14 | Register created with the v0.1 SME review draft. |
 | 2026-11-03 | Merged into 230 Collections v3.0 (D-052); D1 destination updated to the v3.0 topic numbers. |
 | 2026-11-18 | `VG-21` closed (D-083): the guides do not name security roles; users contact the BAU Support team for access issues. |
+| 2026-11-18 | `VG-03`, `VG-04` closed from legacy 230 when 230 round 1 was rebuilt (D-085). |
