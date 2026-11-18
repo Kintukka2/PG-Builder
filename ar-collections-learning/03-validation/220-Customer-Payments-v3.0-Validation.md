@@ -6,7 +6,7 @@
 | Review PDF | [`CLAUDE-220-Customer Payments PG v3.0.pdf`](../01-procedure-guides/CLAUDE-220-Customer%20Payments%20PG%20v3.0.pdf) |
 | Markdown preview | [`PG-220-Customer-Payments-v3.0-DRAFT.md`](../01-procedure-guides/PG-220-Customer-Payments-v3.0-DRAFT.md) |
 | Status | Working draft v3.0 (D-055): consolidates version 2.1 and 221 Customer Payment Corrections v0.1. Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-062); no content or item changes. Review comments cut to one per open blocking item on 2026-11-17 (D-067, D-074). Not shared yet; needs BPO sign-off. Version 2.1 stays published until 3.0 passes its gates. |
-| Last updated | 2026-11-17 |
+| Last updated | 2026-11-18 |
 | Items | 12 guide-level items (`G220`), all open: 11 blocking, 1 non-blocking. **53 Word review comments** (D-067): 12 guide-level and 41 carried from 221 v0.1; 70 removed (section 4.1). |
 
 This file is the guide's **question log** (D-016). It holds the guide-level items, which are scoped to this guide and never renumbered. Review comments carried from 221 keep their ID, for example *CPJ-14* or *G221-07*, and their source register stays the record for them: an answer recorded there applies here (D-048). Each open item that affects the text is a Word review comment by "Validation register" (VR).
@@ -197,3 +197,4 @@ From Maria's review comments on 221 v0.1 and the Teams chat of 10 November 2026 
 | 2026-11-10 | Register created with the v3.0 working draft: version 2.1 and 221 Customer Payment Corrections v0.1 consolidated, with Maria Pabalan's answers of 10 November 2026 applied (D-055). |
 | 2026-11-16 | Formatting brought in line with D-059 to D-061 (D-062): Bullet 1.2 bullets, topic numbers in link text, notes to the author in the ACTION: REVIEW REQUIREMENT style. The legacy yellow highlight on the Part 3 heading is replaced by an ACTION note and item `G220-12` (empty report descriptions). Files renamed with the `CLAUDE-` prefix (D-056). |
 | 2026-11-17 | Review comments cut under D-067 (D-074): 123 → 53, one per open blocking item at the place it matters most; the 70 removed are listed in section 4.1 and their items stay open in their registers. First question round prepared on the board (D-069). The PDF beside the Word file is out of date (D-064). |
+| 2026-11-18 | Version history dates for 1.0, 2.0 and 2.1 shortened to month and year (February 2025, November 2025, January 2026), as in Daniel Moreira’s Word copy of the 16 November build; no other change. His copy predates the comment cut of D-074, so the repository copy stays the current one. |
