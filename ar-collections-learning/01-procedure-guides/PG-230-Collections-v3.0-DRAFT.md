@@ -515,7 +515,7 @@ Complete these steps to prepare the aged balances list:
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365 and to the **Credit and collections** module.<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Click* **Modules**. | From the left-hand **Navigation Pane**, click **Modules**. |
-| 3. *Navigate* to the **Aged balances** page. `[Aged Balances VG-02]` | From the **Navigation Pane**, *select*:<br>• **Credit and collections >**<br>• **Aged balances**<br>If **Aged balances** is in your **Favorites** (see 260 O2C Getting Started, topic 3 Add Pages to Favorites), you can open it from **Favorites** instead. |
+| 3. *Navigate* to the **Aged balances** page. `[Aged Balances VG-02]` | From the **Navigation Pane**, *select*:<br>• **Credit and collections >**<br>• **Aged balances** |
 | 4. *Click* **Insert columns**. `[Aged Balances VG-04 / VG-12]` | Use **Insert columns** to add the **Currency** column if the grid does not already show it. |
 | 5. *Select* the **Currency** column. | Select **Currency** in the list of columns. |
 | 6. *Confirm* the **Currency** column is displayed. | Check that each account now shows its currency. |
@@ -596,7 +596,7 @@ Complete these steps to open the customer account:
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365 and to the **Credit and collections** module.<br>• The customer account number or name.<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Click* **Modules**. | From the left-hand **Navigation Pane**, click **Modules**. |
-| 3. *Navigate* to the **All customers** page. `[Customer Account VG-01 / VG-03]` | From the **Navigation Pane**, *select*:<br>• **Credit and collections >**<br>• **All customers**<br>You can also open **All customers** from your **Favorites** (see 260 O2C Getting Started, topic 3 Add Pages to Favorites). |
+| 3. *Navigate* to the **All customers** page. `[Customer Account VG-01 / VG-03]` | From the **Navigation Pane**, *select*:<br>• **Credit and collections >**<br>• **All customers** |
 | 4. *Open* the customer account. `[Customer Account VG-02]` | Find the customer and open the account. |
 | 5. *Review* the account balance. `[Customer Account VG-04]` | Check the customer's balance and overdue amount. |
 | *STEP COMPLETE* (light blue) | • The customer account is open.<br>• Continue to [2.4.2 Review Customer Transactions](#242-review-customer-transactions) |
@@ -690,7 +690,7 @@ Complete these steps to review a customer's activities:
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365 and to the **Credit and collections** module.<br>• The customer account number.<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Click* **Modules**. | From the left-hand **Navigation Pane**, click **Modules**. |
-| 3. *Navigate* to the **All customers** page. `[Notes and Activities VG-07]` | From the **Navigation Pane**, *select*:<br>• **Credit and collections >**<br>• **All customers**<br>If **All customers** is in your **Favorites** (see 260 O2C Getting Started, topic 3 Add Pages to Favorites), you can open it from **Favorites** instead. |
+| 3. *Navigate* to the **All customers** page. `[Notes and Activities VG-07]` | From the **Navigation Pane**, *select*:<br>• **Credit and collections >**<br>• **All customers** |
 | 4. *Open* the customer account. `[Notes and Activities VG-08]` | Find the customer and open the account. |
 | 5. *Click* **View all activities**. `[Notes and Activities VG-09]` | Open the list of activities recorded for the customer. |
 | 6. *Filter* the activities. | Optional. Filter the list to the activities you need. If you don't need to filter, go to step 7. |
@@ -1108,7 +1108,7 @@ Complete these steps to open the invoice in print preview:
 |---|---|
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365 and to the customer account.<br>• The customer account and the invoice you need.<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
-| 2. *Open* the customer's transactions. `[Customer Invoices VG-01]` | Open the transactions for the customer account, for example from **All customers** in your **Favorites**. |
+| 2. *Open* the customer's transactions. `[Customer Invoices VG-01]` | Open the transactions for the customer account, for example from **All customers**. |
 | 3. *Click* the invoice transaction. `[Customer Invoices VG-02]` | Click the row for the invoice so it is highlighted. |
 | 4. *Click* **Original document**. `[Customer Invoices VG-03]` | Open the original document for the highlighted transaction. |
 | 5. *Select* the invoice. `[Customer Invoices VG-04]` | Select the invoice in the list of original documents. |

@@ -51,7 +51,7 @@ Writing off an uncollectible debt is in 230 Collections. General D365 tasks (swi
 
 ##### Initiation
 
-- Bank statement transactions are imported into D365 through BankFabric. `[G220-02]`
+- Bank statement transactions are imported into D365 through BankFabric.
 - ExFlow cannot process a remittance advice.
 - A payment is not on the bank statement, or cannot be settled automatically.
 - A payment or settlement must be corrected, or funds must move between customer accounts.
@@ -178,7 +178,7 @@ Payments that cannot be fully resolved during settlement stay On Account, and th
 
 | Term | Description |
 |---|---|
-| **Settlement** | Matching a payment against one or more open invoices or credits on the same customer account, so that their open amounts close. Only open transactions can be settled. `[G221-06]` |
+| **Settlement** | Matching a payment against one or more open invoices or credits on the same customer account, so that their open amounts close. Only open transactions can be settled. |
 | **Partial settlement** | Settling only part of an invoice, by reducing the amount to settle on the marked line. The rest of the invoice stays open. |
 | **Undo settlement** | Reverses a settlement made in error or against the wrong invoices. The payment and the invoices return to open and can be settled again. |
 | **Residual write-off** | Clears a small residual balance, such as a bank fee, a foreign exchange difference, an over or short payment or a penny difference, with a reason code. The reason code's posting setup determines the ledger account. |
@@ -215,7 +215,7 @@ Payments that cannot be fully resolved during settlement stay On Account, and th
 | Control | What to do |
 |---|---|
 | **Balance the journal** | For a transfer or distribution, total debits must equal total credits. In a distribution, the child credits must add up to the parent debit. `[CPJ-13]` |
-| **Simulate before posting** | Run Simulate Posting. A blue result means the journal is ready to post. A red result shows errors to read and correct. If you cannot resolve an error, log a request through the D365 issue form (see **Additional Resources**). `[CPJ-14 / CPJ-15]` |
+| **Simulate before posting** | Run Simulate Posting. A blue result means the journal is ready to post. A red result shows errors to read and correct. If you cannot resolve an error, log a request through the D365 issue form (see **Additional Resources**). `[CPJ-14]` |
 | **Post only when complete and validated** | Post only after every line is complete, the journal balances and Simulate Posting succeeds. `[CPJ-16 / CPJ-17]` |
 
 ##### Allocations and amounts
@@ -272,14 +272,14 @@ Payments that cannot be fully resolved during settlement stay On Account, and th
 | **Keep pre-populated dimensions** | Do not change the financial dimensions that fill in automatically. `[CPJ-11]` |
 | **Simulate before posting** | Run Simulate Posting and resolve every error before you post. |
 
-##### Posting and permissions `[CPJ-16 to CPJ-20]`
+##### Posting and permissions `[CPJ-16, CPJ-20]`
 
 | Topic | Status |
 |---|---|
 | **Who may post a CPJL** | Collections Officers and Receipting Officers. |
 | **Whether approval is needed** | No approval is needed to post a CPJL. |
-| **Checking the result after posting** | <mark>To be confirmed.</mark> 230 Collections topic 2.4 Investigate a Customer Account covers reviewing customer transactions. |
-| **Correcting or reversing a posted journal** | <mark>To be confirmed.</mark> [3.2 Reverse a Customer Payment Journal](#32-reverse-a-customer-payment-journal) covers reversing a customer payment journal; <mark>whether it applies to these journals is to be confirmed.</mark> |
+| **Checking the result after posting** | Check that the journal balances to zero and that the transaction shows on each customer account involved. 230 Collections topic 2.4 Investigate a Customer Account covers reviewing customer transactions. |
+| **Correcting or reversing a posted journal** | Reverse it with [3.2 Reverse a Customer Payment Journal](#32-reverse-a-customer-payment-journal). |
 | **An unposted journal that is no longer needed** | A Collections Officer can delete it. <mark>The steps are to be confirmed.</mark> |
 | **Access to D365** | Your manager requests your D365 profile, which gives you the access you need. If a page or control you need is missing, contact the BAU Support team. |
 
@@ -614,7 +614,7 @@ Complete these steps to settle customer transactions:
 | 7. *Select* the payment. | Click the payment voucher to highlight it. |
 | 8. *Open* **Settle transactions**. `[G221-09]` | On the Main Toolbar, click **Settlements** and open **Settle transactions**. The page lists the open invoices and credits that can be settled. |
 | 9. *Mark* the invoices to settle. `[G221-10]` | In the **Mark** column, select each invoice or credit the payment pays.<br>**Note:** For a partial settlement, reduce the **Amount to settle** on the line. |
-| 10. *Confirm* the total settlement amount. `[G221-11]` | Check that the **Total settlement amount** at the bottom of the page is 0.00. If it is not, review the marked lines and amounts. |
+| 10. *Confirm* the total settlement amount. | Check that the **Total settlement amount** at the bottom of the page is 0.00. If it is not, review the marked lines and amounts. |
 | 11. *Click* **Post**. | Click **Post**. The marked transactions are settled and no longer show when **Show** is **Open**. |
 | *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• The payment is settled against the marked invoices or credits.<br>• The customer balance and the transaction status are updated. |
 
@@ -626,7 +626,7 @@ Complete these steps to settle customer transactions:
 
 Use these topics when a customer payment or settlement must be corrected after it is posted: undo a settlement, reverse a customer payment journal, move funds to another customer account, distribute a parent account payment, restore a written-off or overpayment amount, or write off a small residual. Topics 3.3 to 3.5 use a customer payment journal (CPJL): the controls that apply to every CPJL entry are in Part 1 Key concepts. Writing off an uncollectible debt is a different task, in 230 Collections.
 
-<mark>Until they are confirmed,</mark> these are outside the scope of this topic: a payment already settled against invoices on the wrong account, how to identify a parent-child relationship in D365, and when a write-off should be reversed or cancelled instead of restored. `[RO-02 / CPJ-17 / CPJ-19, PC-01 / CPJ-17 / CPJ-19, CPJ-17 / CPJ-19 / TF-05 / TF-06]`
+<mark>Until they are confirmed,</mark> these are outside the scope of this topic: a payment already settled against invoices on the wrong account, how to identify a parent-child relationship in D365, and when a write-off should be reversed or cancelled instead of restored. `[RO-02, PC-01, TF-05 / TF-06]`
 
 > **ACTION: REVIEW REQUIREMENT.** Topics 3.3 to 3.5 and the journal controls in Part 1 come from AI-generated notes of the AR Training D365 Part 2 session and have not been checked against the recording. Topics 2.3, 3.1 and 3.6 come from the legacy 230 Collections PG (v2.3, sections 6.5, 6.6 and 6.8), which is about a year old, and have not been checked against current D365. Do not use these topics on live customer accounts until their blocking items are closed. `[G220-10]`
 
@@ -758,7 +758,7 @@ Complete these steps to create the journal and enter the source line:
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365 and to **Customer payment journal**.<br>• The source and destination customer accounts, the amount and the currency of the original payment.<br>• Confirmation that the destination account is correct.<br>• Whether the payment is already settled on the source account. `[TF-05]`<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Click* **Modules**. | From the left-hand **Navigation Pane**, click **Modules**. |
-| 3. *Navigate* to the **Customer payment journal** page. `[CPJ-01]` | From the **Navigation Pane**, *select*:<br>• **Credit and collections >**<br>• **Customer payment journal**<br>You can also open **Customer payment journal** from your **Favorites** (see 260 O2C Getting Started, topic 3 Add Pages to Favorites). |
+| 3. *Navigate* to the **Customer payment journal** page. `[CPJ-01]` | From the **Navigation Pane**, *select*:<br>• **Credit and collections >**<br>• **Customer payment journal** |
 | 4. *Create* a new journal. `[CPJ-01 / CPJ-02]` | Start a new CPJL journal. |
 | 5. *Enter* the journal description. `[CPJ-03]` | Describe the transfer clearly and include the customer codes, for example "Transfer funds from customer A to customer B". |
 | 6. *Open* the journal lines. `[CPJ-01]` | Open the lines of the new journal. |
@@ -800,10 +800,10 @@ Complete these steps to validate and post the journal:
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• Both lines are complete (see [3.3.2 Enter the Destination Line](#332-enter-the-destination-line)).<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Check* the journal balances. `[CPJ-13]` | Confirm that total debits equal total credits, and that the currency and date are correct. |
 | 2. *Run* **Simulate Posting**. `[CPJ-14]` | Check the journal before posting. A blue result means the journal is ready to post. |
-| 3. *Correct* any errors. `[CPJ-15]` | If Simulate Posting shows an error, read it, correct the line it names and run Simulate Posting again. If you cannot resolve the error, log a request through the D365 issue form (see **Additional Resources**) before you post. |
+| 3. *Correct* any errors. | If Simulate Posting shows an error, read it, correct the line it names and run Simulate Posting again. If you cannot resolve the error, log a request through the D365 issue form (see **Additional Resources**) before you post. |
 | 4. *Post* the journal. `[CPJ-16 / CPJ-17]` | Post only when every line is complete, the journal balances and Simulate Posting succeeds. |
-| 5. *Verify* the transfer. `[CPJ-18]` | Check that the transfer appears with its description on both customer accounts. |
-| *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• A balanced CPJL is posted: a debit on the source customer and a matching credit on the destination customer, with the bank-to-bank transfer clearing account as the offset. `[CPJ-19]`<br>• The transfer can be identified by its description in both customers' histories. |
+| 5. *Verify* the transfer. | Check that the transfer appears with its description on both customer accounts. |
+| *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• A balanced CPJL is posted: a debit on the source customer and a matching credit on the destination customer, with the bank-to-bank transfer clearing account as the offset.<br>• The transfer can be identified by its description in both customers' histories. |
 
 #### 3.4 Distribute a Parent Account Payment Across Child Accounts
 
@@ -840,7 +840,7 @@ Complete these steps to create the journal and enter the parent line:
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365 and to **Customer payment journal**.<br>• A confirmed parent-child relationship.<br>• A confirmed allocation: each child account, its amount, and the total to move.<br>• The currency of the original receipt.<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Click* **Modules**. | From the left-hand **Navigation Pane**, click **Modules**. |
-| 3. *Navigate* to the **Customer payment journal** page. `[CPJ-01]` | From the **Navigation Pane**, *select*:<br>• **Credit and collections >**<br>• **Customer payment journal**<br>You can also open **Customer payment journal** from your **Favorites** (see 260 O2C Getting Started, topic 3 Add Pages to Favorites). |
+| 3. *Navigate* to the **Customer payment journal** page. `[CPJ-01]` | From the **Navigation Pane**, *select*:<br>• **Credit and collections >**<br>• **Customer payment journal** |
 | 4. *Create* a new journal. `[CPJ-01 / CPJ-02]` | Start a new CPJL journal. |
 | 5. *Enter* the journal description. `[CPJ-03]` | Describe the transfer clearly, so it identifies the parent and child transfer. |
 | 6. *Open* the journal lines. `[CPJ-01]` | Open the lines of the new journal. |
@@ -883,11 +883,11 @@ Complete these steps to validate and post the journal:
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• The parent line and every child line are complete (see [3.4.2 Enter the Child Lines](#342-enter-the-child-lines)).<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Check* the distributed total. `[CPJ-13]` | Confirm that the child credits add up to the parent debit, and that the currency and date are correct. |
 | 2. *Run* **Simulate Posting**. `[CPJ-14]` | Check the journal before posting. A blue result means the journal is ready to post. |
-| 3. *Correct* any errors. `[CPJ-15]` | If Simulate Posting shows an error, read it, correct the line it names and run Simulate Posting again. If you cannot resolve the error, log a request through the D365 issue form (see **Additional Resources**) before you post. |
+| 3. *Correct* any errors. | If Simulate Posting shows an error, read it, correct the line it names and run Simulate Posting again. If you cannot resolve the error, log a request through the D365 issue form (see **Additional Resources**) before you post. |
 | 4. *Post* the journal. `[CPJ-16 / CPJ-17]` | Post only when every line is complete, the totals match and Simulate Posting succeeds. |
 | 5. *Record* the purpose of any residual. `[PC-04]` | Optional. In a partial allocation, add a note that explains why the remaining amount stays on the parent account. Otherwise, go to step 6. |
-| 6. *Verify* the distribution. `[CPJ-18]` | Check that the distribution appears with its description on the parent and child accounts. |
-| *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• A balanced CPJL is posted: a debit on the parent account and matching credits on the child accounts, with the bank-to-bank transfer clearing account as the offset. `[CPJ-19]`<br>• Any residual stays on the parent account with a note that explains its purpose. |
+| 6. *Verify* the distribution. | Check that the distribution appears with its description on the parent and child accounts. |
+| *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• A balanced CPJL is posted: a debit on the parent account and matching credits on the child accounts, with the bank-to-bank transfer clearing account as the offset.<br>• Any residual stays on the parent account with a note that explains its purpose. |
 
 #### 3.5 Restore a Written-Off or Overpayment Amount
 
@@ -923,7 +923,7 @@ Complete these steps to create the restoration line:
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365 and to **Customer payment journal**.<br>• The customer account, amount and original currency.<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Click* **Modules**. | From the left-hand **Navigation Pane**, click **Modules**. |
-| 3. *Navigate* to the **Customer payment journal** page. `[CPJ-01]` | From the **Navigation Pane**, *select*:<br>• **Credit and collections >**<br>• **Customer payment journal**<br>You can also open **Customer payment journal** from your **Favorites** (see 260 O2C Getting Started, topic 3 Add Pages to Favorites). |
+| 3. *Navigate* to the **Customer payment journal** page. `[CPJ-01]` | From the **Navigation Pane**, *select*:<br>• **Credit and collections >**<br>• **Customer payment journal** |
 | 4. *Create* a new journal. `[CPJ-01 / CPJ-02]` | Start a new CPJL journal. |
 | 5. *Enter* the journal description. `[CPJ-03]` | Use a clear description that includes the customer code, for example "Overpayment put back on customer account". |
 | 6. *Open* the journal lines. `[CPJ-01]` | Open the lines of the new journal. |
@@ -948,10 +948,10 @@ Complete these steps to validate and post the journal:
 |---|---|
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• The restoration line is complete (see [3.5.1 Create the Restoration Line](#351-create-the-restoration-line)).<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Run* **Simulate Posting**. `[CPJ-14]` | Check the journal before posting. A blue result means the journal is ready to post. |
-| 2. *Correct* any errors. `[CPJ-15]` | If Simulate Posting shows an error, read it, correct the line it names and run Simulate Posting again. If you cannot resolve the error, log a request through the D365 issue form (see **Additional Resources**) before you post. |
+| 2. *Correct* any errors. | If Simulate Posting shows an error, read it, correct the line it names and run Simulate Posting again. If you cannot resolve the error, log a request through the D365 issue form (see **Additional Resources**) before you post. |
 | 3. *Post* the journal. `[CPJ-16 / CPJ-17]` | Post only when the line is complete and Simulate Posting succeeds. |
-| 4. *Verify* the restoration. `[CPJ-18]` | Check that the amount appears with its description on the customer account. |
-| *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• A CPJL is posted with a credit on the customer account and the Overpayment ledger as the offset. `[CPJ-19]`<br>• The entry can be identified by its description in the customer's history. |
+| 4. *Verify* the restoration. | Check that the amount appears with its description on the customer account. |
+| *PROCESS COMPLETE* (light green) | *Outcomes:*<br>• A CPJL is posted with a credit on the customer account and the Overpayment ledger as the offset.<br>• The entry can be identified by its description in the customer's history. |
 
 #### 3.6 Write Off a Bank Fee or Small Residual
 
@@ -977,7 +977,7 @@ Complete these steps to write off a bank fee or small residual:
 | *PROCESS START* (light blue) | *Pre-requisites:*<br>• The residual amount and its cause are known: a bank fee, a foreign exchange difference, an over or short payment, or a penny difference. `[G221-15]`<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Click* **Modules**. | From the left-hand **Navigation Pane**, click **Modules**. |
-| 3. *Navigate* to the **Aged balances** page. `[G221-16]` | From the **Navigation Pane**, *select*:<br>• **Credit and collections >**<br>• **Collections >**<br>• **Aged balances**<br>You can also open **Aged balances** from your **Favorites**. |
+| 3. *Navigate* to the **Aged balances** page. `[G221-16]` | From the **Navigation Pane**, *select*:<br>• **Credit and collections >**<br>• **Collections >**<br>• **Aged balances** |
 | 4. *Select* the customer. | In the **Customer aging** list, select the customer account. |
 | 5. *Select* the open transaction. | In **Open transactions**, find the invoice or other open transaction with the residual, and click the line to select it. |
 | 6. *Click* **Write off**. `[G221-17]` | On the toolbar, click **Write off**. The write-off window opens. |

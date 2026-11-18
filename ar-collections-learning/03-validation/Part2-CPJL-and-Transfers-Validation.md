@@ -107,11 +107,11 @@ Customer Pools has its own register: [Customer-Pools-Validation.md](Customer-Poo
 | CPJ-12 | Which fields complete when the user tabs through a line (the notes mention voucher information). | TF/PC/RO "Complete the line" steps; REF Line coding | N | Test, Rec | Open |
 | CPJ-13 | Where the journal totals are shown, to check that debits equal credits. | TF/PC step 1.3.1; REF Validation and posting | B | Test | Open |
 | CPJ-14 | The **Simulate Posting** label and location, and how results are shown. The notes describe a blue result as ready and red results as errors. | TF/PC step 1.3.2, RO step 1.2.1; REF Validation and posting | B | Test, Rec | Open |
-| CPJ-15 | Common Simulate Posting errors and their fixes, and the support route when an error cannot be resolved. The notes mention escalation to "SYD" during training. | TF/PC step 1.3.3, RO step 1.2.2; REF Validation and posting | B | SME | Open |
+| CPJ-15 | Common Simulate Posting errors and their fixes, and the support route when an error cannot be resolved. The notes mention escalation to "SYD" during training. | TF/PC step 1.3.3, RO step 1.2.2; REF Validation and posting | B | SME | Closed 2026-11-18 (D-085): the support route is the D365 issue form, already in the guides (220 v2.1 Troubleshooting); a list of common errors is not needed. |
 | CPJ-16 | The **Post** control label and location, and which role may post a CPJL. | TF/PC step 1.3.4, RO step 1.2.3; REF Validation and posting | B | Test, SME | Answered. SME answer (Maria Pabalan, 221 review comment of 10 Nov 2026; D-055): Collections Officers and Receipting Officers may post a CPJL. Applied in 220 v3.0 Part 1 (*Posting and permissions*). The **Post** label still needs the test. |
 | CPJ-17 | Whether CPJL transfers and restorations need approval (for example a workflow), and whether any value threshold applies. The amounts in the notes are examples, not thresholds. | TF/PC step 1.3.4, RO step 1.2.3; REF Validation and posting | B | SME | Answered. SME answer (Maria Pabalan, 221 review comment of 10 Nov 2026; D-055): no approvals are required for a CPJL. Applied in 220 v3.0 Part 1 (*Posting and permissions*). |
-| CPJ-18 | How to confirm the result after posting, for example in the customer's transactions (see the Customer Account guide). | TF step 1.3.5, PC step 1.3.6, RO step 1.2.4 | B | Test, SME | Open |
-| CPJ-19 | How a posted journal is corrected or reversed. | PROCESS COMPLETE (all); REF "Not covered" | B | SME | Open |
+| CPJ-18 | How to confirm the result after posting, for example in the customer's transactions (see the Customer Account guide). | TF step 1.3.5, PC step 1.3.6, RO step 1.2.4 | B | Test, SME | Closed 2026-11-18 (D-085): legacy 230 §6.7 step 25 and 220 §4.1 step 11: the journal balances to zero and the transaction shows on each customer account. Applied in 220 v3.0 Part 1. |
+| CPJ-19 | How a posted journal is corrected or reversed. | PROCESS COMPLETE (all); REF "Not covered" | B | SME | Closed 2026-11-18 (D-085): reverse a posted customer payment journal with 220 v3.0 topic 3.2 (from 220 v2.1 §4.3). Applied in 220 v3.0 Part 1. |
 | CPJ-20 | What to do with an unposted journal that is no longer needed. It would appear under **Payment journals not posted** in the workspace (Workspace `VG-05`). | REF "Not covered" | N | SME, Test | Answered. SME answer (Maria Pabalan, 221 review comment of 10 Nov 2026; D-055): a Collections Officer can delete an unposted journal that is no longer needed. Applied in 220 v3.0 Part 1; the steps are still to confirm. |
 | CPJ-21 | The security role needed to open and create a CPJL, and a test with it. A missing page or control may have a security cause; that is a possible cause, not a diagnosis. | PROCESS START (all) | B | Test, SME | Closed 2026-11-18 (D-083): guides do not name security roles. Your manager requests your D365 profile, which gives you the access you need; for any access or security role issue, contact the BAU Support team. Applied in 220 v3.0 Part 1 (`G220-05`). |
 
@@ -119,7 +119,7 @@ Customer Pools has its own register: [Customer-Pools-Validation.md](Customer-Poo
 
 | ID | Item to confirm | Location | Priority | Method | Status |
 |---|---|---|---|---|---|
-| TF-01 | Initiation events. The notes give two: a payment posted to the wrong customer account, and funds to move between related accounts once the destination is confirmed. Confirm them and add any others. | Part 1 Initiation; topic Initiation | B | SME | Open |
+| TF-01 | Initiation events. The notes give two: a payment posted to the wrong customer account, and funds to move between related accounts once the destination is confirmed. Confirm them and add any others. | Part 1 Initiation; topic Initiation | B | SME | Open: checked with the AR Training D365 Part 2 recording (220 `G220-10`; D-085), not asked. |
 | TF-02 | How the correct destination account is confirmed, and what evidence is kept. | PROCESS START (1.1); Key concepts | B | SME | Open |
 | TF-03 | The exact label and value of the bank-to-bank transfer clearing account. | Key concepts; steps 1.1.12 and 1.2.6 | B | Test, SME | Open |
 | TF-04 | Whether the destination line also takes the Ledger offset and the clearing account in the demonstrated UI, as the source draft implies (step 12). | Steps 1.2.5 and 1.2.6 | B | Rec, Test | Open |
@@ -135,7 +135,7 @@ Customer Pools has its own register: [Customer-Pools-Validation.md](Customer-Poo
 | PC-03 | The clearing-account treatment on a distribution with several lines: whether the parent line and each child line take the Ledger offset and the clearing account. | Steps 1.1.11, 1.1.12, 1.2.5 and 1.2.6 | B | Rec, Test | Open |
 | PC-04 | Where, how and at what point the note that explains a residual left on the parent account is added (for example a customer note or the journal line), and its wording. | Key concepts; step 1.3.5 | B | Rec, SME | Open |
 | PC-05 | Who follows up a residual left on the parent account, and when. | Key concepts | N | SME | Open |
-| PC-06 | Initiation events. The notes give one: a payment held on a parent account must be distributed to one or more confirmed child accounts. | Part 1 Initiation; topic Initiation | B | SME | Open |
+| PC-06 | Initiation events. The notes give one: a payment held on a parent account must be distributed to one or more confirmed child accounts. | Part 1 Initiation; topic Initiation | B | SME | Open: checked with the AR Training D365 Part 2 recording (220 `G220-10`; D-085), not asked. |
 
 ### 3.6 Restore a Written-Off or Overpayment Amount (`RO`)
 
@@ -144,7 +144,7 @@ Customer Pools has its own register: [Customer-Pools-Validation.md](Customer-Poo
 | RO-01 | The exact label, value and lookup term of the Overpayment ledger (main account). | Key concepts; step 1.1.13 | B | Test, SME | Open |
 | RO-02 | Scope: whether restoring a written-off amount and putting an overpayment back are the same procedure, and when a write-off should be reversed or cancelled instead. Linked to the write-off backlog items (ranks 18 to 20). | Part Description; Key concepts | B | SME | Open |
 | RO-03 | Who authorizes putting an amount back on a customer account, and what evidence is kept. | PROCESS START (1.1) | B | SME | Open |
-| RO-04 | Initiation events: when a restoration is needed. | Part 1 Initiation; topic Initiation | B | SME | Open |
+| RO-04 | Initiation events: when a restoration is needed. | Part 1 Initiation; topic Initiation | B | SME | Open: checked with the AR Training D365 Part 2 recording (220 `G220-10`; D-085), not asked. |
 
 ---
 
@@ -198,3 +198,4 @@ The gaps the three source drafts list are also covered: verification after posti
 | 2026-11-01 | Merged into 221 v0.1 (D-048): the four drafts are frozen and this register stays the record for their items. `GOV-03` notes the merge. |
 | 2026-11-10 | 221 is merged into 220 Customer Payments v3.0 (D-055). SME answers from Maria Pabalan's 221 review comments recorded against `GOV-01`, `CPJ-16`, `CPJ-17` and `CPJ-20`; `CPJ-21` noted; `GOV-03` superseded. |
 | 2026-11-18 | `CPJ-21` closed (D-083): the guides do not name security roles; users contact the BAU Support team for access issues. |
+| 2026-11-18 | `CPJ-15`, `CPJ-18` and `CPJ-19` closed from the legacy sources (D-085). `TF-01`, `PC-06` and `RO-04` go to the recording check. |

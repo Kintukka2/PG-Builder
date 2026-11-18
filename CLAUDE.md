@@ -44,6 +44,10 @@ Users do not know their security roles, so a guide never names one or asks about
 - For a missing page, module or control, or any other access or security role issue, the guide tells the user to contact the **BAU Support team**.
 - Do not raise register items, review comments or SME questions about security roles. Close any that come in from a source, citing D-083.
 
+## Favorites (D-084)
+
+260 O2C Getting Started teaches Favorites. Other guides give the navigation path only and do not remind the user that a page can also be opened from Favorites. A guide may still list the pages worth adding to Favorites for its work, as 230 Part 1 does.
+
 ## Internal notes to the author: `ACTION: REVIEW REQUIREMENT` (D-060)
 
 Any text in a draft guide that speaks to the author or reviewer rather than the reader uses the template's **ACTION: REVIEW REQUIREMENT** style (yellow fill, red text), so it stands out as a note to resolve, not guide content. Examples: "This guide does not yet describe…", "to be confirmed", "Navigation to be confirmed", "No role is marked until…".
@@ -63,17 +67,51 @@ The [PG Builder Board](https://claude.ai/artifact/5GPzzPrEYyUSAn12EBgWLf) is the
 - **Lanes** (whose turn): Initial Ticket Created (user), Drafting (Claude), Waiting for SME feedback (SME), Updating draft (Claude), Sent for sign-off (approver and BPO), Ready to publish (user), Published; Blocked and Withdrawn open from pills above the board. Claude never moves a card to Sign-off, Ready to publish or Published, and never marks a round sent, unless the user says it happened. A lane Claude infers gets `confirmed: false`.
 - **Numbering** is read-only on the board. When the register in `standards/numbering/` changes, Claude refreshes `meta/register` in the same turn.
 
-## Question rounds (D-069)
+## Question rounds (D-069, D-085)
 
-Questions go to the SME in rounds, one message per SME, kept on the board as `rounds` documents and opened from the questions link on each card (D-077).
+Questions go to the SME in rounds, one message per SME, kept on the board as `rounds` documents and opened from the questions link on each card (D-077). A round asks only for what the guide needs and the sources cannot give, so it stays short and quick to answer: usually fewer than ten questions.
 
-- **Combine:** one question covers as many register items as one answer can close. Group by theme (approvals, roles, navigation, configuration values, scope) and by who answers.
-- **Lettered parts** keep a big question answerable; each part lists the item IDs it closes.
-- **Where to look:** each part ends with the pages to look at, for example *(see p. 16-37)* (D-080). The pages are Word's (D-082). Before a round is sent, the user opens the review copy in Word, updates the Contents (page numbers only), saves it and sends it back. Claude reads the pages from Word's own page breaks with [`tools/question_pages.py`](tools/question_pages.py) `--word`, and that saved copy is the one that goes with the questions. Until then the pages are estimates from a LibreOffice render with DM Sans installed ([`tools/install_fonts.sh`](tools/install_fonts.sh)), and the round says so. A whole section gets its page range. Recalculate the pages whenever the guide changes.
-- **Send the guide with the questions:** a review copy of the Word guide with the review comments taken out (the questions replace them). Notes to the author stay. The review copy is a send file, not committed (D-079).
+**Before asking, read all the evidence:** the draft (comments, tables and embedded images, not only the text), the published guide and the legacy guides, the ADO ticket, related guides, recordings and transcripts, and the user's decisions. AI-generated meeting or training notes are a starting point to check against the recording, not confirmation.
+
+**Sort every open item by what the evidence says:**
+
+| Evidence | What Claude does |
+|---|---|
+| A current, relevant source answers it | Use it and close the item. Do not ask. |
+| Answered elsewhere, missing from the draft | Write it in or cross-reference it, then close the item. |
+| Screen labels, navigation, control names | The clean-session test in D365 confirms them. Do not ask. |
+| From AI-generated notes | Check it against the recording. Do not ask. |
+| Only an editorial or drafting choice | Resolve it while drafting. |
+| Explicitly out of scope | Record the decision and close it. |
+| Ambiguous, contradictory, or missing and material | Ask. |
+| An interpretation made during conversion that changes the process | Ask to confirm it. |
+
+An item is material when the answer changes what the reader does or understands: scope, responsibility, initiation, a missing system step, values and how to choose them, approval, sequence, completion checks, exceptions in scope, conflicting terms, or the guide's boundary. A newer source overrides an older one only where it covers the same case.
+
+**Roles stay separate:** source contributor, the person who does the task, the transaction approver, the BPO, and the PG approver (Maria Pabalan for O2C, Ken Lee for R2R). Being the PG approver does not make someone the approver of every transaction in the guide. Do not ask an SME to reconfirm content carried over faithfully from their own or a published source: their final review of the guide is the check.
+
+**Write each question so it is easy to answer:**
+
+```
+Q01 — Short topic label (p. 13, topic 1.1, step 5)
+One or two sentences on what the guide says or lacks. Then the specific decision or instruction needed.
+```
+
+- One coherent point per question. Combine closely connected points, including across topics; keep unrelated decisions apart. Lettered parts only when a question cannot be answered without them.
+- Proportionate: if one control is missing, ask for that control. If a whole procedure is missing, ask for a demonstration covering the path, actions, fields and values, approvals and the result.
+- Plain, neutral wording with the exact system labels. Offer alternatives only when the evidence supports them, for example "should step 30 send them to 4.5?". No vague asks such as "please clarify this section", and no editing preferences framed as process questions.
+- No fixed number of questions, and no questions made up to fill a list. If nothing is left to ask, say so and ask for a factual review instead.
 - **Across guides:** when the same gap sits in several guides, one question covers all of them, in one ADO ticket, and the other cards point to it.
-- **Split only when** different people answer or the items have nothing in common.
-- **Answers:** apply them to the Word guide and the register, close the items they answer, and carry anything still open into the next round. An answer that does not close the gap leaves the item open; an explicit scope decision can close one. Never ask again for what a source already confirms.
+
+**References:** each question names the topic and step, and the page once it is verified in Word (D-082). Before a round is sent, the user opens the review copy in Word, updates the Contents (page numbers only), saves it and sends it back, or sends the PDF they export from it. Claude reads the pages with [`tools/question_pages.py`](tools/question_pages.py) (`--word`, or `--pdf`) and adds them. Pages estimated from a LibreOffice render are never shown to the SME.
+
+**The message:** address the SME, name the guide and say briefly what the answers are for. Then the questions, then: reply against each question number, say if any do not apply, and assign the ticket back to Daniel when done. The board's copy text follows this layout. Do not invent recipients, dates or ticket numbers.
+
+**Send the guide with the questions:** a review copy of the Word guide with the review comments taken out (the questions replace them). Notes to the author stay. The review copy is a send file, not committed (D-079).
+
+**Keep the record:** the guide's register lists the round's questions and items, and the route for every open item that is not asked (D-085). In the Word guide, the review comment of each asked item starts with its question number, for example *[Q04]*. Question numbers are stable once the round is sent: follow-ups refer to the original number, and a closed number is never reused.
+
+**Answers:** apply them to the Word guide and the register, close the items they answer, and carry anything still open into the next round. A reply closes an item only if it gives the missing fact; an explicit scope decision, another verified source, or an agreed decision to keep the source wording can also close one. After an answer, check the roles, prerequisites, approvals and reports it affects. Never ask again for what a source already confirms.
 
 ## Word review comments: open items that need an answer (D-067)
 
