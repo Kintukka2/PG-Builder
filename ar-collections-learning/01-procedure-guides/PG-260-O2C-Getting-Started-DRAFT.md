@@ -222,13 +222,13 @@ Complete these steps to add a page to your Favorites:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | Pre-requisites:<br>• Access to D365 and to the module that contains the page. `[Favorites VG-17]`<br>• The **Navigation Pane** is visible.<br>Responsibility:<br>• O2C End-user |
+| *PROCESS START* (light blue) | Pre-requisites:<br>• Access to D365 and to the module that contains the page.<br>• The **Navigation Pane** is visible.<br>Responsibility:<br>• O2C End-user |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). To change it, see [1. Switch Legal Entity with the Selector](#1-switch-legal-entity-with-the-selector). |
 | 2. *Click* **Modules**. | From the left-hand **Navigation Pane**, click **Modules**. |
 | 3. *Click* the module that contains the page. | From the list of modules, click the module, for example **Credit and collections** or **Accounts receivable**. The module menu opens. |
 | 4. *Click* the favorite star for the page. `[Favorites VG-07]` `[Favorites VG-02 / VG-06]` | In the module menu, find the page and click its favorite star. The page is added to your **Favorites**.<br>Note: To add another page, repeat steps 2 to 4. |
 | 5. *Click* **Favorites**. `[Favorites VG-09 / VG-28]` | From the left-hand **Navigation Pane**, click **Favorites**. Your favorites list is displayed. |
-| 6. *Confirm* the page is listed. `[Favorites VG-13 / VG-16]` | Confirm that the page appears in your favorites list. If a module or page is not available to you, log a request through the D365 issue form (see **Additional Resources**). |
+| 6. *Confirm* the page is listed. `[Favorites VG-13]` | Confirm that the page appears in your favorites list. If a module or page is not available to you, contact the BAU Support team. |
 | 7. *Click* the page in your favorites list. | The page opens. |
 | *PROCESS COMPLETE* (light green) | Outcomes:<br>• The page appears under **Favorites** in the **Navigation Pane**.<br>• The page opens from **Favorites**. |
 

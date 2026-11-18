@@ -272,7 +272,7 @@ Payments that cannot be fully resolved during settlement stay On Account, and th
 | **Keep pre-populated dimensions** | Do not change the financial dimensions that fill in automatically. `[CPJ-11]` |
 | **Simulate before posting** | Run Simulate Posting and resolve every error before you post. |
 
-##### Posting and permissions `[CPJ-16 to CPJ-21]`
+##### Posting and permissions `[CPJ-16 to CPJ-20]`
 
 | Topic | Status |
 |---|---|
@@ -281,7 +281,7 @@ Payments that cannot be fully resolved during settlement stay On Account, and th
 | **Checking the result after posting** | <mark>To be confirmed.</mark> 230 Collections topic 2.4 Investigate a Customer Account covers reviewing customer transactions. |
 | **Correcting or reversing a posted journal** | <mark>To be confirmed.</mark> [3.2 Reverse a Customer Payment Journal](#32-reverse-a-customer-payment-journal) covers reversing a customer payment journal; <mark>whether it applies to these journals is to be confirmed.</mark> |
 | **An unposted journal that is no longer needed** | A Collections Officer can delete it. <mark>The steps are to be confirmed.</mark> |
-| **The security role needed** `[G220-05]` | <mark>To be confirmed.</mark> If a page or control is missing, a security setting is a possible cause, not a confirmed one. |
+| **Access to D365** | Your manager requests your D365 profile, which gives you the access you need. If a page or control you need is missing, contact the BAU Support team. |
 
 ---
 
@@ -755,7 +755,7 @@ Complete these steps to create the journal and enter the source line:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365 and to **Customer payment journal**. `[CPJ-21]`<br>• The source and destination customer accounts, the amount and the currency of the original payment.<br>• Confirmation that the destination account is correct.<br>• Whether the payment is already settled on the source account. `[TF-05]`<br>*Responsibility:*<br>• Collections Officer |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365 and to **Customer payment journal**.<br>• The source and destination customer accounts, the amount and the currency of the original payment.<br>• Confirmation that the destination account is correct.<br>• Whether the payment is already settled on the source account. `[TF-05]`<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Click* **Modules**. | From the left-hand **Navigation Pane**, click **Modules**. |
 | 3. *Navigate* to the **Customer payment journal** page. `[CPJ-01]` | From the **Navigation Pane**, *select*:<br>• **Credit and collections >**<br>• **Customer payment journal**<br>You can also open **Customer payment journal** from your **Favorites** (see 260 O2C Getting Started, topic 3 Add Pages to Favorites). |
@@ -837,7 +837,7 @@ Complete these steps to create the journal and enter the parent line:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365 and to **Customer payment journal**. `[CPJ-21]`<br>• A confirmed parent-child relationship.<br>• A confirmed allocation: each child account, its amount, and the total to move.<br>• The currency of the original receipt.<br>*Responsibility:*<br>• Collections Officer |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365 and to **Customer payment journal**.<br>• A confirmed parent-child relationship.<br>• A confirmed allocation: each child account, its amount, and the total to move.<br>• The currency of the original receipt.<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Click* **Modules**. | From the left-hand **Navigation Pane**, click **Modules**. |
 | 3. *Navigate* to the **Customer payment journal** page. `[CPJ-01]` | From the **Navigation Pane**, *select*:<br>• **Credit and collections >**<br>• **Customer payment journal**<br>You can also open **Customer payment journal** from your **Favorites** (see 260 O2C Getting Started, topic 3 Add Pages to Favorites). |
@@ -920,7 +920,7 @@ Complete these steps to create the restoration line:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365 and to **Customer payment journal**. `[CPJ-21]`<br>• The customer account, amount and original currency.<br>*Responsibility:*<br>• Collections Officer |
+| *PROCESS START* (light blue) | *Pre-requisites:*<br>• Access to D365 and to **Customer payment journal**.<br>• The customer account, amount and original currency.<br>*Responsibility:*<br>• Collections Officer |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Click* **Modules**. | From the left-hand **Navigation Pane**, click **Modules**. |
 | 3. *Navigate* to the **Customer payment journal** page. `[CPJ-01]` | From the **Navigation Pane**, *select*:<br>• **Credit and collections >**<br>• **Customer payment journal**<br>You can also open **Customer payment journal** from your **Favorites** (see 260 O2C Getting Started, topic 3 Add Pages to Favorites). |

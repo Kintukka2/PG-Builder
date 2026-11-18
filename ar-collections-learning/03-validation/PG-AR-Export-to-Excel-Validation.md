@@ -5,8 +5,8 @@
 | Related PG (editable source) | [`../01-procedure-guides/TBC-AR Collections Export to Excel PG v0.1.docx`](../01-procedure-guides/TBC-AR%20Collections%20Export%20to%20Excel%20PG%20v0.1.docx) |
 | Markdown preview | [`../01-procedure-guides/PG-AR-Export-to-Excel-DRAFT.md`](../01-procedure-guides/PG-AR-Export-to-Excel-DRAFT.md) |
 | Screenshot register | [`../02-screenshot-registers/PG-AR-Export-to-Excel-Screenshots.md`](../02-screenshot-registers/PG-AR-Export-to-Excel-Screenshots.md) |
-| Last updated | 2026-11-01 |
-| Items | 20 total, all open: 12 blocking, 8 non-blocking |
+| Last updated | 2026-11-18 |
+| Items | 20 total: 19 open (11 blocking, 8 non-blocking), 1 closed |
 
 > **Merged and frozen (D-048).** This topic draft is now topic 6 of the [260 O2C Getting Started v0.2](../01-procedure-guides/CLAUDE-260-O2C%20Getting%20Started%20PG%20v0.2.docx) working draft (register: [260-O2C-Getting-Started-Validation.md](260-O2C-Getting-Started-Validation.md)). Edit the 260 Word file, not this draft. Record answers here against these IDs; they apply to 260, where each carried comment reads *Export to Excel VG-xx*.
 
@@ -67,7 +67,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-14 | Business process owner (BPO). | Version history | 1 | B | SME | Open |
 | VG-15 | Destination guide and topic (D-045). Proposed: 260 O2C Getting Started, topic 6 Export All Rows from a Grid. Merged into the 260 v0.1 working draft (D-048). | Cover; file name; destination guide | 0 | B | Dec | Open |
 | VG-16 | Whether any reports or inquiries apply. If none, "No applicable reports". | Part 3 | 14 | B | SME | Open |
-| VG-17 | Whether exporting needs a specific security role or permission, and a test with it. If the option is missing for a user, security access is a possible cause, not a confirmed one. | PROCESS START | — | B | Test, SME | Open |
+| VG-17 | Whether exporting needs a specific security role or permission, and a test with it. If the option is missing for a user, security access is a possible cause, not a confirmed one. | PROCESS START | — | B | Test, SME | Closed 2026-11-18 (D-083): guides do not name security roles. Your manager requests your D365 profile, which gives you the access you need; for any access or security role issue, contact the BAU Support team. |
 | VG-18 | SME factual review, a test by someone other than the author, and approval. | Whole guide | — | B | SME | Open |
 | VG-19 | Recording timestamps for the export demonstration. | Screenshot register | — | N | Rec | Open |
 | VG-20 | Confirm that the custom all-customer transaction report and daily bank statements belong in separate guides. | Part Description (scope); Part 3 | 14 | N | Dec | Open |
@@ -99,3 +99,4 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 |---|---|
 | 2026-10-14 | Register created with the v0.1 SME review draft. |
 | 2026-11-01 | Merged into 260 v0.1 (D-048); D1 destination renumbered (D-048). |
+| 2026-11-18 | `VG-17` closed (D-083): the guides do not name security roles; users contact the BAU Support team for access issues. |

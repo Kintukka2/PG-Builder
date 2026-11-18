@@ -36,6 +36,14 @@ Keep the template's look: tables copy the concept table (dark blue header row), 
 - **Bullets:** every bulleted list in body text uses the **Bullet 1.2** style: Part Description, Initiation, Responsibility, Task Overview and Key concepts. Do not use **CW_Bullet 1** for these lists, even though the authoring guide's style table names it for Responsibility and Initiation: it uses the theme font and looks wrong beside body text. Inside procedure tables, the template's own bullets stay (Bullet 1.2 in PROCESS START and Description cells, the PROCESS START/END Body bullets in STEP COMPLETE rows, and CW_Bullet 1 in the navigation path).
 - **Topic links:** when a link names a topic, the topic number is part of the link's display text, written as the heading shows it: **1. Map the CW1 Ledger to TM1** for a topic, **4.1 Complete the TB OB Tab** for a subtopic. This applies to the roles matrix, Topic Overview tables, checklists, "Continue to" links and cross-references in text. The Process table keeps the number in its own **#** column and links the title only, as the template shows.
 
+## Security roles and access (D-083)
+
+Users do not know their security roles, so a guide never names one or asks about one.
+
+- Where a guide needs to say how a user gets access, it says that their manager requests their D365 profile, which gives them the access they need.
+- For a missing page, module or control, or any other access or security role issue, the guide tells the user to contact the **BAU Support team**.
+- Do not raise register items, review comments or SME questions about security roles. Close any that come in from a source, citing D-083.
+
 ## Internal notes to the author: `ACTION: REVIEW REQUIREMENT` (D-060)
 
 Any text in a draft guide that speaks to the author or reviewer rather than the reader uses the template's **ACTION: REVIEW REQUIREMENT** style (yellow fill, red text), so it stands out as a note to resolve, not guide content. Examples: "This guide does not yet describe…", "to be confirmed", "Navigation to be confirmed", "No role is marked until…".
