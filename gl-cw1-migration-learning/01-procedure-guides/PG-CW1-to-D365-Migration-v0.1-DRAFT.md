@@ -4,7 +4,7 @@
 >
 > This is a Markdown preview of the Word guide [`CLAUDE-O-0001-CW1 to D365 Migration PG v0.1.docx`](CLAUDE-O-0001-CW1%20to%20D365%20Migration%20PG%20v0.1.docx). It converts the *CW1 to D365 Migration - Go-Live Manual* (version date October 2026) to the PG master template (D-058). **The Word file is the editable source.**
 >
-> Markers such as `[CM-05]` show unconfirmed items. In the Word file, each one is a review comment. The items are in the [validation register](../03-validation/CW1-to-D365-Migration-v0.1-Validation.md). The markers are not part of the guide text. Rows of a procedure that happen outside D365 (in Excel, TM1 or CW1) are shaded gray in the Word file.
+> Markers such as `[CM-06]` show unconfirmed items. In the Word file, each one is a review comment. The items are in the [validation register](../03-validation/CW1-to-D365-Migration-v0.1-Validation.md). The markers are not part of the guide text. Rows of a procedure that happen outside D365 (in Excel, TM1 or CW1) are shaded gray in the Word file.
 >
 > Notes marked **ACTION: REVIEW REQUIREMENT**, and <mark>highlighted</mark> phrases, are internal notes to the author (yellow, in the Word style of the same name). They are removed before publication (D-060).
 
@@ -26,7 +26,7 @@ The fixed template content is not repeated here: cover, Contents, *About this gu
 
 **CW1 to D365 Migration** sets out the steps to migrate an entity's accounting balances from CargoWise One (CW1), as reported in TM1, to Microsoft Dynamics 365 Finance (D365). It covers the ledger mapping, the analysis of the closing trial balance (TB), the balance breakdowns and the opening balance (OB) file, the reversal of the balances in CW1, the upload of SPE balances at historical rates, the post-upload adjustment journals, and the check of the D365 TB after go-live. `[CM-04]`
 
-The Ledger Owners (LOs) prepare the migration files, and the Regional Accounting Manager (RAM) reviews them. `[CM-05]` The Reporting team prepares reconciled breakdowns of the closing balances. The TM1 administrator prepares the ledger mapping and manages the CW1 feed to TM1, and the CW1 administrator opens and closes the cutover department in CW1. `[CM-06]` The work uses CW1, TM1, Excel workbooks (the AMCS template, the OB workbook and the ADAW workbook) and D365.
+The Ledger Owners (LOs) prepare the migration files, and the Regional Accounting Manager (RAM) reviews them. The Reporting team prepares reconciled breakdowns of the closing balances. The TM1 administrator prepares the ledger mapping and manages the CW1 feed to TM1, and the CW1 administrator opens and closes the cutover department in CW1. `[CM-06]` The work uses CW1, TM1, Excel workbooks (the AMCS template, the OB workbook and the ADAW workbook) and D365.
 
 At a high level, the migration follows these stages:
 
@@ -50,7 +50,7 @@ At a high level, the migration follows these stages:
 
 | **Stream** | **Process Area** | **Key Roles** |
 |---|---|---|
-| Record-to-Report (R2R) `[CM-03]` | CW1 to D365 Migration | • Ledger Owner (LO) `[CM-05]`<br>• Regional Accounting Manager (RAM)<br>• Reporting team<br>• TM1 administrator `[CM-06]`<br>• CW1 administrator<br>• Finance Transformation |
+| Record-to-Report (R2R) `[CM-03]` | CW1 to D365 Migration | • Ledger Owner (LO)<br>• Regional Accounting Manager (RAM)<br>• Reporting team<br>• TM1 administrator `[CM-06]`<br>• CW1 administrator<br>• Finance Transformation |
 
 ##### Process
 
@@ -72,7 +72,7 @@ The high-level CW1 to D365 Migration process is as follows:
 
 ##### Overview
 
-The Ledger Owner (LO) prepares the migration files, the reversal in CW1, the SPE workings, the adjustment journals and the post go-live reconciliation. The Regional Accounting Manager (RAM) reviews the breakdown files, the adjustment journals and the reconciliation. The Reporting team provides reconciled breakdowns of the closing balances. The TM1 administrator prepares the ledger mapping and manages the CW1 feed to TM1, the CW1 administrator activates the cutover department in CW1 for the reversal, and Finance Transformation flags the ledgers that keep CW1 activity in the cutover month. `[CM-05]`
+The Ledger Owner (LO) prepares the migration files, the reversal in CW1, the SPE workings, the adjustment journals and the post go-live reconciliation. The Regional Accounting Manager (RAM) reviews the breakdown files, the adjustment journals and the reconciliation. The Reporting team provides reconciled breakdowns of the closing balances. The TM1 administrator prepares the ledger mapping and manages the CW1 feed to TM1, the CW1 administrator activates the cutover department in CW1 for the reversal, and Finance Transformation flags the ledgers that keep CW1 activity in the cutover month.
 
 | **Tasks / Business Roles** | **Ledger Owner (LO)** | **Regional Accounting Manager (RAM)** | **Reporting Team** | **TM1 Administrator** | **CW1 Administrator** | **Finance Transformation** |
 |---|---|---|---|---|---|---|
@@ -130,7 +130,7 @@ Before you start, you need to know the terms used in this guide, the groups of a
 | **FX** | Foreign exchange. |
 | **GJL / RJL** | General journal / reversing journal (ADAW journal types). |
 | **GL** | General ledger. |
-| **LO** | Ledger Owner. `[CM-05]` |
+| **LO** | Ledger Owner. |
 | **OB** | Opening balance. |
 | **P&L** | Profit and loss. |
 | **PPE** | Property, plant and equipment. |
@@ -175,7 +175,7 @@ Prepare one OB workbook per entity. The workings tab is named with the D365 comp
 | 1 | **AMCSMultiLedgerJournalImport_GL** | The AMCS upload file. It is formula-linked to the TB OB tab, so the data flows into this tab once Tab 2 is complete: see [4.3 Complete the AMCS Upload Tab](#43-complete-the-amcs-upload-tab). |
 | 2 | **&lt;company code> TB OB** (for example, **234A TB OB**) | The main working tab for the opening balance: see [4.1 Complete the TB OB Tab](#41-complete-the-tb-ob-tab). Row 1 labels the source of each column (**From TM1 Report**, **From Adam's file**, **From D365 report**, **Check** and **To be populated by LO**), and row 2 holds the column headers. |
 | 3 | **CW1 CoA Structure** | The TM1 report of the CW1 chart of accounts structure. |
-| 4 | **D356 CoA** | The D365 chart of accounts, with columns including **Main account**, **Name**, **Main account category**, **Main account type**, **Posting type**, **Do not allow manual entry** and **Foreign currency revaluation**. `[CM-16]` |
+| 4 | **D356 CoA** | The D365 chart of accounts, with columns including **Main account**, **Name**, **Main account category**, **Main account type**, **Posting type**, **Do not allow manual entry** and **Foreign currency revaluation**. |
 | 5 | **LedgerAccountStructureContains** | The D365 ledger account structures (**Ledger Account Structure**), which define the dimensions required for each account, in the order **MainAccount**, **BusinessUnit**, **CostCenter**, **Product**, **Activity**, **TradingPartner**, **Segment**. Only **Active** structures are used by the lookups. |
 | 6 | **New dimensions** | New **BusinessUnit** and **Product** dimension values to be created in D365. |
 | 7 | **TB TM1 &lt;period>** (for example, **TB TM1 P03**) | The TM1 TB report by CW1 company, showing the balances to be migrated. |
@@ -359,7 +359,7 @@ Complete these steps to fill in the TB OB tab:
 |---|---|
 | *PROCESS START* | *Pre-requisites:*<br>• The OB workbook for the entity, with its tabs in the order set out in [Opening Balance Workbook](#opening-balance-workbook).<br>• The TM1 TB report of the balances to be migrated, and the reviewed CW1 to TM1 ledger mapping file ([1. Map the CW1 Ledger to TM1](#1-map-the-cw1-ledger-to-tm1)).<br>• The reviewed breakdown files ([3. Prepare the Breakdown Files](#3-prepare-the-breakdown-files)).<br>*Responsibility:*<br>• Ledger Owner (LO) |
 | 1. *Refresh* the **CW1 CoA Structure** tab. | Tab 3 is the TM1 report of the CW1 chart of accounts structure. Refresh the TM1 report if new accounts need to be added. |
-| 2. *Update* the **D356 CoA** tab. | Tab 4 is the D365 chart of accounts. Update it with the latest D365 report to include any new accounts. `[CM-16]` |
+| 2. *Update* the **D356 CoA** tab. | Tab 4 is the D365 chart of accounts. Update it with the latest D365 report to include any new accounts. |
 | 3. *Update* the **New dimensions** tab. | Tab 6 lists the new **BusinessUnit** and **Product** dimension values to be created in D365. Update it to include any new dimensions. |
 | 4. *Check* the **TB TM1** tab. | Tab 7 (**TB TM1 &lt;period>**, for example **TB TM1 P03**) is the TM1 TB report by CW1 company. Check that the check row **All N Elements with FCTR** is zero for each company. |
 | 5. *Open* the **TB OB** tab. | Open Tab 2, **&lt;company code> TB OB** (for example, **234A TB OB**). Row 1 labels the source of each column, and row 2 holds the column headers. |
@@ -372,7 +372,7 @@ Complete these steps to fill in the TB OB tab:
 | 12. *Check* the **FD Check** (column V). | Column V shows **YES** if every dimension in columns Q to U falls within the allowed values in columns L to P. Otherwise it shows **NO:** followed by the failing dimensions. Correct the dimensions until every line shows **YES**. |
 | 13. *Check* the **Debit** and **Credit** (columns W and X). | A formula takes the balance from column D: positive balances flow to **Debit** and negative balances to **Credit**. For breakdown lines, see [4.2 Add Breakdown Lines](#42-add-breakdown-lines). |
 | 14. *Enter* the **Currency** (column Y). | Enter the ledger (functional) currency. Balances needed in a foreign currency are uploaded separately: upload the functional currency balance first, then book an extra journal that reverses the functional currency amount and replaces it with the transaction currency amounts. `[CM-21]` |
-| 15. *Check* the **Description** (column Z). | A formula builds the description: **DD/MM D365 Migration - OB Upload - &lt;CW1 account> - &lt;CW1 description>**. `[CM-20]` |
+| 15. *Check* the **Description** (column Z). | A formula builds the description: **DD/MM D365 Migration - OB Upload - &lt;CW1 account> - &lt;CW1 description>**. |
 | 16. *Enter* **FinTag 2 (Vendor name)** (column AA), where needed. | For vendor organizations, enter the vendor name, not the code. |
 | 17. *Enter* **FinTag 3 (Customer Code)** (column AB), where needed. | Enter the customer code. Names are not accepted. |
 | 18. *Check* the **Check** row and cell **W92**. | The **Check** row below the data sums columns D, W and X: the sum of column D must be **0**. Cell W92 shows total debits less total credits, which must be **0**. `[CM-19]` |
@@ -389,7 +389,7 @@ Complete these steps to add breakdown lines to the TB OB tab:
 | *PROCESS START* | *Pre-requisites:*<br>• An account that is uploaded in more detail than its TM1 closing balance, for example by customer, vendor or transaction ([2. Analyze the CW1 Closing Trial Balance](#2-analyze-the-cw1-closing-trial-balance)).<br>• The reviewed breakdown file for the account ([3. Prepare the Breakdown Files](#3-prepare-the-breakdown-files)).<br>*Responsibility:*<br>• Ledger Owner (LO) |
 | 1. *Keep* the **Original Line**. | Keep the account's original TM1 line, with its TM1 balance in column D unchanged. This keeps the column D check (sum of column D = 0) intact. |
 | 2. *Enter* the **First Breakdown Item**. | On the original line, overwrite the formula in column W (**Debit**) or X (**Credit**) with the amount of the first breakdown item. |
-| 3. *Complete* the **Original Line**. | Complete its dimensions (columns Q to U), description (column Z), and **FinTag 2** / **FinTag 3** (columns AA and AB).<br>Breakdown lines use free text that refers to the specific transaction, for example **DD/MM D365 Migration - &lt;period>-&lt;reference>-MATCH NO. &lt;match no.>**. `[CM-20]` |
+| 3. *Complete* the **Original Line**. | Complete its dimensions (columns Q to U), description (column Z), and **FinTag 2** / **FinTag 3** (columns AA and AB).<br>Breakdown lines use free text that refers to the specific transaction, for example **DD/MM D365 Migration - &lt;period>-&lt;reference>-MATCH NO. &lt;match no.>**. |
 | 4. *Insert* a **Row** for each remaining breakdown item. | Insert the rows directly below the original line, with the same CW1 account in column A. `[CM-19]` |
 | 5. *Enter* the **Amount** on each inserted row. | Leave column D blank, and enter the amount directly in column W or X. |
 | 6. *Complete* each **Inserted Row**. | Complete columns Q to U, Y, Z and AA/AB. |
@@ -654,7 +654,7 @@ Complete these steps to book the post-upload adjustment journals:
 
 ##### Description
 
-After go-live, check that the TB in D365 equals the balances that were intended to be migrated. The check confirms that every opening balance, migration journal and subledger upload has been booked once, to the right account and with the right dimensions, before the first D365 month-end close. `[CM-08]`
+After go-live, check that the TB in D365 equals the balances that were intended to be migrated. The check confirms that every opening balance, migration journal and subledger upload has been booked once, to the right account and with the right dimensions, before the first D365 month-end close.
 
 Investigate and correct any difference before the first D365 month-end close, so that the first close starts from balances that agree to the intended migration balances.
 
