@@ -15,6 +15,7 @@ A draft keeps its version number once it goes out for review. When Claude applie
 
 - The Word file is renamed (`CLAUDE-220-Customer Payments PG v3.1.docx`) and every link to it is updated. The PDF, the Markdown preview and the register keep their file names.
 - The guide's version history gets a row for the new version: date, author, BPO and a short description. Earlier rows keep what those versions were.
+- In a version history row Claude writes (D-095), **Author/s** lists the SME first, then the PG owner, separated by a semicolon (`Maria Pabalan; Daniel Moreira`), and **Description of change** is a few words, for example *SME round 1 answers (draft)*. The detail goes in the register's Versions section, so the table stays small.
 - The register's **Versions of the guide** section lists what changed in the new version, and its change log has the entry.
 - The board card's version and Word link change, and the review copy carries the new number.
 

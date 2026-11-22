@@ -256,13 +256,13 @@ Maria's 220 answers (D-091) also apply here: payment corrections are Receipting 
 
 ## 7. Round 2 plan (D-085)
 
-Round 2 goes to Maria Pabalan with v3.1 and asks only what her round 1 answers left open: one question. Q05 (how to send a change to License Management) was dropped before sending: the guide does not name a channel (D-094). Pages come from Word's Contents, updated by Daniel in the v3.1 review copy on 22 November (D-089); step pages keep their place within each subtopic. The board holds the question text.
+Round 2 goes to Maria Pabalan with v3.1 and asks only what her round 1 answers left open: one question. Q05 (how to send a change to License Management) was dropped before sending: the guide does not name a channel (D-094). Pages come from Word's Contents, updated by Daniel in the v3.1 review copy on 22 November (D-089), less one page since the version history table was shortened (D-095); step pages keep their place within each subtopic. The board holds the question text.
 
 ### 7.1 Asked in round 2
 
 | Question | Items | Where |
 |---|---|---|
-| Q04 Failed statement delivery (follows Q03) | `Statement Distribution VG-10` | 6.2.2 step 3 (p. 47) |
+| Q04 Failed statement delivery (follows Q03) | `Statement Distribution VG-10` | 6.2.2 step 3 (p. 46) |
 
 ### 7.2 Not asked
 
@@ -294,3 +294,4 @@ Round 2 goes to Maria Pabalan with v3.1 and asks only what her round 1 answers l
 | 2026-11-22 | Round 1 answered by Maria Pabalan (ADO 16886, 19 November) and applied, with the seven legacy write-ins (section 6.3, D-093); the guide becomes **v3.1** (D-092): file renamed `CLAUDE-230-Collections PG v3.1.docx`, a 3.1 row in its version history, and a *Versions of the guide* section here. 26 items closed (`G230-08` to `G230-13` and 20 topic-draft items) and two opened (`G230-15`, `G230-16`); review comments 82 → 64. Payment corrections now go to the Receipting team (D-091). Round 2 (two questions, section 7) drafted on the board. Contents page numbers refreshed. The PDF beside the Word file is out of date (D-064). |
 | 2026-11-22 | Word's Contents for v3.1 (Daniel Moreira, 22 November) written into the guide, with the 7.1.3 line Word added: Word is one page earlier than the layout from 2.4 on, as in round 1. Round 2 pages from Word: Q04 p. 47, Q05 p. 31. Round 2 is ready to send. |
 | 2026-11-22 | `G230-16` closed by Daniel Moreira (D-094): specific clarification is not required, because officers pass changes to License Management through the channels they already use, and naming one could make another look wrong. Its review comment and the [Q05] tag are removed; the Important box in 2.7 stays as it is. Round 2 is now one question (Q04). Review comments 64 → 63. |
+| 2026-11-22 | Version history (D-095): rows 3.0 and 3.1 list Maria Pabalan, then Daniel Moreira, as authors, and rows 2.4, 3.0 and 3.1 have descriptions of a few words. The table no longer runs onto a second page, so every heading is one page earlier: the Contents carries Word's numbers less one, and round 2 Q04 is p. 46. |
