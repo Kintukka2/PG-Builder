@@ -726,7 +726,7 @@ Customer details are maintained in 200 Customer Onboarding and Maintenance, sect
 
 Collections Officers update a customer's contact details when the customer sends new ones, for example a new accounts payable (AP) contact or a new statement email address. Follow 200 Customer Onboarding and Maintenance, section 3.4.
 
-> **Important:** Collections Officers do not change a customer's name, address, VAT ID or country in D365. Any change to these goes to License Management. `[G230-16]`
+> **Important:** Collections Officers do not change a customer's name, address, VAT ID or country in D365. Any change to these goes to License Management.
 
 #### 2.8 Maintain Customer Direct Debit & eBanking Details
 
