@@ -8,7 +8,7 @@
 | Last updated | 2026-11-18 |
 | Items | 23 total: 20 open (14 blocking, 6 non-blocking), 2 closed, 1 deferred |
 
-> **Merged and frozen (D-052).** This topic draft is now topics 2.1 and 4.1 of the [230 Collections v3.0](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Overdue Customers VG-xx*.
+> **Merged and frozen (D-052).** This topic draft is now topics 2.1 and 4.1 of the [230 Collections v3.1](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.1.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Overdue Customers VG-xx*.
 
 This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are scoped to this guide and never renumbered. Each open item that affects the text is also a Word review comment by "Validation register" (VR).
 
@@ -58,9 +58,9 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-05 | How the overdue amount column is sorted on this page. See Aged Balances VG-06. | Topic 1 Step 5 | 10 | B | Test | Open |
 | VG-06 | Exact label of the email column and that it can be added on this page. See Personalized Views VG-03. | Topic 1 Step 6 | 11 | B | Test | Open |
 | VG-07 | How the customer account opens from Customers overdue. | Topic 2 Step 2 | 14 | B | Test | Open |
-| VG-08 | What users must review to decide that an overdue balance is valid. | Topic 2 Step 3 | 15 | B | SME | Open |
+| VG-08 | What users must review to decide that an overdue balance is valid. | Topic 2 Step 3 | 15 | B | SME | Closed 2026-11-22 (legacy write-in, D-085): review the transactions that make up the overdue amount (open invoices, payments, credits and fees), with 230 2.4 for detail. |
 | VG-09 | Wording and owner of the check-the-balance-first rule, and whether a value threshold defines a low-value balance. | Key concepts; Topic 2 Step 4 | 7 | B | SME | Open |
-| VG-10 | What users should do, and who they should tell, when an overdue balance is not valid. | Topic 2 Step 5 | 16 | B | SME | Open |
+| VG-10 | What users should do, and who they should tell, when an overdue balance is not valid. | Topic 2 Step 5 | 16 | B | SME | Closed 2026-11-22 (legacy 230 Collections workflow, D-085; roles from Maria Pabalan's 220 answers, D-091): a payment applied to the wrong invoice or account goes to the Receipting team for correction; a dispute or no response is escalated to the Group Billing and Credit Manager. |
 | VG-11 | The approved order for working overdue accounts, and whether value, aging, customer risk or another factor takes priority. | Not in guide | — | N | SME | Open |
 | VG-12 | Aging indicator icons and the bands each one represents. | Not in guide | — | N | Rec, SME | **Deferred.** Excluded from v0.1 (source 3.1). Add when validated. |
 | VG-13 | When to contact the receiving team, including the number of business days (source 1, sequence 3.10). | Not in guide | — | N | SME | Open |
@@ -104,3 +104,4 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | 2026-11-03 | Merged into 230 Collections v3.0 (D-052); D1 destination updated to the v3.0 topic numbers. |
 | 2026-11-18 | `VG-19` closed (D-083): the guides do not name security roles; users contact the BAU Support team for access issues. |
 | 2026-11-18 | `VG-14` closed from legacy 230 when 230 round 1 was rebuilt (D-085). |
+| 2026-11-22 | `VG-08` and `VG-10` closed in 230 v3.1 from legacy 230 (D-085), with the Receipting team correcting payments (D-091). |

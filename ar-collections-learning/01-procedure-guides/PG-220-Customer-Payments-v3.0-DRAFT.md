@@ -84,7 +84,7 @@ The high-level Customer Payments process is as follows:
 
 ##### Overview
 
-Receipting Officers process customer payments: they handle remittance exceptions, settle and correct payments, maintain the settlement configuration, and process intercompany and direct debit payments. When a Receipting Officer cannot identify the customer for a payment, a Collections Officer supplies the customer code ([2.1.3 Process Customer Settlements – Red Status (Customer or Invoice Not Identified)](#procedure)). A customer payment journal (CPJL) needs no approval. Write-off journals and direct debit customer payment journals are approved by the Approver.
+Receipting Officers process customer payments: they handle remittance exceptions, settle and correct payments, maintain the settlement configuration, and process intercompany and direct debit payments. When a Receipting Officer cannot identify the customer for a payment, a Collections Officer supplies the customer code ([2.1.3 Process Customer Settlements – Red Status (Customer or Invoice Not Identified)](#213-process-customer-settlements--red-status-customer-or-invoice-not-identified)). A customer payment journal (CPJL) needs no approval. Write-off journals and direct debit customer payment journals are approved by the Approver.
 
 | **Tasks / Business Roles** | Receipting Officer | Approver |
 |---|---|---|
@@ -153,8 +153,8 @@ The match status determines;
 |---|---|---|---|---|
 | Green | Fully Matched | The payment has been successfully matched and settled against one or more open customer invoices | No further investigation is required.<br>These transactions are fully processed by the system. | NA |
 | Yellow | Proposed settlement (requires confirmation). | The customer account and open invoice(s) have been identified, and the system has generated a settlement and transaction is automatically posted. | No manual processing is required.<br><br>Only review if specifically required e.g. exception or discrepancy identified. | NA |
-| Red | Not matched | The system could not identify the customer account or match the payment to an open invoice. | Review the bank narrative, search for the customer account or invoice or Alternate name.<br>Manually select the invoice and allocate the payment. If no invoice exists, post the payment On account. If the customer cannot be identified, ask the Collections Officer for the customer code. | [2.1.3 Process Customer Settlements – Red Status (Customer or Invoice Not Identified).](#procedure) |
-| Blue | Posted to customer account (On Account / Unallocated) | The customer account has been identified, but no matching invoice was found. | Review the narrative and open invoices. Apply the payment to the correct invoice(s) where possible or post on account if no match is identified | [2.1.2 Process Customer Settlements – Blue Status (Customer Identified, On Account)](#procedure) |
+| Red | Not matched | The system could not identify the customer account or match the payment to an open invoice. | Review the bank narrative, search for the customer account or invoice or Alternate name.<br>Manually select the invoice and allocate the payment. If no invoice exists, post the payment On account. If the customer cannot be identified, ask the Collections Officer for the customer code. | [2.1.3 Process Customer Settlements – Red Status (Customer or Invoice Not Identified).](#213-process-customer-settlements--red-status-customer-or-invoice-not-identified) |
+| Blue | Posted to customer account (On Account / Unallocated) | The customer account has been identified, but no matching invoice was found. | Review the narrative and open invoices. Apply the payment to the correct invoice(s) where possible or post on account if no match is identified | [2.1.2 Process Customer Settlements – Blue Status (Customer Identified, On Account)](#212-process-customer-settlements--blue-status-customer-identified-on-account) |
 
 ##### Alternate Customer Names
 
@@ -172,7 +172,7 @@ Bank fees are charged by the bank from a customer payment and may result in shor
 
 Payments that cannot be fully resolved during settlement stay On Account and are referred to the Collections team, which investigates them. This includes unallocated payments and short payments with unclear causes. The Collections Officer may contact the customer to obtain remittance details or confirm payment intent.
 
-When the customer for a payment cannot be identified, the Receipting Officer tags the Collections Officer against the payment in the receipting spreadsheet. The Collections Officer replies with the customer code, and the Receipting Officer allocates and posts the payment ([2.1.3 Process Customer Settlements – Red Status (Customer or Invoice Not Identified)](#procedure), step 21).
+When the customer for a payment cannot be identified, the Receipting Officer tags the Collections Officer against the payment in the receipting spreadsheet. The Collections Officer replies with the customer code, and the Receipting Officer allocates and posts the payment ([2.1.3 Process Customer Settlements – Red Status (Customer or Invoice Not Identified)](#213-process-customer-settlements--red-status-customer-or-invoice-not-identified), step 21).
 
 ##### Settlement
 
@@ -407,11 +407,11 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [2.1.1 Access Customer Settlements](#procedure) | Open the Process customer settlements page, where imported bank transactions are reviewed and settlement starts. |
-| [2.1.2 Process Customer Settlements – Blue Status](#procedure) | Review and post payments with a Blue match status: the customer is identified, but the payment is not linked to an invoice. |
-| [2.1.3 Process Customer Settlements – Red Status](#procedure) | Investigate payments with a Red match status: D365 could not identify the customer or match the payment to an invoice. |
+| [2.1.1 Access Customer Settlements](#211-access-customer-settlements) | Open the Process customer settlements page, where imported bank transactions are reviewed and settlement starts. |
+| [2.1.2 Process Customer Settlements – Blue Status](#212-process-customer-settlements--blue-status-customer-identified-on-account) | Review and post payments with a Blue match status: the customer is identified, but the payment is not linked to an invoice. |
+| [2.1.3 Process Customer Settlements – Red Status](#213-process-customer-settlements--red-status-customer-or-invoice-not-identified) | Investigate payments with a Red match status: D365 could not identify the customer or match the payment to an invoice. |
 
-- Access Customer Settlements
+#### 2.1.1 Access Customer Settlements
 
 ##### Procedure
 
@@ -430,9 +430,9 @@ Complete these steps to Access Customer Settlement:
 | 8. *Review* the **Match** **color**. | Locate the Match color column, which displays colored indicators (Blue, Red and Yellow) |
 | 9. *Identify* **Transactions requiring action***.* | Determine which transactions require manual processing:<br>• **Red** – investigation required.<br>• **Blue** – Review and allocation required.<br>Green and Yellow transactions do not require manual processing unless an exception is identified. |
 | 10. *Begin* **Processing settlements.** | *Click* the first transaction in the **Imported** **transactions** list to begin processing.<br>Transactions should be processed from top to bottom to ensure all items are reviewed sequentially. |
-| *STEP COMPLETE* (light blue) | *Proceed to the relevant process based on the Match color.*<br>*Blue transactions – continue to* [2.1.2 Process Customer Settlements – Blue Status (Customer Identified, On Account)](#procedure)<br>*Re transactions – Continue to* [2.1.3 Process Customer Settlements – Red Status (Customer or Invoice Not Identified).](#procedure) |
+| *STEP COMPLETE* (light blue) | *Proceed to the relevant process based on the Match color.*<br>*Blue transactions – continue to* [2.1.2 Process Customer Settlements – Blue Status (Customer Identified, On Account)](#212-process-customer-settlements--blue-status-customer-identified-on-account)<br>*Re transactions – Continue to* [2.1.3 Process Customer Settlements – Red Status (Customer or Invoice Not Identified).](#213-process-customer-settlements--red-status-customer-or-invoice-not-identified) |
 
-- Process Customer Settlements – Blue Status (Customer Identified, On Account)
+#### 2.1.2 Process Customer Settlements – Blue Status (Customer Identified, On Account)
 
 ##### Procedure
 
@@ -442,8 +442,8 @@ Complete these steps to Process Customer Settlement – Blue Status (On Account)
 |---|---|
 | *PROCESS START* (light blue) | ***Pre-requisites:***<br>• *The transaction displays* ***Blue*** *match status*<br>• *A customer account has been identified.*<br>• *No invoice has been matched.* |
 | 1. *Understand* ***T*****ransaction sequencing***.* | Transactions are processed sequentially in the **Imported transactions** list. After posting a transaction, the system automatically moves to the next transaction list. |
-| 2. *Review* the **Selected** **transaction.** | From [2.1.1 Access Customer Settlements](#procedure), a transaction is already selected.<br>Review the newly selected transaction before proceeding. |
-| 3. *Confirm* the **Match** **status is Blue***.* | Check the **Match status** column for the selected transaction.<br>• If **Match** **status** is **Blue**, continue with this process.<br>• If **Match** **status** is **Red**, refer to [2.1.3 Process Customer Settlements – Red Status (Customer or Invoice Not Identified).](#procedure)<br>• If **Match status** is **Green** or **Yellow**, no manual processing is required. |
+| 2. *Review* the **Selected** **transaction.** | From [2.1.1 Access Customer Settlements](#211-access-customer-settlements), a transaction is already selected.<br>Review the newly selected transaction before proceeding. |
+| 3. *Confirm* the **Match** **status is Blue***.* | Check the **Match status** column for the selected transaction.<br>• If **Match** **status** is **Blue**, continue with this process.<br>• If **Match** **status** is **Red**, refer to [2.1.3 Process Customer Settlements – Red Status (Customer or Invoice Not Identified).](#213-process-customer-settlements--red-status-customer-or-invoice-not-identified)<br>• If **Match status** is **Green** or **Yellow**, no manual processing is required. |
 | 4. *Select* a **Blue** **transaction***.* | If the selected transaction is not **Blue**, *click* the transaction displaying **Blue** in the **Match** **status** column before continuing.<br>**4**<br>**4** |
 | 5. *Click* **Settlement transactions**. | On the **Action** Toolbar, *click* **Settle transactions**.<br>The **Customer** **settlement** **details** screen is displayed showing the **Header** and **Proposed settlement** sections.<br>**5**<br>**5** |
 | 6. *Review* **Header** **details**. | In the Header section, review:<br>• Statement amount<br>• Settlement amount<br>• Difference<br>The **Difference** represents the remaining amount to allocate and must equal **0.00** before posting. |
@@ -457,7 +457,7 @@ Complete these steps to Process Customer Settlement – Blue Status (On Account)
 | 14. *Continue* **Processing.** | The system automatically moves to the next transaction in the **Imported transactions** list. |
 | *PROCESS COMPLETE* (light green) | ***Outcomes****:*<br>• *Customer payment is validated and processed.*<br>• *Payment is correctly allocated or recorded On account.*<br>• *Difference = 0.00*<br>• *Transaction is posted with a Voucher number.* |
 
-- Process Customer Settlements – Red Status (Customer or Invoice Not Identified)
+#### 2.1.3 Process Customer Settlements – Red Status (Customer or Invoice Not Identified)
 
 ##### Procedure
 
@@ -467,8 +467,8 @@ Complete these steps to Process Customer Settlement – Red Status (Customer or 
 |---|---|
 | *PROCESS START* (light blue) | ***Pre-requisites****:*<br>• *The transaction displays as Red match status.*<br>• *Bank statement has been imported into D365.*<br>• *Bank statement transaction is available in Process customer settlements.* |
 | 1. *Understand* ***T*****ransaction sequencing***.* | Transactions are processed sequentially in the **Imported transactions** list. After posting a transaction, the system automatically moves to the next transaction list. |
-| 2. *Review* the **Selected** **transaction.** | From [2.1.1 Access Customer Settlements](#procedure), a transaction is already selected in the **Imported transactions** list. Review the newly selected transaction before proceeding |
-| 3. *Confirm* **Match status is Red.** | Check the Match status column for the selected transaction.<br>• If the **Match** **color** is **Red**, continue with this process.<br>• If the **Match** **color** is **Blue**, refer to [2.1.2 Process Customer Settlements – Blue Status (Customer Identified, On Account)](#procedure)<br>• If Green or Yellow, no manual processing is required. |
+| 2. *Review* the **Selected** **transaction.** | From [2.1.1 Access Customer Settlements](#211-access-customer-settlements), a transaction is already selected in the **Imported transactions** list. Review the newly selected transaction before proceeding |
+| 3. *Confirm* **Match status is Red.** | Check the Match status column for the selected transaction.<br>• If the **Match** **color** is **Red**, continue with this process.<br>• If the **Match** **color** is **Blue**, refer to [2.1.2 Process Customer Settlements – Blue Status (Customer Identified, On Account)](#212-process-customer-settlements--blue-status-customer-identified-on-account)<br>• If Green or Yellow, no manual processing is required. |
 | 4. *Select* a **Red transaction.** | If the selected transaction is not **Red**, *click* a transaction displaying **Red** in the **Match status** column before continuing.<br>**4**<br>**4** |
 | 5. *Confirm* **No journal exists.** | *Scroll* to the **Voucher number** column and confirm it is blank, indicating no payment journal has been created.<br>**5**<br>**5** |
 | 6. *Click* **Settlement transactions**. | On the **Action** toolbar, *click* **Settle transactions**.<br>The Customer settlement details screen is displayed showing the **Header** section and **Proposed** **settlement** section.<br>**6**<br>**6** |
@@ -536,10 +536,10 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [2.2.1 Create a Customer Payment Journal](#procedure) | Record the payment in a new customer payment journal. |
-| [2.2.2 Settle the Customer Payment Journal](#procedure) | Settle the journal line against the invoices it pays, then validate and post the journal. |
+| [2.2.1 Create a Customer Payment Journal](#221-create-a-customer-payment-journal) | Record the payment in a new customer payment journal. |
+| [2.2.2 Settle the Customer Payment Journal](#222-settle-the-customer-payment-journal) | Settle the journal line against the invoices it pays, then validate and post the journal. |
 
-- Create a Customer Payment Journal
+#### 2.2.1 Create a Customer Payment Journal
 
 ##### Procedure
 
@@ -555,10 +555,10 @@ Complete these steps to Create a Customer Payment Journal:
 | 5. *Enter* **Journal** **Header details**. | Complete the required fields:<br>***Field***<br>***Action***<br>*Name*<br>• *Select the required journal name, e.g., CPJL- Customer Payment journal.*<br>*Description*<br>• *Enter a clear description that explains the purpose of the journal entry, e.g., Customer payment received – ABC Logistics*<br>This helps anyone reviewing the journal identify its purpose.<br>**Note:** The journal name controls posting behavior. Select CPJL for a customer payment; direct debit receipts use DD-CPJL ([6. Process Direct Debit Customer Payments](#6-process-direct-debit-customer-payments)). |
 | 6. *Click* the **Journal Batch Number**. | *Click* the **Journal Batch Number** to open the Customer payments form. |
 | 7. Enter **Customer payment details.** | In the journal lines, enter the following details.<br>***Field***<br>***Action***<br>*Account*<br>• *Select the Customer account that the payment relates to.*<br>*Tax invoice*<br>• *Select the invoice to settle, if known.*<br>• *Leave blank if the payment will be posted On account.*<br>*Credit*<br>• *Enter the customer payment amount received.*<br>*Offset Account type*<br>• *Select Bank.*<br>*Offset Account*<br>• *Select the Bank account from the dropdown list.*<br>*Method of payment*<br>• *Select the Method of payment form the dropdown list.*<br>*Payment status*<br>• *Select Sent in the dropdown list.* |
-| 8. *Validate* the **Journal**. | On the Main Toolbar, *click* **Validate** > **Simulate** posting to verify that all lines are error-free.<br>***If…***<br>***Then…***<br>*An error message appears.*<br>• *Review the message, correct the data, and re-validate.*<br>*No error message appears.*<br>• The journal is validated. Continue to [2.2.2 Settle the Customer Payment Journal](#procedure). |
-| *STEP COMPLETE* (light blue) | ***Outcomes****:*<br>• *Customer payment journal is created and validated.*<br>• *Proceed onto* [2.2.2 Settle the Customer Payment Journal](#procedure) |
+| 8. *Validate* the **Journal**. | On the Main Toolbar, *click* **Validate** > **Simulate** posting to verify that all lines are error-free.<br>***If…***<br>***Then…***<br>*An error message appears.*<br>• *Review the message, correct the data, and re-validate.*<br>*No error message appears.*<br>• The journal is validated. Continue to [2.2.2 Settle the Customer Payment Journal](#222-settle-the-customer-payment-journal). |
+| *STEP COMPLETE* (light blue) | ***Outcomes****:*<br>• *Customer payment journal is created and validated.*<br>• *Proceed onto* [2.2.2 Settle the Customer Payment Journal](#222-settle-the-customer-payment-journal) |
 
-- Settle the Customer Payment Journal
+#### 2.2.2 Settle the Customer Payment Journal
 
 ##### Procedure
 
@@ -764,11 +764,11 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [3.3.1 Create the Journal and Enter the Source Line](#procedure) | Create the CPJL and enter the debit line for the customer the funds come from. Output: the source line is complete. |
-| [3.3.2 Enter the Destination Line](#procedure) | Enter the matching credit line for the customer receiving the funds. Output: a two-line journal. |
-| [3.3.3 Validate and Post the Journal](#procedure) | Check the balance, run Simulate Posting, correct errors and post. Output: the transfer is posted. |
+| [3.3.1 Create the Journal and Enter the Source Line](#331-create-the-journal-and-enter-the-source-line) | Create the CPJL and enter the debit line for the customer the funds come from. Output: the source line is complete. |
+| [3.3.2 Enter the Destination Line](#332-enter-the-destination-line) | Enter the matching credit line for the customer receiving the funds. Output: a two-line journal. |
+| [3.3.3 Validate and Post the Journal](#333-validate-and-post-the-journal) | Check the balance, run Simulate Posting, correct errors and post. Output: the transfer is posted. |
 
-- Create the Journal and Enter the Source Line
+#### 3.3.1 Create the Journal and Enter the Source Line
 
 ##### Procedure
 
@@ -790,9 +790,9 @@ Complete these steps to create the journal and enter the source line:
 | 11. *Select* **Ledger** as the **Offset account type**. `[CPJ-08]` | Set the offset account type to **Ledger**. |
 | 12. *Select* the bank-to-bank transfer clearing account. | Select the clearing account used for transfers between customer accounts: **100949 Bank to bank transfer clearing**. |
 | 13. *Complete* the line. | Tab through every field in the line before you start the next one, so that fields such as the voucher fill in correctly. |
-| *STEP COMPLETE* (light blue) | • The source line is complete.<br>• Continue to [3.3.2 Enter the Destination Line](#procedure) |
+| *STEP COMPLETE* (light blue) | • The source line is complete.<br>• Continue to [3.3.2 Enter the Destination Line](#332-enter-the-destination-line) |
 
-- Enter the Destination Line
+#### 3.3.2 Enter the Destination Line
 
 ##### Procedure
 
@@ -800,7 +800,7 @@ Complete these steps to enter the destination line:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | Pre-requisites:<br>• The source line is complete (see [3.3.1 Create the Journal and Enter the Source Line](#procedure)).<br>Responsibility:<br>• Receipting Officer |
+| *PROCESS START* (light blue) | Pre-requisites:<br>• The source line is complete (see [3.3.1 Create the Journal and Enter the Source Line](#331-create-the-journal-and-enter-the-source-line)).<br>Responsibility:<br>• Receipting Officer |
 | 1. *Add* a new line. | Add another line to the journal. |
 | 2. *Select* the destination customer account. | Select the customer account receiving the funds. The customer name fills in automatically. |
 | 3. *Enter* the amount as a credit. | Enter the same amount as the source line as a credit, in the same currency. |
@@ -808,9 +808,9 @@ Complete these steps to enter the destination line:
 | 5. *Select* **Ledger** as the **Offset account type**. `[TF-04]` | Apply the same offset treatment as the source line. |
 | 6. *Select* the bank-to-bank transfer clearing account. | Select the same clearing account as the source line. |
 | 7. *Complete* the line. | Tab through every field in the line. |
-| *STEP COMPLETE* (light blue) | • The journal has a source debit line and a matching destination credit line.<br>• Continue to [3.3.3 Validate and Post the Journal](#procedure) |
+| *STEP COMPLETE* (light blue) | • The journal has a source debit line and a matching destination credit line.<br>• Continue to [3.3.3 Validate and Post the Journal](#333-validate-and-post-the-journal) |
 
-- Validate and Post the Journal
+#### 3.3.3 Validate and Post the Journal
 
 ##### Procedure
 
@@ -818,7 +818,7 @@ Complete these steps to validate and post the journal:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | Pre-requisites:<br>• Both lines are complete (see [3.3.2 Enter the Destination Line](#procedure)).<br>Responsibility:<br>• Receipting Officer |
+| *PROCESS START* (light blue) | Pre-requisites:<br>• Both lines are complete (see [3.3.2 Enter the Destination Line](#332-enter-the-destination-line)).<br>Responsibility:<br>• Receipting Officer |
 | 1. *Check* the journal balances. `[CPJ-13]` | Confirm that total debits equal total credits, and that the currency and date are correct. |
 | 2. *Run* **Simulate Posting**. `[CPJ-14]` | Check the journal before posting. A blue result means the journal is ready to post. |
 | 3. *Correct* any errors. | If Simulate Posting shows an error, read it, correct the line it names and run Simulate Posting again. If you cannot resolve the error, log a request through the D365 issue form (see **Additional Resources**) before you post. |
@@ -847,11 +847,11 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [3.4.1 Create the Journal and Enter the Parent Line](#procedure) | Create the CPJL and enter the debit for the amount being moved off the parent account. Output: the parent line is complete. |
-| [3.4.2 Enter the Child Lines](#procedure) | Enter one credit line for each child account. Output: the distribution is entered. |
-| [3.4.3 Validate and Post the Journal](#procedure) | Check the totals, run Simulate Posting, correct errors, post, and record any residual. Output: the distribution is posted. |
+| [3.4.1 Create the Journal and Enter the Parent Line](#341-create-the-journal-and-enter-the-parent-line) | Create the CPJL and enter the debit for the amount being moved off the parent account. Output: the parent line is complete. |
+| [3.4.2 Enter the Child Lines](#342-enter-the-child-lines) | Enter one credit line for each child account. Output: the distribution is entered. |
+| [3.4.3 Validate and Post the Journal](#343-validate-and-post-the-journal) | Check the totals, run Simulate Posting, correct errors, post, and record any residual. Output: the distribution is posted. |
 
-- Create the Journal and Enter the Parent Line
+#### 3.4.1 Create the Journal and Enter the Parent Line
 
 ##### Procedure
 
@@ -873,9 +873,9 @@ Complete these steps to create the journal and enter the parent line:
 | 11. *Select* **Ledger** as the **Offset account type**. | Set the offset account type to **Ledger**. |
 | 12. *Select* the bank-to-bank transfer clearing account. `[PC-03]` | Select the clearing account, **100949 Bank to bank transfer clearing**, as the offset account. |
 | 13. *Complete* the line. | Tab through every field in the line before you start the next one, so that fields such as the voucher fill in correctly. |
-| *STEP COMPLETE* (light blue) | • The parent line is complete.<br>• Continue to [3.4.2 Enter the Child Lines](#procedure) |
+| *STEP COMPLETE* (light blue) | • The parent line is complete.<br>• Continue to [3.4.2 Enter the Child Lines](#342-enter-the-child-lines) |
 
-- Enter the Child Lines
+#### 3.4.2 Enter the Child Lines
 
 ##### Procedure
 
@@ -883,7 +883,7 @@ Complete these steps for each child account:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | Pre-requisites:<br>• The parent line is complete (see [3.4.1 Create the Journal and Enter the Parent Line](#procedure)).<br>Responsibility:<br>• Receipting Officer |
+| *PROCESS START* (light blue) | Pre-requisites:<br>• The parent line is complete (see [3.4.1 Create the Journal and Enter the Parent Line](#341-create-the-journal-and-enter-the-parent-line)).<br>Responsibility:<br>• Receipting Officer |
 | 1. *Add* a new line. | Add another line to the journal. |
 | 2. *Select* the child customer account. | Select a child account in the confirmed allocation. The customer name fills in automatically. |
 | 3. *Enter* the child's amount as a credit. | Enter the amount allocated to this child account as a credit, in the same currency as the parent line. |
@@ -892,9 +892,9 @@ Complete these steps for each child account:
 | 6. *Select* the bank-to-bank transfer clearing account. | Select the same clearing account as the parent line. |
 | 7. *Complete* the line. | Tab through every field in the line. |
 | 8. *Repeat* for each child account. | Repeat steps 1 to 7 until every child account in the confirmed allocation has a credit line. |
-| *STEP COMPLETE* (light blue) | • Every child account in the allocation has a credit line.<br>• Continue to [3.4.3 Validate and Post the Journal](#procedure) |
+| *STEP COMPLETE* (light blue) | • Every child account in the allocation has a credit line.<br>• Continue to [3.4.3 Validate and Post the Journal](#343-validate-and-post-the-journal) |
 
-- Validate and Post the Journal
+#### 3.4.3 Validate and Post the Journal
 
 ##### Procedure
 
@@ -902,7 +902,7 @@ Complete these steps to validate and post the journal:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | Pre-requisites:<br>• The parent line and every child line are complete (see [3.4.2 Enter the Child Lines](#procedure)).<br>Responsibility:<br>• Receipting Officer |
+| *PROCESS START* (light blue) | Pre-requisites:<br>• The parent line and every child line are complete (see [3.4.2 Enter the Child Lines](#342-enter-the-child-lines)).<br>Responsibility:<br>• Receipting Officer |
 | 1. *Check* the distributed total. | Confirm that the child credits add up to the parent debit, and that the currency and date are correct. |
 | 2. *Run* **Simulate Posting**. | Check the journal before posting. A blue result means the journal is ready to post. |
 | 3. *Correct* any errors. | If Simulate Posting shows an error, read it, correct the line it names and run Simulate Posting again. If you cannot resolve the error, log a request through the D365 issue form (see **Additional Resources**) before you post. |
@@ -931,10 +931,10 @@ This topic includes these steps:
 
 | Step | Description |
 |---|---|
-| [3.5.1 Create the Restoration Line](#procedure) | Create the CPJL and enter the customer credit with the Overpayment ledger offset. Output: the line is complete. |
-| [3.5.2 Validate and Post the Journal](#procedure) | Run Simulate Posting, correct errors and post. Output: the amount is back on the customer account. |
+| [3.5.1 Create the Restoration Line](#351-create-the-restoration-line) | Create the CPJL and enter the customer credit with the Overpayment ledger offset. Output: the line is complete. |
+| [3.5.2 Validate and Post the Journal](#352-validate-and-post-the-journal) | Run Simulate Posting, correct errors and post. Output: the amount is back on the customer account. |
 
-- Create the Restoration Line
+#### 3.5.1 Create the Restoration Line
 
 ##### Procedure
 
@@ -958,9 +958,9 @@ Complete these steps to create the restoration line:
 | 13. *Select* the Overpayment ledger. | Search for and select the Overpayment ledger, **200060 Customer overpayments**, in the main account field. |
 | 14. *Keep* the dimensions. `[CPJ-11]` | Do not change the financial dimensions that fill in automatically. |
 | 15. *Complete* the line. | Tab through every field, so fields such as the voucher fill in. |
-| *STEP COMPLETE* (light blue) | • The restoration line is complete.<br>• Continue to [3.5.2 Validate and Post the Journal](#procedure) |
+| *STEP COMPLETE* (light blue) | • The restoration line is complete.<br>• Continue to [3.5.2 Validate and Post the Journal](#352-validate-and-post-the-journal) |
 
-- Validate and Post the Journal
+#### 3.5.2 Validate and Post the Journal
 
 ##### Procedure
 
@@ -968,7 +968,7 @@ Complete these steps to validate and post the journal:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | Pre-requisites:<br>• The restoration line is complete (see [3.5.1 Create the Restoration Line](#procedure)).<br>Responsibility:<br>• Receipting Officer |
+| *PROCESS START* (light blue) | Pre-requisites:<br>• The restoration line is complete (see [3.5.1 Create the Restoration Line](#351-create-the-restoration-line)).<br>Responsibility:<br>• Receipting Officer |
 | 1. *Run* **Simulate Posting**. | Check the journal before posting. A blue result means the journal is ready to post. |
 | 2. *Correct* any errors. | If Simulate Posting shows an error, read it, correct the line it names and run Simulate Posting again. If you cannot resolve the error, log a request through the D365 issue form (see **Additional Resources**) before you post. |
 | 3. *Post* the journal. | Post only when the line is complete and Simulate Posting succeeds. |
@@ -1127,7 +1127,7 @@ Complete these steps to Review Remittance Text Analysis Rules:
 | 8. *Open* the **Message** **details**. | Review **Message** **details** to view the analysis results. |
 | 9. *Review* **Substring** **matching** **results**. | Go to the **Substring** **matching** section to identify any **customer** **names**, **trading** **names** or **references** that match known customers. |
 | 10. Identify the customer value**.** | Determine the most relevant customer wording to use for searching or creating an Alternate customer name. |
-| 11. *Determine* the **Next** **action.** | Based on the analysis results:<br>***If…***<br>***Then…***<br>*A customer name or reference is identified*<br>• *Continue to* [4.4 Search for Customer using Alternate name](#44-search-for-customer-using-alternate-name)<br>*A customer name or reference is not identified*<br>• *Continue to* [4.5 Create or Update Customer Alternate Name](#45-create-or-update-customer-alternate-name)<br>*No usable customer information is identified.*<br>• *Continue to* [2.1.3 Process Customer Settlements – Red Status (Customer or Invoice Not Identified).](#procedure)*.* |
+| 11. *Determine* the **Next** **action.** | Based on the analysis results:<br>***If…***<br>***Then…***<br>*A customer name or reference is identified*<br>• *Continue to* [4.4 Search for Customer using Alternate name](#44-search-for-customer-using-alternate-name)<br>*A customer name or reference is not identified*<br>• *Continue to* [4.5 Create or Update Customer Alternate Name](#45-create-or-update-customer-alternate-name)<br>*No usable customer information is identified.*<br>• *Continue to* [2.1.3 Process Customer Settlements – Red Status (Customer or Invoice Not Identified).](#213-process-customer-settlements--red-status-customer-or-invoice-not-identified)*.* |
 | *PROCESS COMPLETE* (light green) | ***Outcomes****:*<br>• *The bank narrative has been analyzed using remittance rules.*<br>• *Customer related value is identified (where possible).*<br>• *The appropriate next step is determined.* |
 
 #### 4.4 Search for Customer using Alternate name

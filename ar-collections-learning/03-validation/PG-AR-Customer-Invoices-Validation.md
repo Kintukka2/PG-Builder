@@ -8,7 +8,7 @@
 | Last updated | 2026-11-18 |
 | Items | 22 total: 21 open (13 blocking, 8 non-blocking), 1 closed |
 
-> **Merged and frozen (D-052).** This topic draft is now topic 7.1 of the [230 Collections v3.0](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Customer Invoices VG-xx*.
+> **Merged and frozen (D-052).** This topic draft is now topic 7.1 of the [230 Collections v3.1](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.1.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Customer Invoices VG-xx*.
 
 This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are scoped to this guide and never renumbered. Each open item that affects the text is also a Word review comment by "Validation register" (VR).
 
@@ -72,7 +72,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-18 | The security role needed to open original documents and print preview, and a test with it. | PROCESS START (1.1) | — | B | Test, SME | Closed 2026-11-18 (D-083): guides do not name security roles. Your manager requests your D365 profile, which gives you the access you need; for any access or security role issue, contact the BAU Support team. |
 | VG-19 | SME factual review, a test by someone other than the author, and approval. | Whole guide | — | B | SME | Open |
 | VG-20 | Recording timestamps for the invoice demonstration. | Screenshot register | — | N | Rec | Open |
-| VG-21 | Which process or guide covers sending the invoice to the customer. | 1.2 PROCESS COMPLETE | 16 | N | SME, Dec | Open |
+| VG-21 | Which process or guide covers sending the invoice to the customer. | 1.2 PROCESS COMPLETE | 16 | N | SME, Dec | Closed 2026-11-22 (legacy write-in, D-085): resending the invoice is 230 v3.1 subtopic 7.1.3 Resend the Invoice to the Customer, from legacy 230 §6.1 (Tax invoice journal > Document > Send > Copy). |
 | VG-22 | Confirm that finding an invoice with **Show closed** or **Hide FX revaluations** belongs in the *Review customer transactions* guide, not here. | Part Description (scope) | — | N | Dec | Open |
 
 **Fastest route to closure:** one clean-session D365 test that opens a posted invoice from its transaction closes `VG-01` to `VG-05`, `VG-07` and `VG-10`. That session can be the same one used for the Favorites, Personalized Views and Aged Balances tests.
@@ -104,3 +104,4 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | 2026-10-14 | Register created with the v0.1 SME review draft. |
 | 2026-11-03 | Merged into 230 Collections v3.0 (D-052); D1 destination updated to the v3.0 topic numbers. |
 | 2026-11-18 | `VG-18` closed (D-083): the guides do not name security roles; users contact the BAU Support team for access issues. |
+| 2026-11-22 | `VG-21` closed: 230 v3.1 adds 7.1.3 Resend the Invoice to the Customer from legacy 230 §6.1 (D-085). |
