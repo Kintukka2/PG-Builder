@@ -1,15 +1,41 @@
-# Validation Register: 220 Customer Payments v3.0 (working draft)
+# Validation Register: 220 Customer Payments v3.1 (working draft)
 
 | Field | Value |
 |---|---|
-| Guide (editable source) | [`CLAUDE-220-Customer Payments PG v3.0.docx`](../01-procedure-guides/CLAUDE-220-Customer%20Payments%20PG%20v3.0.docx) |
+| Guide (editable source) | [`CLAUDE-220-Customer Payments PG v3.1.docx`](../01-procedure-guides/CLAUDE-220-Customer%20Payments%20PG%20v3.1.docx) |
 | Review PDF | [`CLAUDE-220-Customer Payments PG v3.0.pdf`](../01-procedure-guides/CLAUDE-220-Customer%20Payments%20PG%20v3.0.pdf) (out of date since 2026-11-17, D-064) |
 | Markdown preview | [`PG-220-Customer-Payments-v3.0-DRAFT.md`](../01-procedure-guides/PG-220-Customer-Payments-v3.0-DRAFT.md) |
-| Status | Working draft v3.0 (D-055): consolidates version 2.1 and 221 Customer Payment Corrections v0.1. Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-062); no content or item changes. Review comments cut to one per open blocking item on 2026-11-17 (D-067, D-074). Three items closed on 2026-11-18 (roles confirmed and Part 3 kept as a quick-access summary, D-081; no security roles in guides, D-083). Round 1 rebuilt as seven questions (D-085, section 7) and sent to Maria Pabalan in ADO Task 16993 on 18 November, with the review copy. **Maria answered round 1 on 19 November** (section 7.3) and the answers are applied (D-091): Receipting Officers are the audience again, as in v2.1; the direct debit customer payment journal is topic 6; a copy-paste method is 2.4; 3.5 covers overpayments only; write-offs follow the manual approval. Round 2 (three questions, section 8) is drafted on the board. Needs BPO sign-off. Version 2.1 stays published until 3.0 passes its gates. |
+| Status | Working draft **v3.1** (D-092; versions below). v3.0 (D-055) consolidates version 2.1 and 221 Customer Payment Corrections v0.1. Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-062); no content or item changes. Review comments cut to one per open blocking item on 2026-11-17 (D-067, D-074). Three items closed on 2026-11-18 (roles confirmed and Part 3 kept as a quick-access summary, D-081; no security roles in guides, D-083). Round 1 rebuilt as seven questions (D-085, section 7) and sent to Maria Pabalan in ADO Task 16993 on 18 November, with the review copy. **Maria answered round 1 on 19 November** (section 7.3) and the answers are applied (D-091): Receipting Officers are the audience again, as in v2.1; the direct debit customer payment journal is topic 6; a copy-paste method is 2.4; 3.5 covers overpayments only; write-offs follow the manual approval. Round 2 (three questions, section 8) is drafted on the board. Needs BPO sign-off. Version 2.1 stays published until 3.0 passes its gates. |
 | Last updated | 2026-11-22 |
 | Items | 18 guide-level items (`G220`): 9 open (6 blocking, 3 non-blocking) and 9 closed (`G220-02` to `G220-09`, `G220-12`). **28 Word review comments** (D-067): 11 guide-level and 17 carried from 221 v0.1; 70 removed under D-067 (section 4.1), 9 when their items closed before round 1 (sections 6.1 and 7) and 21 when round 1 was answered (section 7.3). Comments for items asked in round 2 start with the question number, for example *[Q08]*. |
 
 This file is the guide's **question log** (D-016). It holds the guide-level items, which are scoped to this guide and never renumbered. Review comments carried from 221 keep their ID, for example *CPJ-14* or *G221-07*, and their source register stays the record for them: an answer recorded there applies here (D-048). Each open item that affects the text is a Word review comment by "Validation register" (VR).
+
+---
+
+## Versions of the guide
+
+Each version that goes out for review keeps its number; when a round of answers is applied, the minor version goes up (D-092). The guide's own version history has a row for each version. The board card shows the current one.
+
+| Version | Date | Sent to | What it is |
+|---|---|---|---|
+| 3.0 | 10 to 18 November 2026 | Maria Pabalan, with round 1 (ADO Task 16993, 18 November) | v2.1 rebuilt in the master template and consolidated with 221 Customer Payment Corrections (D-055); Collections Officer roles; settlement methods in topic 2; direct debit linked to 240. Review comments cut to one per open blocking item (D-067, D-074); round 1 rebuilt under D-085. |
+| 3.1 | 22 November 2026 | Maria Pabalan, with round 2 (not sent yet) | Maria's round 1 answers applied (D-091). What changed is listed below. |
+
+### What changed in v3.1
+
+From Maria Pabalan's round 1 answers (ADO Task 16993, 19 November 2026; section 7.3, D-091).
+
+- **Roles:** the guide is for Receipting Officers again, as in v2.1. Collections Officers appear only where a step hands work to the Collections team. In 2.1.3, step 21 now has the officer tag the Collections Officer in the receipting spreadsheet for the customer code, and step 30 sends the officer to 4.5 to update the alternate name. Part 1 (Stream, Process, roles matrix with Receipting Officer and Approver columns) and every Responsibility follow; the note about the April go-live is gone.
+- **Topic 6:** now the direct debit customer payment journal (DD-CPJL) procedure: the v2.1 section 5 steps, which had moved to 240 topic 2.1, with the approval step and the approvers Maria Pabalan, Arash Najafi, Chris Clarke and Zi Chen. The Collections team maintains direct debit bank details.
+- **Ways to settle:** the *Which method to use* table is rewritten, with rows for 2.4 and topic 6. 2.2 is limited to Maria's two cases (not pushed into Process customer settlements; received into a bank not connected to TAS), has no approval steps, and posts the journal once, after it is settled. The v2.1 *Notify the approver* step moved to 3.6.
+- **New 2.4 Paste Payment Lines into a Customer Payment Journal:** the copy-paste method, a placeholder until Maria's steps come back (round 2, Q08). It comes after 2.3, so the numbers Maria confirmed do not change.
+- **3.5** is renamed *Restore an Overpayment Amount*. Topic 3 now says that a payment settled on the wrong account is undone (3.1), transferred (3.3) and settled again, and that a write-off posted in error is reversed instead of restored (steps in round 2, Q09).
+- **3.6 write-offs:** the write-off journal (WOJL) is approved by Chris Clarke or Arash Najafi, with a placeholder for limits until CR 16959. It has the reason codes (BANK FEE, FOREX, OVER/SHORT, SHORT PAY, OVER PAY; not PENNY DIFF; BADDEBTS for Chris Clarke only), the steps to mark the journal ready and notify the approver, and the rule that the invoice settles only when the journal posts. For write-off access the officer contacts the BAU Support team; the user group is not named (D-083).
+- **Corrections:** transfers, distributions and restorations list the checks and evidence Maria described (written evidence, matching customer codes in CW1 and D365, the original voucher; evidence kept in CW1; no sign-off). Each of them, and undoing a settlement, ends with a note on the customer's Collections page.
+- **Account numbers:** 100949 Bank to bank transfer clearing, 200060 Customer overpayments and 540052 Discounts & write offs are shown.
+- **Formatting:** the notes in the undefined *NoteText* style are plain cell notes with a bold **Note:**, as the template's own are. The Contents page numbers are refreshed.
+- **Records:** 22 items closed and five opened (`G220-14` to `G220-18`); review comments 44 → 28.
 
 ---
 
@@ -231,9 +257,9 @@ Round 1 asks Maria Pabalan only what the sources cannot answer and what changes 
 
 ### 7.3 Round 1 answers (Maria Pabalan, ADO Task 16993, 19 November 2026)
 
-Maria answered every question and assigned the ticket back. The answers are applied to the Word guide (D-091). Her opening point applies to the whole guide: customer payments are done by **Receipting Officers**, not Collections Officers, and the audience of 220 stays the Receipting Officer, as in v2.1. Collections Officers come in only where a step hands something to the Collections team.
+Maria answered every question and assigned the ticket back. The answers are applied to the Word guide, which becomes v3.1 (D-091, D-092). Her opening point applies to the whole guide: customer payments are done by **Receipting Officers**, not Collections Officers, and the audience of 220 stays the Receipting Officer, as in v2.1. Collections Officers come in only where a step hands something to the Collections team.
 
-| Question | Answer | Applied in v3.0 | Items |
+| Question | Answer | Applied in v3.1 | Items |
 |---|---|---|---|
 | Roles (whole guide) | Receipting Officers, as in v2.1. | Part 1 Stream, Process, roles matrix (Receipting Officer and Approver columns) and overview; every Responsibility and procedure. The note about the April go-live is removed. | `G220-03` closed again; `GOV-01`, `G221-05` and the 10 November answers superseded (section 6) |
 | Q01 Settlement methods | The three methods are right. 2.1 bank statement is the default: TAS matches automatically, and the officer works the unmatched lines with the alternate name and the payment reference. 2.2 only for transactions not pushed into Process customer settlements, or receipts into banks not connected to TAS. 2.3 when the payment is already on the account, unsettled. Add a copy-paste method (payment lines pasted into a CPJL in bulk) as its own method, with when to use it. Add the DD-CPJL to the table and as its own topic in 220: direct debit receipts use their own journal name. | *Which method to use* table rewritten, with rows for 2.4 and topic 6; 2.2 Description and 2.2.1 pre-requisite limited to the two cases; new 2.4 *Paste Payment Lines into a Customer Payment Journal* (placeholder); topic 6 rebuilt as the DD-CPJL procedure. | `G220-06` closed; `G220-14` opened (round 2) |
@@ -250,15 +276,15 @@ The round also checked the rest of the guide against the answers. The other v2.1
 
 ## 8. Round 2 plan (D-085)
 
-Round 2 asks Maria Pabalan only what her round 1 answers opened and no source can give: three questions. Pages come from the layout of the guide (LibreOffice with DM Sans) as a first estimate; before the round is sent, Daniel updates the Contents in Word and the pages are taken from it (D-089). The board holds the question text.
+Round 2 goes to Maria Pabalan with v3.1 and asks only what her round 1 answers opened and no source can give: three questions. Pages come from the layout of the guide (LibreOffice with DM Sans) as a first estimate; before the round is sent, Daniel updates the Contents in Word and the pages are taken from it (D-089). The board holds the question text.
 
 ### 8.1 Asked in round 2
 
 | Question | Items | Where |
 |---|---|---|
-| Q08 Copy-paste method (follows Q01) | `G220-14` | 2.4 (p. 40) |
-| Q09 Reversing a write-off posted in error (follows Q06) | `G220-16` | Topic 3 Description (p. 41) |
-| Q10 Bank fee on a bank statement payment | `G220-17` | 2.1.3 step 37 (p. 31) |
+| Q08 Copy-paste method (follows Q01) | `G220-14` | 2.4 (p. 41) |
+| Q09 Reversing a write-off posted in error (follows Q06) | `G220-16` | Topic 3 Description (p. 42) |
+| Q10 Bank fee on a bank statement payment | `G220-17` | 2.1.3 step 37 (p. 32) |
 
 ### 8.2 Not asked
 
@@ -289,3 +315,4 @@ Round 2 asks Maria Pabalan only what her round 1 answers opened and no source ca
 | 2026-11-18 | The Contents now carries Word's numbers (D-089). Against the LibreOffice layout, Word runs Key concepts one page longer, 2.1.1 one page shorter and 2.1.3 one page longer, so every heading from 2.2 on is one page later. |
 | 2026-11-18 | Round 1 (seven questions, section 7) sent to Maria Pabalan by Daniel Moreira in ADO Task 16993 (the 221 task, now used for 220), with the review copy. Page references from Word's Contents for every heading (D-089). |
 | 2026-11-22 | Round 1 answered by Maria Pabalan (ADO Task 16993, 19 November) and applied (section 7.3, D-091): the Receipting Officer is the role again, as in v2.1; topic 6 is the direct debit customer payment journal (DD-CPJL) procedure, taken from 240 topic 2.1 with its approval workflow and approvers; new 2.4 copy-paste method (placeholder); 2.2 limited to two cases and posted once, without approval steps; 3.5 renamed *Restore an Overpayment Amount*; 3.6 rewritten for the write-off journal (WOJL) and its manual approval, with a limits placeholder for CR 16959; checks, evidence and Collections-page notes in 3.1, 3.3, 3.4 and 3.5; account numbers 100949, 200060 and 540052. 22 items closed (`G220-04`, `G220-06` to `G220-09`, `G221-07`, `G221-13`, `G221-14`, `G221-18`, `G221-19`, `TF-02`, `TF-03`, `TF-05`, `TF-06`, `PC-01`, `PC-02`, `PC-04`, `RO-01`, `RO-02`, `RO-03`, `CPJ-07`, `CPJ-09`) and `G220-03` closed again; five opened (`G220-14` to `G220-18`). Review comments 44 → 28. The eight notes in the undefined *NoteText* style are now plain cell notes with a bold **Note:**, as the template's own are (LibreOffice dropped the tables around them). Round 2 (three questions, section 8) drafted on the board. Contents page numbers refreshed from the layout. The PDF beside the Word file is out of date (D-064). |
+| 2026-11-22 | Version 3.1 (D-092): the Word file is renamed `CLAUDE-220-Customer Payments PG v3.1.docx`, every link is updated, and the guide's version history has a 3.1 row; the 3.0 row again says what v3.0 was. New section *Versions of the guide* lists what changed in v3.1. The extra row moves every heading one page later in the layout: the Contents and the round 2 pages are refreshed (Q08 p. 41, Q09 p. 42, Q10 p. 32). The register and preview keep their file names (CLAUDE.md). |
