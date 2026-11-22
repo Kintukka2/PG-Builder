@@ -16,9 +16,9 @@ The fixed template content is not repeated here: cover, Contents, *About this gu
 | 2.1 | April 2026 | Suzanne Starr | Christoper Clarke | Content Update (DD + Bank) |
 | 2.2 | May 2026 | Suzanne Starr | Christoper Clarke | Content Update (CW1) |
 | 2.3 | October 2026 | Daniel Moreira | Christoper Clarke | Content Review |
-| 2.4 | November 2026 | Daniel Moreira | Christopher Clarke | Content Update, draft (ADO 16886): 6.5 to 6.8 moved to 220 v3.0; 2.4 to move to 240 |
-| 3.0 | November 2026 | Daniel Moreira | Christopher Clarke | Working draft (ADO 16886): rebuilt in the PG master template; nine AR Collections topic drafts merged; 2.8 links to 240. Not validated or approved. Formatting brought in line with D-059 to D-061 (D-063): Bullet 1.2 bullets, topic numbers in link text, notes to the author in the ACTION: REVIEW REQUIREMENT style, and key concepts in the form their content needs. `[G230-05]` |
-| 3.1 | November 2026 | Daniel Moreira | Christopher Clarke | Working draft: Maria Pabalan's round 1 answers applied (D-093): 2.7 points to 200 Customer Onboarding and Maintenance; collection activities follow the legacy 230 method, with rules for the note; ad hoc statements only, with the delivery banner and a note; invoice resend (7.1.3) and other legacy 230 content written in. Not validated or approved. |
+| 2.4 | November 2026 | Daniel Moreira | Christopher Clarke | Draft: 6.5 to 6.8 moved to 220 |
+| 3.0 | November 2026 | Maria Pabalan; Daniel Moreira | Christopher Clarke | Template rebuild (draft) |
+| 3.1 | November 2026 | Maria Pabalan; Daniel Moreira | Christopher Clarke | SME round 1 answers (draft) |
 
 ---
 

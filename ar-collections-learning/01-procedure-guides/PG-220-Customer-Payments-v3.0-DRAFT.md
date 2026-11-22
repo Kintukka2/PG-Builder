@@ -15,8 +15,8 @@ The fixed template content is not repeated here: cover, Contents, *About this gu
 | 1.0 | February 2025 | Michael Thurlow |   | First Version (NZ) |
 | 2.0 | November 2025 | Daniel Moreira |   | Version Update (Global) |
 | 2.1 | January 2026 | Suzanne Starr |   | Content Update (Formatting) |
-| 3.0 | November 2026 | Daniel Moreira | Christopher Clarke | Working draft (D-055): rebuilt in the PG master template; 221 Customer Payment Corrections merged in; Collections Officer roles; settlement methods in topic 2; direct debit links to 240. Not validated or approved. Formatting brought in line with D-059 to D-061 (D-062): Bullet 1.2 bullets, topic numbers in link text, and notes to the author in the ACTION: REVIEW REQUIREMENT style. `[G220-01]` |
-| 3.1 | November 2026 | Daniel Moreira | Christopher Clarke | Working draft: Maria Pabalan's round 1 answers applied (D-091): Receipting Officer roles, as in v2.1; direct debit customer payment journal in topic 6; copy-paste method in 2.4; write-off approval in 3.6; checks and notes for corrections; account numbers. Not validated or approved. |
+| 3.0 | November 2026 | Maria Pabalan; Daniel Moreira | Christopher Clarke | Template rebuild; 221 merged (draft) |
+| 3.1 | November 2026 | Maria Pabalan; Daniel Moreira | Christopher Clarke | SME round 1 answers (draft) |
 
 ---
 
