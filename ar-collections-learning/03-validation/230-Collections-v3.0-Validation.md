@@ -256,14 +256,14 @@ Maria's 220 answers (D-091) also apply here: payment corrections are Receipting 
 
 ## 7. Round 2 plan (D-085)
 
-Round 2 goes to Maria Pabalan with v3.1 and asks only what her round 1 answers left open: two questions. Pages come from the layout of the guide (LibreOffice with DM Sans) as a first estimate; before the round is sent, Daniel updates the Contents in Word and the pages are taken from it (D-089). The board holds the question text.
+Round 2 goes to Maria Pabalan with v3.1 and asks only what her round 1 answers left open: two questions. Pages come from Word's Contents, updated by Daniel in the v3.1 review copy on 22 November (D-089); step pages keep their place within each subtopic. The board holds the question text.
 
 ### 7.1 Asked in round 2
 
 | Question | Items | Where |
 |---|---|---|
-| Q04 Failed statement delivery (follows Q03) | `Statement Distribution VG-10` | 6.2.2 step 3 (p. 48) |
-| Q05 Changes for License Management (follows Q01) | `G230-16` | 2.7 (p. 32) |
+| Q04 Failed statement delivery (follows Q03) | `Statement Distribution VG-10` | 6.2.2 step 3 (p. 47) |
+| Q05 Changes for License Management (follows Q01) | `G230-16` | 2.7 (p. 31) |
 
 ### 7.2 Not asked
 
@@ -292,3 +292,4 @@ Round 2 goes to Maria Pabalan with v3.1 and asks only what her round 1 answers l
 | 2026-11-18 | Round 1 (three questions, section 6) sent to Maria Pabalan in ADO 16886 by Daniel Moreira, with the review copy. Its pages came from the review copy's layout (D-088); Word's Contents may put the later topics one page further on (D-089). |
 | 2026-11-18 | Round 1 page references corrected from Word's Contents (D-089): Q01 p. 30-32, Q02 p. 13, 40, Q03 p. 14, 47-48. From topic 2.4 on, Word lays the guide out one page earlier than the LibreOffice layout (topic 2.3 is one page in Word). The Contents now carries Word's numbers. |
 | 2026-11-22 | Round 1 answered by Maria Pabalan (ADO 16886, 19 November) and applied, with the seven legacy write-ins (section 6.3, D-093); the guide becomes **v3.1** (D-092): file renamed `CLAUDE-230-Collections PG v3.1.docx`, a 3.1 row in its version history, and a *Versions of the guide* section here. 26 items closed (`G230-08` to `G230-13` and 20 topic-draft items) and two opened (`G230-15`, `G230-16`); review comments 82 → 64. Payment corrections now go to the Receipting team (D-091). Round 2 (two questions, section 7) drafted on the board. Contents page numbers refreshed. The PDF beside the Word file is out of date (D-064). |
+| 2026-11-22 | Word's Contents for v3.1 (Daniel Moreira, 22 November) written into the guide, with the 7.1.3 line Word added: Word is one page earlier than the layout from 2.4 on, as in round 1. Round 2 pages from Word: Q04 p. 47, Q05 p. 31. Round 2 is ready to send. |
