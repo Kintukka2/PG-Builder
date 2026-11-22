@@ -6,8 +6,8 @@
 | Screenshot registers | [Transfer Funds](../02-screenshot-registers/PG-AR-Transfer-Funds-Between-Customer-Accounts-Screenshots.md) · [Parent Payment](../02-screenshot-registers/PG-AR-Transfer-Parent-Payment-Across-Child-Accounts-Screenshots.md) · [Restore](../02-screenshot-registers/PG-AR-Restore-Written-Off-Overpayment-Screenshots.md) |
 | SME questions | [Part 2 supplement to the SME question pack](SME-Question-Pack-Part2-Supplement.md): every SME, recording and decision item here maps to one `P2-` question |
 | Source | AR Training D365 Part 2 update pack (sources 4.0 to 4.7 in the [project notes](../05-project-notes/Project-Context-and-Decisions.md#1-source-documents)) |
-| Last updated | 2026-11-10 |
-| Items | 46 total, all open: 38 blocking, 8 non-blocking |
+| Last updated | 2026-11-22 |
+| Items | 46 total: 16 closed, the rest open (see the tables) |
 
 > **Merged and frozen (D-048).** The three guides are now topics 3, 4 and 5 of the [221 Customer Payment Corrections v0.1](../01-procedure-guides/221-Customer%20Payment%20Corrections%20PG%20v0.1.docx) working draft, and the CPJL controls reference is its Part 1 Key concepts. **Since D-055, 221 is merged into [220 Customer Payments v3.0](../01-procedure-guides/CLAUDE-220-Customer%20Payments%20PG%20v3.0.docx)**: the three guides are its topics 3.3, 3.4 and 3.5, and the controls are in its Part 1 Key concepts (register: [221-Customer-Payment-Corrections-Validation.md](221-Customer-Payment-Corrections-Validation.md)). Edit the 221 Word file, not these four drafts. This register stays the record for every `SRC`, `GOV`, `CPJ`, `TF`, `PC` and `RO` item: record answers here, and they apply to 221.
 
@@ -99,9 +99,9 @@ Customer Pools has its own register: [Customer-Pools-Validation.md](Customer-Poo
 | CPJ-04 | The description standard: required wording and customer codes for header and line descriptions. The notes give examples only. | TF/PC/RO description steps; REF Journal set-up | N | SME | Open |
 | CPJ-05 | The date field label and default, and the backdating rule. The notes give two wordings: the original payment date may be used for a wrong-account correction "when appropriate" (TF), and a prior-period date only when required and the period is open (RO). Confirm the rule and who decides. | TF/PC/RO date step; REF Journal set-up | B | Test, SME | Open |
 | CPJ-06 | How debits and credits are shown and entered: separate **Debit** and **Credit** fields, or signed amounts. | TF/PC/RO amount steps; REF Line coding | B | Test | Open |
-| CPJ-07 | The currency field label and behavior, and what to do if the original currency cannot be used. | TF/PC/RO currency rule; REF Journal set-up | B | Test, SME | Open |
+| CPJ-07 | The currency field label and behavior, and what to do if the original currency cannot be used. | TF/PC/RO currency rule; REF Journal set-up | B | Test, SME | Closed 2026-11-22 (drafting, D-085): legacy 220 §4.2 step 9: the currency fills in from the account and must match the original receipt (220 3.5.1 step 9). The field label stays with the D365 test. |
 | CPJ-08 | Exact labels of **Offset account type**, its **Ledger** value and the offset (main) account field, and how the account lookup works. Also whether the offset is entered on each line. | TF/PC/RO offset steps; REF Line coding | B | Test | Open |
-| CPJ-09 | Whether the guides should show account numbers for the Overpayment ledger and the bank-to-bank transfer clearing account, or only names to search for. | REF Line coding | B | Dec, SME | Open |
+| CPJ-09 | Whether the guides should show account numbers for the Overpayment ledger and the bank-to-bank transfer clearing account, or only names to search for. | REF Line coding | B | Dec, SME | Closed 2026-11-22 (Q07): Maria Pabalan, 220 round 1 (ADO 16993, 19 November 2026; D-091): the guides show both: 100949 Bank to bank transfer clearing and 200060 Customer overpayments. |
 | CPJ-10 | Fields to leave blank (financial tags, invoice number, bank account): their exact labels, and whether the rule also applies to transfers. | RO step 1.1.11; TF/PC Key concepts; REF Line coding | B | Test, SME | Open |
 | CPJ-11 | Pre-populated financial dimensions: confirm they are never changed, whether there are exceptions, and whether the rule also applies to transfers. | RO step 1.1.14; TF/PC Key concepts; REF Line coding | B | SME | Open |
 | CPJ-12 | Which fields complete when the user tabs through a line (the notes mention voucher information). | TF/PC/RO "Complete the line" steps; REF Line coding | N | Test, Rec | Open |
@@ -120,20 +120,20 @@ Customer Pools has its own register: [Customer-Pools-Validation.md](Customer-Poo
 | ID | Item to confirm | Location | Priority | Method | Status |
 |---|---|---|---|---|---|
 | TF-01 | Initiation events. The notes give two: a payment posted to the wrong customer account, and funds to move between related accounts once the destination is confirmed. Confirm them and add any others. | Part 1 Initiation; topic Initiation | B | SME | Open: checked with the AR Training D365 Part 2 recording (220 `G220-10`; D-085), not asked. |
-| TF-02 | How the correct destination account is confirmed, and what evidence is kept. | PROCESS START (1.1); Key concepts | B | SME | Open |
-| TF-03 | The exact label and value of the bank-to-bank transfer clearing account. | Key concepts; steps 1.1.12 and 1.2.6 | B | Test, SME | Open |
+| TF-02 | How the correct destination account is confirmed, and what evidence is kept. | PROCESS START (1.1); Key concepts | B | SME | Closed 2026-11-22 (Q05): Maria Pabalan, 220 round 1 (ADO 16993, 19 November 2026; D-091): confirm the destination from written evidence (remittance, or a customer email naming the invoices) and check the destination customer code matches in CW1 and D365 (same legal entity and currency). Keep the evidence in CW1 and add a note on the Collections page of every account involved. No sign-off. |
+| TF-03 | The exact label and value of the bank-to-bank transfer clearing account. | Key concepts; steps 1.1.12 and 1.2.6 | B | Test, SME | Closed 2026-11-22 (Q07): Maria Pabalan, 220 round 1 (ADO 16993, 19 November 2026; D-091): 100949 Bank to bank transfer clearing (asset), still the offset for transfers. |
 | TF-04 | Whether the destination line also takes the Ledger offset and the clearing account in the demonstrated UI, as the source draft implies (step 12). | Steps 1.2.5 and 1.2.6 | B | Rec, Test | Open |
-| TF-05 | What to do when the payment is already settled against invoices on the wrong account. Not covered by the notes. | PROCESS START (1.1) | B | SME | Open |
-| TF-06 | Whether transfers between customers in different legal entities are in scope. Not covered by the notes. | Part Description (out of scope) | N | SME | Open |
+| TF-05 | What to do when the payment is already settled against invoices on the wrong account. Not covered by the notes. | PROCESS START (1.1) | B | SME | Closed 2026-11-22 (Q06): Maria Pabalan, 220 round 1 (ADO 16993, 19 November 2026; D-091): undo the settlement (220 3.1), transfer (3.3), then settle against the correct invoices, with a note on both accounts at each step. |
+| TF-06 | Whether transfers between customers in different legal entities are in scope. Not covered by the notes. | Part Description (out of scope) | N | SME | Closed 2026-11-22 (Q05): transfers stay within one legal entity and currency: the destination customer code must match in the same legal entity and currency. |
 
 ### 3.5 Transfer a Parent Account Payment Across Child Accounts (`PC`)
 
 | ID | Item to confirm | Location | Priority | Method | Status |
 |---|---|---|---|---|---|
-| PC-01 | The formal method or reference for confirming a parent-child relationship. The Part 1 notes say D365 has no reliable parent-child indicator. Linked to backlog rank 26, *Identify parent-child accounts* (knowledge article, not ready). | Key concepts; PROCESS START (1.1) | B | SME | Open |
-| PC-02 | The evidence needed to confirm the allocation to each child account (the notes name remittance and customer confirmation), and where it is kept. | Key concepts; PROCESS START (1.1) | B | SME | Open |
+| PC-01 | The formal method or reference for confirming a parent-child relationship. The Part 1 notes say D365 has no reliable parent-child indicator. Linked to backlog rank 26, *Identify parent-child accounts* (knowledge article, not ready). | Key concepts; PROCESS START (1.1) | B | SME | Closed 2026-11-22 (Q05): Maria Pabalan, 220 round 1 (ADO 16993, 19 November 2026; D-091): D365 cannot track parent-child relationships; work them out from the remittance or the history of previous paid receipts from the same payer. |
+| PC-02 | The evidence needed to confirm the allocation to each child account (the notes name remittance and customer confirmation), and where it is kept. | Key concepts; PROCESS START (1.1) | B | SME | Closed 2026-11-22 (Q05): Maria Pabalan, 220 round 1 (ADO 16993, 19 November 2026; D-091): the remittance (or the payment history) is the evidence; it is kept in CW1, and a note goes on the Collections page of every account involved. |
 | PC-03 | The clearing-account treatment on a distribution with several lines: whether the parent line and each child line take the Ledger offset and the clearing account. | Steps 1.1.11, 1.1.12, 1.2.5 and 1.2.6 | B | Rec, Test | Open |
-| PC-04 | Where, how and at what point the note that explains a residual left on the parent account is added (for example a customer note or the journal line), and its wording. | Key concepts; step 1.3.5 | B | Rec, SME | Open |
+| PC-04 | Where, how and at what point the note that explains a residual left on the parent account is added (for example a customer note or the journal line), and its wording. | Key concepts; step 1.3.5 | B | Rec, SME | Closed 2026-11-22 (Q05): Maria Pabalan, 220 round 1 (ADO 16993, 19 November 2026; D-091): a note on the parent account's Collections page, for example "USD x left unallocated: awaiting remittance for remaining invoices" (220 3.4.3 step 5). |
 | PC-05 | Who follows up a residual left on the parent account, and when. | Key concepts | N | SME | Open |
 | PC-06 | Initiation events. The notes give one: a payment held on a parent account must be distributed to one or more confirmed child accounts. | Part 1 Initiation; topic Initiation | B | SME | Open: checked with the AR Training D365 Part 2 recording (220 `G220-10`; D-085), not asked. |
 
@@ -141,9 +141,9 @@ Customer Pools has its own register: [Customer-Pools-Validation.md](Customer-Poo
 
 | ID | Item to confirm | Location | Priority | Method | Status |
 |---|---|---|---|---|---|
-| RO-01 | The exact label, value and lookup term of the Overpayment ledger (main account). | Key concepts; step 1.1.13 | B | Test, SME | Open |
-| RO-02 | Scope: whether restoring a written-off amount and putting an overpayment back are the same procedure, and when a write-off should be reversed or cancelled instead. Linked to the write-off backlog items (ranks 18 to 20). | Part Description; Key concepts | B | SME | Open |
-| RO-03 | Who authorizes putting an amount back on a customer account, and what evidence is kept. | PROCESS START (1.1) | B | SME | Open |
+| RO-01 | The exact label, value and lookup term of the Overpayment ledger (main account). | Key concepts; step 1.1.13 | B | Test, SME | Closed 2026-11-22 (Q07): Maria Pabalan, 220 round 1 (ADO 16993, 19 November 2026; D-091): the Overpayment ledger is 200060 Customer overpayments (liability). |
+| RO-02 | Scope: whether restoring a written-off amount and putting an overpayment back are the same procedure, and when a write-off should be reversed or cancelled instead. Linked to the write-off backlog items (ranks 18 to 20). | Part Description; Key concepts | B | SME | Closed 2026-11-22 (Q06): Maria Pabalan, 220 round 1 (ADO 16993, 19 November 2026; D-091): 220 3.5 restores an overpayment only; a write-off posted in error is reversed (the original WOJL, no approval), not restored. The reversal steps are 220 item `G220-16`. |
+| RO-03 | Who authorizes putting an amount back on a customer account, and what evidence is kept. | PROCESS START (1.1) | B | SME | Closed 2026-11-22 (Q05): Maria Pabalan, 220 round 1 (ADO 16993, 19 November 2026; D-091): no sign-off; confirm the original overpayment voucher and why it is put back; keep the evidence in CW1 and add a note on the customer's Collections page. |
 | RO-04 | Initiation events: when a restoration is needed. | Part 1 Initiation; topic Initiation | B | SME | Open: checked with the AR Training D365 Part 2 recording (220 `G220-10`; D-085), not asked. |
 
 ---
@@ -199,3 +199,4 @@ The gaps the three source drafts list are also covered: verification after posti
 | 2026-11-10 | 221 is merged into 220 Customer Payments v3.0 (D-055). SME answers from Maria Pabalan's 221 review comments recorded against `GOV-01`, `CPJ-16`, `CPJ-17` and `CPJ-20`; `CPJ-21` noted; `GOV-03` superseded. |
 | 2026-11-18 | `CPJ-21` closed (D-083): the guides do not name security roles; users contact the BAU Support team for access issues. |
 | 2026-11-18 | `CPJ-15`, `CPJ-18` and `CPJ-19` closed from the legacy sources (D-085). `TF-01`, `PC-06` and `RO-04` go to the recording check. |
+| 2026-11-22 | `CPJ-07`, `CPJ-09`, `TF-02`, `TF-03`, `TF-05`, `TF-06`, `PC-01`, `PC-02`, `PC-04`, `RO-01`, `RO-02` and `RO-03` closed from Maria Pabalan's answers to 220 round 1 (ADO 16993, 19 November; D-091) and a drafting change. The Receipting Officer, not the Collections Officer, prepares transfers, distributions and restorations (D-091). |
