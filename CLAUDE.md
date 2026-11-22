@@ -9,6 +9,17 @@ Every file Claude creates or rebuilds for the user starts with `CLAUDE-`: Word g
 - Markdown previews, validation registers and project notes in this repository keep their names. They are never published, and links depend on them.
 - Source files from the user (legacy guides, transcripts) keep the names they arrived with.
 
+## Versions (D-092)
+
+A draft keeps its version number once it goes out for review. When Claude applies a round of answers to it, the minor version goes up (v3.0 → v3.1 → v3.2), in the same change:
+
+- The Word file is renamed (`CLAUDE-220-Customer Payments PG v3.1.docx`) and every link to it is updated. The PDF, the Markdown preview and the register keep their file names.
+- The guide's version history gets a row for the new version: date, author, BPO and a short description. Earlier rows keep what those versions were.
+- The register's **Versions of the guide** section lists what changed in the new version, and its change log has the entry.
+- The board card's version and Word link change, and the review copy carries the new number.
+
+Changes made before a draft first goes out keep its number.
+
 ## Deliverables: the Word file only (D-064)
 
 Claude produces the Word guide (`.docx`) and its repository companions (Markdown preview, validation register, project notes). It does not create, update, commit or send a PDF of a guide: the user makes the PDFs.

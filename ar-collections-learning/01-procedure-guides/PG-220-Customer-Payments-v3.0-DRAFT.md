@@ -2,7 +2,7 @@
 
 > **WORKING DRAFT. Not validated or approved.**
 >
-> This is a Markdown preview of the Word guide [`CLAUDE-220-Customer Payments PG v3.0.docx`](CLAUDE-220-Customer%20Payments%20PG%20v3.0.docx). It consolidates version 2.1 and 221 Customer Payment Corrections v0.1 (D-055). **The Word file is the editable source.**
+> This is a Markdown preview of the Word guide [`CLAUDE-220-Customer Payments PG v3.1.docx`](CLAUDE-220-Customer%20Payments%20PG%20v3.1.docx). It consolidates version 2.1 and 221 Customer Payment Corrections v0.1 (D-055). **The Word file is the editable source.**
 >
 > Markers such as `[G220-14]` or `[CPJ-14]` show the open items that have a review comment in the Word file: one per open blocking item, at the place it matters most (D-067). The register lists every item, the non-blocking ones included, and where each applies. Guide-level items and the index of carried items are in the [validation register](../03-validation/220-Customer-Payments-v3.0-Validation.md). Notes marked **ACTION: REVIEW REQUIREMENT**, and <mark>highlighted</mark> phrases, are internal notes to the author (yellow in the Word file); they are removed before publication (D-060). The markers are not part of the guide text.
 
@@ -15,7 +15,8 @@ The fixed template content is not repeated here: cover, Contents, *About this gu
 | 1.0 | February 2025 | Michael Thurlow |   | First Version (NZ) |
 | 2.0 | November 2025 | Daniel Moreira |   | Version Update (Global) |
 | 2.1 | January 2026 | Suzanne Starr |   | Content Update (Formatting) |
-| 3.0 | November 2026 | Daniel Moreira | Christopher Clarke | Working draft (D-055): rebuilt in the PG master template; 221 Customer Payment Corrections merged in; Receipting Officer roles; settlement methods in topic 2; direct debit customer payment journal in topic 6. Not validated or approved. Formatting brought in line with D-059 to D-061 (D-062): Bullet 1.2 bullets, topic numbers in link text, and notes to the author in the ACTION: REVIEW REQUIREMENT style. `[G220-01]` |
+| 3.0 | November 2026 | Daniel Moreira | Christopher Clarke | Working draft (D-055): rebuilt in the PG master template; 221 Customer Payment Corrections merged in; Collections Officer roles; settlement methods in topic 2; direct debit links to 240. Not validated or approved. Formatting brought in line with D-059 to D-061 (D-062): Bullet 1.2 bullets, topic numbers in link text, and notes to the author in the ACTION: REVIEW REQUIREMENT style. `[G220-01]` |
+| 3.1 | November 2026 | Daniel Moreira | Christopher Clarke | Working draft: Maria Pabalan's round 1 answers applied (D-091): Receipting Officer roles, as in v2.1; direct debit customer payment journal in topic 6; copy-paste method in 2.4; write-off approval in 3.6; checks and notes for corrections; account numbers. Not validated or approved. |
 
 ---
 
