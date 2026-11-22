@@ -8,7 +8,7 @@
 | Last updated | 2026-11-18 |
 | Items | 22 total: 20 open (12 blocking, 8 non-blocking), 2 closed |
 
-> **Merged and frozen (D-052).** This topic draft is now topics 1.1 and 1.2 of the [230 Collections v3.0](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Workspace VG-xx*.
+> **Merged and frozen (D-052).** This topic draft is now topics 1.1 and 1.2 of the [230 Collections v3.1](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.1.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Workspace VG-xx*.
 
 This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are scoped to this guide and never renumbered. Each open item that affects the text is also a Word review comment by "Validation register" (VR).
 
@@ -56,7 +56,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-05 | Exact label and location of **Payment journals not posted**. | Key concepts; Topic 2 Step 2 | 5, 13 | B | Test, Rec | Open |
 | VG-06 | Exact label and location of **Notes**. Shared with Notes and Activities VG-01 and VG-02. | Key concepts; Topic 2 Step 3 | 5, 14 | B | Test, Rec | Open |
 | VG-07 | Exact label and location of **Open payment journals**. | Key concepts; Topic 2 Step 4 | 5, 15 | B | Test, Rec | Open |
-| VG-08 | Which workspace sections are not currently used in AR Collections. | Key concepts | 6 | B | SME, Rec | Open |
+| VG-08 | Which workspace sections are not currently used in AR Collections. | Key concepts | 6 | B | SME, Rec | Closed 2026-11-22 (legacy write-in, D-085): 230 v3.1 says its procedures use only the four sections named in Key concepts. |
 | VG-09 | Wording of the workspace definition. | Key concepts | 4 | N | SME | Open |
 | VG-10 | That workspace sections show data for the active legal entity only. | Topic 1 Step 4 | 10 | N | Test | Open |
 | VG-11 | Labels that distinguish the workspace from the Credit and collections module. Shared with Favorites VG-21. | Key concepts | 7 | N | Test | Open |
@@ -101,3 +101,4 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | 2026-11-03 | Merged into 230 Collections v3.0 (D-052); D1 destination updated to the v3.0 topic numbers. |
 | 2026-11-18 | `VG-19` closed (D-083): the guides do not name security roles; users contact the BAU Support team for access issues. |
 | 2026-11-18 | `VG-14` closed from legacy 230 when 230 round 1 was rebuilt (D-085). |
+| 2026-11-22 | `VG-08` closed in 230 v3.1 (D-085 write-in). |

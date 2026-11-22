@@ -8,7 +8,7 @@
 | Last updated | 2026-11-18 |
 | Items | 24 total: 21 open (13 blocking, 8 non-blocking), 3 closed |
 
-> **Merged and frozen (D-052).** This topic draft is now topic 6.1 of the [230 Collections v3.0](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Statement Preview VG-xx*.
+> **Merged and frozen (D-052).** This topic draft is now topic 6.1 of the [230 Collections v3.1](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.1.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Statement Preview VG-xx*.
 
 This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are scoped to this guide and never renumbered. Each open item that affects the text is also a Word review comment by "Validation register" (VR).
 
@@ -54,7 +54,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-02 | How the customer is selected, for example through the records to include filter. | 1.1 Step 3 | 10 | B | Test, Rec | Open |
 | VG-03 | Exact label of **Only open** and whether it must always be selected. | Key concepts; 1.1 Step 4 | 4, 11 | B | Test, SME | Closed 2026-11-18 (D-085): legacy 230 §1 step 4 gives the label and sets it to Yes for every ad hoc statement (cross-comparison: strong, confirms the draft); not asked. |
 | VG-04 | Exact label of the company logo option and when it must be included. | 1.1 Step 5 | 12 | B | Test, SME | Closed 2026-11-18 (D-085): legacy 230 §1 step 4 gives the label and sets it to Yes for every ad hoc statement (cross-comparison: strong, confirms the draft); not asked. |
-| VG-05 | Meaning and effect of **Print management destination**, how it is cleared, and what happens if it is left set. | Key concepts (term and rule); 1.1 Step 6 | 5, 7, 13 | B | Test, SME | Open |
+| VG-05 | Meaning and effect of **Print management destination**, how it is cleared, and what happens if it is left set. | Key concepts (term and rule); 1.1 Step 6 | 5, 7, 13 | B | Test, SME | Closed 2026-11-22: Maria Pabalan, 230 round 1 (ADO 16886, 19 November 2026; D-093): Print management destination sends the statement straight away, so if it is left set when previewing, the statement goes to the customer. 230 6.1.1 step 6 says so. |
 | VG-06 | Exact label and location of the **Screen** destination. | Key concepts; 1.1 Step 7 | 6, 14 | B | Test | Open |
 | VG-07 | The control that generates the statement, for example **OK**. | 1.1 Step 8 | 15 | B | Test | Open |
 | VG-08 | Which statement details users must check. | 1.1 Step 9 | 16 | N | SME | Open |
@@ -62,7 +62,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-10 | Whether a file naming convention applies to statement PDFs. See Customer Invoices VG-08. | 1.2 Step 2 | 18 | N | SME | Open |
 | VG-11 | Where statement PDFs should be saved. See Customer Invoices VG-09. | 1.2 Step 3 | 19 | N | SME | Open |
 | VG-12 | Whether the file is named before or after the download. See Customer Invoices VG-10. | 1.2 Steps 1–3 | 18 | B | Test | Open |
-| VG-13 | Multi-currency statement limitations that affect a preview (source 1, questions I). | Not in guide | — | N | SME | Open |
+| VG-13 | Multi-currency statement limitations that affect a preview (source 1, questions I). | Not in guide | — | N | SME | Closed 2026-11-22: Maria Pabalan, 230 round 1 (ADO 16886, 19 November 2026; D-093): statements are split by currency (CR 15801, in PROD); no customer is left out. |
 | VG-14 | Statements for multiple related accounts (source 1, sequence 6.9: partial). | Not in guide | — | N | Dec | Open |
 | VG-15 | Wording and owner of the PDF-not-Excel rule. Shared with Aged Balances VG-13, Customer Invoices VG-12 and Export to Excel VG-09. | Key concepts | 8 | N | SME | Open |
 | VG-16 | Initiation events for this task. | Part 1 Initiation; topic Initiation; Process table *When* | 2 | B | SME | Open |
@@ -106,3 +106,4 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | 2026-11-03 | Merged into 230 Collections v3.0 (D-052); D1 destination updated to the v3.0 topic numbers. |
 | 2026-11-18 | `VG-21` closed (D-083): the guides do not name security roles; users contact the BAU Support team for access issues. |
 | 2026-11-18 | `VG-03`, `VG-04` closed from legacy 230 when 230 round 1 was rebuilt (D-085). |
+| 2026-11-22 | `VG-05` and `VG-13` closed from Maria Pabalan's answers to 230 round 1 (D-093). |

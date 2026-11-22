@@ -8,7 +8,7 @@
 | Last updated | 2026-11-18 |
 | Items | 25 total: 22 open (16 blocking, 6 non-blocking), 3 closed |
 
-> **Merged and frozen (D-052).** This topic draft is now topic 6.2 of the [230 Collections v3.0](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Statement Distribution VG-xx*.
+> **Merged and frozen (D-052).** This topic draft is now topic 6.2 of the [230 Collections v3.1](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.1.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Statement Distribution VG-xx*.
 
 This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are scoped to this guide and never renumbered. Each open item that affects the text is also a Word review comment by "Validation register" (VR).
 
@@ -56,19 +56,19 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-02 | How the customer is selected. Shared with Statement Preview VG-02. | 1.1 Step 3 | 10 | B | Test, Rec | Open |
 | VG-03 | Exact label of **Only open** and whether it must always be selected. | 1.1 Step 4 | 11 | B | Test, SME | Closed 2026-11-18 (D-085): legacy 230 §1 step 4 gives the label and sets it to Yes for every ad hoc statement (cross-comparison: strong, confirms the draft); not asked. |
 | VG-04 | Exact label of the company logo option and when it must be included. | 1.1 Step 5 | 12 | B | Test, SME | Closed 2026-11-18 (D-085): legacy 230 §1 step 4 gives the label and sets it to Yes for every ad hoc statement (cross-comparison: strong, confirms the draft); not asked. |
-| VG-05 | Exact label and the meaning and effect of **Print management destination**. | Key concepts; 1.1 Step 6 | 4, 13 | B | Test, SME | Open |
-| VG-06 | Where the recipient address comes from (the recipient source). | Key concepts; 1.1 Step 6 | 4, 13 | B | SME | Open |
+| VG-05 | Exact label and the meaning and effect of **Print management destination**. | Key concepts; 1.1 Step 6 | 4, 13 | B | Test, SME | Closed 2026-11-22: Maria Pabalan, 230 round 1 (ADO 16886, 19 November 2026; D-093): Print management destination sends the statement straight away, as in the training recording. |
+| VG-06 | Where the recipient address comes from (the recipient source). | Key concepts; 1.1 Step 6 | 4, 13 | B | SME | Closed 2026-11-22 (legacy 230 §1, D-085): statements go to the customer's email contacts with Purpose = Business. |
 | VG-07 | The control that generates and sends the statement, for example **OK**. | 1.1 Step 7 | 14 | B | Test | Open |
-| VG-08 | Wording and location of the delivery message. | Key concepts; 1.2 Step 1 | 5, 15 | B | Test, Rec | Open |
-| VG-09 | When the Collections sent mailbox must be checked, where it is, and who can access it. | Key concepts; 1.2 Step 2 | 6, 16 | B | SME | Open |
-| VG-10 | How failed delivery is identified, and the process to follow. | 1.2 Step 3 | 17 | B | SME | Open |
+| VG-08 | Wording and location of the delivery message. | Key concepts; 1.2 Step 1 | 5, 15 | B | Test, Rec | Closed 2026-11-22: Maria Pabalan, 230 round 1 (ADO 16886, 19 November 2026; D-093): after sending, D365 shows a banner at the top of the page confirming the statement was sent and who it went to. |
+| VG-09 | When the Collections sent mailbox must be checked, where it is, and who can access it. | Key concepts; 1.2 Step 2 | 6, 16 | B | SME | Closed 2026-11-22: Maria Pabalan, 230 round 1 (ADO 16886, 19 November 2026; D-093): the officer confirms delivery from the banner and records a note on the Collections page; the Collections sent mailbox is not part of the check, so 230 v3.1 drops that step. |
+| VG-10 | How failed delivery is identified, and the process to follow. | 1.2 Step 3 | 17 | B | SME | Open: asked in 230 round 2, Q04 (what to do when the banner shows the statement was not sent, or the wrong recipient). |
 | VG-11 | Where sent statements are retained. | 1.2 PROCESS COMPLETE | 18 | N | SME | Open |
-| VG-12 | The multi-currency statement limitations and which customers must be excluded because of them. | Key concepts (rule) | 7 | B | SME | Open |
-| VG-13 | How users check whether a customer is excluded from statements (source 0, Topic 17). | Key concepts (rule) | 7 | N | Test, SME | Open |
+| VG-12 | The multi-currency statement limitations and which customers must be excluded because of them. | Key concepts (rule) | 7 | B | SME | Closed 2026-11-22: Maria Pabalan, 230 round 1 (ADO 16886, 19 November 2026; D-093): no customers are left out; statements are split by currency (CR 15801, in PROD). |
+| VG-13 | How users check whether a customer is excluded from statements (source 0, Topic 17). | Key concepts (rule) | 7 | N | Test, SME | Closed 2026-11-22: Maria Pabalan, 230 round 1 (ADO 16886, 19 November 2026; D-093): any customer who asks gets a statement, including direct debit, card, disputed and multi-currency customers, so there is no exclusion to check. |
 | VG-14 | Statements for multiple related accounts (source 1, sequence 6.9: partial). | Not in guide | — | N | Dec | Open |
 | VG-15 | Whether statements may ever be emailed manually. | Not in guide | — | N | SME | Open |
 | VG-16 | The required statement file format. | Not in guide | — | N | SME | Open |
-| VG-17 | The approved statement parameters. | Key concepts (rule) | 8 | B | SME | Open |
+| VG-17 | The approved statement parameters. | Key concepts (rule) | 8 | B | SME | Closed 2026-11-22: Maria Pabalan, 230 round 1 (ADO 16886, 19 November 2026; D-093): send ad hoc statements straight away with Print management destination, dated today even if the customer asks for a month-end date; monthly statements are automated on the 5th (16984), so the legacy batch method is removed. |
 | VG-18 | Initiation events, for example a statement cycle or a customer request. | Part 1 Initiation; topic Initiation; Process table *When* | 2 | B | SME | Open |
 | VG-19 | Stream, process area and business role name. Shared with the other AR Collections guides. | Stream table; Process table; Roles matrix | 3 | B | SME | Open |
 | VG-20 | Business process owner (BPO). | Version history | 1 | B | SME | Open |
@@ -109,3 +109,4 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | 2026-11-03 | Merged into 230 Collections v3.0 (D-052); D1 destination updated to the v3.0 topic numbers. |
 | 2026-11-18 | `VG-23` closed (D-083): the guides do not name security roles; users contact the BAU Support team for access issues. |
 | 2026-11-18 | `VG-03`, `VG-04` closed from legacy 230 when 230 round 1 was rebuilt (D-085). |
+| 2026-11-22 | `VG-05`, `VG-06`, `VG-08`, `VG-09`, `VG-12`, `VG-13` and `VG-17` closed from Maria Pabalan's answers to 230 round 1 (D-093) and legacy 230 §1; `VG-10` is asked in round 2 (Q04). |

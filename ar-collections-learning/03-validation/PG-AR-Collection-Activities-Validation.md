@@ -8,7 +8,7 @@
 | Last updated | 2026-11-18 |
 | Items | 24 total: 23 open (16 blocking, 7 non-blocking), 1 closed |
 
-> **Merged and frozen (D-052).** This topic draft is now topic 5 of the [230 Collections v3.0](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Collection Activities VG-xx*.
+> **Merged and frozen (D-052).** This topic draft is now topic 5 of the [230 Collections v3.1](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.1.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Collection Activities VG-xx*.
 
 This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are scoped to this guide and never renumbered. Each open item that affects the text is also a Word review comment by "Validation register" (VR).
 
@@ -50,15 +50,15 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | ID | Item to confirm | Location in Word guide | Word comment | Priority | Method | Status |
 |---|---|---|---|---|---|---|
 | VG-01 | Menu group for **All customers**. Shared with Favorites VG-02. | Step 3 | 7 | B | Test | Open |
-| VG-02 | How the customer account opens. Shared with Customer Account VG-02. | Step 4 | 8 | B | Test | Open |
-| VG-03 | Whether activities can also be created from Customers overdue or other pages (source 0, Topic 3). | Step 3 | 7 | N | Test, Rec | Open |
+| VG-02 | How the customer account opens. Shared with Customer Account VG-02. | Step 4 | 8 | B | Test | Closed 2026-11-22: in 230 v3.1 topic 5 the activity is recorded on the Collections page, opened by clicking the customer name in Aged balances (legacy 230 §2.1; Maria Pabalan, 230 round 1 (ADO 16886, 19 November 2026; D-093)). |
+| VG-03 | Whether activities can also be created from Customers overdue or other pages (source 0, Topic 3). | Step 3 | 7 | N | Test, Rec | Closed 2026-11-22: Maria Pabalan, 230 round 1 (ADO 16886, 19 November 2026; D-093): activities are recorded on the customer's Collections page (230 topic 5). |
 | VG-04 | Exact label and location of **New activity** on the customer account. | Step 5 | 9 | B | Test, Rec | Open |
-| VG-05 | Exact label of the activity type field (source 0: "Event Type") and the approved values. | Key concepts; Step 6 | 4, 10 | B | Test, SME | Open |
-| VG-06 | Whether "Action" should always be used, and whether Activity, Event, Appointment and Task have different uses. | Key concepts | 4 | N | SME | Open |
-| VG-07 | Exact label of the summary field. | Step 7 | 11 | B | Test | Open |
-| VG-08 | Exact label of the notes field. | Step 8 | 12 | B | Test | Open |
-| VG-09 | Mandatory content for email and telephone notes, for example invoice numbers or a commitment-to-pay date. | Key concepts; Step 8 | 5, 12 | B | SME | Open |
-| VG-10 | Prohibited or sensitive information that must not be recorded. | Key concepts | 5 | B | SME | Open |
+| VG-05 | Exact label of the activity type field (source 0: "Event Type") and the approved values. | Key concepts; Step 6 | 4, 10 | B | Test, SME | Closed 2026-11-22: Maria Pabalan, 230 round 1 (ADO 16886, 19 November 2026; D-093) and legacy 230 §5: the field is **Type**, set to the interaction: Email or Phone call. |
+| VG-06 | Whether "Action" should always be used, and whether Activity, Event, Appointment and Task have different uses. | Key concepts | 4 | N | SME | Closed 2026-11-22: Maria Pabalan, 230 round 1 (ADO 16886, 19 November 2026; D-093): follow the legacy 230 method, whose activity types (Action, Appointment, Event, Task) each have their use (230 Key concepts, Collection Activities). |
+| VG-07 | Exact label of the summary field. | Step 7 | 11 | B | Test | Closed 2026-11-22: the summary field is **Purpose** (Maria Pabalan, 230 round 1 (ADO 16886, 19 November 2026; D-093); legacy 230 §5), a short title such as "Overdue chaser – payment requested". |
+| VG-08 | Exact label of the notes field. | Step 8 | 12 | B | Test | Open (Test): Maria Pabalan calls the field Notes; legacy 230 calls it Description. The D365 test confirms the label (230 topic 5 step 10). |
+| VG-09 | Mandatory content for email and telephone notes, for example invoice numbers or a commitment-to-pay date. | Key concepts; Step 8 | 5, 12 | B | SME | Closed 2026-11-22: Maria Pabalan, 230 round 1 (ADO 16886, 19 November 2026; D-093): one note per interaction (separate notes for incoming and outgoing), including who, the date, the invoices with amount and currency, any promised payment date or dispute, what was sent or agreed, any follow-up and the officer's initials; internal emails get a note on every account involved; no attachments (documents are kept in CW1). |
+| VG-10 | Prohibited or sensitive information that must not be recorded. | Key concepts | 5 | B | SME | Closed 2026-11-22: Maria Pabalan, 230 round 1 (ADO 16886, 19 November 2026; D-093): never record card numbers, bank account or BSB numbers or other payment credentials, and no personal opinions about the customer. |
 | VG-11 | Naming and date convention for activities. | Not in guide | — | N | SME | Open |
 | VG-12 | Exact label and location of the save control. | Step 9 | 13 | B | Test | Open |
 | VG-13 | Where the saved activity appears and how users check it, for example **View all activities**. Shared with Notes and Activities VG-09. | Step 10 | 14 | B | Test | Open |
@@ -103,3 +103,4 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | 2026-10-14 | Register created with the v0.1 SME review draft. |
 | 2026-11-03 | Merged into 230 Collections v3.0 (D-052); D1 destination updated to the v3.0 topic numbers. |
 | 2026-11-18 | `VG-21` closed (D-083): the guides do not name security roles; users contact the BAU Support team for access issues. |
+| 2026-11-22 | `VG-02`, `VG-03`, `VG-05`, `VG-06`, `VG-07`, `VG-09` and `VG-10` closed from Maria Pabalan's answers to 230 round 1 (D-093) and legacy 230 §5; `VG-08` stays with the D365 test. |
