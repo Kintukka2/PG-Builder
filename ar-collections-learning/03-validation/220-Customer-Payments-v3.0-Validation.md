@@ -276,15 +276,15 @@ The round also checked the rest of the guide against the answers. The other v2.1
 
 ## 8. Round 2 plan (D-085)
 
-Round 2 goes to Maria Pabalan with v3.1 and asks only what her round 1 answers opened and no source can give: three questions. Pages come from the layout of the guide (LibreOffice with DM Sans) as a first estimate; before the round is sent, Daniel updates the Contents in Word and the pages are taken from it (D-089). The board holds the question text.
+Round 2 goes to Maria Pabalan with v3.1 and asks only what her round 1 answers opened and no source can give: three questions. Pages come from Word's Contents, updated by Daniel in the v3.1 review copy on 22 November (D-089); step pages keep their place within each subtopic. The board holds the question text.
 
 ### 8.1 Asked in round 2
 
 | Question | Items | Where |
 |---|---|---|
-| Q08 Copy-paste method (follows Q01) | `G220-14` | 2.4 (p. 41) |
-| Q09 Reversing a write-off posted in error (follows Q06) | `G220-16` | Topic 3 Description (p. 42) |
-| Q10 Bank fee on a bank statement payment | `G220-17` | 2.1.3 step 37 (p. 32) |
+| Q08 Copy-paste method (follows Q01) | `G220-14` | 2.4 (p. 40) |
+| Q09 Reversing a write-off posted in error (follows Q06) | `G220-16` | Topic 3 Description (p. 41) |
+| Q10 Bank fee on a bank statement payment | `G220-17` | 2.1.3 step 37 (p. 31) |
 
 ### 8.2 Not asked
 
@@ -316,3 +316,4 @@ Round 2 goes to Maria Pabalan with v3.1 and asks only what her round 1 answers o
 | 2026-11-18 | Round 1 (seven questions, section 7) sent to Maria Pabalan by Daniel Moreira in ADO Task 16993 (the 221 task, now used for 220), with the review copy. Page references from Word's Contents for every heading (D-089). |
 | 2026-11-22 | Round 1 answered by Maria Pabalan (ADO Task 16993, 19 November) and applied (section 7.3, D-091): the Receipting Officer is the role again, as in v2.1; topic 6 is the direct debit customer payment journal (DD-CPJL) procedure, taken from 240 topic 2.1 with its approval workflow and approvers; new 2.4 copy-paste method (placeholder); 2.2 limited to two cases and posted once, without approval steps; 3.5 renamed *Restore an Overpayment Amount*; 3.6 rewritten for the write-off journal (WOJL) and its manual approval, with a limits placeholder for CR 16959; checks, evidence and Collections-page notes in 3.1, 3.3, 3.4 and 3.5; account numbers 100949, 200060 and 540052. 22 items closed (`G220-04`, `G220-06` to `G220-09`, `G221-07`, `G221-13`, `G221-14`, `G221-18`, `G221-19`, `TF-02`, `TF-03`, `TF-05`, `TF-06`, `PC-01`, `PC-02`, `PC-04`, `RO-01`, `RO-02`, `RO-03`, `CPJ-07`, `CPJ-09`) and `G220-03` closed again; five opened (`G220-14` to `G220-18`). Review comments 44 → 28. The eight notes in the undefined *NoteText* style are now plain cell notes with a bold **Note:**, as the template's own are (LibreOffice dropped the tables around them). Round 2 (three questions, section 8) drafted on the board. Contents page numbers refreshed from the layout. The PDF beside the Word file is out of date (D-064). |
 | 2026-11-22 | Version 3.1 (D-092): the Word file is renamed `CLAUDE-220-Customer Payments PG v3.1.docx`, every link is updated, and the guide's version history has a 3.1 row; the 3.0 row again says what v3.0 was. New section *Versions of the guide* lists what changed in v3.1. The extra row moves every heading one page later in the layout: the Contents and the round 2 pages are refreshed (Q08 p. 41, Q09 p. 42, Q10 p. 32). The register and preview keep their file names (CLAUDE.md). |
+| 2026-11-22 | Word's Contents for v3.1 (Daniel Moreira, 22 November) written into the guide: Word matches the layout to 3.5.1 and is one page earlier from 3.5.2 on, and does not add a page for the 3.1 version row. Round 2 pages from Word: Q08 p. 40, Q09 p. 41, Q10 p. 31. Round 2 is ready to send. |
