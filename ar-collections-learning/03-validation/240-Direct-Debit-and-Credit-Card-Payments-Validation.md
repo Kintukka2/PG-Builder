@@ -7,7 +7,7 @@
 | ADO | Task 16894 PG Creation - Direct Debit |
 | Status | Working draft skeleton v0.1 (D-053). Draft ready for review from 16 November 2026, after Maria Pabalan's training recording of 11 November. |
 | Last updated | 2026-11-22 |
-| Items | 10 guide-level items (`G240`), all open: 9 blocking, 1 non-blocking |
+| Items | 11 guide-level items (`G240`), all open: 10 blocking, 1 non-blocking |
 
 This file is the guide's **question log** (D-016). Each item is a Word review comment by "Validation register" (VR). The open scoping questions and the answers from the 9 November meeting are in the doc *240 Direct Debit Scoping Questions* (https://claude.ai/artifact/SegmHCWvsPWuHYeJiLEQdo).
 
@@ -57,6 +57,7 @@ Context first (Part 1), then short how-to topics, then exceptions; credit cards 
 | G240-08 | Check these steps against the 11 November recording, and confirm they describe the mid-month batch (legacy 220 5 is a general direct debit run). | Topic 2.1 | B | Rec, Test | Open |
 | G240-09 | Confirm when credit card payments go live and who owns each step, and whether they stay in this guide (meeting 9 November: direct debit first). | Topic 5 | B | SME | Open |
 | G240-10 | Maria Pabalan's answers to 220 round 1 (ADO 16993, 19 November 2026; D-091) put the direct debit customer payment journal (DD-CPJL) procedure in 220 Customer Payments: 220 topic 6 now holds the steps of topic 2.1 here, with the approval workflow. When 240 is next updated, replace topic 2.1 with a link to 220 topic 6 and keep `G240-08` (the recording check) with it. Two points to carry: the DD-CPJL approvers are Maria Pabalan, Arash Najafi, Chris Clarke and Zi Chen (this guide names Chris Clarke and Arash Najafi for topic 3), and the receiving team (Receipting Officers) maintains alternate names, while the only eBanking change the Collections team makes is direct debit bank details. | 2.1 Run the Mid-Month Direct Debit Batch; 3 Approve a Direct Debit Run | B | Dec | Open |
+| G240-11 | Link the references to other guides to their published files on the Training Hub when this guide is next rebuilt (D-096): 10 references to 220 Customer Payments and 230 Collections (Part 1, topic 1 and topic 2.1). `tools/pg_links.py --fix` adds them; the file is renamed with the `CLAUDE-` prefix in the same change (D-056). | Part 1; topics 1 and 2.1 | B | Dec | Open |
 
 ---
 
@@ -66,3 +67,4 @@ Context first (Part 1), then short how-to topics, then exceptions; credit cards 
 |---|---|
 | 2026-11-09 | Register created with the v0.1 skeleton, built from the 9 November scoping meeting (D-053). |
 | 2026-11-22 | `G240-10` added: the DD-CPJL procedure is now in 220 topic 6 (D-091); topic 2.1 here is to become a link to it, and the approvers and eBanking roles from Maria Pabalan's 220 answers are to be carried in. The Word file is not changed yet. LibreOffice drops the topic 2.1 table when it lays the guide out (undefined *NoteText* and *paragraph* styles): fix it when the topic is replaced. |
+| 2026-11-22 | `G240-11` added: 10 references to 220 and 230 to link to the Training Hub when the guide is next rebuilt (D-096). |

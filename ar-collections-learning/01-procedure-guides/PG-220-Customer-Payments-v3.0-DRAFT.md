@@ -48,7 +48,7 @@ At a high level, the Customer Payments process follows these stages:
 - **Process Intercompany Customer Payments**: Receipting Officers process payments made into the bank account of another legal entity.
 - **Process Direct Debit Customer Payments**: record direct debit receipts in a direct debit customer payment journal (DD-CPJL), have it approved and send the direct debit file to the bank.
 
-Writing off an uncollectible debt is in 230 Collections. General D365 tasks (switching legal entity, Favorites, personalized views and exporting grid data) are in 260 O2C Getting Started.
+Writing off an uncollectible debt is in [230 Collections](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/230-Collections%20PG.pdf). General D365 tasks (switching legal entity, Favorites, personalized views and exporting grid data) are in [260 O2C Getting Started](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/260-O2C%20Getting%20Started%20PG.pdf).
 
 ##### Initiation
 
@@ -284,7 +284,7 @@ When the customer for a payment cannot be identified, the Receipting Officer tag
 |---|---|
 | **Who may post a CPJL** | Receipting Officers. |
 | **Whether approval is needed** | A CPJL needs no approval or sign-off, including transfers, distributions and restorations. A DD-CPJL is approved before the direct debit file is sent ([6. Process Direct Debit Customer Payments](#6-process-direct-debit-customer-payments)), and a write-off journal before it posts ([3.6 Write Off a Bank Fee or Small Residual](#36-write-off-a-bank-fee-or-small-residual)). |
-| **Checking the result after posting** | Check that the journal balances to zero and that the transaction shows on each customer account involved. 230 Collections topic 2.4 Investigate a Customer Account covers reviewing customer transactions. |
+| **Checking the result after posting** | Check that the journal balances to zero and that the transaction shows on each customer account involved. [230 Collections](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/230-Collections%20PG.pdf) topic 2.4 Investigate a Customer Account covers reviewing customer transactions. |
 | **Correcting or reversing a posted journal** | Reverse it with [3.2 Reverse a Customer Payment Journal](#32-reverse-a-customer-payment-journal). |
 | **An unposted journal that is no longer needed** | A Receipting Officer can delete it. <mark>The steps are to be confirmed.</mark> |
 | **Access to D365** | Your manager requests your D365 profile, which gives you the access you need. If a page or control you need is missing, contact the BAU Support team. |
@@ -486,7 +486,7 @@ Complete these steps to Process Customer Settlement – Red Status (Customer or 
 | 18. *Open* the **Customer** **Record.** | *Review* the list of customers displayed and *click* the relevant **Customer account number** to open the customer record. |
 | 19. *Expand* the **General FastTab** | *Click* the **General FastTab** to display additional fields. |
 | 20. *Locate* the **Search name** field | Go to the **Search name** (Alternate name) field within the **General FastTab**. |
-| 21. *Ask* the Collections Officer for the customer code. | If no customer can be confidently identified, tag the Collections Officer against the payment in the receipting spreadsheet. The Collections Officer replies with the customer code.<br>When you have the customer code, continue from step 31. |
+| 21. *Ask* the Collections Officer for the customer code. | If no customer can be confidently identified, tag the Collections Officer against the payment in the receipting spreadsheet. The Collections Officer replies with the customer code. `[G220-19]`<br>When you have the customer code, continue from step 31. |
 | 22. *Compare* the **Search name** to the narrative. | Compare the **Search name** (Alternate name) value in the wording used in the bank statement narrative.<br>This field supports automated settlement matching when customers use trading names or abbreviations when making payments. |
 | 23. OPTIONAL:<br>*Update* the **Search name** if required. | If the bank statement consistently uses a variation of the customer name, *click* **Edit** and update the **Search name** (Alternate name) field so the wording aligns with the bank narrative. |
 | 24. *Click* **Save** | *Click* **Save** to apply the updates. This improves automated matching for future customer payments. |
@@ -617,7 +617,7 @@ Complete these steps to settle customer transactions:
 | 11. *Click* **Post**. | Click **Post**. The marked transactions are settled and no longer show when **Show** is **Open**. |
 | *PROCESS COMPLETE* (light green) | Outcomes:<br>• The payment is settled against the marked invoices or credits.<br>• The customer balance and the transaction status are updated. |
 
-> **Note:** To exclude a transaction from collection letters and direct debit runs, see 230 Collections topic 7.3 Change Customer Account Status. <mark>Legacy 230 included it in this procedure as optional steps.</mark>
+> **Note:** To exclude a transaction from collection letters and direct debit runs, see [230 Collections](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/230-Collections%20PG.pdf) topic 7.3 Change Customer Account Status. <mark>Legacy 230 included it in this procedure as optional steps.</mark>
 
 #### 2.4 Paste Payment Lines into a Customer Payment Journal
 
@@ -641,7 +641,7 @@ Use this procedure to record many customer payments at once, by pasting the paym
 
 ##### Description
 
-Use these topics when a customer payment or settlement must be corrected after it is posted: undo a settlement, reverse a customer payment journal, move funds to another customer account, distribute a parent account payment, restore an overpayment, or write off a small residual. Topics 3.3 to 3.5 use a customer payment journal (CPJL): the controls that apply to every CPJL entry are in Part 1 Key concepts. Writing off an uncollectible debt is a different task, in 230 Collections.
+Use these topics when a customer payment or settlement must be corrected after it is posted: undo a settlement, reverse a customer payment journal, move funds to another customer account, distribute a parent account payment, restore an overpayment, or write off a small residual. Topics 3.3 to 3.5 use a customer payment journal (CPJL): the controls that apply to every CPJL entry are in Part 1 Key concepts. Writing off an uncollectible debt is a different task, in [230 Collections](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/230-Collections%20PG.pdf).
 
 A payment settled on the wrong customer account is corrected in three steps: undo the settlement ([3.1 Undo a Settlement](#31-undo-a-settlement)), transfer the funds to the correct account ([3.3 Transfer Funds Between Customer Accounts](#33-transfer-funds-between-customer-accounts)), then settle the payment against the correct invoices ([2.3 Settle Open Customer Transactions](#23-settle-open-customer-transactions)). Add a note on both accounts at each step.
 
@@ -980,7 +980,7 @@ Complete these steps to validate and post the journal:
 
 ##### Description
 
-Use this procedure to write off a small residual balance on a customer transaction, such as a bank fee, a foreign exchange difference or an over or short payment. You start the write-off from Aged balances or the customer's Collections page and select a reason code, and D365 creates a write-off journal (WOJL). You mark the journal ready and notify the approver. The journal posts once it is approved, and the transaction settles then. Writing off an uncollectible debt is a different task, in 230 Collections.
+Use this procedure to write off a small residual balance on a customer transaction, such as a bank fee, a foreign exchange difference or an over or short payment. You start the write-off from Aged balances or the customer's Collections page and select a reason code, and D365 creates a write-off journal (WOJL). You mark the journal ready and notify the approver. The journal posts once it is approved, and the transaction settles then. Writing off an uncollectible debt is a different task, in [230 Collections](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/230-Collections%20PG.pdf).
 
 > **ACTION: REVIEW REQUIREMENT.** Write-off limits are to be added here when CR 16959 is agreed and configured. `[G221-15]`
 
@@ -1196,7 +1196,7 @@ Use this topic when a customer pays into the bank account of one legal entity fo
 
 Direct debit receipts are recorded in their own journal, the direct debit customer payment journal (DD-CPJL). You create the journal from a payment proposal of the customers set up for direct debit, validate it and submit it for approval. Once it is approved, you send the direct debit file to the bank. Maria Pabalan, Arash Najafi, Chris Clarke or Zi Chen approves the DD-CPJL.
 
-Setting up a customer for direct debit and handling failed or reversed direct debits are in 240 Direct Debit and Credit Card Payments. The Collections team maintains customers' direct debit bank details in eBanking.
+Setting up a customer for direct debit and handling failed or reversed direct debits are in [240 Direct Debit and Credit Card Payments](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/240-Direct%20Debit%20PG.pdf). The Collections team maintains customers' direct debit bank details in eBanking.
 
 ##### Responsibility
 

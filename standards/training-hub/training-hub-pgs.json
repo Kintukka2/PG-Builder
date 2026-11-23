@@ -1,0 +1,285 @@
+{
+ "source": "Training Hub > Procedure Guides, exported to Excel by Daniel Moreira on 22 November 2026 (TrainingHub-PGs-20261122.xlsx)",
+ "exported": "2026-11-22",
+ "trainingHub": "https://wisetechglobal.sharepoint.com/sites/Atlas/SitePages/Atlas-Training-Hub.aspx",
+ "procedureGuides": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/Forms/AllItems.aspx?id=%2Fsites%2FAtlas%2FTraining%2FD365%20Procedure%20Guides&p=true&share=cgpSx9ddx4CLQKoRNewksqUnEgUAKBxMnbnfSGe%2DvQG9KjsTbg&CID=a4a352fa%2Df9f1%2D4f87%2D8746%2D68e29fbe7f37",
+ "ava": {
+  "name": "AVA (Atlas Virtual Assistant)",
+  "file": "0. CLICK HERE to install AVA (Atlas Virtual Assistant).url",
+  "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/0.%20CLICK%20HERE%20to%20install%20AVA%20(Atlas%20Virtual%20Assistant).url"
+ },
+ "guides": [
+  {
+   "code": "100",
+   "title": "Fixed Assets",
+   "file": "100-Fixed Assets PG.pdf",
+   "area": "Acquire to Retire (A2R)",
+   "bpo": "Sarah Ge; Joe Turner",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/100-Fixed%20Assets%20PG.pdf"
+  },
+  {
+   "code": "101",
+   "title": "Capital Development",
+   "file": "101-Capital Development PG.pdf",
+   "area": "Acquire to Retire (A2R)",
+   "bpo": "Sarah Ge; Joe Turner",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/101-Capital%20Development%20PG.pdf"
+  },
+  {
+   "code": "102",
+   "title": "Asset Leasing",
+   "file": "102-Asset Leasing PG.pdf",
+   "area": "Acquire to Retire (A2R)",
+   "bpo": "Sarah Ge; Joe Turner",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/102-Asset%20Leasing%20PG.pdf"
+  },
+  {
+   "code": "200",
+   "title": "Customer Onboarding and Maintenance",
+   "file": "200-Customer Onboarding and Maintenance PG.pdf",
+   "area": "Order to Cash (O2C)",
+   "bpo": "Christopher Clarke",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/200-Customer%20Onboarding%20and%20Maintenance%20PG.pdf"
+  },
+  {
+   "code": "210",
+   "title": "Customer Invoices",
+   "file": "210-Customer Invoices PG.pdf",
+   "area": "Order to Cash (O2C)",
+   "bpo": "Christopher Clarke",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/210-Customer%20Invoices%20PG.pdf"
+  },
+  {
+   "code": "211",
+   "title": "Subscription Billing",
+   "file": "211-Subscription Billing PG.pdf",
+   "area": "Order to Cash (O2C)",
+   "bpo": "Christopher Clarke",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/211-Subscription%20Billing%20PG.pdf"
+  },
+  {
+   "code": "220",
+   "title": "Customer Payments",
+   "file": "220-Customer Payments PG.pdf",
+   "area": "Order to Cash (O2C)",
+   "bpo": "Christopher Clarke",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/220-Customer%20Payments%20PG.pdf"
+  },
+  {
+   "code": "221",
+   "title": "Customer Payment Corrections",
+   "file": "221-Customer Payment Corrections PG.pdf",
+   "area": "Order to Cash (O2C)",
+   "bpo": "Christopher Clarke",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/221-Customer%20Payment%20Corrections%20PG.pdf"
+  },
+  {
+   "code": "230",
+   "title": "Collections",
+   "file": "230-Collections PG.pdf",
+   "area": "Order to Cash (O2C)",
+   "bpo": "Christopher Clarke",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/230-Collections%20PG.pdf"
+  },
+  {
+   "code": "240",
+   "title": "Direct Debit",
+   "file": "240-Direct Debit PG.pdf",
+   "area": "Order to Cash (O2C)",
+   "bpo": "Christopher Clarke",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/240-Direct%20Debit%20PG.pdf"
+  },
+  {
+   "code": "260",
+   "title": "O2C Getting Started",
+   "file": "260-O2C Getting Started PG.pdf",
+   "area": "Order to Cash (O2C)",
+   "bpo": "Christopher Clarke",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/260-O2C%20Getting%20Started%20PG.pdf"
+  },
+  {
+   "code": "300",
+   "title": "Vendor Onboarding and Maintenance",
+   "file": "300-Vendor Onboarding and Maintenance PG.pdf",
+   "area": "Procure to Pay (P2P)",
+   "bpo": "Ghada Boulos",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/300-Vendor%20Onboarding%20and%20Maintenance%20PG.pdf"
+  },
+  {
+   "code": "310",
+   "title": "Vendor Invoices",
+   "file": "310-Vendor Invoices PG.pdf",
+   "area": "Procure to Pay (P2P)",
+   "bpo": "Ghada Boulos",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/310-Vendor%20Invoices%20PG.pdf"
+  },
+  {
+   "code": "320",
+   "title": "Vendor Payments",
+   "file": "320-Vendor Payments PG.pdf",
+   "area": "Procure to Pay (P2P)",
+   "bpo": "Ghada Boulos",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/320-Vendor%20Payments%20PG.pdf"
+  },
+  {
+   "code": "340",
+   "title": "Procurement (Purchase Requisitions)",
+   "file": "340-Procurement (Purchase Requisitions) PG.pdf",
+   "area": "Procurement",
+   "bpo": "Wayne Louys; Ghada Boulos",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/340-Procurement%20(Purchase%20Requisitions)%20PG.pdf"
+  },
+  {
+   "code": "350",
+   "title": "Procurement (Purchase Agreements)",
+   "file": "350-Procurement (Purchase Agreements) PG.pdf",
+   "area": "Procurement",
+   "bpo": "Wayne Louys; Ghada Boulos",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/350-Procurement%20(Purchase%20Agreements)%20PG.pdf"
+  },
+  {
+   "code": "361",
+   "title": "RLPO (Reverse-Logic POs)",
+   "file": "361-RLPO (Reverse-Logic POs) PG.pdf",
+   "area": "Procurement",
+   "bpo": "Wayne Louys; Ghada Boulos",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/361-RLPO%20(Reverse-Logic%20POs)%20PG.pdf"
+  },
+  {
+   "code": "398",
+   "title": "RCTI and RCI",
+   "file": "398-RCTI and RCI PG.pdf",
+   "area": "RCTI",
+   "bpo": "Christopher Clarke; Ghada Boulos",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/398-RCTI%20and%20RCI%20PG.pdf"
+  },
+  {
+   "code": "399",
+   "title": "Customer and Supplier Netting",
+   "file": "399-Customer and Supplier Netting PG.pdf",
+   "area": "RCTI",
+   "bpo": "Christopher Clarke; Ghada Boulos",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/399-Customer%20and%20Supplier%20Netting%20PG.pdf"
+  },
+  {
+   "code": "400",
+   "title": "General Ledger Reports",
+   "file": "400-General Ledger Reports PG.pdf",
+   "area": "Record to Report (R2R)",
+   "bpo": "Sarah Ge; Joe Turner",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/400-General%20Ledger%20Reports%20PG.pdf"
+  },
+  {
+   "code": "402",
+   "title": "Daily General Journal",
+   "file": "402-Daily General Journal PG.pdf",
+   "area": "Record to Report (R2R)",
+   "bpo": "Sarah Ge; Joe Turner",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/402-Daily%20General%20Journal%20PG.pdf"
+  },
+  {
+   "code": "406",
+   "title": "Ledger Settlement",
+   "file": "406-Ledger Settlement PG.pdf",
+   "area": "Record to Report (R2R)",
+   "bpo": "Sarah Ge; Joe Turner",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/406-Ledger%20Settlement%20PG.pdf"
+  },
+  {
+   "code": "410",
+   "title": "Bank Reconciliation",
+   "file": "410-Bank Reconciliation PG.pdf",
+   "area": "Record to Report (R2R)",
+   "bpo": "Sarah Ge; Joe Turner",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/410-Bank%20Reconciliation%20PG.pdf"
+  },
+  {
+   "code": "420",
+   "title": "Intercompany Accounting & Reconciliation",
+   "file": "420-Intercompany Accounting & Reconciliation PG.pdf",
+   "area": "Record to Report (R2R)",
+   "bpo": "Sarah Ge; Joe Turner",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/420-Intercompany%20Accounting%20%26%20Reconciliation%20PG.pdf"
+  },
+  {
+   "code": "421",
+   "title": "Intercompany Recharge",
+   "file": "421-Intercompany Recharge PG.pdf",
+   "area": "Record to Report (R2R)",
+   "bpo": "Sarah Ge; Joe Turner",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/421-Intercompany%20Recharge%20PG.pdf"
+  },
+  {
+   "code": "422",
+   "title": "Intercompany Settlement",
+   "file": "422-Intercompany Settlement PG.pdf",
+   "area": "Record to Report (R2R)",
+   "bpo": "Sarah Ge; Joe Turner",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/422-Intercompany%20Settlement%20PG.pdf"
+  },
+  {
+   "code": "430",
+   "title": "Month-End Accruals",
+   "file": "430-Month-End Accruals PG.pdf",
+   "area": "Record to Report (R2R)",
+   "bpo": "Sarah Ge; Joe Turner",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/430-Month-End%20Accruals%20PG.pdf"
+  },
+  {
+   "code": "431",
+   "title": "Prepaid Expense and Deferral Process",
+   "file": "431-Prepaid Expense and Deferral Process.pdf",
+   "area": "Record to Report (R2R)",
+   "bpo": "Sarah Ge; Joe Turner",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/431-Prepaid%20Expense%20and%20Deferral%20Process.pdf"
+  },
+  {
+   "code": "432",
+   "title": "Deferred Revenue Accounting",
+   "file": "432-Deferred Revenue Accounting PG.pdf",
+   "area": "Record to Report (R2R)",
+   "bpo": "Sarah Ge; Joe Turner",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/432-Deferred%20Revenue%20Accounting%20PG.pdf"
+  },
+  {
+   "code": "433",
+   "title": "Foreign Currency Revaluation",
+   "file": "433-Foreign Currency Revaluation PG.pdf",
+   "area": "Record to Report (R2R)",
+   "bpo": "Sarah Ge; Joe Turner",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/433-Foreign%20Currency%20Revaluation%20PG.pdf"
+  },
+  {
+   "code": "434",
+   "title": "Reporting Currency Adjustment Journal (RCAJ)",
+   "file": "434-Reporting Currency Adjustment Journal (RCAJ) PG.pdf",
+   "area": "Record to Report (R2R)",
+   "bpo": "Sarah Ge; Joe Turner",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/434-Reporting%20Currency%20Adjustment%20Journal%20(RCAJ)%20PG.pdf"
+  },
+  {
+   "code": "440",
+   "title": "Payroll Accounting",
+   "file": "440-Payroll Accounting PG.pdf",
+   "area": "Record to Report (R2R)",
+   "bpo": "Sarah Ge; Joe Turner",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/440-Payroll%20Accounting%20PG.pdf"
+  },
+  {
+   "code": "450",
+   "title": "Financial Reporting",
+   "file": "450-Financial Reporting PG.pdf",
+   "area": "Record to Report (R2R)",
+   "bpo": "Sarah Ge; Joe Turner",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/450-Financial%20Reporting%20PG.pdf"
+  },
+  {
+   "code": "500",
+   "title": "Tax",
+   "file": "500-Tax PG.pdf",
+   "area": "Tax",
+   "bpo": "Gareth Kirkby; Eric Yuen",
+   "url": "https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/500-Tax%20PG.pdf"
+  }
+ ]
+}
