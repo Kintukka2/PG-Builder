@@ -1201,7 +1201,7 @@ Setting up a customer for direct debit and handling failed or reversed direct de
 ##### Responsibility
 
 - Receipting Officer: creates the DD-CPJL, submits it for approval and sends the direct debit file.
-- Approver (Group Billing and Credit Manager, Collections Manager, <mark>role to confirm</mark> or <mark>role to confirm</mark>): approves the DD-CPJL. `[G220-20]`
+- Approver (Group Billing and Credit Manager, Collections Manager, Senior Collections Specialist or Group Financial Controller): approves the DD-CPJL.
 
 ##### Initiation
 
