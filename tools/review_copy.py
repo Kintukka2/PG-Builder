@@ -1,4 +1,7 @@
-"""Build a review copy: comments removed; each [Qnn] comment becomes an ACTION tag ' [Qnn]' where it ended."""
+"""Build a review copy: comments removed; each [Qnn] comment becomes an ACTION tag ' [Qnn]' where it ended.
+
+Name the copy `REVIEW COPY-<code>-<title> PG v<x.y>.docx` (D-100); the working copy keeps `CLAUDE-`.
+"""
 import sys,shutil,re,zipfile,html,os
 sys.path.insert(0,os.path.dirname(__file__))
 from docx_edit import edit_docx
