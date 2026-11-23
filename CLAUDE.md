@@ -48,6 +48,16 @@ Keep the template's look: tables copy the concept table (dark blue header row), 
 - **Bullets:** every bulleted list in body text uses the **Bullet 1.2** style: Part Description, Initiation, Responsibility, Task Overview and Key concepts. Do not use **CW_Bullet 1** for these lists, even though the authoring guide's style table names it for Responsibility and Initiation: it uses the theme font and looks wrong beside body text. Inside procedure tables, the template's own bullets stay (Bullet 1.2 in PROCESS START and Description cells, the PROCESS START/END Body bullets in STEP COMPLETE rows, and CW_Bullet 1 in the navigation path).
 - **Topic links:** when a link names a topic, the topic number is part of the link's display text, written as the heading shows it: **1. Map the CW1 Ledger to TM1** for a topic, **4.1 Complete the TB OB Tab** for a subtopic. This applies to the roles matrix, Topic Overview tables, checklists, "Continue to" links and cross-references in text. The Process table keeps the number in its own **#** column and links the title only, as the template shows.
 
+## Links to other guides (D-096)
+
+Every reference in a guide to another procedure guide is a hyperlink to that guide's published file on the Training Hub, never plain text.
+
+- **Link text:** the guide's code and title, as in **200 Customer Onboarding and Maintenance**. A topic or section after it stays plain text (", section 3.4"), because the link opens the published PDF, not the topic. Never refer to another guide by its code alone ("see 220 topic 2.3"): write the title too.
+- **Where the links come from:** [`standards/training-hub/`](standards/training-hub/README.md), from Daniel's export of Training Hub > Procedure Guides. `tools/pg_links.py "<guide>.docx" --fix` adds a missing link; without `--fix` it reports every hyperlink and every reference.
+- **No link known:** when a referenced guide is not on the Training Hub, or the guide refers to another document or artifact (a spreadsheet, a scheduling file, a recording) whose link Claude does not have, it is an action for the PG owner: a register item and a review comment at the main place, with the other places in the register.
+- **AVA, the Procedure Guides library and the Training Hub** are linked in each guide's Additional Resources (template). Keep those links.
+- **Before committing or sending a guide,** run `tools/pg_links.py` on it: every reference to another guide shows as linked or has its item. Then refresh the card's hyperlink data on the board (the Links pill).
+
 ## Security roles and access (D-083)
 
 Users do not know their security roles, so a guide never names one or asks about one.

@@ -38,10 +38,10 @@ At a high level, the Collections process follows these stages:
 - **Contact the Customer**: check the overdue balance, then engage with the customer by phone or email to discuss overdue invoices, confirm payment status or disputes, and agree on next steps.
 - Record a Customer Collection Activity: record each interaction with the customer, and each internal email about the account, as a collection activity in D365. Supporting documents stay in CW1.
 - Manage Customer Statements: preview and download statements, and send an ad hoc statement when a customer asks for one. Monthly statements are sent automatically on the 5th of each month.
-- **Resolve the Account**: resend invoices, issue collection letters, update customer status or process approved debt write-offs. Payment corrections are made by Receipting Officers (220 Customer Payments).
+- **Resolve the Account**: resend invoices, issue collection letters, update customer status or process approved debt write-offs. Payment corrections are made by Receipting Officers ([220 Customer Payments](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/220-Customer%20Payments%20PG.pdf)).
 - **Update and Close a Customer Activity**: update the activity record in D365 with the outcome and close it once the issue is resolved and no further follow-up is required.
 
-General D365 tasks (switching legal entity, Favorites, personalized views and exporting grid data) are in 260 O2C Getting Started.
+General D365 tasks (switching legal entity, Favorites, personalized views and exporting grid data) are in [260 O2C Getting Started](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/260-O2C%20Getting%20Started%20PG.pdf).
 
 ##### Initiation
 
@@ -118,7 +118,7 @@ Before you start, you need to know how to set up D365 for collections work, the 
 
 ##### Set up D365 for collections work
 
-Add these pages to your Favorites, and add these columns to the views you use for collection work. The general steps are in 260 O2C Getting Started (topic 3 Add Pages to Favorites and topic 4 Create a Personalized View).
+Add these pages to your Favorites, and add these columns to the views you use for collection work. The general steps are in [260 O2C Getting Started](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/260-O2C%20Getting%20Started%20PG.pdf) (topic 3 Add Pages to Favorites and topic 4 Create a Personalized View).
 
 | Page | Description |
 |---|---|
@@ -150,7 +150,7 @@ A customer’s overdue balance is subject to follow-up and activity tracking in 
 | The customer has overdue invoices within acceptable tolerance. | The Collections Officer will contact the customer to arrange payment and record the interaction in D365 F&O. |
 | The customer is unresponsive or disputes the balance. | The issue will be escalated to the Group Billing & Credit Manager for review or resolution. |
 | The customer debt is deemed uncollectible. | The Collections Officer will initiate a Debt Write-off request for approval and processing. |
-| A payment has been applied incorrectly to a customer account. | Ask the Receipting team to correct it: Receipting Officers transfer, settle or unsettle payments, in 220 Customer Payments. |
+| A payment has been applied incorrectly to a customer account. | Ask the Receipting team to correct it: Receipting Officers transfer, settle or unsettle payments, in [220 Customer Payments](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/220-Customer%20Payments%20PG.pdf). |
 
 ##### Collection Activities
 
@@ -202,14 +202,14 @@ Customer or transactions excluded from credit management may not be included in 
 
 ##### Customer Payment Management
 
-Customer payments may require manual adjustment to ensure balances are correctly reflected. Receipting Officers make these corrections, in 220 Customer Payments (version 3.1); ask the Receipting team when one is needed:
+Customer payments may require manual adjustment to ensure balances are correctly reflected. Receipting Officers make these corrections, in [220 Customer Payments](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/220-Customer%20Payments%20PG.pdf); ask the Receipting team when one is needed:
 
 | **Action** | **Description** |
 |---|---|
-| 1. **Settle Customer Accounts** | Match customer payments against outstanding invoices. See 220 topic 2.3. |
-| 2. **Unsettle Customer Accounts** | Reverse an incorrect settlement. See 220 topic 3.1. |
-| 3. **Transfer Open / Closed Payments** | Move payments between customer accounts when allocated incorrectly. See 220 topic 3.3. |
-| 4. **Bank Fee Write-off** | Clear small residual balances caused by fees, FX differences, or minor variances. See 220 topic 3.6. |
+| 1. **Settle Customer Accounts** | Match customer payments against outstanding invoices. See [220 Customer Payments](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/220-Customer%20Payments%20PG.pdf), topic 2.3. |
+| 2. **Unsettle Customer Accounts** | Reverse an incorrect settlement. See [220 Customer Payments](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/220-Customer%20Payments%20PG.pdf), topic 3.1. |
+| 3. **Transfer Open / Closed Payments** | Move payments between customer accounts when allocated incorrectly. See [220 Customer Payments](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/220-Customer%20Payments%20PG.pdf), topic 3.3. |
+| 4. **Bank Fee Write-off** | Clear small residual balances caused by fees, FX differences, or minor variances. See [220 Customer Payments](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/220-Customer%20Payments%20PG.pdf), topic 3.6. |
 
 ##### Customer Contact Integration (CW1 ↔ D365 F&O)
 
@@ -278,7 +278,7 @@ This integration is critical to the Collections process, as it ensures:
 
 ##### Reviewing without changing
 
-**Do not undo settlements here**: This topic only reviews settlement history. Undoing a settlement changes financial records and is in 220 Customer Payments, topic 3.1 Undo a Settlement.
+**Do not undo settlements here**: This topic only reviews settlement history. Undoing a settlement changes financial records and is in [220 Customer Payments](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/220-Customer%20Payments%20PG.pdf), topic 3.1 Undo a Settlement.
 
 ##### Notes and activities
 
@@ -479,8 +479,8 @@ This topic includes these steps:
 | [2.4 Investigate a Customer Account](#24-investigate-a-customer-account) | Open the account and review its transactions and settlement history. |
 | [2.5 Review Customer Notes](#25-review-customer-notes) | Read the notes recorded for a customer. |
 | [2.6 Review All Customer Activities](#26-review-all-customer-activities) | Review previous collection activities for a customer. |
-| [2.7 Update Customer Details](#27-update-customer-details) | Update customer contact details with 200 Customer Onboarding and Maintenance, section 3.4. |
-| [2.8 Maintain Customer Direct Debit & eBanking Details](#28-maintain-customer-direct-debit--ebanking-details) | See 240 Direct Debit and Credit Card Payments, topic 1. |
+| [2.7 Update Customer Details](#27-update-customer-details) | Update customer contact details with [200 Customer Onboarding and Maintenance](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/200-Customer%20Onboarding%20and%20Maintenance%20PG.pdf), section 3.4. |
+| [2.8 Maintain Customer Direct Debit & eBanking Details](#28-maintain-customer-direct-debit--ebanking-details) | See [240 Direct Debit and Credit Card Payments](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/240-Direct%20Debit%20PG.pdf), topic 1. |
 
 #### 2.1 Review Customers Overdue
 
@@ -508,7 +508,7 @@ Complete these steps to review customers overdue:
 | 3. *Click* **Customers overdue**. `[Overdue Customers VG-01]` | In the workspace, click **Customers overdue**. |
 | 4. *Select* the aging period. `[Overdue Customers VG-02]` | Select the aging period you are working on, for example **90+**. |
 | 5. *Sort* the overdue amount from largest to smallest. `[Overdue Customers VG-05]` | Sort the overdue amount column in descending order so the largest overdue amounts appear first. |
-| 6. *Add* the email address column. `[Overdue Customers VG-06]` | Optional. Add the email column with **Insert columns** (see 260 O2C Getting Started, topic 4 Create a Personalized View). Otherwise, go to step 7. |
+| 6. *Add* the email address column. `[Overdue Customers VG-06]` | Optional. Add the email column with **Insert columns** (see [260 O2C Getting Started](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/260-O2C%20Getting%20Started%20PG.pdf), topic 4 Create a Personalized View). Otherwise, go to step 7. |
 | 7. *Review* the balance due and overdue amount. `[Overdue Customers VG-04]` | Check the aging period, then compare each customer's balance due with the overdue amount, largest first. |
 | *PROCESS COMPLETE* (light green) | Outcomes:<br>• **Customers overdue** shows the selected aging period, sorted from the largest overdue amount. |
 
@@ -516,7 +516,7 @@ Complete these steps to review customers overdue:
 
 ##### Description
 
-Use this procedure to open the **Aged balances** page and prepare the list for collection work. You add the **Currency** column, remove accounts with a zero balance and sort the balances from largest to smallest, so the customers with the highest outstanding balances appear first. You can save the prepared layout as a view by following 260 O2C Getting Started, topic 4 Create a Personalized View.
+Use this procedure to open the **Aged balances** page and prepare the list for collection work. You add the **Currency** column, remove accounts with a zero balance and sort the balances from largest to smallest, so the customers with the highest outstanding balances appear first. You can save the prepared layout as a view by following [260 O2C Getting Started](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/260-O2C%20Getting%20Started%20PG.pdf), topic 4 Create a Personalized View.
 
 ##### Responsibility
 
@@ -722,9 +722,9 @@ Complete these steps to review a customer's activities:
 
 ##### Description
 
-Customer details are maintained in 200 Customer Onboarding and Maintenance, section 3.4, so the steps are in one place.
+Customer details are maintained in [200 Customer Onboarding and Maintenance](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/200-Customer%20Onboarding%20and%20Maintenance%20PG.pdf), section 3.4, so the steps are in one place.
 
-Collections Officers update a customer's contact details when the customer sends new ones, for example a new accounts payable (AP) contact or a new statement email address. Follow 200 Customer Onboarding and Maintenance, section 3.4.
+Collections Officers update a customer's contact details when the customer sends new ones, for example a new accounts payable (AP) contact or a new statement email address. Follow [200 Customer Onboarding and Maintenance](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/200-Customer%20Onboarding%20and%20Maintenance%20PG.pdf), section 3.4.
 
 > **Important:** Collections Officers do not change a customer's name, address, VAT ID or country in D365. Any change to these goes to License Management.
 
@@ -732,9 +732,9 @@ Collections Officers update a customer's contact details when the customer sends
 
 ##### Description
 
-Direct debit and credit card details are maintained in **240 Direct Debit and Credit Card Payments**, topic 1 Maintain a Customer's Direct Debit Details. <mark>This topic stays here as the way in from Collections (D-053).</mark>
+Direct debit and credit card details are maintained in [240 Direct Debit and Credit Card Payments](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/240-Direct%20Debit%20PG.pdf), topic 1 Maintain a Customer's Direct Debit Details. <mark>This topic stays here as the way in from Collections (D-053).</mark>
 
-Customer alternate names for payment matching are maintained by the receiving team (220 Customer Payments).
+Customer alternate names for payment matching are maintained by the receiving team ([220 Customer Payments](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/220-Customer%20Payments%20PG.pdf)).
 
 ### 3. Manage Customer Pools and Collection Agents
 
@@ -868,7 +868,7 @@ Complete these steps to check an overdue balance:
 | 2. *Open* the customer account. `[Overdue Customers VG-07]` | Open the customer account from the list. |
 | 3. *Review* the overdue balance. | Check which transactions make up the overdue amount: open invoices, payments, credits and fees (see [2.4 Investigate a Customer Account](#24-investigate-a-customer-account)). |
 | 4. *Check* a low-value balance. | If the overdue amount is low, check whether it represents fees or an overpayment rather than an unpaid invoice. |
-| 5. *Confirm* the balance is valid. | Contact the customer only when the overdue balance is valid. If it is not, do not contact the customer:<br>• If a payment was applied to the wrong invoice or account, ask the Receipting team to correct it (220 Customer Payments).<br>• If the customer disputes the balance or does not respond, escalate it to the Group Billing and Credit Manager (see Key concepts, *Collections Workflow*). |
+| 5. *Confirm* the balance is valid. | Contact the customer only when the overdue balance is valid. If it is not, do not contact the customer:<br>• If a payment was applied to the wrong invoice or account, ask the Receipting team to correct it ([220 Customer Payments](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/220-Customer%20Payments%20PG.pdf)).<br>• If the customer disputes the balance or does not respond, escalate it to the Group Billing and Credit Manager (see Key concepts, *Collections Workflow*). |
 | *PROCESS COMPLETE* (light green) | Outcomes:<br>• You have confirmed whether the overdue balance is valid before contacting the customer. |
 
 ### 5. Record a Customer Collection Activity
@@ -1072,7 +1072,7 @@ This topic includes these steps:
 | [7.3 Change Customer Status](#73-change-customer-status) | Update the customer's account status, or exclude the customer or a transaction from credit management. |
 | [7.4 Write Off an Uncollectible Debt](#74-write-off-an-uncollectible-debt) | Initiate and process the write-off once management approval has been obtained. |
 
-> **Note:** Receipting Officers settle and unsettle customer accounts, transfer open or closed payments, and write off bank fees or small residuals, in 220 Customer Payments (topics 2.3, 3.1, 3.3 and 3.6). Ask the Receipting team when one of these is needed.
+> **Note:** Receipting Officers settle and unsettle customer accounts, transfer open or closed payments, and write off bank fees or small residuals, in [220 Customer Payments](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/220-Customer%20Payments%20PG.pdf) (topics 2.3, 3.1, 3.3 and 3.6). Ask the Receipting team when one of these is needed.
 
 #### 7.1 View and Download a Customer Invoice
 
