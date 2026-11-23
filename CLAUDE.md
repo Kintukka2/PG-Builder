@@ -8,6 +8,7 @@ Every file Claude creates or rebuilds for the user starts with `CLAUDE-`: Word g
 - When Claude rebuilds an existing file that has no prefix, it renames the file with the prefix in the same change and updates every link to it.
 - Markdown previews, validation registers and project notes in this repository keep their names. They are never published, and links depend on them.
 - Source files from the user (legacy guides, transcripts) keep the names they arrived with.
+- The **review copy** that goes to the SME with a question round starts with `REVIEW COPY-` instead (D-100), for example `REVIEW COPY-220-Customer Payments PG v3.1.docx`. The working copy, with the review comments that match the validation register, keeps `CLAUDE-`.
 
 ## Versions (D-092)
 
@@ -57,6 +58,15 @@ Every reference in a guide to another procedure guide is a hyperlink to that gui
 - **No link known:** when a referenced guide is not on the Training Hub, or the guide refers to another document or artifact (a spreadsheet, a scheduling file, a recording) whose link Claude does not have, it is an action for the PG owner: a register item and a review comment at the main place, with the other places in the register.
 - **AVA, the Procedure Guides library and the Training Hub** are linked in each guide's Additional Resources (template). Keep those links.
 - **Before committing or sending a guide,** run `tools/pg_links.py` on it: every reference to another guide shows as linked or has its item. Then refresh the card's hyperlink data on the board (the Links pill).
+
+## People: name the role, not the person (D-099)
+
+A guide names roles, never individual people: **Group Billing and Credit Manager**, not Chris Clarke; **Collections Manager**, not Arash Najafi. People change jobs; the role stays.
+
+- This covers everything the reader sees: steps, Responsibility, Key concepts, tables and notes. The version history (authors, BPO) and notes to the author in the ACTION: REVIEW REQUIREMENT style may name people, as may the register and the board.
+- When a source or an SME names a person, write their role. If the role is not known, it is an action for the PG owner: an ACTION placeholder in the text, a register item and a review comment.
+- Known roles (Daniel Moreira, 23 November 2026): Christopher Clarke, **Group Billing and Credit Manager**; Arash Najafi, **Collections Manager**.
+- Before committing or sending a guide, search it for people's names.
 
 ## Security roles and access (D-083)
 
@@ -139,7 +149,7 @@ One or two sentences on what the guide says or lacks. Then the specific decision
 
 **The message:** address the SME, name the guide and say briefly what the answers are for. Then the questions, then: reply against each question number, say if any do not apply, and assign the ticket back to Daniel when done. The board's copy text follows this layout. Do not invent recipients, dates or ticket numbers.
 
-**Send the guide with the questions:** a review copy of the Word guide with the review comments taken out (the questions replace them). Notes to the author stay. The review copy is a send file, not committed (D-079).
+**Send the guide with the questions:** a review copy of the Word guide with the review comments taken out (the questions replace them), named `REVIEW COPY-<code>-<title> PG v<x.y>.docx` (D-100). Notes to the author stay. The review copy is a send file, not committed (D-079).
 
 **Keep the record:** the guide's register lists the round's questions and items, and the route for every open item that is not asked (D-085). In the Word guide, the review comment of each asked item starts with its question number, for example *[Q04]*. Question numbers are stable once the round is sent: follow-ups refer to the original number, and a closed number is never reused.
 

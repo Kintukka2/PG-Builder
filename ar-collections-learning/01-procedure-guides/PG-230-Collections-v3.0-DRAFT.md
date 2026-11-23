@@ -1043,7 +1043,7 @@ Complete these steps to verify statement delivery:
 | *PROCESS START* (light blue) | Pre-requisites:<br>• The statement has been sent (see [6.2.1 Send the Statement](#621-send-the-statement)).<br>Responsibility:<br>• Collections Officer |
 | 1. *Check* the banner. | After the statement is sent, D365 shows a banner at the top of the page. Check that it confirms the statement was sent and names the right recipient. |
 | 2. *Record* a note. | On the customer's Collections page, record the statement as a collection activity (see [5. Record a Customer Collection Activity](#5-record-a-customer-collection-activity)), with the note: Statement dated <date> sent to <email>. |
-| 3. *Act* on a failed delivery. `[Statement Distribution VG-10]` | If the banner shows that the statement was not sent, or names the wrong recipient, follow the failed-delivery process. |
+| 3. *Act* on a failed delivery. `[Statement Distribution VG-10]` | If the banner shows that the statement was not sent, or names the wrong recipient, follow the failed-delivery process. <mark>The failed-delivery process is to be confirmed.</mark> |
 | *PROCESS COMPLETE* (light green) | Outcomes:<br>• The statement has been sent to the customer, the banner confirmed who it went to, and a note is recorded on the customer's Collections page. |
 
 ### 7. Resolve the Account

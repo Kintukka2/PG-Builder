@@ -188,8 +188,8 @@ When the customer for a payment cannot be identified, the Receipting Officer tag
 | Term | Description |
 |---|---|
 | **Customer payment journal (CPJL)** | The journal used to record a payment that is not on the bank statement, to paste payment lines in bulk, and to transfer funds between customer accounts, distribute a parent account payment and restore an overpayment. A CPJL needs no approval. |
-| **Direct debit customer payment journal (DD-CPJL)** | The journal name for direct debit receipts. It goes through an approval workflow before the direct debit file is sent: Maria Pabalan, Arash Najafi, Chris Clarke or Zi Chen approves it (see [6. Process Direct Debit Customer Payments](#6-process-direct-debit-customer-payments)). |
-| **Write-off journal (WOJL)** | The journal D365 creates when you write off an amount from Aged balances or the Collections page. Chris Clarke or Arash Najafi approves it before it posts (see [3.6 Write Off a Bank Fee or Small Residual](#36-write-off-a-bank-fee-or-small-residual)). |
+| **Direct debit customer payment journal (DD-CPJL)** | The journal name for direct debit receipts. It goes through an approval workflow before the direct debit file is sent (see [6. Process Direct Debit Customer Payments](#6-process-direct-debit-customer-payments)). |
+| **Write-off journal (WOJL)** | The journal D365 creates when you write off an amount from Aged balances or the Collections page. The Group Billing and Credit Manager or the Collections Manager approves it before it posts (see [3.6 Write Off a Bank Fee or Small Residual](#36-write-off-a-bank-fee-or-small-residual)). |
 | **Bank-to-bank transfer clearing account** | The ledger account used as the offset for a transfer between customer accounts: **100949 Bank to bank transfer clearing** (an asset account). Do not post a transfer directly to a bank account. |
 | **Simulate Posting** | A check run on the journal before posting. A blue result means the journal is ready to post. A red result shows errors to correct. |
 
@@ -502,7 +502,7 @@ Complete these steps to Process Customer Settlement – Red Status (Customer or 
 | 34. *Check* for a **Tax** **invoice** **reference**. | *Review* the **open invoice list** displayed in the lower grid. If the narrative includes an invoice number, *select* the relevant invoice in the list. |
 | 35. *Allocate* the **Tax invoice.** | In the new line, *select* the **Tax invoice** from the dropdown list. The invoice balance will populate automatically. |
 | 36. *Enter* the **Settlement amount.** | In the **Transaction amount** fields, *enter* the **payment amount** to be applied to the invoice.<br>Confirm the invoice balance updates. |
-| 37. *Handle* **Payment Differences**. | Review the payment and invoice amounts to determine how the payment should be allocated or managed before settlement.<br>***If…***<br>***Then…***<br>*A matching invoice is identified and the amount matches*<br>• *Select the invoice and apply the full amount.*<br>*No invoice can be identified*<br>• *Leave the payment unallocated (On Account).*<br>*Customer identified but invoice cannot be confidently confirmed*<br>• *Leave payment On account.*<br>• *Post only if the customer account can be confidently confirmed.*<br>• *Refer to collections for allocation follow-up*<br>*Payment is less than the invoice (Short payment)*<br>• *Apply the amount received and leave the remaining balance open.*<br>*Payment is more than the invoice (Over payment)*<br>• *Settle the invoice and leave the remaining amount On account for future allocation.*<br>*Payment amount differs due to a bank fee deduction.* `[G220-17]`<br>• *Settle the invoice, do not create a ledger adjustment line.*<br>• *Notify the Financial accountant of the variance including:*<br>• *Customer account*<br>• *Invoice number*<br>• *Payment number*<br>• *Bank fee amount.*<br>*The Financial accountant will post the bank fee during the Bank Reconciliation process.*<br>*Payment amount differs and reason is unclear e.g. dispute, partial agreement.*<br>• *Do not adjust > refer to the Collections team.*<br>*Multiple invoices are included in one payment.*<br>• *In the Proposed settlement section, click +New to create a new line for each invoice.*<br>• *Select each invoice and enter the amount to be applied across the lines.* |
+| 37. *Handle* **Payment Differences**. | Review the payment and invoice amounts to determine how the payment should be allocated or managed before settlement.<br>***If…***<br>***Then…***<br>*A matching invoice is identified and the amount matches*<br>• *Select the invoice and apply the full amount.*<br>*No invoice can be identified*<br>• *Leave the payment unallocated (On Account).*<br>*Customer identified but invoice cannot be confidently confirmed*<br>• *Leave payment On account.*<br>• *Post only if the customer account can be confidently confirmed.*<br>• *Refer to collections for allocation follow-up*<br>*Payment is less than the invoice (Short payment)*<br>• *Apply the amount received and leave the remaining balance open.*<br>*Payment is more than the invoice (Over payment)*<br>• *Settle the invoice and leave the remaining amount On account for future allocation.*<br>*Payment amount differs due to a bank fee deduction.* `[G220-17]`<br>• *Settle the invoice, do not create a ledger adjustment line.*<br>• *Notify the Financial accountant of the variance including:*<br>• *Customer account*<br>• *Invoice number*<br>• *Payment number*<br>• *Bank fee amount.*<br>*The Financial accountant will post the bank fee during the Bank Reconciliation process.* <mark>To be confirmed: this row, or a write-off with 3.6 Write Off a Bank Fee or Small Residual.</mark><br>*Payment amount differs and reason is unclear e.g. dispute, partial agreement.*<br>• *Do not adjust > refer to the Collections team.*<br>*Multiple invoices are included in one payment.*<br>• *In the Proposed settlement section, click +New to create a new line for each invoice.*<br>• *Select each invoice and enter the amount to be applied across the lines.* |
 | 38. *Validate* the **Difference**. | Scroll to the Header section at the top of the settlement form, *confirm* the **Difference** field equals 0.00 before posting<br>If it does not, review the settlement lines and adjust amounts until it balances. |
 | 39. *Click* **Post**. | *Click* **Post** to create the customer payment journal and generate a Voucher number. The red status updates confirming the payment has been processed.<br>**Note**: The screen will automatically display the next transaction. |
 | *PROCESS COMPLETE* (light green) | ***Outcomes****:*<br>• *Customer payment transaction has been investigated and reviewed.*<br>• *Payment is allocated, posted On account, or escalated to Collections where required.*<br>• *Settlement difference equals 0.00 before posting where settlement is completed.* |
@@ -987,7 +987,7 @@ Use this procedure to write off a small residual balance on a customer transacti
 ##### Responsibility
 
 - Receipting Officer: creates the write-off journal (WOJL), marks it ready for approval and notifies the approver.
-- Approver (Chris Clarke or Arash Najafi): approves the write-off journal.
+- Approver (Group Billing and Credit Manager or Collections Manager): approves the write-off journal.
 
 ##### Initiation
 
@@ -999,20 +999,20 @@ Complete these steps to write off a bank fee or small residual:
 
 | **Action** | **Description** |
 |---|---|
-| *PROCESS START* (light blue) | Pre-requisites:<br>• The residual amount and its cause are known: a bank fee, a foreign exchange difference, or an over or short payment.<br>• You have write-off access. If you cannot create a write-off, contact the BAU Support team to request it; Chris Clarke approves the request.<br>Responsibility:<br>• Receipting Officer |
+| *PROCESS START* (light blue) | Pre-requisites:<br>• The residual amount and its cause are known: a bank fee, a foreign exchange difference, or an over or short payment.<br>• You have write-off access. If you cannot create a write-off, contact the BAU Support team to request it; the Group Billing and Credit Manager approves the request.<br>Responsibility:<br>• Receipting Officer |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). |
 | 2. *Click* **Modules**. | From the left-hand **Navigation Pane**, click **Modules**. |
 | 3. *Navigate* to the **Aged balances** page. `[G221-16]` | From the **Navigation Pane**, *select*:<br>**Credit and collections >**<br>**Collections >**<br>**Aged balances** |
 | 4. *Select* the customer. | In the **Customer aging** list, select the customer account. |
 | 5. *Select* the open transaction. | In **Open transactions**, find the invoice or other open transaction with the residual, and click the line to select it. |
 | 6. *Click* **Write off**. `[G221-17]` | On the toolbar, click **Write off**. The write-off window opens. |
-| 7. *Select* the **Reason code**. | Select the reason code for the residual:<br>• BANK FEE<br>• FOREX<br>• OVER/SHORT<br>• SHORT PAY<br>• OVER PAY<br>Do not use PENNY DIFF. BADDEBTS is for Chris Clarke only.<br>Write-offs post to 540052 Discounts & write offs. |
+| 7. *Select* the **Reason code**. | Select the reason code for the residual:<br>• BANK FEE<br>• FOREX<br>• OVER/SHORT<br>• SHORT PAY<br>• OVER PAY<br>Do not use PENNY DIFF. BADDEBTS is for the Group Billing and Credit Manager only.<br>Write-offs post to 540052 Discounts & write offs. |
 | 8. *Confirm* the **Amount**. | Confirm the amount. For a partial write-off, change it to the amount to write off. |
 | 9. *Click* **OK**. | Click **OK**. D365 creates a write-off journal (WOJL) with the transaction marked for settlement. The transaction settles only when the journal posts; until then, the invoice shows as open. |
 | 10. *Open* the write-off journal. | Open the write-off journal D365 created, from the journal link or from **General journals**. |
 | 11. *Verify* the journal. | Check:<br>• The amount and the description.<br>• The ledger account: 540052 Discounts & write offs.<br>• Any required financial dimensions. |
 | 12. *Mark* the journal as ready for approval. | On the Main Toolbar, click **Approval** > **Report as ready**. The journal is marked as ready for approval. |
-| 13. *Notify* the approver. | Send a Teams message or an email to Chris Clarke or Arash Najafi asking them to review and approve the write-off journal. |
+| 13. *Notify* the approver. | Send a Teams message or an email to the Group Billing and Credit Manager or the Collections Manager asking them to review and approve the write-off journal. |
 | 14. *Confirm* the write-off in **Aged balances**. | Once the journal is approved, it posts automatically and the transaction settles. Return to **Customer aging** and click **Refresh**.<br>**Note:** A batch job updates aging balances every 10 minutes, so the write-off may not show straight away. |
 | *PROCESS COMPLETE* (light green) | Outcomes:<br>• The write-off journal is marked ready, and the approver is notified.<br>• Once the journal is approved, it posts and the transaction settles.<br>• The balance is cleared, or reduced for a partial write-off. |
 
@@ -1194,14 +1194,14 @@ Use this topic when a customer pays into the bank account of one legal entity fo
 
 ##### Description
 
-Direct debit receipts are recorded in their own journal, the direct debit customer payment journal (DD-CPJL). You create the journal from a payment proposal of the customers set up for direct debit, validate it and submit it for approval. Once it is approved, you send the direct debit file to the bank. Maria Pabalan, Arash Najafi, Chris Clarke or Zi Chen approves the DD-CPJL.
+Direct debit receipts are recorded in their own journal, the direct debit customer payment journal (DD-CPJL). You create the journal from a payment proposal of the customers set up for direct debit, validate it and submit it for approval. Once it is approved, you send the direct debit file to the bank.
 
 Setting up a customer for direct debit and handling failed or reversed direct debits are in [240 Direct Debit and Credit Card Payments](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/240-Direct%20Debit%20PG.pdf). The Collections team maintains customers' direct debit bank details in eBanking.
 
 ##### Responsibility
 
 - Receipting Officer: creates the DD-CPJL, submits it for approval and sends the direct debit file.
-- Approver (Maria Pabalan, Arash Najafi, Chris Clarke or Zi Chen): approves the DD-CPJL.
+- Approver (Group Billing and Credit Manager, Collections Manager, <mark>role to confirm</mark> or <mark>role to confirm</mark>): approves the DD-CPJL. `[G220-20]`
 
 ##### Initiation
 
@@ -1236,7 +1236,7 @@ Complete these steps to process direct debit customer payments:
 | 20. *Click* **Create payments.** | *Click* **Create payments**. The system generates the payment journal lines. |
 | 21. *Validate* the **Journal** | On the Main Toolbar, *click* **Validate** > **Validate direct debit** to check the journal for errors before posting. |
 | 22. *Review* **Exceptions***.* | If there are any Exceptions, *click* **Exception** **list** on the Main Toolbar. Remove or correct invalid lines before submission. |
-| 23. *Submit* for **Approval**. | On the Main Toolbar, *click* **Approval** > **Submit** to send the journal for approval.<br>The journal goes to the approvers: Maria Pabalan, Arash Najafi, Chris Clarke or Zi Chen. Approval is not immediate and may take time depending on the approver availability. |
+| 23. *Submit* for **Approval**. | On the Main Toolbar, *click* **Approval** > **Submit** to send the journal for approval.<br>The journal goes to the approvers listed under Responsibility. Approval is not immediate and may take time depending on the approver availability. |
 | 24. *Monitor* **Approval***.* | To monitor progress, on the Main Toolbar *click* **Workflow** > **History** and review the status e.g. Submitted, In review, Approved. |
 | 25. *Navigate* to the **Create and send direct debit** page*.* | Once the journal has been approved, navigate to:<br>• **Treasury Automation Suite** ><br>• **Periodic** ><br>• **Accounts receivable** ><br>• **Create and send direct debit**.<br>Create and send direct debit page is displayed. |
 | 26. *Select* the **Approved journal**. | Select the approved journal. |

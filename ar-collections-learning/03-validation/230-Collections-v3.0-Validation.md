@@ -5,8 +5,8 @@
 | Guide (editable source) | [`CLAUDE-230-Collections PG v3.1.docx`](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.1.docx) |
 | Review PDF | [`CLAUDE-230-Collections PG v3.0.pdf`](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.pdf) (out of date, D-064) |
 | Markdown preview | [`PG-230-Collections-v3.0-DRAFT.md`](../01-procedure-guides/PG-230-Collections-v3.0-DRAFT.md) |
-| Status | Working draft **v3.1** (D-092; versions below). **Maria Pabalan answered round 1 on 19 November** and the answers are applied (D-093), with the legacy 230 write-ins that waited for them; round 2 (one question, section 7) is ready on the board. v3.0 (D-052; ADO Task 16886): Shared with the SME for review only (SME review pack of 8 November; D-052 amendment); needs BPO sign-off. Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-063); no content or item changes. Review comments cut to one per open blocking item on 2026-11-17 (D-067, D-075). Round 1 rebuilt as three questions (D-085, section 6). Version 2.3, then 2.4, stays published until 3.0 passes its gates. |
-| Last updated | 2026-11-22 |
+| Status | Working draft **v3.1** (D-092; versions below). **Maria Pabalan answered round 1 on 19 November** and the answers are applied (D-093), with the legacy 230 write-ins that waited for them; round 2 (one question, section 7) was sent to Maria Pabalan in ADO 16886 on 22 November (board), and Q04 is marked in the guide as a placeholder so the review copy can go to the reviewers and the BPO (D-097). v3.0 (D-052; ADO Task 16886): Shared with the SME for review only (SME review pack of 8 November; D-052 amendment); needs BPO sign-off. Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-063); no content or item changes. Review comments cut to one per open blocking item on 2026-11-17 (D-067, D-075). Round 1 rebuilt as three questions (D-085, section 6). Version 2.3, then 2.4, stays published until 3.0 passes its gates. |
+| Last updated | 2026-11-23 |
 | Items | 12 guide-level items (`G230`): 2 open (both blocking: `G230-05`, `G230-15`) and 10 closed (`G230-06` to `G230-14`, `G230-16`). **63 Word review comments** (D-067): 3 guide-level and 60 carried from the topic drafts; 43 removed under D-067 (section 4.1), 11 when round 1 was rebuilt (section 6) and 20 when it was answered (section 6.3). Comments for items asked in round 2 start with the question number, for example *[Q04]*. |
 
 This file is the guide's **question log** (D-016). It holds the guide-level items, which are scoped to this guide and never renumbered. Review comments carried from the topic drafts keep their ID and draft name, for example *Aged Balances VG-03*, and their source register stays the record for them: an answer recorded there applies here (D-048). Each open item that affects the text is a Word review comment by "Validation register" (VR).
@@ -256,13 +256,13 @@ Maria's 220 answers (D-091) also apply here: payment corrections are Receipting 
 
 ## 7. Round 2 plan (D-085)
 
-Round 2 goes to Maria Pabalan with v3.1 and asks only what her round 1 answers left open: one question. Q05 (how to send a change to License Management) was dropped before sending: the guide does not name a channel (D-094). Pages come from Word's Contents, updated by Daniel in the v3.1 review copy on 22 November (D-089), less one page since the version history table was shortened (D-095); step pages keep their place within each subtopic. The board holds the question text.
+Round 2 went to Maria Pabalan with v3.1 in ADO 16886 on 22 November (Daniel Moreira, on the board) and asks only what her round 1 answers left open: one question. Q05 (how to send a change to License Management) was dropped before sending: the guide does not name a channel (D-094). Pages come from Word's Contents, updated by Daniel in the v3.1 review copy on 22 November (D-089), less one page since the version history table was shortened (D-095); step pages keep their place within each subtopic. The board holds the question text.
 
 ### 7.1 Asked in round 2
 
 | Question | Items | Where |
 |---|---|---|
-| Q04 Failed statement delivery (follows Q03) | `Statement Distribution VG-10` | 6.2.2 step 3 (p. 46) |
+| Q04 Failed statement delivery (follows Q03) | `Statement Distribution VG-10` (marked in the guide as a placeholder, D-097) | 6.2.2 step 3 (p. 46) |
 
 ### 7.2 Not asked
 
@@ -296,3 +296,5 @@ Round 2 goes to Maria Pabalan with v3.1 and asks only what her round 1 answers l
 | 2026-11-22 | `G230-16` closed by Daniel Moreira (D-094): specific clarification is not required, because officers pass changes to License Management through the channels they already use, and naming one could make another look wrong. Its review comment and the [Q05] tag are removed; the Important box in 2.7 stays as it is. Round 2 is now one question (Q04). Review comments 64 → 63. |
 | 2026-11-22 | Version history (D-095): rows 3.0 and 3.1 list Maria Pabalan, then Daniel Moreira, as authors, and rows 2.4, 3.0 and 3.1 have descriptions of a few words. The table no longer runs onto a second page, so every heading is one page earlier: the Contents carries Word's numbers less one, and round 2 Q04 is p. 46. |
 | 2026-11-22 | Links to other guides (D-096): the 20 references to 200 Customer Onboarding and Maintenance, 220 Customer Payments, 240 Direct Debit and 260 O2C Getting Started now link to their published files on the Training Hub. The four *Customer Payment Management* rows that said "See 220 topic …" now say "See 220 Customer Payments, topic …", and "(version 3.1)" is dropped from the reference to 220, since the link opens the published guide. No items change; the pages do not change. |
+| 2026-11-23 | Placeholder for the review cycle (D-097): 6.2.2 step 3 *Act on a failed delivery* (`Statement Distribution VG-10`, Q04) now ends with a note in the **ACTION: REVIEW REQUIREMENT Char** style, *The failed-delivery process is to be confirmed.* The pages do not change. |
+| 2026-11-23 | Round 2 marked sent on the board by Daniel Moreira: Q04 went to Maria Pabalan in ADO 16886 on 22 November with the v3.1 review copy. |
