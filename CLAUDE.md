@@ -65,7 +65,7 @@ A guide names roles, never individual people: **Group Billing and Credit Manager
 
 - This covers everything the reader sees: steps, Responsibility, Key concepts, tables and notes. The version history (authors, BPO) and notes to the author in the ACTION: REVIEW REQUIREMENT style may name people, as may the register and the board.
 - When a source or an SME names a person, write their role. If the role is not known, it is an action for the PG owner: an ACTION placeholder in the text, a register item and a review comment.
-- Known roles (Daniel Moreira, 23 November 2026): Christopher Clarke, **Group Billing and Credit Manager**; Arash Najafi, **Collections Manager**.
+- Known roles (Daniel Moreira, 23 November 2026): Christopher Clarke, **Group Billing and Credit Manager**; Arash Najafi, **Collections Manager**; Maria Pabalan, **Senior Collections Specialist**; Zi Chen, **Group Financial Controller**.
 - Before committing or sending a guide, search it for people's names.
 
 ## Security roles and access (D-083)
