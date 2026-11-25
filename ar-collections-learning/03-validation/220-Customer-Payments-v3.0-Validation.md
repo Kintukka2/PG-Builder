@@ -1,13 +1,13 @@
-# Validation Register: 220 Customer Payments v3.1 (working draft)
+# Validation Register: 220 Customer Payments v3.2 (working draft)
 
 | Field | Value |
 |---|---|
-| Guide (editable source) | [`CLAUDE-220-Customer Payments PG v3.1.docx`](../01-procedure-guides/CLAUDE-220-Customer%20Payments%20PG%20v3.1.docx) |
+| Guide (editable source) | [`CLAUDE-220-Customer Payments PG v3.2.docx`](../01-procedure-guides/CLAUDE-220-Customer%20Payments%20PG%20v3.2.docx) |
 | Review PDF | [`CLAUDE-220-Customer Payments PG v3.0.pdf`](../01-procedure-guides/CLAUDE-220-Customer%20Payments%20PG%20v3.0.pdf) (out of date since 2026-11-17, D-064) |
 | Markdown preview | [`PG-220-Customer-Payments-v3.0-DRAFT.md`](../01-procedure-guides/PG-220-Customer-Payments-v3.0-DRAFT.md) |
-| Status | Working draft **v3.1** (D-092; versions below). v3.0 (D-055) consolidates version 2.1 and 221 Customer Payment Corrections v0.1. Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-062); no content or item changes. Review comments cut to one per open blocking item on 2026-11-17 (D-067, D-074). Three items closed on 2026-11-18 (roles confirmed and Part 3 kept as a quick-access summary, D-081; no security roles in guides, D-083). Round 1 rebuilt as seven questions (D-085, section 7) and sent to Maria Pabalan in ADO Task 16993 on 18 November, with the review copy. **Maria answered round 1 on 19 November** (section 7.3) and the answers are applied (D-091): Receipting Officers are the audience again, as in v2.1; the direct debit customer payment journal is topic 6; a copy-paste method is 2.4; 3.5 covers overpayments only; write-offs follow the manual approval. Round 2 (three questions, section 8) was sent to Maria Pabalan in ADO Task 16993 on 23 November with the review copy, and the same copy went to Christopher Clarke (BPO) and Ken Lee so they can start the sign-off review while round 2 is open; the round 2 items are marked as placeholders (D-097). Needs BPO sign-off. Version 2.1 stays published until 3.0 passes its gates. |
-| Last updated | 2026-11-24 |
-| Items | 20 guide-level items (`G220`): 10 open (7 blocking, 3 non-blocking) and 10 closed (`G220-02` to `G220-09`, `G220-12`, `G220-20`). **29 Word review comments** (D-067): 12 guide-level and 17 carried from 221 v0.1; 70 removed under D-067 (section 4.1), 9 when their items closed before round 1 (sections 6.1 and 7) and 21 when round 1 was answered (section 7.3). Comments for items asked in round 2 start with the question number, for example *[Q08]*. |
+| Status | Working draft **v3.2** (D-092; versions below). v3.0 (D-055) consolidates version 2.1 and 221 Customer Payment Corrections v0.1. Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-062); no content or item changes. Review comments cut to one per open blocking item on 2026-11-17 (D-067, D-074). Three items closed on 2026-11-18 (roles confirmed and Part 3 kept as a quick-access summary, D-081; no security roles in guides, D-083). Round 1 rebuilt as seven questions (D-085, section 7) and sent to Maria Pabalan in ADO Task 16993 on 18 November, with the review copy. **Maria answered round 1 on 19 November** (section 7.3) and the answers are applied (D-091): Receipting Officers are the audience again, as in v2.1; the direct debit customer payment journal is topic 6; a copy-paste method is 2.4; 3.5 covers overpayments only; write-offs follow the manual approval. Round 2 (three questions, section 8) was sent to Maria Pabalan in ADO Task 16993 on 23 November with the review copy, and the same copy went to Christopher Clarke (BPO) and Ken Lee so they can start the sign-off review while round 2 is open; the round 2 items are marked as placeholders (D-097). **Maria answered round 2 on 24 November** (section 8.3) and the answers are applied in v3.2: Q09 and Q10 closed; Q08 gave when to use the copy-paste method, and its steps wait for her recording; her Q10 wording opens `G220-21` (who writes off a bank fee). Needs BPO sign-off. Version 2.1 stays published until 3.0 passes its gates. |
+| Last updated | 2026-11-25 |
+| Items | 21 guide-level items (`G220`): 9 open (6 blocking, 3 non-blocking) and 12 closed (`G220-02` to `G220-09`, `G220-12`, `G220-16`, `G220-17`, `G220-20`). **28 Word review comments** (D-067): 11 guide-level and 17 carried from 221 v0.1; 70 removed under D-067 (section 4.1), 9 when their items closed before round 1 (sections 6.1 and 7), 21 when round 1 was answered (section 7.3) and 2 when round 2 was answered (section 8.3). Round 2 is answered; the comment for `G220-21` starts with *[Q11]*, its question in round 3 (drafted on the board). |
 
 This file is the guide's **question log** (D-016). It holds the guide-level items, which are scoped to this guide and never renumbered. Review comments carried from 221 keep their ID, for example *CPJ-14* or *G221-07*, and their source register stays the record for them: an answer recorded there applies here (D-048). Each open item that affects the text is a Word review comment by "Validation register" (VR).
 
@@ -21,6 +21,17 @@ Each version that goes out for review keeps its number; when a round of answers 
 |---|---|---|---|
 | 3.0 | 10 to 18 November 2026 | Maria Pabalan, with round 1 (ADO Task 16993, 18 November) | v2.1 rebuilt in the master template and consolidated with 221 Customer Payment Corrections (D-055); Collections Officer roles; settlement methods in topic 2; direct debit linked to 240. Review comments cut to one per open blocking item (D-067, D-074); round 1 rebuilt under D-085. |
 | 3.1 | 22 to 23 November 2026 | Maria Pabalan, with round 2 (ADO Task 16993, 23 November); Christopher Clarke and Ken Lee, for an early sign-off review (23 November, D-097) | Maria's round 1 answers applied (D-091). What changed is listed below. |
+| 3.2 | 25 November 2026 | Not sent yet | Maria's round 2 answers applied. What changed is listed below. |
+
+### What changed in v3.2
+
+From Maria Pabalan's round 2 answers (ADO Task 16993, 24 November 2026; section 8.3).
+
+- **Bank fee on a bank statement payment (Q10):** the bank-fee row in 2.1.3 step 37 now has the officer write the fee off with the BANK FEE reason code and submit it for approval (3.6). The lines that notified the Financial accountant and left the fee for bank reconciliation, and the placeholder, are gone. The Troubleshooting rows *Settlement Difference not equal to 0.00* and *Bank fee identified after posting* point to 3.6 the same way, in place of the Financial accountant adjustment and the adjustment journal.
+- **Reversing a write-off posted in error (Q09):** topic 3 Description says to reverse the original write-off journal (WOJL) with the same steps as 3.2 Reverse a Customer Payment Journal, with no approval; the placeholder is gone. 3.2 says the same steps reverse a WOJL posted in error, in its Description, Responsibility and Initiation.
+- **Copy-paste method (Q08):** 2.4 and its row in *Which method to use* now say when to use it: posting several receipts at once from the receipting spreadsheet, mainly for entities whose bank account is held in another entity (for example Editrade, held in SoftCargo Chile). The steps follow from Maria's recording; the ACTION note says so.
+- **Version history:** a 3.2 row (Maria Pabalan; Daniel Moreira; *SME round 2 answers (draft)*).
+- **Records:** `G220-16` and `G220-17` closed; `G220-21` opened (who writes off a bank fee); review comments 29 → 28. The pages do not change.
 
 ### What changed in v3.1
 
@@ -82,33 +93,34 @@ From Maria Pabalan's round 1 answers (ADO Task 16993, 19 November 2026; section 
 | G220-11 | Add the intercompany (ICO) payment steps from Maria Pabalan's session with Amy on Friday 6 November 2026 (recording). Confirm the example legal entities (101a and 238a). | Topic 5 Process Intercompany Customer Payments | N | Rec | Open |
 | G220-12 | Complete Part 3 Reports. The five reports carried from version 2.1 have names and navigation paths but no description, and version 2.1 highlighted the Part 3 heading for review. For each report, describe what it shows, when Collections Officers use it and the check it supports, and confirm its navigation path in current D365 (the paths mix Inquiries and Enquiries). Confirm whether all five reports belong in this guide. | Part 3 Reports | B | SME, Test | Closed 2026-11-18 (scope decision, Daniel Moreira; D-081): Part 3 is a quick-access summary so Collections Officers can run the reports easily. How and when each report is used is up to the officer, so the guide does not describe it. The path check moves to `G220-13`. |
 | G220-13 | Check the five report paths in Part 3 in current D365: they mix *Inquiries and Reports* and *Enquiries and Reports*. | Part 3 Reports | N | Test | Open |
-| G220-14 | Add the copy-paste method: payment lines pasted into a CPJL in bulk. Maria Pabalan, round 1 (ADO 16993, 19 November 2026) asked for it as its own method, with when to use it. The steps and when to use it are not in any source. | 2.4 Paste Payment Lines into a Customer Payment Journal | B | SME | Open: round 2, Q08 |
+| G220-14 | Add the copy-paste method: payment lines pasted into a CPJL in bulk. Maria Pabalan, round 1 (ADO 16993, 19 November 2026) asked for it as its own method, with when to use it. The steps and when to use it are not in any source. | 2.4 Paste Payment Lines into a Customer Payment Journal | B | SME | Open: round 2, Q08 answered in part. Maria Pabalan (24 November 2026) gave when to use the method, now in 2.4 and the *Which method to use* table, and will record the steps; add them from her recording. |
 | G220-15 | Confirm in D365 how a note is added on the customer's **Collections** page (the path and the control). The round 1 answers add such a note in 3.1 (the reason for undoing a settlement), 3.3.3, 3.4.3 and 3.5.2 (voucher, amount, currency, reason and where the evidence is). Legacy 230 opens the Collections page by clicking the customer name in Aged balances. | 3.1 step 12 | B | Test | Open |
-| G220-16 | Add the steps to reverse a write-off journal (WOJL) posted in error. Maria Pabalan, round 1 (ADO 16993, 19 November 2026): reverse the original WOJL, with no approval; not 3.5 or a new journal. | Topic 3 Description | B | SME | Open: round 2, Q09 |
-| G220-17 | 2.1.3 step 37 (v2.1) settles the invoice and leaves a bank fee for the Financial accountant to post during bank reconciliation; 3.6 has the officer write off a bank fee with the BANK FEE reason code, which Maria Pabalan, round 1 (ADO 16993, 19 November 2026) lists for officers. Confirm which applies to a bank fee deducted from a bank statement payment. | 2.1.3 step 37 | B | SME | Open: round 2, Q10. Marked in the guide as a placeholder (D-097) |
+| G220-16 | Add the steps to reverse a write-off journal (WOJL) posted in error. Maria Pabalan, round 1 (ADO 16993, 19 November 2026): reverse the original WOJL, with no approval; not 3.5 or a new journal. | Topic 3 Description | B | SME | Closed 2026-11-25 (Q09): Maria Pabalan, round 2 (ADO 16993, 24 November 2026): the same steps as 3.2 Reverse a Customer Payment Journal. Topic 3 Description links to 3.2, and 3.2 covers a WOJL posted in error. |
+| G220-17 | 2.1.3 step 37 (v2.1) settles the invoice and leaves a bank fee for the Financial accountant to post during bank reconciliation; 3.6 has the officer write off a bank fee with the BANK FEE reason code, which Maria Pabalan, round 1 (ADO 16993, 19 November 2026) lists for officers. Confirm which applies to a bank fee deducted from a bank statement payment. | 2.1.3 step 37 | B | SME | Closed 2026-11-25 (Q10): Maria Pabalan, round 2 (ADO 16993, 24 November 2026): 3.6 applies; the fee is written off with the BANK FEE reason code and submitted for approval. Step 37 and two Troubleshooting rows now point to 3.6; the placeholder is removed. Her wording on who does it is `G220-21`. |
 | G220-18 | Topic 6 comes from v2.1 section 5 by way of 240 topic 2.1, where `G240-08` checks it against the 11 November direct debit recording. Check it there too, and have 240 topic 2.1 link to 220 topic 6 when 240 is next updated (D-091). | 6 Process Direct Debit Customer Payments | N | Rec | Open |
-| G220-19 | PG owner: add the link to the receipting spreadsheet, which the guide references without one (D-096), or record that it is an internal working file the guide does not link. | 2.1.3 step 21; Part 1 *Collections Investigation* | B | Owner | Open |
+| G220-19 | PG owner: add the link to the receipting spreadsheet, which the guide references without one (D-096), or record that it is an internal working file the guide does not link. | 2.1.3 step 21; Part 1 *Collections Investigation*; 2.4 Description, Initiation and *Which method to use* (from 25 November) | B | Owner | Open |
 | G220-20 | PG owner: give the role titles of Maria Pabalan and Zi Chen, who also approve the DD-CPJL (D-099: guides name roles, not people). | 6 Process Direct Debit Customer Payments (Responsibility) | B | Owner | Closed 2026-11-23: Daniel Moreira gave the roles, Maria Pabalan is the Senior Collections Specialist and Zi Chen the Group Financial Controller. Topic 6 names all four approver roles; the placeholders and the review comment are removed. |
+| G220-21 | Confirm who writes off a bank fee or small residual. Maria Pabalan's round 2 answer to Q10 (ADO 16993, 24 November 2026) says the Collections Officer writes the bank fee off and submits it for approval. Her round 1 answer made the Receipting Officer the role for customer payments, and 3.6 (Responsibility and procedure) and the note in 230 topic 7 name the Receipting Officer. | 3.6 Responsibility; also 2.1.3 step 37, Troubleshooting and 230 topic 7 (`G230-17`) | B | SME | Open: round 3, Q11 (draft) |
 
 ---
 
 ## 4. Review comments by section
 
-Every review comment in the Word guide, in document order, after D-067 (one comment per item, open blocking items only; D-074), as of 22 November 2026 (28 comments). IDs not starting `G220` are carried from 221 v0.1 and its topic drafts.
+Every review comment in the Word guide, in document order, after D-067 (one comment per item, open blocking items only; D-074), as of 25 November 2026 (28 comments). IDs not starting `G220` are carried from 221 v0.1 and its topic drafts.
 
 | Section | Items |
 |---|---|
 | Cover and version history | `G220-01` |
 | Part 1 Key concepts | `CPJ-16 to CPJ-20` |
-| Topic 2.1 Settle Bank Statement Payments | `G220-17` (2.1.3 step 37) |
+| Topic 2.1 Settle Bank Statement Payments | `G220-19` (2.1.3 step 21) |
 | Topic 2.3 Settle Open Customer Transactions | `G221-08`, `G221-09`, `G221-10` |
 | Topic 2.4 Paste Payment Lines into a Customer Payment Journal | `G220-14` |
-| Topic 3 Correct Customer Payments | `G220-16`, `G220-10` |
+| Topic 3 Correct Customer Payments | `G220-10` |
 | Topic 3.1 Undo a Settlement | `G221-12`, `G220-15` |
 | Topic 3.3 Transfer Funds Between Customer Accounts | `CPJ-01`, `CPJ-01 / CPJ-02`, `CPJ-03`, `CPJ-05`, `CPJ-06`, `CPJ-08`, `TF-04`, `CPJ-13`, `CPJ-14` |
 | Topic 3.4 Distribute a Parent Account Payment Across Child Accounts | `PC-03` |
 | Topic 3.5 Restore an Overpayment Amount | `CPJ-06`, `CPJ-10`, `CPJ-11` |
-| Topic 3.6 Write Off a Bank Fee or Small Residual | `G221-15`, `G221-16`, `G221-17` |
+| Topic 3.6 Write Off a Bank Fee or Small Residual | `G220-21` (Responsibility), `G221-15`, `G221-16`, `G221-17` |
 | Topic 5 Process Intercompany Customer Payments | `G220-11` |
 
 ### 4.1 Comments removed under D-067 (17 November 2026)
@@ -301,6 +313,29 @@ Round 2 went to Maria Pabalan with v3.1 in ADO Task 16993 on 23 November (Daniel
 
 ---
 
+### 8.3 Round 2 answers (Maria Pabalan, ADO Task 16993, 24 November 2026)
+
+Maria copied Ken Lee and Christopher Clarke, who have the v3.1 review copy (D-097).
+
+| Question | Answer | Applied in v3.2 | Items |
+|---|---|---|---|
+| Q08 Copy-paste method | She will record the steps. The method posts more than one receipt at a time, with the data from the receipting spreadsheet. It is mainly used for entities whose bank account sits in another entity: for example, Editrade's bank account is held in SoftCargo Chile, which is still in CW1. Hundreds of receipts a month are posted this way. | 2.4 Description and Initiation; the 2.4 row of *Which method to use*; the 2.4 ACTION note now waits for her recording | `G220-14` stays open (the steps) |
+| Q09 Reversing a write-off posted in error | The same steps as 3.2 Reverse a Customer Payment Journal. | Topic 3 Description (links to 3.2; placeholder removed); 3.2 Description, Responsibility and Initiation | `G220-16` closed |
+| Q10 Bank fee on a bank statement payment | 3.6 applies: the collections officer writes it off with the BANK FEE reason code and submits it for approval. | 2.1.3 step 37 bank-fee row (writes the fee off with 3.6; the Financial accountant lines and the placeholder are removed); Troubleshooting *Settlement Difference not equal to 0.00* and *Bank fee identified after posting*, the same case, which 3.6 covers as a residual bank fee | `G220-17` closed; `G220-21` opened |
+
+The answers were checked against the roles, approvals and reports they touch. The write-off approval in 3.6 (Group Billing and Credit Manager or Collections Manager) does not change, and Part 1 *Bank Fees* already sends an identifiable fee to 3.6. Q10 names the Collections Officer as the one who writes the fee off, where 3.6, round 1 and 230 topic 7 name the Receipting Officer: that is `G220-21`. 2.4 now mentions the receipting spreadsheet, so `G220-19` (its link) covers 2.4 too.
+
+### 8.4 Still open after round 2
+
+| Route | Items | What happens |
+|---|---|---|
+| Ask in round 3 (draft on the board) | `G220-21` | Q11: who writes off a bank fee or small residual. One question covers 230 too (`G230-17`). |
+| Maria Pabalan's recording | `G220-14` | The 2.4 steps; not asked again. |
+| PG owner | `G220-19` | The receipting spreadsheet link. |
+| Unchanged from section 8.2 | `G221-15`, `G220-15`, `G220-13`, the clean-session checks, `G220-10` and the AR Training Part 2 checks, `G220-18`, `G220-11`, `G220-01` | As in 8.2. |
+
+---
+
 ## 9. Change log
 
 | Date | Change |
@@ -325,3 +360,4 @@ Round 2 went to Maria Pabalan with v3.1 in ADO Task 16993 on 23 November (Daniel
 | 2026-11-23 | Placeholders for the review cycle (D-097): the bank-fee row in 2.1.3 step 37 (`G220-17`, Q10) now ends with a note in the **ACTION: REVIEW REQUIREMENT Char** style, *To be confirmed: this row, or a write-off with 3.6 Write Off a Bank Fee or Small Residual.* Q08 and Q09 were already marked. The pages do not change. |
 | 2026-11-23 | `G220-20` closed: Daniel Moreira gave the last two DD-CPJL approver roles, Maria Pabalan the **Senior Collections Specialist** and Zi Chen the **Group Financial Controller** (D-099). Topic 6 Responsibility now reads *Approver (Group Billing and Credit Manager, Collections Manager, Senior Collections Specialist or Group Financial Controller): approves the DD-CPJL.* The two placeholders and their review comment are removed: 29 comments. The pages do not change. |
 | 2026-11-24 | Round 2 sent (Daniel Moreira): Q08 to Q10 went to Maria Pabalan in ADO Task 16993 on 23 November with `REVIEW COPY-220-Customer Payments PG v3.1.docx`. The same copy went to Christopher Clarke and Ken Lee in the ticket for an early sign-off review, with a note that the red and yellow notes are open points and that minor formatting is fixed in the final end-to-end review (D-097). |
+| 2026-11-25 | Round 2 answered by Maria Pabalan (ADO Task 16993, 24 November) and applied as **v3.2** (D-092; section 8.3): the Word file is renamed `CLAUDE-220-Customer Payments PG v3.2.docx` and every link is updated; version history row 3.2. Q10: 2.1.3 step 37 and two Troubleshooting rows write a bank fee off with 3.6. Q09: topic 3 and 3.2 reverse a WOJL posted in error with the 3.2 steps. Q08: when to use 2.4; steps wait for her recording. `G220-16` and `G220-17` closed, `G220-21` opened, `G220-19` extended to 2.4; comments 29 → 28. Round 3 (Q11) drafted on the board. The pages do not change. The PDF is out of date (D-064). |
