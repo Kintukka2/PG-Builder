@@ -2,7 +2,7 @@
 
 > **WORKING DRAFT. Not validated or approved.**
 >
-> This is a Markdown preview of the Word guide [`CLAUDE-220-Customer Payments PG v3.1.docx`](CLAUDE-220-Customer%20Payments%20PG%20v3.1.docx). It consolidates version 2.1 and 221 Customer Payment Corrections v0.1 (D-055). **The Word file is the editable source.**
+> This is a Markdown preview of the Word guide [`CLAUDE-220-Customer Payments PG v3.2.docx`](CLAUDE-220-Customer%20Payments%20PG%20v3.2.docx). It consolidates version 2.1 and 221 Customer Payment Corrections v0.1 (D-055). **The Word file is the editable source.**
 >
 > Markers such as `[G220-14]` or `[CPJ-14]` show the open items that have a review comment in the Word file: one per open blocking item, at the place it matters most (D-067). The register lists every item, the non-blocking ones included, and where each applies. Guide-level items and the index of carried items are in the [validation register](../03-validation/220-Customer-Payments-v3.0-Validation.md). Notes marked **ACTION: REVIEW REQUIREMENT**, and <mark>highlighted</mark> phrases, are internal notes to the author (yellow in the Word file); they are removed before publication (D-060). The markers are not part of the guide text.
 
@@ -17,6 +17,7 @@ The fixed template content is not repeated here: cover, Contents, *About this gu
 | 2.1 | January 2026 | Suzanne Starr |   | Content Update (Formatting) |
 | 3.0 | November 2026 | Maria Pabalan; Daniel Moreira | Christopher Clarke | Template rebuild; 221 merged (draft) |
 | 3.1 | November 2026 | Maria Pabalan; Daniel Moreira | Christopher Clarke | SME round 1 answers (draft) |
+| 3.2 | November 2026 | Maria Pabalan; Daniel Moreira | Christopher Clarke | SME round 2 answers (draft) |
 
 ---
 
@@ -354,7 +355,7 @@ Use the method that fits where the payment is:
 | [2.1 Settle Bank Statement Payments](#21-settle-bank-statement-payments) | The payment came in on the bank statement. This is the default method: TAS matches most payments automatically. Work the lines it could not match, Blue (customer identified, On Account) or Red (not identified), using the alternate name and the payment reference. Green and Yellow payments need no action. |
 | [2.2 Record and Settle a Manual Payment Journal](#22-record-and-settle-a-manual-payment-journal) | Only when the transaction was not pushed into Process customer settlements, or the payment was received into a bank account that is not connected to TAS. Record it in a customer payment journal and settle it before you post. |
 | [2.3 Settle Open Customer Transactions](#23-settle-open-customer-transactions) | The payment is already on the customer account but not settled, for example On Account, and you now know which invoices or credits it pays. Settle it from the customer's Transactions page (Settlements > Settle transactions). |
-| [2.4 Paste Payment Lines into a Customer Payment Journal](#24-paste-payment-lines-into-a-customer-payment-journal) | Many payment lines must go into a customer payment journal at once: paste them in bulk instead of entering them one by one. <mark>When to use this method is to be confirmed.</mark> |
+| [2.4 Paste Payment Lines into a Customer Payment Journal](#24-paste-payment-lines-into-a-customer-payment-journal) | Several receipts must be posted at once from the receipting spreadsheet: paste the payment lines into a customer payment journal in bulk instead of entering them one by one. Mainly used for entities whose bank account is held in another entity. |
 | [6. Process Direct Debit Customer Payments](#6-process-direct-debit-customer-payments) | The payment is a direct debit receipt. Direct debit receipts use their own journal name, DD-CPJL. |
 
 > **Note:** To move a posted payment to another customer account, or to distribute a parent account payment to child accounts, see [3. Correct Customer Payments](#3-correct-customer-payments). A small difference between a payment and its invoices is written off with [3.6 Write Off a Bank Fee or Small Residual](#36-write-off-a-bank-fee-or-small-residual).
@@ -502,7 +503,7 @@ Complete these steps to Process Customer Settlement – Red Status (Customer or 
 | 34. *Check* for a **Tax** **invoice** **reference**. | *Review* the **open invoice list** displayed in the lower grid. If the narrative includes an invoice number, *select* the relevant invoice in the list. |
 | 35. *Allocate* the **Tax invoice.** | In the new line, *select* the **Tax invoice** from the dropdown list. The invoice balance will populate automatically. |
 | 36. *Enter* the **Settlement amount.** | In the **Transaction amount** fields, *enter* the **payment amount** to be applied to the invoice.<br>Confirm the invoice balance updates. |
-| 37. *Handle* **Payment Differences**. | Review the payment and invoice amounts to determine how the payment should be allocated or managed before settlement.<br>***If…***<br>***Then…***<br>*A matching invoice is identified and the amount matches*<br>• *Select the invoice and apply the full amount.*<br>*No invoice can be identified*<br>• *Leave the payment unallocated (On Account).*<br>*Customer identified but invoice cannot be confidently confirmed*<br>• *Leave payment On account.*<br>• *Post only if the customer account can be confidently confirmed.*<br>• *Refer to collections for allocation follow-up*<br>*Payment is less than the invoice (Short payment)*<br>• *Apply the amount received and leave the remaining balance open.*<br>*Payment is more than the invoice (Over payment)*<br>• *Settle the invoice and leave the remaining amount On account for future allocation.*<br>*Payment amount differs due to a bank fee deduction.* `[G220-17]`<br>• *Settle the invoice, do not create a ledger adjustment line.*<br>• *Notify the Financial accountant of the variance including:*<br>• *Customer account*<br>• *Invoice number*<br>• *Payment number*<br>• *Bank fee amount.*<br>*The Financial accountant will post the bank fee during the Bank Reconciliation process.* <mark>To be confirmed: this row, or a write-off with 3.6 Write Off a Bank Fee or Small Residual.</mark><br>*Payment amount differs and reason is unclear e.g. dispute, partial agreement.*<br>• *Do not adjust > refer to the Collections team.*<br>*Multiple invoices are included in one payment.*<br>• *In the Proposed settlement section, click +New to create a new line for each invoice.*<br>• *Select each invoice and enter the amount to be applied across the lines.* |
+| 37. *Handle* **Payment Differences**. | Review the payment and invoice amounts to determine how the payment should be allocated or managed before settlement.<br>***If…***<br>***Then…***<br>*A matching invoice is identified and the amount matches*<br>• *Select the invoice and apply the full amount.*<br>*No invoice can be identified*<br>• *Leave the payment unallocated (On Account).*<br>*Customer identified but invoice cannot be confidently confirmed*<br>• *Leave payment On account.*<br>• *Post only if the customer account can be confidently confirmed.*<br>• *Refer to collections for allocation follow-up*<br>*Payment is less than the invoice (Short payment)*<br>• *Apply the amount received and leave the remaining balance open.*<br>*Payment is more than the invoice (Over payment)*<br>• *Settle the invoice and leave the remaining amount On account for future allocation.*<br>*Payment amount differs due to a bank fee deduction.*<br>• *Settle the invoice, do not create a ledger adjustment line.*<br>• Write off the bank fee left on the invoice with the BANK FEE reason code and submit it for approval (see [3.6 Write Off a Bank Fee or Small Residual](#36-write-off-a-bank-fee-or-small-residual)).<br>*Payment amount differs and reason is unclear e.g. dispute, partial agreement.*<br>• *Do not adjust > refer to the Collections team.*<br>*Multiple invoices are included in one payment.*<br>• *In the Proposed settlement section, click +New to create a new line for each invoice.*<br>• *Select each invoice and enter the amount to be applied across the lines.* |
 | 38. *Validate* the **Difference**. | Scroll to the Header section at the top of the settlement form, *confirm* the **Difference** field equals 0.00 before posting<br>If it does not, review the settlement lines and adjust amounts until it balances. |
 | 39. *Click* **Post**. | *Click* **Post** to create the customer payment journal and generate a Voucher number. The red status updates confirming the payment has been processed.<br>**Note**: The screen will automatically display the next transaction. |
 | *PROCESS COMPLETE* (light green) | ***Outcomes****:*<br>• *Customer payment transaction has been investigated and reviewed.*<br>• *Payment is allocated, posted On account, or escalated to Collections where required.*<br>• *Settlement difference equals 0.00 before posting where settlement is completed.* |
@@ -623,7 +624,7 @@ Complete these steps to settle customer transactions:
 
 ##### Description
 
-Use this procedure to record many customer payments at once, by pasting the payment lines into a customer payment journal (CPJL) in bulk instead of entering them one by one.
+Use this procedure to record many customer payments at once, by pasting the payment lines into a customer payment journal (CPJL) in bulk instead of entering them one by one. The payment lines come from the receipting spreadsheet. The method is mainly used for entities whose bank account is held in another entity, for example Editrade, whose bank account is held in SoftCargo Chile.
 
 ##### Responsibility
 
@@ -631,11 +632,11 @@ Use this procedure to record many customer payments at once, by pasting the paym
 
 ##### Initiation
 
-- Many payment lines must be entered in a customer payment journal at once.
+- Several receipts must be posted at once from the receipting spreadsheet, usually for an entity whose bank account is held in another entity.
 
 ##### Procedure
 
-> **ACTION: REVIEW REQUIREMENT.** Being worked on. The steps, and when to use this method, will be added from the SME. `[G220-14]`
+> **ACTION: REVIEW REQUIREMENT.** Being worked on. The steps will be added from Maria Pabalan's recording. `[G220-14]`
 
 ### 3. Correct Customer Payments
 
@@ -645,7 +646,7 @@ Use these topics when a customer payment or settlement must be corrected after i
 
 A payment settled on the wrong customer account is corrected in three steps: undo the settlement ([3.1 Undo a Settlement](#31-undo-a-settlement)), transfer the funds to the correct account ([3.3 Transfer Funds Between Customer Accounts](#33-transfer-funds-between-customer-accounts)), then settle the payment against the correct invoices ([2.3 Settle Open Customer Transactions](#23-settle-open-customer-transactions)). Add a note on both accounts at each step.
 
-A write-off posted in error is corrected by reversing the original write-off journal (WOJL); no approval is needed. Do not use [3.5 Restore an Overpayment Amount](#35-restore-an-overpayment-amount) or a new journal for it. <mark>The reversal steps are to be confirmed.</mark> `[G220-16]`
+A write-off posted in error is corrected by reversing the original write-off journal (WOJL), with the same steps as [3.2 Reverse a Customer Payment Journal](#32-reverse-a-customer-payment-journal); no approval is needed. Do not use [3.5 Restore an Overpayment Amount](#35-restore-an-overpayment-amount) or a new journal for it.
 
 > **ACTION: REVIEW REQUIREMENT.** Topics 3.3 to 3.5 and the journal controls in Part 1 come from AI-generated notes of the AR Training D365 Part 2 session and have not been checked against the recording. Topics 2.3, 3.1 and 3.6 come from the legacy 230 Collections PG (v2.3, sections 6.5, 6.6 and 6.8), which is about a year old, and have not been checked against current D365. Do not use these topics on live customer accounts until their blocking items are closed. `[G220-10]`
 
@@ -715,15 +716,16 @@ Complete these steps to undo a settlement:
 
 ##### Description
 
-Use this procedure to reverse a posted customer payment journal: to correct an error, reopen the invoices it settled, and keep the financial and audit records accurate.
+Use this procedure to reverse a posted customer payment journal: to correct an error, reopen the invoices it settled, and keep the financial and audit records accurate. Use the same steps to reverse a write-off journal (WOJL) posted in error.
 
 ##### Responsibility
 
-- Receipting Officer: reverses customer payment journals posted in error.
+- Receipting Officer: reverses customer payment journals and write-off journals posted in error.
 
 ##### Initiation
 
 - A posted customer payment journal is wrong and must be reversed.
+- A write-off journal (WOJL) was posted in error.
 
 ##### Procedure
 
@@ -986,7 +988,7 @@ Use this procedure to write off a small residual balance on a customer transacti
 
 ##### Responsibility
 
-- Receipting Officer: creates the write-off journal (WOJL), marks it ready for approval and notifies the approver.
+- Receipting Officer: creates the write-off journal (WOJL), marks it ready for approval and notifies the approver. `[G220-21]`
 - Approver (Group Billing and Credit Manager or Collections Manager): approves the write-off journal.
 
 ##### Initiation
