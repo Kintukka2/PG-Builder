@@ -1,6 +1,6 @@
 # D365 F&O Getting Started: discovery map
 
-> **Discovery output, 26 November 2026.** Not a guide draft. It maps what Microsoft documents and teaches about getting started in Dynamics 365 finance and operations apps, and proposes the topics for a **D365 F&O Getting Started PG** for finance end users in every stream (O2C, P2P, R2R, Tax). The decisions in [section 6](#6-decisions-for-the-pg-owner) come first: the outline in section 3 is a proposal until they are made.
+> **Discovery output, 26 November 2026.** Not a guide draft. It maps what Microsoft documents and teaches about getting started in Dynamics 365 finance and operations apps, and proposes the topics for a **D365 F&O Getting Started PG** for finance end users in every stream (O2C, P2P, R2R, Tax). **Decided 26 November 2026** (section 6): two guides, *D365 F&O Getting Started* for all D365 users and *D365 Finance Basics* for finance users, codes from the 100 series later, 260 unchanged, Copilot and AI out. How the outline below splits between the two guides is in the [project notes](Project-Context-and-Decisions.md#1-the-two-guides).
 
 ## 1. What was researched
 
@@ -131,18 +131,19 @@ These are not applied to 260: 260 is with the SME for final approval. They can g
 
 ## 6. Decisions for the PG owner
 
-| # | Decision | Options | What the research says |
-|---|---|---|---|
-| D1 | **Code** | Rename 260 into the shared guide; or a new code for a shared guide (like 398 and 399) | The O2C suite plan says a Getting Started guide wanted by other streams becomes one shared guide with one code. The register has no cross-stream Getting Started family yet; the register owner allocates it. |
-| D2 | **260 O2C Getting Started** | Absorb 260 into the shared guide (260 withdrawn or kept as its predecessor); or keep 260 as the O2C role layer (pages, columns, views for O2C) | All of 260's general content is in the outline. D-084 says 260 teaches Favorites; that moves with the topic. |
-| D3 | **Size** | One guide in two halves; or two guides (system skills, finance basics) | See section 3, *Size*. |
-| D4 | **AI features** | In scope (Copilot, summaries, Immersive Home); out of scope; or a short note only | Copilot is visible on every page and some summaries are on by default, but Copilot answers from Microsoft docs, not our process. |
-| D5 | **Audience and initiation** | All finance end users; or all D365 users (finance and operations) | The research assumed finance users in all four streams. |
-| D6 | **Board card and ADO ticket** | Add a card in Initial Ticket Created when the ticket exists | Not created: there is no ticket or code yet. |
+Made on 26 November 2026 and recorded in the [project notes](Project-Context-and-Decisions.md#2-decisions-log):
+
+| # | Decision | Outcome |
+|---|---|---|
+| D1 | Code | The 100 series, for high-level and general guides, once 460 to 462 are approved and the legacy 100 documents retired. No code until then (D-102). |
+| D2 | 260 O2C Getting Started | Stays as it is; revisited after the new guides are approved (D-103). |
+| D3 | Size | Two guides: *D365 F&O Getting Started* and *D365 Finance Basics* (D-101). |
+| D4 | AI features | Out of both guides; research parked; possibly a third guide (D-104). |
+| D5 | Audience | Getting Started for all D365 users; Finance Basics for finance users (D-101). |
+| D6 | Board cards | Three cards created; the user creates the ADO tickets (D-105). |
 
 ## 7. Next steps
 
-1. You make decisions D1 to D6.
-2. The code is allocated in the register, and the card goes on the board.
-3. Claude drafts v0.1 in the master template from this map, with an ACTION: REVIEW REQUIREMENT note and register item for every point in section 5 that the clean-session test or IT must confirm.
-4. The clean-session test confirms the labels and gives the guide's own screenshots.
+1. The user creates the ADO tickets, and Claude adds them to the cards.
+2. Claude drafts v0.1 of each guide in the master template from this map, with an ACTION: REVIEW REQUIREMENT note and register item for every point in section 5 that the clean-session test or IT must confirm.
+3. The clean-session test confirms the labels and gives the guide's own screenshots.
