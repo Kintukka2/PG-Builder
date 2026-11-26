@@ -8,7 +8,8 @@
 | Tickets | ADO [15454](https://dev.azure.com/wtg-finance/Atlas%20D365/_workitems/edit/15454) *PG Creation - D365 F&O Getting Started*; ADO [15455](https://dev.azure.com/wtg-finance/Atlas%20D365/_workitems/edit/15455) *PG Creation - D365 Finance Basics* (an older ticket from 6 July 2026, renamed; related to 15456 *WTA Creation - Finance Foundations*) |
 | Roles | BPO and PG approver: Ken Lee, for both. Source: Microsoft documentation and Daniel Moreira (Getting Started); Ken Lee (Finance Basics) (D-106) |
 | Board | [PG Builder Board](https://claude.ai/artifact/5GPzzPrEYyUSAn12EBgWLf): `g-d365-getting-started`, `g-d365-finance-basics`, `g-d365-ai-features` (D-105) |
-| Last updated | 2026-11-26 |
+| Drafts | D365 F&O Getting Started **v0.1** (27 November 2026): [Word](../01-procedure-guides/CLAUDE-TBC-D365%20F%26O%20Getting%20Started%20PG%20v0.1.docx) · [Preview](../01-procedure-guides/PG-D365-FO-Getting-Started-DRAFT.md) · [Register](../03-validation/D365-FO-Getting-Started-Validation.md) |
+| Last updated | 2026-11-27 |
 
 Decision IDs continue the repository sequence, so they never clash with the other logs ([AR decisions](../../ar-collections-learning/05-project-notes/Project-Context-and-Decisions.md), [GL decisions](../../gl-cw1-migration-learning/05-project-notes/Project-Context-and-Decisions.md)).
 
@@ -42,4 +43,4 @@ The topic lists are proposals for drafting; the subtopics are in the discovery m
 |---|---|---|
 | 1 | ADO ticket for the parked AI guide, if it goes ahead (D-104) | User |
 | 2 | Codes in the 100 series, when 460 to 462 are approved (D-102) | Register owner |
-| 3 | The points in the discovery map, section 5: the clean-session test and the configuration questions for IT | Claude (test plan), user (IT) |
+| 3 | The open items of Getting Started v0.1 ([register](../03-validation/D365-FO-Getting-Started-Validation.md), section 3): the clean-session test and the configuration questions for IT | Claude (test plan), user (IT) |
