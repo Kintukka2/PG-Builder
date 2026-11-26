@@ -5,6 +5,8 @@
 | Topic | Shared D365 skills and finance basics for every D365 user, in every stream (O2C, P2P, R2R, Tax) |
 | Guides | **D365 F&O Getting Started** (all D365 users) and **D365 Finance Basics** (finance users), both planned, no code yet (D-101, D-102). A third guide on Copilot and AI features is parked (D-104). |
 | Discovery | [Discovery map](Discovery-Map.md), 26 November 2026, with the research in [`discovery/`](discovery/) |
+| Tickets | ADO [15454](https://dev.azure.com/wtg-finance/Atlas%20D365/_workitems/edit/15454) *PG Creation - D365 F&O Getting Started*; ADO [15455](https://dev.azure.com/wtg-finance/Atlas%20D365/_workitems/edit/15455) *PG Creation - D365 Finance Basics* (an older ticket from 6 July 2026, renamed; related to 15456 *WTA Creation - Finance Foundations*) |
+| Roles | BPO and PG approver: Ken Lee, for both. Source: Microsoft documentation and Daniel Moreira (Getting Started); Ken Lee (Finance Basics) (D-106) |
 | Board | [PG Builder Board](https://claude.ai/artifact/5GPzzPrEYyUSAn12EBgWLf): `g-d365-getting-started`, `g-d365-finance-basics`, `g-d365-ai-features` (D-105) |
 | Last updated | 2026-11-26 |
 
@@ -32,12 +34,12 @@ The topic lists are proposals for drafting; the subtopics are in the discovery m
 | D-103 | 2026-11-26 | **260 O2C Getting Started stays as it is.** O2C users use 260 until the new guides have been reviewed and approved; the decision on 260 is then revisited. This defers the archiving in D-098. | User (decision 2) | Adopted |
 | D-104 | 2026-11-26 | **Copilot and AI features are out of both guides.** The research stays in [`discovery/D-workflow-help-copilot.md`](discovery/D-workflow-help-copilot.md) (Copilot sidecar, summaries on by default, Immersive Home, finance agents, licensing). If the content becomes needed, it can be a third guide; its card is parked in Blocked. | User (decision 4) | Adopted |
 | D-105 | 2026-11-26 | **The cards come before the tickets.** The board gets three cards now: the two guides in Initial Ticket Created and the parked AI guide in Blocked. The user creates an ADO ticket to match each card, and Claude adds the ticket numbers when they come. This replaces D-098's "no card until it is ticketed" for these guides. | User (decision 6) | Adopted |
+| D-106 | 2026-11-26 | **Ken Lee is the BPO and PG approver for high-level D365 guides.** That covers both guides here. The SMEs are a mix of people: for D365 F&O Getting Started the content comes mainly from Microsoft's documentation, with Daniel Moreira confirming it; for D365 Finance Basics Ken Lee is the SME for now, as he is likely to provide most of the finance content. The tickets are ADO 15454 (Getting Started) and 15455 (Finance Basics). | User ("Ken Lee can be the BPO and approver for any high-level D365 PG") | Adopted |
 
 ## 3. Open items
 
 | # | Item | Owner |
 |---|---|---|
-| 1 | ADO tickets for the three cards | User |
+| 1 | ADO ticket for the parked AI guide, if it goes ahead (D-104) | User |
 | 2 | Codes in the 100 series, when 460 to 462 are approved (D-102) | Register owner |
 | 3 | The points in the discovery map, section 5: the clean-session test and the configuration questions for IT | Claude (test plan), user (IT) |
-| 4 | BPO, PG approver and SME for each guide | User |
