@@ -77,7 +77,7 @@ The high-level Collections process is as follows:
 
 ##### Overview
 
-<mark>The roles come from legacy 230 and the topic drafts.</mark> For 7.4, the Collections Officer requests the write-off by email to the Group Billing and Credit Manager, who creates the write-off journal once the request is approved.
+For 7.4, the Collections Officer requests the write-off by email to the Group Billing and Credit Manager, who creates the write-off journal once the request is approved.
 
 | **Tasks / Business Roles** | Collections Officer | Group Billing and Credit Manager |
 |---|---|---|
@@ -733,7 +733,7 @@ Collections Officers update a customer's contact details when the customer sends
 
 ##### Description
 
-Direct debit and credit card details are maintained in [240 Direct Debit and Credit Card Payments](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/240-Direct%20Debit%20PG.pdf), topic 1 Maintain a Customer's Direct Debit Details. <mark>This topic stays here as the way in from Collections (D-053).</mark>
+Direct debit and credit card details are maintained in [240 Direct Debit and Credit Card Payments](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/240-Direct%20Debit%20PG.pdf), topic 1 Maintain a Customer's Direct Debit Details.
 
 Customer alternate names for payment matching are maintained by the receiving team ([220 Customer Payments](https://wisetechglobal.sharepoint.com/sites/Atlas/Training/D365%20Procedure%20Guides/220-Customer%20Payments%20PG.pdf)).
 
