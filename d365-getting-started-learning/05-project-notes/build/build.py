@@ -6,7 +6,7 @@ from pgxml import D, esc
 SRC = '/home/user/PG-Builder/ar-collections-learning/01-procedure-guides/CLAUDE-230-Collections PG v3.1.docx'
 OUT = sys.argv[1]
 B = os.path.dirname(os.path.abspath(__file__))
-work = os.path.join(B, 'work'); shutil.rmtree(work, ignore_errors=True)
+import tempfile; work = tempfile.mkdtemp()
 with zipfile.ZipFile(SRC) as z: z.extractall(work)
 
 num = open(f'{work}/word/numbering.xml').read()

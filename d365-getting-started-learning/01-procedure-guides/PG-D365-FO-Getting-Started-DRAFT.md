@@ -96,9 +96,9 @@ Every procedure in this guide and in the process guides uses these names. Learn 
 
 | Element | Where it is | What it is for |
 |---|---|---|
-| **Navigation bar** | The bar across the top of the screen | Holds **Search for a page**, the legal entity selector (company picker), the **Action center** (bell), **Settings** (gear), **Help & Support** (?) and your initials. |
+| **Navigation bar** | The bar across the top of the screen | Holds the legal entity selector (it shows the active ledger code, for example **100A**), **Search for a page** (magnifying glass), the **Action center** (bell), **Settings** (gear), **Help & Support** (?) and your initials. |
 | **Navigation Pane** | The pane on the left | Opens any page: **Home**, **Favorites**, **Recent**, **Workspaces** and **Modules**. |
-| **Dashboard** | The first page after you sign in | Shows workspace tiles and your **Work items assigned to me**. Return to it from the **Home** button in the **Navigation Pane**. |
+| **Dashboard** | The first page after you sign in | Shows a calendar, your **Work items assigned to me**, and tiles for apps and workspaces. Return to it from the **Home** button in the **Navigation Pane**. |
 | **Workspace** | Opened from a tile or from **Workspaces** | An activity page for one area of work: summary tiles with counts, tabbed lists and links to related pages. |
 | **Action Pane** | The bar below the navigation bar, on every page | Holds the buttons and tabs for the page, such as **Edit**, **New**, **Delete** and **Options**, and **Action search**. |
 | **Message bar** | Below the Action Pane | Shows information, warnings and errors about the page you are on. |
@@ -219,7 +219,7 @@ A filter with a fixed date keeps that date in a saved view for ever. A relative 
 | **Export to Excel (Export all rows)** | A one-off copy of the grid as it is shown: the same columns, filter and values. It cannot be refreshed or sent back to D365. | You need the data for analysis or a report outside D365. |
 | **Open in Excel** | A live workbook linked to D365 through the Microsoft Dynamics Office Add-in. You can refresh it, and change rows and publish them back. | Your process guide tells you to update records from Excel. |
 
-> **Important:** Exported files can hold confidential company and customer data. Keep them in an approved WiseTech Global location and delete them when you no longer need them. `[GS-19]`
+> **Important:** Exported files can hold confidential company and customer data. Keep them in an approved WiseTech Global location and delete them when you no longer need them. `[[Q01] GS-19: Confirm]`
 
 ##### Report destinations
 
@@ -247,28 +247,40 @@ A workflow routes a document, such as a journal or a vendor invoice, to the peop
 
 ##### Keyboard shortcuts
 
-Press **Alt+Shift+K** on any page to see the shortcuts for that page. `[GS-07]`
+To see the shortcuts for a page, right-click anywhere on the page and select **View shortcuts**. The list groups them under **Navigate**, **Act on data**, **Close** and **Other**. Pressing **Alt+Shift+K** shows a similar list that starts with **Shortcuts for selected element**: it changes with the part of the page you are on. **View all product shortcuts** opens Microsoft’s full list.
 
-| Task | Shortcut |
+| Shortcut | What it does (as D365 labels it) |
 |---|---|
-| **Search for a page** | Ctrl+/ or Alt+G |
-| **Action search** | Alt+Q |
-| **Go to the dashboard** | Alt+Shift+Home |
-| **Move to the legal entity selector** | Ctrl+Shift+O |
-| **Edit mode on or off** | F2 |
-| **New record** | Alt+N |
-| **Save** | Alt+S or Ctrl+S |
-| **Delete** | Alt+Del |
-| **Revert unsaved changes** | Ctrl+Shift+F5 |
-| **Refresh** | Shift+F5 |
-| **Open a lookup or date picker** | Alt+Down arrow |
-| **Session date / today in a date field** | D / T |
-| **Open the Filter pane** | Ctrl+F3 |
-| **Filter the current column** | Ctrl+G |
-| **Export to Excel** | Ctrl+Shift+E |
-| **Attach a document** | Ctrl+Shift+A |
-| **Go to the message bar** | Ctrl+F7 |
-| **Close the page** | Esc |
+| **Alt+G** | Search for a page |
+| **Alt+Q** | Search for an action |
+| **Ctrl+Shift+O** | Change company (legal entity) |
+| **Alt+Shift+Home** | Go to the dashboard |
+| **Alt+F1** | Open navigation pane |
+| **F2** | Switch to edit mode |
+| **Alt+N** | Create a new record |
+| **Alt+S** | Save record |
+| **Alt+Delete** | Delete record |
+| **Ctrl+Shift+F5** | Revert any changes |
+| **Shift+F5** | Refresh data |
+| **Ctrl+Shift+M** | Select or clear all rows |
+| **Ctrl+Shift+G / Ctrl+Shift+D** | Switch to grid view / details view |
+| **Alt+M, F** | Go to the filter pane |
+| **Ctrl+Shift+F3** | Open advanced filtering and sorting options |
+| **Ctrl+Shift+P** | Personalize this page |
+| **Ctrl+Shift+E** | Export to Excel |
+| **Ctrl+Shift+F7** | Open message center |
+| **Esc** | Close the page |
+| **Shift+Esc** | Save changes and close the page |
+| **Alt+Shift+Q** | Close the page and discard any unsaved changes |
+
+These shortcuts work inside a field or a grid: `[GS-07]`
+
+| Shortcut | What it does |
+|---|---|
+| **Ctrl+G** | Filter the current grid column |
+| **Alt+Down arrow** | Open a lookup or date picker |
+| **T / D** | In a date field: today / the session date |
+| **Ctrl+Shift+A** | Attach a document to the record |
 
 ---
 
@@ -316,7 +328,7 @@ Complete these steps to sign in to D365:
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• Your manager has requested your D365 profile.<br>• A supported browser, such as Microsoft Edge.<br>Responsibility:<br>• D365 End-user |
 | 1. *Open* your browser. | Open Microsoft Edge (recommended) or another supported browser. |
-| 2. *Enter* the **D365 URL**. `[GS-04]` | Enter the D365 address in the address bar: https://wtg.operations.dynamics.com. <mark>Confirm the address and whether users open D365 from a bookmark or the Atlas site.</mark> |
+| 2. *Enter* the **D365 URL**. `[GS-04]` | Enter the D365 address in the address bar: https://wtg.operations.dynamics.com/. Add it to your browser favorites so you can open it quickly. |
 | 3. *Sign in* with your work account. | Sign in with your WiseTech Global email address and password, and approve the sign-in request if one is shown. |
 | 4. *Confirm* the **Dashboard** is displayed. | D365 opens on the dashboard, or on the initial page set in your user options, in your default legal entity. |
 | 5. *Select* your initials to sign out. | When you finish, select your initials at the right of the navigation bar, then select **Sign out**. Save your work first. |
@@ -381,7 +393,7 @@ Complete these steps to change the session date:
 | 5. *Reset* the session date when you finish. | Repeat steps 1 to 4 with today’s date, or sign out, so later work is not dated by mistake. |
 | *PROCESS COMPLETE* | Outcomes:<br>• D365 uses the date you entered as the default date for the rest of the session. |
 
-> **Important:** A wrong session date gives new journals and documents the wrong date. Change it only when your process guide tells you to, and reset it as soon as you finish. `[GS-06]`
+> **Important:** A wrong session date gives new journals and documents the wrong date. Change it only when your process guide tells you to, and reset it as soon as you finish. `[[Q02] GS-06: Confirm]`
 
 ### 2. Open a Page
 
@@ -453,7 +465,7 @@ Complete these steps to search for a page:
 | **Action** | **Description** |
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• Access to D365.<br>Responsibility:<br>• D365 End-user |
-| 1. *Click* **Search for a page**. | On the navigation bar, click **Search for a page** (the magnifying glass), or press **Ctrl+/** or **Alt+G**. |
+| 1. *Click* **Search for a page**. | On the navigation bar, click **Search for a page** (the magnifying glass), or press **Alt+G**. |
 | 2. *Type* words from the page name. | Type one or more words, for example **payment journal**. Each result shows the page name and its navigation path. |
 | 3. *Select* the page. | Select the page in the results. If it is not listed, add or change words: the search shows up to 10 results. |
 | 4. *Confirm* the page is open. | Check the page title before you continue. |
@@ -525,7 +537,7 @@ Complete these steps to work from a workspace:
 | 7. *Return* to the dashboard. | When you finish, click **Home** in the **Navigation Pane**, or press **Alt+Shift+Home**. |
 | *PROCESS COMPLETE* | Outcomes:<br>• You have opened the records or pages you need from the workspace. |
 
-> **Note:** Some workspaces have a filter at the top that applies to the whole workspace, and a button on the Action Pane that sets them up for you. Your process guide explains the settings for its workspace. `[GS-08]`
+> **Note:** Some workspaces have a filter at the top that applies to the whole workspace, and a button on the Action Pane that sets them up for you. Your process guide explains the settings for its workspace.
 
 ### 3. Switch Legal Entity
 
@@ -646,7 +658,7 @@ Complete these steps to edit and save a record:
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). To change it, see 3.1 Switch Legal Entity with the Selector. |
 | 2. *Click* **Edit**. | On the Action Pane, click **Edit**, or press **F2**. The fields you can change become editable. If **Edit** is not shown, the page is always editable or always read-only. |
 | 3. *Enter* the change. | Change the fields your process guide gives. Read any message that appears in the message bar. |
-| 4. *Click* **Save**. `[GS-09]` | On the Action Pane, click **Save**, or press **Ctrl+S**. |
+| 4. *Click* **Save**. `[GS-09]` | On the Action Pane, click **Save**, or press **Alt+S**. |
 | 5. *Confirm* the record is saved. | Check that no error shows in the message bar and the changed values remain. To undo changes you have not saved, select **Revert** on the **Options** tab of the Action Pane, or press **Ctrl+Shift+F5**. |
 | *PROCESS COMPLETE* | Outcomes:<br>• The record shows the change, saved. |
 
@@ -684,7 +696,7 @@ Complete these steps to delete a record:
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• Your process guide tells you to delete the record.<br>Responsibility:<br>• D365 End-user |
 | 1. *Select* the record. | Select the record in the list, or open it. |
-| 2. *Click* **Delete**. | On the Action Pane, click **Delete**, or press **Alt+Del**. |
+| 2. *Click* **Delete**. | On the Action Pane, click **Delete**, or press **Alt+Delete**. |
 | 3. *Confirm* the deletion. `[GS-10]` | Read the message and click **Yes** to delete the record. |
 | *PROCESS COMPLETE* | Outcomes:<br>• The record is deleted and no longer in the list. |
 
@@ -838,7 +850,7 @@ Complete these steps to filter with the Filter pane:
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• The list page is open.<br>Responsibility:<br>• D365 End-user |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). To change it, see 3.1 Switch Legal Entity with the Selector. |
-| 2. *Click* **Show filters**. `[GS-11]` | Click **Show filters** (the funnel icon at the side of the page), or press **Ctrl+F3**. The Filter pane opens. |
+| 2. *Click* **Show filters**. `[GS-11]` | Click **Show filters** (the funnel icon at the side of the page), or press **Alt+M, F**. The Filter pane opens. |
 | 3. *Enter* a value for each field. | For each field, select the operator and enter the value. |
 | 4. *Click* **Add a filter field**. | Optional. To filter on a field that is not listed, click **Add a filter field** and select it. |
 | 5. *Click* **Apply**. | Click **Apply**. The grid shows only the rows that match every filter. |
@@ -864,7 +876,7 @@ Complete these steps to use advanced filter or sort:
 | **Action** | **Description** |
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• The list page is open.<br>Responsibility:<br>• D365 End-user |
-| 1. *Open* **Advanced filter or sort**. `[GS-12]` | Press **Ctrl+Shift+F3**. The advanced filter dialog opens on the **Range** tab. |
+| 1. *Press* **Ctrl+Shift+F3**. `[GS-12]` | Press **Ctrl+Shift+F3** (**Open advanced filtering and sorting options**). The advanced filter dialog opens on the **Range** tab. |
 | 2. *Click* **Add**. | On the **Range** tab, click **Add** to add a line. |
 | 3. *Select* the **Field**. | Select the table and field to filter on. |
 | 4. *Enter* the **Criteria**. | Enter the value, using the symbols in Filter operators in Part 1. |
@@ -1174,7 +1186,7 @@ Complete these steps to export all rows from a grid:
 | 2. *Open* the page that holds the data. | Open the list page whose grid holds the data you need. |
 | 3. *Confirm* the grid shows the columns and rows you need. | The export contains the columns and filters of the grid. Add any column you need first (see 6.1 Arrange the Columns). |
 | 4. *Right-click* the grid header. | Right-click the header of any column in the grid. |
-| 5. *Select* **Export all rows**. `[GS-16]` | Select **Export all rows**. To export only some rows, select them first and choose **Export marked rows**.<br>Note: You can also select **Open in Microsoft Office** > **Export to Excel** on the Action Pane, or press **Ctrl+Shift+E**. |
+| 5. *Select* **Export all rows**. `[[Q03] GS-16: Confirm]` | Select **Export all rows**. To export only some rows, select them first and choose **Export marked rows**.<br>Note: You can also select **Open in Microsoft Office** > **Export to Excel** on the Action Pane, or press **Ctrl+Shift+E**. |
 | 6. *Download* the export. | Download the file when D365 has prepared it. The download link works for 15 minutes. |
 | 7. *Open* the exported file. | Open the file in Excel. |
 | 8. *Confirm* the required fields were exported. | Check that the file holds every field and row you need. |
@@ -1204,7 +1216,7 @@ Complete these steps to open a page in Excel:
 | 3. *Select* the **Open in Excel** option. | Under **Open in Excel**, select the option your process guide names, then open the workbook. |
 | 4. *Click* **Enable editing**. | In Excel, click **Enable editing** so the add-in can run. The first time, click **Trust this Add-in**, and sign in with your work account if asked. |
 | 5. *Confirm* the data is loaded. | The add-in opens on the right and reads the data. Check the rows and the user name shown in the add-in. |
-| 6. *Change* the rows. `[GS-17]` | Optional. Change the values your process guide gives. Remove any Excel column filters first. |
+| 6. *Change* the rows. `[[Q04] GS-17: Confirm]` | Optional. Change the values your process guide gives. Remove any Excel column filters first. |
 | 7. *Click* **Publish**. | Click **Publish** in the add-in. The **Messages** count shows how many records were added, changed or deleted, and any errors. |
 | 8. *Confirm* the changes in D365. | Refresh the page in D365 and check the changed records. Dates and times in the add-in are shown in UTC. |
 | *PROCESS COMPLETE* | Outcomes:<br>• The workbook shows current D365 data, and any published changes are saved in D365. |
@@ -1367,7 +1379,7 @@ Complete these steps to attach a document:
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). To change it, see 3.1 Switch Legal Entity with the Selector. |
 | 2. *Select* the record. | Select the record to attach to. On a page with a header and lines, click in the part (header or line) that the attachment belongs to. |
 | 3. *Click* **Attach**. | Click **Attach** (the paperclip, top right), or press **Ctrl+Shift+A**. The **Attachments** page opens. |
-| 4. *Click* **New**. `[GS-21]` | Click **New** and select the type: **File**, **Note** or **URL**. |
+| 4. *Click* **New**. `[[Q05] GS-21: Confirm]` | Click **New** and select the type: **File**, **Note** or **URL**. |
 | 5. *Select* the file. | For a file, click **Browse**, select the file and open it. For a note or URL, enter it in **Notes**. |
 | 6. *Enter* the **Description**. | Enter a description that says what the document is. |
 | 7. *Confirm* the attachment is listed. | Check that the attachment is listed and its preview shows. Close the page: the **Attach** button now counts it. |
@@ -1480,7 +1492,7 @@ Complete these steps to delegate your work items while away:
 | 7. *Select* **Enabled**. | Turn on **Enabled**, then click **Save**. |
 | *PROCESS COMPLETE* | Outcomes:<br>• New work items assigned to you in the period go to your delegate. |
 
-<mark>Company rules for delegation to be confirmed. `[GS-27]`</mark>
+<mark>Company rules for delegation to be confirmed. `[[Q06] GS-27: Confirm]`</mark>
 
 ### 12. Set Up an Alert
 
@@ -1504,7 +1516,7 @@ Complete these steps to set up an alert:
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). To change it, see 3.1 Switch Legal Entity with the Selector. |
 | 2. *Select* the record and field. | Select the record, and click in the field the alert is about, for example **Due date**. |
 | 3. *Click* the **Options** tab. | On the Action Pane, click **Options**. |
-| 4. *Click* **Create alert rule**. `[GS-23]` | In the **Share** group, click **Create alert rule**. The **Create alert rule** dialog opens. |
+| 4. *Click* **Create alert rule**. `[[Q07] GS-23: Confirm]` | In the **Share** group, click **Create alert rule**. The **Create alert rule** dialog opens. |
 | 5. *Select* the event. | Under **Alert me when**, select the **Field** and the **Event**, for example **has changed** or **is due in**. |
 | 6. *Select* the records. | Under **Alert me for**, select **Current selected record** or **All records** in the current view. Filter the page first to narrow **All records**. |
 | 7. *Enter* the end date. | Under **Alert me until**, choose an end date or no end. |
@@ -1556,10 +1568,10 @@ Complete these steps to read system messages:
 | **Action** | **Description** |
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• Access to D365.<br>Responsibility:<br>• D365 End-user |
-| 1. *Read* the message bar. | Read the message below the Action Pane. It names the field or record to fix. Press **Ctrl+F7** to move to it. |
+| 1. *Read* the message bar. | Read the message below the Action Pane. It names the field or record to fix. |
 | 2. *Click* **Message details**. | Optional. If the message summarizes several messages, click **Message details** to see each one. |
 | 3. *Fix* the cause. | Correct the value or the step the message names, then repeat the action. |
-| 4. *Click* the **Action center**. | On the navigation bar, click the bell to read messages from reports, batch jobs and alerts. |
+| 4. *Click* the **Action center**. | On the navigation bar, click the bell, or press **Ctrl+Shift+F7** (**Open message center**), to read messages from reports, batch jobs and alerts. |
 | 5. *Copy* the message text. | If you cannot fix the cause, copy the full message text for the BAU Support team (13.3). |
 | *PROCESS COMPLETE* | Outcomes:<br>• The message is understood and acted on, or ready to report. |
 
@@ -1613,7 +1625,7 @@ Complete these steps to raise a problem with the BAU Support team:
 | 2. *Note* the steps. | Note what you did, step by step, and what you expected to happen. |
 | 3. *Copy* the message. | Copy the full text of any message, with its **Message details** (see 13.1 Read System Messages). |
 | 4. *Take* a screenshot. | Take a screenshot that shows the page and the message. |
-| 5. *Raise* the issue. `[GS-25]` | Raise the issue with the BAU Support team through the D365 issue form in **Additional Resources**, with the details from steps 1 to 4. <mark>Confirm the route: the D365 issue form, the Atlas D365 User Support Hub or AVA.</mark> |
+| 5. *Raise* the issue. `[[Q08] GS-25: Confirm]` | Raise the issue with the BAU Support team through the D365 issue form in **Additional Resources**, with the details from steps 1 to 4. <mark>Confirm the route: the D365 issue form, the Atlas D365 User Support Hub or AVA.</mark> |
 | *PROCESS COMPLETE* | Outcomes:<br>• The problem is reported to the BAU Support team with the details they need. |
 
 #### 13.4 Reset Your Usage Data

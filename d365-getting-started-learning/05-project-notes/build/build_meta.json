@@ -1,0 +1,391 @@
+{
+ "comments": [
+  [
+   0,
+   "GS-02: Every procedure in this v0.1 is written from Microsoft Learn and the D365 documentation (discovery, 26 November 2026). The clean-session test in our D365 environment confirms the labels, paths and results, and gives the screenshots. The points to check are in the register, section 3."
+  ],
+  [
+   1,
+   "GS-03: D365 Finance Basics (ADO 15455) is not published yet, so this reference has no Training Hub link (D-096). Add the link when it is published."
+  ],
+  [
+   2,
+   "[Q01] GS-19: Confirm the company rule for exported D365 data: where exported files may be kept and shared, and who may receive them. The Important box states a general rule until the PG owner confirms it."
+  ],
+  [
+   3,
+   "GS-07: The main table is from the View shortcuts list in our environment (Daniel Moreira, 27 November 2026). Test the four field and grid shortcuts below, which come from Microsoft's list, in the clean-session test."
+  ],
+  [
+   4,
+   "GS-04: Confirm the sign-in steps (work account, any multifactor authentication prompt) and how users sign out (the initials menu at the right of the navigation bar) in the clean-session test. Microsoft has no end-user article on signing in. The production URL is confirmed (Daniel Moreira, 27 November 2026)."
+  ],
+  [
+   5,
+   "GS-05: Confirm the values offered in Default view/edit mode (Microsoft shows Auto; the values are not documented for users) and which the company recommends."
+  ],
+  [
+   6,
+   "[Q02] GS-06: Confirm the company rule on changing the session date: who may change it, for which tasks, and whether it must be reset. Microsoft documents the steps only."
+  ],
+  [
+   7,
+   "GS-09: Confirm what happens to unsaved changes when a user moves to another record or closes the page (Microsoft does not document it), and the label and place of Revert (Options tab). Step 4 tells users to save explicitly until this is confirmed."
+  ],
+  [
+   8,
+   "GS-10: Confirm the delete confirmation message and its buttons in our environment."
+  ],
+  [
+   9,
+   "GS-11: Confirm which side the Filter pane opens on (Microsoft's training says right; the current article says left) and the label of its reset control."
+  ],
+  [
+   10,
+   "GS-12: Confirm the menu label and location of Advanced filter or sort in our environment (historically on the Options tab under Page options), the dialog's title and its tabs (Range, Sorting)."
+  ],
+  [
+   11,
+   "GS-13: Confirm the footer total labels in our environment: Microsoft documents View column totals (Total, Minimum, Maximum, Average, with the extended totals feature) or Total this column without it, and Show total / Select calculated value in the footer. 260 uses \"+\" and \"Calculate column\", which this replaces if the test confirms it."
+  ],
+  [
+   12,
+   "GS-14: Confirm the name of the out-of-box view (Standard), and the label and place of the legal entity choice in Save view as and in Pin as default (current or all legal entities). Same question as 260 G260-07."
+  ],
+  [
+   13,
+   "GS-15: Confirm the personalization toolbar tool labels in our environment (Microsoft's article and screenshot differ: Add fields / Add a field)."
+  ],
+  [
+   14,
+   "[Q03] GS-16: Confirm the export row limit set for our environment (Microsoft's default is 50,000 rows, configurable up to 1,000,000). Same as 260 Export to Excel VG-06."
+  ],
+  [
+   15,
+   "[Q04] GS-17: Confirm whether users may publish changes to D365 from Excel, for which pages, and any control (for example who checks the publish result). Until confirmed, the guide says to publish only where a process guide allows."
+  ],
+  [
+   16,
+   "GS-18: Confirm the report dialog sections and labels (Parameters, Records to include > Filter, Destination > Change, Run in the background) and the destinations available to users, in the clean-session test. Microsoft has no current end-user article for the report dialog; the labels come from an archived Microsoft blog."
+  ],
+  [
+   17,
+   "GS-20: Confirm the paths of My batch jobs and the Print archive (Common > Inquiries) and the Print archive buttons (Print preview) in our environment. Microsoft has no current end-user article for either page."
+  ],
+  [
+   18,
+   "[Q05] GS-21: Confirm the attachment types users choose, the file types and maximum size allowed, where attachments are stored (Azure or SharePoint), and anything that must not be attached. These are admin settings."
+  ],
+  [
+   19,
+   "GS-22: Confirm the Workflow button and its menu labels (Submit, View history, Recall, Approve, Reject, Request change, Delegate), the message bar and its instructions icon, and the Work items assigned to me path, in our environment. Microsoft documents them only from the setup side."
+  ],
+  [
+   20,
+   "[Q06] GS-27: Confirm whether users may set up delegation for every workflow, and whether their manager must agree it first. Microsoft documents the steps only."
+  ],
+  [
+   21,
+   "[Q07] GS-23: Confirm the alert button label (Microsoft gives Create alert rule and Create a custom alert), that the alert batch jobs run in our environment and how often, and whether alert emails are sent."
+  ],
+  [
+   22,
+   "GS-24: Confirm the items on the Help & Support (?) menu in our build, the Help pane shortcut (Ctrl+Shift+? or Ctrl+?), and whether the Task guides tab is set up. Microsoft's own task guides stop at the December 2017 release."
+  ],
+  [
+   23,
+   "[Q08] GS-25: Confirm how users raise a D365 problem with the BAU Support team (the D365 issue form in Additional Resources, the Atlas D365 User Support Hub, or AVA), and the details the team needs (for example legal entity, URL, message, screenshot, time)."
+  ],
+  [
+   24,
+   "GS-26: Confirm the Usage data page, its tabs (Personalization) and the delete and reset buttons in our environment."
+  ]
+ ],
+ "toc": [
+  [
+   2,
+   "GS_Part1",
+   "Part 1: What do I need to know? (Getting Started)"
+  ],
+  [
+   4,
+   "GS_P1_HLP",
+   "High-level process"
+  ],
+  [
+   4,
+   "GS_P1_Roles",
+   "Roles and responsibilities"
+  ],
+  [
+   4,
+   "GS_P1_KC",
+   "Key concepts"
+  ],
+  [
+   2,
+   "GS_Part2",
+   "Part 2: How do I do it? (Getting Started)"
+  ],
+  [
+   3,
+   "GS_T1",
+   "1. Set Up Your D365 Session"
+  ],
+  [
+   4,
+   "GS_T1_1",
+   "1.1 Sign In and Sign Out"
+  ],
+  [
+   4,
+   "GS_T1_2",
+   "1.2 Set Your User Options"
+  ],
+  [
+   4,
+   "GS_T1_3",
+   "1.3 Change the Session Date"
+  ],
+  [
+   3,
+   "GS_T2",
+   "2. Open a Page"
+  ],
+  [
+   4,
+   "GS_T2_1",
+   "2.1 Open a Page from the Navigation Pane"
+  ],
+  [
+   4,
+   "GS_T2_2",
+   "2.2 Search for a Page"
+  ],
+  [
+   4,
+   "GS_T2_3",
+   "2.3 Add/Remove Pages to Favorites"
+  ],
+  [
+   4,
+   "GS_T2_4",
+   "2.4 Work from a Workspace"
+  ],
+  [
+   3,
+   "GS_T3",
+   "3. Switch Legal Entity"
+  ],
+  [
+   4,
+   "GS_T3_1",
+   "3.1 Switch Legal Entity with the Selector"
+  ],
+  [
+   4,
+   "GS_T3_2",
+   "3.2 Switch Legal Entity Using the Ledger Code"
+  ],
+  [
+   3,
+   "GS_T4",
+   "4. Work with Records"
+  ],
+  [
+   4,
+   "GS_T4_1",
+   "4.1 Edit, Save and Revert a Record"
+  ],
+  [
+   4,
+   "GS_T4_2",
+   "4.2 Create and Delete a Record"
+  ],
+  [
+   4,
+   "GS_T4_3",
+   "4.3 Enter Values with Lookups and Date Pickers"
+  ],
+  [
+   4,
+   "GS_T4_4",
+   "4.4 Run an Action with Action Search"
+  ],
+  [
+   3,
+   "GS_T5",
+   "5. Find Records with Filters"
+  ],
+  [
+   4,
+   "GS_T5_1",
+   "5.1 Filter with the QuickFilter"
+  ],
+  [
+   4,
+   "GS_T5_2",
+   "5.2 Filter and Sort a Column"
+  ],
+  [
+   4,
+   "GS_T5_3",
+   "5.3 Filter with the Filter Pane"
+  ],
+  [
+   4,
+   "GS_T5_4",
+   "5.4 Use Advanced Filter or Sort"
+  ],
+  [
+   3,
+   "GS_T6",
+   "6. Create a Personalized View"
+  ],
+  [
+   4,
+   "GS_T6_1",
+   "6.1 Arrange the Columns"
+  ],
+  [
+   4,
+   "GS_T6_2",
+   "6.2 Add a Footer Total"
+  ],
+  [
+   4,
+   "GS_T6_3",
+   "6.3 Group Rows"
+  ],
+  [
+   4,
+   "GS_T6_4",
+   "6.4 Save and Pin the View"
+  ],
+  [
+   3,
+   "GS_T7",
+   "7. Manage Saved Views and Personalizations"
+  ],
+  [
+   4,
+   "GS_T7_1",
+   "7.1 Update a Saved View"
+  ],
+  [
+   4,
+   "GS_T7_2",
+   "7.2 Manage My Views"
+  ],
+  [
+   4,
+   "GS_T7_3",
+   "7.3 Personalize a Page"
+  ],
+  [
+   4,
+   "GS_T7_4",
+   "7.4 Clear a Personalization"
+  ],
+  [
+   3,
+   "GS_T8",
+   "8. Export Data and Work in Excel"
+  ],
+  [
+   4,
+   "GS_T8_1",
+   "8.1 Export All Rows from a Grid"
+  ],
+  [
+   4,
+   "GS_T8_2",
+   "8.2 Open a Page in Excel and Publish Changes"
+  ],
+  [
+   3,
+   "GS_T9",
+   "9. Run a Report"
+  ],
+  [
+   4,
+   "GS_T9_1",
+   "9.1 Set the Report Parameters and Destination"
+  ],
+  [
+   4,
+   "GS_T9_2",
+   "9.2 View, Download and Print a Report"
+  ],
+  [
+   4,
+   "GS_T9_3",
+   "9.3 Run a Report in the Background"
+  ],
+  [
+   4,
+   "GS_T9_4",
+   "9.4 Find Background Output"
+  ],
+  [
+   3,
+   "GS_T10",
+   "10. Attach a Document"
+  ],
+  [
+   3,
+   "GS_T11",
+   "11. Submit and Approve Workflow Items"
+  ],
+  [
+   4,
+   "GS_T11_1",
+   "11.1 Submit a Document to Workflow"
+  ],
+  [
+   4,
+   "GS_T11_2",
+   "11.2 Act on a Work Item"
+  ],
+  [
+   4,
+   "GS_T11_3",
+   "11.3 Delegate Your Work Items While Away"
+  ],
+  [
+   3,
+   "GS_T12",
+   "12. Set Up an Alert"
+  ],
+  [
+   3,
+   "GS_T13",
+   "13. Get Help and Report a Problem"
+  ],
+  [
+   4,
+   "GS_T13_1",
+   "13.1 Read System Messages"
+  ],
+  [
+   4,
+   "GS_T13_2",
+   "13.2 Use the Help Pane"
+  ],
+  [
+   4,
+   "GS_T13_3",
+   "13.3 Raise a Problem with the BAU Support Team"
+  ],
+  [
+   4,
+   "GS_T13_4",
+   "13.4 Reset Your Usage Data"
+  ],
+  [
+   2,
+   "GS_Part3",
+   "Part 3: Reports (Getting Started)"
+  ]
+ ]
+}
