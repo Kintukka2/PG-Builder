@@ -62,9 +62,9 @@ def part1():
     o += [h5('The parts of the screen'),
           body('Every procedure in this guide and in the process guides uses these names. Learn them first.'),
           concept_table(['Element', 'Where it is', 'What it is for'], [
-              ['Navigation bar', 'The bar across the top of the screen', 'Holds **Search for a page**, the legal entity selector (company picker), the **Action center** (bell), **Settings** (gear), **Help & Support** (?) and your initials.'],
+              ['Navigation bar', 'The bar across the top of the screen', 'Holds the legal entity selector (it shows the active ledger code, for example **100A**), **Search for a page** (magnifying glass), the **Action center** (bell), **Settings** (gear), **Help & Support** (?) and your initials.'],
               ['Navigation Pane', 'The pane on the left', 'Opens any page: **Home**, **Favorites**, **Recent**, **Workspaces** and **Modules**.'],
-              ['Dashboard', 'The first page after you sign in', 'Shows workspace tiles and your **Work items assigned to me**. Return to it from the **Home** button in the **Navigation Pane**.'],
+              ['Dashboard', 'The first page after you sign in', 'Shows a calendar, your **Work items assigned to me**, and tiles for apps and workspaces. Return to it from the **Home** button in the **Navigation Pane**.'],
               ['Workspace', 'Opened from a tile or from **Workspaces**', 'An activity page for one area of work: summary tiles with counts, tabbed lists and links to related pages.'],
               ['Action Pane', 'The bar below the navigation bar, on every page', 'Holds the buttons and tabs for the page, such as **Edit**, **New**, **Delete** and **Options**, and **Action search**.'],
               ['Message bar', 'Below the Action Pane', 'Shows information, warnings and errors about the page you are on.'],
@@ -170,7 +170,7 @@ def part1():
               ['Open in Excel', 'A live workbook linked to D365 through the Microsoft Dynamics Office Add-in. You can refresh it, and change rows and publish them back.', 'Your process guide tells you to update records from Excel.'],
           ], widths=[2268, 3969, 2835]),
           important('Exported files can hold confidential company and customer data. Keep them in an approved WiseTech Global location and delete them when you no longer need them.',
-                    comment='GS-19: Confirm the company rule for exported D365 data: where exported files may be kept and shared, and who may receive them. The Important box states a general rule until the PG owner confirms it.')]
+                    comment='[Q01] GS-19: Confirm the company rule for exported D365 data: where exported files may be kept and shared, and who may receive them. The Important box states a general rule until the PG owner confirms it.')]
     # --- reports
     o += [blank(), h5b('Report destinations', 'GS_KC_Reports'),
           concept_table(['Destination', 'What happens', 'In the background?'], [
@@ -194,28 +194,39 @@ def part1():
           note('Workflow email notifications do not appear in the **Action center**. Check **Work items assigned to me** on the dashboard.')]
     # --- shortcuts
     o += [blank(), h5('Keyboard shortcuts'),
-          body('Press **Alt+Shift+K** on any page to see the shortcuts for that page.',
-               comment='GS-07: Microsoft gives two shortcuts for action search (Ctrl+\' in the shortcut list; Ctrl+/ in the action search article, where Ctrl+/ is also page search) '
-                       'and two for the Help pane (Ctrl+Shift+? and Ctrl+?). Test each shortcut in this table in our environment and remove any that does not work.'),
-          concept_table(['Task', 'Shortcut'], [
-              ['Search for a page', 'Ctrl+/ or Alt+G'],
-              ['Action search', 'Alt+Q'],
-              ['Go to the dashboard', 'Alt+Shift+Home'],
-              ['Move to the legal entity selector', 'Ctrl+Shift+O'],
-              ['Edit mode on or off', 'F2'],
-              ['New record', 'Alt+N'],
-              ['Save', 'Alt+S or Ctrl+S'],
-              ['Delete', 'Alt+Del'],
-              ['Revert unsaved changes', 'Ctrl+Shift+F5'],
-              ['Refresh', 'Shift+F5'],
-              ['Open a lookup or date picker', 'Alt+Down arrow'],
-              ['Session date / today in a date field', 'D / T'],
-              ['Open the Filter pane', 'Ctrl+F3'],
-              ['Filter the current column', 'Ctrl+G'],
-              ['Export to Excel', 'Ctrl+Shift+E'],
-              ['Attach a document', 'Ctrl+Shift+A'],
-              ['Go to the message bar', 'Ctrl+F7'],
-              ['Close the page', 'Esc'],
-          ], widths=[5072, 4000])]
+          body('To see the shortcuts for a page, right-click anywhere on the page and select **View shortcuts**. The list groups them under **Navigate**, **Act on data**, **Close** and **Other**. '
+               'Pressing **Alt+Shift+K** shows a similar list that starts with **Shortcuts for selected element**: it changes with the part of the page you are on. **View all product shortcuts** opens Microsoft’s full list.'),
+          concept_table(['Shortcut', 'What it does (as D365 labels it)'], [
+              ['Alt+G', 'Search for a page'],
+              ['Alt+Q', 'Search for an action'],
+              ['Ctrl+Shift+O', 'Change company (legal entity)'],
+              ['Alt+Shift+Home', 'Go to the dashboard'],
+              ['Alt+F1', 'Open navigation pane'],
+              ['F2', 'Switch to edit mode'],
+              ['Alt+N', 'Create a new record'],
+              ['Alt+S', 'Save record'],
+              ['Alt+Delete', 'Delete record'],
+              ['Ctrl+Shift+F5', 'Revert any changes'],
+              ['Shift+F5', 'Refresh data'],
+              ['Ctrl+Shift+M', 'Select or clear all rows'],
+              ['Ctrl+Shift+G / Ctrl+Shift+D', 'Switch to grid view / details view'],
+              ['Alt+M, F', 'Go to the filter pane'],
+              ['Ctrl+Shift+F3', 'Open advanced filtering and sorting options'],
+              ['Ctrl+Shift+P', 'Personalize this page'],
+              ['Ctrl+Shift+E', 'Export to Excel'],
+              ['Ctrl+Shift+F7', 'Open message center'],
+              ['Esc', 'Close the page'],
+              ['Shift+Esc', 'Save changes and close the page'],
+              ['Alt+Shift+Q', 'Close the page and discard any unsaved changes'],
+          ], widths=[3000, 6072]),
+          blank(),
+          body('These shortcuts work inside a field or a grid:',
+               comment='GS-07: The main table is from the View shortcuts list in our environment (Daniel Moreira, 27 November 2026). Test the four field and grid shortcuts below, which come from Microsoft\'s list, in the clean-session test.'),
+          concept_table(['Shortcut', 'What it does'], [
+              ['Ctrl+G', 'Filter the current grid column'],
+              ['Alt+Down arrow', 'Open a lookup or date picker'],
+              ['T / D', 'In a date field: today / the session date'],
+              ['Ctrl+Shift+A', 'Attach a document to the record'],
+          ], widths=[3000, 6072])]
     o.append(blank())
     return o

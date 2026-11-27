@@ -81,7 +81,7 @@ def part2c():
                ('*Select* the record.', 'Select the record to attach to. On a page with a header and lines, click in the part (header or line) that the attachment belongs to.'),
                ('*Click* **Attach**.', 'Click **Attach** (the paperclip, top right), or press **Ctrl+Shift+A**. The **Attachments** page opens.'),
                ('*Click* **New**.', 'Click **New** and select the type: **File**, **Note** or **URL**.',
-                'GS-21: Confirm the attachment types users choose, the file types and maximum size allowed, where attachments are stored (Azure or SharePoint), and anything that must not be attached. These are admin settings.'),
+                '[Q05] GS-21: Confirm the attachment types users choose, the file types and maximum size allowed, where attachments are stored (Azure or SharePoint), and anything that must not be attached. These are admin settings.'),
                ('*Select* the file.', 'For a file, click **Browse**, select the file and open it. For a note or URL, enter it in **Notes**.'),
                ('*Enter* the **Description**.', 'Enter a description that says what the document is.'),
                ('*Confirm* the attachment is listed.', 'Check that the attachment is listed and its preview shows. Close the page: the **Attach** button now counts it.')],
@@ -139,7 +139,7 @@ def part2c():
          ('*Enter* the dates.', 'Enter the **Start date/time** and **End date/time** of your absence, and a **Comment**.'),
          ('*Select* **Enabled**.', 'Turn on **Enabled**, then click **Save**.')],
         ('complete', ['New work items assigned to you in the period go to your delegate.']),
-        extra_after=[action_note('Company rules for delegation to be confirmed.', comment='GS-27: Confirm whether users may set up delegation for every workflow, and whether their manager must agree it first. Microsoft documents the steps only.')])
+        extra_after=[action_note('Company rules for delegation to be confirmed.', comment='[Q06] GS-27: Confirm whether users may set up delegation for every workflow, and whether their manager must agree it first. Microsoft documents the steps only.')])
     # ---------------- 12 Alert
     o += topic(12, 'GS_T12', 'Set Up an Alert',
         ['Use this topic to be told when a record changes or a date falls due, for example when a vendor’s bank account changes or an invoice is due. Alerts appear in the **Action center** and can also be emailed. '
@@ -152,7 +152,7 @@ def part2c():
                ('*Select* the record and field.', 'Select the record, and click in the field the alert is about, for example **Due date**.'),
                ('*Click* the **Options** tab.', 'On the Action Pane, click **Options**.'),
                ('*Click* **Create alert rule**.', 'In the **Share** group, click **Create alert rule**. The **Create alert rule** dialog opens.',
-                'GS-23: Confirm the alert button label (Microsoft gives Create alert rule and Create a custom alert), that the alert batch jobs run in our environment and how often, and whether alert emails are sent.'),
+                '[Q07] GS-23: Confirm the alert button label (Microsoft gives Create alert rule and Create a custom alert), that the alert batch jobs run in our environment and how often, and whether alert emails are sent.'),
                ('*Select* the event.', 'Under **Alert me when**, select the **Field** and the **Event**, for example **has changed** or **is due in**.'),
                ('*Select* the records.', 'Under **Alert me for**, select **Current selected record** or **All records** in the current view. Filter the page first to narrow **All records**.'),
                ('*Enter* the end date.', 'Under **Alert me until**, choose an end date or no end.'),
@@ -175,10 +175,10 @@ def part2c():
         ['A message appears in the message bar, or the Action center bell shows new messages.'],
         'Complete these steps to read system messages:',
         [ACCESS],
-        [('*Read* the message bar.', 'Read the message below the Action Pane. It names the field or record to fix. Press **Ctrl+F7** to move to it.'),
+        [('*Read* the message bar.', 'Read the message below the Action Pane. It names the field or record to fix.'),
          ('*Click* **Message details**.', 'Optional. If the message summarizes several messages, click **Message details** to see each one.'),
          ('*Fix* the cause.', 'Correct the value or the step the message names, then repeat the action.'),
-         ('*Click* the **Action center**.', 'On the navigation bar, click the bell to read messages from reports, batch jobs and alerts.'),
+         ('*Click* the **Action center**.', 'On the navigation bar, click the bell, or press **Ctrl+Shift+F7** (**Open message center**), to read messages from reports, batch jobs and alerts.'),
          ('*Copy* the message text.', 'If you cannot fix the cause, copy the full message text for the BAU Support team (13.3).')],
         ('complete', ['The message is understood and acted on, or ready to report.']))
     RESP['GS_T13_2'] = 'uses the Help pane for the page they are on.'
@@ -207,7 +207,7 @@ def part2c():
          ('*Copy* the message.', 'Copy the full text of any message, with its **Message details** (see [[GS_T13_1|13.1 Read System Messages]]).'),
          ('*Take* a screenshot.', 'Take a screenshot that shows the page and the message.'),
          ('*Raise* the issue.', 'Raise the issue with the BAU Support team through the D365 issue form in **Additional Resources**, with the details from steps 1 to 4. {{Confirm the route: the D365 issue form, the Atlas D365 User Support Hub or AVA.}}',
-          'GS-25: Confirm how users raise a D365 problem with the BAU Support team (the D365 issue form in Additional Resources, the Atlas D365 User Support Hub, or AVA), and the details the team needs (for example legal entity, URL, message, screenshot, time).')],
+          '[Q08] GS-25: Confirm how users raise a D365 problem with the BAU Support team (the D365 issue form in Additional Resources, the Atlas D365 User Support Hub, or AVA), and the details the team needs (for example legal entity, URL, message, screenshot, time).')],
         ('complete', ['The problem is reported to the BAU Support team with the details they need.']))
     RESP['GS_T13_4'] = 'resets their own usage data when advised.'
     o += sub('13.4', 'GS_T13_4', 'Reset Your Usage Data',

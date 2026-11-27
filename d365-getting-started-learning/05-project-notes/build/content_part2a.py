@@ -37,8 +37,8 @@ def part2a():
         'Complete these steps to sign in to D365:',
         ['Your manager has requested your D365 profile.', 'A supported browser, such as Microsoft Edge.'],
         [('*Open* your browser.', 'Open Microsoft Edge (recommended) or another supported browser.'),
-         ('*Enter* the **D365 URL**.', ['Enter the D365 address in the address bar: https://wtg.operations.dynamics.com. {{Confirm the address and whether users open D365 from a bookmark or the Atlas site.}}'],
-          'GS-04: Confirm the D365 URL users open, the sign-in method (work account, multifactor authentication) and how users sign out (the initials menu on the navigation bar), in the clean-session test with IT. Microsoft has no end-user article on signing in.'),
+         ('*Enter* the **D365 URL**.', 'Enter the D365 address in the address bar: https://wtg.operations.dynamics.com/. Add it to your browser favorites so you can open it quickly.',
+          'GS-04: Confirm the sign-in steps (work account, any multifactor authentication prompt) and how users sign out (the initials menu at the right of the navigation bar) in the clean-session test. Microsoft has no end-user article on signing in. The production URL is confirmed (Daniel Moreira, 27 November 2026).'),
          ('*Sign in* with your work account.', 'Sign in with your WiseTech Global email address and password, and approve the sign-in request if one is shown.'),
          ('*Confirm* the **Dashboard** is displayed.', 'D365 opens on the dashboard, or on the initial page set in your user options, in your default legal entity.'),
          ('*Select* your initials to sign out.', 'When you finish, select your initials at the right of the navigation bar, then select **Sign out**. Save your work first.')],
@@ -77,7 +77,7 @@ def part2a():
          ('*Reset* the session date when you finish.', 'Repeat steps 1 to 4 with today’s date, or sign out, so later work is not dated by mistake.')],
         ('complete', ['D365 uses the date you entered as the default date for the rest of the session.']),
         extra_after=[important('A wrong session date gives new journals and documents the wrong date. Change it only when your process guide tells you to, and reset it as soon as you finish.',
-                               comment='GS-06: Confirm the company rule on changing the session date: who may change it, for which tasks, and whether it must be reset. Microsoft documents the steps only.')])
+                               comment='[Q02] GS-06: Confirm the company rule on changing the session date: who may change it, for which tasks, and whether it must be reset. Microsoft documents the steps only.')])
     # ---------------- 2 Open a page
     o += topic(2, 'GS_T2', 'Open a Page',
         ['Use this topic to open the pages and workspaces you need: from the Navigation Pane, with the page search, from your Favorites, or from a workspace. Each process guide gives the path to its own pages.'],
@@ -106,7 +106,7 @@ def part2a():
         ['A user needs a page but does not know, or does not want to follow, its navigation path.'],
         'Complete these steps to search for a page:',
         [ACCESS],
-        [('*Click* **Search for a page**.', 'On the navigation bar, click **Search for a page** (the magnifying glass), or press **Ctrl+/** or **Alt+G**.'),
+        [('*Click* **Search for a page**.', 'On the navigation bar, click **Search for a page** (the magnifying glass), or press **Alt+G**.'),
          ('*Type* words from the page name.', 'Type one or more words, for example **payment journal**. Each result shows the page name and its navigation path.'),
          ('*Select* the page.', 'Select the page in the results. If it is not listed, add or change words: the search shows up to 10 results.'),
          ('*Confirm* the page is open.', 'Check the page title before you continue.')],
@@ -145,8 +145,7 @@ def part2a():
          ('*Click* a link.', 'Optional. Under **Links**, click a page to open it.'),
          ('*Return* to the dashboard.', 'When you finish, click **Home** in the **Navigation Pane**, or press **Alt+Shift+Home**.')],
         ('complete', ['You have opened the records or pages you need from the workspace.']),
-        extra_after=[note('Some workspaces have a filter at the top that applies to the whole workspace, and a button on the Action Pane that sets them up for you. Your process guide explains the settings for its workspace.',
-                          comment='GS-08: Confirm whether Immersive Home is switched on in our environment (10.0.44 or later). It replaces the dashboard as the start page and changes topics 1.1, 2.4 and 11.2.')])
+        extra_after=[note('Some workspaces have a filter at the top that applies to the whole workspace, and a button on the Action Pane that sets them up for you. Your process guide explains the settings for its workspace.')])
     # ---------------- 3 Legal entity
     o += topic(3, 'GS_T3', 'Switch Legal Entity',
         ['Use this topic to change the legal entity you are working in. Every page shows the data of the active legal entity, so check it before every task and switch when the task needs another one.'],
