@@ -10,3 +10,5 @@ The scripts that built `CLAUDE-TBC-D365 F&O Getting Started PG v0.1.docx` from t
 | `to_md.py`, `md_head.md` | Builds the Markdown preview from the Word file |
 
 After a build, run `tools/question_pages.py "<guide>.docx" --contents --write-contents` for the Contents page numbers and `tools/pg_links.py` for the links (D-096).
+
+**Screenshots (27 November 2026).** `img_map.py` lists the 35 Microsoft Learn images used as placeholders and their captions; `STEP_IMG` in `pgxml.py` places each in its step. They were converted to PNG (SVGs rendered with Chromium) into a scratch folder set as `IMGDIR` in `build.py`. The images themselves are in the Word file and, for most, in [`../discovery/media/`](../discovery/media/); the training-module ones came from the full Learn harvest, which is not kept.

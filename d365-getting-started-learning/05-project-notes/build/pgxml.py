@@ -21,6 +21,46 @@ class Doc:
         return f'<w:bookmarkStart w:id="{i}" w:name="{name}"/>', f'<w:bookmarkEnd w:id="{i}"/>'
 
 D = Doc()
+D.images = []      # (rid, key)
+D.cur = None       # current heading anchor
+D.first_img = True
+
+STEP_IMG = {('GS_T1_1',4):'dash_default',('GS_T1_2',3):'useropt',('GS_T2_1',3):'modules',('GS_T2_2',2):'search',('GS_T2_3',4):'favstar',
+ ('GS_T2_4',4):'workspace',('GS_T3_1',2):'picker',('GS_T4_1',2):'actionpane',('GS_T5_1',2):'quickfilter',('GS_T5_2',2):'colfilter',
+ ('GS_T5_3',2):'filterpane',('GS_T5_4',2):'advfilter',('GS_T6_1',3):'gridmenu',('GS_T6_2',2):'footer',('GS_T6_3',2):'grouping',
+ ('GS_T7_3',2):'ptoolbar',('GS_T8_1',5):'gridmenu',('GS_T8_2',3):'officemenu',('GS_T8_2',5):'addin',('GS_T9_1',3):'repdialog',
+ ('GS_T9_1',6):'repdest',('GS_T9_2',1):'pdfview',('GS_T9_3',2):'repbatch',('GS_T9_4',3):'batchstatus',('GS_T9_4',5):'printarchive',
+ ('GS_T10',4):'attach',('GS_T11_2',1):'workitems',('GS_T11_3',2):'delegation',('GS_T12',4+1):'alert',('GS_T13_1',2):'msgdetails',
+ ('GS_T13_1',4):'actioncenter',('GS_T13_2',2):'helppane'}
+IMGDIR = None   # set by build.py: folder of <key>.png
+import img_map
+
+def image(key, max_w_in=4.1, max_h_in=3.2):
+    from PIL import Image
+    w, h = Image.open(f'{IMGDIR}/{key}.png').size
+    win = min(max_w_in, w / 110.0); hin = win * h / w
+    if hin > max_h_in: hin = max_h_in; win = hin * w / h
+    cx, cy = int(win * 914400), int(hin * 914400)
+    rid = f'rIdGS{len(D.images) + 1}'; D.images.append((rid, key)); n = 7000 + len(D.images)
+    A = 'xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"'
+    P = 'xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"'
+    pic = (f'<w:p><w:pPr><w:keepNext/><w:spacing w:before="60" w:after="0"/><w:jc w:val="center"/></w:pPr><w:r><w:rPr><w:noProof/></w:rPr><w:drawing>'
+           f'<wp:inline distT="0" distB="0" distL="0" distR="0"><wp:extent cx="{cx}" cy="{cy}"/><wp:docPr id="{n}" name="Picture {n}" descr="{esc(img_map.IMG[key][1])}"/>'
+           f'<wp:cNvGraphicFramePr><a:graphicFrameLocks {A} noChangeAspect="1"/></wp:cNvGraphicFramePr>'
+           f'<a:graphic {A}><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic {P}>'
+           f'<pic:nvPicPr><pic:cNvPr id="{n}" name="{key}.png"/><pic:cNvPicPr><a:picLocks noChangeAspect="1"/></pic:cNvPicPr></pic:nvPicPr>'
+           f'<pic:blipFill><a:blip r:embed="{rid}"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill>'
+           f'<pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="{cx}" cy="{cy}"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom>'
+           f'<a:ln w="6350"><a:solidFill><a:srgbClr val="BFBFBF"/></a:solidFill></a:ln></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r></w:p>')
+    cap = '{{Microsoft Learn example (demo data): ' + img_map.IMG[key][1] + '. Replace with a WTG screenshot.}}'
+    com = None
+    if D.first_img:
+        D.first_img = False
+        com = ('GS-28: Every screenshot in v0.1 is a Microsoft Learn example with Microsoft\'s demo data (Contoso, USMF), placed where the WTG screenshot goes '
+               'and captioned with what it should show. Replace each one with a screenshot from our environment, without customer data, and remove its caption. The register lists them.')
+    capp = f'<w:p><w:pPr><w:spacing w:before="0" w:after="120"/><w:jc w:val="center"/></w:pPr>{wrap_comment(runs(cap, "<w:sz w:val=\"16\"/>"), com)}</w:p>'
+    return pic + capp
+
 
 # ---------- inline markup ----------
 # **bold**  *italic*  [[anchor|text]] internal link  {{note}} ACTION char style  ``code``->plain
@@ -71,6 +111,7 @@ def heading(level, title, anchor, numbered=True, pagebreak=True, toc_text=None):
     ilvl = {3: 0, 4: 1, 'f': 2}.get(level)
     ppr = (f'<w:pStyle w:val="{style}"/>' + ('<w:pageBreakBefore/>' if pagebreak else '') +
            (f'<w:numPr><w:ilvl w:val="{ilvl}"/><w:numId w:val="71"/></w:numPr>' if numbered and ilvl is not None else ''))
+    D.cur = anchor
     s, e = D.bmk(anchor)
     D.toc.append(({2: 2, 3: 3, 4: 4, 'f': 4}[level], anchor, toc_text or title))
     return f'<w:p><w:pPr>{ppr}</w:pPr>{s}<w:r><w:t xml:space="preserve">{esc(title)}</w:t></w:r>{e}</w:p>'
@@ -100,6 +141,7 @@ def cell_paras(content, first_bold=False):
     items = content if isinstance(content, list) else [content]
     out = []
     for k, t in enumerate(items):
+        if t.startswith('IMG:'): out.append(image(t[4:])); continue
         if t.startswith('- '): out.append(p(t[2:], 'Bullet12'))
         elif t.startswith('> '): out.append(p('**' + t[2:] + '**', 'CWBullet1'))
         else:
@@ -139,8 +181,11 @@ def procedure(prereqs, resp, steps, end):
     start = p('Pre-requisites:', 'PROCESSSTARTENDBody') + ''.join(p(x, 'Bullet12') for x in prereqs) + \
             p('Responsibility:', 'PROCESSSTARTENDBody') + p(resp, 'Bullet12')
     rows.append(boundary_row('PROCESS START', BLUE, start))
-    for st in steps:
+    first_proc = getattr(D, '_procs', set()); key_proc = D.cur not in first_proc; first_proc.add(D.cur); D._procs = first_proc
+    for si, st in enumerate(steps, 1):
         action, desc = st[0], st[1]; com = st[2] if len(st) > 2 else None
+        ik = STEP_IMG.get((D.cur, si)) if key_proc else None
+        if ik: desc = (desc if isinstance(desc, list) else [desc]) + ['IMG:' + ik]
         ap = (f'<w:p><w:pPr><w:pStyle w:val="ListParagraph"/><w:numPr><w:ilvl w:val="0"/><w:numId w:val="{numid}"/></w:numPr>'
               f'<w:ind w:left="360" w:hanging="360"/></w:pPr>{wrap_comment(runs(action), com)}</w:p>')
         rows.append(f'<w:tr><w:trPr><w:cantSplit/></w:trPr>{tc(PW[0], ap, BOT)}{tc(PW[1], cell_paras(desc), BOT)}</w:tr>')

@@ -8,7 +8,7 @@
 | Status | **Working draft v0.1** (27 November 2026), drafted from the [discovery map](../05-project-notes/Discovery-Map.md). Not yet checked in our D365 environment, not sent for review. |
 | Roles | BPO and PG approver Ken Lee; source Microsoft documentation, confirmed by Daniel Moreira (D-106) |
 | Code | None yet: a 100-series code once 460 to 462 are approved (D-102). Files use `TBC`. |
-| Items | 33 items (`GS`): 25 open and blocking, each with one Word review comment (D-067); 4 open and non-blocking; 4 closed. Round 1 (8 questions) drafted on the board (section 4). |
+| Items | 33 items (`GS`): 26 open and blocking, each with one Word review comment (D-067); 3 open and non-blocking; 4 closed. Round 1 (8 questions) drafted on the board (section 4). |
 | Last updated | 2026-11-27 (round 1) |
 
 This file is the guide's question log. Item IDs are stable and never reused. Each open blocking item has one review comment in the Word guide, at the place it matters most, starting with its ID.
@@ -34,7 +34,7 @@ This file is the guide's question log. Item IDs are stable and never reused. Eac
 | A5 | Part 3 lists the four inquiry pages the topics use (My batch jobs, Print archive, Workflow history, Work items assigned to me). | Part 3 is mandatory; these are the pages a new user checks. |
 | A6 | Favorites is taught here (topic 2.3) as well as in 260. | This is the general Getting Started guide (D-084); 260 stays as it is until this guide is approved (D-103). |
 | A7 | Where Microsoft's documentation and 260 differ, the guide follows Microsoft and the item asks the clean-session test to confirm (for example GS-13, GS-14). | Discovery map, section 4. |
-| A8 | No screenshots in v0.1. Microsoft's images show demo data; the guide's screenshots come from the clean-session test (GS-28). | Discovery map, section 1. |
+| A8 | Microsoft Learn screenshots stand in for the WTG screenshots (35, listed in GS-28): each sits where the WTG screenshot goes, with a highlighted caption saying what it shows and to replace it. They show Microsoft's demo company (Contoso, USMF). | The user, 27 November 2026: placeholders make it easy to see what each screenshot must capture and to swap them. |
 
 ---
 
@@ -71,14 +71,14 @@ This file is the guide's question log. Item IDs are stable and never reused. Eac
 | GS-25 | How users raise a problem with the BAU Support team (the D365 issue form, the Atlas D365 User Support Hub or AVA) and the details the team needs. | 13.3 step 5 | B | Dec | Open. Asked in round 1, **Q08**. |
 | GS-26 | The **Usage data** page, its **Personalization** tab and its delete and reset buttons. | 13.4 step 2 | B | Test | Open |
 | GS-27 | Whether users may set up delegation for every workflow, and whether their manager must agree it. | 11.3, ACTION note | B | Dec | Open. Asked in round 1, **Q06**. |
-| GS-28 | Screenshots for the guide, from the clean-session test. | All topics | N | Test | Open |
+| GS-28 | Replace the 35 Microsoft Learn example screenshots (demo data) with screenshots from our environment, without customer data, and remove each caption. Places: Part 1 (the parts of the screen: ui_labelled, navbar; system messages: msgbar); 1.1 step 4 (dash_default); 1.2 step 3 (useropt); 2.1 step 3 (modules); 2.2 step 2 (search); 2.3 step 4 (favstar); 2.4 step 4 (workspace); 3.1 step 2 (picker); 4.1 step 2 (actionpane); 5.1 step 2 (quickfilter); 5.2 step 2 (colfilter); 5.3 step 2 (filterpane); 5.4 step 2 (advfilter); 6.1 step 3, 8.1 step 5 (gridmenu); 6.2 step 2 (footer); 6.3 step 2 (grouping); 7.3 step 2 (ptoolbar); 8.2 step 3 (officemenu); 8.2 step 5 (addin); 9.1 step 3 (repdialog); 9.1 step 6 (repdest); 9.2 step 1 (pdfview); 9.3 step 2 (repbatch); 9.4 step 3 (batchstatus); 9.4 step 5 (printarchive); 10 step 4 (attach); 11.2 step 1 (workitems); 11.3 step 2 (delegation); 12 step 5 (alert); 13.1 step 2 (msgdetails); 13.1 step 4 (actioncenter); 13.2 step 2 (helppane). | Part 1, The parts of the screen (first screenshot) | B | Test | Open. Inserted 27 November 2026 at the user's request (A8). |
 | GS-29 | Whether the organization publishes standard views to users. If so, 7.1 and 7.2 add the padlock and publishing notes. | 7.1, 7.2 | N | Dec | Open |
 | GS-30 | Bulk edit and pasting from Excel into grids are left out of v0.1; add them if the company allows them. | 6, 8 | N | Dec | Open |
 | GS-31 | Copilot and the other AI features are out of this guide (D-104); the research is kept for the parked guide (ADO 17798). | Part 1 | N | Dec | **Closed 2026-11-26** (D-104) |
 | GS-32 | The finance concepts (dimensions, journals, vouchers, periods, posted transactions) are in D365 Finance Basics (D-101). | Part 1 | N | Dec | **Closed 2026-11-26** (D-101) |
 | GS-33 | Security roles are not named (D-083); access goes through the D365 profile and the BAU Support team. | Part 1, What you can see in D365 | N | Dec | **Closed 2026-11-27** (D-083) |
 
-**Screenshots from Microsoft Learn:** not used in the guide (GS-28). Microsoft's images show its demo company (Contoso, USMF) and older screens, and the training-module images are covered by Microsoft's terms of use rather than an open licence; the guide uses screenshots from our own environment.
+**Screenshots from Microsoft Learn:** used as placeholders until the WTG screenshots replace them (A8, GS-28). They are for the working draft only: Microsoft's documentation images are under an open licence with attribution, but the training-module images are under Microsoft's terms of use, so none stays in the published guide.
 
 The discovery also found points in 260 to check (discovery map, section 4). They are not applied to 260 (D-103); GS-13 and GS-14 test them here.
 
@@ -92,20 +92,20 @@ On the board as *D365 F&O Getting Started Round 1* (`r-d365-getting-started-1`),
 
 | Q | Item | Topic | Page | Question |
 |---|---|---|---|---|
-| Q01 | GS-19 | Part 1, Key concepts | p. 11 | **Where exported files may be kept.** The guide's Important box says exported files hold confidential data, must be kept in an approved WiseTech Global location and deleted when no longer needed. Is there a company rule for where exported D365 files may be saved and shared, and who may receive them? If so, what should the box say? |
-| Q02 | GS-06 | topic 1.3, step 5 | p. 18 | **Changing the session date.** Topic 1.3 shows how to change the session date, which becomes the default date for new journals and documents. Who may change it, for which tasks, and must it be reset straight after? If users should not change it at all, the topic can be removed. |
-| Q03 | GS-16 | topic 8.1, step 5 | p. 50 | **Export to Excel row limit.** Microsoft's default limit for Export to Excel is 50,000 rows; an administrator can raise it to 1,000,000 (System administration > Setup > Client performance options > Maximum number of rows to export to Excel). What limit is set in production, so the guide can state it? |
-| Q04 | GS-17 | topic 8.2, step 6 | p. 51 | **Publishing changes from Excel.** Open in Excel lets users change records in a linked workbook and publish them back to D365. May users publish changes this way? If yes, for which pages or processes, and is a check needed afterwards? If no, the guide keeps Open in Excel for viewing only. |
-| Q05 | GS-21 | topic 10, step 4 | p. 59 | **Attachment rules.** Which attachment types should users choose (File, Note, URL, or a company type), which file types and maximum size are allowed, where are attachments stored (Azure or SharePoint), and is there anything users must not attach (for example bank or card details)? |
-| Q06 | GS-27 | topic 11.3 | p. 64 | **Delegating work items while away.** Topic 11.3 shows how users set up automatic delegation of their workflow work items while away (User options > Workflow > Delegation). May users set it up for every workflow, and must their manager agree it first? |
-| Q07 | GS-23 | topic 12, step 4 | p. 65 | **Alerts in production.** Alerts depend on two batch jobs, Change based alerts and Due date alerts. Do they run in production, and how often? Can alerts also be sent by email (Send email), or only to the Action center? |
-| Q08 | GS-25 | topic 13.3, step 5 | p. 70 | **Raising a problem with the BAU Support team.** Step 5 sends users to the D365 issue form in Additional Resources. Is that the right route for a D365 problem or missing access, or should users use the Atlas D365 User Support Hub or AVA? Which details does the BAU Support team need (for example legal entity, page URL, message text, screenshot, time)? |
+| Q01 | GS-19 | Part 1, Key concepts | p. 12 | **Where exported files may be kept.** The guide's Important box says exported files hold confidential data, must be kept in an approved WiseTech Global location and deleted when no longer needed. Is there a company rule for where exported D365 files may be saved and shared, and who may receive them? If so, what should the box say? |
+| Q02 | GS-06 | topic 1.3, step 5 | p. 20 | **Changing the session date.** Topic 1.3 shows how to change the session date, which becomes the default date for new journals and documents. Who may change it, for which tasks, and must it be reset straight after? If users should not change it at all, the topic can be removed. |
+| Q03 | GS-16 | topic 8.1, step 5 | p. 63 | **Export to Excel row limit.** Microsoft's default limit for Export to Excel is 50,000 rows; an administrator can raise it to 1,000,000 (System administration > Setup > Client performance options > Maximum number of rows to export to Excel). What limit is set in production, so the guide can state it? |
+| Q04 | GS-17 | topic 8.2, step 6 | p. 65 | **Publishing changes from Excel.** Open in Excel lets users change records in a linked workbook and publish them back to D365. May users publish changes this way? If yes, for which pages or processes, and is a check needed afterwards? If no, the guide keeps Open in Excel for viewing only. |
+| Q05 | GS-21 | topic 10, step 4 | p. 75 | **Attachment rules.** Which attachment types should users choose (File, Note, URL, or a company type), which file types and maximum size are allowed, where are attachments stored (Azure or SharePoint), and is there anything users must not attach (for example bank or card details)? |
+| Q06 | GS-27 | topic 11.3 | p. 81 | **Delegating work items while away.** Topic 11.3 shows how users set up automatic delegation of their workflow work items while away (User options > Workflow > Delegation). May users set it up for every workflow, and must their manager agree it first? |
+| Q07 | GS-23 | topic 12, step 4 | p. 83 | **Alerts in production.** Alerts depend on two batch jobs, Change based alerts and Due date alerts. Do they run in production, and how often? Can alerts also be sent by email (Send email), or only to the Action center? |
+| Q08 | GS-25 | topic 13.3, step 5 | p. 90 | **Raising a problem with the BAU Support team.** Step 5 sends users to the D365 issue form in Additional Resources. Is that the right route for a D365 problem or missing access, or should users use the Atlas D365 User Support Hub or AVA? Which details does the BAU Support team need (for example legal entity, page URL, message text, screenshot, time)? |
 
 **Open items not asked, and their route (D-085):**
 
 | Route | Items |
 |---|---|
-| Clean-session test (screen labels, navigation, results) | GS-02, GS-04, GS-05, GS-07, GS-09 to GS-15, GS-18, GS-20, GS-22, GS-23 (button label), GS-24, GS-26, GS-28 |
+| Clean-session test (screen labels, navigation, results, screenshots) | GS-02, GS-04, GS-05, GS-07, GS-09 to GS-15, GS-18, GS-20, GS-22, GS-23 (button label), GS-24, GS-26, GS-28 |
 | PG owner decision, waiting | GS-01 (code, D-102), GS-03 (Finance Basics link, when published) |
 | Non-blocking, later | GS-29, GS-30 |
 
@@ -117,3 +117,4 @@ On the board as *D365 F&O Getting Started Round 1* (`r-d365-getting-started-1`),
 |---|---|
 | 2026-11-27 | v0.1 drafted from the discovery map: 13 topics, 42 procedures, Part 1 key concepts, Part 3 inquiry pages; 26 review comments (GS-02 to GS-27). Contents page numbers from the LibreOffice layout with DM Sans (a first estimate; Word's Contents is the authority, D-089). |
 | 2026-11-27 | Production URL and the shortcut list confirmed from Daniel Moreira's UAT screenshots: 1.1, 2.2, 4.1, 4.2, 5.3, 5.4, 13.1 and the Part 1 shortcut and screen tables updated; GS-08 closed (default dashboard). Round 1 drafted (Q01 to Q08). Still v0.1: the draft has not gone out (D-092). |
+| 2026-11-27 | 35 Microsoft Learn screenshots added as placeholders for the WTG screenshots, with highlighted captions (A8); GS-28 becomes blocking, with its review comment. The guide grows to 93 pages; Contents and round 1 pages recalculated (LibreOffice estimate). |

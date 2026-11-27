@@ -71,7 +71,8 @@ def part1():
               ['Grid', 'The centre of a list page', 'Rows of records and columns of data. You filter, sort and select rows here.'],
               ['FastTab', 'On a record’s details page', 'A section of fields that expands and collapses.'],
               ['FactBox', 'The pane on the right of some pages', 'Related information about the selected record, such as balances or contacts.'],
-          ], widths=[1800, 2700, 4572])]
+          ], widths=[1800, 2700, 4572]),
+          image('ui_labelled', 6.0, 3.6), image('navbar', 6.0, 1.2)]
     o += [blank(), h5('Pages and views'),
           concept_table(['Page type or view', 'What it shows', 'Use it to'], [
               ['List page (Grid view)', 'Many records in a grid', 'Find, filter and select records, and change several records without opening each one.'],
@@ -105,6 +106,7 @@ def part1():
               ['Feature callout', 'A short pop-up next to a control that introduces a new feature.', 'Select **Got it** to close it.'],
           ], widths=[2400, 3336, 3336]),
           bodyblank(),
+          image('msgbar', 5.0, 1.2),
           concept_table(['Message type', 'Meaning'], [
               ['Information', 'Tells you something. Usually no action is needed.'],
               ['Warning', 'The data may cause a problem later. Check it before you continue.'],
