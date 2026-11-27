@@ -1,13 +1,13 @@
-# Validation Register: 230 Collections v3.1 (working draft)
+# Validation Register: 230 Collections v3.2 (working draft)
 
 | Field | Value |
 |---|---|
-| Guide (editable source) | [`CLAUDE-230-Collections PG v3.1.docx`](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.1.docx) |
+| Guide (editable source) | [`CLAUDE-230-Collections PG v3.2.docx`](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.2.docx) |
 | Review PDF | [`CLAUDE-230-Collections PG v3.0.pdf`](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.0.pdf) (out of date, D-064) |
 | Markdown preview | [`PG-230-Collections-v3.0-DRAFT.md`](../01-procedure-guides/PG-230-Collections-v3.0-DRAFT.md) |
-| Status | Working draft **v3.1** (D-092; versions below). **Maria Pabalan answered round 1 on 19 November** and the answers are applied (D-093), with the legacy 230 write-ins that waited for them; round 2 (one question, section 7) was sent to Maria Pabalan in ADO 16886 on 23 November, and the same review copy went to Christopher Clarke (BPO) and Ken Lee so they can start the sign-off review while Q04 is open; Q04 is marked as a placeholder (D-097). v3.0 (D-052; ADO Task 16886): Shared with the SME for review only (SME review pack of 8 November; D-052 amendment); needs BPO sign-off. Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-063); no content or item changes. Review comments cut to one per open blocking item on 2026-11-17 (D-067, D-075). Round 1 rebuilt as three questions (D-085, section 6). Version 2.3, then 2.4, stays published until 3.0 passes its gates. |
-| Last updated | 2026-11-25 |
-| Items | 13 guide-level items (`G230`): 3 open (2 blocking: `G230-05`, `G230-15`; 1 non-blocking: `G230-17`) and 10 closed (`G230-06` to `G230-14`, `G230-16`). **63 Word review comments** (D-067): 3 guide-level and 60 carried from the topic drafts; 43 removed under D-067 (section 4.1), 11 when round 1 was rebuilt (section 6) and 20 when it was answered (section 6.3). Comments for items asked in round 2 start with the question number, for example *[Q04]*. |
+| Status | Working draft **v3.2** (D-092; versions below). **Maria Pabalan answered round 1 on 19 November** and the answers are applied (D-093), with the legacy 230 write-ins that waited for them; round 2 (one question, section 7) was sent to Maria Pabalan in ADO 16886 on 23 November, and the same review copy went to Christopher Clarke (BPO) and Ken Lee so they can start the sign-off review while Q04 is open; Q04 is marked as a placeholder (D-097). **Maria answered Q04 on 26 November** (Teams; section 7.3) and it is applied in v3.2 (D-107): the officer troubleshoots and fixes a failed delivery, with no set procedure. No question is open. v3.0 (D-052; ADO Task 16886): Shared with the SME for review only (SME review pack of 8 November; D-052 amendment); needs BPO sign-off. Formatting brought in line with D-059 to D-061 on 2026-11-16 (D-063); no content or item changes. Review comments cut to one per open blocking item on 2026-11-17 (D-067, D-075). Round 1 rebuilt as three questions (D-085, section 6). Version 2.3, then 2.4, stays published until 3.0 passes its gates. |
+| Last updated | 2026-11-27 |
+| Items | 13 guide-level items (`G230`): 3 open (2 blocking: `G230-05`, `G230-15`; 1 non-blocking: `G230-17`) and 10 closed (`G230-06` to `G230-14`, `G230-16`). **62 Word review comments** (D-067): 3 guide-level and 59 carried from the topic drafts; 43 removed under D-067 (section 4.1), 11 when round 1 was rebuilt (section 6), 20 when it was answered (section 6.3) and 1 when round 2 was answered (section 7.3). No comment carries a question number: round 2 is answered. |
 
 This file is the guide's **question log** (D-016). It holds the guide-level items, which are scoped to this guide and never renumbered. Review comments carried from the topic drafts keep their ID and draft name, for example *Aged Balances VG-03*, and their source register stays the record for them: an answer recorded there applies here (D-048). Each open item that affects the text is a Word review comment by "Validation register" (VR).
 
@@ -21,6 +21,15 @@ Each version that goes out for review keeps its number; when a round of answers 
 |---|---|---|---|
 | 3.0 | 3 to 18 November 2026 | Maria Pabalan, with round 1 (ADO Task 16886, 18 November) | Legacy 230 (v2.4) rebuilt in the master template with the nine AR Collections topic drafts (D-052); formatting under D-059 to D-061 (D-063); review comments cut to one per open blocking item (D-067, D-075); round 1 rebuilt under D-085. |
 | 3.1 | 22 to 23 November 2026 | Maria Pabalan, with round 2 (ADO Task 16886, 23 November); Christopher Clarke and Ken Lee, for an early sign-off review (23 November, D-097) | Maria's round 1 answers applied (D-093), with the legacy 230 write-ins that waited for them. What changed is listed below. |
+| 3.2 | 27 November 2026 | Not sent yet | Maria's round 2 answer applied (D-107). What changed is listed below. |
+
+### What changed in v3.2
+
+From Maria Pabalan's answer to round 2 Q04 (Teams, 26 November 2026; section 7.3) and Daniel Moreira's direction to keep it high level (D-107).
+
+- **6.2.2 step 3 Act on a failed delivery:** if the banner shows that the statement was not sent, or names the wrong recipient, the officer troubleshoots the delivery and fixes it, for example by checking the delivery method or updating the customer's details (with a link to 2.7 Update Customer Details). There is no set procedure. The placeholder and the review comment are gone.
+- **Version history:** a 3.2 row (Maria Pabalan; Daniel Moreira; *SME round 2 answer (draft)*).
+- **Records:** `Statement Distribution VG-10` closed; review comments 63 → 62. The pages do not change.
 
 ### What changed in v3.1
 
@@ -111,7 +120,7 @@ Every review comment in the Word guide, in document order, after D-067 (one comm
 | Topic 4.1 Check an Overdue Balance Before Contact | `Overdue Customers VG-07` |
 | Topic 5 Record a Customer Collection Activity | `Collection Activities VG-04`, `Collection Activities VG-08`, `Collection Activities VG-12`, `Collection Activities VG-13` |
 | Topic 6.1 Preview and Download a Customer Statement | `Statement Preview VG-01`, `Statement Preview VG-02`, `Statement Preview VG-06`, `Statement Preview VG-07`, `Statement Preview VG-09`, `Statement Preview VG-10 / VG-12` |
-| Topic 6.2 Generate and Send a Customer Statement | `Statement Distribution VG-01`, `Statement Distribution VG-02`, `G230-15`, `Statement Distribution VG-07`, `Statement Distribution VG-10` |
+| Topic 6.2 Generate and Send a Customer Statement | `Statement Distribution VG-01`, `Statement Distribution VG-02`, `G230-15`, `Statement Distribution VG-07` |
 | Topic 7.1 View and Download a Customer Invoice | `Customer Invoices VG-01`, `Customer Invoices VG-02`, `Customer Invoices VG-03`, `Customer Invoices VG-04`, `Customer Invoices VG-05`, `Customer Invoices VG-07`, `Customer Invoices VG-08 / VG-10` |
 | Topic 7.3 Change Customer Status | `G230-03` |
 
@@ -274,6 +283,16 @@ Round 2 went to Maria Pabalan with v3.1 in ADO 16886 on 23 November (Daniel More
 | Not needed | `G230-16` (how to send a change to License Management) | Closed by Daniel Moreira (D-094): the method is flexible and follows current practice, so the guide does not name one. |
 | Sign-off | `G230-05` | BPO sign-off. |
 
+### 7.3 Round 2 answer (Maria Pabalan, Teams, 26 November 2026)
+
+Daniel Moreira followed up Q04 with Maria in Teams; she answered there.
+
+| Question | Answer | Applied in v3.2 | Items |
+|---|---|---|---|
+| Q04 Failed statement delivery | It is for the Collections Officer to fix and troubleshoot, for example by checking the delivery method or updating the customer's details. Daniel Moreira: give high-level guidance that the fix is up to the officer, with no specific instructions (D-107). | 6.2.2 step 3: troubleshoot and fix, with the two examples and a link to 2.7; no set procedure; placeholder and comment removed | `Statement Distribution VG-10` closed |
+
+The answer was checked against the roles, prerequisites and reports it touches: the Collections Officer already owns 6.2.2, and 2.7 Update Customer Details is where the guide sends customer detail changes (to 200 Customer Onboarding and Maintenance, or to License Management for a name, address, VAT ID or country). Nothing else changes.
+
 ---
 
 ## 8. Change log
@@ -301,3 +320,4 @@ Round 2 went to Maria Pabalan with v3.1 in ADO 16886 on 23 November (Daniel More
 | 2026-11-23 | Round 2 marked sent on the board by Daniel Moreira: Q04 went to Maria Pabalan in ADO 16886 with the v3.1 review copy (23 November, per the ticket; the board first recorded 22 November). |
 | 2026-11-24 | Review copy sent (Daniel Moreira): `REVIEW COPY-230-Collections PG v3.1.docx` went to Christopher Clarke and Ken Lee in ADO 16886 on 23 November for an early sign-off review, with a note that the red and yellow notes are open points and that minor formatting is fixed in the final end-to-end review (D-097). The round 2 send date is 23 November, as the ticket shows. |
 | 2026-11-25 | `G230-17` added (non-blocking): it follows 220 `G220-21`, who writes off a bank fee, asked once for both guides as 220 round 3 Q11. No change to the guide yet. |
+| 2026-11-27 | Round 2 answered: Maria Pabalan answered Q04 in Teams on 26 November, and Daniel Moreira asked for high-level guidance only (D-107). Applied as **v3.2** (D-092; section 7.3): 6.2.2 step 3 has the officer troubleshoot and fix a failed delivery, with examples and a link to 2.7, and no set procedure. The Word file is renamed `CLAUDE-230-Collections PG v3.2.docx`, every link is updated, and the version history has a 3.2 row. `Statement Distribution VG-10` closed; comments 63 → 62. The pages do not change. The PDF is out of date (D-064). |

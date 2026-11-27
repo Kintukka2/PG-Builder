@@ -8,7 +8,7 @@
 | Last updated | 2026-11-18 |
 | Items | 23 total: 20 open (14 blocking, 6 non-blocking), 2 closed, 1 deferred |
 
-> **Merged and frozen (D-052).** This topic draft is now topics 2.1 and 4.1 of the [230 Collections v3.1](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.1.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Overdue Customers VG-xx*.
+> **Merged and frozen (D-052).** This topic draft is now topics 2.1 and 4.1 of the [230 Collections v3.2](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.2.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Overdue Customers VG-xx*.
 
 This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are scoped to this guide and never renumbered. Each open item that affects the text is also a Word review comment by "Validation register" (VR).
 
