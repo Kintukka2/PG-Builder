@@ -10,94 +10,98 @@
   ],
   [
    2,
-   "[Q01] GS-19: Confirm the company rule for exported D365 data: where exported files may be kept and shared, and who may receive them. The Important box states a general rule until the PG owner confirms it."
+   "GS-28: Every screenshot in v0.1 is a Microsoft Learn example with Microsoft's demo data (Contoso, USMF), placed where the WTG screenshot goes and captioned with what it should show. Replace each one with a screenshot from our environment, without customer data, and remove its caption. The register lists them."
   ],
   [
    3,
-   "GS-07: The main table is from the View shortcuts list in our environment (Daniel Moreira, 27 November 2026). Test the four field and grid shortcuts below, which come from Microsoft's list, in the clean-session test."
+   "[Q01] GS-19: Confirm the company rule for exported D365 data: where exported files may be kept and shared, and who may receive them. The Important box states a general rule until the PG owner confirms it."
   ],
   [
    4,
-   "GS-04: Confirm the sign-in steps (work account, any multifactor authentication prompt) and how users sign out (the initials menu at the right of the navigation bar) in the clean-session test. Microsoft has no end-user article on signing in. The production URL is confirmed (Daniel Moreira, 27 November 2026)."
+   "GS-07: The main table is from the View shortcuts list in our environment (Daniel Moreira, 27 November 2026). Test the four field and grid shortcuts below, which come from Microsoft's list, in the clean-session test."
   ],
   [
    5,
-   "GS-05: Confirm the values offered in Default view/edit mode (Microsoft shows Auto; the values are not documented for users) and which the company recommends."
+   "GS-04: Confirm the sign-in steps (work account, any multifactor authentication prompt) and how users sign out (the initials menu at the right of the navigation bar) in the clean-session test. Microsoft has no end-user article on signing in. The production URL is confirmed (Daniel Moreira, 27 November 2026)."
   ],
   [
    6,
-   "[Q02] GS-06: Confirm the company rule on changing the session date: who may change it, for which tasks, and whether it must be reset. Microsoft documents the steps only."
+   "GS-05: Confirm the values offered in Default view/edit mode (Microsoft shows Auto; the values are not documented for users) and which the company recommends."
   ],
   [
    7,
-   "GS-09: Confirm what happens to unsaved changes when a user moves to another record or closes the page (Microsoft does not document it), and the label and place of Revert (Options tab). Step 4 tells users to save explicitly until this is confirmed."
+   "[Q02] GS-06: Confirm the company rule on changing the session date: who may change it, for which tasks, and whether it must be reset. Microsoft documents the steps only."
   ],
   [
    8,
-   "GS-10: Confirm the delete confirmation message and its buttons in our environment."
+   "GS-09: Confirm what happens to unsaved changes when a user moves to another record or closes the page (Microsoft does not document it), and the label and place of Revert (Options tab). Step 4 tells users to save explicitly until this is confirmed."
   ],
   [
    9,
-   "GS-11: Confirm which side the Filter pane opens on (Microsoft's training says right; the current article says left) and the label of its reset control."
+   "GS-10: Confirm the delete confirmation message and its buttons in our environment."
   ],
   [
    10,
-   "GS-12: Confirm the menu label and location of Advanced filter or sort in our environment (historically on the Options tab under Page options), the dialog's title and its tabs (Range, Sorting)."
+   "GS-11: Confirm which side the Filter pane opens on (Microsoft's training says right; the current article says left) and the label of its reset control."
   ],
   [
    11,
-   "GS-13: Confirm the footer total labels in our environment: Microsoft documents View column totals (Total, Minimum, Maximum, Average, with the extended totals feature) or Total this column without it, and Show total / Select calculated value in the footer. 260 uses \"+\" and \"Calculate column\", which this replaces if the test confirms it."
+   "GS-12: Confirm the menu label and location of Advanced filter or sort in our environment (historically on the Options tab under Page options), the dialog's title and its tabs (Range, Sorting)."
   ],
   [
    12,
-   "GS-14: Confirm the name of the out-of-box view (Standard), and the label and place of the legal entity choice in Save view as and in Pin as default (current or all legal entities). Same question as 260 G260-07."
+   "GS-13: Confirm the footer total labels in our environment: Microsoft documents View column totals (Total, Minimum, Maximum, Average, with the extended totals feature) or Total this column without it, and Show total / Select calculated value in the footer. 260 uses \"+\" and \"Calculate column\", which this replaces if the test confirms it."
   ],
   [
    13,
-   "GS-15: Confirm the personalization toolbar tool labels in our environment (Microsoft's article and screenshot differ: Add fields / Add a field)."
+   "GS-14: Confirm the name of the out-of-box view (Standard), and the label and place of the legal entity choice in Save view as and in Pin as default (current or all legal entities). Same question as 260 G260-07."
   ],
   [
    14,
-   "[Q03] GS-16: Confirm the export row limit set for our environment (Microsoft's default is 50,000 rows, configurable up to 1,000,000). Same as 260 Export to Excel VG-06."
+   "GS-15: Confirm the personalization toolbar tool labels in our environment (Microsoft's article and screenshot differ: Add fields / Add a field)."
   ],
   [
    15,
-   "[Q04] GS-17: Confirm whether users may publish changes to D365 from Excel, for which pages, and any control (for example who checks the publish result). Until confirmed, the guide says to publish only where a process guide allows."
+   "[Q03] GS-16: Confirm the export row limit set for our environment (Microsoft's default is 50,000 rows, configurable up to 1,000,000). Same as 260 Export to Excel VG-06."
   ],
   [
    16,
-   "GS-18: Confirm the report dialog sections and labels (Parameters, Records to include > Filter, Destination > Change, Run in the background) and the destinations available to users, in the clean-session test. Microsoft has no current end-user article for the report dialog; the labels come from an archived Microsoft blog."
+   "[Q04] GS-17: Confirm whether users may publish changes to D365 from Excel, for which pages, and any control (for example who checks the publish result). Until confirmed, the guide says to publish only where a process guide allows."
   ],
   [
    17,
-   "GS-20: Confirm the paths of My batch jobs and the Print archive (Common > Inquiries) and the Print archive buttons (Print preview) in our environment. Microsoft has no current end-user article for either page."
+   "GS-18: Confirm the report dialog sections and labels (Parameters, Records to include > Filter, Destination > Change, Run in the background) and the destinations available to users, in the clean-session test. Microsoft has no current end-user article for the report dialog; the labels come from an archived Microsoft blog."
   ],
   [
    18,
-   "[Q05] GS-21: Confirm the attachment types users choose, the file types and maximum size allowed, where attachments are stored (Azure or SharePoint), and anything that must not be attached. These are admin settings."
+   "GS-20: Confirm the paths of My batch jobs and the Print archive (Common > Inquiries) and the Print archive buttons (Print preview) in our environment. Microsoft has no current end-user article for either page."
   ],
   [
    19,
-   "GS-22: Confirm the Workflow button and its menu labels (Submit, View history, Recall, Approve, Reject, Request change, Delegate), the message bar and its instructions icon, and the Work items assigned to me path, in our environment. Microsoft documents them only from the setup side."
+   "[Q05] GS-21: Confirm the attachment types users choose, the file types and maximum size allowed, where attachments are stored (Azure or SharePoint), and anything that must not be attached. These are admin settings."
   ],
   [
    20,
-   "[Q06] GS-27: Confirm whether users may set up delegation for every workflow, and whether their manager must agree it first. Microsoft documents the steps only."
+   "GS-22: Confirm the Workflow button and its menu labels (Submit, View history, Recall, Approve, Reject, Request change, Delegate), the message bar and its instructions icon, and the Work items assigned to me path, in our environment. Microsoft documents them only from the setup side."
   ],
   [
    21,
-   "[Q07] GS-23: Confirm the alert button label (Microsoft gives Create alert rule and Create a custom alert), that the alert batch jobs run in our environment and how often, and whether alert emails are sent."
+   "[Q06] GS-27: Confirm whether users may set up delegation for every workflow, and whether their manager must agree it first. Microsoft documents the steps only."
   ],
   [
    22,
-   "GS-24: Confirm the items on the Help & Support (?) menu in our build, the Help pane shortcut (Ctrl+Shift+? or Ctrl+?), and whether the Task guides tab is set up. Microsoft's own task guides stop at the December 2017 release."
+   "[Q07] GS-23: Confirm the alert button label (Microsoft gives Create alert rule and Create a custom alert), that the alert batch jobs run in our environment and how often, and whether alert emails are sent."
   ],
   [
    23,
-   "[Q08] GS-25: Confirm how users raise a D365 problem with the BAU Support team (the D365 issue form in Additional Resources, the Atlas D365 User Support Hub, or AVA), and the details the team needs (for example legal entity, URL, message, screenshot, time)."
+   "GS-24: Confirm the items on the Help & Support (?) menu in our build, the Help pane shortcut (Ctrl+Shift+? or Ctrl+?), and whether the Task guides tab is set up. Microsoft's own task guides stop at the December 2017 release."
   ],
   [
    24,
+   "[Q08] GS-25: Confirm how users raise a D365 problem with the BAU Support team (the D365 issue form in Additional Resources, the Atlas D365 User Support Hub, or AVA), and the details the team needs (for example legal entity, URL, message, screenshot, time)."
+  ],
+  [
+   25,
    "GS-26: Confirm the Usage data page, its tabs (Personalization) and the delete and reset buttons in our environment."
   ]
  ],

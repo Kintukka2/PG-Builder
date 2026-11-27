@@ -1,6 +1,7 @@
 import re, json, os, shutil, zipfile, sys, html
 sys.path.insert(0, os.path.dirname(__file__))
 import pgxml
+pgxml.IMGDIR = '/tmp/claude-0/-home-user-PG-Builder/f0afce8b-f859-5156-9b71-713ba05faa5c/scratchpad/build/img'
 from pgxml import D, esc
 
 SRC = '/home/user/PG-Builder/ar-collections-learning/01-procedure-guides/CLAUDE-230-Collections PG v3.1.docx'
@@ -90,6 +91,22 @@ newbody = ''.join(prefix) + ''.join(middle) + ''.join(suffix)
 doc = head + newbody + tail
 open(f'{work}/word/document.xml', 'w').write(doc)
 
+# images
+from PIL import Image
+rels = open(f'{work}/word/_rels/document.xml.rels').read()
+os.makedirs(f'{work}/word/media', exist_ok=True)
+for rid, key in D.images:
+    dst = f'{work}/word/media/gs_{key}.png'
+    if not os.path.exists(dst):
+        im = Image.open(f'{pgxml.IMGDIR}/{key}.png').convert('RGB')
+        if im.width > 1400: im = im.resize((1400, round(im.height * 1400 / im.width)))
+        im.save(dst, optimize=True)
+    rels = rels.replace('</Relationships>', f'<Relationship Id="{rid}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/gs_{key}.png"/></Relationships>')
+open(f'{work}/word/_rels/document.xml.rels', 'w').write(rels)
+ct = open(f'{work}/[Content_Types].xml').read()
+if 'Extension="png"' not in ct: ct = ct.replace('<Default ', '<Default Extension="png" ContentType="image/png"/><Default ', 1)
+open(f'{work}/[Content_Types].xml', 'w').write(ct)
+
 # numbering
 add = ''.join(f'<w:num w:numId="{n}"><w:abstractNumId w:val="{a}"/><w:lvlOverride w:ilvl="0"><w:startOverride w:val="1"/></w:lvlOverride></w:num>' for n, a in D.nums)
 num = num.replace('</w:numbering>', add + '</w:numbering>')
@@ -113,7 +130,10 @@ open(f'{work}/docProps/core.xml', 'w').write(core)
 
 # zip in original order
 with zipfile.ZipFile(SRC) as zs, zipfile.ZipFile(OUT, 'w', zipfile.ZIP_DEFLATED) as zo:
-    for info in zs.infolist():
-        zo.write(os.path.join(work, info.filename), info.filename)
+    names = [i.filename for i in zs.infolist()]
+    for n in names: zo.write(os.path.join(work, n), n)
+    for rid, key in D.images:
+        n = f'word/media/gs_{key}.png'
+        if n not in names: names.append(n); zo.write(os.path.join(work, n), n)
 json.dump({'comments': D.comments, 'toc': D.toc}, open(os.path.join(B, 'build_meta.json'), 'w'), indent=1)
 print('built', OUT, 'comments', len(D.comments), 'tables nums', len(D.nums), 'toc', len(D.toc))

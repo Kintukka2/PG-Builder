@@ -106,6 +106,10 @@ Every procedure in this guide and in the process guides uses these names. Learn 
 | **FastTab** | On a record’s details page | A section of fields that expands and collapses. |
 | **FactBox** | The pane on the right of some pages | Related information about the selected record, such as balances or contacts. |
 
+<mark>Microsoft Learn example (demo data): A customer page with the parts of the screen labelled. Replace with a WTG screenshot.</mark> `[GS-28]`
+
+<mark>Microsoft Learn example (demo data): The navigation bar, Action Pane and Navigation Pane, labelled. Replace with a WTG screenshot.</mark>
+
 ##### Pages and views
 
 | Page type or view | What it shows | Use it to |
@@ -143,6 +147,8 @@ D365 tells you about problems and results in four places. Where a message appear
 | **Message box (over the page)** | An error that stops the action. | Read it, select the button it offers, then fix the cause. |
 | **Action center (bell on the navigation bar)** | The result of work that ran in the background, such as a report or a batch job, and your alerts. | Open the bell to read new messages. It keeps up to 500 messages. |
 | **Feature callout** | A short pop-up next to a control that introduces a new feature. | Select **Got it** to close it. |
+
+<mark>Microsoft Learn example (demo data): Information, warning and error messages in the message bar. Replace with a WTG screenshot.</mark>
 
 | Message type | Meaning |
 |---|---|
@@ -330,7 +336,7 @@ Complete these steps to sign in to D365:
 | 1. *Open* your browser. | Open Microsoft Edge (recommended) or another supported browser. |
 | 2. *Enter* the **D365 URL**. `[GS-04]` | Enter the D365 address in the address bar: https://wtg.operations.dynamics.com/. Add it to your browser favorites so you can open it quickly. |
 | 3. *Sign in* with your work account. | Sign in with your WiseTech Global email address and password, and approve the sign-in request if one is shown. |
-| 4. *Confirm* the **Dashboard** is displayed. | D365 opens on the dashboard, or on the initial page set in your user options, in your default legal entity. |
+| 4. *Confirm* the **Dashboard** is displayed. | D365 opens on the dashboard, or on the initial page set in your user options, in your default legal entity.<br><mark>Microsoft Learn example (demo data): The default dashboard after sign-in. Replace with a WTG screenshot.</mark> |
 | 5. *Select* your initials to sign out. | When you finish, select your initials at the right of the navigation bar, then select **Sign out**. Save your work first. |
 | *STEP COMPLETE* | You are signed in to D365.<br>Continue to 1.2 Set Your User Options |
 
@@ -357,7 +363,7 @@ Complete these steps to set your user options:
 | *PROCESS START* | Pre-requisites:<br>• You are signed in to D365 (see 1.1 Sign In and Sign Out).<br>Responsibility:<br>• D365 End-user |
 | 1. *Click* **Settings**. | On the navigation bar, click **Settings** (the gear icon). |
 | 2. *Select* **User options**. | Select **User options**. The **Options** page opens on the **Visual** tab, where you can choose a colour theme and the size of page elements. |
-| 3. *Click* the **Preferences** tab. | Click **Preferences**. |
+| 3. *Click* the **Preferences** tab. | Click **Preferences**.<br><mark>Microsoft Learn example (demo data): User options, Preferences tab: Startup and language settings. Replace with a WTG screenshot.</mark> |
 | 4. *Select* the **Company**. | On the **Startup** FastTab, select in **Company** the legal entity D365 opens in when you sign in. |
 | 5. *Select* the **Initial page**. | Select the page D365 opens on, for example **Default dashboard**. |
 | 6. *Check* the **Default view/edit mode**. `[GS-05]` | Leave the default unless your process guide says otherwise. It controls whether pages open locked for viewing or ready for editing. |
@@ -439,7 +445,7 @@ Complete these steps to open a page from the Navigation Pane:
 | *PROCESS START* | Pre-requisites:<br>• Access to D365.<br>• The navigation path of the page, from your process guide.<br>Responsibility:<br>• D365 End-user |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). To change it, see 3.1 Switch Legal Entity with the Selector. |
 | 2. *Click* **Modules**. | From the left-hand **Navigation Pane**, click **Modules**. If the pane is closed, click the menu icon at its top. |
-| 3. *Click* the module. | Click the first level of the path, for example **Accounts receivable**. The module menu opens. |
+| 3. *Click* the module. | Click the first level of the path, for example **Accounts receivable**. The module menu opens.<br><mark>Microsoft Learn example (demo data): A module menu open in the Navigation Pane. Replace with a WTG screenshot.</mark> |
 | 4. *Click* the page. | Find the page under its menu heading, for example **Customers > All customers**, and click it. |
 | 5. *Confirm* the page is open. | Check the page title. If the module or page is not shown, contact the BAU Support team (topic 13.3). |
 | *PROCESS COMPLETE* | Outcomes:<br>• The page is open in the active legal entity. |
@@ -466,7 +472,7 @@ Complete these steps to search for a page:
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• Access to D365.<br>Responsibility:<br>• D365 End-user |
 | 1. *Click* **Search for a page**. | On the navigation bar, click **Search for a page** (the magnifying glass), or press **Alt+G**. |
-| 2. *Type* words from the page name. | Type one or more words, for example **payment journal**. Each result shows the page name and its navigation path. |
+| 2. *Type* words from the page name. | Type one or more words, for example **payment journal**. Each result shows the page name and its navigation path.<br><mark>Microsoft Learn example (demo data): Search for a page: results with their navigation paths. Replace with a WTG screenshot.</mark> |
 | 3. *Select* the page. | Select the page in the results. If it is not listed, add or change words: the search shows up to 10 results. |
 | 4. *Confirm* the page is open. | Check the page title before you continue. |
 | *PROCESS COMPLETE* | Outcomes:<br>• The page is open. |
@@ -493,7 +499,7 @@ Complete these steps to add a page to your Favorites:
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). To change it, see 3.1 Switch Legal Entity with the Selector. |
 | 2. *Click* **Modules**. | From the left-hand **Navigation Pane**, click **Modules**. |
 | 3. *Click* the module that contains the page. | Click the module, for example **Accounts payable**. The module menu opens. |
-| 4. *Click* the favorite star for the page. | In the module menu, find the page and click the star next to it. The page is added to your **Favorites**.<br>Note: To add another page, repeat steps 2 to 4. |
+| 4. *Click* the favorite star for the page. | In the module menu, find the page and click the star next to it. The page is added to your **Favorites**.<br>Note: To add another page, repeat steps 2 to 4.<br><mark>Microsoft Learn example (demo data): The favorite star next to a page in a module menu. Replace with a WTG screenshot.</mark> |
 | 5. *Click* **Favorites**. | From the left-hand **Navigation Pane**, click **Favorites**. Your favorites list is displayed. |
 | 6. *Confirm* the page is listed. | Confirm that the page appears in your favorites list. |
 | *PROCESS COMPLETE* | Outcomes:<br>• The page appears under **Favorites** in the **Navigation Pane** and opens from there. |
@@ -531,7 +537,7 @@ Complete these steps to work from a workspace:
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). To change it, see 3.1 Switch Legal Entity with the Selector. |
 | 2. *Click* **Workspaces**. | From the left-hand **Navigation Pane**, click **Workspaces**, or select the workspace tile on the dashboard. |
 | 3. *Select* the workspace. | Select the workspace your process guide names. |
-| 4. *Review* the summary tiles. | Each tile shows a count of records, for example unposted journals. Click a tile to open the list of those records. |
+| 4. *Review* the summary tiles. | Each tile shows a count of records, for example unposted journals. Click a tile to open the list of those records.<br><mark>Microsoft Learn example (demo data): A workspace: summary tiles, Filter box, tabbed lists and links. Replace with a WTG screenshot.</mark> |
 | 5. *Select* a tab in the lists. | In the workspace lists, select a tab to see the records it holds. Use the **Filter** box above the list to narrow it. |
 | 6. *Click* a link. | Optional. Under **Links**, click a page to open it. |
 | 7. *Return* to the dashboard. | When you finish, click **Home** in the **Navigation Pane**, or press **Alt+Shift+Home**. |
@@ -580,7 +586,7 @@ Complete these steps to switch legal entity with the selector:
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• Access to D365 and to the required legal entity.<br>• The business name of the required legal entity.<br>Responsibility:<br>• D365 End-user |
 | 1. *Click* the legal entity selector. | On the navigation bar (top-right), click the legal entity selector. It shows the active legal entity. You can also press **Ctrl+Shift+O**. |
-| 2. *Find* the required legal entity. | Find the legal entity by its business name, or type part of the name or ledger code to narrow the list. |
+| 2. *Find* the required legal entity. | Find the legal entity by its business name, or type part of the name or ledger code to narrow the list.<br><mark>Microsoft Learn example (demo data): The legal entity selector open, listing legal entities. Replace with a WTG screenshot.</mark> |
 | 3. *Select* the legal entity. | Select the legal entity. D365 switches to it. |
 | 4. *Confirm* the active legal entity. | Check that the selector now shows the required legal entity before you continue.<br>Note: The ledger code also shows in the URL after **cmp=**, for example https://wtg.operations.dynamics.com/?cmp=112a. |
 | *PROCESS COMPLETE* | Outcomes:<br>• D365 is working in the required legal entity. |
@@ -656,7 +662,7 @@ Complete these steps to edit and save a record:
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• The record is open (see 2.1 Open a Page from the Navigation Pane).<br>Responsibility:<br>• D365 End-user |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). To change it, see 3.1 Switch Legal Entity with the Selector. |
-| 2. *Click* **Edit**. | On the Action Pane, click **Edit**, or press **F2**. The fields you can change become editable. If **Edit** is not shown, the page is always editable or always read-only. |
+| 2. *Click* **Edit**. | On the Action Pane, click **Edit**, or press **F2**. The fields you can change become editable. If **Edit** is not shown, the page is always editable or always read-only.<br><mark>Microsoft Learn example (demo data): The Action Pane with Edit, New and Delete. Replace with a WTG screenshot.</mark> |
 | 3. *Enter* the change. | Change the fields your process guide gives. Read any message that appears in the message bar. |
 | 4. *Click* **Save**. `[GS-09]` | On the Action Pane, click **Save**, or press **Alt+S**. |
 | 5. *Confirm* the record is saved. | Check that no error shows in the message bar and the changed values remain. To undo changes you have not saved, select **Revert** on the **Options** tab of the Action Pane, or press **Ctrl+Shift+F5**. |
@@ -796,7 +802,7 @@ Complete these steps to filter with the QuickFilter:
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• The list page is open.<br>Responsibility:<br>• D365 End-user |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). To change it, see 3.1 Switch Legal Entity with the Selector. |
-| 2. *Type* the value in the **Filter** box. | Type the value in the **Filter** box above the grid. A list of columns appears below the box. |
+| 2. *Type* the value in the **Filter** box. | Type the value in the **Filter** box above the grid. A list of columns appears below the box.<br><mark>Microsoft Learn example (demo data): The Filter box with its column list. Replace with a WTG screenshot.</mark> |
 | 3. *Select* the column. | Select the column the value belongs to, for example **Name** or **Account**. D365 remembers the column you choose. |
 | 4. *Press* **Enter**. | Press **Enter**. The grid shows only the matching rows. |
 | 5. *Clear* the filter when you finish. | Delete the text in the **Filter** box and press **Enter** to see all rows again. |
@@ -822,7 +828,7 @@ Complete these steps to filter and sort a column:
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• The list page is open.<br>Responsibility:<br>• D365 End-user |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). To change it, see 3.1 Switch Legal Entity with the Selector. |
-| 2. *Click* the column header. | Click the header of the column, or select a cell in it and press **Ctrl+G**. The column filter opens. |
+| 2. *Click* the column header. | Click the header of the column, or select a cell in it and press **Ctrl+G**. The column filter opens.<br><mark>Microsoft Learn example (demo data): A column header filter with sort, operator, Apply and Clear. Replace with a WTG screenshot.</mark> |
 | 3. *Select* the filter operator. | Select the operator next to the field name, for example **contains**. See Filter operators in Part 1. |
 | 4. *Enter* the filter value. | Enter the value. For example, to exclude zero balances, select **is not equal to** and enter **0**. |
 | 5. *Click* **Apply**. | Click **Apply**, or press **Enter**. The grid shows only the matching rows. **Clear** removes this column’s filter. |
@@ -850,7 +856,7 @@ Complete these steps to filter with the Filter pane:
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• The list page is open.<br>Responsibility:<br>• D365 End-user |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). To change it, see 3.1 Switch Legal Entity with the Selector. |
-| 2. *Click* **Show filters**. `[GS-11]` | Click **Show filters** (the funnel icon at the side of the page), or press **Alt+M, F**. The Filter pane opens. |
+| 2. *Click* **Show filters**. `[GS-11]` | Click **Show filters** (the funnel icon at the side of the page), or press **Alt+M, F**. The Filter pane opens.<br><mark>Microsoft Learn example (demo data): The Filter pane with Add, Apply and Reset. Replace with a WTG screenshot.</mark> |
 | 3. *Enter* a value for each field. | For each field, select the operator and enter the value. |
 | 4. *Click* **Add a filter field**. | Optional. To filter on a field that is not listed, click **Add a filter field** and select it. |
 | 5. *Click* **Apply**. | Click **Apply**. The grid shows only the rows that match every filter. |
@@ -877,7 +883,7 @@ Complete these steps to use advanced filter or sort:
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• The list page is open.<br>Responsibility:<br>• D365 End-user |
 | 1. *Press* **Ctrl+Shift+F3**. `[GS-12]` | Press **Ctrl+Shift+F3** (**Open advanced filtering and sorting options**). The advanced filter dialog opens on the **Range** tab. |
-| 2. *Click* **Add**. | On the **Range** tab, click **Add** to add a line. |
+| 2. *Click* **Add**. | On the **Range** tab, click **Add** to add a line.<br><mark>Microsoft Learn example (demo data): The advanced filter dialog, Range tab. Replace with a WTG screenshot.</mark> |
 | 3. *Select* the **Field**. | Select the table and field to filter on. |
 | 4. *Enter* the **Criteria**. | Enter the value, using the symbols in Filter operators in Part 1. |
 | 5. *Click* **OK**. | Click **OK**. The page shows the rows that match the criteria. |
@@ -927,7 +933,7 @@ Complete these steps to arrange the columns:
 | *PROCESS START* | Pre-requisites:<br>• Access to D365 and to the page.<br>Responsibility:<br>• D365 End-user |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). To change it, see 3.1 Switch Legal Entity with the Selector. |
 | 2. *Open* the page you want to personalize. | Open the list page whose layout you want to save. |
-| 3. *Right-click* a column header. | Right-click the header of any column. The menu shows the column options. |
+| 3. *Right-click* a column header. | Right-click the header of any column. The menu shows the column options.<br><mark>Microsoft Learn example (demo data): The column header menu: Insert columns, Hide this column, Export all rows. Replace with a WTG screenshot.</mark> |
 | 4. *Click* **Insert columns**. | Click **Insert columns**, select each column you need, then click **Update**. The columns are added to the grid. |
 | 5. *Hide* each column you do not need. | Right-click the header of the column and click **Hide this column**. |
 | 6. *Move* the columns into the order you need. | Drag a column header to its new position. |
@@ -955,7 +961,7 @@ Complete these steps to add a footer total:
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• The grid shows the column to total (see 6.1 Arrange the Columns).<br>Responsibility:<br>• D365 End-user |
 | 1. *Right-click* in the numeric column. | Right-click a value in the amount or balance column. |
-| 2. *Click* **View column totals**. `[GS-13]` | Click **View column totals**, then the value you need: **Total**, **Minimum**, **Maximum** or **Average**. The footer opens below the grid. |
+| 2. *Click* **View column totals**. `[GS-13]` | Click **View column totals**, then the value you need: **Total**, **Minimum**, **Maximum** or **Average**. The footer opens below the grid.<br><mark>Microsoft Learn example (demo data): Footer totals under numeric columns. Replace with a WTG screenshot.</mark> |
 | 3. *Click* **Calculate**. | If the footer shows a dash, the list is too large to total automatically: click **Calculate** in the footer. |
 | 4. *Confirm* the total is displayed. | Check that the footer shows the value under the column. |
 | *STEP COMPLETE* | The footer shows the value for the column.<br>Continue to 6.3 Group Rows |
@@ -982,7 +988,7 @@ Complete these steps to group rows:
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• The grid shows the column to group by.<br>Responsibility:<br>• D365 End-user |
 | 1. *Right-click* the column header. | Right-click the header of the column to group by. |
-| 2. *Click* **Group by this column**. | Click **Group by this column**. A header row starts each group. Group by another column to add a level, up to five. |
+| 2. *Click* **Group by this column**. | Click **Group by this column**. A header row starts each group. Group by another column to add a level, up to five.<br><mark>Microsoft Learn example (demo data): Rows grouped by a column, with subtotals. Replace with a WTG screenshot.</mark> |
 | 3. *Expand* or collapse a group. | Click the arrow in a group header to show or hide its rows. |
 | 4. *Confirm* the grouping. | Check the groups and their subtotals. To remove grouping, select **Grid options** > **Ungroup all**. |
 | *STEP COMPLETE* | The rows are grouped, with subtotals.<br>Continue to 6.4 Save and Pin the View |
@@ -1111,7 +1117,7 @@ Complete these steps to personalize a page:
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• The page is open.<br>Responsibility:<br>• D365 End-user |
 | 1. *Open* the personalization toolbar. `[GS-15]` | On the Action Pane, select **Options** > **Personalize this page**, or press **Ctrl+Shift+P**. The toolbar opens and the page becomes read-only. |
-| 2. *Click* the tool you need. | Click **Hide** to hide a field, **Move** to drag it to another place, or **Add a field** to add one. |
+| 2. *Click* the tool you need. | Click **Hide** to hide a field, **Move** to drag it to another place, or **Add a field** to add one.<br><mark>Microsoft Learn example (demo data): The personalization toolbar. Replace with a WTG screenshot.</mark> |
 | 3. *Select* the field. | Select the field or section on the page. Hidden fields show shaded while the toolbar is open: select one again to show it. |
 | 4. *Click* **Close**. | Close the toolbar. An asterisk shows beside the view name. |
 | 5. *Save* the view. | Save the change to your view as in 7.1 Update a Saved View, or with **Save as**. |
@@ -1186,7 +1192,7 @@ Complete these steps to export all rows from a grid:
 | 2. *Open* the page that holds the data. | Open the list page whose grid holds the data you need. |
 | 3. *Confirm* the grid shows the columns and rows you need. | The export contains the columns and filters of the grid. Add any column you need first (see 6.1 Arrange the Columns). |
 | 4. *Right-click* the grid header. | Right-click the header of any column in the grid. |
-| 5. *Select* **Export all rows**. `[[Q03] GS-16: Confirm]` | Select **Export all rows**. To export only some rows, select them first and choose **Export marked rows**.<br>Note: You can also select **Open in Microsoft Office** > **Export to Excel** on the Action Pane, or press **Ctrl+Shift+E**. |
+| 5. *Select* **Export all rows**. `[[Q03] GS-16: Confirm]` | Select **Export all rows**. To export only some rows, select them first and choose **Export marked rows**.<br>Note: You can also select **Open in Microsoft Office** > **Export to Excel** on the Action Pane, or press **Ctrl+Shift+E**.<br><mark>Microsoft Learn example (demo data): The column header menu: Insert columns, Hide this column, Export all rows. Replace with a WTG screenshot.</mark> |
 | 6. *Download* the export. | Download the file when D365 has prepared it. The download link works for 15 minutes. |
 | 7. *Open* the exported file. | Open the file in Excel. |
 | 8. *Confirm* the required fields were exported. | Check that the file holds every field and row you need. |
@@ -1213,9 +1219,9 @@ Complete these steps to open a page in Excel:
 | *PROCESS START* | Pre-requisites:<br>• Access to D365 and to the page.<br>• Excel 2016 or later, or Excel for the web.<br>Responsibility:<br>• D365 End-user |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). To change it, see 3.1 Switch Legal Entity with the Selector. |
 | 2. *Click* **Open in Microsoft Office**. | On the Action Pane of the page, click **Open in Microsoft Office** (the Office icon). |
-| 3. *Select* the **Open in Excel** option. | Under **Open in Excel**, select the option your process guide names, then open the workbook. |
+| 3. *Select* the **Open in Excel** option. | Under **Open in Excel**, select the option your process guide names, then open the workbook.<br><mark>Microsoft Learn example (demo data): The Open in Microsoft Office menu: Open in Excel and Export to Excel. Replace with a WTG screenshot.</mark> |
 | 4. *Click* **Enable editing**. | In Excel, click **Enable editing** so the add-in can run. The first time, click **Trust this Add-in**, and sign in with your work account if asked. |
-| 5. *Confirm* the data is loaded. | The add-in opens on the right and reads the data. Check the rows and the user name shown in the add-in. |
+| 5. *Confirm* the data is loaded. | The add-in opens on the right and reads the data. Check the rows and the user name shown in the add-in.<br><mark>Microsoft Learn example (demo data): The Microsoft Dynamics Office Add-in in Excel, with Refresh and Publish. Replace with a WTG screenshot.</mark> |
 | 6. *Change* the rows. `[[Q04] GS-17: Confirm]` | Optional. Change the values your process guide gives. Remove any Excel column filters first. |
 | 7. *Click* **Publish**. | Click **Publish** in the add-in. The **Messages** count shows how many records were added, changed or deleted, and any errors. |
 | 8. *Confirm* the changes in D365. | Refresh the page in D365 and check the changed records. Dates and times in the add-in are shown in UTC. |
@@ -1267,10 +1273,10 @@ Complete these steps to set the report parameters and destination:
 | *PROCESS START* | Pre-requisites:<br>• Access to D365 and to the report.<br>Responsibility:<br>• D365 End-user |
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). To change it, see 3.1 Switch Legal Entity with the Selector. |
 | 2. *Navigate* to the report. `[GS-18]` | From the **Navigation Pane**, click **Modules**, select the module, then select the report under **Inquiries and reports**, using the path your process guide gives. The report dialog opens. |
-| 3. *Enter* the **Parameters**. | Enter the report options your process guide gives, such as dates or a customer range. |
+| 3. *Enter* the **Parameters**. | Enter the report options your process guide gives, such as dates or a customer range.<br><mark>Microsoft Learn example (demo data): A report dialog: Parameters, Destination and Records to include. Replace with a WTG screenshot.</mark> |
 | 4. *Click* **Filter**. | Optional. On the **Records to include** FastTab, click **Filter** to limit the records, for example to one account, then click **OK**. |
 | 5. *Check* the **Destination**. | The **Destination** FastTab shows where the report goes. **Screen** is the default. |
-| 6. *Click* **Change**. | Optional. To send the report elsewhere, click **Change**, select **File**, **Email**, **Printer** or **Print archive**, and click **OK**. See Report destinations in Part 1. |
+| 6. *Click* **Change**. | Optional. To send the report elsewhere, click **Change**, select **File**, **Email**, **Printer** or **Print archive**, and click **OK**. See Report destinations in Part 1.<br><mark>Microsoft Learn example (demo data): Print destination settings: Print archive, Screen, Printer, File, Email. Replace with a WTG screenshot.</mark> |
 | 7. *Click* **OK**. | Click **OK** to run the report. |
 | *STEP COMPLETE* | The report runs to the destination you chose.<br>Continue to 9.2 View, Download and Print a Report |
 
@@ -1293,7 +1299,7 @@ Complete these steps to view, download and print a report:
 | **Action** | **Description** |
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• The report was run to **Screen** (see 9.1 Set the Report Parameters and Destination).<br>Responsibility:<br>• D365 End-user |
-| 1. *Review* the report. | Scroll through the report in the viewer, and use the page controls on its toolbar to move between pages. |
+| 1. *Review* the report. | Scroll through the report in the viewer, and use the page controls on its toolbar to move between pages.<br><mark>Microsoft Learn example (demo data): A report in the PDF viewer. Replace with a WTG screenshot.</mark> |
 | 2. *Click* the download button. | Optional. On the viewer toolbar, click download to save the report as a PDF. |
 | 3. *Click* **Print**. | Optional. Click **Print** on the viewer toolbar to print to your local printer. |
 | 4. *Close* the viewer. | Close the viewer to return to D365. |
@@ -1321,7 +1327,7 @@ Complete these steps to run a report in the background:
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• The report dialog is open with its parameters set (see 9.1 Set the Report Parameters and Destination).<br>Responsibility:<br>• D365 End-user |
 | 1. *Expand* **Run in the background**. | In the report dialog, expand the **Run in the background** FastTab. |
-| 2. *Set* **Batch processing** to **Yes**. | Turn on **Batch processing**. |
+| 2. *Set* **Batch processing** to **Yes**. | Turn on **Batch processing**.<br><mark>Microsoft Learn example (demo data): Run in the background with Batch processing on. Replace with a WTG screenshot.</mark> |
 | 3. *Enter* the **Task description**. | Enter a description you will recognize, for example the report name and date. You find the output by it later. |
 | 4. *Select* the **Destination**. | On the **Destination** FastTab, click **Change** and select **Print archive**, then click **OK**. |
 | 5. *Click* **Alerts**. | Optional. Click **Alerts** and select when to be told, for example when the job has **Ended** or has an **Error**. |
@@ -1351,9 +1357,9 @@ Complete these steps to find background output:
 | *PROCESS START* | Pre-requisites:<br>• A report was run in the background to the Print archive (see 9.3 Run a Report in the Background).<br>Responsibility:<br>• D365 End-user |
 | 1. *Click* the **Action center**. | On the navigation bar, click the bell. A message shows when the job has finished. |
 | 2. *Navigate* to the **My batch jobs** page. `[GS-20]` | If the job has not finished, from the **Navigation Pane**, *select*:<br>• **Modules >**<br>• **Common >**<br>• **Inquiries >**<br>• **Batch jobs >**<br>• **My batch jobs** |
-| 3. *Check* the job **Status**. | Find the job by its task description. **Waiting** or **Executing** means it is still running; **Ended** means it finished; **Error** means it failed: contact the BAU Support team. |
+| 3. *Check* the job **Status**. | Find the job by its task description. **Waiting** or **Executing** means it is still running; **Ended** means it finished; **Error** means it failed: contact the BAU Support team.<br><mark>Microsoft Learn example (demo data): A batch job and its status. Replace with a WTG screenshot.</mark> |
 | 4. *Navigate* to the **Print archive** page. | From the **Navigation Pane**, *select*:<br>• **Modules >**<br>• **Common >**<br>• **Inquiries >**<br>• **Print archive** |
-| 5. *Select* the report. | Select the report by its description. |
+| 5. *Select* the report. | Select the report by its description.<br><mark>Microsoft Learn example (demo data): The Print archive list. Replace with a WTG screenshot.</mark> |
 | 6. *Click* **Print preview**. | Click **Print preview** to open the report, then download or print it as in 9.2 View, Download and Print a Report. |
 | *PROCESS COMPLETE* | Outcomes:<br>• The background report is open from the Print archive. |
 
@@ -1379,7 +1385,7 @@ Complete these steps to attach a document:
 | 1. *Check* the **Entity**. | Confirm you are signed into the correct **Legal Entity** (top-right). To change it, see 3.1 Switch Legal Entity with the Selector. |
 | 2. *Select* the record. | Select the record to attach to. On a page with a header and lines, click in the part (header or line) that the attachment belongs to. |
 | 3. *Click* **Attach**. | Click **Attach** (the paperclip, top right), or press **Ctrl+Shift+A**. The **Attachments** page opens. |
-| 4. *Click* **New**. `[[Q05] GS-21: Confirm]` | Click **New** and select the type: **File**, **Note** or **URL**. |
+| 4. *Click* **New**. `[[Q05] GS-21: Confirm]` | Click **New** and select the type: **File**, **Note** or **URL**.<br><mark>Microsoft Learn example (demo data): The Attachments page: New > File, Image, Note or URL. Replace with a WTG screenshot.</mark> |
 | 5. *Select* the file. | For a file, click **Browse**, select the file and open it. For a note or URL, enter it in **Notes**. |
 | 6. *Enter* the **Description**. | Enter a description that says what the document is. |
 | 7. *Confirm* the attachment is listed. | Check that the attachment is listed and its preview shows. Close the page: the **Attach** button now counts it. |
@@ -1455,7 +1461,7 @@ Complete these steps to act on a work item:
 | **Action** | **Description** |
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• A work item is assigned to you.<br>Responsibility:<br>• D365 End-user |
-| 1. *Open* **Work items assigned to me**. | On the dashboard, find **Work items assigned to me**, or from the **Navigation Pane**, *select*:<br>• **Modules >**<br>• **Common >**<br>• **Work items >**<br>• **Work items assigned to me** |
+| 1. *Open* **Work items assigned to me**. | On the dashboard, find **Work items assigned to me**, or from the **Navigation Pane**, *select*:<br>• **Modules >**<br>• **Common >**<br>• **Work items >**<br>• **Work items assigned to me**<br><mark>Microsoft Learn example (demo data): Work items assigned to me on the dashboard. Replace with a WTG screenshot.</mark> |
 | 2. *Click* the document link. | Click the document ID to open the document. |
 | 3. *Review* the document. | Review the document, its attachments and the submitter’s comment. **Workflow** > **View history** shows its history. |
 | 4. *Click* **Workflow**. | On the Action Pane, click **Workflow**. |
@@ -1484,7 +1490,7 @@ Complete these steps to delegate your work items while away:
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• The person you delegate to has agreed and has access to the documents.<br>Responsibility:<br>• D365 End-user |
 | 1. *Click* **Settings**. | On the navigation bar, click **Settings** (gear), then **User options**. |
-| 2. *Click* the **Workflow** tab. | Click **Workflow** and expand **Delegation**. |
+| 2. *Click* the **Workflow** tab. | Click **Workflow** and expand **Delegation**.<br><mark>Microsoft Learn example (demo data): User options, Workflow tab: Delegation. Replace with a WTG screenshot.</mark> |
 | 3. *Click* **Add**. | Click **Add**. |
 | 4. *Select* the **Scope**. | Select **All** for every work item, or **Module** or **Workflow** for one kind, then select it in **Name**. |
 | 5. *Select* the **Delegate**. | Select the user who acts for you. |
@@ -1517,7 +1523,7 @@ Complete these steps to set up an alert:
 | 2. *Select* the record and field. | Select the record, and click in the field the alert is about, for example **Due date**. |
 | 3. *Click* the **Options** tab. | On the Action Pane, click **Options**. |
 | 4. *Click* **Create alert rule**. `[[Q07] GS-23: Confirm]` | In the **Share** group, click **Create alert rule**. The **Create alert rule** dialog opens. |
-| 5. *Select* the event. | Under **Alert me when**, select the **Field** and the **Event**, for example **has changed** or **is due in**. |
+| 5. *Select* the event. | Under **Alert me when**, select the **Field** and the **Event**, for example **has changed** or **is due in**.<br><mark>Microsoft Learn example (demo data): The Create alert rule dialog. Replace with a WTG screenshot.</mark> |
 | 6. *Select* the records. | Under **Alert me for**, select **Current selected record** or **All records** in the current view. Filter the page first to narrow **All records**. |
 | 7. *Enter* the end date. | Under **Alert me until**, choose an end date or no end. |
 | 8. *Enter* the **Subject**. | Under **Alert me with**, enter a **Subject** and **Message**. Turn on **Send email** to receive it by email too. |
@@ -1569,9 +1575,9 @@ Complete these steps to read system messages:
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• Access to D365.<br>Responsibility:<br>• D365 End-user |
 | 1. *Read* the message bar. | Read the message below the Action Pane. It names the field or record to fix. |
-| 2. *Click* **Message details**. | Optional. If the message summarizes several messages, click **Message details** to see each one. |
+| 2. *Click* **Message details**. | Optional. If the message summarizes several messages, click **Message details** to see each one.<br><mark>Microsoft Learn example (demo data): An error in the message bar with Message details. Replace with a WTG screenshot.</mark> |
 | 3. *Fix* the cause. | Correct the value or the step the message names, then repeat the action. |
-| 4. *Click* the **Action center**. | On the navigation bar, click the bell, or press **Ctrl+Shift+F7** (**Open message center**), to read messages from reports, batch jobs and alerts. |
+| 4. *Click* the **Action center**. | On the navigation bar, click the bell, or press **Ctrl+Shift+F7** (**Open message center**), to read messages from reports, batch jobs and alerts.<br><mark>Microsoft Learn example (demo data): Messages in the Action center. Replace with a WTG screenshot.</mark> |
 | 5. *Copy* the message text. | If you cannot fix the cause, copy the full message text for the BAU Support team (13.3). |
 | *PROCESS COMPLETE* | Outcomes:<br>• The message is understood and acted on, or ready to report. |
 
@@ -1595,7 +1601,7 @@ Complete these steps to use the Help pane:
 |---|---|
 | *PROCESS START* | Pre-requisites:<br>• Access to D365.<br>Responsibility:<br>• D365 End-user |
 | 1. *Click* **Help & Support**. `[GS-24]` | On the navigation bar, click **Help & Support** (?). |
-| 2. *Click* **Help**. | Click **Help**. The Help pane opens with articles for the current page. |
+| 2. *Click* **Help**. | Click **Help**. The Help pane opens with articles for the current page.<br><mark>Microsoft Learn example (demo data): The Help pane for the current page. Replace with a WTG screenshot.</mark> |
 | 3. *Search* the help. | Optional. If no article fits, type keywords in the search box. |
 | 4. *Select* an article. | Select an article. It opens in a new browser tab. |
 | *PROCESS COMPLETE* | Outcomes:<br>• The help article for the page is open. |
