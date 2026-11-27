@@ -6,7 +6,7 @@
 >
 > `[VG-xx]` markers show unconfirmed items. In the Word file, each one is a review comment. Full details are in the [validation register](../03-validation/PG-AR-Statement-Preview-Validation.md). The markers are not part of the guide text.
 
-> **Merged and frozen (D-052).** This draft is now topic 6.1 of [230 Collections v3.1](CLAUDE-230-Collections%20PG%20v3.1.docx). Edit that guide, not this draft.
+> **Merged and frozen (D-052).** This draft is now topic 6.1 of [230 Collections v3.2](CLAUDE-230-Collections%20PG%20v3.2.docx). Edit that guide, not this draft.
 
 The fixed template content is not repeated here: cover, Contents, *About this guide* and *Additional Resources*.
 

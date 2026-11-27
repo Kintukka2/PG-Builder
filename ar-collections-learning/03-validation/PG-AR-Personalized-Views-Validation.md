@@ -8,7 +8,7 @@
 | Last updated | 2026-11-18 |
 | Items | 28 open (22 blocking, 6 non-blocking), 1 closed |
 
-> **Merged and frozen (D-048, D-052).** The general steps are topics 4 and 5 of the [260 O2C Getting Started v0.2](../01-procedure-guides/CLAUDE-260-O2C%20Getting%20Started%20PG%20v0.2.docx) working draft, and the recommended AR Collections columns are in Part 1 (*Set up D365 for collections work*) of the [230 Collections v3.1](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.1.docx) working draft. Edit those guides, not this draft. Record answers here against these IDs; they apply to both.
+> **Merged and frozen (D-048, D-052).** The general steps are topics 4 and 5 of the [260 O2C Getting Started v0.2](../01-procedure-guides/CLAUDE-260-O2C%20Getting%20Started%20PG%20v0.2.docx) working draft, and the recommended AR Collections columns are in Part 1 (*Set up D365 for collections work*) of the [230 Collections v3.2](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.2.docx) working draft. Edit those guides, not this draft. Record answers here against these IDs; they apply to both.
 
 This file is the guide's **question log**, as the PG Template Authoring Guide requires (decision D-016). The `VG-xx` IDs are scoped to this guide and never renumbered. Each open item that affects the text is also a Word review comment by "Validation register" (VR), anchored to that text.
 

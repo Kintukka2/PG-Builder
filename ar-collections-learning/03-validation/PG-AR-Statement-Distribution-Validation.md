@@ -8,7 +8,7 @@
 | Last updated | 2026-11-18 |
 | Items | 25 total: 22 open (16 blocking, 6 non-blocking), 3 closed |
 
-> **Merged and frozen (D-052).** This topic draft is now topic 6.2 of the [230 Collections v3.1](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.1.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Statement Distribution VG-xx*.
+> **Merged and frozen (D-052).** This topic draft is now topic 6.2 of the [230 Collections v3.2](../01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.2.docx) working draft (register: [230-Collections-v3.0-Validation.md](230-Collections-v3.0-Validation.md)). Edit the 230 Word file, not this draft. Record answers here against these IDs; they apply to 230, where each carried comment reads *Statement Distribution VG-xx*.
 
 This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are scoped to this guide and never renumbered. Each open item that affects the text is also a Word review comment by "Validation register" (VR).
 
@@ -61,7 +61,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | VG-07 | The control that generates and sends the statement, for example **OK**. | 1.1 Step 7 | 14 | B | Test | Open |
 | VG-08 | Wording and location of the delivery message. | Key concepts; 1.2 Step 1 | 5, 15 | B | Test, Rec | Closed 2026-11-22: Maria Pabalan, 230 round 1 (ADO 16886, 19 November 2026; D-093): after sending, D365 shows a banner at the top of the page confirming the statement was sent and who it went to. |
 | VG-09 | When the Collections sent mailbox must be checked, where it is, and who can access it. | Key concepts; 1.2 Step 2 | 6, 16 | B | SME | Closed 2026-11-22: Maria Pabalan, 230 round 1 (ADO 16886, 19 November 2026; D-093): the officer confirms delivery from the banner and records a note on the Collections page; the Collections sent mailbox is not part of the check, so 230 v3.1 drops that step. |
-| VG-10 | How failed delivery is identified, and the process to follow. | 1.2 Step 3 | 17 | B | SME | Open: asked in 230 round 2, Q04 (what to do when the banner shows the statement was not sent, or the wrong recipient). |
+| VG-10 | How failed delivery is identified, and the process to follow. | 1.2 Step 3 | 17 | B | SME | Closed 2026-11-27: Maria Pabalan, 230 round 2 Q04 (Teams, 26 November 2026): the Collections Officer troubleshoots and fixes it, for example by checking the delivery method or updating the customer's details; high-level guidance only (D-107). Applied in 230 v3.2, 6.2.2 step 3. |
 | VG-11 | Where sent statements are retained. | 1.2 PROCESS COMPLETE | 18 | N | SME | Open |
 | VG-12 | The multi-currency statement limitations and which customers must be excluded because of them. | Key concepts (rule) | 7 | B | SME | Closed 2026-11-22: Maria Pabalan, 230 round 1 (ADO 16886, 19 November 2026; D-093): no customers are left out; statements are split by currency (CR 15801, in PROD). |
 | VG-13 | How users check whether a customer is excluded from statements (source 0, Topic 17). | Key concepts (rule) | 7 | N | Test, SME | Closed 2026-11-22: Maria Pabalan, 230 round 1 (ADO 16886, 19 November 2026; D-093): any customer who asks gets a statement, including direct debit, card, disputed and multi-currency customers, so there is no exclusion to check. |
@@ -93,7 +93,7 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | Each procedure table restarts numbering at 1 | Met |
 | Exact system labels | Open (`VG-01` to `VG-05`, `VG-07`, `VG-08`) |
 | Business rules separate from procedure | Met (checks before sending in Key concepts) |
-| Customer-facing controls validated | **Open** (`VG-05`, `VG-06`, `VG-10`, `VG-12`, `VG-17`) |
+| Customer-facing controls validated | **Answered by the SME** (`VG-05`, `VG-06`, `VG-12`, `VG-17` on 22 November; `VG-10` on 27 November) |
 | Reports | Open (`VG-22`) |
 | Roles, BPO, destination topic | Open (`VG-19`, `VG-20`, `VG-21`) |
 | Peer test, SME review, approval | Open (`VG-23`, `VG-24`) |
@@ -110,3 +110,4 @@ This file is the guide's **question log** (decision D-016). The `VG-xx` IDs are 
 | 2026-11-18 | `VG-23` closed (D-083): the guides do not name security roles; users contact the BAU Support team for access issues. |
 | 2026-11-18 | `VG-03`, `VG-04` closed from legacy 230 when 230 round 1 was rebuilt (D-085). |
 | 2026-11-22 | `VG-05`, `VG-06`, `VG-08`, `VG-09`, `VG-12`, `VG-13` and `VG-17` closed from Maria Pabalan's answers to 230 round 1 (D-093) and legacy 230 §1; `VG-10` is asked in round 2 (Q04). |
+| 2026-11-27 | `VG-10` closed from Maria Pabalan's answer to 230 round 2 Q04 (Teams, 26 November): the officer troubleshoots and fixes a failed delivery; no set procedure (D-107). |

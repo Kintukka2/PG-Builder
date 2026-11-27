@@ -21,7 +21,7 @@ This file is the guide's question log. Item IDs are stable and never reused. Eac
 |---|---|
 | [Discovery map](../05-project-notes/Discovery-Map.md) and research [A to F](../05-project-notes/discovery/) | The outline (section 3, split under D-101) and every step, label and limit, from Microsoft Learn and the D365 documentation |
 | [260 O2C Getting Started v0.2](../../ar-collections-learning/01-procedure-guides/PG-260-O2C-Getting-Started-DRAFT.md) | The steps of topics 3.1 and 3.2 (legal entity), 2.3 (Favorites), 6.1 and 6.4 (views), 7.1 (update a saved view) and 8.1 (export), reviewed by the O2C SME, made general for every stream |
-| [230 Collections v3.1](../../ar-collections-learning/01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.1.docx) | The master template parts (front matter, styles, tables, boundary rows), copied unchanged |
+| [230 Collections v3.2](../../ar-collections-learning/01-procedure-guides/CLAUDE-230-Collections%20PG%20v3.2.docx) | The master template parts (front matter, styles, tables, boundary rows), copied unchanged |
 
 ## 2. Drafting decisions
 

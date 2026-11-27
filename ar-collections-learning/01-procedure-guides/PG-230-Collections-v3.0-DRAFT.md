@@ -2,7 +2,7 @@
 
 > **WORKING DRAFT. Not validated or approved.**
 >
-> This is a Markdown preview of the Word guide [`CLAUDE-230-Collections PG v3.1.docx`](CLAUDE-230-Collections%20PG%20v3.1.docx). It was assembled from the topic drafts named in its version history, under D-045 and D-046. **The Word file is the editable source.**
+> This is a Markdown preview of the Word guide [`CLAUDE-230-Collections PG v3.2.docx`](CLAUDE-230-Collections%20PG%20v3.2.docx). It was assembled from the topic drafts named in its version history, under D-045 and D-046. **The Word file is the editable source.**
 >
 > Markers such as `[G230-05]` or `[Aged Balances VG-03]` show the open items that have a review comment in the Word file: one per open blocking item, at the place it matters most (D-067). The register lists every item, the non-blocking ones included, and where each applies. Guide-level items and the index of carried items are in the [validation register](../03-validation/230-Collections-v3.0-Validation.md). Notes marked **ACTION: REVIEW REQUIREMENT**, and <mark>highlighted</mark> phrases, are internal notes to the author (yellow in the Word file); they are removed before publication (D-060). The markers are not part of the guide text.
 
@@ -19,6 +19,7 @@ The fixed template content is not repeated here: cover, Contents, *About this gu
 | 2.4 | November 2026 | Daniel Moreira | Christopher Clarke | Draft: 6.5 to 6.8 moved to 220 |
 | 3.0 | November 2026 | Maria Pabalan; Daniel Moreira | Christopher Clarke | Template rebuild (draft) |
 | 3.1 | November 2026 | Maria Pabalan; Daniel Moreira | Christopher Clarke | SME round 1 answers (draft) |
+| 3.2 | November 2026 | Maria Pabalan; Daniel Moreira | Christopher Clarke | SME round 2 answer (draft) |
 
 ---
 
@@ -1043,7 +1044,7 @@ Complete these steps to verify statement delivery:
 | *PROCESS START* (light blue) | Pre-requisites:<br>• The statement has been sent (see [6.2.1 Send the Statement](#621-send-the-statement)).<br>Responsibility:<br>• Collections Officer |
 | 1. *Check* the banner. | After the statement is sent, D365 shows a banner at the top of the page. Check that it confirms the statement was sent and names the right recipient. |
 | 2. *Record* a note. | On the customer's Collections page, record the statement as a collection activity (see [5. Record a Customer Collection Activity](#5-record-a-customer-collection-activity)), with the note: Statement dated <date> sent to <email>. |
-| 3. *Act* on a failed delivery. `[Statement Distribution VG-10]` | If the banner shows that the statement was not sent, or names the wrong recipient, follow the failed-delivery process. <mark>The failed-delivery process is to be confirmed.</mark> |
+| 3. *Act* on a failed delivery. | If the banner shows that the statement was not sent, or names the wrong recipient, troubleshoot the delivery and fix it, for example by checking the delivery method or updating the customer's details (see [2.7 Update Customer Details](#27-update-customer-details)). There is no set procedure: use the fix that suits the case. |
 | *PROCESS COMPLETE* (light green) | Outcomes:<br>• The statement has been sent to the customer, the banner confirmed who it went to, and a note is recorded on the customer's Collections page. |
 
 ### 7. Resolve the Account
